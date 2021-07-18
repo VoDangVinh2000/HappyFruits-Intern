@@ -58,7 +58,7 @@
   .footer--info-link:hover, .footer--info-address__des:hover {
     color: #000;
     font-weight: 600;
-    transform: translateX(5px);
+    transform: translateX(10px);
   }
   
   .contact--link:hover {
@@ -90,7 +90,7 @@
   }
   
   .btn-submit {
-    position: absolute;
+    position: absolute !important;
     top: 0;
     right: 0;
     height: 50px;
@@ -137,7 +137,7 @@
     background: #000;
     font-size: 13px;
     position: absolute;
-    top: -140%;
+    top: -49px;
     left: 0;
     padding: 4px 8px;
     opacity: 0;
