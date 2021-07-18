@@ -2,7 +2,7 @@
     $domain_name = strtolower($_SERVER["SERVER_NAME"]);
     $server_ip = get_server_ip();
     define("MYSQL_HOST", env("MYSQL_HOST", "localhost"));
-    define("MYSQL_DBNAME", env("MYSQL_DBNAME", "efruit_db"));
+    define("MYSQL_DBNAME", env("MYSQL_DBNAME", "happyfruit_db"));
     define("MYSQL_USER", env("MYSQL_USER", "efruit_db"));
     define("MYSQL_PASS", env("MYSQL_PASS", "x7VsY7uC27QL"));
     // define("MYSQL_HOST", "localhost");
