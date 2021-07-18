@@ -1,0 +1,7 @@
+Subject: Báo cáo đã xóa - "{POST_SUBJECT}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì báo cáo của bạn về bài viết "{POST_SUBJECT}" trong chủ đề "{TOPIC_TITLE}" tại diễn đàn "{SITENAME}" đã bị xoá bởi một điều hành viên hoặc quản trị viên của chúng tôi.
+
+{EMAIL_SIG}

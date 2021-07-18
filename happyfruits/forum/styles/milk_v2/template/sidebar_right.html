@@ -1,0 +1,121 @@
+<div id="sidebar_right"<!-- IF STYLE_SETTINGS_CONFIG_COLLAPSIBLE_PANELS --> class="sidebar_right_collapse"<!-- ENDIF -->>
+
+<!-- IF STYLE_SETTINGS_CONFIG_SEARCH_WIDGET and S_DISPLAY_SEARCH -->
+    <div class="search-box sidebar_widget" role="search">
+        <form method="get" id="forum-search" action="{U_SEARCH}">
+        <fieldset>
+            <input name="keywords" id="keywords" type="search" maxlength="128" title="{L_SEARCH_KEYWORDS}" class="inputbox search sidebar_search" value="{SEARCH_WORDS}" placeholder="{L_SEARCH_MINI}" />
+            <button class="button button-search" type="submit" title="{L_SEARCH}">
+                <i class="icon fa-search fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH}</span>
+            </button>
+            <a href="{U_SEARCH}" class="button button-search-end" title="{L_SEARCH_ADV}">
+                <i class="icon fa-cog fa-fw" aria-hidden="true"></i><span class="sr-only">{L_SEARCH_ADV}</span>
+            </a>
+            {S_SEARCH_LOCAL_HIDDEN_FIELDS}
+        </fieldset>
+        </form>                
+    </div>
+<!-- ENDIF -->
+
+<!-- IF STYLE_SETTINGS_CONFIG_PROFILE_WIDGET -->
+	<div class="sidebar_widget profile_widget fancy_panel">
+    	<div class="fancy_panel_padding">
+            <h3><!-- IF S_USER_LOGGED_IN -->{L_READ_PROFILE}<!-- ELSE --><a href="{U_LOGIN_LOGOUT}">{L_LOGIN_LOGOUT}</a><!-- IF S_REGISTER_ENABLED -->&nbsp; &bull; &nbsp;<a href="{U_REGISTER}">{L_REGISTER}</a><!-- ENDIF --><!-- ENDIF --></h3>
+            <div class="collapse-trigger open">
+                <span class="icon fa-minus tooltip-left" title="Collapse"></span>
+                <span class="icon fa-plus tooltip-left" title="Expand"></span>
+            </div>            
+            <div class="sidebar_content">
+            <!-- IF S_USER_LOGGED_IN -->
+                <div class="profile_widget_avatar">
+                    <!-- IF CURRENT_USER_AVATAR -->
+                        <a href="{U_USER_PROFILE}">{CURRENT_USER_AVATAR}</a>
+                    <!-- ELSE -->
+                        <a href="ucp.php?i=ucp_profile&amp;mode=avatar" class="no_avatar"><i class="icon fa-pencil-square-o"></i></a>
+                    <!-- ENDIF -->
+                </div>
+            <!-- ENDIF -->
+    
+            
+            <!-- IF S_USER_LOGGED_IN -->
+                <div class="profile_widget_info">
+                    
+                        <p>Hi, {CURRENT_USERNAME_SIMPLE}!</p>
+                        <ul>
+                            <li>
+                                <a href="{U_PROFILE}" title="{L_PROFILE}">
+                                    <i class="icon fa-sliders fa-fw" aria-hidden="true"></i><span>{L_PROFILE}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{U_USER_PROFILE}" title="{L_READ_PROFILE}">
+                                    <i class="icon fa-user fa-fw" aria-hidden="true"></i><span>{L_READ_PROFILE}</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{U_LOGIN_LOGOUT}" title="{L_LOGIN_LOGOUT}">
+                                    <i class="icon fa-power-off fa-fw" aria-hidden="true"></i><span>{L_LOGIN_LOGOUT}</span>
+                                </a>
+                            </li>                        
+                        </ul>                     
+                </div>
+            <!-- ENDIF -->        
+            
+            <!-- IF S_USER_LOGGED_IN -->
+                <div class="profile_widget_list">
+                    <ul>
+                        <!-- IF S_DISPLAY_SEARCH -->
+                            <li>
+                                <a href="{U_SEARCH_SELF}">
+                                    <i class="icon fa-file-o fa-fw" aria-hidden="true"></i><span>{L_SEARCH_SELF}</span>
+                                </a>
+                            </li>  
+                        <!-- ENDIF -->
+                        <!-- IF S_NOTIFICATIONS_DISPLAY -->
+                            <li>
+                                <a href="{U_VIEW_ALL_NOTIFICATIONS}">
+                                    <i class="icon fa-bell fa-fw" aria-hidden="true"></i><span>{L_NOTIFICATIONS} <!-- IF NOTIFICATIONS_COUNT --><strong class="badge">{NOTIFICATIONS_COUNT}</strong><!-- ENDIF --></span>
+                                </a>	
+                            </li>                    	
+                        <!-- ENDIF -->
+                        <!-- IF S_DISPLAY_PM -->
+                            <li>
+                                <a href="{U_PRIVATEMSGS}">
+                                    <i class="icon fa-inbox fa-fw" aria-hidden="true"></i><span>{L_PRIVATE_MESSAGES} <!-- IF PRIVATE_MESSAGE_COUNT --><strong class="badge">{PRIVATE_MESSAGE_COUNT}</strong><!-- ENDIF --></span>
+                                </a>
+                            </li>
+                        <!-- ENDIF -->
+                        <li>
+                            <a href="ucp.php?i=ucp_main&amp;mode=bookmarks">
+                                <i class="icon fa-bookmark fa-fw" aria-hidden="true"></i>{L_VIEW_BOOKMARKS}
+                            </a>
+                        </li>                       
+                    </ul>
+                </div>          
+            <!-- ELSE -->
+                <div class="login_form">
+                    <form method="post" action="{S_LOGIN_ACTION}">
+                        <fieldset>
+                            <label for="username"><span>{L_USERNAME}{L_COLON}</span> <input type="text" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" /></label>
+                            <label for="password"><span>{L_PASSWORD}{L_COLON}</span> <input type="password" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" autocomplete="off" /></label>
+                            <!-- IF S_AUTOLOGIN_ENABLED -->
+                                <br /><input type="checkbox" name="autologin" id="autologin2" /><label for="autologin2">{L_LOG_ME_IN}</label><br />
+                            <!-- ENDIF -->                               
+                            <input type="submit" name="login" value="{L_LOGIN}" class="button2 specialbutton" />
+                            {S_LOGIN_REDIRECT}
+                        </fieldset>
+                    </form> 
+                    <!-- IF U_SEND_PASSWORD -->
+                    	<div class="login_form_forgot_link">
+                        	<a href="{U_SEND_PASSWORD}">{L_FORGOT_PASS}</a>
+                        </div>
+                    <!-- ENDIF -->                                
+                </div>
+            <!-- ENDIF -->
+            </div>
+        </div>
+</div>
+<!-- ENDIF -->
+<!-- IF STYLE_SETTINGS_HTML_2 -->{STYLE_SETTINGS_HTML_2}<!-- ENDIF -->
+
+</div>

@@ -1,0 +1,39 @@
+Subject: Chào mừng bạn đã đến với "{SITENAME}"
+
+{WELCOME_MSG}
+
+Bạn đã đồng ý với điều khoản đăng ký thành viên COPPA, vì thế tài khoản hiện tại của bạn chưa được kích hoạt.
+
+Hãy vui lòng in email này ra rồi đưa cho cha mẹ hay người bảo hộ của bạn ký tên và ghi ngày tháng vào đây. Sau đó gửi fax lại đến địa chỉ:
+{FAX_INFO}
+
+Hoặc gửi email về địa chỉ:
+{MAIL_INFO}
+
+-8<----------------------------- CẮT TẠI ĐÂY ------------------------------
+
+Đồng ý cho phép tham gia vào "{SITENAME}" - {U_BOARD}
+
+Tên tài khoản: {USERNAME}
+Địa chỉ email: {EMAIL_ADDRESS}
+
+TÔI ĐÃ XEM XÉT KỸ CÁC THÔNG TIN BÊN TRÊN VÀ ĐỒNG Ý CHO PHÉP CHÁU THAM GIA VÀO "{SITENAME}" VỚI NHỮNG THÔNG TIN LƯU TRỮ BÊN TRÊN. 
+TÔI BIẾT NHỮNG THÔNG TIN TRÊN CÓ THỂ ĐƯỢC THAY ĐỔI LẠI BẤT CỨ KHI NÀO VỚI MỘT MẬT KHẨU ĐĂNG NHẬP THÀNH CÔNG VÀO TÀI KHOẢN THÀNH VIÊN. 
+TÔI BIẾT TÔI CÓ THỂ YÊU CẦU NHỮNG THÔNG TIN TRÊN ĐƯỢC GỠ BỎ KHỎI "{SITENAME}" BẤT CỨ LÚC NÀO.
+
+Cha mẹ hoặc người bảo hộ 
+(Ghi rõ họ tên tại đây): ______________________________
+
+(Ký tên tại đây): ____________________ 
+
+Ngày tháng: _______________
+
+-8<----------------------------- CẮT TẠI ĐÂY ------------------------------
+
+Sau khi người quản trị nhận được cam kết bên trên thông qua địa chỉ fax hay email, tài khoản của bạn sẽ được kích hoạt.
+
+Mật khẩu của bạn đã được mã hóa an toàn trong cơ sở dữ liệu của chúng tôi và không thể khôi phục lại được. Nếu lỡ quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới gửi tới địa chỉ email mà bạn đang dùng cho tài khoản này.
+
+Cám ơn bạn đã tham gia cùng với chúng tôi!
+
+{EMAIL_SIG}

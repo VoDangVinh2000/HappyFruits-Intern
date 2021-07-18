@@ -1,0 +1,17 @@
+Subject: Thông báo bài viết mới - "{FORUM_NAME}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì bạn đã chọn theo dõi chuyên mục "{FORUM_NAME}" tại diễn đàn "{SITENAME}". Chuyên mục này vừa có một bài viết trả lời mới trong chủ đề "{TOPIC_TITLE}"<!-- IF AUTHOR_NAME != '' --> bởi thành viên {AUTHOR_NAME}<!-- ENDIF --> kể từ lần ghé thăm trước của bạn. Bạn có thể bấm vào liên kết bên dưới để chuyển đến bài trả lời mới nhất mà bạn chưa xem. Sẽ không có thêm bất kì thông báo nào nữa gửi đến bạn cho đến khi bạn xem qua bài viết:
+{U_NEWEST_POST}
+
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
+{U_TOPIC}
+
+Nếu bạn muốn xem chuyên mục, hãy bấm vào liên kết dưới đây:
+{U_FORUM}
+
+Nếu bạn không muốn theo dõi chuyên mục này nữa, bạn có thể bấm vào liên kết "Ngừng theo dõi chuyên mục này" trong phần xem chuyên mục hay bấm vào liên kết dưới đây:
+{U_STOP_WATCHING_FORUM}
+
+{EMAIL_SIG}

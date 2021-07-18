@@ -1,0 +1,19 @@
+Subject: Thông báo trả lời chủ đề - "{TOPIC_TITLE}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì thành viên "{AUTHOR_NAME}" đã trích dẫn bài viết của bạn trong chủ đề "{TOPIC_TITLE}" tại diễn đàn "{SITENAME}". Bạn có thể sử dụng liên kết bên dưới để trả lời lại thành viên này.
+
+Nếu bạn muốn xem bài viết đã trích dẫn mình, hãy bấm vào liên kết dưới đây:
+{U_VIEW_POST}
+
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
+{U_TOPIC}
+
+Nếu bạn muốn xem chuyên mục, hãy bấm vào liên kết dưới đây:
+{U_FORUM}
+
+Nếu bạn không muốn nhận những thông báo về việc người khác trích dẫn bài viết của mình, hãy vui lòng cập nhật lại thiết lập thông báo tại:
+{U_NOTIFICATION_SETTINGS}
+
+{EMAIL_SIG}

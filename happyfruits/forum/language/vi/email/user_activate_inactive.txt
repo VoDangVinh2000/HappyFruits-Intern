@@ -1,0 +1,7 @@
+Subject: Tài khoản của bạn đã bị ngưng kích hoạt
+
+Chào bạn, {USERNAME}
+
+Tài khoản của bạn tại "{SITENAME}" đã bị ngưng kích hoạt, hầu hết lý do gặp phải trường hợp này là khi bạn thay đổi thông tin cá nhân dùng để đăng ký làm thành viên của mình. Người quản trị sẽ cần phải kích hoạt lại tài khoản này trước khi bạn có thể sử dụng nó để đăng nhập vào hệ thống. Bạn sẽ nhận được một thông báo khác khi việc kích hoạt này hoàn tất.
+
+{EMAIL_SIG}

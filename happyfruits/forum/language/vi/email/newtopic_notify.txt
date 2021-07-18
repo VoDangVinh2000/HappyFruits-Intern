@@ -1,0 +1,11 @@
+Subject: Thông báo chủ đề mới - "{FORUM_NAME}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì bạn đã chọn theo dõi chuyên mục "{FORUM_NAME}" tại diễn đàn "{SITENAME}". Chuyên mục này vừa có một chủ đề mới: "{TOPIC_TITLE}"<!-- IF AUTHOR_NAME != '' --> bởi thành viên {AUTHOR_NAME}<!-- ENDIF --> kể từ lần ghé thăm trước của bạn. Bạn có thể bấm vào liên kết bên dưới để xem chuyên mục này. Sẽ không có thêm bất kì thông báo nào nữa gửi đến bạn cho đến khi bạn xem qua chuyên mục:
+{U_FORUM}
+
+Nếu bạn không muốn theo dõi chuyên mục này nữa, bạn có thể bấm vào liên kết "Ngừng theo dõi chuyên mục này" trong phần xem chuyên mục hay bấm vào liên kết dưới đây:
+{U_STOP_WATCHING_FORUM}
+
+{EMAIL_SIG}

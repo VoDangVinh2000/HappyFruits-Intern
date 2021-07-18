@@ -1,0 +1,7 @@
+Subject: Kết thúc báo cáo - "{POST_SUBJECT}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì báo cáo của bạn về bài viết "{POST_SUBJECT}" trong chủ đề "{TOPIC_TITLE}" tại diễn đàn "{SITENAME}" đã được xử lí bởi một điều hành viên hoặc quản trị viên của chúng tôi. Báo cáo này đã được kết thúc sau đó. Nếu bạn có bất cứ thắc mắc nào hãy liên hệ ngay với người đã kết thúc báo cáo này là {CLOSER_NAME} bằng một tin nhắn cá nhân.
+
+{EMAIL_SIG}

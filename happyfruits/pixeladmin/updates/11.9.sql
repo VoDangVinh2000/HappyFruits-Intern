@@ -1,0 +1,3 @@
+-- 04/12/2019 - Settings to handle thankyou email and order-assessing discount code
+INSERT INTO `settings` (`id`, `option_name`, `option_value`, `name`, `field_type`, `is_hide`, `created_dtm`, `modified_dtm`) VALUES (NULL, 'delay_minutes_for_thankyou_email', '0', 'Thời gian gửi email cám ơn (nhập số phút, nhập 0 để tắt)', 'int', '0', CURRENT_TIME(), CURRENT_TIME());
+INSERT INTO `settings` (`id`, `option_name`, `option_value`, `name`, `field_type`, `is_hide`, `created_dtm`, `modified_dtm`) VALUES (NULL, 'send_discount_code_after_assessing_order', '0', 'Gửi mã khuyến mãi sau khi đánh giá', 'boolean', '0', CURRENT_TIME(), CURRENT_TIME());

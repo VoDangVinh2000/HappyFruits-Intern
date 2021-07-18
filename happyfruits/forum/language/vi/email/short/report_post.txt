@@ -1,0 +1,13 @@
+Subject: Báo cáo bài viết - "{TOPIC_TITLE}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì bài viết "{POST_SUBJECT}" tại diễn đàn "{SITENAME}" đã được báo cáo.
+
+Nếu bạn muốn xem báo cáo, hãy bấm vào liên kết dưới đây:
+{U_VIEW_REPORT}
+
+Nếu bạn muốn xem bài viết, hãy bấm vào liên kết dưới đây:
+{U_VIEW_POST}
+
+{EMAIL_SIG}

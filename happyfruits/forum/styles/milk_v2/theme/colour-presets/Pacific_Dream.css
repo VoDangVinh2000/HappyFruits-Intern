@@ -1,0 +1,50 @@
+/* Color */
+a:hover, .navbar_footer a, .copyright_bar a, .social_links_footer a:hover span, .icon.fa-file.icon-red, a:hover .icon.fa-file.icon-red, .navigation .active-subsection a, .navigation .active-subsection a:hover, .navigation a:hover, .tabs .tab > a:hover, .tabs .activetab > a, .tabs .activetab > a:hover, a.postlink, a.postlink:visited, .navbar_in_header .badge, .button:focus .icon, .button:hover .icon, .dark_base .social_links_footer a span, .dark_base h2, .dark_base h2 a, .dark_base a:link, .dark_base a:visited, .button-secondary:focus, .button-secondary:hover, .notification_unread {
+	color: #0f3443;
+}
+
+/* Background Solid  */
+.pagination li a:hover, .pagination li.active span, .pagination li a:focus, .jumpbox-cat-link, .dropdown-contents > li > a:hover, a.button1:hover, input.button1:hover, a.button2:hover, input.button2:hover, input.button3:hover, a.no_avatar:hover, .jumpbox-cat-link:hover, input.button1:focus, input.button2:focus, input.button3:focus, .specialbutton, input.specialbutton, .panel .specialbutton, a.specialbutton, .scrollToTop, a.specialbutton, .dark_base .social_links_footer a:hover span, .topic_type, .badge, .grid_unread {
+	background: #0f3443;	
+}
+
+/* Borders Dark */
+.pagination li a:hover, .pagination li.active span, .pagination li a:focus, blockquote, .codebox code, .jumpbox-cat-link, a.postlink, input.button1:focus, input.button2:focus, input.button3:focus, input.specialbutton, .inputbox:hover, .inputbox:focus, .specialbutton, .button:hover, .button:focus, a.specialbutton, .dark_base .social_links_footer a span, .dark_base .social_links_footer a:hover span {
+	border-color: #0f3443;
+}
+
+/* Background Gradient  */
+.headerbar, body.content_block_header_block li.header, body.content_block_header_stripe li.header:before, .no_avatar, .social_links_footer, .forumbg-table, .sidebar_block_stripe:before, .fancy_panel:before {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0f3443+0,34e89e+100&0.8+0,0.8+100 */
+	background: -moz-linear-gradient(left,  rgba(15,52,67,0.8) 0%, rgba(52,232,158,0.8) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(15,52,67,0.8) 0%,rgba(52,232,158,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(15,52,67,0.8) 0%,rgba(52,232,158,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0f3443', endColorstr='#cc34e89e',GradientType=1 ); /* IE6-9 */
+}
+
+
+/* The same as above, just with some opacity */
+.headerbar_overlay_active, .grid_colour_overlay:hover {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0f3443+0,34e89e+100&0.8+0,0.8+100 */
+	background: -moz-linear-gradient(left,  rgba(15,52,67,0.8) 0%, rgba(52,232,158,0.8) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(15,52,67,0.8) 0%,rgba(52,232,158,0.8) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(15,52,67,0.8) 0%,rgba(52,232,158,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc0f3443', endColorstr='#cc34e89e',GradientType=1 ); /* IE6-9 */
+}
+
+
+/* Colour Hover Light */
+.navbar_footer a:hover, .copyright_bar a:hover, a.postlink:hover, .dark_base h2 a:hover  {
+	color: #154558;
+}
+
+/* Background Hover Light */
+a.scrollToTop:hover, input.specialbutton:hover, a.specialbutton:hover {
+	background-color: #154558;
+}
+
+/* Border light */
+.specialbutton:hover {
+	border-color: #154558;
+}
+

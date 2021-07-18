@@ -1,0 +1,1 @@
+INSERT  INTO `settings`(`id`,`option_name`,`option_value`,`name`,`is_hide`,`created_dtm`,`modified_dtm`) VALUES (NULL,'overload_in_period','0','Hiển thị thông báo đơn hàng quá tải',0,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);

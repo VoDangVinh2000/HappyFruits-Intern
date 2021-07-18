@@ -1,0 +1,578 @@
+/* New code for new things */
+
+
+/* Ignore this. Used for testing only */
+body {border-top: 0px solid;}
+
+/* Boxed and Fluid Layout Switches
+---------------------------------------- */
+.body-layout-Fluid .wrap {}
+.body-layout-Boxed .wrap {} /* Defined in responsive/large-desktops.css */
+
+
+/* Headerbar
+---------------------------------------- */
+.headerbar_overlay_container {	
+}
+
+.headerbar_overlay_active {
+
+}
+
+
+/* Particles 
+---------------------------------------- */
+#particles-js {
+}
+
+.particles_container  {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  font-size: 0; /* Fix white space */
+  text-align: center;
+}
+
+
+
+/* Global Containers
+---------------------------------------- */
+.fancy_panel {
+}
+
+.fancy_panel_padding {
+	padding: 15px;
+}
+
+#sidebar_right .fancy_panel_padding {
+	padding: 15px 0;	
+}
+
+body.content_block_header_stripe li.header:before, .fancy_panel:before, .sidebar {
+	content: '';
+	width: 100%;
+	display: block;
+	height: 3px;
+}
+
+.alt_block li.header:before {
+	height: 0px !important;
+}
+
+#inner-wrap {
+	padding: 30px;
+	box-sizing: border-box;
+	box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.body-layout-Fluid #inner-wrap {
+	width: 95%;
+	margin: 0 auto;
+}
+
+/* Sidebar Structure
+---------------------------------------- */
+#contentwrapper {
+	float: left;
+	width: 100%;
+}
+
+/* Main content */
+#contentcolumn {
+	margin: 0 300px 0 120px; /*Margins for content column. Should be "0 RightColumnWidth 0 LeftColumnWidth*/
+	padding: 0 30px;
+}
+
+#leftcolumn {
+	float: left;
+	width: 120px; /*Width of left column*/
+	margin-left: -100%;
+}
+
+#rightcolumn {
+	float: left;
+	width: 300px; /*Width of right column*/
+	margin-left: -300px; /*Set left margin to -(RightColumnWidth)*/
+}
+
+.innertube {
+	margin: 0; /*Margins for inner DIV inside each column (to provide padding)*/
+	margin-top: 0;
+}
+
+/* Conditional padding adjustments (to cater for flightdeck setting) */
+.sidebar-left-only #contentcolumn {margin-right: 0px; padding-right: 0;}
+.sidebar-right-only #contentcolumn {margin-left: 0px; padding-left: 0;}
+
+
+/* Sidebar Widgets
+---------------------------------------- */
+
+/* Sidebar Widget */
+.sidebar_widget {
+	margin-bottom: 30px;
+	clear: both;
+}
+
+.sidebar_widget h3 {
+	display: block;
+	text-align: left;
+	margin: 0;
+	margin-bottom: 15px;
+}
+
+.sidebar_widget p:last-child {
+	margin-bottom: 0;
+}
+
+.sidebar_content {
+	border-top: 1px solid;
+	padding-top: 15px;
+}
+
+
+/* Profile Widget */
+.profile_widget {
+}
+
+.profile_widget ul, .profile_widget li {
+	list-style: none;
+}
+
+.profile_widget_avatar {
+	float: left;
+	width: 100px;
+	margin-bottom: 30px;
+}
+
+.profile_widget_avatar img {
+	max-width: 100px;
+	max-height: 100px;
+
+}
+
+.profile_widget_info {
+	float: left;
+	margin-left: 30px;
+}
+
+.profile_widget_list {
+	clear: both;
+	padding-top: 20px;
+	border-top: 1px solid;
+}
+
+.profile_widget_list ul li {
+	line-height: 2.2em;
+}
+
+.profile_widget_list ul li .icon {
+	margin-right: 5px;
+}
+
+/* Ad Widget */
+.ad_grid {
+	padding: 0;
+	text-align: center;
+}
+
+.ad_grid a {
+	display: inline-block;
+	margin: 10px;
+}
+
+/* Blank Widget */
+.blank_widget {
+}
+
+
+/* Grid Forumlist
+---------------------------------------- */
+
+/* For easy margins on grid items, we apply them to all sides. Here we need to pull the container
+margins out so that the grid items 'appear' to be flush with the container and center column */
+.forumlist_grid ul.forums {
+	margin: 10px 0 0;
+}
+
+.forumlist_grid li.row {
+	margin-bottom: 0px !important;
+}
+
+/* Sets the 3 column structure */
+.forumlist_grid li.row {
+	float: left;
+	display: block;
+	width: 33.3333333%;
+	border: none;
+	padding: 0;
+}
+
+.forumlist_grid .grid_image_container {
+	margin: 0 15px 30px 15px;	
+}
+
+/* Do the same for forum images */
+.forumlist_grid .forumlist_grid_forum_image {
+	background-size: cover;
+}
+
+.forumlist_grid .grid_colour_overlay {
+	display: block;
+	height: 200px;
+	position: relative;
+}
+
+.forumlist_grid .forumlist_grid_title {
+	position: absolute;
+	bottom: 42px;
+	padding: 0 15px;
+}
+
+.forumlist_grid .forumlist_grid_numbers  {
+	position: absolute;
+	bottom: 0;
+	padding: 15px;
+}
+
+/* Since this is the only column, we don't need to push the others over to the right */
+.forumlist_grid ul.topiclist dt .list-inner {
+	padding: 0;
+	margin: 0;
+}
+
+.forumlist_grid li.row:hover {
+	background: none;
+}
+
+.forumlist_grid .forum_description {
+	display: block;
+	height: 35px;
+	overflow: hidden;
+}
+
+.forumlist_grid_numbers {
+	bottom: 0;
+}
+
+.grid_desc {
+	padding: 20px;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+	overflow: hidden;
+}
+
+/* Stop the responsive breakpoints affecting the grid layout */
+.forumlist_grid ul.topiclist dt .list-inner {
+	margin-right: 0 !important;
+}
+
+
+/* Simple Forumlist
+---------------------------------------- */
+dd.simpleposts {
+	text-align: center;
+	line-height: 2em;
+	width: 190px;
+}
+
+dd.simpleposts span {
+	display: block;
+}
+
+/* Custom Login Page
+---------------------------------------- */
+
+/* Sets the width and 100% height required for vertical alignment */
+.login_container {
+	width: 100%; /* Scale up in responsive stylesheets */
+	margin: 0 auto;
+	min-height: 95%;
+	height: 95%;
+	display: table;
+}
+
+
+/* Vertically aligns the left content */
+.login_container_left {
+	width: 100%;
+	display: block;
+}
+
+/* Vertically aligns the left content */
+.login_container_right {
+	width: 100%;
+	display: block;
+}
+
+/* Content and fancypanel are one */
+.login_container_left_section_content {
+	position: relative;
+	z-index: 2; /* Ensures the box shadow overlaps the 'registration' box */
+}
+
+.login_container_right_section_content {
+	-webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;	
+}
+
+.login_container_padding {
+	padding: 30px;
+}
+
+/* Login Widget */
+.login_form input.inputbox {
+	margin-bottom: 15px;
+}
+
+.login_form input#autologin2, .login_form input#autologin {
+	margin-right: 5px;
+}
+
+.login_form input.button2, .login {
+	margin: 15px 0; /* Usually we wouldn't do margin-top, but adding margin-bottom to the checkbox above gets weird */	
+	width: 100% !important;
+}
+
+.login_form_forgot_link {
+	border-top: 1px solid;
+	margin-top: 15px;
+	padding-top: 15px;
+}
+
+/* Captcha Override */
+.login_form fieldset dl {
+	margin: 15px 0 0;
+	padding: 0;
+}
+
+.login_form fieldset.fields2 dd {
+	margin-left: 0;	
+}
+
+/* Right Side tweaks */
+.login_container_right a.button2 {
+	width: 100% !important;
+	text-align: center;
+}
+
+
+/* Postprofile Things (next release)
+---------------------------------------- */
+
+
+/* Social Links
+---------------------------------------- */
+.social_links_footer {
+	text-align: center;
+	clear: both;
+	padding: 80px 0 30px;
+	margin-top: -50px;
+}
+
+.social_links_footer a {
+	display: inline-block;
+	margin: 0 7.5px;	
+}
+
+.social_links_footer a span {
+	font-size: 24px;
+	width: 46px;
+	height: 46px;
+	line-height: 44px;
+	text-align: center;
+	border: 2px solid;
+	border-radius: 25px;
+}
+
+.social_links_footer a span:hover {
+	transition:.2s;	
+}
+
+/* Scroll to Top
+---------------------------------------- */
+.scrollToTop {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	text-align:center;
+	text-decoration: none;
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	display: none;
+	z-index: 4;
+}
+
+.scrollToTop:hover {
+	text-decoration:none;
+	color: #FFFFFF;
+}
+
+
+/* Collapsible Panels
+---------------------------------------- */
+.collapse-trigger {
+	display: block;
+	float: right;
+	position: relative;
+	margin: -31px 18px 0 0;
+}
+
+.fancy_panel_padding .collapse-trigger {
+	margin-right: 0;
+}
+
+.collapse-trigger a:hover, .collapse-trigger a:focus {
+	text-decoration: none;
+}
+
+span.fa-plus {display: block;}
+span.fa-minus {display: none;}
+
+.open span.fa-plus {display: none;}
+.open span.fa-minus {display: block;}
+
+
+/* As sidebar blocks entered via flightdeck can't use IF statements, we'll set the trigger visibility for the right sidebar here */
+
+/* Hide them by default, then show when they're enabled */
+#sidebar_right .collapse-trigger {display: none;}
+#sidebar_right.sidebar_right_collapse .collapse-trigger {display: inline-block;}
+
+
+/* Missing Avatar Placeholder
+---------------------------------------- */
+a.no_avatar {
+	display: block;
+	text-align: center;
+	border-radius: 50px;
+	height: 100px;
+	width: 100px;
+	line-height: 110px;
+}
+
+a.no_avatar i.icon {
+	font-size: 25px;
+	padding-left: 7px;
+}
+
+
+/* Topic Types
+---------------------------------------- */
+.topic_type {
+	display: inline-block;
+	padding: 2px 2px 2px 4px;
+	font-weight: 500;
+	float: left;
+	margin-right: 3px;
+}
+
+.topic_type span {
+	display: inline-block;
+	text-transform: lowercase;
+}
+
+.topic_type span::first-letter {
+	text-transform: uppercase;
+}
+
+.grid_unread {
+	display: inline-block;
+	padding: 2px 4px;
+	float: left;
+	margin-right: 10px;
+}
+
+
+/* Footer Bars
+---------------------------------------- */
+.copyright_bar {
+	clear: both;
+	padding: 15px;
+}
+
+.navbar_footer {
+	padding: 15px;
+}
+
+
+/* Last Post Avatar
+---------------------------------------- */
+span.lastpostavatar img {
+	position: absolute;
+	margin-left: -45px;
+	margin-top: 4px; /* Counteracts the last topic title line height */
+}
+
+span.lastpostavatar img{
+	border: none;
+}
+
+li.has_last_post_avatar dd.lastpost {
+	padding-left: 45px;
+}
+
+/* Apparently viewforum doesn't like the above code. Weird..it's the same structure as index.php *shrug* */
+ul.topics li.row span.lastpostavatar img {
+	position: static;
+	margin-left: 0;
+	margin-right: 15px;
+}
+
+
+/* Columns 
+---------------------------------------- */
+
+
+/* Index and Permissions Blocks (and sidebar, probably)
+---------------------------------------- */
+.alt_block {
+	margin-bottom: 30px;
+}
+
+
+/* Misc
+---------------------------------------- */
+.squishy-show {display: inline-block;}
+.quishy-hide {display: none;}
+
+.planetstyles_credit_hidden {
+	display: none;
+}
+
+.clutter {
+	display: none;
+}
+
+.post_forumlist_links {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.responsive_forumlist_row_stats {
+	margin-top: 4px;
+	opacity: 0.5;
+}
+
+.stat-block p {
+	margin-bottom: 0;
+}
+
+/* Fade out soft deleted topics */
+li.row.deleted {
+	opacity: 0.5;	
+}
+
+.button_disapprove, .button_approve {
+	margin-left: 5px;
+}
+
+dd.captcha {
+	margin-top: 15px;
+}
+
+/* Remove the 5px top forumbg margin when stripe headers are enabled */
+body.content_block_header_stripe.dark_base ul.forums, body.content_block_header_stripe.dark_base ul.topics {
+	padding-top: 0;
+}

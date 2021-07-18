@@ -1,0 +1,18 @@
+Subject: Kích hoạt mật khẩu mới
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này bởi vì chính bạn hoặc một ai đó giả danh bạn đã yêu cầu một mật khẩu mới từ tài khoản của bạn tại "{SITENAME}". Nếu đây không phải là yêu cầu của bạn thì hãy quên thông báo này đi và sẽ không có thay đổi nào xảy ra. Bạn cũng có thể liên hệ với người quản trị về việc này.
+
+Để sử dụng được mật khẩu mới, bạn cần phải kích hoạt nó bằng cách bấm vào liên kết dưới đây:
+{U_ACTIVATE}
+
+Nếu kích hoạt thành công bạn sẽ có thể đăng nhập được vào hệ thống với mật khẩu mới bên dưới:
+
+----------------------------------
+Mật khẩu: {PASSWORD}
+----------------------------------
+
+Bạn có thể thay đổi lại mật khẩu này trong phần thiết lập cá nhân của mình. Nếu bạn gặp bất cứ khó khăn nào, xin đừng ngần ngại liên hệ ngay với người quản trị để được giúp đỡ.
+
+{EMAIL_SIG}

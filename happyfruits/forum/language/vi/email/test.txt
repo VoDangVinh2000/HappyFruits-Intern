@@ -1,0 +1,9 @@
+Subject: phpBB đã được cấu hình gửi email thành công
+
+Chào bạn, {USERNAME}
+
+Xin chức mừng! Khi bạn nhận được email này, hệ thống phpBB của bạn đã được cấu hình chính xác để gửi email.
+
+Nếu bạn cần trợ giúp gì khác, hãy ghé thăm diễn đàn hỗ trợ của phpBB: https://www.phpbb.com/community/
+
+{EMAIL_SIG}

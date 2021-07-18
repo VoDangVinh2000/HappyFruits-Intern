@@ -1,0 +1,9 @@
+Subject: Tài khoản của bạn đã được kích hoạt
+
+Chào bạn, {USERNAME}
+
+Tài khoản của bạn tại "{SITENAME}" đã được kích hoạt bởi quản trị viên, ngay bây giờ bạn có thể đăng nhập vào hệ thống.
+
+Mật khẩu của bạn đã được mã hóa an toàn trong cơ sở dữ liệu của chúng tôi và không thể khôi phục lại được. Nếu lỡ quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới gửi tới địa chỉ email mà bạn đang dùng cho tài khoản này.
+
+{EMAIL_SIG}

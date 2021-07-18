@@ -1,0 +1,30 @@
+-- 26/11/2014
+DROP TABLE IF EXISTS `g_order_items`;
+CREATE TABLE `g_order_items` (
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `product_id` INT(11) NOT NULL DEFAULT '0',
+  `quantity` INT(5) NOT NULL DEFAULT '0',
+  `price` INT(5) NOT NULL DEFAULT '0',
+  `discount` DECIMAL(5,2) NOT NULL DEFAULT '0',
+  `total` INT(5) NOT NULL DEFAULT '0',
+  `belongs_to` VARCHAR(100),
+  `member_name` VARCHAR(255) COLLATE utf8_general_ci DEFAULT NULL,
+  `description` TEXT COLLATE utf8_general_ci DEFAULT NULL,
+  `g_code` VARCHAR(20) NOT NULL DEFAULT '',
+  `g_item_code` VARCHAR(32) NOT NULL DEFAULT '',
+  `created_dtm` DATETIME NOT NULL,
+  `modified_dtm` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deleted` TINYINT(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+ALTER TABLE `orders` ADD `g_code` VARCHAR(20) AFTER `code`;
+
+DROP TABLE IF EXISTS `g_booking`;
+CREATE TABLE `g_booking` (
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `g_code` VARCHAR(20) NOT NULL DEFAULT '',
+  `created_dtm` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;

@@ -1,0 +1,68 @@
+@font-face {
+    font-family: "UTM";
+    src: url("/pixeladmin/assets/fonts/UTM.eot"); /* this line made the difference */
+    src: local("UTM"),
+         url("/pixeladmin/assets/fonts/UTM.ttf") format("truetype"),
+         url("/pixeladmin/assets/fonts/UTM.eot?"),
+         url("/pixeladmin/assets/fonts/UTM.woff") format("woff"),
+         url("/pixeladmin/assets/fonts/UTM.svg#UTM") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'VPSHANO';
+  src: url("/pixeladmin/assets/fonts/VPSHANO.eot"); /* this line made the difference */
+    src: local("VPSHANO"),
+         url("/pixeladmin/assets/fonts/VPSHANO.ttf") format("truetype"),
+         url("/pixeladmin/assets/fonts/VPSHANO.eot?"),
+         url("/pixeladmin/assets/fonts/VPSHANO.woff") format("woff"),
+         url("/pixeladmin/assets/fonts/VPSHANO.svg#VPSHANO") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'ClickerScript-Regular';
+	src: url('/pixeladmin/assets/fonts/ClickerScript-Regular.eot');
+	src: local('?'), url('/pixeladmin/assets/fonts/ClickerScript-Regular.woff') format('woff'), url('/pixeladmin/assets/fonts/ClickerScript-Regular.ttf') format('truetype'), url('/pixeladmin/assets/fonts/ClickerScript-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family:'American Typewriter';font-style:normal;src:url(/pixeladmin/assets/fonts/AmericanTypewriter.eot) format("embedded-opentype"),url(/pixeladmin/assets/fonts/AmericanTypewriter.woff) format("woff"),url(/pixeladmin/assets/fonts/AmericanTypewriter.ttf) format("truetype"),url(/pixeladmin/assets/fonts/AmericanTypewriter.svg#AmericanTypewriter) format("svg");
+}
+
+@font-face {
+    font-family:'American Typewriter Bold';src:url(/pixeladmin/assets/fonts/AmericanTypewriter-Bold.eot);src:url(/pixeladmin/assets/fonts/AmericanTypewriter-Bold.eot?#iefix) format("embedded-opentype"),url(/pixeladmin/assets/fonts/AmericanTypewriter-Bold.woff2) format("woff2"),url(/pixeladmin/assets/fonts/AmericanTypewriter-Bold.woff) format("woff"),url(/pixeladmin/assets/fonts/AmericanTypewriter-Bold.ttf) format("truetype");font-weight:700;font-style:normal;
+}
+
+@font-face {
+    font-family: 'Playfair Display';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/playfairdisplay/v21/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDYbtPY_Q.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v20/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) format('woff2');
+    unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;
+}
+
+@font-face {
+    font-family: "UVNBaiSau_R";
+    src: url("/pixeladmin/assets/fonts/UVNBaiSau_R.eot"); /* this line made the difference */
+    src: local("UVNBaiSau_R"),
+    url("/pixeladmin/assets/fonts/UVNBaiSau_R.ttf") format("truetype"),
+    url("/pixeladmin/assets/fonts/UVNBaiSau_R.eot?"),
+    url("/pixeladmin/assets/fonts/UVNBaiSau_R.woff") format("woff"),
+    url("/pixeladmin/assets/fonts/UVNBaiSau_R.svg#UVNBaiSau_R") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}

@@ -1,0 +1,14 @@
+-- 22/05/2015 - documents manager
+DROP TABLE IF EXISTS `documents`;
+CREATE TABLE `documents` (
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(100) NULL,
+  `code` VARCHAR(100) NULL,
+  `filename` VARCHAR(100) NULL,
+  `description` TEXT NULL,
+  `created_by` INT(11) NOT NULL,
+  `created_dtm` DATETIME NOT NULL,
+  `modified_dtm` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deleted` TINYINT(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;

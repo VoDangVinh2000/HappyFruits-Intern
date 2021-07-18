@@ -1,0 +1,1 @@
+ALTER TABLE `branches` ADD `enabled` TINYINT(1) DEFAULT 1 AFTER `modified_by`;

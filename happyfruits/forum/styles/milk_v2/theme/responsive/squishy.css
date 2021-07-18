@@ -1,0 +1,163 @@
+/* Interim Breakpoints to stop the content squishing up when sidebars are enabled
+---------------------------------------- */
+
+	/* Hide the topic type labels when we're in a boxed layout with both sidebars */
+	body.sidebar-both.body-layout-Boxed span.topic_type span {
+		display: none;
+	}	
+		
+
+	/* Forumlist Colums
+	---------------------------------------- */		
+	
+	/* When the layout is fluid and both sidebars are enabled, hide the 'lastpost' column */
+	@media (min-width: 1200px)and (max-width: 1299px) {
+		/* Remove the 'topics' column */
+		body.sidebar-both.body-layout-Fluid .forabg dd.posts, 
+		body.sidebar-both.body-layout-Fluid .forumbg dd.views {
+			display: none;
+		}
+		
+		/* Or, reduce the width of 'simpleposts' by 50% (from 190 to 95) */	
+		body.sidebar-both.body-layout-Fluid dd.simpleposts, 
+		body.sidebar-right-only.body-layout-Fluid dd.simpleposts {
+			width: 95px;	
+		}		
+		
+		/* Adjust the other margins to account for the (now missing) 95px */
+		body.sidebar-both.body-layout-Fluid ul.topiclist dt {
+			margin-right: -395px;
+		}
+				
+		
+		body.sidebar-both.body-layout-Fluid ul.topiclist dt .list-inner {
+			margin-right: 395px;
+		}
+		
+		body.sidebar-both.body-layout-Fluid li.header dt {
+			margin-right: -435px;	
+		}	
+		
+		/* UCP Columns
+		---------------------------------------- */			
+		
+		body.sidebar-both ul.topiclist.pmlist dt .list-inner, body.sidebar-right-only ul.topiclist.pmlist dt .list-inner {
+			margin-right: 95px;
+		}
+		body.sidebar-both  ul.topiclist.two-columns dt {
+			margin-right: -95px;	
+		}			
+		body.sidebar-both  ul.topiclist.two-columns li.header dt {
+			margin-right: -130px;	
+		}		
+		
+		/* UCP Two long columns */
+		body.sidebar-both ul.two-long-columns dt .list-inner {
+			margin-right: 0 !important;
+		}		
+		
+		/* MCP Columns
+		---------------------------------------- */
+		
+		/* Manually enabling the responsive layout. First, we remove the second column header */
+		body.sidebar-right-only.body-layout-Fluid .missing-column dd {
+			display: none;
+		}
+		
+		/* But we still want the mark column, so re-enable that */
+		body.sidebar-right-only.body-layout-Fluid .missing-column dd.mark {
+			display: block;
+		}
+		
+		/* Reduce the left column margin to 95px, just enough for the mark box */
+		body.sidebar-right-only.body-layout-Fluid ul.topiclist.missing-column dt {
+			margin-right: -95px;
+		}
+		
+		body.sidebar-right-only.body-layout-Fluid ul.topiclist.missing-column dt .list-inner {	
+			margin-right: 95px;
+		}
+		
+		/* Then enable the extra info below */
+		body.sidebar-right-only.body-layout-Fluid ul.topiclist.missing-column .responsive-show {
+			display: block !important;
+		}	
+		
+		/* Manually enabling the responsive layout. First, we remove the second column header */
+		body.sidebar-right-only.body-layout-Fluid ul.topiclist.two-long-columns dd {
+			display: none;	
+		}
+		
+		/* Increase the left column width to 100% */
+		body.sidebar-right-only.body-layout-Fluid ul.topiclist.two-long-columns dt .list-inner {
+			margin-right: 0;	
+		}
+	
+		/* Then enable the extra info below */	
+		body.sidebar-right-only.body-layout-Fluid ul.topiclist.two-long-columns .responsive-show {
+			display: block !important;
+		}			
+			
+		
+	}
+	
+	/* Between 1200 and 1400px, and when we're fluid with both sidebars enabled, apply the responsive layout for mcp missing-column */
+	@media (min-width: 1200px)and (max-width: 1399px) {
+		/* Manually enabling the responsive layout. First, we remove the second column header */
+		body.sidebar-both.body-layout-Fluid .missing-column dd {
+			display: none;
+		}
+		
+		/* But we still want the mark column, so re-enable that */
+		body.sidebar-both.body-layout-Fluid .missing-column dd.mark {
+			display: block;
+		}
+		
+		/* Reduce the left column margin to 95px, just enough for the mark box */
+		body.sidebar-both.body-layout-Fluid ul.topiclist.missing-column dt {
+			margin-right: -95px;
+		}
+		
+		body.sidebar-both.body-layout-Fluid ul.topiclist.missing-column dt .list-inner {	
+			margin-right: 95px;
+		}
+		
+		/* Then enable the extra info below */ 
+		body.sidebar-both.body-layout-Fluid ul.topiclist.missing-column	.responsive-show {
+			display: block !important;
+		}
+		
+		/* Manually enabling the responsive layout. First, we remove the second column header */
+		body.sidebar-both.body-layout-Fluid ul.topiclist.two-long-columns dd {
+			display: none;	
+		}
+		
+		/* Increase the left column width to 100% */
+		body.sidebar-both.body-layout-Fluid ul.topiclist.two-long-columns dt .list-inner {
+			margin-right: 0;	
+		}
+	
+		/* Then enable the extra info below */	
+		body.sidebar-both.body-layout-Fluid ul.topiclist.two-long-columns .responsive-show {
+			display: block !important;
+		}				
+		
+		
+					
+	}
+
+	/* Grid Forumlist
+	---------------------------------------- */
+	
+	/* When boxed and both sidebars are enabled, reduce grid forumlist down to 2 columns */
+	body.sidebar-both.body-layout-Boxed .forumlist_grid li.row {
+		width: 50%;		
+	}
+	
+	/* When fluid and the right sidebar is present, reduce to 2 columns between 1200px and 1500px */
+	@media (min-width: 1200px)and (max-width: 1499px) {
+		body.sidebar-both.body-layout-Fluid .forumlist_grid li.row, body.sidebar-right-only.body-layout-Fluid .forumlist_grid li.row {
+			width: 50%;		
+		}		
+	}
+	

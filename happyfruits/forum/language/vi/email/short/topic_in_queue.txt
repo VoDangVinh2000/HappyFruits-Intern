@@ -1,0 +1,13 @@
+Subject: Thông báo kiểm duyệt chủ đề - "{TOPIC_TITLE}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì chủ đề "{TOPIC_TITLE}" của bạn tại diễn đàn "{SITENAME}" cần được kiểm duyệt nội dung trước khi đăng.
+
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
+{U_VIEW_TOPIC}
+
+Nếu bạn muốn xem chuyên mục, hãy bấm vào liên kết dưới đây:
+{U_FORUM}
+
+{EMAIL_SIG}

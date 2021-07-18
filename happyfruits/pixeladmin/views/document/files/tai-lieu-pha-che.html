@@ -1,0 +1,310 @@
+<p><strong>BigPost API</strong></p>
+
+<p>&nbsp;</p>
+
+<p>The BigPost API provides methods for accessing a <strong>resource</strong> such as a widget, depot listing and quote.</p>
+
+<p>&nbsp;</p>
+
+<div style="margin-left:.6in;">
+<p>It is important to use the live Big Post API Endpoint below as any other URL is for testing or development purposes</p>
+</div>
+
+<p>&nbsp;</p>
+
+<p><strong>API Endpoints</strong></p>
+
+<p style="margin-left:5.0pt">https://www.bigpost.com.au/api/&lt;endpoints&gt;</p>
+
+<ul>
+	<li>suburbs
+	<ul>
+		<li>Method: GET</li>
+		<li>Provides suburbs</li>
+		<li>Parameter
+		<ul>
+			<li>q - string</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>depots
+	<ul>
+		<li>Method: GET</li>
+		<li>Provides a list of nearby depots based on postcode and suburb</li>
+		<li>Parameters
+		<ul>
+			<li>p - int (postcode)</li>
+			<li>s - string (suburb)</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>requestquote
+	<ul>
+		<li>Method: POST</li>
+		<li>Returns an estimated price</li>
+		<li>Parameters
+		<ul>
+			<li>DeliveryType &ndash; int: DEPOT = 1, Business = 2, HDS = 3</li>
+			<li>DepotId - int</li>
+			<li>SellerId - int</li>
+			<li>SellerName - string</li>
+			<li>FromSuburb - string</li>
+			<li>FromPostcode - int</li>
+			<li>FromState - string</li>
+			<li>ToSuburb - string</li>
+			<li>ToPostcode - int</li>
+			<li>ToState &ndash; string</li>
+			<li>DoNotPriceAtlJobs - boolean</li>
+			<li>DeliveryItems - array
+			<ul>
+				<li>DeadWeight &ndash; decimal (kg)</li>
+				<li>Depth &ndash; decimal (cm)</li>
+				<li>Height - decimal (cm)</li>
+				<li>Width - decimal (cm)</li>
+				<li>Quantity - int</li>
+				<li>ItemDescription - string</li>
+			</ul>
+			</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>Basic endpoints setup of ajax request made via jQuery</p>
+
+<p>$.ajax({</p>
+
+<p>url: url + &#39;/api/sellers/&#39;,</p>
+
+<p>dataType: &quot;jsonp&quot;,</p>
+
+<p>data: { q: query },</p>
+
+<p>type: &ldquo;GET&rdquo;,</p>
+
+<p>beforeSend: function (xhr) {</p>
+
+<p style="margin-left:.5in">xhr.setRequestHeader(&quot;AccessToken&quot;, &lt;accessToken&gt;);</p>
+
+<p>},</p>
+
+<p>success: success</p>
+
+<p>});</p>
+
+<p>&nbsp;</p>
+
+<p>The BigPost API can also be called from server side requests. See below for examples in C# ASP.NET and PHP:</p>
+
+<p>ASP.NET C# Suburbs Example:</p>
+
+<p><a name="_MON_1460974867"></a><img src="file:///C:\Users\mik\AppData\Local\Temp\msohtmlclip1\01\clip_image002.gif" style="height:793px; width:751px" />&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>PHP Suburbs Example:</p>
+
+<p><img src="file:///C:\Users\mik\AppData\Local\Temp\msohtmlclip1\01\clip_image004.jpg" style="height:370px; width:490px" /></p>
+
+<p>&nbsp;</p>
+
+<p>ASP.NET C# Get Price Example:</p>
+
+<p><img src="file:///C:\Users\mik\AppData\Local\Temp\msohtmlclip1\01\clip_image006.jpg" style="height:1034px; width:901px" /></p>
+
+<p>&nbsp;</p>
+
+<p>PHP Get Price Example:</p>
+
+<p><img src="file:///C:\Users\mik\AppData\Local\Temp\msohtmlclip1\01\clip_image008.jpg" style="height:1243px; width:578px" /></p>
+
+<p>&nbsp;</p>
+
+<p><strong>Older versions of Internet Explorer</strong></p>
+
+<p>Internet Explorer 8 &amp; 9 do not support the requests for data from an external domain so you will need to add the following third party plugin to your page to ensure the requests can be fulfilled from these older browsers;</p>
+
+<p>https://github.com/MoonScript/jQuery-ajaxTransport-XDomainRequest</p>
+
+<p>You should also include in your script code $.support.cors = true;</p>
+
+<p>Alternatively, you could also provide a server side solution as demonstrated in ASP.NET C# and PHP above.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Widget Basics</strong></p>
+
+<p>There are two ways to setup the widget.</p>
+
+<p>&nbsp;</p>
+
+<p>Setup 1</p>
+
+<p style="margin-left:5.0pt">&lt;!-- Place this div tag where you want the widget to go --&gt;<br />
+&lt;div id=&quot;bigPostWidgetContainer&quot;&gt;&lt;/div&gt;</p>
+
+<p style="margin-left:5.0pt">&lt;!-- Place this script somewhere after the div tag above or at the end of the body tag --&gt;</p>
+
+<p>&nbsp;<a href="https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=%3caccess_token">https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=&lt;access_token</a>&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>Setup 2</p>
+
+<p style="margin-left:5.0pt">&lt;!-- Place this script somewhere else and this script will do the rest --&gt;</p>
+
+<p style="margin-left:5.0pt"><a href="https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=%3caccess_token">https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=&lt;access_token</a>&gt;</p>
+
+<p>&nbsp;</p>
+
+<p>We offer the following additional parameters which enable you to customise your widget according to your requirements</p>
+
+<p>&nbsp;</p>
+
+<p>Widget Configuration Parameters</p>
+
+<ul>
+	<li><strong>accesstoken </strong>
+
+	<ul>
+		<li>DataType: <em>string</em></li>
+		<li>Required</li>
+		<li>This token is used for authenticating if the request is valid or not. This token is provided by BigPost for authentication to the API/widget.</li>
+	</ul>
+	</li>
+	<li><strong>modal</strong>
+	<ul>
+		<li>DataType: <em>boolean</em></li>
+		<li>Not required</li>
+		<li>If true, the widget will render a button and it is used to trigger and open a modal.</li>
+	</ul>
+	</li>
+	<li><strong>name</strong>
+	<ul>
+		<li>DataType: <em>string</em></li>
+		<li>Not required</li>
+		<li>If true, the widget will set the name of the item to the value</li>
+	</ul>
+	</li>
+	<li><strong>h</strong>
+	<ul>
+		<li>DataType: <em>decimal</em></li>
+		<li>Not required</li>
+		<li>If true, the widget will set the height of the item to the value</li>
+	</ul>
+	</li>
+	<li><strong>l</strong>
+	<ul>
+		<li>DataType: <em>decimal</em></li>
+		<li>Not required</li>
+		<li>If true, the widget will set the length of the item to the value</li>
+	</ul>
+	</li>
+	<li><strong>w</strong>
+	<ul>
+		<li>DataType: <em>decimal</em></li>
+		<li>Not required</li>
+		<li>If true, the widget will set the width of the item to the value</li>
+	</ul>
+	</li>
+	<li><strong>wg</strong>
+	<ul>
+		<li>DataType: <em>decimal</em></li>
+		<li>Not required</li>
+		<li>If true, the widget will set the weight of the item to the value</li>
+	</ul>
+	</li>
+	<li><strong>qn</strong>
+	<ul>
+		<li>DataType: <em>int</em></li>
+		<li>Not required</li>
+		<li>If true, the widget will set the quantity of the item to the value</li>
+	</ul>
+	</li>
+	<li><strong>logo</strong>
+	<ul>
+		<li>DataType: <em>boolean</em></li>
+		<li>Not required</li>
+		<li>If true, the widget will not render a Big Post logo on the widget</li>
+	</ul>
+	</li>
+	<li><strong>suburbs</strong>
+	<ul>
+		<li>DataType: <em>string</em></li>
+		<li>Not required</li>
+		<li>If set the from location of the item is preset in the widget.&nbsp; The format is suburb/postcode so for Melbourne it would be entered as Melbourne/3000 or for Sydney it would be Sydney/2000</li>
+	</ul>
+	</li>
+	<li><strong>marginpercent</strong>
+	<ul>
+		<li>DataType: <em>decimal</em></li>
+		<li>Not required</li>
+		<li>If set the widget will add an additional percentage to the returned shipping calculation.&nbsp; For example if the amount is calculated at $100 and the margin percent is 20%, the returned amount is $120</li>
+	</ul>
+	</li>
+	<li><strong>marginamount</strong>
+	<ul>
+		<li>DataType: <em>decimal</em></li>
+		<li>Not required</li>
+		<li>If set the widget will add an additional percentage to the returned shipping calculation.&nbsp; For example if the amount is calculated at $100 and the margin amount is $20, the returned amount is $120</li>
+	</ul>
+	</li>
+</ul>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>There is a test page with sample quote configurations setup at <a href="https://bigpost.com.au/QuoteWidget">https://bigpost.com.au/QuoteWidget</a>.&nbsp; The HTML is generated from code so you will not be able to obtain the source from this page</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Example URLs</strong></p>
+
+<p><a href="https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;modal=true">https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;modal=true</a></p>
+
+<p><a href="https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;h=8&amp;l=8&amp;w=8&amp;wg=50&amp;qn=1">https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;h=8&amp;l=8&amp;w=8&amp;wg=50&amp;qn=1</a></p>
+
+<p><a href="https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;suburbs=Dandenong/3175">https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;suburbs=Dandenong/3175</a></p>
+
+<p><a href="https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;logo=false">https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;logo=false</a></p>
+
+<p><a href="https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;marginpercent=15">https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;marginpercent=15</a></p>
+
+<p><a href="https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;marginamount=30">https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=1234&amp;marginamount=30</a></p>
+
+<p>&nbsp;</p>
+
+<p>Note the accesstoken should be replaced with the access token supplied by Big Post.</p>
+
+<p>&nbsp;</p>
+
+<p><strong>Ebay</strong></p>
+
+<p>Because of eBay security restriction with embedding javascript into an item, you can use the following workaround which enables the widget.</p>
+
+<p>&nbsp;</p>
+
+<p>&lt;script type=&quot;text/javascript&quot;&gt;<br />
+var az = &quot;SC&quot;;<br />
+var bz = &quot;RI&quot;;<br />
+var cz = &quot;PT&quot;;<br />
+var dz = &quot;SR&quot;;<br />
+var ez = &quot;C=&quot;;<br />
+var fz = &quot; https://www.bigpost.com.au/scripts/bigpostquotewidget.js?accesstoken=&lt;access_token&gt;&quot;;<br />
+document.write(&quot;&lt;&quot;+az+bz+cz+&quot; type=&#39;text/javascript&#39;&quot;+dz+ez+fz+&quot;&gt;&quot;);<br />
+document.write(&quot;&lt;/&quot;+az+bz+cz+&quot;&gt;&quot;);<br />
+&lt;/script&gt;</p>
+
+<p><strong>Leave Safe HDS Jobs</strong></p>
+
+<p>When calling the RequestQuote endpoint and specifying a &lsquo;home delivery&rsquo; delivery type, you can specify if you wish to receive pricing for &lsquo;Authorised to Leave Safe&rsquo; Jobs by setting the DoNotPriceAtlJobs to false. If the response returned has the IsLeaveSafeHdsJob set to true, then the Job is an &lsquo;Authorised to Leave Safe&rsquo; otherwise it is a standard home delivery job.</p>
+
+<p style="margin-left:.5in">&nbsp;</p>
+
+<p>&nbsp;</p>

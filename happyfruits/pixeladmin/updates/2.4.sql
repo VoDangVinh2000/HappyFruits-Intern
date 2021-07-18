@@ -1,0 +1,2 @@
+-- 09/10/2014
+ALTER TABLE `orders` ADD `is_shipped` TINYINT(1) DEFAULT 0;

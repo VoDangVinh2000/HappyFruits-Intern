@@ -1,0 +1,10 @@
+Subject: Bài viết của bạn bị từ chối - "{POST_SUBJECT}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này bởi vì bài viết "{POST_SUBJECT}" của bạn tại diễn đàn "{SITENAME}" đã bị từ chối bởi một điều hành viên hoặc quản trị viên của chúng tôi.
+
+Nguyên nhân bài viết của bạn bị từ chối là:
+{REASON}
+
+{EMAIL_SIG}

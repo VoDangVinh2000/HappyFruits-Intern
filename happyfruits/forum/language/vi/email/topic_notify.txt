@@ -1,0 +1,19 @@
+Subject: Thông báo có bài trả lời mới - "{TOPIC_TITLE}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này bởi vì bạn đã chọn theo dõi chủ đề "{TOPIC_TITLE}" tại diễn đàn "{SITENAME}". Chủ đề này vừa có một bài trả lời <!-- IF AUTHOR_NAME != '' --> bởi thành viên {AUTHOR_NAME}<!-- ENDIF --> kể từ lần ghé thăm trước của bạn. Không có thông báo nào nữa gửi đến cho bạn về chủ đề này cho tới khi bạn đã xem nó:
+
+Nếu bạn muốn xem bài viết mới nhất của chủ đề này kể từ lần ghé thăm trước của mình, hãy bấm vào liên kết dưới đây:
+{U_NEWEST_POST}
+
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
+{U_TOPIC}
+
+Nếu bạn muốn xem chuyên mục, hãy bấm vào liên kết dưới đây:
+{U_FORUM}
+
+Nếu bạn không muốn theo dõi chủ đề này nữa, bạn có thể bấm vào liên kết "Ngừng theo dõi chủ đề này" xuất hiện trong phần xem chủ đề hoặc bấm vào liên kết dưới đây:
+{U_STOP_WATCHING_TOPIC}
+
+{EMAIL_SIG}

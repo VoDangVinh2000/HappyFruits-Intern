@@ -1,0 +1,46 @@
+.flightdeck-wrapper, .flightdeck fieldset {
+	background-color: #FFFFFF;
+	padding: 30px;
+	border: none;
+}
+
+.flightdeck * {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
+.flightdeck fieldset {
+	margin-bottom: 30px;
+}
+
+.flightdeck fieldset dl {
+	margin-bottom: 20px;	
+}
+
+.flightdeck fieldset dd {
+	padding-left: 20px;
+	border-left: none;
+}
+
+.flightdeck fieldset dt,.flightdeck fieldset dt:hover {
+	border-right-color: #E3EBEF !important;
+}
+
+.flightdeck fieldset legend, .flightdeck fieldset dt label {
+	font-weight: 700;
+	font-size: 16px;
+}
+
+.flightdeck fieldset input[type=text], .flightdeck fieldset input[type=file], .flightdeck fieldset input[type=number], .flightdeck fieldset textarea {
+	background-color: #E3EBEF;
+	border: none;
+	padding: 5px;
+}
+
+.flightdeck textarea {
+	font-family: "Courier New", Courier, monospace;
+}
+
+.flightdeck .purgewarning {
+	display: none;	
+}

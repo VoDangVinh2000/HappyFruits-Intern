@@ -1,0 +1,1 @@
+ALTER TABLE `customers` ADD `free_ship` TINYINT(1) NOT NULL DEFAULT '0' AFTER `is_locked`;

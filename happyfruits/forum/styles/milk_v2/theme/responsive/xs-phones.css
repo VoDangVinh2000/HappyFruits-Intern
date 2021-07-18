@@ -1,0 +1,100 @@
+@media (max-width: 767px) {
+	
+	body{ border-top-color: #FF0000;}
+	
+	/* Sidebar Adjustments
+	----------------------------*/
+	
+	/* Hide left sidebar on tiny screens. Adjust the CSS to stop it borking the other columns */
+	#leftcolumn {
+		display: none;
+		float: none;
+		width: 100%;
+		clear: both;
+		margin-left: 0;
+	}
+	
+	/* Center column padding/margin adjustments */
+	#contentcolumn {
+		margin: 0 !important;
+		padding: 0;
+	}
+	
+	/* Break right column onto new line cleanly */
+	#rightcolumn {
+		float: none;
+		width: 100%;
+		margin-left: 0;
+		clear: both;
+	}
+	
+	/* Sidebar Widgets
+	---------------------------------------- */
+	.sidebar_widget {
+		table-layout: fixed;
+	}
+	
+	.profile_widget_avatar, .profile_widget_info, .profile_widget_list {
+		display: table-cell;
+		vertical-align: top;
+		float: none;
+		width: auto;
+	}
+	
+	.profile_widget_avatar {
+		margin-bottom: 0;
+	}
+	
+	.profile_widget_info {
+		padding: 0 30px;
+	}
+	
+	.profile_widget_list {
+		padding-top: 0;
+		border-top: none;
+	}
+	
+	/* Grid Forumlist
+	---------------------------------------- */
+	
+	/* Turn 3 columns into 1 */
+	.forumlist_grid li.row {
+		width: 100%;	
+	}	
+	
+	
+	/* Custom Login Page
+	---------------------------------------- */
+	
+	/* Last Post Avatar
+	---------------------------------------- */	
+	span.lastpostavatar {
+		display: none;	
+	}
+	
+	/* Subforums in column
+	---------------------------------------- */	
+	ul.sub-list {
+		width: 100%;
+	}	
+	
+	/* responsive logo
+	---------------------------------------- */	
+	
+	/* override the dynamic inline width so that we can relatively resize logo below */
+	#site-description {
+		width: 100% !important;
+	}
+	
+	#site-description img {
+		max-width: 85%;
+	}
+	
+	/* pagination fix
+	---------------------------------------- */
+    .row .pagination {
+        display: block;
+        margin-top: 0;
+    }   	
+	
+}

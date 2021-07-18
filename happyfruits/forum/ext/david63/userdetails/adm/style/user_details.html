@@ -1,0 +1,69 @@
+{% include 'overall_header.html' %}
+{% INCLUDECSS '@david63_userdetails/user_details.css' %}
+{% INCLUDECSS '@david63_userdetails/admin_buttons.css' %}
+
+<a name="maincontent"></a>
+
+<h1>{{ lang('ACP_USER_DETAILS') }}</h1>
+<p>{{ lang('USER_DETAILS_DISPLAY') }}
+	{% if S_ERROR_EXPLAIN %}
+		<br /><br />{{ lang('ERROR_EXPLAIN') }}
+	{% endif %}
+</p>
+
+<img style="float:{{ S_CONTENT_FLOW_START }};" src="https://img.shields.io/badge/{{ lang('VERSION') }}-{{ USER_DETAILS_VERSION }}-orange.svg?style=plastic" />
+
+<form id="userdetails" method="post" action="{{ U_ACTION }}">
+
+	<div class="pagination">
+		[ {{ lang('TOTAL_USERS') }}{{ lang('COLON') }}{{ TOTAL_USERS }} ]
+		{% if pagination %}
+			&bull; {% include 'pagination.html' %}
+		{% else %}
+			&bull; {{ PAGE_NUMBER }}
+		{% endif %}
+	</div>
+
+	<fieldset class="display-options">
+		<input class="adm-button" type="submit" value="{{ lang('UD_BACK') }}" name="back" />
+		&nbsp;&nbsp;&nbsp;
+		<input class="adm-button" type="submit" value="{{ lang('UD_GO') }}" name="sort" />
+		&nbsp;&nbsp;&nbsp;
+		<input class="adm-button" type="submit" value="{{ lang('CLEAR_FILTER') }}" name="clear_filters" />
+		<br /><br />
+		<strong>&nbsp;&nbsp;{{ lang('SORT_BY') }}&nbsp;{{ lang('COLON') }}</strong>&nbsp;&nbsp;{{ S_SORT_KEY }}&nbsp;&nbsp;&nbsp;{{ S_SORT_DIR }}
+		<br />
+		<strong>{{ lang('FILTER_BY') }}&nbsp;{{ lang('COLON') }}</strong>&nbsp;&nbsp;{{ S_FILTER_BY }}&nbsp;&nbsp;&nbsp;{{ S_FILTER_CHAR }}
+	</fieldset>
+
+	<table cellspacing="1">
+		<thead>
+			<tr>
+				<th>{{ lang('USERNAME') }}</th>
+				{{ HEADINGS }}
+			</tr>
+		</thead>
+
+		<tbody>
+			{% for data in user_data %}
+				<tr class= {% if data.S_ROW_COUNT is even %} "row1" {% else %} "row2" {% endif %}>
+					<td>{{ data.USERNAME }}</td>
+					{{ data.OUTPUT_DATA }}
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<br />
+
+	<div class="pagination">
+		{% if pagination %}
+			{% include 'pagination.html' %}
+		{% else %}
+			{{ PAGE_NUMBER }}
+		{% endif %}
+	</div>
+
+</form>
+
+{% include 'overall_footer.html' %}

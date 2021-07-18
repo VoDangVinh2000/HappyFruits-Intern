@@ -1,0 +1,7 @@
+Subject: Kết thúc báo cáo tin nhắn - "{PM_SUBJECT}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì báo cáo của bạn về tin nhắn "{PM_SUBJECT}" tại diễn đàn "{SITENAME}" vừa được xử lí bởi các điều hành và quản trị viên của chúng tôi. Báo cáo này hiện đã được kết thúc. Nếu bạn có bất cứ thắc mắc nào, hãy liên hệ ngay với người đã kết thúc báo cáo này là {CLOSER_NAME} qua tin nhắn.
+
+{EMAIL_SIG}

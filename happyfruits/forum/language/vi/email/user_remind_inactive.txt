@@ -1,0 +1,10 @@
+Subject: Nhắc nhở tài khoản chưa kích hoạt
+
+Chào bạn, {USERNAME}
+
+Thông báo này nhắc nhở rằng tài khoản của bạn tại "{SITENAME}, đăng ký vào ngày {REGISTER_DATE}, vẫn chưa được kích hoạt. Nếu muốn kích hoạt tài khoản này, bạn hãy bấm vào liên kết dưới đây:
+{U_ACTIVATE}
+
+Cám ơn bạn đã tham gia vào "{SITENAME}", chúng tôi đang mong chờ sự góp mặt của bạn!
+
+{EMAIL_SIG}

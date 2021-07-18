@@ -1,0 +1,219 @@
+
+/* Icon images
+---------------------------------------- */
+
+.contact-icon						{ background-image: url("./images/icons_contact.png"); }
+
+/* Profile & navigation icons */
+.pm-icon							{ background-position: 0 0; }
+.email-icon							{ background-position: -21px 0; }
+.jabber-icon						{ background-position: -80px 0; }
+.phpbb_icq-icon						{ background-position: -61px 0 ; }
+.phpbb_wlm-icon						{ background-position: -182px 0; }
+.phpbb_aol-icon						{ background-position: -244px 0; }
+.phpbb_website-icon					{ background-position: -40px 0; }
+.phpbb_youtube-icon					{ background-position: -98px 0; }
+.phpbb_facebook-icon				{ background-position: -119px 0; }
+.phpbb_googleplus-icon				{ background-position: -140px 0; }
+.phpbb_skype-icon					{ background-position: -161px 0; }
+.phpbb_twitter-icon					{ background-position: -203px 0; }
+.phpbb_yahoo-icon					{ background-position: -224px 0; }
+
+/* Forum icons & Topic icons */
+.global_read {
+	background-image: url("./images/icons/png/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read.svg"); /* Modern browsers */
+}
+.global_read_mine {
+	background-image: url("./images/icons/png/icon_read_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_mine.svg"); /* Modern browsers */
+}
+.global_read_locked {
+	background-image: url("./images/icons/png/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked.svg"); /* Modern browsers */
+}
+.global_read_locked_mine {
+	background-image: url("./images/icons/png/icon_read_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked_mine.svg"); /* Modern browsers */
+}
+
+.global_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.global_unread_mine {
+	background-image: url("./images/icons/png/icon_unread_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_mine.svg"); /* Modern browsers */
+}
+.global_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.global_unread_locked_mine {
+	background-image: url("./images/icons/png/icon_unread_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked_mine.svg"); /* Modern browsers */
+}
+
+.announce_read {
+	background-image: url("./images/icons/png/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read.svg"); /* Modern browsers */
+}
+.announce_read_mine {
+	background-image: url("./images/icons/png/icon_read_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_mine.svg"); /* Modern browsers */
+}
+.announce_read_locked {
+	background-image: url("./images/icons/png/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked.svg"); /* Modern browsers */
+}
+.announce_read_locked_mine {
+	background-image: url("./images/icons/png/icon_read_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked_mine.svg"); /* Modern browsers */
+}
+
+.announce_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.announce_unread_mine {
+	background-image: url("./images/icons/png/icon_unread_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_mine.svg"); /* Modern browsers */
+}
+.announce_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.announce_unread_locked_mine {
+	background-image: url("./images/icons/png/icon_unread_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked_mine.svg"); /* Modern browsers */
+}
+
+.forum_link {
+	background-image: url("./images/icons/png/forum_link.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/forum_link.svg"); /* Modern browsers */
+}
+
+.forum_read {
+	background-image: url("./images/icons/png/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read.svg"); /* Modern browsers */
+}
+.forum_read_locked {
+	background-image: url("./images/icons/png/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked.svg"); /* Modern browsers */
+}
+.forum_read_subforum {
+	background-image: url("./images/icons/png/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read.svg"); /* Modern browsers */
+}
+
+.forum_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.forum_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.forum_unread_subforum {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+
+
+.sticky_read {
+	background-image: url("./images/icons/png/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read.svg"); /* Modern browsers */
+}
+.sticky_read_mine {
+	background-image: url("./images/icons/png/icon_read_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_mine.svg"); /* Modern browsers */
+}
+.sticky_read_locked {
+	background-image: url("./images/icons/png/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked.svg"); /* Modern browsers */
+}
+.sticky_read_locked_mine {
+	background-image: url("./images/icons/png/icon_read_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked_mine.svg"); /* Modern browsers */
+}
+
+.sticky_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.sticky_unread_mine {
+	background-image: url("./images/icons/png/icon_unread_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_mine.svg"); /* Modern browsers */
+}
+.sticky_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.sticky_unread_locked_mine {
+	background-image: url("./images/icons/png/icon_unread_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked_mine.svg"); /* Modern browsers */
+}
+
+.topic_moved {
+	background-image: url("./images/icons/png/forum_link.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/forum_link.svg"); /* Modern browsers */
+}
+
+.topic_read {
+	background-image: url("./images/icons/png/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read.svg"); /* Modern browsers */
+}
+.topic_read_mine {
+	background-image: url("./images/icons/png/icon_read_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_mine.svg"); /* Modern browsers */
+}
+.topic_read_hot {
+	background-image: url("./images/icons/png/icon_read_hot.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_hot.svg"); /* Modern browsers */
+}
+.topic_read_hot_mine {
+	background-image: url("./images/icons/png/icon_read_hot_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_hot_mine.svg"); /* Modern browsers */
+}
+.topic_read_locked {
+	background-image: url("./images/icons/png/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked.svg"); /* Modern browsers */
+}
+.topic_read_locked_mine {
+	background-image: url("./images/icons/png/icon_read_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read_locked_mine.svg"); /* Modern browsers */
+}
+
+.topic_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.topic_unread_mine {
+	background-image: url("./images/icons/png/icon_unread_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_mine.svg"); /* Modern browsers */
+}
+.topic_unread_hot {
+	background-image: url("./images/icons/png/icon_unread_hot.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_hot.svg"); /* Modern browsers */
+}
+.topic_unread_hot_mine {
+	background-image: url("./images/icons/png/icon_unread_hot_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_hot_mine.svg"); /* Modern browsers */
+}
+.topic_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.topic_unread_locked_mine {
+	background-image: url("./images/icons/png/icon_unread_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked_mine.svg"); /* Modern browsers */
+}
+
+.pm_read {
+	background-image: url("./images/icons/png/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_read.svg"); /* Modern browsers */
+}
+.pm_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}

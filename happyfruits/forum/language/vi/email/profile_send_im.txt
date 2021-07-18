@@ -1,0 +1,13 @@
+
+Chào bạn, {TO_USERNAME}
+
+Đây là tin nhắn được gửi đến cho bạn từ thành viên {FROM_USERNAME} thông qua tài khoản của bạn tại diễn đàn "{SITENAME}". Nếu đây là thư rác, lừa đảo hay có nội dung không đúng đắn, bạn có thể liên hệ về điều này với người quản trị theo địa chỉ email dưới đây:
+{BOARD_CONTACT}
+
+Hãy nhớ đính kèm đầy đủ nội dung tin nhắn này. Lưu ý rằng địa chỉ gửi đi của tin nhắn này là tài khoản gửi tin nhắn nhanh của chúng tôi.
+
+Nội dung tin nhắn gửi cho bạn như sau:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{MESSAGE}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

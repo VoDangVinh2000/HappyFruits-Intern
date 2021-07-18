@@ -1,0 +1,30 @@
+imports:
+    - { resource: arraydata.yml }
+
+services:
+    david63.userdetails.data.controller:
+        class: david63\userdetails\controller\data_controller
+        arguments:
+            - '@config'
+            - '@config_text'
+            - '@dbal.conn'
+            - '@request'
+            - '@template'
+            - '@pagination'
+            - '@user'
+            - '@group_helper'
+            - '@language'
+            - '@profilefields.type_collection'
+            - '%select_ary%'
+            - '%core.root_path%'
+            - '%core.php_ext%'
+
+    david63.userdetails.config.controller:
+        class: david63\userdetails\controller\config_controller
+        arguments:
+            - '@config'
+            - '@request'
+            - '@template'
+            - '@user'
+            - '@log'
+            - '@language'

@@ -1,0 +1,16 @@
+-- 30/05/2015 - Files
+DROP TABLE IF EXISTS `files`;
+CREATE TABLE `files` (
+  `id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+  `type` VARCHAR(100) NULL,
+  `filename` VARCHAR(100) NULL,
+  `path` VARCHAR(255) NULL,
+  `foreign_id` INT(11) NOT NULL,
+  `sequence_number` INT(5) NOT NULL DEFAULT '0',
+  `extra_data` TEXT NOT NULL,
+  `created_by` INT(11) NOT NULL,
+  `created_dtm` DATETIME NOT NULL,
+  `modified_dtm` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `deleted` TINYINT(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=INNODB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;

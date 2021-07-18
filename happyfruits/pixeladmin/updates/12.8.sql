@@ -1,0 +1,4 @@
+-- 27/08/2020 - More settings
+UPDATE `settings` SET `has_en_option` = '1', `field_type` = 'html' WHERE `settings`.`id` = 52;
+INSERT INTO `settings` (`id`, `category`, `option_name`, `option_value`, `option_value_en`, `has_en_option`, `name`, `field_type`, `is_hide`, `created_dtm`, `modified_dtm`) VALUES
+(NULL, '1. Tổng quan', 'general_payment_description', 'eFruit có xuất hóa đơn điện tử VAT với đơn hàng > 200k khi khách có nhu cầu.<br/>Thanh toán khi nhận hàng hoặc chuyển khoản vào tài khoản:<br /><br/>ACB TPHCM: 204408249 - Chi nhánh HCM<br/>CTK: CTY TNHH THUONG MAI DICH VU MID', 'We can issue e-invoice for orders which have total greater than 200k. Please contact us or leave a note.<br/><br/>Cash on delivery or pay with bank account:<br /><br/>ACB Bank: 204408249 - Branch: Ho Chi Minh<br/>Account holders: CTY TNHH THUONG MAI DICH VU MID', '1', 'Ghi chú thanh toán', 'html', '0', NOW(), NOW());

@@ -1,0 +1,92 @@
+{% include 'overall_header.html' %}
+<div class="flightdeck">
+<div class="flightdeck-wrapper">
+<img src="{ROOT_PATH}/ext/planetstyles/flightdeck/adm/style/acp-logo.png" width="500" />
+<br /><br /><p>Milk Theme Control Panel. Please refer to the documentation for help.</p>
+</div>
+<div class="errorbox purgewarning">
+<p><strong>Important:</strong> Purge Cache in: "ACP &rarr; General &raquo; Purge Cache &rarr; Run Now" to remove this message and enable flightdeck.</p>
+</div>
+<form id="acp_board" method="post" action="{{ U_ACTION }}" enctype="multipart/form-data">
+
+	<fieldset>
+		<legend>{{ lang('STYLE_SETTINGS_LOGO') }}</legend>
+		<p>{{ lang('STYLE_SETTINGS_LOGO_EXPLAIN') }}</p>
+		<dl>
+			<dt><label for="style_settings_logo_upload">{{ lang('STYLE_SETTINGS_LOGO_UPLOAD') }}{{ lang('COLON') }}</label><br /><span>{{ lang('STYLE_SETTINGS_LOGO_UPLOAD_EXPLAIN') }}</span></dt>
+			<dd><input type="file" name="style_settings_logo_upload" id="style_settings_logo_upload"></dd>
+		</dl>
+		<dl>
+			<dt><label for="style_settings_logo_path">{{ lang('STYLE_SETTINGS_LOGO_PATH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('STYLE_SETTINGS_LOGO_PATH_EXPLAIN') }}</span></dt>
+			<dd><input type="text" id="style_settings_logo_path" name="style_settings_logo_path" value="{{ STYLE_SETTINGS_LOGO_PATH }}" size="40" maxlength="255" /></dd>
+		</dl>
+		<dl>
+			<dt><label for="style_settings_logo_width">{{ lang('STYLE_SETTINGS_LOGO_WIDTH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('STYLE_SETTINGS_LOGO_WIDTH_EXPLAIN') }}</span></dt>
+			<dd><input type="number" id="style_settings_logo_width" name="style_settings_logo_width" value="{{ STYLE_SETTINGS_LOGO_WIDTH }}" size="3" maxlength="3" min="0" /> {{ lang('PIXEL') }}</dd>
+		</dl>
+		<dl>
+			<dt><label for="style_settings_logo_height">{{ lang('STYLE_SETTINGS_LOGO_HEIGHT') }}{{ lang('COLON') }}</label><br /><span>{{ lang('STYLE_SETTINGS_LOGO_HEIGHT_EXPLAIN') }}</span></dt>
+			<dd><input type="number" id="style_settings_logo_height" name="style_settings_logo_height" value="{{ STYLE_SETTINGS_LOGO_HEIGHT }}" size="3" maxlength="3" min="0" max="999" /> {{ lang('PIXEL') }}</dd>
+		</dl>
+        <hr />
+		<dl>
+			<dt><label for="style_settings_header_upload">{{ lang('STYLE_SETTINGS_FAVICON_UPLOAD') }}{{ lang('COLON') }}</label><br /><span>{{ lang('STYLE_SETTINGS_FAVICON_EXPLAIN') }}</span></dt>
+			<dd><input type="file" name="style_settings_favicon_upload" id="style_settings_favicon_upload"></dd>
+		</dl>
+		<dl>
+			<dt><label for="style_settings_favicon_path">{{ lang('STYLE_SETTINGS_FAVICON_PATH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('STYLE_SETTINGS_FAVICON_PATH_EXPLAIN') }}</span></dt>
+			<dd><input type="text" id="style_settings_favicon_path" name="style_settings_favicon_path" value="{{ STYLE_SETTINGS_FAVICON_PATH }}" size="40" maxlength="255" /></dd>
+		</dl>
+        <hr />        
+		<dl>
+			<dt><label for="style_settings_header_upload">{{ lang('STYLE_SETTINGS_HEADER_UPLOAD') }}{{ lang('COLON') }}</label><br /><span>{{ lang('STYLE_SETTINGS_HEADER_UPLOAD_EXPLAIN') }}</span></dt>
+			<dd><input type="file" name="style_settings_header_upload" id="style_settings_header_upload"></dd>
+		</dl>
+		<dl>
+			<dt><label for="style_settings_header_path">{{ lang('STYLE_SETTINGS_HEADER_PATH') }}{{ lang('COLON') }}</label><br /><span>{{ lang('STYLE_SETTINGS_HEADER_PATH_EXPLAIN') }}</span></dt>
+			<dd><input type="text" id="style_settings_header_path" name="style_settings_header_path" value="{{ STYLE_SETTINGS_HEADER_PATH }}" size="40" maxlength="255" /></dd>
+		</dl>                
+	</fieldset>
+
+	<fieldset>
+		<legend>{{ lang('STYLE_SETTINGS_CONFIG') }}</legend>
+		{% for style_settings_config in loops.style_settings_config %}
+			<dl>
+				<dt><label for="{{ style_settings_config.CONFIG_NAME }}">{{ style_settings_config.LABEL }}{{ lang('COLON') }}</label><br /><span>{{ style_settings_config.LABEL_HELP }}</span>
+                <!-- <br /><span>{{ style_settings_config.LABEL_EXPLAIN }}</span></dt> -->
+				<dd>
+					{% if style_settings_config.S_BOOL %}
+						<label><input type="radio" class="radio" id="{{ style_settings_config.CONFIG_NAME }}" name="{{ style_settings_config.CONFIG_NAME }}" value="1"{% if style_settings_config.VALUE %} checked="checked"{% endif %} /> {{ lang('YES') }}</label>
+						<label><input type="radio" class="radio" name="{{ style_settings_config.CONFIG_NAME }}" value="0"{% if not style_settings_config.VALUE %} checked="checked"{% endif %} /> {{ lang('NO') }}</label>
+					{% elseif style_settings_config.S_LIST %}
+						{% for OPTION in style_settings_config.OPTIONS %}
+							<label><input type="radio" class="radio" {% if loop.first %}id="{{ style_settings_config.CONFIG_NAME }}" {% endif %}name="{{ style_settings_config.CONFIG_NAME }}" value="{{ OPTION }}"{% if style_settings_config.VALUE === OPTION %} checked="checked"{% endif %} /> {{ OPTION }}</label>
+						{% endfor %}
+					{% elseif style_settings_config.S_STRING %}
+						<input type="text" id="{{ style_settings_config.CONFIG_NAME }}" name="{{ style_settings_config.CONFIG_NAME }}" value="{{ style_settings_config.VALUE }}" size="40" maxlength="255" />
+					{% endif %}
+				</dd>
+			</dl>
+		{% endfor %}
+	</fieldset>
+
+	<fieldset>
+    <p>Refer to documentation for corresponding output locations.</p>
+		<legend>{{ lang('STYLE_SETTINGS_HTML_CODE') }}</legend>
+		{% for style_settings_html in loops.style_settings_html %}
+			<dl>
+				<dt><label for="{{ style_settings_html.NAME }}">{{ style_settings_html.LABEL }}</label><br /><span>Refer to documentation for output location. <!-- {{ style_settings_html.LABEL_EXPLAIN }} --></span></dt>
+				<dd><textarea id="{{ style_settings_html.NAME }}" name="{{ style_settings_html.NAME }}" rows="10" cols="500" >{{ style_settings_html.VALUE }}</textarea></dd>
+			</dl>
+		{% endfor %}
+	</fieldset>
+
+	<fieldset>
+		<p class="submit-buttons">
+			<input class="button1" type="submit" id="submit" name="submit" value="{{ lang('SUBMIT') }}" />&nbsp;
+		</p>
+		{{ S_FORM_TOKEN }}
+	</fieldset>
+</form>
+</div>
+{% include 'overall_footer.html' %}

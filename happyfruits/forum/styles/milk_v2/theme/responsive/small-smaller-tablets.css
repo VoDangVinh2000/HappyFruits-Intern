@@ -1,0 +1,152 @@
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	body{ border-top-color: #FF3;}
+	
+	/* Global Containers
+	---------------------------------------- */
+
+	/* Add a small margin */
+	.body-layout-Boxed #wrap {
+		padding: 0 15px;
+		width: auto;
+	}
+	
+	
+	/* Sidebar Structure
+	---------------------------------------- */	
+	
+	/* Hide left sidebar on tiny screens and move it out of the way */
+	#leftcolumn {
+		display: none;
+		margin-left: -100%;
+	}
+	
+	/* Clear center column padding */
+	#contentcolumn {
+		margin: 0;
+		padding: 0;
+	}	
+		
+	/* Break right column (sidebar) onto new line cleanly */
+	#rightcolumn {
+		float: none;
+		width: 100%;
+		margin-left: 0;
+		clear: both;
+	}
+	
+	/* Sidebar Widgets
+	---------------------------------------- */
+	.sidebar_widget {
+		table-layout: fixed;
+	}
+	
+	.profile_widget_avatar, .profile_widget_info, .profile_widget_list {
+		display: table-cell;
+		vertical-align: top;
+		float: none;
+		width: auto;
+	}
+	
+	.profile_widget_avatar {
+		margin-bottom: 0;
+	}
+	
+	.profile_widget_info {
+		padding: 0 30px;
+	}
+	
+	.profile_widget_list {
+		padding-top: 0;
+		border-top: none;
+	}	
+	
+	/* Grid Forumlist
+	---------------------------------------- */
+	
+	/* Turn 3 columns into 2 */
+	.forumlist_grid li.row {
+		width: 50%;	
+	}	
+	
+	/* Forumlist Colums
+	---------------------------------------- */		
+	
+	/* Remove the 'topics' column */
+	.forabg dd.posts, .forumbg dd.views {
+		display: none;
+	}
+	
+	/* Or, reduce the width of 'simpleposts' by 50% (from 190 to 95) */
+	dd.simpleposts {
+		width: 95px;	
+	}
+	
+	/* Adjust the other margins to account for the (now missing) 95px */
+	ul.topiclist dt {
+		margin-right: -395px;
+	}
+	
+	ul.topiclist dt .list-inner {
+		margin-right: 395px;
+	}
+	
+	.forabg li.header dt, .forumbg li.header dt {
+		margin-right: -435px;	
+	}
+	
+	
+	/* Custom Login Page
+	---------------------------------------- */	
+	
+	/* Clear the veritcal alignment. Top alignment is fine for smaller devices. Also make it narrower */
+	.login_container {
+		display: block;
+		width: 450px;
+	}
+	
+	/* Increase left and right container width to 100% */
+	.login_container_left, .login_container_right {
+		width: 100%;
+		display: block;
+	}
+	
+	/* Bit of top margin though, just so it doesn't look totally weird */
+	.login_container_left {
+		margin-top: 50px;
+	}
+	
+	/* no min height on the left content for phones, way too small */
+	.login_container_left_section_content {
+		min-height: 0;
+	}	
+	
+	/* Misc
+	---------------------------------------- */		
+	ul.topiclist li.stat_login_hide {
+		display: none;
+	}
+	
+	/* Hide the topic type labels when we're in a boxed layout with both sidebars */
+	span.topic_type span {
+		display: none;
+	}		
+	
+	/* Subforums in column
+	---------------------------------------- */	
+	ul.sub-list {
+		width: 100%;
+	}
+	
+	/* responsive logo
+	---------------------------------------- */	
+	
+	/* override the dynamic inline width so that we can relatively resize logo below */
+	#site-description {
+		width: 100% !important;
+	}
+	
+	#site-description img {
+		max-width: 85%;
+	}	
+}

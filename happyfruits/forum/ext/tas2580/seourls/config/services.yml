@@ -1,0 +1,11 @@
+services:
+    efruit.login.listener:
+        class: efruit\login\event\listener
+        arguments:
+            - @template
+            - @request
+            - @path_helper
+            - %core.root_path%
+            - %core.php_ext%
+        tags:
+            - { name: event.listener }

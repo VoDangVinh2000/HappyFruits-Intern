@@ -1,0 +1,19 @@
+Subject: Thông báo trả lời chủ đề - "{TOPIC_TITLE}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì chủ để "{TOPIC_TITLE}" mà bạn đã đánh dấu tại diễn đàn "{SITENAME}" có một bài trả lời mới kể từ lần ghé thăm trước của bạn. Bạn có thể sử dụng liên kết bên dưới để xem lại và trả lời. Sẽ không có thêm bất kì thông báo nào nữa gửi đến bạn cho đến khi bạn xem qua chủ đề.
+
+Nếu bạn muốn xem bài viết mới nhất trong chủ đề, hãy bấm vào liên kết dưới đây:
+{U_NEWEST_POST}
+
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
+{U_TOPIC}
+
+Nếu bạn muốn xem chuyên mục, hãy bấm vào liên kết dưới đây:
+{U_FORUM}
+
+Nếu bạn không muốn nhận những thông báo về việc chủ đề mình đánh dấu có bài trả lời, hãy vui lòng cập nhật lại thiết lập thông báo tại:
+{U_NOTIFICATION_SETTINGS}
+
+{EMAIL_SIG}

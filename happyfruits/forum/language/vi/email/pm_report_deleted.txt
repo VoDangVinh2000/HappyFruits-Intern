@@ -1,0 +1,7 @@
+Subject: Báo cáo tin nhắn đã xóa - "{PM_SUBJECT}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì báo cáo của bạn về tin nhắn "{PM_SUBJECT}" tại diễn đàn "{SITENAME}" đã bị xoá bởi các điều hành và quản trị viên của chúng tôi.
+
+{EMAIL_SIG}

@@ -1,0 +1,397 @@
+/* Dark Backgrounds */
+html {
+	background-color: #1c262f;	
+}
+
+.panel, .panel.bg2 {
+	background-color: #1c262f;	
+}
+
+.forabg, .forumbg, .viewtopic_wrapper {
+	background-color: #1c262f;	
+}
+
+.bg3 {
+	background-color: #1c262f;	
+}
+
+body.content_block_header_stripe li.header, .alt_block li.header {
+	background-color: #1c262f !important;
+}
+
+div.rules {
+	background-color: #1c262f;	
+}
+
+a.button1, input.button1, input.button3, a.button2, input.button2, .inputbox, .button {
+	background-color: #1c262f;
+	border-color: #323f4e;
+}
+
+.panel-container .panel .inputbox, .panel-container .panel select, .panel-container .panel .pm .button, .panel-container .panel .button-secondary, .panel .pm .button {
+	background-color: #1c262f;	
+}
+
+fieldset.quick-login input.inputbox {
+	background-color: #1c262f;
+}
+
+.dropdown .dropdown-contents {
+	background-color: #1c262f;
+}
+
+.pagination li a {
+	background-color: #1c262f;
+	border-color: #323f4e;
+}
+
+/* So as to not blind users with super high contrast block of colour */
+.social_links_footer {
+	background: #1c262f !important;
+}
+
+.social_links_footer a:hover span {
+	color: #1c262f !important;
+}
+
+.topic_type {
+	background-color: #1c262f;
+}
+
+.tabs .activetab > a, .tabs .activetab > a:hover {
+	background-color: #1c262f !important;
+	border-color: #1c262f;
+}
+
+.navigation a, .tabs .tab > a:hover {
+	background-color: #1c262f;	
+}
+
+
+.dropdown-extended .header {
+	background-color: #1c262f;
+	text-shadow: none;
+}
+
+.dropdown-extended .header, .dropdown-extended .footer {
+    border-color: #323f4e;
+}
+
+dl.attachbox, .codebox code, blockquote, blockquote blockquote blockquote {
+	background-color: #1c262f;	
+}
+
+
+/* Light Backgrounds */ 
+/* Border color: 27313b */
+#inner-wrap {
+	background-color: #252f39;	
+}
+.bg1, .bg2, .viewtopic_wrapper .phpbb-ads-center {
+	background-color: #252F39;
+}
+
+li.row, .forumlist_grid .grid_desc {
+	background-color: #252f39;
+	border-color: #252F39;
+}
+
+.panel-container .panel {
+	background-color: #252f39;
+}
+
+.fancy_panel {
+	background-color: #252f39;
+}
+
+.navigation a:hover {
+	background-color: #252f39;	
+}
+
+.panel .inputbox, .panel .button, select, .dropdown-contents .button2 {
+	background-color: #252F39;
+	border-color: #2c3742;
+}
+
+.tabs .tab > a {
+	background-color: #252F39;
+}
+
+.navigation .active-subsection a {
+	background-color: #252f39;	
+}
+
+.cp-mini {
+	background-color: #252f39;
+}
+
+.cp-main .pm {
+	background-color: #252f39;
+}
+
+blockquote blockquote {
+	background-color: #252f39;
+}
+
+
+
+/* Light Neural Text */
+
+/* Light Neutral Borders */
+
+/* Stuff */
+
+html, body, .copyright_bar, .navbar_footer, .content, .signature, .postprofile, .panel, dd label, .pm .postprofile, .postbody, .post:target .content {
+	color: #90a3c0;
+}
+
+.alt_block li.header dt {
+	color: #90a3c0;
+}
+
+.sidebar_content, .profile_widget_list, .login_form_forgot_link, .forumlist_grid_block_stats, .dropdown .dropdown-contents, hr, .signature, .postprofile, .pm .postprofile, .post, .jumpbox .dropdown li, .dropdown li, .dropdown li.separator, table.table1 tbody tr, table.table1 tbody td, fieldset.polls dl, dl.attachbox, dl.attachbox dd {
+	border-color: #323f4e;
+}
+
+.panel-container .panel li.row {
+	border-bottom-color: #323f4e;	
+}
+
+.dropdown .pointer, .dropdown .pointer-inner {
+	border-color: #323f4e transparent !important;
+}
+
+li.row strong, .postprofile strong, .button .icon, .button-secondary, .inputbox, .message-box textarea, a.button1, input.button1, input.button3, a.button2, input.button2, .inputbox, .button, fieldset dl:hover dt label, .topic_type, .icon.icon-gray, dl.faq dt, dl.details dt, .dropdown-extended .header, .dropdown-extended .footer, fieldset.polls dl.voted, .dark_base .forumlist_grid .grid_colour_overlay {
+	color: #e1edff;
+}
+
+
+.inputbox::-webkit-input-placeholder {
+	color: #e1edff;
+}
+.inputbox::-moz-placeholder {
+	color: #e1edff;
+}
+.inputbox:-ms-input-placeholder {
+	color: #e1edff;
+}
+.inputbox:-moz-placeholder {
+	color: #e1edff;
+}
+
+
+a.jumpbox-cat-link, th a {
+	color: #FFFFFF !important;	
+}
+
+
+ul.cplist, .forumlist_grid dl.row-item {
+	border: none;
+}
+
+
+
+
+
+
+
+/* Icons */
+
+/* Forum icons & Topic icons */
+.global_read {
+	background-image: url("./images/icons/png/dark/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read.svg"); /* Modern browsers */
+}
+.global_read_mine {
+	background-image: url("./images/icons/png/dark/icon_read_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_mine.svg"); /* Modern browsers */
+}
+.global_read_locked {
+	background-image: url("./images/icons/png/dark/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked.svg"); /* Modern browsers */
+}
+.global_read_locked_mine {
+	background-image: url("./images/icons/png/dark/icon_read_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked_mine.svg"); /* Modern browsers */
+}
+
+.global_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.global_unread_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_mine.svg"); /* Modern browsers */
+}
+.global_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.global_unread_locked_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_locked_mine.svg"); /* Modern browsers */
+}
+
+.announce_read {
+	background-image: url("./images/icons/png/dark/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read.svg"); /* Modern browsers */
+}
+.announce_read_mine {
+	background-image: url("./images/icons/png/dark/icon_read_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_mine.svg"); /* Modern browsers */
+}
+.announce_read_locked {
+	background-image: url("./images/icons/png/dark/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked.svg"); /* Modern browsers */
+}
+.announce_read_locked_mine {
+	background-image: url("./images/icons/png/dark/icon_read_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked_mine.svg"); /* Modern browsers */
+}
+
+.announce_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.announce_unread_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_mine.svg"); /* Modern browsers */
+}
+.announce_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.announce_unread_locked_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_locked_mine.svg"); /* Modern browsers */
+}
+
+.forum_link {
+	background-image: url("./images/icons/png/forum_link.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/forum_link.svg"); /* Modern browsers */
+}
+
+.forum_read {
+	background-image: url("./images/icons/png/dark/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read.svg"); /* Modern browsers */
+}
+.forum_read_locked {
+	background-image: url("./images/icons/png/dark/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked.svg"); /* Modern browsers */
+}
+.forum_read_subforum {
+	background-image: url("./images/icons/png/dark/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read.svg"); /* Modern browsers */
+}
+
+.forum_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.forum_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.forum_unread_subforum {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+
+
+.sticky_read {
+	background-image: url("./images/icons/png/dark/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read.svg"); /* Modern browsers */
+}
+.sticky_read_mine {
+	background-image: url("./images/icons/png/dark/icon_read_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_mine.svg"); /* Modern browsers */
+}
+.sticky_read_locked {
+	background-image: url("./images/icons/png/dark/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked.svg"); /* Modern browsers */
+}
+.sticky_read_locked_mine {
+	background-image: url("./images/icons/png/dark/icon_read_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked_mine.svg"); /* Modern browsers */
+}
+
+.sticky_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.sticky_unread_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_mine.svg"); /* Modern browsers */
+}
+.sticky_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.sticky_unread_locked_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_locked_mine.svg"); /* Modern browsers */
+}
+
+.topic_moved {
+	background-image: url("./images/icons/png/forum_link.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/forum_link.svg"); /* Modern browsers */
+}
+
+.topic_read {
+	background-image: url("./images/icons/png/dark/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read.svg"); /* Modern browsers */
+}
+.topic_read_mine {
+	background-image: url("./images/icons/png/dark/icon_read_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_mine.svg"); /* Modern browsers */
+}
+.topic_read_hot {
+	background-image: url("./images/icons/png/dark/icon_read_hot.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_hot.svg"); /* Modern browsers */
+}
+.topic_read_hot_mine {
+	background-image: url("./images/icons/png/dark/icon_read_hot_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_hot_mine.svg"); /* Modern browsers */
+}
+.topic_read_locked {
+	background-image: url("./images/icons/png/dark/icon_read_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked.svg"); /* Modern browsers */
+}
+.topic_read_locked_mine {
+	background-image: url("./images/icons/png/dark/icon_read_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read_locked_mine.svg"); /* Modern browsers */
+}
+
+.topic_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}
+.topic_unread_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_mine.svg"); /* Modern browsers */
+}
+.topic_unread_hot {
+	background-image: url("./images/icons/png/dark/icon_unread_hot.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_hot.svg"); /* Modern browsers */
+}
+.topic_unread_hot_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_hot_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_hot_mine.svg"); /* Modern browsers */
+}
+.topic_unread_locked {
+	background-image: url("./images/icons/png/icon_unread_locked.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread_locked.svg"); /* Modern browsers */
+}
+.topic_unread_locked_mine {
+	background-image: url("./images/icons/png/dark/icon_unread_locked_mine.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_unread_locked_mine.svg"); /* Modern browsers */
+}
+
+.pm_read {
+	background-image: url("./images/icons/png/dark/icon_read.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/dark/icon_read.svg"); /* Modern browsers */
+}
+.pm_unread {
+	background-image: url("./images/icons/png/icon_unread.png"); /* IE8 + below */
+	background-image: linear-gradient(transparent, transparent), url("./images/icons/svg/icon_unread.svg"); /* Modern browsers */
+}

@@ -1,0 +1,4 @@
+/* Enhanced Support for phpBB Advertisement Management: https://www.phpbb.com/customise/db/extension/ads/ */
+.phpbb-ads-center img {
+	max-width: 100%;
+}

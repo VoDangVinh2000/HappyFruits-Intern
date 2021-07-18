@@ -1,0 +1,192 @@
+					<!-- IF STYLE_SETTINGS_CONFIG_SIDEBARS -->
+                            		</div>
+                                </div>
+                            </div>
+
+							<!-- IF STYLE_SETTINGS_CONFIG_SIDEBAR_PLACEMENT == 'Left Only' || STYLE_SETTINGS_CONFIG_SIDEBAR_PLACEMENT == 'Both' -->                            
+                            <div id="leftcolumn">
+                            	<div class="innertube"><!-- INCLUDE sidebar_left.html --></div>
+                            </div>
+                            <!-- ENDIF -->
+                            
+                            <!-- IF STYLE_SETTINGS_CONFIG_SIDEBAR_PLACEMENT == 'Right Only' || STYLE_SETTINGS_CONFIG_SIDEBAR_PLACEMENT == 'Both' -->
+                            <div id="rightcolumn">
+                                <div class="innertube"><!-- INCLUDE sidebar_right.html --></div>
+                            </div>
+                            <!-- ENDIF -->
+						</div><!-- /#maincontainer -->                                                 
+                    <!-- ENDIF -->
+
+
+                    <!-- EVENT overall_footer_content_after -->
+                </div>
+            
+            <!-- EVENT overall_footer_page_body_after -->
+            
+            	</div><!-- /#inner-wrap -->
+            
+                <!-- IF STYLE_SETTINGS_HTML_3 and not STYLE_SETTINGS_CONFIG_HIDE_SOCIAL_BAR -->
+                	<div class="social_links_footer">{STYLE_SETTINGS_HTML_3}</div>
+                <!-- ENDIF -->             
+          
+            
+            <div id="page-footer" class="page-footer" role="contentinfo">
+                <!-- INCLUDE navbar_footer.html -->
+
+                <div id="darkenwrapper" class="darkenwrapper" data-ajax-error-title="{L_AJAX_ERROR_TITLE}" data-ajax-error-text="{L_AJAX_ERROR_TEXT}" data-ajax-error-text-abort="{L_AJAX_ERROR_TEXT_ABORT}" data-ajax-error-text-timeout="{L_AJAX_ERROR_TEXT_TIMEOUT}" data-ajax-error-text-parsererror="{L_AJAX_ERROR_TEXT_PARSERERROR}">
+                    <div id="darken" class="darken">&nbsp;</div>
+                </div>
+            
+                <div id="phpbb_alert" class="phpbb_alert" data-l-err="{L_ERROR}" data-l-timeout-processing-req="{L_TIMEOUT_PROCESSING_REQ}">
+                    <a href="#" class="alert_close">
+                        <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+                    </a>
+                    <h3 class="alert_title">&nbsp;</h3><p class="alert_text"></p>
+                </div>
+                <div id="phpbb_confirm" class="phpbb_alert">
+                    <a href="#" class="alert_close">
+                        <i class="icon fa-times-circle fa-fw" aria-hidden="true"></i>
+                    </a>
+                    <div class="alert_text"></div>
+                </div>
+            </div>
+            
+            
+            
+            <div class="copyright_bar">                
+                Powered by <a href="http://www.phpBB.com/">phpBB</a>&trade; <span class="planetstyles_credit<!-- IF STYLE_SETTINGS_CONFIG_CREDIT_LINE --> planetstyles_credit_hidden<!-- ENDIF -->">&bull; Design by <a href="http://www.planetstyles.net">PlanetStyles</a></span>
+                <!-- EVENT overall_footer_copyright_prepend -->
+                <!-- IF TRANSLATION_INFO --><br />{TRANSLATION_INFO}<!-- ENDIF -->
+                <!-- EVENT overall_footer_copyright_append -->
+                <!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF --> 
+                <!-- EVENT overall_footer_after -->                  
+            </div> 
+                                        
+            </div> <!-- /#wrap -->
+            
+            <div style="display: none;">
+                <a id="bottom" class="anchor" accesskey="z"></a>
+                <!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+            </div>
+            
+            <script type="text/javascript" src="{T_JQUERY_LINK}"></script>
+            
+            <!-- IF S_ALLOW_CDN -->
+                <script type="text/javascript">window.jQuery || document.write('\x3Cscript src="{T_ASSETS_PATH}/javascript/jquery.min.js?assets_version={T_ASSETS_VERSION}">\x3C/script>');</script>
+            <!-- ENDIF -->
+            
+            <script type="text/javascript" src="{T_ASSETS_PATH}/javascript/core.js?assets_version={T_ASSETS_VERSION}"></script>
+
+			<!-- IF STYLE_SETTINGS_CONFIG_PARALLAX_HEADER -->
+            	<!-- INCLUDEJS parallax.js -->
+            <!-- ENDIF -->
+            <!-- INCLUDEJS tooltipster.bundle.min.js -->
+            <!-- IF STYLE_SETTINGS_CONFIG_COLLAPSIBLE_PANELS -->
+                <!-- INCLUDEJS jquery.collapse.js -->
+                <!-- INCLUDEJS jquery.collapse_storage.js -->               
+            <!-- ENDIF -->
+            <!-- INCLUDEJS forum_fn.js -->
+            <!-- INCLUDEJS ajax.js -->
+            
+            <!-- IF S_ALLOW_CDN -->
+                <script type="text/javascript">
+                    (function($){
+                        var $fa_cdn = $('head').find('link[rel="stylesheet"]').first(),
+                            $span = $('<span class="fa" style="display:none"></span>').appendTo('body');
+                        if ($span.css('fontFamily') !== 'FontAwesome' ) {
+                            $fa_cdn.after('<link href="{T_ASSETS_PATH}/css/font-awesome.min.css" rel="stylesheet">');
+                            $fa_cdn.remove();
+                        }
+                        $span.remove();
+                    })(jQuery);
+                </script>
+            <!-- ENDIF -->         
+            
+            <!-- IF S_COOKIE_NOTICE -->
+                <script src="{T_ASSETS_PATH}/cookieconsent/cookieconsent.min.js?assets_version={T_ASSETS_VERSION}"></script>
+                <script>
+                    window.addEventListener("load", function(){
+                        window.cookieconsent.initialise({
+                            "palette": {
+                                "popup": {
+                                    "background": "#0F538A"
+                                },
+                                "button": {
+                                    "background": "#E5E5E5"
+                                }
+                            },
+                            "theme": "classic",
+                            "content": {
+                                "message": "{LA_COOKIE_CONSENT_MSG}",
+                                "dismiss": "{LA_COOKIE_CONSENT_OK}",
+                                "link": "{LA_COOKIE_CONSENT_INFO}",
+								"href": "{LA_COOKIE_CONSENT_HREF}"
+                            }
+                        })});
+                </script>
+            <!-- ENDIF -->           
+                       
+            <!-- IF S_PLUPLOAD --><!-- INCLUDE plupload.html --><!-- ENDIF -->
+            {$SCRIPTS}
+            
+            <!-- IF STYLE_SETTINGS_CONFIG_HEADER_PARTICLES -->
+                <script type="text/javascript">
+					/* Identify the height of headerbar */
+					var headerbar_height = $('.headerbar').height();
+					/* Match particle container height to headerbar. Creates window for canvas */
+					$('.particles_container').css({'height': headerbar_height});
+					
+					/* Dynamically apply width to site desc container, maximising clickable area behind it. We only need this to happen when particles are enabled. */
+					var logo_width = $('.site-description').width();
+					var logo_width_fix = (logo_width+2); /* Caters for retina devices where the width is defined as a decimal. Obvs we can't set a decimal pixel width */
+					$('.site-description').css({'width': logo_width_fix});
+				</script>            
+				<script src="{T_TEMPLATE_PATH}/particles.js"></script>
+                <script src="{T_TEMPLATE_PATH}/particles.app.js"></script>
+                
+                <script type="text/javascript">
+					/* Reposition the canvas so it aligns with headerbar */
+					$('canvas.particles-js-canvas-el').css({'margin-top': -headerbar_height});
+				</script>                        
+            <!-- ENDIF -->
+            
+			<script type="text/javascript">
+            $(function($) {
+                var num_cols = 3,
+                container = $('.sub-forumlist'),
+                listItem = 'li',
+                listClass = 'sub-list';
+                container.each(function() {
+                    var items_per_col = new Array(),
+                    items = $(this).find(listItem),
+                    min_items_per_col = Math.floor(items.length / num_cols),
+                    difference = items.length - (min_items_per_col * num_cols);
+                    for (var i = 0; i < num_cols; i++) {
+                        if (i < difference) {
+                            items_per_col[i] = min_items_per_col + 1;
+                        } else {
+                            items_per_col[i] = min_items_per_col;
+                        }
+                    }
+                    for (var i = 0; i < num_cols; i++) {
+                        $(this).append($('<ul ></ul>').addClass(listClass));
+                        for (var j = 0; j < items_per_col[i]; j++) {
+                            var pointer = 0;
+                            for (var k = 0; k < i; k++) {
+                                pointer += items_per_col[k];
+                            }
+                            $(this).find('.' + listClass).last().append(items[j + pointer]);
+                        }
+                    }
+                });
+            });
+            </script>
+            
+			<!-- EVENT overall_footer_after -->            
+            
+            <!-- EVENT overall_footer_body_after -->
+            
+			<!-- IF STYLE_SETTINGS_CONFIG_SCROLL_TO_TOP --><a href="#" class="scrollToTop"><span class="fa fa-arrow-up"></span></a><!-- ENDIF -->            
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+Subject: Chào mừng bạn đến với "{SITENAME}"
+
+{WELCOME_MSG}
+
+Hãy giữ email này cẩn thận. Thông tin về tài khoản của bạn như sau:
+
+----------------------------------
+Tên tài khoản: {USERNAME}
+Địa chỉ: {U_BOARD}
+----------------------------------
+
+Vui lòng bấm vào liên kết dưới đây để kích hoạt tài khoản của bạn:
+{U_ACTIVATE}
+
+Mật khẩu của bạn đã được mã hóa an toàn trong cơ sở dữ liệu của chúng tôi và không thể khôi phục lại được. Nếu lỡ quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới gửi tới địa chỉ email mà bạn đang dùng cho tài khoản này.
+
+Cám ơn bạn đã tham gia cùng với chúng tôi!
+
+{EMAIL_SIG}

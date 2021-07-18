@@ -1,0 +1,4 @@
+-- 31/08/2018 - Meta description
+ALTER TABLE `settings` CHANGE `option_value` `option_value` TEXT NULL;
+INSERT  INTO `settings`(`id`,`option_name`,`option_value`,`name`,`is_hide`,`created_dtm`,`modified_dtm`) 
+VALUES (NULL,'meta_description','eFruit là đội ngũ trẻ, cung cấp các sản phẩm, giải pháp về Trái cây tươi, theo tiêu chí “Sử dụng trái cây Việt, Sạch - an toàn - tự nhiên” . eFruit hiện đang hợp tác với các nhà nông, doanh nghiệp hoạt động trong ngành nông nghiệp cây trồng ăn trái canh tác an toàn theo tiêu chuẩn và các vườn hướng hữu cơ, hữu cơ, để mang lại cây trái tốt nhất phục vụ quý khách hàng. Các dịch vụ eFruit hiện đang cung cấp: Trái cây tươi, thành phẩm từ trái cây tươi: yaourt trái cây, sinh tố nước ép, các gói Daily Fresh fruit, đảm bảo chất lượng vệ sinh an toàn, không hóa chất độc hại. Sự đồng hành của quý khách giúp eFruit tiến gần với mục tiêu về giá trị THẬT','Nội dung thẻ meta description',0,CURRENT_TIMESTAMP,CURRENT_TIMESTAMP);

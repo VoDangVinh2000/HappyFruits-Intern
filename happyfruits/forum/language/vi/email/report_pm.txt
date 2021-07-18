@@ -1,0 +1,10 @@
+Subject: Báo cáo tin nhắn - "{SUBJECT}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này vì tin nhắn có tiêu đề "{SUBJECT}" gửi bởi "{AUTHOR_NAME}" tại diễn đàn "{SITENAME}" đã được báo cáo.
+
+Nếu bạn muốn xem báo cáo, hãy bấm vào liên kết dưới đây:
+{U_VIEW_REPORT}
+
+{EMAIL_SIG}

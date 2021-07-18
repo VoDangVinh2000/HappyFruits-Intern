@@ -1,0 +1,86 @@
+<div class="forumlist_grid">
+
+<!-- BEGIN forumrow -->
+
+	<!-- IF (forumrow.S_IS_CAT and not forumrow.S_FIRST_ROW) or forumrow.S_NO_CAT  -->
+			</ul>
+
+			</div>
+		</div>
+	<!-- ENDIF -->
+
+	<!-- EVENT forumlist_body_category_header_before -->
+	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
+		<div class="forabg">
+			<div class="inner">
+			<ul class="topiclist">
+				<li class="header">
+					<!-- EVENT forumlist_body_category_header_row_prepend -->
+					<dl class="row-item">
+						<dt><div class="list-inner"><!-- IF forumrow.S_IS_CAT --><a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a><!-- ELSE -->{L_FORUM}<!-- ENDIF --></div></dt>
+					</dl>
+					<!-- EVENT forumlist_body_category_header_row_append -->
+				</li>
+			</ul>
+            <!-- IF SCRIPT_NAME eq 'index' and STYLE_SETTINGS_CONFIG_COLLAPSIBLE_PANELS -->
+            	<div class="collapse-trigger open">
+                	<span class="icon fa-minus tooltip-left" title="Collapse"></span>
+                    <span class="icon fa-plus tooltip-left" title="Expand"></span>
+                </div>
+            <!-- ENDIF -->            
+			<ul class="topiclist forums">
+	<!-- ENDIF -->
+	<!-- EVENT forumlist_body_category_header_after -->
+
+	<!-- IF not forumrow.S_IS_CAT -->
+		<!-- EVENT forumlist_body_forum_row_before -->
+		<li class="row<!-- IF forumrow.AVATAR_IMG --> has_last_post_avatar<!-- ENDIF -->">
+			<!-- EVENT forumlist_body_forum_row_prepend -->
+            
+			<div class="grid_image_container">
+            	<div class="forumlist_grid_forum_image" <!-- IF forumrow.FORUM_IMAGE -->style="background-image: url('{forumrow.FORUM_IMAGE_SRC}');<!-- ENDIF -->">
+                    <a href="{forumrow.U_VIEWFORUM}" class="grid_colour_overlay">                    
+                        <div class="forumlist_grid_title">
+                            {forumrow.FORUM_NAME}
+                        </div>                     
+                        <div class="forumlist_grid_numbers">
+                        	<!-- IF forumrow.S_UNREAD_FORUM -->
+                            	<span class="grid_unread">{L_NEW}</span>
+                            <!-- ENDIF -->                        
+                            <!-- IF forumrow.CLICKS -->
+                                    <i class="fa fa-link"></i><!-- {L_REDIRECTS}{L_COLON} --> {forumrow.CLICKS}
+                                <!-- ELSE -->
+                                    <i class="fa fa-book"></i><!-- {L_TOPICS}{L_COLON} --> &nbsp;{forumrow.TOPICS} &nbsp;&nbsp; <i class="fa fa-comments"></i><!-- {L_POSTS}{L_COLON}--> &nbsp;{forumrow.POSTS}
+                            <!-- ENDIF -->    
+                        </div>                     	
+                    </a>
+            	</div>
+                <div class="grid_desc">
+                    <!-- IF forumrow.FORUM_DESC -->
+                        <span class="forum_description">{forumrow.FORUM_DESC}</span>
+                    <!-- ENDIF -->                	
+                </div>                
+            </div>
+             
+			<!-- EVENT forumlist_body_forum_row_append -->
+		</li>
+		<!-- EVENT forumlist_body_forum_row_after -->
+	<!-- ENDIF -->
+
+	<!-- IF forumrow.S_LAST_ROW -->
+			</ul>
+
+			</div>
+		</div>
+	<!-- EVENT forumlist_body_last_row_after -->
+	<!-- ENDIF -->
+
+<!-- BEGINELSE -->
+	<div class="panel">
+		<div class="inner">
+		<strong>{L_NO_FORUMS}</strong>
+		</div>
+	</div>
+<!-- END forumrow -->
+
+</div>

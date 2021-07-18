@@ -1,0 +1,69 @@
+/**
+* admin_buttons.css
+**/
+
+.adm-button {
+	-moz-box-shadow: 3px 4px 0px 0px #899599;
+	-webkit-box-shadow: 3px 4px 0px 0px #899599;
+	box-shadow: 3px 4px 0px 0px #899599;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #bab1ba));
+	background: -moz-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background: -webkit-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background: -o-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background: -ms-linear-gradient(top, #ededed 5%, #bab1ba 100%);
+	background: linear-gradient(to bottom, #ededed 5%, #bab1ba 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#bab1ba',GradientType=0);
+	background-color: #ededed;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #d6bcd6;
+	display: inline-block;
+	cursor: pointer;
+	color: #1D444E;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 3px 20px;
+	text-decoration: none;
+}
+
+.adm-button:hover {
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #bab1ba), color-stop(1, #ededed));
+	background: -moz-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background: -webkit-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background: -o-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background: -ms-linear-gradient(top, #bab1ba 5%, #ededed 100%);
+	background: linear-gradient(to bottom, #bab1ba 5%, #ededed 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bab1ba', endColorstr='#ededed',GradientType=0);
+	background-color: #bab1ba;
+}
+
+.adm-button:active {
+	position: relative;
+	top: 1px;
+}
+
+select#sk, select#sd, select#fc, select#fb {
+	-webkit-appearance: button;
+	-webkit-border-radius: 2px;
+	-webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+	-webkit-padding-end: 20px;
+	-webkit-padding-start: 2px;
+	-webkit-user-select: none;
+	background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+	background-position: 97% center;
+	background-repeat: no-repeat;
+	border: 1px solid #AAA;
+	color: #1D444E;
+	font-family: Arial;
+	font-size: 12px;
+	font-weight: bold;
+	font-size: inherit;
+	margin: 5px;
+	overflow: hidden;
+	padding: 5px 10px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 150px;
+}

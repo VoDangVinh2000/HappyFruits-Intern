@@ -1,0 +1,1 @@
+ALTER TABLE `promotion_codes` CHANGE `code` `code` VARCHAR(50) NOT NULL;

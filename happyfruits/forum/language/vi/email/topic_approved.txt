@@ -1,0 +1,10 @@
+Subject: Chủ đề đã được duyệt - "{TOPIC_TITLE}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này bởi vì chủ đề "{TOPIC_TITLE}" của bạn tại diễn đàn "{SITENAME}" đã được duyệt bởi một điều hành viên hoặc quản trị viên của chúng tôi.
+
+Nếu bạn muốn xem chủ đề này, hãy bấm vào liên kết dưới đây:
+{U_VIEW_TOPIC}
+
+{EMAIL_SIG}

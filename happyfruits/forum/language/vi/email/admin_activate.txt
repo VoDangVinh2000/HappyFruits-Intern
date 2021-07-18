@@ -1,0 +1,13 @@
+Subject: Kích hoạt tài khoản người dùng
+
+Chào bạn,
+
+Tài khoản người dùng "{USERNAME}" vừa bị ngưng kích hoạt hoặc vừa mới đăng ký, bạn nên kiểm tra thông tin chi tiết về người dùng này nếu cần thiết và chọn thao tác xử lý phù hợp.
+
+Sử dụng liên kết này để xem thông tin cá nhân của thành viên:
+{U_USER_DETAILS}
+
+Sử dụng liên kết này để kích hoạt tài khoản thành viên:
+{U_ACTIVATE}
+
+{EMAIL_SIG}

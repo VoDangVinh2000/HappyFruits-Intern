@@ -1,0 +1,10 @@
+Subject: Chủ đề bị từ chối - "{TOPIC_TITLE}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này bởi vì chủ đề "{TOPIC_TITLE}" của bạn tại diễn đàn "{SITENAME}" đã bị từ chối bởi một điều hành viên hoặc quản trị viên của chúng tôi.
+
+Nguyên nhân chủ đề của bạn bị từ chối là:
+{REASON}
+
+{EMAIL_SIG}

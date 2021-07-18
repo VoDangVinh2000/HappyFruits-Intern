@@ -1,0 +1,18 @@
+Subject: phpBB đã được cài đặt thành công
+
+Xin chúc mừng!
+
+Bạn đã cài đặt thành công hệ thống phpBB.
+
+Email này chứa những thông tin quan trọng trong quá trình cài đặt hệ thống của bạn và bạn nên giữ lại để tham khảo. Mật khẩu của bạn đã được mã hóa an toàn trong cơ sở dữ liệu của chúng tôi và không thể khôi phục lại được. Nếu lỡ quên mật khẩu của mình, bạn có thể yêu cầu một mật khẩu mới gửi tới địa chỉ email mà bạn đang dùng cho tài khoản này.
+
+--------------------------------------------------------
+Tên tài khoản: {USERNAME}
+Địa chỉ: {U_BOARD}
+--------------------------------------------------------
+
+Những thông tin hữu ích về phần mềm phpBB, bạn có thể tìm thấy trong thư mục "docs" của hệ thống hoặc tại trang hỗ trợ của phpBB.com - https://www.phpbb.com/support/
+
+Ngoài ra, để giữ cho hệ thống của mình an toàn và bảo mật, chúng tôi khuyến cáo bạn nên thường xuyên cập nhật những bản phát hành mới nhất. Để được thông báo cập nhật tiện lợi nhất, bạn có thể đăng ký nhận tin qua email từ địa chỉ hỗ trợ bên trên.
+
+{EMAIL_SIG}

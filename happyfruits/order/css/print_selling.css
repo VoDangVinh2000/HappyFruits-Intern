@@ -1,0 +1,178 @@
+/*
+ * Base structure
+ */
+ 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot?v=4.2.0');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff?v=4.2.0') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf?v=4.2.0') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg?v=4.2.0#glyphiconshalflingsregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+ 
+/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+  padding: 0;
+  background-color:#FFFFFF; 
+  margin: 0px;  /* the margin on the content before printing */
+}
+
+.container-fluid{
+    width: 360px;
+    margin: 0 auto;
+    position: relative;
+}
+
+@page 
+{
+    size: auto;   /* auto is the current printer page size */
+    margin: 0mm;  /* this affects the margin in the printer settings */
+}
+
+/*
+ * Global add-ons
+ */
+
+.sub-header {
+  padding-bottom: 10px;
+}
+
+
+/*
+ * Main content
+ */
+
+.main {
+  padding: 10px 10px 0 10px;
+}
+@media (min-width: 768px) {
+  .main {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
+}
+
+h1{
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+}
+h2{
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+}
+p{
+    margin: 0;
+    font-size: 12px;
+}
+
+sub, sup {
+    /* Specified in % so that the sup/sup is the
+    right size relative to the surrounding text */
+    font-size: 75%;
+     
+    /* Zero out the line-height so that it doesn't
+    interfere with the positioning that follows */
+    line-height: 0;
+     
+    /* Where the magic happens: makes all browsers position
+    the sup/sup properly, relative to the surrounding text */
+    position: relative;
+     
+    /* Note that if you're using Eric Meyer's reset.css, this
+    is already set and you can remove this rule */
+    vertical-align: baseline;
+}
+ 
+sup {
+    /* Move the superscripted text up */
+    top: -0.5em;
+}
+ 
+sub {
+    /* Move the subscripted text down, but only
+    half as far down as the superscript moved up */
+    bottom: -0.25em;
+}
+
+.left{float: left;}
+.right{float: right;}
+.hidden{display: none !important;}
+.clear{float: next; clear: both;}
+.bold{font-weight: bold;}
+
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td{
+    vertical-align: middle;
+    padding: 0;
+    font-size: 11px;
+    border: none;
+}
+    .table > thead > tr > th{
+        border-bottom: 1px solid #444;
+        text-align: center;
+        font-size: 10px;
+        padding-top: 5px;
+    }
+    .table tr.total > td{
+        border-top: 1px solid #888;
+    }
+
+.acenter{text-align: center;}
+.aleft{text-align: left;}
+.aright{text-align: right;}
+.smallsize{font-size: 9px;}
+.largesize, table tr.total td.largesize{font-size: 14px;}
+
+.header{
+    width: 300px;
+    margin: 0 auto 5px;
+    text-align: center;
+}
+
+.sub_product p{
+    font-size: 9px;
+    font-style: italic;
+}
+.order_item_description{display: block;}
+    .order_item_description p{
+        font-size: 11px;
+        font-style: italic;
+        float: right;
+        margin-right: 5px;
+    }
+
+
+table.customer{
+    width: 100%;
+}
+    table.customer td, table.customer p{
+        border: none;
+        font-size: 11px;
+    }
+    
+table tr.total td{
+    font-size: 11px; 
+    font-weight: bold;
+    color: #333;
+}
+
+table { page-break-inside:auto }
+tr    { page-break-inside:avoid; page-break-after:auto }
+thead { display:table-header-group }
+tfoot { display:table-footer-group }
+.page_break{ page-break-before: always }
+table.order_items .quantity{width: 25px;min-width: 0;}
+
+
+.printing{display: inherit !important;}
+span.printing{display: inline !important;}
+.hidden_when_printing{display: none !important;}
+.hidden_when_printing_bill{display: none;}
+.printing_receipt{}
+    .printing_receipt .hidden_when_printing_receipt{display: none !important;}
+    .printing_receipt .hidden_when_printing_bill{display: inherit;}
+    .printing_receipt table.order_items td, .printing_receipt table.order_items th{border: 1px solid #444 !important;font-size: 100%;}
+    .printing_receipt table.order_items td.hidden_when_printing_bill, .printing_receipt table.order_items th.hidden_when_printing_bill{display: table-cell !important;}
+    .printing_receipt table.order_items{table-layout: fixed;}
+    .printing_receipt .sub_product p{font-size: 11px;}

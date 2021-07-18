@@ -1,0 +1,8 @@
+Subject: Kích hoạt lại tài khoản của bạn
+
+Chào bạn, {USERNAME}
+
+Tài khoản của bạn tại "{SITENAME}" đã bị ngưng kích hoạt, hầu hết lý do gặp phải trường hợp này là khi bạn thay đổi thông tin cá nhân dùng để đăng ký làm thành viên của mình. Để kích hoạt lại tài khoản của mình, bạn phải bấm vào liên kết dưới đây:
+{U_ACTIVATE}
+
+{EMAIL_SIG}

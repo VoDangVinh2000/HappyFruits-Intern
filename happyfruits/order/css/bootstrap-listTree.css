@@ -1,0 +1,65 @@
+/*
+ * Copyright 2012 Clay Walker
+ * Licensed under GPLv2 ONLY
+ * Edited by nthieu 2014-09-11
+ */
+.listTree i {
+    float: right;
+    margin-right: 15px;
+}
+
+.listTree li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+.listTree span {
+    display: inline-block;
+    width: auto;
+    padding: 5px;
+}
+
+.listTree > ul > li > ul{
+    padding: 0;
+}
+
+.listTree > ul > li > span {
+    font-weight: bold;
+    width: 100%;
+}
+
+.listTree > ul > li > span .icon-black{
+    -moz-font-feature-settings: normal;
+    -moz-font-language-override: normal;
+    display: inline-block;
+    font-family: FontAwesome;
+    font-size: inherit;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-rendering: auto;
+}
+    .listTree > ul > li > span  .icon-chevron-up:before {
+        content: "\f077";
+    }
+    .listTree > ul > li > span  .icon-chevron-down:before {
+      content: "\f078";
+    }
+
+.listTree > ul > li > ul > li {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: #ddd;
+    padding-left: 10px;
+}
+
+.listTree > ul > li > ul > li:last-child {
+    border-width: 1px 0 1px 0;
+}
+
+.listTree input[type="checkbox"] {
+    margin-top: 0;
+}

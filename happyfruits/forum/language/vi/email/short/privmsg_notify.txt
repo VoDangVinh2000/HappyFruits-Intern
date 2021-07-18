@@ -1,0 +1,13 @@
+Subject: Bạn có tin nhắn mới
+
+Chào bạn, {USERNAME}
+
+Bạn có một tin nhắn mới được gửi đến từ thành viên {AUTHOR_NAME} thông qua tài khoản của bạn tại "{SITENAME}" với tiêu đề là:
+{SUBJECT}
+
+Bạn có thể xem nội dung của tin nhắn này bằng cách bấm vào liên kết dưới đây:
+{U_VIEW_MESSAGE}
+
+Bạn đã yêu cầu thông báo cho bạn biết về điều này. Hãy nhớ rằng bạn luôn có quyền lựa chọn tắt thông báo này mỗi khi có tin nhắn mới bằng cách thay đổi lại thiết lập cá nhân của mình.
+
+{EMAIL_SIG}

@@ -1,0 +1,30 @@
+/* New code for new things */
+#inner-wrap {
+	background: #FFFFFF;
+	overflow: hidden;
+	position: relative;
+	margin-top: -50px !important;
+	z-index: 3;
+}
+
+.viewtopic_wrapper {
+	padding: 10px 10px 5px;
+}
+
+.sub-forumlist ul {
+	float: left;
+	list-style-type: none;
+	margin-left: 20px !important;
+}
+
+.sub-forumlist li {
+	line-height: 1.5em;
+}
+
+body.force_rounded_avatars span.lastpostavatar img.avatar {
+    border-radius: 25px;
+}
+
+.viewtopic_wrapper .phpbb-ads-center {
+	padding: 15px;
+}

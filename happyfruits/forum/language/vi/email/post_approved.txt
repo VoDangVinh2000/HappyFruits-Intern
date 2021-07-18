@@ -1,0 +1,13 @@
+Subject: Bài viết của bạn đã được duyệt - "{POST_SUBJECT}"
+
+Chào bạn, {USERNAME}
+
+Bạn nhận được thông báo này bởi vì bài viết "{POST_SUBJECT}" của bạn tại diễn đàn "{SITENAME}" đã được chấp nhận bởi một điều hành viên hoặc quản trị viên của chúng tôi.
+
+Nếu bạn muốn xem bài viết, hãy bấm vào liên kết dưới đây:
+{U_VIEW_POST}
+
+Nếu bạn muốn xem chủ đề, hãy bấm vào liên kết dưới đây:
+{U_VIEW_TOPIC}
+
+{EMAIL_SIG}

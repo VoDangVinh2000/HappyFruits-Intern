@@ -1,0 +1,39 @@
+.popup-form p.header{
+    background: none repeat scroll 0 0 #fff;
+    color: #555;
+    font-family: "UTM";
+    font-size: 27px;
+    margin: 0;
+    padding: 12px 10px;
+    position: relative;
+}
+    .popup-form p.header a.template_file{font-size: 14px;}
+
+.popup-form #close {
+    background: url(images/fancybox.png) repeat scroll -41px 0 transparent;
+    cursor: pointer;
+    display: inline;
+    height: 30px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 28px;
+    z-index: 1103;
+    opacity: 1;
+}
+
+.popup-form .popup_content {
+    background: none repeat scroll 0 0 #fff;
+    padding: 10px 15px 10px 20px;
+    color: #000;
+}
+
+.popup-form .popup_content form input[type="submit"] {
+    background: none repeat scroll 0 0 #1e6c43;
+    border: medium none;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Lucida Sans Unicode","Lucida Grande",sans-serif;
+    font-size: 14px;
+    padding: 4px 10px;
+}

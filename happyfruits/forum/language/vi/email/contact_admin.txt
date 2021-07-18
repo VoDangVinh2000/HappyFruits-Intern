@@ -1,0 +1,23 @@
+
+Chào bạn, {TO_USERNAME}
+
+Email này được gửi đến bạn thông qua trang liên hệ người quản trị từ "{SITENAME}".
+
+<!-- IF S_IS_REGISTERED -->
+Nội dung được gửi từ người dùng trên hệ thống.
+Tên tài khoản: {FROM_USERNAME}
+Địa chỉ email: {FROM_EMAIL_ADDRESS}
+Địa chỉ IP: {FROM_IP_ADDRESS}
+Trang cá nhân: {U_FROM_PROFILE}
+<!-- ELSE -->
+Nội dung được gửi từ khách với thông tin liên hệ lại như sau:
+Tên: {FROM_USERNAME}
+Địa chỉ email: {FROM_EMAIL_ADDRESS}
+Địa chỉ IP: {FROM_IP_ADDRESS}
+<!-- ENDIF -->
+
+Nội dung email gửi cho bạn như sau:
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+{MESSAGE}
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -1,0 +1,27 @@
+{
+	"name": "david63/userdetails",
+	"type": "phpbb-extension",
+	"description": "Adds an ACP lisitng of selectable user details.",
+	"version": "2.1.1-rc1",
+	"time": "2017-05-25",
+		"keywords": ["phpbb", "extension", "user"],
+	"license": "GPL-2.0",
+	"authors": [{
+			"name": "David Wood",
+			"role": "Developer"
+		}],
+	"require": {
+        "php": ">=5.4.0",
+		"phpbb/phpbb": ">=3.2.0",
+        "composer/installers": "~1.0"
+    },
+    "require-dev": {
+        "phpbb/epv": "dev-master"
+    },
+	"extra": {
+		"display-name": "User details",
+		"soft-require": {
+			"phpbb/phpbb": ">=3.2.0"
+      }
+	}
+}

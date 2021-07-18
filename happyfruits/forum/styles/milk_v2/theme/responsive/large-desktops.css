@@ -1,0 +1,149 @@
+@media (min-width: 1200px) {
+	
+	body{ border-top-color: #F3F;}
+	
+	/* Fix the body layout for large desktop devices */
+	.body-layout-Boxed .wrap {width: 1200px;}
+	
+	
+	/* Forumlist Colums (also see squishy.css for fluid/both fix)
+	---------------------------------------- */		
+	
+	/* Remove the 'topics' column */
+	body.sidebar-both.body-layout-Boxed .forabg dd.posts, body.sidebar-both.body-layout-Boxed .forumbg dd.views {
+		display: none;
+	}
+	
+	/* Or, reduce the width of 'simpleposts' by 50% (from 190 to 95) */	
+	body.sidebar-both.body-layout-Boxed dd.simpleposts, body.sidebar-both.body-layout-Boxed dd.simpleposts {
+		width: 95px;	
+	}	
+	
+	/* Adjust the other margins to account for the (now missing) 95px */
+	body.sidebar-both.body-layout-Boxed ul.topiclist dt {
+		margin-right: -395px;
+	}
+	
+	body.sidebar-both.body-layout-Boxed ul.topiclist dt .list-inner {
+		margin-right: 395px;
+	}
+	
+	body.sidebar-both.body-layout-Boxed li.header dt {
+		margin-right: -425px;	
+	}
+	
+	/* UCP columns
+	---------------------------------------- */			
+	
+	body.sidebar-both.body-layout-Boxed ul.topiclist.pmlist dt .list-inner {
+		margin-right: 95px; /* Creates the space */
+	}
+	body.sidebar-both.body-layout-Boxed  ul.topiclist.two-columns dt {
+		margin-right: -95px;	
+	}
+	body.sidebar-both.body-layout-Boxed  ul.topiclist.two-columns li.header dt {
+		margin-right: -130px;	
+	}		
+	
+	/* UCP Two long columns */
+	body.sidebar-both.body-layout-Boxed ul.two-long-columns dt .list-inner {
+		margin-right: 0;
+	}
+	body.sidebar-both ul.two-long-columns dd.lastpost {
+		display: none;
+	}
+	
+	/* MCP Columns
+	---------------------------------------- */
+	
+	/* Manually enabling the responsive layout. First, we remove the second column header */
+	body.sidebar-both.body-layout-Boxed .missing-column dd, 
+	body.sidebar-right-only.body-layout-Boxed .missing-column dd {
+		display: none;
+	}
+	
+	/* But we still want the mark column, so re-enable that */
+	body.sidebar-both.body-layout-Boxed .missing-column dd.mark, 
+	body.sidebar-right-only.body-layout-Boxed .missing-column dd.mark {
+		display: block;
+	}
+	
+	/* Reduce the left column margin to 95px, just enough for the mark box */
+	body.sidebar-both.body-layout-Boxed ul.topiclist.missing-column dt, 
+	body.sidebar-right-only.body-layout-Boxed ul.topiclist.missing-column dt {
+		margin-right: -95px;
+	}
+	body.sidebar-both.body-layout-Boxed ul.topiclist.missing-column dt .list-inner, 
+	body.sidebar-right-only.body-layout-Boxed ul.topiclist.missing-column dt .list-inner {	
+		margin-right: 95px;
+	}
+	/* Then enable the extra info below */
+	body.sidebar-both.body-layout-Boxed ul.topiclist.missing-column	.responsive-show, 
+	body.sidebar-right-only.body-layout-Boxed ul.topiclist.missing-column	.responsive-show {
+		display: block !important;
+	}
+	
+	/* Hacky bookmark fix */	
+	body.sidebar-both.body-layout-Boxed ul.topiclist.missing-column li.header dt,
+	body.sidebar-both.body-layout-Fluid ul.topiclist.missing-column li.header dt,
+	body.sidebar-right-only.body-layout-Boxed ul.topiclist.missing-column li.header dt {
+		margin-right: -125px; /* 95px + 30px padding */
+	}	
+	
+	
+	
+	/* Manually enabling the responsive layout. First, we remove the second column header */
+	body.sidebar-both.body-layout-Boxed ul.topiclist.two-long-columns dd,
+	body.sidebar-right-only.body-layout-Boxed ul.topiclist.two-long-columns dd {
+		display: none;	
+	}
+	
+	/* Increase the left column width to 100% */
+	body.sidebar-both.body-layout-Boxed ul.topiclist.two-long-columns dt,
+	body.sidebar-right-only.body-layout-Boxed ul.topiclist.two-long-columns dt {
+		margin-right: 0;	
+	}
+
+	/* Then enable the extra info below */	
+	body.sidebar-both.body-layout-Boxed ul.topiclist.two-long-columns .responsive-show,
+	body.sidebar-right-only.body-layout-Boxed ul.topiclist.two-long-columns .responsive-show {
+		display: block !important;
+	}
+	
+	
+	
+	/* Custom Login Page
+	---------------------------------------- */
+	
+	/* Clear the veritcal alignment. Make it wider for larger screens */
+	.login_container {
+		width: 900px;
+	}
+	
+	/* For ACP Auth (and login_body.html...probably), reduce container width to 450px  */
+	.auth-page-admin .login_container {
+		width: 450px;
+	}	
+	
+	/* Split the columns down */
+	.login_container_left, .login_container_right {
+		width: 50%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+	
+	/* Min height for left column content, so that it's taller than the registration box */
+	.login_container_left_section_content {
+		min-height: 400px;
+	}
+	
+	/* For ACP Auth (and login_body.html...probably), remove min-height */
+	.auth-page-admin .login_container_left_section_content {
+		min-height: 0;
+	}
+	/* responsive logo
+	---------------------------------------- */	
+	
+
+
+}

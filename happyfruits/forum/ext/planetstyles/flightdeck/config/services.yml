@@ -1,0 +1,10 @@
+services:
+    planetstyles.flightdeck.listener:
+        class: planetstyles\flightdeck\event\listener
+        arguments:
+            - '@cache.driver'
+            - '@config'
+            - '@config_text'
+            - '@template'
+        tags:
+            - { name: event.listener }

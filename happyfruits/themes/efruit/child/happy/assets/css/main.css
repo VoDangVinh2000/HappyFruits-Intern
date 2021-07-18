@@ -1,0 +1,28 @@
+/* #5c5f63 */
+.nav-main-item > a{
+    font-size: 14px;
+}
+.btn-visites a {
+    /* background-color: #5c5f63; */
+}
+.btn-visites a.efruitjs{
+    display: none !important;
+}
+.btn-visites a:hover {
+    background: -webkit-linear-gradient(left, #5c5f63 70%, #959aa1 100%);
+}
+
+.nav-main-item {
+    margin: 0 0 10px;
+}
+.nav-main-item > a {
+    padding-bottom: 10px;
+}
+
+.nav-cart{
+    top: 12px;
+}
+
+#loading img{
+    background: white;
+}

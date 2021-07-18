@@ -1,0 +1,99 @@
+/* Consolidation of fonts (*shield your eyes, there are many of them!). Families, then sizes and weights */
+
+/* The basics */
+html {
+	font-size: 100%;
+}
+
+i, em {
+	font-style: italic;
+}
+
+b, strong {
+	font-weight: 500;
+}
+
+body {
+	
+}
+
+.codebox code {
+	font: 0.9em Monaco, "Andale Mono","Courier New", Courier, monospace;
+}
+
+
+/* Sizes */
+h1 {/* Forum name */ font-size: 30px;}
+.site-description p {font-size: 14px;}
+h2 {/* Forum header titles */ font-size: 1.8em;}
+h3 {/* Sub-headers (also used as post headers, but defined later) */ font-size: 1em;}
+h4 {/* Forum and topic list titles */ font-size: 1.3em;}
+ul#nav-main > li > a, ul#nav-main > li > div > a {font-size: 1.2em;}
+ul#nav-breadcrumbs li {font-size: 1.2em;}
+.small {font-size: 0.9em !important;}
+a.forumtitle, a.topictitle {font-size: 1.2em;}
+.badge {font-size: 10px;}
+dd.simpleposts span {font-size: 1.2em;}
+dd.posts, dd.topics, dd.views {font-size: 1.2em;}
+.pagination li a {font-size: 0.9em;}
+.contact-icons {font-size: 0;}
+.topic_type {font-size: 0.9em;}
+.forumlist_grid_title {font-size: 1.2em;}
+.grid_unread {font-size: 0.8em;}
+
+
+
+
+/* Weights */
+h1 {/* Forum name */ font-weight: 300;}
+h2 {/* Forum header titles */ font-weight: 300;}
+h3 {/* Sub-headers (also used as post headers, but defined later) */ font-weight: 500;}
+ul#nav-breadcrumbs > li.breadcrumbs {font-weight: 300;}
+.breadcrumbs .crumb:before {font-weight: 500;}
+table.table1 thead th {font-weight: normal;}
+table.info tbody th {font-weight: normal;}
+.pagination li.active span {font-weight: normal;}
+.error {font-weight: 500;}
+.dropdown-extended .header {font-weight: 500;}
+.dropdown-extended .header .header_settings {font-weight: normal;}
+.notification_list p.notifications_title strong {font-weight: 500;}
+.button {font-weight: normal;}
+ul.topiclist dt {font-weight: normal;}
+li.header dt, li.header dd {font-weight: 500;}
+li.header dt {font-weight: 500;}
+dd.posts, dd.topics, dd.views, dd.extra, dd.mark {font-weight: 300;}
+li.row dd.simpleposts span {font-weight: 300;}
+dl.faq dt {font-weight: 500;}
+blockquote cite {/* Username/source of quoter */ font-style: normal; font-weight: 500;}
+blockquote cite > div {font-weight: normal;}
+.codebox p {font-weight: 500;}
+.attachbox p {font-weight: normal;}
+.attachbox p.stats {font-weight: normal;}
+dl.file dt {font-weight: 500;}
+dl.thumbnail dd {font-style: italic;}
+fieldset.polls dl.voted {font-weight: 500;}
+dd.profile-warnings {font-weight: 500;}
+.dl_links strong {font-weight: 500;}
+#memberlist tr.inactive, #team tr.inactive {font-style: italic;}
+.panel-container table.table1 tbody th {font-style: italic;}
+.tabs .tab, .minitabs .tab {font-weight: 500;}
+.tabs .dropdown, .minitabs .dropdown {font-weight: normal;}
+.navigation li {font-weight: 500;}
+dl.mini dt {font-weight: 500;}
+.friend-online {font-weight: 500;}
+.friend-offline {font-style: italic;}
+.tabs .dropdown, .minitabs .dropdown {font-weight: normal;}
+input {font-weight: normal;}
+select {font-weight: normal;}
+dt label {font-weight: 500;}
+a.button1, input.button1 {font-weight: 500;}
+input.button3 {font-variant: small-caps;}
+input.disabled {font-weight: normal;}
+.jumpbox-cat-link, .jumpbox-forum-link { font-weight: 500; }
+a.forumtitle {font-weight: 500;}
+a.topictitle {font-weight: 500;}
+a.lastsubject {font-weight: 500;text-decoration: none;}
+.postprofile a, .postprofile dt.author a {font-weight: 500; text-decoration: none;}
+.search .postprofile a {font-weight: normal;}
+.username-coloured {font-weight: 500;}
+.grid_unread {font-weight: 300;}

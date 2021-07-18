@@ -1,0 +1,263 @@
+{
+
+"Logo Position": {
+	"name": "logo_position",
+	"type": "list",
+	"help": "Sets the position of the forum logo. <br />Default value: 'middle'.",
+	"values": [
+		"Left",
+		"Middle",
+		"Right"
+	]
+},
+
+"Header Background Repeat": {
+	"name": "header_repeat",
+	"type": "list",
+	"help": "Sets the repeat direction for the header background image. <br />Default value: 'no-repeat'.",
+	"values": [
+		"repeat-x",
+		"repeat-y",
+		"repeat",
+		"no-repeat"
+	]
+},
+
+"Header Background Position": {
+	"name": "header_position",
+	"type": "list",
+	"help": "Sets position for header background. <br />Default value: 'middle top'.",
+	"values": [
+		"left top",
+		"left center",
+		"left bottom",
+		"center top",
+		"center center",
+		"center bottom",
+		"right top",
+		"right center",
+		"right bottom"
+	]
+},
+
+"Stretch header background to fill space?": {
+	"name": "header_size",
+	"type": "bool",
+	"help": "Stretches background image to fill header space. Only recommended for large backgrounds that don't repeat.<br /><strong>Note: Automatically applied when parallax header is enabled</strong>.<br />Default value: No."			
+},
+
+"Header Background Effect": {
+	"name": "header_effect",
+	"type": "list",
+	"help": "Applies a visual style to the header bg image (if uploaded). <br />Default value: 'none'.",
+	"values": [
+		"None",
+		"Colour Overlay",
+		"Darken"
+	]
+},
+
+"Parallax Header?": {
+	"name": "parallax_header",
+	"type": "bool",
+	"help": "Subtly moves the header background when scrolling.<br /><strong>Note: Requires a header image taller than the forum header. See documentation.</strong><br />Default value: No."			
+},
+
+"Enable Animated Header Particles?": {
+	"name": "header_particles",
+	"type": "bool",
+	"help": "Enables an animated geometric overlay across the header.<br />Default value: No."			
+},	
+
+"Header Format": {
+	"name": "header_format",
+	"type": "list",
+	"help": "Text uses forum's sitename and description.<br />Default value: Both.",
+	"values": [
+		"Logo Only",
+		"Sitename and Description Only",
+		"Both"
+	]
+},
+
+"Navbar Position": {
+	"name": "navbar_position",
+	"type": "list",
+	"help": "Defines where the primary navigation is displayed.<br />Default value: 'Outside Header'.",
+	"values": [
+		"Outside Header",
+		"Inside Header"
+	]
+},
+
+"Font": {
+	"name": "font_family",
+	"type": "list",
+	"help": "Set the font face. Previews can be found in description'<br />Default: Roboto.",
+	"values": [
+		"Roboto",
+		"Roboto Slab",
+		"Bubbler One",
+		"Dosis",
+		"Exo 2",
+		"Raleway",
+		"Rubik",
+		"Quicksand"
+	]
+},
+
+
+"Layout Type": {
+	"name": "layout_type",
+	"type": "list",
+	"help": "Sets the width of your forum.<br /><strong>Fluid:</strong> Full width, resizes and scales with the browser. <br /><strong>Boxed:</strong> Fixed width, margins between content and browser edges. <br/ ><strong>Note: In boxed layout sidebars won't display on smaller devices</strong><br />Default value: Fluid.",
+	"values": [
+		"Fluid",
+		"Boxed"
+	]
+},
+
+"Theme Base Colour": {
+	"name": "base_colour",
+	"type": "list",
+	"help": "Choose a light or dark base colour. See documentation for previews.<br />Default value: 'Light'.",
+	"values": [		
+		"Light",
+		"Dark"	
+	]
+},
+
+"Theme Preset Colour": {
+	"name": "colour_preset",
+	"type": "list",
+	"help": "Choose a predefined colour palette for your forum's accent colour. See documentation for previews.<br />Default value: 'No Preset'.",
+	"values": [		
+		"Custom (Use colour picker below)",
+		"No Custom Colour",
+		"Aqua",	
+		"Blush",		
+		"Blue_Lagoon",
+		"Calm_Darya",		
+		"Electric_Violet",			
+		"HoneyDew",		
+		"Hot_Red",				
+		"Ibiza_Sunset",	
+		"Little_Leaf",	
+		"Neon_Blue",					
+		"Nighthawk",						
+		"Pacific_Dream",			
+		"Peach",
+		"Purple_Love",				
+		"Rose_Water",
+		"Sahara",
+		"Titanium",												
+		"Warm_Sunset"		
+	]
+},
+
+"Theme Accent Colour": {
+	"name": "colour_picker",
+	"help": "Select colour of category headers, links and buttons.<br /><strong>Note: Only applied if 'No Preset' is selected above.</strong>",		
+	"type": "string" 
+},
+
+"High Contrast Footer Links?": {
+	"name": "high_contrast_links",
+	"type": "bool",
+	"help": "Overrides custom colour above with white links. Enable if you've set a dark colour above.<br />Default Value: No"
+},
+
+
+"Forumlist Display": {
+	"name": "forumlist_display",
+	"help": "Defines how forums are displayed on the index page.<br />Default setting: List.",		
+	"type": "list",
+	"values": [
+		"List",
+		"List (Simplified)",
+		"Grid"
+	]
+},
+
+"Content Block Headers": {
+	"name": "content_block_header",
+	"type": "list",
+	"help": "Defines how category headers are displayed. <br />Default value: 'Block'.",
+	"values": [
+		"Stripe",
+		"Block"
+	]
+},
+
+"Enable Sidebars?": {
+	"name": "sidebars",
+	"type": "bool",
+	"help": "Choose to enable or disable sidebars. Further options configured below. <br />Default Value: No"			
+},
+
+"Sidebar Placement": {
+	"name": "sidebar_placement",
+	"type": "list",
+	"help": "Choose which sidebars to display. <br /><strong>Note: Left Sidebar will be hidden on handheld devices and small desktops</strong>.<br />Default value: 'Right only'.",
+	"values": [
+		"Left Only",
+		"Right Only",
+		"Both"
+	]
+},
+
+"Enable Sidebar Profile Widget?": {
+	"name": "profile_widget",
+	"type": "bool",
+	"help": "Displays User Avatar and basic profile links in right sidebar. Guests see a login/registration form, <br />Default Value: No"			
+},
+
+"Enable Sidebar Search Widget?": {
+	"name": "search_widget",
+	"type": "bool",
+	"help": "Displays a quick search form in the sidebar. <br />Default Value: No"			
+},
+
+"Postprofile Side": {
+	"name": "postprofile_side",
+	"help": "Sets which side avatars / post counts display on when reading a topic.<br />Default setting: Right.",		
+	"type": "list",
+	"values": [
+		"Left",
+		"Right"
+	]
+},
+
+"Enable Collapsible Panels?": {
+	"name": "collapsible_panels",
+	"type": "bool",
+	"help": "Allows end-users to collapse/hide categories and sidebar blocks.<br />Default Value: No"
+},
+
+
+"Enable Scroll to Top button?": {
+	"name": "scroll_to_top",
+	"type": "bool",
+	"help": "Adds a scroll to top shortcut on long pages.<br />Default Value: No"
+},
+
+
+"Hide Social Bar (footer)?": {
+	"name": "hide_social_bar",
+	"type": "bool",
+	"help": "Hides the social bar above the footer.<br />Default Value: No"
+},
+
+"Force Rounded 'Last Post' Avatars?": {
+	"name": "rounded_avatars",
+	"type": "bool",
+	"help": "Forces the avatars within the 'last post' column to be round. <br />Requires <a href=\"https://www.phpbb.com/customise/db/extension/avatar_in_last_post/\" style=\"text-decoration: underline;\">Avatar in last post</a> extension.<br />Default Value: No"
+},
+
+"Hide PlanetStyles link in footer?": {
+	"name": "credit_line",
+	"type": "bool",
+	"help": "We'd rather you didn't, but it's OK if you really want to :)"
+}	
+
+}
