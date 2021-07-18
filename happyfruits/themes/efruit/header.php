@@ -32,7 +32,7 @@
         <link rel="preload" href="<?= $preload_link ?>" as="font" crossorigin="anonymous">
     <?php endforeach; ?>
     <!--Vĩnh !-->
-    <link href="<?= get_theme_assets_url() ?>css/style-thuctap.css" rel="stylesheet" />
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />
     <!--end!-->
     <link href="<?= get_theme_assets_url() ?>css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/pixel.ef.css" rel="stylesheet" />
