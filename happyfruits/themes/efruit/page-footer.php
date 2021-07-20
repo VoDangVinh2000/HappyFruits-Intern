@@ -4,157 +4,144 @@ $start_year = env('START_YEAR', 2013);
 $current_year = date('Y');
 $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_year : $start_year;
 ?>
-<!-- FOOTER -->
-<footer class="footer">
-	<div class="container">
-		<div class="footer--wrapper">
-			<a href="" class="footer-img--link">
-				<img src="http://www.localhost/themes/efruit/child/happy/assets/img/main_logo.png" alt="" class="footer-img">
-			</a>
-		</div>
-		<div class="footer--info">
-			<ul class="footer--info-list">
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-title">About us</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Introduction</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Image gallery</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Jobs</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Terms and Conditions</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Returns and Exchanges</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Privacy Policy</a>
-				</li>
-			</ul>
-			<!-- Col 2 -->
-			<ul class="footer--info-list">
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-title">You may want to know</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Products</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Shipping</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Place Order</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Guarantee</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Promotion</a>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Other questions</a>
-				</li>
-			</ul>
-			<!-- Col 3 -->
-			<ul class="footer--info-list">
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-title">Contact</a>
-				</li>
-				<li class="footer--info-item">
-					<div class="footer--info-link">
-						<div class="footer--info-address">
-							<i class="fa fa-home"></i>
-							<span bind-translate="Cửa hàng">Cửa hàng</span>: <span class="efruit-vi">
-								<?= getvalue($main_branch, 'short_address') ?>
-							</span><span class="efruit-en efruitjs"><?= getvalue($main_branch, 'en_address')
-																	?></span>
-						</div>
-					</div>
-				</li>
-				<li class="footer--info-item">
-					<div class="footer--info-link">
-						<div class="footer--info-address">
-							<i class="fa fa-home"></i>
-							<?php if (!empty($settings['company_address'])) : ?>
-								<dd></i> <span bind-translate="Công ty">Công ty</span>: <span><?= $settings['company_address']
-																													?></span></dd>
-							<?php endif; ?>
-							<!-- <span class="footer--info-address footer--info-address__title">
-								Company:
-							</span>
-							<span class="footer--info-address footer--info-address__des">
-								388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city
-							</span> -->
-						</div>
-					</div>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">
-						<div class="footer--info-address footer--info-address-envolope">
-							<i class="fa fa-phone"></i>
-							<span class="footer--info-address footer--info-address__des">
-								0938.70.70.15
-							</span>
-						</div>
-					</a>
-				</li>
-				<li class="footer--info-item">
-					<div href="#" class="footer--info-link">
-						<div class="footer--info-address footer--info-address-envolope">
-							<i class="fas fa-envelope"></i>
-							<a href="#" class="contact--link">info@localhost</a>
-							<i class="far fa-envelope"></i>
-							<a href="#" class="contact--link">cskh@localhost</a>
-						</div>
-					</div>
-				</li>
-				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">
-						<div class="footer--info-address footer--info-address-envolope">
-							<i class="fab fa-facebook-f"></i>
-							<span class="footer--info-address footer--info-address__des">
-								https://www.facebook.com/happyfruitsvietnam/
-							</span>
-						</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="footer--form-submit">
-			<div class="footer--form-submit footer--form-submit-wrapper">
-				<input class="input--form" type="email" name="" value="" placeholder="Your email address." aria-label="email@example.com">
-				<button class="btn-submit" type="submit" name="">SUBSCRIBE</button>
-			</div>
-		</div>
+ <!-- FOOTER -->
+ <footer class="footer">
+        <div class="container">
+            <div class="footer--wrapper">
+                <a href="" class="footer-img--link">
+                    <img src="http://www.localhost/themes/efruit/child/happy/assets/img/main_logo.png" alt=""
+                        class="footer-img">
+                </a>
+            </div>
+            <div class="footer--group-icon">
+                <div class="footer--group-icon__wrapper">
+                    <a href=""> <i class="fab fa-facebook-f"></i><span class="icon-name">facebook</span></a>
+                    <a href=""><i class="fab fa-twitter"></i><span class="icon-name">twitter</span></a>
+                    <a href=""><i class="fab fa-instagram"></i><span class="icon-name">instagram</span></a>
+                    <a href=""><i class="fab fa-youtube"></i><span class="icon-name">youtube</span></a>
+                </div>
+            </div>
+            <div class="footer--info">
+                <ul class="footer--info-list">
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-title">About us</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Introduction</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Image gallery</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Jobs</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Terms and Conditions</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Returns and Exchanges</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Privacy Policy</a>
+                    </li>
+                </ul>
+                <!-- Col 2 -->
+                <ul class="footer--info-list">
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-title">You may want to know</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Products</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Shipping</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Place Order</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Guarantee</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Promotion</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">Other questions</a>
+                    </li>
+                </ul>
+                <!-- Col 3 -->
+                <ul class="footer--info-list">
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-title">Contact</a>
+                    </li>
+                    <li class="footer--info-item">
+                        <div class="footer--info-link">
+                            <div class="footer--info-address">
+                                <i class="fa fa-home"></i>
+                                <span class="footer--info-address footer--info-address__title">
+                                    Store:
+                                </span>
+                                <span class="footer--info-address footer--info-address__des">
+                                    388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer--info-item">
+                        <div class="footer--info-link">
+                            <div class="footer--info-address">
+                                <i class="fa fa-home"></i>
+                                <span class="footer--info-address footer--info-address__title">
+                                    Company:
+                                </span>
+                                <span class="footer--info-address footer--info-address__des">
+                                    388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city
+                                </span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">
+                            <div class="footer--info-address footer--info-address-envolope">
+                                <i class="fa fa-phone"></i>
+                                <span class="footer--info-address footer--info-address__des">
+                                    0938.70.70.15
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="footer--info-item">
+                        <div href="#" class="footer--info-link">
+                            <div class="footer--info-address footer--info-address-envolope">
+                                <i class="fas fa-envelope"></i>
+                                <a href="#" class="contact--link">info@localhost</a>
+                                <i class="far fa-envelope"></i>
+                                <a href="#" class="contact--link">cskh@localhost</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="footer--info-item">
+                        <a href="#" class="footer--info-link">
+                            <div class="footer--info-address footer--info-address-envolope">
+                                <i class="fab fa-facebook-f"></i>
+                                <span class="footer--info-address footer--info-address__des">
+                                    https://www.facebook.com/happyfruitsvietnam/
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-		<div class="footer--group-icon">
-			<div class="footer--group-icon__wrapper">
-				<a href=""> <i class="fab fa-facebook-f"></i>
-					<span class="icon-name">facebook</span>
-				</a>
-				<a href=""><i class="fab fa-twitter"></i>
-					<span class="icon-name">twitter</span></a>
-				<a href=""><i class="fab fa-instagram"></i>
-					<span class="icon-name">instagram</span></a>
-				<a href=""><i class="fab fa-youtube"></i>
-					<span class="icon-name">youtube</span></a>
-			</div>
-		</div>
-
-		<div class="footer--company-info">
-			<span>Công Ty TNHH Thương Mại Dịch Vụ MID. ĐC: 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP
-				HCM</span>
-			<span>Số giấy phép ĐKKD: 0312974791 do sở Kế hoạch và Đầu Tư TPHCM cấp</span>
-			<span>Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm số 1384/2016/ATTP-CNĐK</span>
-		</div>
-	</div>
-</footer>
-<!-- END FOOTER -->
+            <div class="footer--company-info">
+                <p>Công Ty TNHH Thương Mại Dịch Vụ MID. ĐC: 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP
+                    HCM</p>
+                <p>Số giấy phép ĐKKD: 0312974791 do sở Kế hoạch và Đầu Tư TPHCM cấp</p>
+                <p>Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm số 1384/2016/ATTP-CNĐK</p>
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
 
 
 
