@@ -1,5 +1,10 @@
+<<<<<<< HEAD
     <!-- HEADER -->
     <header class="top-header">
+=======
+   <!-- HEADER -->
+   <header class="top-header">
+>>>>>>> 5dc86cccad1a07f9bd50521cc7ca6e0f8dfad28a
         <!-- Nav 1 -->
         <nav class="navbar navbar-expand-lg navbar-light sub-nav">
             <div class="container">
@@ -50,7 +55,7 @@
         <nav class="navbar navbar-expand-lg navbar-light main-nav">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                    <!-- <img src="./public/images/main_logo.png" alt="Happy Fruits logo"> -->
+                    <img src="./public/images/main_logo.png" alt="Happy Fruits logo">
                     <img src="<?=get_child_theme_assets_url()?>img/main_logo.png" alt="Happy Fruits logo">
                 </a>
                 <ul class="navbar-nav ms-auto right-main-nav sub-cart">
@@ -309,6 +314,7 @@
 
 
 
+<<<<<<< HEAD
 
 <!-- <header id="header" class="">
 	<div class="container">
@@ -537,3 +543,5 @@
         </div>
     </div>
     <?php endif;?> -->
+=======
+>>>>>>> 5dc86cccad1a07f9bd50521cc7ca6e0f8dfad28a

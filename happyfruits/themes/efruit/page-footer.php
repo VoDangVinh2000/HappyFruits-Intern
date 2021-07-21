@@ -135,7 +135,6 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 				</li>
 			</ul>
 		</div>
-
 		<div class="footer--company-info">
 			<p>	<?=$settings['company_name'] . ". ĐC: " . $settings['company_address']  ?> </p>
 			<p><?= $settings['company_info']  ?></p>
