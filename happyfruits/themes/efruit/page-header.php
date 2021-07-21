@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<header id="header" class="">
-    <div class="container">
-        <div class="row1">
-            <div style="width: 200px;">
-                <a href="/vi" accesskey="1"><img src="<?= get_child_theme_assets_url() ?>img/main_logo.png" height="80" alt="<?= get_setting('site_name') ?>"></a>
-=======
     <!-- HEADER -->
     <header class="top-header">
         <!-- Nav 1 -->
@@ -99,7 +92,8 @@
                                                 <li><a href="#">Custom Menu</a></li>
                                                 <li><a href="#">Custom Menu</a></li>
                                             </ul>
-                                        </div> <!-- col-megamenu.// -->
+                                        </div>
+                                         <!-- col-megamenu.// -->
                                     </div><!-- end col-3 -->
                                     <div class="col-lg-3 col-6">
                                         <div class="col-megamenu">
@@ -321,7 +315,6 @@
 		<div class="row1">
             <div style="width: 200px; position: absolute; top: 15px;">
                 <a href="/vi" accesskey="1"><img src="<?=get_child_theme_assets_url()?>img/main_logo.png" height="80" alt="<?=get_setting('site_name')?>"></a>
->>>>>>> 648b2c3c9b3c594e34abd16c3c2b46660036790d
             </div>
             <div style="text-align: right;">
                 <?php /*
@@ -374,51 +367,6 @@
                 <div class="nav-cart">
                     <a id="show-cart" data-target="#ui-wizard-modal" data-toggle="modal" href="#"><span><i class="shopping-cart"></i></span><span class="badge efruitjs" ng-show="totalQuantity">{{totalQuantity}}</span></a>
                 </div>
-<<<<<<< HEAD
-            </div>
-        </div>
-        <div class="row2">
-            <?php if (empty($main_menu['items'])) : ?>
-                <nav class="nav-main">
-                    <ul>
-                        <li class="nav-main-item"><a href="/vi" bind-translate="Trang chủ">Trang chủ</a></li>
-                        <?php /*
-					<li class="nav-main-item daddy">
-						<a href="#" class="">Menu</a>
-						<div><div>
-							<ul class="nav-main-dropdown drop1 container nav-categories">
-								<?php
-                                    $cats = [];
-									$css_max_width = 'style="max-width: ' . (99/count($categories)) . '%"';
-									foreach($categories as $item):
-                                        $cats[$item['category_id']] = $item;
-								?>
-								<li <?=$css_max_width?> class="picto <?=sanitize_string($item['english_name'])?>">
-									<a href="<?=$template == 'home'?'javascript:void(0);':ROOT_URL.'vi/?tag=menu&cat='.sanitize_string($item['english_name'])?>" class="category">
-										<img src="<?=get_image_url($item['image'], 'square-small')?>" alt="">
-										<span class="efruit-vi"><?=$item['name']?></span>
-										<span class="efruit-en efruitjs"><?=$item['english_name']?></span>
-									</a>
-								</li>
-								<?php endforeach; ?>
-							</ul>
-						</div></div>
-					</li>
-                    */ ?>
-                        <li class="nav-main-item"><a href="/vi/gioi-thieu"><span class="efruit-vi">Về <?= get_setting('short_site_name') ?></span><span class="efruit-en efruitjs">Về <?=get_setting('short_site_name') ?></span></a></li>
-                        <li class="nav-main-item"><a href="/vi/tin-tuc" bind-translate="Tin tức">Tin tức</a></li>
-                        
-					<li class="nav-main-item"><a href="/blog">Blog</a></li>
-					
-                        <li class="nav-main-item"><a href="/vi/uu-dai-thanh-vien" bind-translate="Thành viên">Thành viên</a></li>
-                    </ul>
-                </nav>
-            <?php else : ?>
-                <nav class="nav-main">
-                    <ul>
-                        <?php foreach ($main_menu['items'] as $m_item) : ?>
-                            <li class="nav-main-item"><a href="<?= $m_item['href'] ?>"><span class="efruit-vi"><?= $m_item['text'] ?></span><span class="efruit-en efruitjs"><?= $m_item['en_text'] ?></span></a></li>
-=======
 			</div>
 		</div>
 		<div class="row2">
@@ -436,27 +384,14 @@
                     <ul style="display: inline-block;">
                         <?php foreach($main_menu['items'] as $m_item): ?>
                         <li class="nav-main-item"><a href="<?=$m_item['href']?>"><span class="efruit-vi"><?=$m_item['text']?></span><span class="efruit-en efruitjs"><?=$m_item['en_text']?></span></a></li>
->>>>>>> 648b2c3c9b3c594e34abd16c3c2b46660036790d
                         <?php endforeach; ?>
                         <li class="nav-main-item"><a href="#modal-pre-booking" data-target="#modal-pre-booking" data-toggle="modal" data-backdrop="static" data-keyboard="false" ><span class="efruit-vi">Ưu đãi đặt trước</span><span class="efruit-en efruitjs">Pre-order promotion</span></a></li>
                         <li class="nav-main-item"><a href="/vi/khuyen-mai" style="padding-right: 0;" bind-translate="Khuyến mãi">Khuyến mãi</a></li>
                     </ul>
                 </nav>
             <?php endif; ?>
-<<<<<<< HEAD
-            <nav class="nav-featured">
-                <ul>
-                    <li><a href="#modal-pre-booking" data-target="#modal-pre-booking" data-toggle="modal" data-backdrop="static" data-keyboard="false"><span class="efruit-vi">Ưu đãi<br />đặt trước</span><span class="efruit-en efruitjs">Pre-order promotion</span></a></li>
-                    <li><a href="/vi/khuyen-mai" bind-translate="Khuyến mãi">Khuyến mãi</a></li>
-                    <li><a data-scroll-to="#san-pham-dac-trung" href="/vi/san-pham-dac-trung"><span class="efruit-vi">Sản phẩm<br />đặc trưng</span><span class="efruit-en efruitjs">Featured<br />products</span></a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-=======
 		</div>
 	</div>
->>>>>>> 648b2c3c9b3c594e34abd16c3c2b46660036790d
 </header>
 <div class="content" id="content">
     <div class="navigation mobile-view" id="navigation">
@@ -502,45 +437,6 @@
                     <li class="menu-item">
                         <a href="#modal-pre-booking" data-target="#modal-pre-booking" data-toggle="modal" data-backdrop="static" data-keyboard="false"><span class="efruit-vi">Ưu đãi đặt trước</span><span class="efruit-en">Pre-order promotion</span></a>
                     </li>
-<<<<<<< HEAD
-                </ul>
-            </div>
-        </div>
-        <table>
-            <tbody>
-                <tr>
-                    <td class="logo-wrap">
-                        <a class="logo" id="logo" href="/vi"><img alt="logo" height="40" src="<?= get_child_theme_assets_url() ?>img/small-logo.png" /></a>
-                    </td>
-                    <td class="tel-wrap">
-                        <?php if (!empty($hotline_1)) : ?>
-                            <div class="hvr-icon-grow-rotate" style="color: #51bd36;">
-                                <a href="tel:<?= $hotline_1 ?>"><?= $hotline_1 ?></a>
-                            </div>
-                        <?php endif; ?>
-                        <?php if (!empty($hotline_2)) : ?>
-                            <?php if (!empty($hotline_1)) : ?><br /><?php endif; ?>
-                            <div class="hvr-icon-grow-rotate" style="color: #51bd36;">
-                                <a href="tel:<?= $hotline_2 ?>"><?= $hotline_2 ?></a>
-                            </div>
-                        <?php endif; ?>
-                    </td>
-                    <td class="nav-wrap">
-                        <a id="show-cart2" data-target="#ui-wizard-modal" data-toggle="modal" href="#"><span><i class="shopping-cart"></i></span><span class="badge efruitjs" ng-show="totalQuantity">{{totalQuantity}}</span></a>
-                    </td>
-                    <td class="login-state">
-                        <div class="efruitjs" id="language_selector">
-                            <ul>
-                                <li><a ng-click="switchLanguage('vi')" class="efruit-en" href="" tabindex="-1" role="menuitem"><img alt="vi" width="35" height="20" alt="vi" src="<?= get_theme_assets_url() ?>img/flags/vi.png" class="language_flag" /></a></li>
-                                <li><a ng-click="switchLanguage('en')" class="efruit-vi" href="" tabindex="-1" role="menuitem"><img alt="en" width="35" height="20" alt="en" src="<?= get_theme_assets_url() ?>img/flags/en.png" class="language_flag" /></a></li>
-                            </ul>
-                        </div>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-=======
 				</ul>
 			</div>
 		</div>
@@ -578,7 +474,6 @@
 			</tbody>
 		</table>
 	</div>
->>>>>>> 648b2c3c9b3c594e34abd16c3c2b46660036790d
     <?php
     $slide_images = !empty($obj) ? json_decode($obj['slide_images'], true) : null;
     if (empty($slide_images) && getvalue($homepage, 'slide_images'))
@@ -640,9 +535,5 @@
                 <?php endif; ?>
             </div>
         </div>
-<<<<<<< HEAD
-    <?php endif; ?>
-=======
     </div>
     <?php endif;?> -->
->>>>>>> 648b2c3c9b3c594e34abd16c3c2b46660036790d
