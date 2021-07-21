@@ -6,13 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../public/css/stylePageAccount.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -20,7 +16,7 @@
 <body>
     <!--Main Account-->
     <div class="main">
-          <!--Banner -->
+        <!--Banner -->
         <div class="bread-section">
             <div class="inside-bread-section">
                 <div class="container container-section">
@@ -51,17 +47,15 @@
                                 <div class="main-create-account-fillout">
                                     <div class="error-fillout-createaccount">
                                     </div>
-                                    <input type="text" name="firstname" id="input-full" autocapitalize="words" autofocus
-                                        placeholder="First Name" required>
+                                    <input type="text" name="firstname"  autocapitalize="words" autofocus placeholder="First Name" required>
                                     <label for=""></label>
-                                    <input type="text" name="lastname" id="input-full" autocapitalize="words"
-                                        placeholder="Last Name" required>
+                                    <input type="text" name="lastname"  autocapitalize="words" placeholder="Last Name" required>
                                     <label for=""></label>
-                                    <input type="email" name="email" id="input-full" autocapitalize="words"
-                                        placeholder="Email" required>
+                                    <input type="email" name="email"  autocapitalize="words" placeholder="Email" required>
                                     <label for=""></label>
-                                    <input type="password" name="password" id="input-full" autocapitalize="words"
-                                        placeholder="Password" required>
+                                    <input type="password" name="password"  autocapitalize="words" placeholder="Password" required>
+                                    <label for=""></label>
+                                    <input type="password" name="confirm-password"  autocapitalize="words" placeholder="Confirm Password" required>
                                 </div>
                                 <div class="input-submit-account">
                                     <input type="submit" value="Create">
@@ -77,6 +71,6 @@
         </div>
     </div>
 </body>
-<script src="public/js/jsPageAccount.js"></script>
+<script src="../public/js/jsPageAccount.js"></script>
 
 </html>
