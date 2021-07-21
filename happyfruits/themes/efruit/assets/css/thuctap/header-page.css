@@ -668,6 +668,52 @@ img.footer-img {
 .footer--company-info p{
   font-size: 1.5rem;
 }
+
+
+/* Responsive footer */
+
+@media (max-width:748px) {
+  .footer--info {
+    grid-template-columns: 1fr;
+  }
+  .footer--company-info {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .footer--company-info span {
+    text-align: left;
+    margin: 0 20px;
+  }
+  .search-field{
+    width: 300px;
+  }
+}
+
+@media (max-width:478px) {
+  .footer--info-link, .contact--link, span {
+    font-size: 16px;
+  }
+  .footer--info-address, .footer--info-address__des {
+    max-width: 80%;
+  }
+  .footer--form-submit-wrapper {
+    max-width: 350px;
+  }
+  .footer--form-submit {
+    margin: 50px 16px 90px;
+  }
+  .btn-submit {
+    top: 120%;
+    width: 100%;
+  }
+}
+@media only screen and (max-width:370px){
+  .search-field{
+    width: 160px;
+  }
+}
+
+
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	.navbar .has-megamenu{position:static!important;}
@@ -679,19 +725,26 @@ img.footer-img {
     .sub-cart {display: none;}
     .main-cart-btn {display: block;}
 }
+
 /* ============ mobile view ============ */
-@media(max-width: 991px){
+@media  (max-width: 991px){
 	.navbar.fixed-top .navbar-collapse, .navbar.sticky-top .navbar-collapse{
 		overflow-y: auto;
 	    max-height: 90vh;
 	    margin-top:10px;
 	}
 }
+
 @media screen and (max-width: 770px) {
     .section_col {
         margin: 50px;
+    }
+    .navbar-collapse.collapse{
+      display: none;
     }
     .section_col-item {
         grid-column: 1/7;
     }
 }
+
+

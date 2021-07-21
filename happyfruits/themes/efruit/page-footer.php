@@ -24,60 +24,60 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 		<div class="footer--info">
 			<ul class="footer--info-list">
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-title">About us</a>
+					<a href="#" bind-translate="Về chúng tôi" class="footer--info-title">Về chúng tôi</a>
 				</li>
 				<li class="footer--info-item">
-				<a href="/vi/gioi-thieu" class="footer--info-link" bind-translate="Giới thiệu">Giới thiệu</a>
+					<a href="/vi/gioi-thieu" class="footer--info-link" bind-translate="Giới thiệu">Giới thiệu</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Image gallery</a>
+					<a href="/vi/thu-vien-hinh-anh" class="footer--info-link" bind-translate="Thư viện hình ảnh">Thư viện hình ảnh</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Jobs</a>
+					<a href="/tuyen-dung" class="footer--info-link" target="_blank" bind-translate="Tuyển dụng">Tuyển dụng</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Terms and Conditions</a>
+					<a href="/vi/chinh-sach-quy-dinh-chung" class="footer--info-link" bind-translate="Chính sách, quy định chung">Chính sách, quy định chung</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Returns and Exchanges</a>
+					<a href="/vi/chinh-sach-doi-tra" class="footer--info-link" bind-translate="Chính sách đổi trả">Chính sách đổi trả</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Privacy Policy</a>
+					<a href="/vi/chinh-sach-bao-mat-thong-tin" class="footer--info-link" bind-translate="Chính sách bảo mật thông tin">Chính sách bảo mật thông tin</a>
 				</li>
 			</ul>
 			<!-- Col 2 -->
 			<ul class="footer--info-list">
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-title">You may want to know</a>
+					<a href="#" bind-translate="Có thể bạn thắc mắc" class="footer--info-title">Có thể bạn thắc mắc</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Products</a>
+					<a href="/vi/san-pham" class="footer--info-link" bind-translate="Sản phẩm">Sản phẩm</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Shipping</a>
+					<a href="/vi/giao-hang" class="footer--info-link" bind-translate="Phương thức giao hàng">Phương thức giao hàng</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Place Order</a>
+					<a href="/vi/dat-hang" class="footer--info-link" bind-translate="Phương thức đặt hàng">Phương thức đặt hàng</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Guarantee</a>
+					<a href="/vi/cam-ket-san-pham" class="footer--info-link" bind-translate="Cam kết sản phẩm">Cam kết sản phẩm</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Promotion</a>
+					<a href="/vi/uu-dai-thanh-vien" class="footer--info-link" bind-translate="Ưu đãi thành viên">Ưu đãi thành viên</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Other questions</a>
+					<a href="/vi/cau-hoi-khac" class="footer--info-link" bind-translate="Câu hỏi khác">Câu hỏi khác</a>
 				</li>
 			</ul>
 			<!-- Col 3 -->
 			<ul class="footer--info-list">
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-title">Contact</a>
+					<a href="#" bind-translate="Liên hệ" class="footer--info-title">Liên hệ</a>
 				</li>
 				<li class="footer--info-item">
 					<div class="footer--info-link">
 						<div class="footer--info-address">
-						<i class="fa fa-home"></i>
+							<i class="fa fa-home"></i>
 							<span bind-translate="Cửa hàng">Cửa hàng</span>: <span class="efruit-vi footer--info-address footer--info-address__title">
 								<?= getvalue($main_branch, 'short_address') ?>
 							</span><span class="efruit-en efruitjs"><?= getvalue($main_branch, 'en_address')
@@ -94,11 +94,11 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 				<li class="footer--info-item">
 					<div class="footer--info-link">
 						<div class="footer--info-address">
-							
+
 							<?php if (!empty($settings['company_address'])) : ?>
 								<dd><i class="fa fa-home"></i><span bind-translate="Công ty">Công ty</span>: <span class="footer--info-address footer--info-address__des">
-									<?= $settings['company_address']
-																								?></span></dd>
+										<?= $settings['company_address']
+										?></span></dd>
 							<?php endif; ?>
 						</div>
 					</div>
@@ -108,7 +108,8 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 						<div class="footer--info-address footer--info-address-envolope">
 							<i class="fa fa-phone"></i>
 							<span class="footer--info-address footer--info-address__des">
-								0938.70.70.15
+								<?= getvalue($main_branch, 'phone_number', '0938.70.70.15 - 0906.70.70.15')
+								?>
 							</span>
 						</div>
 					</a>
@@ -136,10 +137,10 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 			</ul>
 		</div>
 		<div class="footer--company-info">
-			<p>	<?=$settings['company_name'] . ". ĐC: " . $settings['company_address']  ?> </p>
+			<p> <?= $settings['company_name'] . ". ĐC: " . $settings['company_address']  ?> </p>
 			<p><?= $settings['company_info']  ?></p>
 			<p><?= $settings['company_extra_1']  ?></p>
-			<p><?=  $settings['company_extra_2']  ?></p>
+			<p><?= $settings['company_extra_2']  ?></p>
 			<!-- <p>Công Ty TNHH Thương Mại Dịch Vụ MID. ĐC: 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP
 				HCM</p>
 			<p>Số giấy phép ĐKKD: 0312974791 do sở Kế hoạch và Đầu Tư TPHCM cấp</p>
