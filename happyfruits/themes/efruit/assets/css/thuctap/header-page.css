@@ -2,6 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 body {font-family: 'Fira Sans Condensed', sans-serif;}
 
+ul, ul li, ul li a {
+  text-decoration: none!important;
+}
+
+
+
 /* Sub nav */
 .sub-nav {border-bottom: 1px solid rgba(0,0,0,.07);}
 .sub-nav .navbar-nav .nav-link {
@@ -23,7 +29,12 @@ body {font-family: 'Fira Sans Condensed', sans-serif;}
     padding: 2em 0;
     padding-right: 1em;
 }
-.main-nav .navbar-nav .nav-link {color: #000; padding-right: .75rem; padding-left: .75rem; text-align: center;}
+.main-nav .navbar-nav .nav-link {
+  /* color: #000; padding-right: .75rem; padding-left: .75rem; text-align: center; */
+  padding: 0 0.75rem!important;
+  color: #000;
+  text-align: center;
+}
 .bg-cart {background: #dde9ed; color: #000; top: 10px; left: 55px; font-weight: normal; font-size: .65em;}
 .dropdown-toggle::after {
     border-top: 4px solid;

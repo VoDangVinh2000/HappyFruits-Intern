@@ -292,6 +292,90 @@
         </div>
     </header>
 
+    <!-- slider -->
+    <div id="carouselHappyFruits" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselHappyFruits" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselHappyFruits" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselHappyFruits" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselHappyFruits" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="carousel-img">
+                    <!-- <img src="./public/images/slide1.jpg" class="d-block w-100" alt="..."> -->
+                    <img src="<?=get_theme_assets_url()?>img/slide1.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-caption d-none d-md-block">
+                    <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                    <h2>Gói trọn yêu thương</h2>
+                    <a class="btn-shop" href="#">
+                        <div class="button-content-wrapper">
+                            <span class="button-text">SHOP NOW</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-img">
+                    <img src="<?=get_theme_assets_url()?>img/slide2.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-caption d-none d-md-block">
+                    <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                    <h2>Gói trọn yêu thương</h2>
+                    <a class="btn-shop" href="#">
+                        <div class="button-content-wrapper">
+                            <span class="button-text">SHOP NOW</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-img">
+                    <img src="<?=get_theme_assets_url()?>img/slide3.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-caption d-none d-md-block">
+                    <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                    <h2>Gói trọn yêu thương</h2>
+                    <a class="btn-shop" href="#">
+                        <div class="button-content-wrapper">
+                            <span class="button-text">SHOP NOW</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="carousel-img">
+                    <img src="<?=get_theme_assets_url()?>img/slide4.jpg" class="d-block w-100" alt="...">
+                </div>
+
+                <div class="carousel-caption d-none d-md-block">
+                    <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                    <h2>Gói trọn yêu thương</h2>
+                    <a class="btn-shop" href="#">
+                        <div class="button-content-wrapper">
+                            <span class="button-text">SHOP NOW</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselHappyFruits" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselHappyFruits" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
 
 
