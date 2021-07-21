@@ -27,7 +27,7 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 					<a href="#" class="footer--info-title">About us</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">Introduction</a>
+				<a href="/vi/gioi-thieu" class="footer--info-link" bind-translate="Giới thiệu">Giới thiệu</a>
 				</li>
 				<li class="footer--info-item">
 					<a href="#" class="footer--info-link">Image gallery</a>
