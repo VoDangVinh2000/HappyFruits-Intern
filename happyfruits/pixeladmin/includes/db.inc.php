@@ -5,11 +5,6 @@
     define("MYSQL_DBNAME", env("MYSQL_DBNAME", "happyfruit_db"));
     define("MYSQL_USER", env("MYSQL_USER", "efruit_db"));
     define("MYSQL_PASS", env("MYSQL_PASS", "x7VsY7uC27QL"));
-    // define("MYSQL_HOST", "localhost");
-    // define("MYSQL_DBNAME", "happyfruit_db");
-    // define("MYSQL_USER", "efruit_db");
-    // define("MYSQL_PASS", "x7VsY7uC27QL");
-    // Server specific settings
     if($server_ip == "127.0.0.1") {
         define("IS_LOCAL", 1);
         define("IS_LIVE", 0);
