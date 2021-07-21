@@ -24,7 +24,7 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 		<div class="footer--info">
 			<ul class="footer--info-list">
 				<li class="footer--info-item">
-					<a href="#" bind-translate="Về chúng tôi" class="footer--info-title">Về chúng tôi</a>
+					<a href="#"  bind-translate="Về chúng tôi" class="footer--info-title">Về chúng tôi</a>
 				</li>
 				<li class="footer--info-item">
 					<a href="/vi/gioi-thieu" class="footer--info-link" bind-translate="Giới thiệu">Giới thiệu</a>
@@ -82,12 +82,6 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 								<?= getvalue($main_branch, 'short_address') ?>
 							</span><span class="efruit-en efruitjs"><?= getvalue($main_branch, 'en_address')
 																	?></span>
-							<!-- <span >
-								Store:
-							</span>
-							<span class="footer--info-address footer--info-address__des">
-								388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city
-							</span> -->
 						</div>
 					</div>
 				</li>
@@ -118,7 +112,8 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 					<div href="#" class="footer--info-link">
 						<div class="footer--info-address footer--info-address-envolope">
 							<i class="fas fa-envelope"></i>
-							<a href="#" class="contact--link">info@localhost</a>
+							<a id="info-email">Info email</a>&nbsp;&nbsp;<i class="fa fa-envelope-o"></i> <a id="cskh-email">CSKH</a>
+							<!-- <a href="#" class="contact--link">info@localhost</a> -->
 							<i class="far fa-envelope"></i>
 							<a href="#" class="contact--link">cskh@localhost</a>
 						</div>
