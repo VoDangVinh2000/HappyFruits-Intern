@@ -34,8 +34,8 @@ ul, ul li, ul li a {
 }
 .main-nav .navbar-nav .nav-link {
   /* color: #000; padding-right: .75rem; padding-left: .75rem; text-align: center; */
-  /* padding: 0 0.75rem; */
-  padding: 0 0 7px 0;
+  padding: 0 0.75rem !important;
+  /* padding: 0 0 7px 0; */
   color: #000;
   text-align: center;
 }
