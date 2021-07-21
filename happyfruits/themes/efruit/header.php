@@ -31,9 +31,10 @@
     ?>
         <link rel="preload" href="<?= $preload_link ?>" as="font" crossorigin="anonymous">
     <?php endforeach; ?>
+
     <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
     <!--Vĩnh !-->
-        <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />
     <!--end!-->
     <link href="<?= get_theme_assets_url() ?>css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/pixel.ef.css" rel="stylesheet" />
@@ -105,5 +106,3 @@
             </div>
         </div>
     </div>
-
-    <!-- <link href="<?= get_theme_assets_url() ?>css/thuctap/styles.css" rel="stylesheet" /> -->
