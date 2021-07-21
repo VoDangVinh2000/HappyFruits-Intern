@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
-body {font-family: 'Fira Sans Condensed', sans-serif;}
+body {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 1.5rem;
+}
 
 ul, ul li, ul li a {
   text-decoration: none!important;
@@ -31,7 +34,8 @@ ul, ul li, ul li a {
 }
 .main-nav .navbar-nav .nav-link {
   /* color: #000; padding-right: .75rem; padding-left: .75rem; text-align: center; */
-  padding: 0 0.75rem!important;
+  /* padding: 0 0.75rem; */
+  padding: 0 0 7px 0;
   color: #000;
   text-align: center;
 }
@@ -42,7 +46,10 @@ ul, ul li, ul li a {
     border-left: 3px solid transparent;
     margin-left: .4em;
 }
-.navbar .megamenu{ padding: 1rem; }
+.navbar .megamenu{
+   /* padding: 1rem; */
+   font-size: 1.5rem;
+   }
 .main-nav .navbar-nav .nav-item .nav-link{position: relative;}
 .main-nav .navbar-nav .nav-item .nav-link::before {
     content: '';
@@ -658,6 +665,9 @@ img.footer-img {
   margin-top: 100px;
   color: #555;
 }
+.footer--company-info p{
+  font-size: 1.5rem;
+}
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	.navbar .has-megamenu{position:static!important;}
@@ -665,7 +675,7 @@ img.footer-img {
     
     .navbar .nav-item .dropdown-menu{ display: none; }
 	.navbar .nav-item:hover .dropdown-menu{ display: block; }
-	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+	.navbar .nav-item .dropdown-menu{ margin-top:-10px; }
     .sub-cart {display: none;}
     .main-cart-btn {display: block;}
 }

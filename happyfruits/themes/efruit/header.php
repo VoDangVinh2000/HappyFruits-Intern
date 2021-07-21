@@ -107,10 +107,4 @@
                 <div class="rect5"></div>
             </div>
         </div>
-<<<<<<< HEAD
     </div>
-
-    
-=======
-    </div>
->>>>>>> 5dc86cccad1a07f9bd50521cc7ca6e0f8dfad28a
