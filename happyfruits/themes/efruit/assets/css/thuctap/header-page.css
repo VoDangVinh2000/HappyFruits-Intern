@@ -26,7 +26,7 @@ ul, ul li, ul li a {
 }
 .main-nav .navbar-brand {
     border-right: 1px solid rgba(0,0,0,.15);
-    padding: 2em 0;
+    /* padding: 2em 0; */
     padding-right: 1em;
 }
 .main-nav .navbar-nav .nav-link {
@@ -630,6 +630,7 @@ img.footer-img {
   background: #000;
   font-size: 13px;
   position: absolute;
+  top: -50px;
   left: 0;
   padding: 4px 8px;
   opacity: 0;
