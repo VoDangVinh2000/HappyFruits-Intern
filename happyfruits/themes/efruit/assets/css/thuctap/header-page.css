@@ -668,6 +668,7 @@ img.footer-img {
 .footer--company-info p{
   font-size: 1.5rem;
 }
+
 /* ============ desktop view ============ */
 @media all and (min-width: 992px) {
 	.navbar .has-megamenu{position:static!important;}
