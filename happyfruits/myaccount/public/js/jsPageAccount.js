@@ -1,39 +1,39 @@
 $(document).ready(function(){
     //login and register page
-    $('input[name=firstname]').css('border-bottom','2px solid black');
-    $('input[name=firstname]').click(function(){
+    $('input[name=email]').css('border-bottom','2px solid black');
+    $('input[name=username]').click(function(){
         $(this).css('border-bottom','2px solid black');
+        $('input[name=phone]').css('border-bottom','1px solid darkgray');
         $('input[name=confirm-password]').css('border-bottom','1px solid darkgray');
-        $('input[name=lastname]').css('border-bottom','1px solid darkgray');
-        $('input[name=email]').css('border-bottom','1px solid darkgray');
-        $('input[name=password]').css('border-bottom','1px solid darkgray');
-    });
-      $('input[name=lastname]').click(function(){
-        $(this).css('border-bottom','2px solid black');
-          $('input[name=confirm-password]').css('border-bottom','1px solid darkgray');
-        $('input[name=firstname]').css('border-bottom','1px solid darkgray');
         $('input[name=email]').css('border-bottom','1px solid darkgray');
         $('input[name=password]').css('border-bottom','1px solid darkgray');
     });
       $('input[name=email]').click(function(){
         $(this).css('border-bottom','2px solid black');
-          $('input[name=confirm-password]').css('border-bottom','1px solid darkgray');
-        $('input[name=firstname]').css('border-bottom','1px solid darkgray');
-        $('input[name=lastname]').css('border-bottom','1px solid darkgray');
+        $('input[name=phone]').css('border-bottom','1px solid darkgray');
+        $('input[name=confirm-password]').css('border-bottom','1px solid darkgray');
+        $('input[name=username]').css('border-bottom','1px solid darkgray');
         $('input[name=password]').css('border-bottom','1px solid darkgray');
     });
       $('input[name=password]').click(function(){
         $(this).css('border-bottom','2px solid black');
+        $('input[name=phone]').css('border-bottom','1px solid darkgray');
         $('input[name=confirm-password]').css('border-bottom','1px solid darkgray');
-        $('input[name=firstname]').css('border-bottom','1px solid darkgray');
-        $('input[name=lastname]').css('border-bottom','1px solid darkgray');
+        $('input[name=username]').css('border-bottom','1px solid darkgray');
         $('input[name=email]').css('border-bottom','1px solid darkgray');
     });
      $('input[name=confirm-password]').click(function(){
         $(this).css('border-bottom','2px solid black');
+        $('input[name=phone]').css('border-bottom','1px solid darkgray');
         $('input[name=password]').css('border-bottom','1px solid darkgray');
-        $('input[name=firstname]').css('border-bottom','1px solid darkgray');
-        $('input[name=lastname]').css('border-bottom','1px solid darkgray');
+        $('input[name=username]').css('border-bottom','1px solid darkgray');
+        $('input[name=email]').css('border-bottom','1px solid darkgray');
+    });
+    $('input[name=phone]').click(function(){
+        $(this).css('border-bottom','2px solid black');
+        $('input[name=confirm-password]').css('border-bottom','1px solid darkgray');
+        $('input[name=password]').css('border-bottom','1px solid darkgray');
+        $('input[name=username]').css('border-bottom','1px solid darkgray');
         $('input[name=email]').css('border-bottom','1px solid darkgray');
     });
 

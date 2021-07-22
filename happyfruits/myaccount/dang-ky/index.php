@@ -47,15 +47,15 @@
                                 <div class="main-create-account-fillout">
                                     <div class="error-fillout-createaccount">
                                     </div>
-                                    <input type="text" name="firstname"  autocapitalize="words" autofocus placeholder="First Name" required>
+                                    <input type="email" name="email"   autocapitalize="words" placeholder="Email" required>
                                     <label for=""></label>
-                                    <input type="text" name="lastname"  autocapitalize="words" placeholder="Last Name" required>
-                                    <label for=""></label>
-                                    <input type="email" name="email"  autocapitalize="words" placeholder="Email" required>
+                                    <input type="text" name="username"  autocapitalize="words"  placeholder="Username" required>
                                     <label for=""></label>
                                     <input type="password" name="password"  autocapitalize="words" placeholder="Password" required>
                                     <label for=""></label>
                                     <input type="password" name="confirm-password"  autocapitalize="words" placeholder="Confirm Password" required>
+                                    <label for=""></label>
+                                    <input type="number" name="phone" autocapitalize="words" placeholder="Số điện thoại" required>
                                 </div>
                                 <div class="input-submit-account">
                                     <input type="submit" value="Create">

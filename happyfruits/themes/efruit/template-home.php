@@ -1,5 +1,4 @@
- <?php //$this->load_theme_file('page-header.php') 
-    include 'page-header.php';
+ <?php $this->load_theme_file('page-header.php') 
  ?>
 
  <!-- slider -->

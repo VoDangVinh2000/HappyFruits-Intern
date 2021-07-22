@@ -56,12 +56,11 @@
     <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />   
     <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />   
     <!--end!-->
-
     <link href="<?= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
 
     <?php if (env('CHILD_THEME')) : ?>
-        <!-- <link href="<?= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" /> -->
+        <link href="<?= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" />
 
     <?php endif; ?>
     <!-- Custom styles for this template -->
@@ -113,4 +112,3 @@
             </div>
         </div>
     </div>
-    <header class="top-header">
