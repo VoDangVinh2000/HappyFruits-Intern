@@ -2,7 +2,7 @@
 $dbms = 'phpbb\\db\\driver\\mysqli';
 $dbhost = '';
 $dbport = '';
-$dbname = 'efruit_db';
+$dbname = 'happyfruit_db';
 $dbuser = 'efruit_db';
 $dbpasswd = 'FvVP7y4ZeRNS';
 $table_prefix = 'phpbb_';

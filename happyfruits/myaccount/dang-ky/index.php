@@ -47,15 +47,21 @@
                                 <div class="main-create-account-fillout">
                                     <div class="error-fillout-createaccount">
                                     </div>
-                                    <input type="text" name="firstname"  autocapitalize="words" autofocus placeholder="First Name" required>
+                                    <input type="email" name="email"   autocapitalize="words" placeholder="Email" required>
+
                                     <label for=""></label>
-                                    <input type="text" name="lastname"  autocapitalize="words" placeholder="Last Name" required>
+                                    <input type="number" name="phone" autocapitalize="words" placeholder="Phone number" required>
+
                                     <label for=""></label>
-                                    <input type="email" name="email"  autocapitalize="words" placeholder="Email" required>
+                                    <input type="text" name="username" pattern="[A-Z0-9a-z]{1,}" 
+                                    title="Không có ký tự đặc biệt, không dấu, không khoảng trắng"  autocapitalize="words"  placeholder="Username" required>
+
                                     <label for=""></label>
-                                    <input type="password" name="password"  autocapitalize="words" placeholder="Password" required>
+                                    <input type="password" name="password" pattern="[A-Z0-9a-z]{6,}" 
+                                    title="Không có ký tự đặc biệt, không dấu, không khoảng trắng, tối đa 6 ký tự"  autocapitalize="words" placeholder="Password" required>
+
                                     <label for=""></label>
-                                    <input type="password" name="confirm-password"  autocapitalize="words" placeholder="Confirm Password" required>
+                                    <input type="password" name="confirm-password" pattern="[A-Z0-9a-z]{6,}" title="Mật khẩu xác nhận trùng với mật khẩu"  autocapitalize="words" placeholder="Confirm Password" required>
                                 </div>
                                 <div class="input-submit-account">
                                     <input type="submit" value="Create">

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -53,11 +51,12 @@
                                 <!--Form action-login-->
                                 <form action="" method="post">
                                     <div class="main-create-account-fillout">
-                                        <input type="email" name="email"  autocapitalize="words"
-                                            placeholder="Email" required>
+                                        <input type="text" name="username"  autocapitalize="words"
+                                            placeholder="Username" required>
                                         <label for=""></label>
 
-                                        <input type="password" name="password"  autocapitalize="words"
+                                        <input type="password" pattern="[A-Z0-9a-z]{6,}" title="Không có ký tự đặc biệt, không dấu, không khoảng trắng, tối đa 6 ký tự"
+                                         name="password"  autocapitalize="words"
                                             placeholder="Password" required>
                                     </div>
                                     <div class="div-action-button">

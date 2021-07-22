@@ -561,8 +561,8 @@ a.dark {
     text-decoration: none;
 }
 a.dark:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 a.dark:active {
     color: #aaa;
@@ -595,8 +595,8 @@ a.inverse-light:active {
     text-decoration: none;
 }
 .pseudo-link:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .pseudo-link:active {
     color: #aaa;
@@ -606,8 +606,8 @@ a.inverse-light:active {
     text-decoration: none;
 }
 .pseudo-link.dark:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .pseudo-link.dark:active {
     color: #aaa;
@@ -1615,8 +1615,8 @@ iframe[src^="https://apis.google.com/u/0/_/widget/oauthflow/toast"] {
     width: 16px;
 }
 .yummly-message-close:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .yummly-message-close:active {
     color: #aaa;
@@ -1653,8 +1653,8 @@ iframe[src^="https://apis.google.com/u/0/_/widget/oauthflow/toast"] {
     z-index: 3;
 }
 .panel .search-m > button[type="submit"]:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .panel .search-m > button[type="submit"]:active {
     color: #383838;
@@ -2222,8 +2222,8 @@ iframe[src^="https://apis.google.com/u/0/_/widget/oauthflow/toast"] {
     z-index: 3;
 }
 .navigation .keywords .nochrome:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .navigation .keywords .nochrome:active {
     color: #383838;
@@ -2364,8 +2364,8 @@ iframe[src^="https://apis.google.com/u/0/_/widget/oauthflow/toast"] {
     top: 0;
 }
 .yummly-sheet .yummly-sheet-close.nochrome:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .yummly-sheet .yummly-sheet-close.nochrome:active {
     color: #aaa;
@@ -3232,8 +3232,8 @@ a.btn-nochrome:active, button.btn-nochrome:active, a.nochrome:active, button.noc
     text-decoration: none;
 }
 .y-card > div.y-meta .y-source > a:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .y-card > div.y-meta .y-source > a:active {
     color: #aaa;
@@ -3345,8 +3345,8 @@ a.btn-nochrome:active, button.btn-nochrome:active, a.nochrome:active, button.noc
     width: 130px;
 }
 .popup-card .y-source:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .popup-card .y-source:active {
     color: #aaa;
@@ -6519,8 +6519,8 @@ html #content {
     width: 48px;
 }
 .frontend .focus button:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .frontend .focus button:active {
     color: #383838;
@@ -9614,8 +9614,8 @@ html[class^="views-profile-collections-collection"] .dialog-content .dialog-dele
     text-decoration: none;
 }
 .views-recipe-recipe a.review-user-name:hover {
-    color: #58b720;
-    text-decoration: underline;
+    /* color: #58b720;
+    text-decoration: underline; */
 }
 .views-recipe-recipe a.review-user-name:active {
     color: #aaa;
