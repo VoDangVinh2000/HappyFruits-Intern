@@ -10,7 +10,7 @@
     }
     a:hover {
         color: #58b720;
-        text-decoration: underline;
+        /* text-decoration: underline; */
     }
     a:active {
         color: #aaa;

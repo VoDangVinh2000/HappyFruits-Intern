@@ -53,12 +53,10 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />   
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />   
-    <!--end!-->
-    <link href="<?= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" />
-    <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
 
+    <!--end!-->
+    <!-- <link href="<?= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" /> -->
+    <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
     <?php if (env('CHILD_THEME')) : ?>
         <link href="<?= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" />
 
@@ -67,6 +65,13 @@
     <?php if (!empty($css)) foreach ($css as $c) : ?>
         <link href="<?= (is_array($c) ? $c['href'] : $c) . '?v=' . VERSION ?>" rel="stylesheet" <?= isset($c['media']) && is_array($c) ? ('media="' . $c['media'] . '"') : '' ?> />
     <?php endforeach; ?>
+
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />   
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/simpleLightbox.min.css" rel="stylesheet" /> 
+
+      
+
     <script>
         var products = <?= !empty($products) ? json_encode($products) : '[]' ?>;
         var default_tag = <?= DEFAULT_TAG_ID ?>;

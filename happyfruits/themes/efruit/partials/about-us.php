@@ -19,7 +19,7 @@
         else
             $block_class = 'col-sm-6';
 ?>
-<div class="flat">
+<!-- <div class="flat">
     <div class="marketing">
         <div class="container">
             <h1 class="title efruit-vi"><?=$settings['about_us_heading']?></h1>
@@ -42,5 +42,16 @@
             <?php endforeach; ?>
         </div>
     </div>
-</div>
+</div> -->
+
+<!-- About -->
+<section class="about-section email-wrapper">
+    <div class="about-content">
+        <b>Happy Fruits</b> - thương hiệu cung cấp Trái cây tươi và quà tặng trái cây chuyên nghiệp
+        tại Việt Nam, phân phối trái cây Việt đặc sản an toàn từ khắp mọi vùng miền và trái cây
+        nhập khẩu cao cấp. Chúng tôi mong muốn mang lại sức khoẻ, hạnh phúc của khách hàng
+        qua những sản phẩm, dịch vụ tận tâm.
+    </div>
+</section>
+
 <?php endif; ?>
