@@ -208,93 +208,48 @@ h1,h2,h3,h4,h5,h6{
 .addAdress a:hover{
     background-color: #95a5a6;
 }
-.firstName-Address input{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid #bdc3c7;
-    width: 100%;
-    padding: 5px 0;
-}
-.lastName-Address input{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid #bdc3c7;
-    width: 100%;
-    padding: 5px 0;
-}
-.city-address input{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid #bdc3c7;
-    width: 100%;
-    padding: 5px 0;
-}
-.phone-address input{
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    border-bottom: 1px solid #bdc3c7;
-    width: 100%;
-    padding: 5px 0;
-}
-.add-address-submit{
+.submit-edit{
     padding: 15px 0 10px 0;
-
 }
-.add-address-submit input:hover{
-    background-color: #ecf0f1;
-    color: black;
-    border-radius: 8px;
-    border-bottom: none;
+.submit-edit input{
+    width: fit-content;
+    text-align: left;
+    border: none;
 }
-.add-address-submit input{
-    width: 100%;
-    background-color: white;
-    border-bottom: 1px solid #bdc3c7;
-    border-top: none;
-    border-right: none;
-    border-left: none;
-}
-.cancel-address{
+.cancel-profile{
     width: 100%;
     border-bottom: 1px solid #bdc3c7;
     padding: 15px 0 10px 0;
 }
-.cancel-address button{
+.cancel-profile button{
     width: fit-content;
     text-align: left;
     border: none;
     background-color: white;
 }
-.cancel-address button:hover{
+.cancel-profile button:hover{
     background-color: #ecf0f1;
     color: black;
     border-radius: 8px;
     border-bottom: none;
 }
-.address-details p{
+.profile-details p{
     font-family: Marcellus,Arial,Helvetica,sans-serif;
 }
-.address-details li a:hover{
+.profile-details li a:hover{
     transition: .2s linear;
     color: red;
 }
-.address-details li a{
+.profile-details li a{
     text-decoration: none;
     color:#333333; 
 }
-.address-details li{
+.profile-details li{
     padding: 3px;
     list-style: none;
     display: inline-block;
 }
-.form-add-address{
-    display: none;
-}
-.form-edit-address{
+.form-profile-edit{
     display: none;
 }
 /*css contact*/
