@@ -55,7 +55,7 @@
                                     <label for=""></label>
                                     <input type="password" name="confirm-password"  autocapitalize="words" placeholder="Confirm Password" required>
                                     <label for=""></label>
-                                    <input type="number" name="phone" autocapitalize="words" placeholder="Số điện thoại" required>
+                                    <input type="number" name="phone" autocapitalize="words" placeholder="Phone number" required>
                                 </div>
                                 <div class="input-submit-account">
                                     <input type="submit" value="Create">
