@@ -161,6 +161,11 @@ class BaseController
             $this->load_file($path, $return);
     }
 
+    
+
+
+
+
     function load_partial($file_path, $data = array(), $return = 0){
         if (!strstr($file_path, '.php'))
             $file_path .= '.php';
