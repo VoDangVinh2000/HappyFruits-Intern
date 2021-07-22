@@ -599,19 +599,6 @@ body {
   padding-top     : 5px;
 }
 
-<<<<<<< HEAD
-
-/* ============ desktop view ============ */
-@media all and (min-width: 992px) {
-	.navbar .has-megamenu{position:static!important;}
-	.navbar .megamenu{left:0; right:0; width:100%; margin-top:0;  }
-    
-    .navbar .nav-item .dropdown-menu{ display: none; }
-	.navbar .nav-item:hover .dropdown-menu{ display: block; }
-	.navbar .nav-item .dropdown-menu{ margin-top:-10px; }
-    .sub-cart {display: none;}
-    .main-cart-btn {display: block;}
-=======
 /* section */
 
 .section-1 {
@@ -912,7 +899,6 @@ img.footer-img {
   .navbar>.container-fluid .navbar-brand-centered {
     transform: translateX(-50%);
   }
->>>>>>> d43ee91deb9c081ef016de13a79b5aae83511809
 }
 
 /* ============ mobile view ============ */
