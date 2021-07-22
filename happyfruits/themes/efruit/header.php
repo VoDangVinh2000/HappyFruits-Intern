@@ -18,9 +18,8 @@
 
     <link rel="shortcut icon" href="<?= get_child_theme_assets_url() ?>img/favicon.ico" />
     <link rel="image_src" href="<?= get_child_theme_assets_url() ?>img/main_logo.png" />
-    <!--Thực tập!-->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <!--!-->
+
+   
     <?php
     $preload_issue_links = array(
         get_theme_assets_url() . 'fonts/UVNBaiSau_R.ttf',
@@ -31,9 +30,6 @@
     ?>
         <link rel="preload" href="<?= $preload_link ?>" as="font" crossorigin="anonymous">
     <?php endforeach; ?>
-    <!--Thực tập !-->
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
-    <!--end!-->
     <link href="<?= get_theme_assets_url() ?>css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/pixel.ef.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/hover.ef.css" rel="stylesheet" />
@@ -50,14 +46,23 @@
         minifyCSS($css_files, ASSET_UPDATED_DATE . '/main');
     }
     ?>
-    <link href="<?= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" />
-    <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
+    <!--Thực tập !-->
     <?php if (env('CHILD_THEME')) : ?>
-        <link href="<?= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" />
+        <link href="<?= get_child_theme_assets_url() ?>css/main.css" rel="stylesheet" />
+    <?php endif; ?>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />   
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />   
+    <!--end!-->
+
+    <!-- <link href="<?= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" /> -->
+    <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
+
+    <?php if (env('CHILD_THEME')) : ?>
+        <!-- <link href="<?= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" /> -->
+
     <?php endif; ?>
     <!-- Custom styles for this template -->
     <?php if (!empty($css)) foreach ($css as $c) : ?>
@@ -108,3 +113,4 @@
             </div>
         </div>
     </div>
+    <header class="top-header">
