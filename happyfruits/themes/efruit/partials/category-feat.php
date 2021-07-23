@@ -23,7 +23,7 @@
                         <div class="product-item">
                             <div class="product-photo">
                                 <a href="#" class="photo-link">
-                                    <img src="    <?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
+                                    <img src="<?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
                                         alt=""></a>
                                 <a class="btn-shop btn-cart" href="#">
                                     <div class="button-content-wrapper">
