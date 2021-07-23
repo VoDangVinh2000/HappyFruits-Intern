@@ -1,7 +1,4 @@
-   
-   
-   
-   <!-- HEADER -->
+ <!-- HEADER -->
     <header class="top-header">
         <!-- Nav 1 -->
         <nav class="navbar navbar-expand-lg navbar-dark sub-nav">

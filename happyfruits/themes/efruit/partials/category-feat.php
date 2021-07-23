@@ -22,7 +22,7 @@
                     <div class="col-md-6">
                         <div class="product-item">
                             <div class="product-photo">
-                                <a href="#" class="photo-link">
+                                <a href="" class="photo-link">
                                     <img src="<?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
                                         alt=""></a>
                                 <a class="btn-shop btn-cart" href="#">
@@ -49,8 +49,8 @@
                     <div class="col-md-6">
                         <div class="product-item">
                             <div class="product-photo">
-                                <a href="#" class="photo-link">
-                                    <img src="    <?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
+                                <a href="" class="photo-link">
+                                    <img src="<?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
                                         alt=""></a>
                                 <a class="btn-shop btn-cart" href="#">
                                     <div class="button-content-wrapper">
@@ -76,8 +76,8 @@
                     <div class="col-md-6">
                         <div class="product-item">
                             <div class="product-photo">
-                                <a href="#" class="photo-link">
-                                    <img src="    <?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
+                                <a href="" class="photo-link">
+                                    <img src="<?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
                                         alt=""></a>
                                 <a class="btn-shop btn-cart" href="#">
                                     <div class="button-content-wrapper">
@@ -103,8 +103,8 @@
                     <div class="col-md-6">
                         <div class="product-item">
                             <div class="product-photo">
-                                <a href="#" class="photo-link">
-                                    <img src="    <?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
+                                <a href="" class="photo-link">
+                                    <img src="<?= get_theme_assets_url() ?>img/z2042703109463c2033227b2ef306715a1908d02872621.jpg"
                                         alt=""></a>
                                 <a class="btn-shop btn-cart" href="#">
                                     <div class="button-content-wrapper">
@@ -392,6 +392,23 @@
 
     <!-- product category 4 -->
     <!-- Top content -->
+
+    <!-- demo get data category  -->
+    <?php //if(!empty($tiles)): ?>
+        <?php 
+            // $vv =0;
+            // foreach($tiles as $tile):
+            //     $vv++;
+            //     if($vv<4){
+            //         echo $vv;
+            //         continue;
+            //     }
+        ?>
+
+        <?php //endforeach; ?>
+    <?php //endif; ?>
+
+
     <div class="container my-5">
         <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3>
         <div class="row">
@@ -565,6 +582,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- product category 5 -->
     <!-- Top content -->
