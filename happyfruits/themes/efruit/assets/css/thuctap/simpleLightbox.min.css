@@ -1,4 +1,3 @@
-
 .slbOverlay,
 .slbWrapOuter,
 .slbWrap {
@@ -210,11 +209,6 @@
   box-shadow: 0 0.2em 1em rgba(0, 0, 0, 0.6);
   background: #000;
 }
-
-.logo-nav .navbar-brand img {
-  width: 170px;
-}
-
 @-webkit-keyframes slbOverlay {
   from {
     opacity: 0;
@@ -353,4 +347,3 @@
     transform: translate3d(0, 0, 0);
   }
 }
-
