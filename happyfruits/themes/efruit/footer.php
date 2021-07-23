@@ -124,5 +124,7 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
     <script src="<?=get_theme_assets_url()?>js/sitescripts.js"></script>
+    <script src="<?=get_theme_assets_url()?>js/simpleLightbox.min.js"></script>
+
 </body>
 </html>

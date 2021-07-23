@@ -53,8 +53,10 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+ 
     <!--end!-->
-    <!-- <link href="<?= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" /> -->
+
+    <!-- <link href="<?//= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" /> -->
     <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
     <?php if (env('CHILD_THEME')) : ?>
         <link href="<?= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" />
@@ -65,11 +67,13 @@
         <link href="<?= (is_array($c) ? $c['href'] : $c) . '?v=' . VERSION ?>" rel="stylesheet" <?= isset($c['media']) && is_array($c) ? ('media="' . $c['media'] . '"') : '' ?> />
     <?php endforeach; ?>
 
+      <!--Thực tập !-->
     <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />   
     <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/thuctap/simpleLightbox.min.css" rel="stylesheet" /> 
-
-      
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/stylePageAccount.css" rel="stylesheet" /> 
+    <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPageAccount.js"></script>
+    <!--end!-->
 
     <script>
         var products = <?= !empty($products) ? json_encode($products) : '[]' ?>;
@@ -101,6 +105,13 @@
         <script async src="//code.tidio.co/<?= env('TIDIO_ID', 'oad7aakcwalvnr5sricbibisxmoja5og') ?>.js"></script>
     <?php endif; ?>
     <script data-ad-client="ca-pub-4832470232865505" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <style>
+
+        .test {
+            border: none;
+            border-bottom: 1px solid black !important;
+        }
+    </style>
 </head>
 
 <body class="frontend views-<?= $template ?> <?= !empty($page_code) ? 'uri-' . $page_code : '' ?>" on-ready>
