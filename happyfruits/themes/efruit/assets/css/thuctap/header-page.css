@@ -5,6 +5,7 @@ body {
   font-family: 'Fira Sans Condensed', sans-serif;
 }
 
+
 /* Sub nav */
 .navbar-toggler {
   font-size: 1em;
@@ -305,7 +306,11 @@ body {
 }
 
 /* --------------------PRODUCCT------------- */
-
+.product-item .product-photo img{
+  background-image: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .product-item {
   margin-top: 2rem;
 }
@@ -813,7 +818,7 @@ svg.infobox_icon {
 
 @media (max-width: 767px) {
   .product-item .product-photo img{
-    height: 169px;
+   /* height: 169px;*/
   }
 
   .section_col {
@@ -842,7 +847,7 @@ svg.infobox_icon {
 /* medium and up screens */
 @media (min-width: 768px) {
   .product-photo img{
-    height: auto;
+   /* height: auto;*/
   }
 
   .carousel-category .carousel-inner .carousel-item-end.active,
