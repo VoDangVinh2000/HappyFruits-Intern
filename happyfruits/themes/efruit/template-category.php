@@ -27,12 +27,13 @@
                     <div class="clearfix"></div>
                 <?php endif;?>
                 <div id="menu-container" class="container-fluid" style="margin-top: 20px;">
-                    <div class="col-sm-9 nopadding">
-                        <?php $this->load_partial('product-listing') ?>
+                    <div class="col-sm-12 nopadding">
+                        <!-- <//?php $this->load_partial('product-listing') ?> -->
+                        <?php $this->load_partial('product-listing', array('heading' => '', 'showMore' => 1)) ?>
                     </div>
-                    <div class="col-sm-3 nopadding hidden-xs">
-                        <?php $this->load_partial('cart') ?>
-                    </div>
+                    <!-- <div class="col-sm-3 nopadding hidden-xs">
+                        <?//php $this->load_partial('cart') ?>
+                    </div> -->
                 </div>
             <?php else:?>
                 <?php if($obj['page_body']):?>
@@ -48,7 +49,8 @@
             <?php endif; ?>
             <div class="clearfix"></div>
             <?php $this->load_partial('about-us') ?>
-            <?php $this->load_partial('cooperators') ?>
+            <?php $this->load_partial('disscount') ?>
+            <!-- <//?php $this->load_partial('cooperators') ?> -->
         </div>
     </div>
 </div>
