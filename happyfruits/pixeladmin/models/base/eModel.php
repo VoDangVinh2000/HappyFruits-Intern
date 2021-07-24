@@ -133,7 +133,9 @@ class eModel
             return $items[0];
         return '';
     }
-    
+
+
+
     static function _do_select_sql($sql, $filters = array())
     {
         if (strpos($sql, 'SELECT')===0)

@@ -6,10 +6,10 @@
             <div class="inside-bread-section">
                 <div class="container-section">
                     <div class="title">
-                        <h1>Create Account</h1>
+                        <h1>Account</h1>
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><span>Create Account</span></li>
+                            <li><span>Account</span></li>
                         </ul>
                     </div>
                     <div class="section-img">
@@ -18,7 +18,7 @@
                 </div>
             </div>
         </div>
-        <?php $this->load_partial('dang-ky.php')  ?>
+        <?php $this->load_partial('profile.php')  ?>
 
-    <?php $this->load_theme_file('page-footer.php') 
- ?>
+ <?php $this->load_theme_file('page-footer.php') ?>
+

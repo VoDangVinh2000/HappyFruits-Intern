@@ -38,6 +38,7 @@ h1,h2,h3,h4,h5,h6{
     padding-right: 50px;
 }
 .inside-bread-section{
+    padding: 0 40px 0 40px;
     /* padding: 70px 0 70px 0; */
 }
 .bread-section{
@@ -46,6 +47,7 @@ h1,h2,h3,h4,h5,h6{
     /* background: url('../images/photo-background-v.jpg') no-repeat scroll center / cover;
     outline: none; */
     background-color: #f6f6f6 ;
+    background-image: none;
 }
 .container-section{
     display: flex;
@@ -152,11 +154,32 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /*css my-account*/
+.form-edit-profile{
+    padding-top: 20px;
+}
+.form-edit-profile h4{
+    font-size: 18px;
+}
 .my-account{
     padding: 70px 0;
 }
-.container-my-account h1{
+.my-account h1{
     font-weight: 600;
+    font-size: 35px;
+}
+.my-account h2{
+    font-size: 35px;
+}
+.my-account p{
+    font-size: 18px;
+}
+.my-account select{
+    font-size: 18px;
+}
+.my-account input{
+    border: none;
+    border-bottom: 1px solid darkgray;
+    width: 100%;
 }
 .logout{
     float: right;
@@ -172,18 +195,18 @@ h1,h2,h3,h4,h5,h6{
     font-weight: 300;
     font-style: normal;
 }
-.account-details p{
+.profile-details p{
     font-family: Marcellus,Arial,Helvetica,sans-serif;
 }
-.account-details p a{
+.profile-details p a{
     text-decoration: none;
     color: #333333;
 }
-.account-details p a:hover{
+.profile-details p a:hover{
     color: red;
 }
 
-/*css address page*/
+/*css profile page*/
 .return-to-account p a{
     font-family: 'Rajdhani', sans-serif;
     font-size: 18px;
@@ -194,19 +217,6 @@ h1,h2,h3,h4,h5,h6{
 }
 .return-to-account p a:hover{
     color: red;
-}
-.container-my-account .addAdress a{
-    float: right;
-    background-color: #000000;
-    text-decoration: none;
-    color: white;
-    cursor: pointer;
-    font-size: 14px;
-    padding: 8px 8px;
-    transition: .5s linear;
-}
-.addAdress a:hover{
-    background-color: #95a5a6;
 }
 .submit-edit{
     padding: 15px 0 10px 0;
@@ -249,9 +259,10 @@ h1,h2,h3,h4,h5,h6{
     list-style: none;
     display: inline-block;
 }
-.form-profile-edit{
+.form-edit-profile{
     display: none;
 }
+
 /*css contact*/
 .container-contact-us{
     padding-top: 15px;
@@ -270,6 +281,7 @@ h1,h2,h3,h4,h5,h6{
 /*css reponsive*/
 
 /*title*/
+
  @media only screen and (min-width:992px) and (max-width: 1199px){
     .title h1{
         font-size: 44px;

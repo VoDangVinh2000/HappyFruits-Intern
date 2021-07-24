@@ -26,7 +26,7 @@
             <div><img alt="sold-out" src="<?= get_theme_assets_url() ?>img/sold_out.png" class="sold_out efruit-vi" /><img alt="sold-out" class="sold_out efruit-en" src="<?= get_theme_assets_url() ?>img/sold_out_en.png" /></div>
         <?php endif; ?> -->
         <!-- <?php $this->load_partial('product-ribbon', array('item' => $item)); ?> -->
-
+        
 
 
         <!-- Trang -->

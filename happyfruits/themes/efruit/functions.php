@@ -35,9 +35,17 @@ function init_page(&$controller)
         }
     }
 
+    //get_full_details for home page
+    $traiCayDacSanViet = $controller->Products->get_all_product_by_categoryID(6);
+    $gioTraiCay = $controller->Products->get_all_product_by_categoryID(14);
+    $hopTraiCay = $controller->Products->get_all_product_by_categoryID(15);
+    $hoaTraiCay = $controller->Products->get_all_product_by_categoryID(8);
+
+    //$traiCayNhap = $controller->get_all_product_by_categoryID(6);
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
         "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
-        "tiles", "page_code", "cat_products", "products_in_tags"));
+        "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
+        "hoaTraiCay"));
 }
 
 function page(&$controller){}
