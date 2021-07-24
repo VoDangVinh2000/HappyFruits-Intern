@@ -45,4 +45,9 @@ carouselCate.forEach(cat => {
             next = next.nextElementSibling
         }
     })
+<<<<<<< HEAD
 });
+=======
+});
+
+>>>>>>> 56ddf93343c7825c250066f9b0cae50ade9c399b
