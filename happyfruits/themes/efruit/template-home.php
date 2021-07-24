@@ -266,9 +266,9 @@
 
              <?php $this->load_partial('category-feat') ?>
 
-             <div id="san-pham-dac-trung" class="container-fluid">
-                 <?php $this->load_partial('product-listing', array('heading' => 'Sản phẩm đặc trưng trong tuần', 'showMore' => 1)) ?>
-             </div>
+             <!-- <div id="san-pham-dac-trung" class="container-fluid">
+                 <//?php $this->load_partial('product-listing', array('heading' => 'Sản phẩm đặc trưng trong tuần', 'showMore' => 1)) ?>
+             </div> -->
              <?php $this->load_partial('category') ?>
              <?php //$this->load_partial('cooperators') ?>
 

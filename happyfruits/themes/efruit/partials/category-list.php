@@ -1,6 +1,6 @@
 <?php if(!empty($tiles)): ?>
 <div class="c-category-list o-color--catering">
-    <div class="c-cat-nav cs-can-blur">
+    <div class="c-cat-nav cs-can-blur" style="background-color:#72a499;z-index:0">
         <div class="o-wrapper">
             <ul class="c-nav-category sf-js-enabled" style="touch-action: pan-y;">
                 <?php foreach($tiles as $tile): $is_current_page = strstr($tile['href'], '/'.$page_code);?>
