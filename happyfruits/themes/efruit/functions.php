@@ -40,12 +40,14 @@ function init_page(&$controller)
     $gioTraiCay = $controller->Products->get_all_product_by_categoryID(14);
     $hopTraiCay = $controller->Products->get_all_product_by_categoryID(15);
     $hoaTraiCay = $controller->Products->get_all_product_by_categoryID(8);
+    $traiCayNhap = $controller->Products->get_all_product_by_categoryID(12);
+    $sanPhamKhac = $controller->Products->get_all_product_by_categoryID(7);
 
     //$traiCayNhap = $controller->get_all_product_by_categoryID(6);
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
         "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
         "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
-        "hoaTraiCay"));
+        "hoaTraiCay","traiCayNhap","sanPhamKhac"));
 }
 
 function page(&$controller){}

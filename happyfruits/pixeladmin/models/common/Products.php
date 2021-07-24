@@ -133,7 +133,7 @@ class Products extends BaseProducts
         return $this->select($filters);
     }
 
-    /*Intern* */
+    /*Intern */
     function get_all_product_by_categoryID($id)
     {
         // $query = "SELECT * FROM `products` pro, categories cat, prices pri WHERE pro.category_id = cat.category_id AND pro.product_id = pri.product_id
@@ -143,7 +143,7 @@ class Products extends BaseProducts
             'select' => 'products.*, categories.name as category_name, categories.name_without_utf8 as category_name_without_utf8, categories.english_name as category_english_name,
                         prices.price,prices.type_id',
             'join' => 'INNER JOIN categories ON categories.category_id = products.category_id
-                       INNER JOIN prices ON prices.product_id = products.product_id  ',
+                       INNER JOIN prices ON prices.product_id = products.product_id ',
             'products.category_id' => $id,
             'prices.type_id' => 1
         );
