@@ -1,7 +1,11 @@
+<?php if(empty($id) || empty($product)){echo  "<script>window.location.href='".frontend_url()."'</script>";} ?>
+
 <?php $this->load_theme_file('page-header.php')
 ?>
-<?php $oldPrice = $product['sell_price'] * 1000;
-$newPrice = $oldPrice - ($product['promotion_price'] * 1000);
+
+<?php
+    $oldPrice = $product['sell_price'] * 1000;
+    $newPrice = $oldPrice - ($product['promotion_price'] * 1000);
 ?>
 
 <div class="container mb-5">
