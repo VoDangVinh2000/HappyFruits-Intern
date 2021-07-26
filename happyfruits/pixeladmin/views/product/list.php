@@ -40,6 +40,7 @@
                                         </div>
                                     </td>
                                     <td class="center">
+                                    <a target="_blank" title="Xem" class="view_item btn btn-sm btn-info" href="http://www.localhost/vi/detail/<?=$item['product_id']?>"><i class="fa fa-newspaper-o"></i></a>
                                         <a target="_blank" href="<?=BASE_URL. $URIs['products']?>/<?=$item['product_id']?>" class="btn btn-sm btn-warning" title="Sửa thông tin"><i class="fa fa-edit"></i></a>
                                         <?php if (Users::can('delete', 'product')):?>
                                         <a href="#" class="delete_item btn btn-sm btn-danger" title="Xóa"><i class="fa fa-trash"></i></a>

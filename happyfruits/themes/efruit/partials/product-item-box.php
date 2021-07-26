@@ -35,7 +35,8 @@
                 <div class="col-md-12 col-sm-6 col-6">
                     <div class="product-item">
                         <div class="product-photo">
-                            <a href="javascript:void(0);" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="photo-link">
+                            <!-- <a href="#" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="photo-link"> -->
+                            <a href="http://localhost/vi/detail/<?php echo $item['product_id'] ?>" class="photo-link">
                                 <img alt="<?= $item['code'] ?>" src="<?= $item['image'] ? get_image_url($item['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>"></a>
                             <?php if (!empty($item['enabled']) && empty($item['not_deliver'])) : ?>
                                 <a class="btn-shop btn-cart" href="#">

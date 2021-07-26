@@ -16,6 +16,7 @@ RewriteRule .* - [F]
 RewriteCond %{HTTP_HOST} !^www\.
 RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
 
+
 RewriteRule ^sua-menu/?$ /?p=efruit2014
 
 RewriteRule ^ban-hang/?$ /order/selling_w80.php
@@ -52,6 +53,7 @@ RewriteRule ^vi/?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&pag
 RewriteRule ^vi/(.*)/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=$1&param2=$2&param3=$3
 RewriteRule ^vi/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=$1&param2=$2
 RewriteRule ^vi/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=$1
+
 
 RewriteRule ^en/?$ /pixeladmin/index.php?controller=page&action=view&lang=en&page_code=trang-chu
 RewriteRule ^en/(.*)/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=en&page_code=$1&param2=$2&param3=$3

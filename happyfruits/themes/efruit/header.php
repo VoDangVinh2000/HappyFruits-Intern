@@ -72,6 +72,7 @@
     <link href="<?= get_theme_assets_url() ?>css/thuctap/simpleLightbox.min.css" rel="stylesheet" /> 
     <link href="<?= get_theme_assets_url() ?>css/thuctap/stylePageAccount.css" rel="stylesheet" /> 
     <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPageAccount.js"></script>
+    <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
     <!--end!-->
 
     <script>

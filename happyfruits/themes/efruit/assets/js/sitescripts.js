@@ -26,28 +26,3 @@ cartClose.addEventListener ('click', function () {
 })
 
 new SimpleLightbox({elements: '.product-gallery a'});
-
-
-const carouselCate = document.querySelectorAll('.carousel.carousel-category');
-
-carouselCate.forEach(cat => {
-    const items = cat.querySelectorAll('.carousel-item');
-    items.forEach((el) => {
-        const minPerSlide = 4
-        let next = el.nextElementSibling
-        for (var i=1; i<minPerSlide; i++) {
-            if (!next) {
-                // wrap carousel by using first child
-                next = items[0]
-            }
-            let cloneChild = next.cloneNode(true)
-            el.appendChild(cloneChild.children[0])
-            next = next.nextElementSibling
-        }
-    })
-<<<<<<< HEAD
-});
-=======
-});
-
->>>>>>> 56ddf93343c7825c250066f9b0cae50ade9c399b

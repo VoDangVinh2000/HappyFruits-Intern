@@ -39,7 +39,7 @@
                             <div class="col-md-6">
                                 <div class="product-item">
                                     <div class="product-photo">
-                                        <a href="" class="photo-link">
+                                        <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
                                             <img src="<?php echo $array['image'] ?>" alt="">
                                         </a>
                                         <a class="btn-shop btn-cart" href="">
@@ -87,7 +87,7 @@
                             <div class="col-md-6">
                                 <div class="product-item">
                                     <div class="product-photo">
-                                        <a href="#" class="photo-link">
+                                    <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
                                             <img src="<?php echo $array['image'] ?>" alt=""></a>
                                         <a class="btn-shop btn-cart" href="#">
                                             <div class="button-content-wrapper">
@@ -177,7 +177,7 @@
                     <div class="col-md-3 col-sm-3">
                         <div class="product-item">
                             <div class="product-photo">
-                                <a href="#" class="photo-link">
+                            <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
                                     <img src="<?= $array['image'] ?>" alt=""></a>
                                 <a class="btn-shop btn-cart" href="#">
                                     <div class="button-content-wrapper">
@@ -218,7 +218,7 @@
                         <div class="col-md-3 px-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="" class="photo-link">
+                                <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
                                         <img src="<?= $traiCayDacSanViet[0]['image'] ?>" alt=""></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -257,7 +257,7 @@
                             <div class="col-md-3 px-2">
                                 <div class="product-item">
                                     <div class="product-photo">
-                                        <a href="#" class="photo-link">
+                                    <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
                                             <img src="<?= $array['image'] ?>" alt=""></a>
                                         <a class="btn-shop btn-cart" href="#">
                                             <div class="button-content-wrapper">
@@ -305,7 +305,7 @@
                         <div class="col-md-3 px-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="" class="photo-link">
+                                <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
                                         <img src="<?= $traiCayNhap[0]['image'] ?>" alt=""></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -344,7 +344,7 @@
                             <div class="col-md-3 px-2">
                                 <div class="product-item">
                                     <div class="product-photo">
-                                        <a href="" class="photo-link">
+                                    <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
                                             <img src="<?= $product['image'] ?>" alt=""></a>
                                         <a class="btn-shop btn-cart" href="#">
                                             <div class="button-content-wrapper">
