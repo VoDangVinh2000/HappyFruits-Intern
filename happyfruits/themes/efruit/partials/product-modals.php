@@ -108,7 +108,7 @@
                             <span bind-translate="Hôm nay chúng tôi có">Hôm nay chúng tôi có</span>
                             <span class="badge badge-success" style="margin-left: 5px;margin-bottom: 5px;background: none;color: #383838;padding: 5px 10px 3px;text-sh" ng-repeat="component in selectedItem.components">{{component.name}}</span>
                         </p>
-                        <div ng-show="selectedItem.enabled" class="table-responsive" style="max-height: 400px; overflow: auto;">
+                        <div ng-show="selectedItem.enabled" class="table-responsive" style="max-height:400px; overflow: auto;">
                             <table class="table table-striped">
                                 <thead>
                                 <tr>

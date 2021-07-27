@@ -145,7 +145,9 @@ class Products extends BaseProducts
             'join' => 'INNER JOIN categories ON categories.category_id = products.category_id
                        INNER JOIN prices ON prices.product_id = products.product_id ',
             'products.category_id' => $id,
-            'prices.type_id' => 1
+            'prices.type_id' => 1,
+            'products.enabled' => 1,
+            'products.is_hidden' => 0
         );
         return $this->select($filters);
     }

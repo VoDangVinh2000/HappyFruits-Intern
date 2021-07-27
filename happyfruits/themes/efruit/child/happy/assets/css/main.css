@@ -264,7 +264,7 @@ color: #474747;
 }
 
 .product-item .product-photo img {
-  width: 100%;
+  max-width: 100%;
   transition: all ease 0.35s;
 }
 

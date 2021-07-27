@@ -2,6 +2,8 @@
 //Biến tiles này được nhận tại trang function.php, được truyền qua dòng code $con
 //ntroller->_merge_data("tiles")
 
+//Khi các sản phẩm không có ảnh thì sử dụng ảnh này
+
 ?>
 
 <!-- product category 1-->
@@ -35,38 +37,66 @@
                     foreach ($gioTraiCay as $array) {
                         $dem++;
                         if ($dem <= 4) {
+                            //If này kiểm tra nếu ảnh của sản phẩm không có hoặc null thì lấy ảnh default
+                            //Biến imageDefault được merge từ trang functions.php
+                            if ($array['image'] == "") {
                 ?>
-                            <div class="col-md-6">
-                                <div class="product-item">
-                                    <div class="product-photo">
-                                        <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
-                                            <img src="<?php echo $array['image'] ?>" alt="">
-                                        </a>
-                                        <a class="btn-shop btn-cart" href="">
-                                            <div class="button-content-wrapper">
-                                                <span class="button-text">THÊM GIỎ HÀNG</span>
-                                            </div>
-                                        </a>
-                                        <!-- <span class="onsale">
-                                            SALE!
-                                        </span> -->
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $array['name']
-                                                                                                        ?></a>
+                                <div class="col-md-6">
+                                    <div class="product-item">
+                                        <div class="product-photo">
+                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                                <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>">
+                                            </a>
+                                            <a class="btn-shop btn-cart" href="">
+                                                <div class="button-content-wrapper">
+                                                    <span class="button-text">THÊM GIỎ HÀNG</span>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <div class="col-md-12 col-lg-4 col-4">
-                                            <div class="product-price">
-                                                <span class="price"><?= number_format($array['price'] * 1000) . ' đ' ?></span>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name']
+                                                                                                                            ?></a>
+                                            </div>
+                                            <div class="col-md-12 col-lg-4 col-4">
+                                                <div class="product-price">
+                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php } else { ?>
+                                <div class="col-md-6">
+                                    <div class="product-item">
+                                        <div class="product-photo">
+                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                                <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
+                                            </a>
+                                            <a class="btn-shop btn-cart" href="">
+                                                <div class="button-content-wrapper">
+                                                    <span class="button-text">THÊM GIỎ HÀNG</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name']
+                                                                                                                            ?></a>
+                                            </div>
+                                            <div class="col-md-12 col-lg-4 col-4">
+                                                <div class="product-price">
+                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                 <?php }
+                        }
                     }
-                }
-                ?>
+                } ?>
+
             </div>
         </div>
     </div>
@@ -83,33 +113,57 @@
                     foreach ($hopTraiCay as $array) {
                         $dem2++;
                         if ($dem2 <= 4) {
+                            if ($array['image'] == "") {
                 ?>
-                            <div class="col-md-6">
-                                <div class="product-item">
-                                    <div class="product-photo">
-                                    <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
-                                            <img src="<?php echo $array['image'] ?>" alt=""></a>
-                                        <a class="btn-shop btn-cart" href="#">
-                                            <div class="button-content-wrapper">
-                                                <span class="button-text">THÊM GIỎ HÀNG</span>
-                                            </div>
-                                        </a>
-                                        <!-- <span class="onsale">
-                                    SALE!
-                                </span> -->
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $array['name'] ?></a>
+                                <div class="col-md-6">
+                                    <div class="product-item">
+                                        <div class="product-photo">
+                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                                <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                            <a class="btn-shop btn-cart" href="#">
+                                                <div class="button-content-wrapper">
+                                                    <span class="button-text" bind-translate="Thêm giỏ hàng">Thêm giỏ hàng</span>
+                                                </div>
+                                            </a>
                                         </div>
-                                        <div class="col-md-12 col-lg-4 col-4">
-                                            <div class="product-price">
-                                                <span class="price"><?= number_format($array['price'] * 1000) . ' đ' ?></span>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                            </div>
+                                            <div class="col-md-12 col-lg-4 col-4">
+                                                <div class="product-price">
+                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            <?php } else { ?>
+                                <div class="col-md-6">
+                                    <div class="product-item">
+                                        <div class="product-photo">
+                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                                <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                            <a class="btn-shop btn-cart" href="#">
+                                                <div class="button-content-wrapper">
+                                                    <span class="button-text" bind-translate="Thêm giỏ hàng">Thêm giỏ hàng</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                            </div>
+                                            <div class="col-md-12 col-lg-4 col-4">
+                                                <div class="product-price">
+                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                 <?php }
+                        }
                     }
                 } ?>
             </div>
@@ -173,32 +227,57 @@
             foreach ($hoaTraiCay as $array) {
                 $dem3++;
                 if ($dem3 <= 4) {
+                    if ($array['image'] == "") {
         ?>
-                    <div class="col-md-3 col-sm-3">
-                        <div class="product-item">
-                            <div class="product-photo">
-                            <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
-                                    <img src="<?= $array['image'] ?>" alt=""></a>
-                                <a class="btn-shop btn-cart" href="#">
-                                    <div class="button-content-wrapper">
-                                        <span class="button-text">THÊM GIỎ HÀNG</span>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="product-item">
+                                <div class="product-photo">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                    <a class="btn-shop btn-cart" href="#">
+                                        <div class="button-content-wrapper">
+                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
                                     </div>
-                                </a>
-                                <!-- <span class="onsale">
-                            SALE!
-                        </span> -->
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $array['name'] ?></a></div>
-                                <div class="col-md-12 col-lg-4 col-4">
-                                    <div class="product-price">
-                                        <span class="price"><?= number_format($array['price'] * 1000) . ' đ' ?></span>
+                                    <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="product-price">
+                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    <?php } else { ?>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="product-item">
+                                <div class="product-photo">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                        <img src="<?= $array['image'] ?>" alt=""></a>
+                                    <a class="btn-shop btn-cart" href="#">
+                                        <div class="button-content-wrapper">
+                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    </div>
+                                    <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="product-price">
+                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
         <?php }
+                }
             }
         } ?>
     </div>
@@ -209,17 +288,20 @@
 <!-- Top content -->
 <div class="container my-5">
     <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3>
-    <div class="row">
-        <div id="carousel-category-4" class="carousel slide carousel-category" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <?php if (!empty($traiCayDacSanViet)) {
-                ?>
-                    <div class="carousel-item active">
-                        <div class="col-md-3 px-2">
+    <div class="container-fluid">
+        <div class="owl-carousel owl-theme">
+            <?php
+            //$dem4 = 0;
+            if (!empty($traiCayDacSanViet)) {
+                foreach ($traiCayDacSanViet as $array) {
+                    //$dem4++;
+                    if ($array['image'] == "") {
+            ?>
+                        <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
-                                        <img src="<?= $traiCayDacSanViet[0]['image'] ?>" alt=""></a>
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text">THÊM GIỎ HÀNG</span>
@@ -227,86 +309,68 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $traiCayDacSanViet[0]['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($traiCayDacSanViet[0]['price'] * 1000) . '<sup>đ<sup>'; ?></span>
+                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                                             <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>
-
-                <?php if (!empty($traiCayDacSanViet)) {
-                    $count = 0;
-                    $count2 = 0;
-                    foreach ($traiCayDacSanViet as $array) {
-                        $count2++;
-                        if ($count2 > 6)  //giới hạn 5 sản phẩm
-                            break;
-                        $count++;
-                        if ($count < 2)
-                            continue;
-
-                ?>
-                        <div class="carousel-item">
-                            <div class="col-md-3 px-2">
-                                <div class="product-item">
-                                    <div class="product-photo">
-                                    <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
-                                            <img src="<?= $array['image'] ?>" alt=""></a>
-                                        <a class="btn-shop btn-cart" href="#">
-                                            <div class="button-content-wrapper">
-                                                <span class="button-text">THÊM GIỎ HÀNG</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $array['name'] ?></a>
+                    <?php } else { ?>
+                        <div class="ms-2 me-2">
+                            <div class="product-item">
+                                <div class="product-photo">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                        <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                    <a class="btn-shop btn-cart" href="#">
+                                        <div class="button-content-wrapper">
+                                            <span class="button-text">THÊM GIỎ HÀNG</span>
                                         </div>
-                                        <div class="col-md-12 col-lg-4 col-4">
-                                            <div class="product-price">
-                                                <span class="price"><?= number_format($array['price'] * 1000) . ' đ'; ?></span>
-                                            </div>
+                                    </a>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    </div>
+                                    <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="product-price">
+                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
+                                            <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                <?php }
-                } ?>
-            </div>
-            <a class="carousel-control-prev bg-transparent w-aut" href="#carousel-category-4" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next bg-transparent w-aut" href="#carousel-category-4" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
+            <?php }
+                }
+            }  ?>
         </div>
     </div>
 </div>
+
 
 <!-- product category 5 -->
 <!-- Top content -->
 
 <div class="container my-5">
     <h3 class="section-heading "><span>Trái cây nhập</span></h3>
-    <div class="row">
-        <div id="carousel-category-5" class="carousel slide carousel-category" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <?php
-                if (!empty($traiCayNhap)) {
-                ?>
-                    <div class="carousel-item active">
-                        <div class="col-md-3 px-2">
+    <div class="container-fluid">
+        <div class="owl-carousel owl-theme">
+            <?php
+            //$dem5 = 0;
+            if (!empty($traiCayNhap)) {
+                foreach ($traiCayNhap as $array) {
+                    //$dem5++;
+                    if ($array['image'] == "") {
+            ?>
+                        <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
-                                        <img src="<?= $traiCayNhap[0]['image'] ?>" alt=""></a>
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text">THÊM GIỎ HÀNG</span>
@@ -314,67 +378,44 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $traiCayNhap[0]['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($traiCayNhap[0]['price'] * 1000) . ' đ'; ?></span>
+                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                                             <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>
-                <?php
-                if (!empty($traiCayNhap)) {
-                    $count = 0;
-                    $count2 = 0;
-                    foreach ($traiCayNhap as $product) {
-
-                        $count2++;
-                        if ($count2 > 6)  //giới hạn 5 sản phẩm
-                            break;
-                        $count++;
-                        if ($count < 2)
-                            continue;
-                ?>
-                        <div class="carousel-item">
-                            <div class="col-md-3 px-2">
-                                <div class="product-item">
-                                    <div class="product-photo">
-                                    <a href="http://localhost/vi/detail/<?php echo $array['product_id'] ?>" class="photo-link">
-                                            <img src="<?= $product['image'] ?>" alt=""></a>
-                                        <a class="btn-shop btn-cart" href="#">
-                                            <div class="button-content-wrapper">
-                                                <span class="button-text">THÊM GIỎ HÀNG</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $product['name'] ?></a>
+                    <?php } else { ?>
+                        <div class="ms-2 me-2">
+                            <div class="product-item">
+                                <div class="product-photo">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                        <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                    <a class="btn-shop btn-cart" href="#">
+                                        <div class="button-content-wrapper">
+                                            <span class="button-text">THÊM GIỎ HÀNG</span>
                                         </div>
-                                        <div class="col-md-12 col-lg-4 col-4">
-                                            <div class="product-price">
-                                                <span class="price"><?= number_format($product['price'] * 1000) . ' đ' ?></span>
-                                                <!-- <span class="delete-price">2.050.000₫</span> -->
-                                            </div>
+                                    </a>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    </div>
+                                    <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="product-price">
+                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
+                                            <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                <?php }
-                } ?>
-
-            </div>
-            <a class="carousel-control-prev bg-transparent w-aut" href="#carousel-category-5" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next bg-transparent w-aut" href="#carousel-category-5" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
+            <?php }
+                }
+            }  ?>
         </div>
     </div>
 </div>
@@ -384,18 +425,21 @@
 <!-- Top content -->
 <div class="container my-5">
     <h3 class="section-heading "><span>Sản phẩm khác</span></h3>
-    <div class="row">
-        <div id="carousel-category-6" class="carousel slide carousel-category" data-bs-ride="carousel">
-            <div class="carousel-inner" role="listbox">
-                <?php
-                if (!empty($sanPhamKhac)) {
-                ?>
-                    <div class="carousel-item active">
-                        <div class="col-md-3 px-2">
+    <div class="container-fluid">
+        <div class="owl-carousel owl-theme">
+            <?php
+            //$dem5 = 0;
+            if (!empty($sanPhamKhac)) {
+                foreach ($sanPhamKhac as $array) {
+                    //$dem4++;
+                    if ($array['image'] == null) {
+
+            ?>
+                        <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="#" class="photo-link">
-                                        <img src="<?= $traiCayNhap[0]['image'] ?>" alt=""></a>
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text">THÊM GIỎ HÀNG</span>
@@ -403,66 +447,46 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $traiCayNhap[0]['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($traiCayNhap[0]['price'] * 1000) . ' đ'; ?></span>
+                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                                             <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                <?php } ?>
-                <?php
-                if (!empty($sanPhamKhac)) {
-                    $count = 0;
-                    $count2 = 0;
-                    foreach ($sanPhamKhac as $product) {
-                        $count2++;
-                        if ($count2 > 6)  //giới hạn 5 sản phẩm
-                            break;
-                        $count++;
-                        if ($count < 2)
-                            continue;
-                ?>
-                        <div class="carousel-item">
-                            <div class="col-md-3 px-2">
-                                <div class="product-item">
-                                    <div class="product-photo">
-                                        <a href="#" class="photo-link">
-                                            <img src="<?= $product['image'] ?>" alt=""></a>
-                                        <a class="btn-shop btn-cart" href="#">
-                                            <div class="button-content-wrapper">
-                                                <span class="button-text">THÊM GIỎ HÀNG</span>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12 col-lg-8 col-8 product-name"><a href="#"><?= $product['name'] ?></a>
+                    <?php } else { ?>
+                        <div class="ms-2 me-2">
+                            <div class="product-item">
+                                <div class="product-photo">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                        <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                    <a class="btn-shop btn-cart" href="#">
+                                        <div class="button-content-wrapper">
+                                            <span class="button-text">THÊM GIỎ HÀNG</span>
                                         </div>
-                                        <div class="col-md-12 col-lg-4 col-4">
-                                            <div class="product-price">
-                                                <span class="price"><?= number_format($product['price'] * 1000) . ' đ' ?></span>
-                                                <!-- <span class="delete-price">2.050.000₫</span> -->
-                                            </div>
+                                    </a>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    </div>
+                                    <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="product-price">
+                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
+                                            <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                <?php }
-                } ?>
-
-            </div>
-            <a class="carousel-control-prev bg-transparent w-aut" href="#carousel-category-6" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </a>
-            <a class="carousel-control-next bg-transparent w-aut" href="#carousel-category-6" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </a>
+            <?php
+                    }
+                }
+            }
+            ?>
         </div>
     </div>
 </div>

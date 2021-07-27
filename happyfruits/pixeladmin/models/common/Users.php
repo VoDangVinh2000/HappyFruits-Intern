@@ -10,7 +10,6 @@ define('BANHANG1_USER_ID', 154);
 define('BANHANG2_USER_ID', 158);
 define('CHITHANH_USER_ID', 80);
 define('NGUYENKHANH_USER_ID', 168);
-
 /**
  * Class declaration
  */

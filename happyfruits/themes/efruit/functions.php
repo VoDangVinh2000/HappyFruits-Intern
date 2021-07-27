@@ -43,6 +43,8 @@ function init_page(&$controller)
     $traiCayNhap = $controller->Products->get_all_product_by_categoryID(12);
     $sanPhamKhac = $controller->Products->get_all_product_by_categoryID(7);
 
+    //image null
+    $imageDefault = get_child_theme_assets_url() . "img/default-product-image.png";
     //get id product
     $id = get('param2');
 
@@ -53,7 +55,7 @@ function init_page(&$controller)
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
         "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
         "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
-        "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product"));
+        "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault"));
 
 }
 
