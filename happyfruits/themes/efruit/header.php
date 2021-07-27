@@ -30,7 +30,7 @@
     ?>
         <link rel="preload" href="<?= $preload_link ?>" as="font" crossorigin="anonymous">
     <?php endforeach; ?>
-    <link href="<?= get_theme_assets_url() ?>css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="<?= get_theme_assets_url() ?>css/pixel.ef.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/hover.ef.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />
@@ -46,16 +46,16 @@
         minifyCSS($css_files, ASSET_UPDATED_DATE . '/main');
     }
     ?>
-    <!--Thực tập !-->
     <?php if (env('CHILD_THEME')) : ?>
         <link href="<?= get_child_theme_assets_url() ?>css/main.css" rel="stylesheet" />
     <?php endif; ?>
+    <!--Thực tập !-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
- 
-    <!--end!-->
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!--end!-->
     <!-- <link href="<?//= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" /> -->
     <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
     <?php if (env('CHILD_THEME')) : ?>
@@ -71,8 +71,13 @@
     <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />   
     <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/thuctap/simpleLightbox.min.css" rel="stylesheet" /> 
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/stylePageAccount.css" rel="stylesheet" /> 
-    <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPageAccount.js"></script>
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/stylePageAccount.css" rel="stylesheet" />
+    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.carousel.min.css"> 
+    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.theme.default.css"> 
+    <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
+    <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
+    <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>
+    <script src="<?= get_theme_assets_url() ?>js/sitescript.js"></script>
     <!--end!-->
 
     <script>
@@ -105,13 +110,7 @@
         <script async src="//code.tidio.co/<?= env('TIDIO_ID', 'oad7aakcwalvnr5sricbibisxmoja5og') ?>.js"></script>
     <?php endif; ?>
     <script data-ad-client="ca-pub-4832470232865505" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <style>
 
-        .test {
-            border: none;
-            border-bottom: 1px solid black !important;
-        }
-    </style>
 </head>
 
 <body class="frontend views-<?= $template ?> <?= !empty($page_code) ? 'uri-' . $page_code : '' ?>" on-ready>

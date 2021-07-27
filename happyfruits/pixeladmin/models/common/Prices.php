@@ -48,5 +48,6 @@ class Prices extends BasePrices
         $filters['deleted'] = 0;
         return self::_select('price_types', $filters, 'type_id');
     }
+    
 }
 /* End of generated class */

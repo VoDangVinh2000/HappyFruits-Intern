@@ -1,4 +1,5 @@
-<?php $this->load_theme_file('page-header.php') ?>
+<?php $this->load_theme_file('page-header.php') 
+ ?>
     <div class="main">
         <!--Banner -->
         <div class="bread-section">
@@ -17,6 +18,7 @@
                 </div>
             </div>
         </div>
-        <?php $this->load_partial('dang-nhap.php')  ?>
+        <?php $this->load_partial('profile.php')  ?>
 
-    <?php $this->load_theme_file('page-footer.php') ?>
+ <?php $this->load_theme_file('page-footer.php') ?>
+

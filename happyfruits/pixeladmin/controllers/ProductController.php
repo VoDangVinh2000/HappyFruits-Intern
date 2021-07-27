@@ -25,7 +25,7 @@ class ProductController extends BaseController
         $this->_merge_data(compact("js", "page_title", "products", "all_categories"));
         $this->load_page('product/index');
     }
-    
+
     function edit()
     {
         $this->plugins = 'icheck, validator, imageselector, jquery-ui, minicolors';
@@ -53,7 +53,7 @@ class ProductController extends BaseController
                 $box_items = $this->Products->get_products_for_delivery(array('products.is_additional'=>"0", 'products.can_be_added_to_box' => 1));
             }
         }
-        $this->_merge_data(compact("js", "page_title", "obj", "all_categories", "id", "options", "images", "inventory_items", "components", "products_in_box", "box_items"));
+        $this->_merge_data(compact("js", "page_title", "obj", "all_categories", "id", "options", "images", "inventory_items", "components"));
         $this->load_page('product/product');
     }
     

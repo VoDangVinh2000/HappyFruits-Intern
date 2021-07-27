@@ -4,7 +4,7 @@
         <!--Banner -->
         <div class="bread-section">
             <div class="inside-bread-section">
-                <div class="container container-section">
+                <div class="container-section">
                     <div class="title">
                         <h1>Create Account</h1>
                         <ul>

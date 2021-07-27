@@ -1,6 +1,6 @@
  <?php $this->load_theme_file('page-header.php') 
  ?>
-
+ <?//php// var_dump($test_result); ?>
  <!-- slider -->
  <div id="carouselHappyFruits" class="carousel slide" data-bs-ride="carousel">
      <div class="carousel-indicators">
@@ -15,11 +15,10 @@
                  <!-- <img src="./public/images/slide1.jpg" class="d-block w-100" alt="..."> -->
                  <img src="<?= get_theme_assets_url() ?>img/slide1.jpg" class="d-block w-100" alt="...">
              </div>
-
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                 <a class="sub-caption" href="">GIỎ TRÁI CÂY</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="#">
+                 <a class="btn-shop"  href="fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -30,11 +29,10 @@
              <div class="carousel-img">
                  <img src="<?= get_theme_assets_url() ?>img/slide2.jpg" class="d-block w-100" alt="...">
              </div>
-
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                 <a class="sub-caption" href="fruit-baskets">GIỎ TRÁI CÂY</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="#">
+                 <a class="btn-shop" href="fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -45,11 +43,10 @@
              <div class="carousel-img">
                  <img src="<?= get_theme_assets_url() ?>img/slide3.jpg" class="d-block w-100" alt="...">
              </div>
-
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                 <a class="sub-caption" href="fruit-basket">GIỎ TRÁI CÂY</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="#">
+                 <a class="btn-shop" href="fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -64,7 +61,7 @@
              <div class="carousel-caption d-none d-md-block">
                  <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="#">
+                 <a class="btn-shop" href="fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -80,22 +77,15 @@
          <span class="carousel-control-next-icon" aria-hidden="true"></span>
          <span class="visually-hidden">Next</span>
      </button>
-
  </div>
-
  <!-- section -->
  <section class="section_col">
      <div class="section_wrap-col">
-
          <!-- 1 -->
          <div class="section_col-item">
-
              <div class="infobox">
-
                  <a href="#" class="infobox_link"></a>
-
                  <div class="infobox_wrapper">
-
                      <div class="icon_wrapper">
                          <svg viewBox="0 0 314 314" class="infobox_icon">
                              <path d="m157 314c86.570312 0 157-70.429688 157-157s-70.429688-157-157-157-157 70.429688-157 157 70.429688 157 157 157zm0-300c78.851562 0 143 64.148438 143 143s-64.148438 143-143 143-143-64.148438-143-143 64.148438-143 143-143zm0 0" />
@@ -104,28 +94,20 @@
                              <path d="m103.699219 238.726562c3.238281 2.113282 7.578125 1.199219 9.6875-2.039062l98.953125-151.726562c1.371094-2.097657 1.519531-4.765626.390625-7-1.132813-2.234376-3.371094-3.695313-5.871094-3.828126-2.5-.132812-4.882813 1.078126-6.246094 3.179688l-98.953125 151.726562c-2.113281 3.242188-1.199218 7.578126 2.039063 9.6875zm0 0" />
                          </svg>
                      </div>
-
                      <div class="content_wrapper">
                          <div class="infobox-title">
                              <h3>Discounts</h3>
                          </div>
                          <div class="infobox-content">Best sale (Free deals) deals everyweek</div>
                      </div>
-
                  </div>
-
              </div>
          </div>
-
          <!-- 3 -->
          <div class="section_col-item">
-
              <div class="infobox">
-
                  <a href="#" class="infobox_link"></a>
-
                  <div class="infobox_wrapper">
-
                      <div class="icon_wrapper">
                          <svg class="infobox_icon" viewBox="0 0 373.232 373.232">
                              <path d="M187.466,0c-0.1,0.1-0.3,0.1-0.6,0.1c-101.2,0-183.5,82.3-183.5,183.5c0,41.3,14.1,81.4,39.9,113.7l-26.7,62
@@ -136,30 +118,21 @@
                              <path d="M178.666,146.7h-54c-5.5,0-10,4.5-10,10s4.5,10,10,10h54c5.5,0,10-4.5,10-10S184.166,146.7,178.666,146.7z" />
                              <path d="M248.666,196.7h-124c-5.5,0-10,4.5-10,10s4.5,10,10,10h124c5.5,0,10-4.5,10-10S254.166,196.7,248.666,196.7z" />
                          </svg>
-
                      </div>
-
                      <div class="content_wrapper">
                          <div class="infobox-title">
                              <h3>Support 24/7</h3>
                          </div>
                          <div class="infobox-content">Dedicated Support</div>
                      </div>
-
                  </div>
-
              </div>
          </div>
-
          <!-- 4 -->
          <div class="section_col-item">
-
              <div class="infobox">
-
                  <a href="#" class="infobox_link"></a>
-
                  <div class="infobox_wrapper">
-
                      <div class="icon_wrapper">
                          <svg viewBox="0 0 511.999 511.999" class="infobox_icon">
                              <circle cx="10.06" cy="500.446" r="10.06" />
@@ -195,30 +168,21 @@
                       l-53.036,53.036c-9.751-10.795-18.387-22.541-25.74-35.104L278.3,125.8C327.732,64.941,400.96,27.171,479.207,22.177l9.348-0.596
                       c1.225-0.076,2.045,0.532,2.423,0.904c0.377,0.371,1,1.178,0.94,2.409L491.678,29.779z" />
                          </svg>
-
                      </div>
-
                      <div class="content_wrapper">
                          <div class="infobox-title">
                              <h3>Express Delivery</h3>
                          </div>
                          <div class="infobox-content">2hr HCM City Area</div>
                      </div>
-
                  </div>
-
              </div>
          </div>
-
          <!-- 5 -->
          <div class="section_col-item">
-
              <div class="infobox">
-
                  <a href="#" class="infobox_link"></a>
-
                  <div class="infobox_wrapper">
-
                      <div class="icon_wrapper">
                          <svg class="infobox_icon" viewBox="0 0 511.985 511.985">
                              <path id="XMLID_2048_" d="m503.19 184.134-175.363-175.362c-11.696-11.695-30.729-11.697-42.427 0l-195.214 195.213h-60.163c-16.542 0-30 13.458-30 30v248c0 16.542 13.458 30 30 30h372c16.542 0 30-13.458 30-30v-184.257l71.167-71.167c11.696-11.697 11.697-30.729 0-42.427zm-203.647-161.219c3.899-3.9 10.244-3.898 14.142 0l22.299 22.299-158.772 158.771h-58.741zm112.48 459.07c0 5.514-4.486 10-10 10h-372c-5.514 0-10-4.486-10-10v-248c0-5.514 4.486-10 10-10h372c5.514 0 10 4.486 10 10zm77.025-269.566-57.024 57.024v-35.457c0-16.542-13.458-30-30-30h-122.989l107.86-107.86 102.152 102.151c3.899 3.899 3.899 10.243.001 14.142z" />
@@ -233,7 +197,6 @@
                              <path id="XMLID_2323_" d="m374.023 313.985v-32c0-11.046-8.954-20-20-20h-14v72h14c11.046 0 20-8.954 20-20z" />
                          </svg>
                      </div>
-
                      <div class="content_wrapper">
                          <div class="infobox-title">
                              <h3>Secure Payment</h3>
@@ -242,9 +205,7 @@
                              <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-paypal"></i> <img src="https://img.mservice.io/momo-payment/icon/images/logo512.png" alt="" height="16"> VNPAY,...
                          </div>
                      </div>
-
                  </div>
-
              </div>
          </div>
      </div>
@@ -252,8 +213,6 @@
  <div class="application-body">
      <div class="y-grid">
          <div class="y-results" id="y-results">
-
-
              <!-- <div class="flat">
                  <div class="marketing">
                      <div class="container">
@@ -262,18 +221,13 @@
                      </div>
                  </div>
              </div> -->
-
-
              <?php $this->load_partial('category-feat') ?>
-
-             <div id="san-pham-dac-trung" class="container-fluid">
+             <!-- <div id="san-pham-dac-trung" class="container-fluid">
                  <?php //$this->load_partial('product-listing', array('heading' => 'Sản phẩm đặc trưng trong tuần', 'showMore' => 1)) ?>
-             </div>
+             </div> -->
              
              <?php //$this->load_partial('cooperators') ?>
-
              <?php $this->load_partial('about-us') ?>
-
              <?php $this->load_partial('disscount') ?>
          </div>
      </div>

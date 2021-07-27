@@ -53,7 +53,7 @@
         		<br/>
         		Không tìm thấy trang!!
                 <br />
-                <span style="color: #fff;">Nhấn vào <a style="color: #fff;text-decoration: underline;" href="/vi">đây</a> để quay lại trang chủ.</span>
+                <span style="color: #fff;">Nhấn vào <a style="color: #fff;text-decoration: underline;" href="<?= frontend_url() ?>">đây</a> để quay lại trang chủ.</span>
         	</div> <!-- / .error-text -->
         </div><!-- /#content-wrapper -->
     </div> <!-- / #main-wrapper -->

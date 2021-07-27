@@ -59,7 +59,9 @@ RewriteRule ^nhom-hang/?$ /pixeladmin/index.php?controller=category
 RewriteRule ^hang-hoa/quan-ly-nhanh/?$ /pixeladmin/index.php?controller=product&action=manage
 RewriteRule ^hang-hoa/them/?$ /pixeladmin/index.php?controller=product&action=add
 RewriteRule ^hang-hoa/(.*)?$ /pixeladmin/index.php?controller=product&action=edit&id=$1
+
 RewriteRule ^hang-hoa/?$ /pixeladmin/index.php?controller=product
+
 
 RewriteRule ^quan-ly-gia/?$ /pixeladmin/index.php?controller=price
 

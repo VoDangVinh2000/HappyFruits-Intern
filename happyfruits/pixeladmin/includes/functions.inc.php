@@ -823,6 +823,13 @@ function get_upload_path()
     return $upload_path;
 }
 
+function get_uploads_path_intern(){
+    $upload_path = 'uploads/';
+    // if (!file_exists($upload_path))
+    //     mkdir($upload_path, 0777);
+    return $upload_path;
+}
+
 function get_upload_url()
 {
     return ROOT_URL . 'uploads/';

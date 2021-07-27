@@ -1,6 +1,7 @@
 <?php
 function init_page(&$controller)
 {
+    
     $controller->load_model('Products, Menus');
     $main_menu = $controller->Menus->get_details_by_code('main-menu');
     $category_menu = $controller->Menus->get_details_by_code('category-menu');
@@ -13,10 +14,9 @@ function init_page(&$controller)
 	$branches = $controller->Branches->get_list(array('select' => 'id,lat,lng'));
 	$main_branch = $controller->Branches->get_details(LHP_BRANCH_ID);
 	$categories = $controller->Categories->get_list(array('categories.allow_delivery' => 1, 'categories.parent_id' => 1));
-	$lang = get('lang');
     $homepage = $controller->Pages->get_details_by_code('trang-chu');
     $promotions_with_banner = $controller->Announcements->get_list(array('is_promotion' => 1,'deleted' => 0, 'enabled' => 1, 'where' => "promotion_image IS NOT NULL AND promotion_image != '' ", 'order_by' => 'id desc', 'limit' => 4));
-
+    $lang = get('lang');
     $cat_products = $products_in_tags = array();
     if(!empty($controller->data['obj'])){
         $cat_ids = $controller->data['obj']['product_cat_ids'];
@@ -35,9 +35,28 @@ function init_page(&$controller)
         }
     }
 
+    //get_full_details for home page
+    $traiCayDacSanViet = $controller->Products->get_all_product_by_categoryID(6);
+    $gioTraiCay = $controller->Products->get_all_product_by_categoryID(14);
+    $hopTraiCay = $controller->Products->get_all_product_by_categoryID(15);
+    $hoaTraiCay = $controller->Products->get_all_product_by_categoryID(8);
+    $traiCayNhap = $controller->Products->get_all_product_by_categoryID(12);
+    $sanPhamKhac = $controller->Products->get_all_product_by_categoryID(7);
+
+    //image null
+    $imageDefault = get_child_theme_assets_url() . "img/default-product-image.png";
+    //get id product
+    $id = get('param2');
+
+    //get product by id
+    $product = $controller->Products->get_details($id);
+
+    //$traiCayNhap = $controller->get_all_product_by_categoryID(6);
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
         "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
-        "tiles", "page_code", "cat_products", "products_in_tags"));
+        "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
+        "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault"));
+
 }
 
 function page(&$controller){}

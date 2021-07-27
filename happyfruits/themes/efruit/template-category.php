@@ -3,7 +3,7 @@
     <div class="y-grid">
         <div class="y-results" id="y-results">
             <?php $this->load_partial('hero-image') ?>
-            <?php $this->load_partial('category-list') ?>
+            <!-- <?//php $this->load_partial('category-list') ?> -->
             <?php if(!empty($cat_products) || !empty($products_in_tags)):?>
                 <?php if($obj['page_body']):?>
                     <div class="content-container" style="background: #fff;">
@@ -27,12 +27,13 @@
                     <div class="clearfix"></div>
                 <?php endif;?>
                 <div id="menu-container" class="container-fluid" style="margin-top: 20px;">
-                    <div class="col-sm-9 nopadding">
-                        <?php $this->load_partial('product-listing') ?>
+                    <div class="col-sm-12 nopadding">
+                        <!-- <//?php $this->load_partial('product-listing') ?> -->
+                        <?php $this->load_partial('product-listing', array('heading' => '', 'showMore' => 1)) ?>
                     </div>
-                    <div class="col-sm-3 nopadding hidden-xs">
-                        <?php $this->load_partial('cart') ?>
-                    </div>
+                    <!-- <div class="col-sm-3 nopadding hidden-xs">
+                        <?//php $this->load_partial('cart') ?>
+                    </div> -->
                 </div>
             <?php else:?>
                 <?php if($obj['page_body']):?>
@@ -48,7 +49,8 @@
             <?php endif; ?>
             <div class="clearfix"></div>
             <?php $this->load_partial('about-us') ?>
-            <?php $this->load_partial('cooperators') ?>
+            <?php $this->load_partial('disscount') ?>
+            <!-- <//?php $this->load_partial('cooperators') ?> -->
         </div>
     </div>
 </div>
