@@ -120,8 +120,11 @@ h1,h2,h3,h4,h5,h6{
     background-color: #bdc3c7;
    
 }
+/* New CSS */
 .end-form-createaccount{
     padding: 0 30px 30px 30px;
+    /* display: flex;
+    background: #000; */
 }
 .end-form-createaccount a{
     color: #333333;

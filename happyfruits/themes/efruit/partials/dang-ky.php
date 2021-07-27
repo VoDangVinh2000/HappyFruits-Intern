@@ -1,3 +1,6 @@
+<?php
+    
+?>
 <div class="customer-account">
     <div class="container">
         <div class="row">
@@ -12,23 +15,29 @@
                         <div class="main-create-account-fillout">
                             <div class="error-fillout-createaccount">
                             </div>
-                            <input type="text" name="username" class="input-account" autocapitalize="words" autofocus placeholder="Username" required>
+                            <label for="username"></label>
+                            <input id="username" type="text" name="username" class="input-account" autocapitalize="words" autofocus placeholder="Username" required>
 
-                            <label for=""></label>
-                            <input type="password" name="password" class="input-account" autocapitalize="words" placeholder="Password" required>
+                            <label for="password"></label>
+                            <input pattern="[a-zA-Z0-9_-]{6,}" id="password" type="password" name="password" class="input-account" autocapitalize="words" placeholder="Password" required>
 
-                            <label for=""></label>
-                            <input type="text" name="phone" class="input-account" autocapitalize="words" placeholder="Phone number" required>
+                            <label for="phone"></label>
+                            <input id="phone" type="text" name="phone" class="input-account" autocapitalize="words" placeholder="Phone number" required>
                             
-                            <label for=""></label>
-                            <input type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
+                            <label for="email"></label>
+                            <input id="email" type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
                         </div>
                         <div class="input-submit-account">
-                            <input type="submit" value="Create">
+                            <input id="" type="submit" value="Create" name="register">
                         </div>
                     </form>
                     <div class="end-form-createaccount">
                         <a href="#">Return to Store</a>
+                        <div class="link-to-login">
+                            <span>Already have an account?</span>
+                           
+                            <a href="">Sign in</a>.</p>
+                        </div>
                     </div>
                 </div>
             </div>
