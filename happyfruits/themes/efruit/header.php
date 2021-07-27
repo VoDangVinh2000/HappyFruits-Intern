@@ -30,7 +30,7 @@
     ?>
         <link rel="preload" href="<?= $preload_link ?>" as="font" crossorigin="anonymous">
     <?php endforeach; ?>
-    <link href="<?= get_theme_assets_url() ?>css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="<?= get_theme_assets_url() ?>css/pixel.ef.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/hover.ef.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>js/plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet" />

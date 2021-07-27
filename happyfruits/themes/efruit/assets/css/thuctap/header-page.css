@@ -5,6 +5,10 @@ body {
   font-family: 'Fira Sans Condensed', sans-serif;
 }
 
+.hidden {
+  display: none!important;
+  visibility: hidden!important;
+}
 
 /* Sub nav */
 .navbar-toggler {
@@ -101,6 +105,7 @@ body {
 
 .main-nav .navbar-nav .nav-item .nav-link:hover::before {
   transform: scaleX(1);
+  top:20px;
 }
 
 .navbar .megamenu {
@@ -786,6 +791,7 @@ svg.infobox_icon {
   }
 
   .navbar .nav-item .dropdown-menu {
+    top:62px;
     display: none;
   }
 
