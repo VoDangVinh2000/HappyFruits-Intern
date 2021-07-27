@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--end!-->
     <!-- <link href="<?//= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" /> -->
@@ -76,7 +77,7 @@
     <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>
-
+    <script src="<?= get_theme_assets_url() ?>js/sitescript.js"></script>
     <!--end!-->
 
     <script>
