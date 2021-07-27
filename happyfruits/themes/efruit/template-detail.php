@@ -1,5 +1,8 @@
+<?php if(empty($id) || empty($product)){echo  "<script>window.location.href='".frontend_url()."'</script>";} ?>
+
 <?php $this->load_theme_file('page-header.php')
 ?>
+<<<<<<< HEAD
 <?php
 if (isset($product['sell_price'])) {
     $oldPrice = $product['sell_price'] * 1000;
@@ -7,6 +10,12 @@ if (isset($product['sell_price'])) {
 } else {
     echo  "<script>window.location.href='" . frontend_url() . "'</script>";
 }
+=======
+
+<?php
+    $oldPrice = $product['sell_price'] * 1000;
+    $newPrice = $oldPrice - ($product['promotion_price'] * 1000);
+>>>>>>> b633ff4f528ef2a9c76b5d3303a3e6bc7b1356b3
 ?>
 
 <div class="container mb-5">
