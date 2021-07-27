@@ -101,6 +101,7 @@ body {
 
 .main-nav .navbar-nav .nav-item .nav-link:hover::before {
   transform: scaleX(1);
+  top: 20px;
 }
 
 .navbar .megamenu {
@@ -126,6 +127,7 @@ body {
 
 #searchModal input.form-control {
   padding: 1.5em !important;
+
 }
 
 
@@ -786,6 +788,7 @@ svg.infobox_icon {
   }
 
   .navbar .nav-item .dropdown-menu {
+    top: 35px;
     display: none;
   }
 
