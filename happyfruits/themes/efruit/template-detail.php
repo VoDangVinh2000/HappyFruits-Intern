@@ -2,10 +2,13 @@
 
 <?php $this->load_theme_file('page-header.php')
 ?>
-
 <?php
+if (isset($product['sell_price'])) {
     $oldPrice = $product['sell_price'] * 1000;
     $newPrice = $oldPrice - ($product['promotion_price'] * 1000);
+} else {
+    echo  "<script>window.location.href='" . frontend_url() . "'</script>";
+}
 ?>
 
 <div class="container mb-5">
@@ -13,18 +16,30 @@
         <div class="col-md-6">
             <div class="product-gallery">
                 <div class="row g-2">
-                    <div class="col-12">
-                        <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
-                    </div>
-                    <div class="col-3">
-                        <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
-                    </div>
+                    <?php
+                    if ($product['image'] == "") {
+                    ?>
+                        <div class="col-12">
+                            <a href="<?php echo $imageDefault ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $imageDefault ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="<?php echo $imageDefault ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $imageDefault ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="<?php echo $imageDefault ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $imageDefault ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
+                        </div>
+                    <?php } else { ?>
+                        <div class="col-12">
+                            <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
+                        </div>
+                        <div class="col-3">
+                            <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
+                        </div>
+                    <?php } ?>
                 </div>
-
-
             </div>
         </div>
         <div class="col-md-6 product-detail">
@@ -64,9 +79,8 @@
             6 => "traiCayDacSanViet", 14 => "gioTraiCay", 15 => "hopTraiCay",
             8 => "hoaTraiCay", 12 => "traiCayNhap", 7 => "sanPhamKhac"
         ];
-        
         $category_of_page_detail = $array_category[$product['category_id']];
-        if (!empty( $category_of_page_detail)) :
+        if (!empty($category_of_page_detail)) :
             foreach ($$category_of_page_detail as $item) :
                 $counter++;
                 if ($counter >= 5) {
@@ -82,6 +96,9 @@
         ?>
     </div>
 </div>
-</div>
+<!-- </div> -->
 
-<?php $this->load_theme_file('page-footer.php') ?>
+<?php
+echo "footer";
+//$this->load_theme_file('page-footer.php') 
+?>

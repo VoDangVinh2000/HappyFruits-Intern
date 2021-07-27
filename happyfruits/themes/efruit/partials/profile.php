@@ -1,6 +1,9 @@
 <div class="my-account">
     <div class="container">
         <div class="container-my-account">
+            <!--********
+                Về district, V hãy qua function.inc.php tìm đến hàm html_select_district()
+            !-->
             <h1>
                 My Account
             </h1>

@@ -16,9 +16,9 @@
                  <img src="<?= get_theme_assets_url() ?>img/slide1.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                 <a class="sub-caption" href="">GIỎ TRÁI CÂY</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="#">
+                 <a class="btn-shop"  href="fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -30,9 +30,9 @@
                  <img src="<?= get_theme_assets_url() ?>img/slide2.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                 <a class="sub-caption" href="fruit-baskets">GIỎ TRÁI CÂY</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="#">
+                 <a class="btn-shop" href="fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -44,9 +44,9 @@
                  <img src="<?= get_theme_assets_url() ?>img/slide3.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
+                 <a class="sub-caption" href="fruit-basket">GIỎ TRÁI CÂY</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="#">
+                 <a class="btn-shop" href="fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -61,7 +61,7 @@
              <div class="carousel-caption d-none d-md-block">
                  <a class="sub-caption" href="#">GIỎ TRÁI CÂY</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="#">
+                 <a class="btn-shop" href="fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -222,7 +222,6 @@
                  </div>
              </div> -->
              <?php $this->load_partial('category-feat') ?>
-
              <!-- <div id="san-pham-dac-trung" class="container-fluid">
                  <?php //$this->load_partial('product-listing', array('heading' => 'Sản phẩm đặc trưng trong tuần', 'showMore' => 1)) ?>
              </div> -->
