@@ -35,7 +35,6 @@
                         <a href="#">Return to Store</a>
                         <div class="link-to-login">
                             <span>Already have an account?</span>
-                           
                             <a href="">Sign in</a>.</p>
                         </div>
                     </div>
