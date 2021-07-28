@@ -35,7 +35,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 
 body {
-  font-family: 'Fira Sans Condensed', sans-serif;
+font-family: 'Fira Sans Condensed', sans-serif;
+font-size: 1rem;
 }
 
 .hidden {
