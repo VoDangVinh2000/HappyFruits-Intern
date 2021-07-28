@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 /* #5c5f63 */
 .nav-main-item > a{
   font-size: 14px;
@@ -30,8 +33,7 @@
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
+
 
 body {
   font-family: 'Fira Sans Condensed', sans-serif;
