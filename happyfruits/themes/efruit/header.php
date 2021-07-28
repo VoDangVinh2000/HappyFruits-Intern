@@ -46,9 +46,9 @@
         minifyCSS($css_files, ASSET_UPDATED_DATE . '/main');
     }
     ?>
-    <?php if (env('CHILD_THEME')) : ?>
+    <?php /*if (env('CHILD_THEME')) : ?>
         <link href="<?= get_child_theme_assets_url() ?>css/main.css" rel="stylesheet" />
-    <?php endif; ?>
+    <?php endif;*/ ?>
     <!--Thực tập !-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
@@ -59,9 +59,9 @@
     <!-- <link href="<?//= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" /> -->
     <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
     <?php if (env('CHILD_THEME')) : ?>
-        <link href="<?= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" />
-       
-    <?php endif; ?>
+        <!-- <link href="<?//= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" /> -->
+        <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
+    <?php endif; ?> 
     <!-- Custom styles for this template -->
     <?php if (!empty($css)) foreach ($css as $c) : ?>
         <link href="<?= (is_array($c) ? $c['href'] : $c) . '?v=' . VERSION ?>" rel="stylesheet" <?= isset($c['media']) && is_array($c) ? ('media="' . $c['media'] . '"') : '' ?> />
@@ -69,15 +69,14 @@
 
       <!--Thực tập !-->
     <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />   
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/thuctap/simpleLightbox.min.css" rel="stylesheet" /> 
     <link href="<?= get_theme_assets_url() ?>css/thuctap/stylePageAccount.css" rel="stylesheet" />
+    
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.carousel.min.css"> 
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.theme.default.css"> 
     <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>
-    <script src="<?= get_theme_assets_url() ?>js/sitescript.js"></script>
     <!--end!-->
 
     <script>
