@@ -17,7 +17,7 @@ class CustomerController extends BaseController
             ASSET_URL. 'js/customer/index.js'
         );
         $page_title = 'Quản lý khách hàng';
-
+        $filter_array = "";
         $filter_keyword = get('s');
         if ($filter_keyword) {
             $search_str = "(customer_name LIKE '%$filter_keyword%' OR address LIKE '%$filter_keyword%' OR mobile LIKE '%$filter_keyword%')";
@@ -27,7 +27,7 @@ class CustomerController extends BaseController
             $customers = null;
         }
         $products = $this->Products->get_list(array('products.is_additional'=>"0"), -1);
-
+        var_dump($filter_array);
         $this->_merge_data(compact("js", "page_title", "customers", "filter_keyword", "filter_array", "products"));
         $this->load_page('customer/index');
     }
