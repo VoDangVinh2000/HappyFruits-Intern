@@ -42,6 +42,7 @@ class PostbackController extends BasePostbackController
         );
     }
     
+    
     function _export($objPHPExcel, $filename)
     {
         $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
@@ -69,7 +70,6 @@ class PostbackController extends BasePostbackController
     {
         $this->_error('Lỗi! Vui lòng liên hệ admin!!');
     }
-    
     function login()
     {
         $username = post('username');

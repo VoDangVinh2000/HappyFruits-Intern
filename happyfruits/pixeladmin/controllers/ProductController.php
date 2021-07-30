@@ -83,5 +83,7 @@ class ProductController extends BaseController
         $this->_merge_data(compact("js", "page_title", "items", "item_types"));
         $this->load_page('product/manage/index');
     }
+
+    
 }
 /* End of ProductController class */

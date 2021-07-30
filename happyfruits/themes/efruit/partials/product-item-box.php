@@ -1,4 +1,5 @@
-<?php if (!empty($item)) : ?>
+<?php 
+if (!empty($item)) : ?>
     <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
         <div class="container mt-5">
             <div class="row">
@@ -6,7 +7,7 @@
                     <div class="product-item">
                         <div class="product-photo">
                             <!-- <a href="#" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="photo-link"> -->
-                            <a href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] ?>" class="photo-link">
+                            <a href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
                                 <img  alt="<?= $item['code'] ?>" src="<?= $item['image'] ? get_image_url($item['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>"></a>
                             <?php if (!empty($item['enabled']) && empty($item['not_deliver'])) : ?>
                                 <a class="btn-shop btn-cart" href="#">
@@ -17,7 +18,7 @@
                             <?php endif; ?>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-8 product-name"><a href="javascript:void(0);" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)"><?= $item['code'] ?> - <span class="product_name efruit-vi"><?= $item['name'] ?><span class="product_name efruit-en"><?= $item['english_name'] ?></span></a> </div>
+                            <div class="col-8 product-name"><a href="javascript:void(0);" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)"><?= $item['name'] ?> - <span class="product_name efruit-vi"><?= $item['name'] ?><span class="product_name efruit-en"><?= $item['english_name'] ?></span></a> </div>
                             <div class="col-4">
                                 <div class="product-price">
                                     <?php if (empty($item['is_box'])) : ?>

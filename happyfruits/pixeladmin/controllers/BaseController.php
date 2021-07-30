@@ -17,6 +17,7 @@ class BaseController
     function __construct()
     {
         $actionName = request('action');
+    
         if (empty($actionName))
             $actionName = 'index';
         $this->data['logged_user'] = Users::get_logged_user();
@@ -50,6 +51,7 @@ class BaseController
 
         $this->load_model('Branches');
         $this->data['branches_arr'] = $this->Branches->get_list_with_id_as_key(array('select' => 'id,lat,lng'));
+        // echo "<script>alert('$actionName')</script>";
     }
     
     function load_model($model_name)

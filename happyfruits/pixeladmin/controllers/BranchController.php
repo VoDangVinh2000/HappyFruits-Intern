@@ -19,6 +19,7 @@ class BranchController extends BaseController
         $page_title = 'Quản lý chi nhánh';
         
         $filter_keyword = get('s');
+        $filter_array = "";
         if ($filter_keyword)
         {
             $search_str = "(branch_name LIKE '%$filter_keyword%' OR branch_address LIKE '%$filter_keyword%')";
