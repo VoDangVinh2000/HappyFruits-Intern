@@ -123,6 +123,7 @@ h1,h2,h3,h4,h5,h6{
    
 }
 /* New CSS */
+
 .end-form-createaccount{
     padding: 0 30px 30px 30px;
     /* display: flex;
@@ -285,7 +286,7 @@ h1,h2,h3,h4,h5,h6{
 
 /*title*/
 
- @media only screen and (min-width:992px) and (max-width: 1199px){
+@media only screen and (min-width:992px) and (max-width: 1199px){
     .title h1{
         font-size: 44px;
         margin-bottom: 20px;
