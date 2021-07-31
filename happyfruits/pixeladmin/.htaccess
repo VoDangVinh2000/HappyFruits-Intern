@@ -176,7 +176,6 @@ RewriteRule ^cron/midnight?$ /pixeladmin/index.php?controller=cron&action=midnig
 
 
 
-
 ErrorDocument 404 /pixeladmin/index.php?controller=error
 
 

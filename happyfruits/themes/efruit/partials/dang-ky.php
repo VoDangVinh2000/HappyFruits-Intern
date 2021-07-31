@@ -11,7 +11,7 @@
                         <p>Please Register using account detail bellow.</p>
                     </div>
                     <!--Form action register-->
-                    <form action="dang-ky" method="post">
+                    <form action="/register" method="post">
                         <div class="main-create-account-fillout">
                             <div class="error-fillout-createaccount">
                             </div>
@@ -30,7 +30,7 @@
                             <input id="email" type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
                         </div>
                         <div class="input-submit-account">
-                            <input id="" type="submit" value="Create" name="register">
+                            <input type="submit" value="Create" name="register">
                         </div>
                     </form>
                     <div class="end-form-createaccount">

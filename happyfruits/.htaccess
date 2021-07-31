@@ -60,7 +60,8 @@ RewriteRule ^en/(.*)/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=vi
 RewriteRule ^en/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=en&page_code=$1&param2=$2
 RewriteRule ^en/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=en&page_code=$1
 
-RewriteRule ^dang-ky/?$ /index.php?action=register
+RewriteRule ^register/?$ /pixeladmin/index.php?controller=customer&action=register
+
 
     Redirect /index.php /vi/
 
