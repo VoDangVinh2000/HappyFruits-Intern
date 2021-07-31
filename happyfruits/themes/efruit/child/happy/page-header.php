@@ -138,7 +138,8 @@
                <div class="collapse navbar-collapse" id="main-nav">
                    <ul class="navbar-nav mx-auto">
                        <li class="nav-item dropdown has-megamenu">
-                           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle efruit-vi" href="#" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle efruit-en" href="#" data-bs-toggle="dropdown">FRUIT BASKETS</a>
                            <div class="dropdown-menu megamenu" role="menu">
                                <div class="row g-3">
                                    <div class="col-lg-3 col-6">
@@ -197,7 +198,8 @@
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item dropdown has-megamenu">
-                           <a class="nav-link dropdown-toggle" style="text-transform:uppercase"  href="#" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle efruit-vi" href="#" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle efruit-en" href="#" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
                            <div class="dropdown-menu megamenu" role="menu">
                                <div class="row g-3">
                                    <div class="col-lg-3 col-6">
@@ -256,13 +258,16 @@
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Hoa trái cây" href="#">HOA TRÁI CÂY</a>
+                           <a class="nav-link efruit-vi" href="#">HOA TRÁI CÂY</a>
+                           <a class="nav-link efruit-en" href="#">FRUIT BOUQUETS</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Đặc sản việt" href="#">ĐẶC SẢN VIỆT</a>
+                           <a class="nav-link efruit-vi" href="#">ĐẶC SẢN VIỆT</a>
+                           <a class="nav-link efruit-en" href="#">VIET NAM FRUIT SPECIAL</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Trái cây nhập" href="#">TRÁI CÂY NHẬP</a>
+                           <a class="nav-link efruit-vi" href="#">TRÁI CÂY NHẬP</a>
+                           <a class="nav-link efruit-en" href="#">FRESH FRUITS</a>
                        </li>
                    </ul>
 

@@ -319,7 +319,7 @@ body {
 
 .carousel-caption h2 {
   font-size  : 3.7em;
-  font-family: 'Viaoda Libre', cursive;
+  font-family: 'Fira Sans Condensed', sans-serif;
   margin     : .5em 0;
 }
 
@@ -476,7 +476,7 @@ body {
 
 .category-caption h3 {
   position   : relative;
-  font-family: 'Viaoda Libre', cursive;
+  font-family: 'Fira Sans Condensed', sans-serif;
   color      : #fff;
   font-size  : 2.5em;
 }
@@ -782,7 +782,7 @@ svg.infobox_icon {
 
 /* Product detail */
 .product-name {
-  font-family: 'Viaoda Libre', cursive;
+  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: bold;
   color      : #72a499;
 }

@@ -16,7 +16,8 @@
                  <img src="<?= get_theme_assets_url() ?>img/slide1.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption" href="">GIỎ TRÁI CÂY</a>
+                 <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
+                 <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
                  <h2>Gói trọn yêu thương</h2>
                  <a class="btn-shop"  href="fruit-baskets">
                      <div class="button-content-wrapper">
@@ -96,7 +97,8 @@
                      </div>
                      <div class="content_wrapper">
                          <div class="infobox-title">
-                             <h3>Discounts</h3>
+                            <h3 class="efruit-vi">Giảm giá</h3>
+                            <h3 class="efruit-en">Discounts</h3>
                          </div>
                          <div class="infobox-content">Best sale (Free deals) deals everyweek</div>
                      </div>
@@ -121,9 +123,11 @@
                      </div>
                      <div class="content_wrapper">
                          <div class="infobox-title">
-                             <h3>Support 24/7</h3>
+                            <h3 class="efruit-vi">Hỗ Trợ 24/7</h3>
+                            <h3 class="efruit-en">Support 24/7</h3>
                          </div>
-                         <div class="infobox-content">Dedicated Support</div>
+                         <div class="infobox-content efruit-vi">Hỗ Trợ Tận Tâm</div>
+                         <div class="infobox-content efruit-en">Dedicated Support</div>
                      </div>
                  </div>
              </div>
@@ -171,9 +175,11 @@
                      </div>
                      <div class="content_wrapper">
                          <div class="infobox-title">
-                             <h3>Express Delivery</h3>
+                             <h3 class="efruit-vi">Chuyển Phát Nhanh</h3>
+                             <h3 class="efruit-en">Express Delivery</h3>
                          </div>
-                         <div class="infobox-content">2hr HCM City Area</div>
+                         <div class="infobox-content efruit-vi">Khu Vực Thanh Phố HCM 2hr</div>
+                         <div class="infobox-content efruit-en">2hr HCM City Area</div>
                      </div>
                  </div>
              </div>
@@ -199,9 +205,13 @@
                      </div>
                      <div class="content_wrapper">
                          <div class="infobox-title">
-                             <h3>Secure Payment</h3>
+                             <h3 class="efruit-vi">Thanh Toán An Toàn</h3>
+                             <h3 class="efruit-en">Secure Payment</h3>
                          </div>
-                         <div class="infobox-content">100% Secure payment<br>
+                         <div class="infobox-content efruit-en">100% Secure payment<br>
+                             <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-paypal"></i> <img src="https://img.mservice.io/momo-payment/icon/images/logo512.png" alt="" height="16"> VNPAY,...
+                         </div>
+                         <div class="infobox-content efruit-vi">100% An Toàn Thanh Toán<br>
                              <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-paypal"></i> <img src="https://img.mservice.io/momo-payment/icon/images/logo512.png" alt="" height="16"> VNPAY,...
                          </div>
                      </div>

@@ -48,7 +48,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
         <?php if (!empty($showMore) && $total_products > NUMBER_OF_ITEMS_PER_PAGE) : ?>
             <div class="clearfix"></div>
             <div class="search-more">
-                <div style="background: #fff;text-align: center;font-size: 1.8rem;" id="more" data-page="1" bind-translate="Xem thêm">Xem thêm</div>
+                <div style="background: #fff;text-align: center;font-size: 1rem;" id="more" data-page="1" bind-translate="Xem thêm">Xem thêm</div>
             </div>
         <?php endif; ?>
     </div>
