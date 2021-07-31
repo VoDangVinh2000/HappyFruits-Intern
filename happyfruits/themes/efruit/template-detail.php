@@ -44,7 +44,8 @@ if (isset($product['sell_price'])) {
         </div>
         <div class="col-md-6 product-detail">
             <h1 class="product-title mb-3">
-                <span class="product-name"><?php echo $product['name'] ?></span> <span class="product-sku">| <?php echo $product['code'] ?></span>
+                <span class="product-name efruit-vi"><?php echo $product['name'] ?></span> <span class="product-sku"></span>
+                <span class="product-name efruit-en"><?php echo $product['english_name'] ?></span> <span class="product-sku">| <?php echo $product['code'] ?></span>
             </h1>
             <div class="product-price">
                 <span class="price"><?php echo $newPrice ?>₫</span>
@@ -59,19 +60,23 @@ if (isset($product['sell_price'])) {
                 </div>
                 <a class="btn-shop" href="#">
                     <div class="button-content-wrapper">
-                        <span class="button-text">THÊM GIỎ HÀNG</span>
+                        <span class="button-text efruit-vi" >THÊM GIỎ HÀNG</span>
+                        <span class="button-text efruit-en" >ADD TO CARD</span>
                     </div>
                 </a>
             </form>
             <div class="product-description mt-3">
-                <?php echo $product['description'] ?>
+                <!-- <//?php echo $product['description'] ?> -->
+                <p class=" efruit-vi"><?=$product['description']?></p>
+                <p class=" efruit-en"><?=$product['description_en']?></p>
             </div>
         </div>
     </div>
 </div>
 
 <div class="container my-5">
-    <h3 class="section-heading"><span>Sản phẩm liên quan</span></h3>
+    <h3 class="section-heading efruit-vi"><span>Sản phẩm liên quan</span></h3>
+    <h3 class="section-heading efruit-en"><span>Related products</span></h3>
     <div class="row">
         <?php
         $counter = 0;

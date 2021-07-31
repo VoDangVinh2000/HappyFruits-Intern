@@ -17,7 +17,8 @@
                         <div class="top-img">
                             <img src="<?= $array['image'] ?>" alt="test">
                             <div class="category-caption">
-                                <h3><span><?= $array['text'] ?></span></h3>
+                                <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
+                                <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
                                 <a class="btn-shop" href="<?= $array['href'] ?>">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>
@@ -55,8 +56,8 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name']
-                                                                                                                            ?></a>
+                                                <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -81,8 +82,8 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name']
-                                                                                                                            ?></a>
+                                                <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name']?></a>
+                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['name']?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -176,7 +177,8 @@
                         <div class="top-img">
                             <img src="<?= $array['image'] ?>" alt="test">
                             <div class="category-caption">
-                                <h3><span><?= $array['text'] ?></span></h3>
+                                <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
+                                <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
                                 <a class="btn-shop" href="<?= $array['href'] ?>">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>
@@ -202,7 +204,8 @@
         ?>
                     <div class="col-md-6">
                         <div class="category-caption">
-                            <h3><span><?= $array['text'] ?></span></h3>
+                            <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
+                            <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
                             <p><?= $content_2 ?></p>
                             <a class="btn-shop" href="<?= $array['href'] ?>">
                                 <div class="button-content-wrapper">
@@ -232,7 +235,7 @@
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name'])?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -287,7 +290,16 @@
 <!-- product category 4 -->
 <!-- Top content -->
 <div class="container my-5">
-    <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3>
+    <?php if (!empty($tiles)) {
+        foreach ($tiles as $array) {
+            if ($array['cat'] == 6) {
+    ?>
+                <!-- <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3> -->
+                <h3 class="section-heading efruit-vi"><span><?= $array['text'] ?><span></h3>
+                <h3 class="section-heading efruit-en"><span><?= $array['en_text'] ?><span></h3>
+    <?php }
+        }
+    } ?>
     <div class="container-fluid">
         <div class="owl-carousel owl-theme">
             <?php
@@ -324,7 +336,7 @@
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name'])?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -334,7 +346,7 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -357,7 +369,16 @@
 <!-- Top content -->
 
 <div class="container my-5">
-    <h3 class="section-heading "><span>Trái cây nhập</span></h3>
+    <?php if (!empty($tiles)) {
+        foreach ($tiles as $array) {
+            if ($array['cat'] == 12) {
+    ?>
+                <!-- <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3> -->
+                <h3 class="section-heading efruit-vi"><span><?= $array['text'] ?><span></h3>
+                <h3 class="section-heading efruit-en"><span><?= $array['en_text'] ?><span></h3>
+    <?php }
+        }
+    } ?>
     <div class="container-fluid">
         <div class="owl-carousel owl-theme">
             <?php
@@ -394,7 +415,7 @@
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name'])?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -425,7 +446,16 @@
 <!-- product category 6 -->
 <!-- Top content -->
 <div class="container my-5">
-    <h3 class="section-heading "><span>Sản phẩm khác</span></h3>
+    <?php if (!empty($tiles)) {
+        foreach ($tiles as $array) {
+            if ($array['cat'] == 7) {
+    ?>
+                <!-- <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3> -->
+                <h3 class="section-heading efruit-vi"><span><?= $array['text'] ?><span></h3>
+                <h3 class="section-heading efruit-en"><span><?= $array['en_text'] ?><span></h3>
+    <?php }
+        }
+    } ?>
     <div class="container-fluid">
         <div class="owl-carousel owl-theme">
             <?php
@@ -473,7 +503,7 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
