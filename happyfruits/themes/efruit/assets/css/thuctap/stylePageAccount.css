@@ -38,11 +38,10 @@ h1,h2,h3,h4,h5,h6{
     padding-right: 50px;
 }
 .inside-bread-section{
-    padding: 0 40px 0 40px;
     /* padding: 70px 0 70px 0; */
 }
 .bread-section{
-    padding: 70px;
+    padding: 75px 150px;
     /*  background: url('../images/page-title-1.jpg') no-repeat scroll center center / cover;*/
     /* background: url('../images/photo-background-v.jpg') no-repeat scroll center / cover;
     outline: none; */

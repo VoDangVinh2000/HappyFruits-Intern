@@ -5,6 +5,8 @@ RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/pixeladmin/$1 [R=301,L]
 
 RewriteRule ^xu-ly/?$ /pixeladmin/index.php?controller=postback
 
+
+
 RewriteRule ^tai-anh/?$ /pixeladmin/index.php?controller=postback&action=admin_upload_image
 RewriteRule ^xoa-anh/?$ /pixeladmin/index.php?controller=postback&action=admin_delete_image
 RewriteRule ^quan-ly-anh/?$ /pixeladmin/index.php?controller=postback&action=admin_view_images&%{QUERY_STRING}
@@ -171,6 +173,8 @@ RewriteRule ^phpBB/cap-nhat-nguoi-dung(.*)?$ /pixeladmin/index.php?controller=cr
 RewriteRule ^phpBB/dang-nhap(.*)?$ /pixeladmin/index.php?controller=postback&action=login_forum
 
 RewriteRule ^cron/midnight?$ /pixeladmin/index.php?controller=cron&action=midnight_jobs
+
+
 
 ErrorDocument 404 /pixeladmin/index.php?controller=error
 

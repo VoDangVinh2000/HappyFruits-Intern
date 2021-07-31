@@ -1,6 +1,7 @@
 <div id="content-wrapper">
 	<div id="page-wrapper">
 		<?php if ($id && !$obj):?>
+		
 			<div class="row">
 				<div class="col-lg-12">
 					<h2 class="page-header"><i class="fa fa-warning"></i> ID khách hàng không đúng!!</h2>
@@ -11,7 +12,7 @@
 		<?php else:?>
 			<div class="row">
 				<div class="col-lg-12">
-					<h2 class="page-header"><i class="fa fa-edit"></i> <?=!$id?'Thêm':'Sửa thông tin'?> khách hàng</h2>
+					<h2 class="page-header"><i class="fa fa-edit"></i> <?=!$id ? 'Thêm':'Sửa thông tin'?> khách hàng</h2>
 				</div>
 				<!-- /.col-lg-12 -->
 			</div>

@@ -44,7 +44,7 @@
                                 <div class="col-md-6">
                                     <div class="product-item">
                                         <div class="product-photo">
-                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>">
                                             </a>
                                             <a class="btn-shop btn-cart" href="">
@@ -70,7 +70,7 @@
                                 <div class="col-md-6">
                                     <div class="product-item">
                                         <div class="product-photo">
-                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
                                             </a>
                                             <a class="btn-shop btn-cart" href="">
@@ -81,7 +81,7 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name']
+                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name']
                                                                                                                             ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
@@ -118,7 +118,7 @@
                                 <div class="col-md-6">
                                     <div class="product-item">
                                         <div class="product-photo">
-                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                             <a class="btn-shop btn-cart" href="#">
                                                 <div class="button-content-wrapper">
@@ -128,7 +128,7 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -142,7 +142,7 @@
                                 <div class="col-md-6">
                                     <div class="product-item">
                                         <div class="product-photo">
-                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                             <a class="btn-shop btn-cart" href="#">
                                                 <div class="button-content-wrapper">
@@ -152,7 +152,7 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -232,7 +232,7 @@
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name'])?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -242,7 +242,7 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -256,7 +256,7 @@
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?= $array['image'] ?>" alt=""></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -266,7 +266,7 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -300,7 +300,7 @@
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -309,7 +309,7 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -324,7 +324,7 @@
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name'])?>" class="photo-link">
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -333,7 +333,8 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -369,7 +370,7 @@
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -378,7 +379,7 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -393,7 +394,7 @@
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name'])?>" class="photo-link">
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -402,7 +403,7 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -438,7 +439,7 @@
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -447,7 +448,7 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -462,7 +463,7 @@
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>" class="photo-link">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -471,7 +472,8 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
