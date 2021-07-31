@@ -12,7 +12,7 @@
                         <!--Form action-login-->
                         <form action="" method="post">
                             <div class="main-create-account-fillout">
-                                <input type="email" class="input-account" name="email" autocapitalize="words" placeholder="Email" required>
+                                <input type="text" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
 
                                 <label for=""></label>
                                 <input type="password" class="input-account" name="password"  autocapitalize="words" placeholder="Password" required>

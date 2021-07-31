@@ -6,6 +6,7 @@ class CustomerController extends BaseController
 {
     function __construct()
     {
+        $this->not_require_logged = array('register');
         parent::__construct();
         $this->load_model('Customers, Products');
     }
@@ -59,6 +60,23 @@ class CustomerController extends BaseController
         $customer_types = $this->Customers->get_customer_types();
         $this->_merge_data(compact("js", "page_title", "obj", "customer_types", "id"));
         $this->load_page('customer/customer');
+    }
+
+    function register(){
+        if($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])){
+            $table_name = "customers";
+            $params['username'] = $_POST['username'];
+            $params['password'] = md5($_POST['password']);
+            $params['mobile'] = $_POST['phone'];
+            $params['email'] = $_POST['email'];
+            $success = Customers::_insert($table_name, $params);
+            if($success){
+                //qua trang đăng nhập
+            }
+        }
+        else{
+            //quay về trang home
+        }
     }
 }
 /* End of CustomersController class */

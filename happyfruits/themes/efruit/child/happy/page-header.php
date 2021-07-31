@@ -197,7 +197,7 @@
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item dropdown has-megamenu">
-                           <a class="nav-link dropdown-toggle" style="text-transform:uppercase" bind-translate="Hộp trái cây" href="#" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle" style="text-transform:uppercase"  href="#" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
                            <div class="dropdown-menu megamenu" role="menu">
                                <div class="row g-3">
                                    <div class="col-lg-3 col-6">

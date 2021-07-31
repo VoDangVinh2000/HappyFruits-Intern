@@ -25,6 +25,8 @@ class BaseCustomers extends eModel
     var $district;    /* varchar(100) */
     var $mobile;    /* varchar(20) */
     var $email;    /* varchar(255) */
+    var $username;
+    var $password;
     var $lat;    /* decimal(15,10) */
     var $lng;    /* decimal(15,10) */
     var $distance;    /* varchar(4) */
@@ -46,7 +48,12 @@ class BaseCustomers extends eModel
     /**
      * Getter methods
      */ 
-
+    function get_username(){
+        return $this->username;
+    }
+    function get_password(){
+        return $this->password;
+    }
     function get_customer_id()
     {
         return $this->customer_id;
@@ -210,6 +217,12 @@ class BaseCustomers extends eModel
     {
         $this->deleted =  $val;
     }
-
+    function set_username($val)
+    {
+        $this->username =  $val;
+    }function set_password($val)
+    {
+        $this->password =  $val;
+    }
 }
 /* End of generated class */

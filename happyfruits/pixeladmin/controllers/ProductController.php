@@ -84,6 +84,5 @@ class ProductController extends BaseController
         $this->load_page('product/manage/index');
     }
 
-    
 }
 /* End of ProductController class */
