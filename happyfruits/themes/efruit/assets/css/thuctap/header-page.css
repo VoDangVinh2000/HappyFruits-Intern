@@ -1,8 +1,41 @@
+/* #5c5f63 */
+.nav-main-item > a{
+  font-size: 14px;
+}
+.btn-visites a {
+  /* background-color: #5c5f63; */
+}
+.btn-visites a.efruitjs{
+  display: none !important;
+}
+.btn-visites a:hover {
+  background: -webkit-linear-gradient(left, #5c5f63 70%, #959aa1 100%);
+}
+
+.nav-main-item {
+  margin: 0 0 10px;
+}
+.nav-main-item > a {
+  padding-bottom: 10px;
+}
+
+.nav-cart{
+  top: 12px;
+}
+
+#loading img{
+  background: white;
+}
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap');
 
 body {
   font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 14px;
 }
 
 .hidden {
@@ -580,6 +613,7 @@ body {
   justify-content: center;
   align-items    : center;
   margin-top     : 50px;
+  flex-wrap: wrap;
 }
 
 .subscribe-name {
@@ -792,7 +826,7 @@ svg.infobox_icon {
   }
 
   .navbar .nav-item .dropdown-menu {
-    top: 62px;
+    top: 50px;
     display: none;
   }
 
