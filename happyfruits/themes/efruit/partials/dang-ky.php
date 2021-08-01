@@ -16,11 +16,11 @@
                             <div class="error-fillout-createaccount">
                             </div>
                             <label for="username"></label>
-                            <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Không có kí tự đặc biệt, không dấu, không khoảng trắng, tối đa 6 kí tự." 
+                            <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6" 
                             type="text" name="username" class="input-account" autocapitalize="words" autofocus placeholder="Username" required>
 
                             <label for="password"></label>
-                            <input pattern="[a-zA-Z0-9]{6,}" title="Không có kí tự đặc biệt, không dấu, không khoảng trắng, tối đa 6 kí tự." 
+                            <input pattern="[a-zA(?=.*\d)(?=.*[a-zA-Z]).{6,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 6" 
                              id="password" type="password" name="password" class="input-account" autocapitalize="words" placeholder="Password" required>
 
                             <label for="phone"></label>
