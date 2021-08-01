@@ -6,7 +6,7 @@ if (!empty($item)) : ?>
                 <div class="col-md-12 ">
                     <div class="product-item">
                         <div class="product-photo">
-                            <!-- <a href="#" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="photo-link"> -->
+                            <!-- <a href="#" ng-click="showProduct(<//?= $item['product_id'] ?>, $event, 1)" class="photo-link"> -->
                             <a href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
                                 <img  alt="<?= $item['code'] ?>" src="<?= $item['image'] ? get_image_url($item['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>"></a>
                             <?php if (!empty($item['enabled']) && empty($item['not_deliver'])) : ?>
@@ -18,7 +18,10 @@ if (!empty($item)) : ?>
                             <?php endif; ?>
                         </div>
                         <div class="row mt-2">
-                            <div class="col-8 product-name"><a href="javascript:void(0);" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)"><?= $item['name'] ?> - <span class="product_name efruit-vi"><?= $item['name'] ?><span class="product_name efruit-en"><?= $item['english_name'] ?></span></a> </div>
+                            <div class="col-8 product-name">
+                                <a class="efruit-vi" href="javascript:void(0);" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)"><?= $item['name'] ?></a>
+                                <a class="efruit-en" href="javascript:void(0);" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)"><?= $item['english_name'] ?></a>
+                            </div>
                             <div class="col-4">
                                 <div class="product-price">
                                     <?php if (empty($item['is_box'])) : ?>

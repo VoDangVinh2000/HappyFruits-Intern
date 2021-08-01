@@ -300,7 +300,8 @@
                    </div>
                    <div class="customScroll">
                        <div class="cart-empty-title">
-                           <h4>Your cart is currently empty.</h4>
+                           <h4 class="efruit-en">Your cart is currently empty.</h4>
+                           <h4 class="efruit-vi">Bạn chưa chọn món.</h4>
                        </div>
                    </div>
                </div>

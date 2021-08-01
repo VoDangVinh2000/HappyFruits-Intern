@@ -1,4 +1,6 @@
-<?php if(empty($id) || empty($product)){echo  "<script>window.location.href='".frontend_url()."'</script>";} ?>
+<?php if (empty($id) || empty($product)) {
+    echo  "<script>window.location.href='" . frontend_url() . "'</script>";
+} ?>
 
 <?php $this->load_theme_file('page-header.php')
 ?>
@@ -54,21 +56,25 @@ if (isset($product['sell_price'])) {
             </div>
             <form action="#" method="POST">
                 <div class="input-group my-3">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">+</button>
+                    <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon1">+</button>
                     <input type="text" class="form-control" placeholder="1" aria-label="1" aria-describedby="button-addon1">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button>
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button> -->
+
+                    <!-- <input class="minus is-form" type="button" value="-"> -->
+                    <input aria-label="quantity form-control" class="input-qty" max="100" min="1" name="" type="number" value="1">
+                    <!-- <input class="plus is-form" type="button" value="+"> -->
                 </div>
-                <a class="btn-shop" href="#">
+                <a class="btn-shop" href="/vi/cart">
                     <div class="button-content-wrapper">
-                        <span class="button-text efruit-vi" >THÊM GIỎ HÀNG</span>
-                        <span class="button-text efruit-en" >ADD TO CARD</span>
+                        <span class="button-text efruit-vi">THÊM GIỎ HÀNG</span>
+                        <span class="button-text efruit-en">ADD TO CARD</span>
                     </div>
                 </a>
             </form>
             <div class="product-description mt-3">
                 <!-- <//?php echo $product['description'] ?> -->
-                <p class=" efruit-vi"><?=$product['description']?></p>
-                <p class=" efruit-en"><?=$product['description_en']?></p>
+                <p class=" efruit-vi"><?= $product['description'] ?></p>
+                <p class=" efruit-en"><?= $product['description_en'] ?></p>
             </div>
         </div>
     </div>

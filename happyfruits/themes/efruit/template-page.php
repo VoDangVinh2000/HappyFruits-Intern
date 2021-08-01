@@ -3,7 +3,7 @@
     <div class="y-grid">
         <div class="y-results" id="y-results">
             <?php $this->load_partial('hero-image') ?>
-            <?php $this->load_partial('category-list') ?>
+            <!-- <//?php $this->load_partial('category-list') ?> -->
             <div class="content-container" style="background: #fff;">
                 <?php if(Hash::get($obj, 'config.has_voucher_form') ||
                     Hash::get($obj, 'config.has_package_form') ||

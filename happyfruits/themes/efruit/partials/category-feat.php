@@ -19,7 +19,12 @@
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
-                                <a class="btn-shop" href="<?= $array['href'] ?>">
+                                <!-- <a class="btn-shop" href="<?= $array['href'] ?>">
+                                    <div class="button-content-wrapper">
+                                        <span class="button-text">SHOP NOW</span>
+                                    </div>
+                                </a> -->
+                                <a class="btn-shop" href="/vi/fruit-baskets">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>
                                     </div>
@@ -56,8 +61,8 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
-                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                <a class=" efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -82,8 +87,8 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name']?></a>
-                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['name']?></a>
+                                                <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -129,7 +134,8 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -153,7 +159,8 @@
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                                <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -179,7 +186,12 @@
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
-                                <a class="btn-shop" href="<?= $array['href'] ?>">
+                                <!-- <a class="btn-shop" href="<?= $array['href'] ?>">
+                                    <div class="button-content-wrapper">
+                                        <span class="button-text">SHOP NOW</span>
+                                    </div>
+                                </a> -->
+                                <a class="btn-shop" href="/vi/hamper-box-fruits">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>
                                     </div>
@@ -207,7 +219,12 @@
                             <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                             <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
                             <p><?= $content_2 ?></p>
-                            <a class="btn-shop" href="<?= $array['href'] ?>">
+                            <!-- <a class="btn-shop" href="<?= $array['href'] ?>">
+                                <div class="button-content-wrapper">
+                                    <span class="button-text">SHOP NOW</span>
+                                </div>
+                            </a> -->
+                            <a class="btn-shop" href="/vi/fruit-bouquet">
                                 <div class="button-content-wrapper">
                                     <span class="button-text">SHOP NOW</span>
                                 </div>
@@ -245,7 +262,8 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -269,7 +287,8 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -321,47 +340,49 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
-                                    </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
-                                        <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
-                                            <!-- <span class="delete-price">2.050.000₫</span> -->
-                                        </div>
+                                    <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                    <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                </div>
+                                <div class="col-md-12 col-lg-4 col-4">
+                                    <div class="product-price">
+                                        <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
+                                        <!-- <span class="delete-price">2.050.000₫</span> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    <?php } else { ?>
-                        <div class="ms-2 me-2">
-                            <div class="product-item">
-                                <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
-                                    <a class="btn-shop btn-cart" href="#">
-                                        <div class="button-content-wrapper">
-                                            <span class="button-text">THÊM GIỎ HÀNG</span>
-                                        </div>
-                                    </a>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
-                                    </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
-                                        <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
-                                            <!-- <span class="delete-price">2.050.000₫</span> -->
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+        </div>
+    <?php } else { ?>
+        <div class="ms-2 me-2">
+            <div class="product-item">
+                <div class="product-photo">
+                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
+                        <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                    <a class="btn-shop btn-cart" href="#">
+                        <div class="button-content-wrapper">
+                            <span class="button-text">THÊM GIỎ HÀNG</span>
                         </div>
-            <?php }
+                    </a>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                    </div>
+                    <div class="col-md-12 col-lg-4 col-4">
+                        <div class="product-price">
+                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
+                            <!-- <span class="delete-price">2.050.000₫</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<?php }
                 }
             }  ?>
-        </div>
     </div>
+</div>
 </div>
 
 
@@ -400,7 +421,10 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -424,7 +448,9 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -478,7 +504,9 @@
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name"><a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -503,7 +531,8 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>"><?= $array['name'] ?></a>
+                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
