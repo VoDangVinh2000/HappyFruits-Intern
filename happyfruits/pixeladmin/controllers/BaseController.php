@@ -29,7 +29,6 @@ class BaseController
         }
 
         $controllerName = request('controller');
-        // echo "<script>alert('".Users::can_access($controllerName, $actionName)."')</script>";
         if (empty($controllerName))
             $controllerName = 'default';
         if ($this->require_logged && !Users::can_access($controllerName, $actionName)) {
