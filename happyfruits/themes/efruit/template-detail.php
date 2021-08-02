@@ -64,9 +64,9 @@ if (isset($product['sell_price'])) {
                     <input aria-label="quantity form-control" class="input-qty" max="100" min="1" name="" type="number" value="1">
                     <!-- <input class="plus is-form" type="button" value="+"> -->
                 </div>
-                <a class="btn-shop" href="/vi/cart">
+                <a class="btn-shop" href="#" ng-click="saveSelectedItemToCart()">
                     <div class="button-content-wrapper">
-                        <span class="button-text efruit-vi">THÊM GIỎ HÀNG</span>
+                        <span class="button-text efruit-vi">  {{editingKey?__('Cập nhật'):__('THÊM GIỎ HÀNG')}} +{{customItem.price*customItem.numberOfItems*1000|efruit_money}}</span>
                         <span class="button-text efruit-en">ADD TO CARD</span>
                     </div>
                 </a>
