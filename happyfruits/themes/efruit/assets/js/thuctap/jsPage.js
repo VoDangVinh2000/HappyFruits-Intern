@@ -99,5 +99,6 @@ $(document).ready(function () {
           }
       });
 });
+// Create a new customer
 
 

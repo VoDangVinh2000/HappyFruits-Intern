@@ -6,10 +6,13 @@
             <div class="inside-bread-section">
                 <div class="container-section">
                     <div class="title">
-                        <h1>Create Account</h1>
+                        <h1 class="efruit-en">Create Account</h1>
+                        <h1 class="efruit-vi">Tạo tài khoản</h1>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><span>Create Account</span></li>
+                            <li><a href="#" class="efruit-en">Home</a></li>
+                            <li><a href="#" class="efruit-vi">Trang chủ</a></li>
+                            <li><span class="efruit-en">Create Account</span></li>
+                            <li><span class="efruit-vi">Tạo tài khoản</span></li>
                         </ul>
                     </div>
                     <div class="section-img">

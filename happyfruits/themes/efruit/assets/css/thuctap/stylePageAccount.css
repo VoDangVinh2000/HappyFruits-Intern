@@ -141,6 +141,18 @@ h1,h2,h3,h4,h5,h6{
     border: none;
     font-size: 17px;
 }
+.link-to-login span{
+    color: #888;
+    font-size: 17px;
+    padding-right: 8px;
+}
+.password-wrapper{
+    display: flex;
+    align-items: center;
+}
+.error{
+    color: #000;
+}
 /*css placeholder input*/
 .main-create-account-fillout ::placeholder{
     font-weight: 600;
