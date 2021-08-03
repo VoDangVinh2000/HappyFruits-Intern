@@ -60,7 +60,7 @@ class Customers extends BaseCustomers
      function get_list_customer_username($username){
         $filters = array(
             'select' => 'customers.*',
-            'customers.email' => $username,
+            'customers.username' => $username,
         );
         return $this->select($filters);
      }

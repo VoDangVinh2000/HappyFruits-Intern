@@ -9,45 +9,41 @@
                         <p h2 class="efruit-en">Please Register using account detail bellow.</p>
                         <p h2 class="efruit-vi">Đăng ký các thông tin bên dưới</p>
                     </div>
+
                     <!--Form action register-->
                     <form action="/register" method="post">
                         <div class="main-create-account-fillout">
                             <div class="error-fillout-createaccount">
                             </div>
-                            <!-- <label for="username"></label> -->
-                            <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6" type="text" name="username" class="input-account efruit-en" autocapitalize="words" autofocus placeholder="Username" required>
-                            <!-- <input name="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6" type="text" class="input-account efruit-vi" autocapitalize="words" autofocus placeholder="Tên đăng nhập" required> -->
-                            <!-- <div class="error">
+                            <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6" type="text" name="username_en" class="input-account " autocapitalize="words" autofocus placeholder="Username" required>
+                            <div class="error">
                                 <?php
-                                if (isset($_COOKIE['error_username'])) echo $_COOKIE['error_username'];
+                                if (isset($_COOKIE['error_username'])) {
+                                    echo $_COOKIE['error_username'] . "</br>";
+                                }
                                 ?>
-                            </div> -->
-
-
-                            <!-- <label for="password"></label> -->
-                            <div class="password-wrapper">
-                            <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8" id="password" type="password" name="password" class="input-account efruit-en" autocapitalize="words" placeholder="Password" required>
-                            <!-- <input name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 6" id="password" type="password" class="input-account efruit-vi" autocapitalize="words" placeholder="Mật khẩu" required> -->
-                            <i class="fas fa-eye"></i>
                             </div>
 
+                            <div class="password-wrapper">
+                                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" placeholder="Password" required>
+                                <i class="fas fa-eye" id="btnShowPass"></i>
+                            </div>
 
-                            <!-- <label for="phone"></label> -->
-                            <input id="phone" type="number" name="phone" class="input-account efruit-en" autocapitalize="words" placeholder="Phone number" required>
-                            <!-- <input id="phone" name="phone" type="number" class="input-account efruit-vi" autocapitalize="words" placeholder="Số điện thoại" required> -->
+                            <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" placeholder="Phone number" required>
 
-                            <!-- <label for="email"></label> -->
                             <input id="email" type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
                             <div class="error">
                                 <?php
-                                if (isset($_COOKIE['error_email'])) echo $_COOKIE['error_email'];
+                                if (isset($_COOKIE['error_email'])) {
+                                    echo $_COOKIE['error_email'] . "</br>";
+                                }
                                 ?>
                             </div>
                         </div>
 
                         <div class="input-submit-account">
                             <input type="submit" value="Create" name="register" class="btnRegister efruit-en">
-                            <input type="submit" value="Đăng ký" class="btnRegister efruit-vi">
+                            <input type="submit" value="Đăng ký" name="dang-ky" class="btnRegister efruit-vi">
                         </div>
                     </form>
 

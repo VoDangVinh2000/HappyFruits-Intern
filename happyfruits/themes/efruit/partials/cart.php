@@ -1,185 +1,130 @@
+
+<?php if (empty($id) || empty($product)) {
+    // echo  "<script>window.location.href='" . frontend_url() . "'</script>";
+} ?>
+
 <div class="content">
-        <!-- <div class="banner-area">
+    <!-- <div class="banner-area">
             <div class="title">
                 <h1>Your Shopping Cart</h1>
             </div>
         </div> -->
-        <div class="container tablet-screen">
-            <div class="product-area">
-                <div class="cart-table">
-                    <div style="overflow-x: auto;">
-                        <table class="cart-wishlist-table">
-                            <thead>
-                                <tr>
-                                    <th>Image</th>
-                                    <th>Product</th>
-                                    <th>Price</th>
-                                    <th>Quantity</th>
-                                    <th>Total</th>
-                                    <th>Remove</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="pro-thumbnail">
-                                        <a href="#"><img src="<?= get_theme_assets_url() ?>img/products/product-58-540x720_compact.jpg"
-                                                alt="Fish Cut Out Set - red"></a>
-                                    </td>
-                                    <td class="pro-title">
-                                        <div class="pro-title-content">
-                                            <a href="#">Fish Cut Out Set</a>
-                                            <span>red</span>
-                                        </div>
-                                    </td>
-                                    <td class="pro-price">
-                                        <div class="amount">
-                                            <span class="money">$39.00</span>
-                                        </div>
-                                    </td>
-                                    <td class="pro-quantity ">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <button id="down" class="btn-default" onclick=" down('0')"><span
+    <div class="container tablet-screen">
+        <div class="product-area">
+            <div class="cart-table">
+                <div style="overflow-x: auto;">
+                    <table class="cart-wishlist-table">
+                        <thead>
+                            <tr>
+                                <th class="efruit-en">Image</th>
+                                <th class="efruit-en">Product</th>
+                                <th class="efruit-en">Price</th>
+                                <th class="efruit-en">Quantity</th>
+                                <th class="efruit-en">Total</th>
+                                <th class="efruit-en">Remove</th>
+
+                                <th class="efruit-vi">Hình ảnh</th>
+                                <th class="efruit-vi">Sản phẩm</th>
+                                <th class="efruit-vi">Giá</th>
+                                <th class="efruit-vi">Số lượng</th>
+                                <th class="efruit-vi">Tổng giá</th>
+                                <th class="efruit-vi">Xóa</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="pro-thumbnail">
+                                    <a href="#"><img src="<?= get_theme_assets_url() ?>img/products/product-58-540x720_compact.jpg" alt="Fish Cut Out Set - red"></a>
+                                </td>
+                                <td class="pro-title">
+                                    <div class="pro-title-content">
+                                        <a href="#">{{ orderItem.name }}</a>
+                                        <!-- <a class=" efruit-vi"><//?= $product['name'] ?> </a> -->
+                                        <!-- <a class=" efruit-en"><//?= $product['english_name'] ?></a> -->
+                                        <!-- <span>red</span> -->
+                                    </div>
+                                </td>
+                                <td class="pro-price">
+                                    <div class="amount">
+                                        <span class="money">{{ orderItem.final_price }}<span class="hidden-xs"><sup>đ</sup></span></span>
+                                    </div>
+                                </td>
+                                <td class="pro-quantity ">
+                                    <div class="form-group">
+                                        <div class="my-3">
+                                            <!-- <button id="down" class="btn-default" onclick=" down('0')"><span
                                                         class="glyphicon glyphicon-minus">(-)</span></button>
                                                 <input type="text" name="myNumber" id="myNumber"
-                                                    class="form-control input-number" value="1" />
+                                                    class="form-control input-number" value="{{orderItem.quantity}}" />
 
                                                 <button id="up" class="btn-default" onclick="up('10')"><span
-                                                        class="glyphicon glyphicon-plus">(+)</span></button>
-                                            </div>
+                                                        class="glyphicon glyphicon-plus">(+)</span></button> -->
+                                            <input aria-label="quantity form-control" class="input-qty" max="100" min="1" name="" type="number" value="1">
                                         </div>
-                                    </td>
-                                    <td class="pro-subtotal">
-                                        <div class="amount">
-                                            <span class="money">$39.00</span>
-                                        </div>
-                                    </td>
-                                    <td class="pro-remove">
-                                        <a href="#">×</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pro-thumbnail">
-                                        <a href="#"><img src="<?= get_theme_assets_url() ?>img/products/product-58-540x720_compact.jpg"
-                                                alt="Fish Cut Out Set - red"></a>
-                                    </td>
-                                    <td class="pro-title">
-                                        <a href="#">Fish Cut Out Set</a>
-                                        <span>red</span>
-                                    </td>
-                                    <td class="pro-price">
-                                        <div class="amount">
-                                            <span class="money">$39.00</span>
-                                        </div>
-                                    </td>
-                                    <td class="pro-quantity ">
-                                        <div class="form-group">
-                                            <div class="input-group">
-
-                                                <button id="down" class="btn-default" onclick=" down('0')"><span
-                                                        class="glyphicon glyphicon-minus">(-)</span></button>
-
-                                                <input type="text" name="myNumber" id="myNumber"
-                                                    class="form-control input-number" value="1" />
-
-                                                <button id="up" class="btn-default" onclick="up('10')"><span
-                                                        class="glyphicon glyphicon-plus">(+)</span></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro-subtotal">
-                                        <div class="amount">
-                                            <span class="money">$39.00</span>
-                                        </div>
-                                    </td>
-                                    <td class="pro-remove">
-                                        <a href="#">×</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pro-thumbnail">
-                                        <a href="#"><img src="<?= get_theme_assets_url() ?>img/products/product-58-540x720_compact.jpg"
-                                                alt="Fish Cut Out Set - red"></a>
-                                    </td>
-                                    <td class="pro-title">
-                                        <a href="#">Fish Cut Out Set</a>
-                                        <span>red</span>
-                                    </td>
-                                    <td class="pro-price">
-                                        <div class="amount">
-                                            <span class="money">$39.00</span>
-                                        </div>
-                                    </td>
-                                    <td class="pro-quantity ">
-                                        <div class="form-group">
-                                            <div class="input-group">
-
-                                                <button id="down" class="btn-default" onclick=" down('0')"><span
-                                                        class="glyphicon glyphicon-minus">(-)</span></button>
-
-                                                <input type="text" name="myNumber" id="myNumber"
-                                                    class="form-control input-number" value="1" />
-
-                                                <button id="up" class="btn-default" onclick="up('10')"><span
-                                                        class="glyphicon glyphicon-plus">(+)</span></button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td class="pro-subtotal">
-                                        <div class="amount">
-                                            <span class="money">$39.00</span>
-                                        </div>
-                                    </td>
-                                    <td class="pro-remove">
-                                        <a href="#">×</a>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
+                                    </div>
+                                </td>
+                                <td class="pro-subtotal">
+                                    <div class="amount">
+                                        <span class="money"><sup>đ</sup></span>
+                                        <!-- <span class="money">{{ orderItem.final_price*orderItem.quantity|efruit_money }}<sup>đ</sup></span> -->
+                                    </div>
+                                </td>
+                                <td class="pro-remove">
+                                    <a href="#" ng-click="removeItem(orderItem.key)">×</a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-lg-12 col-12">
-                    <div class="cart-buttons">
-                        <input class="mybtn btn-light btn-hover-dark mr-3 mb-3" name="update" type="submit"
-                            value="Update Cart" />
-                        <a class="mybtn btn-dark btn-outline-hover-dark mr-3 mb-3" href="#">Continue Shopping</a>
-                        <a class="mybtn btn-dark btn-outline-hover-dark mb-3" href="#">Clear Cart</a>
-                    </div>
-                </div>
+
             </div>
-        </div>
-        <div class="container moblie-screen">
-            <div class="cart-total">
-                <h3>Cart Totals</h3>
-                <table>
-                    <tbody>
-                        <tr class="cart-subtotal">
-                            <th class="word-bold">Subtotal</th>
-                            <td>
-                                <span class="amount">
-                                    <span id="bk-cart-subtotal-price">
-                                        <span class=money>$78.00</span>
-                                    </span>
-                                </span>
-                            </td>
-                        </tr>
-                        <tr class="order-total">
-                            <th class="word-bold">Total</th>
-                            <td>
-                                <span class="amount">
-                                    <span id="bk-cart-subtotal-price">
-                                        <span class=money>$78.00</span>
-                                    </span>
-                                </span>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="mybtn btn-payment" name="checkout">Proceed to Checkout</button>
+            <div class="col-lg-12 col-12">
+                <div class="cart-buttons">
+                    <input class="mybtn btn-light btn-hover-dark mr-3 mb-3 efruit-vi" name="update" type="submit" value="cập nhật giỏ hàng" />
+                    <input class="mybtn btn-light btn-hover-dark mr-3 mb-3 efruit-en" name="update" type="submit" value="Update Cart" />
+                    <a class="mybtn btn-dark btn-outline-hover-dark mr-3 mb-3 efruit-vi" href="/vi">Tiếp tục mua sắm</a>
+                    <a class="mybtn btn-dark btn-outline-hover-dark mr-3 mb-3 efruit-en" href="/vi">Continue Shopping</a>
+                    <a class="mybtn btn-dark btn-outline-hover-dark mb-3 efruit-en" href="#">Clear Cart</a>
+                    <a class="mybtn btn-dark btn-outline-hover-dark mb-3 efruit-vi" href="#">Xóa giỏ hàng</a>
+                </div>
             </div>
         </div>
     </div>
+    <div class="container moblie-screen">
+        <div class="cart-total">
+            <h3 class="efruit-vi">Tổng tiền giỏ hàng</h3>
+            <h3 class="efruit-en">Cart Totals</h3>
+            <table>
+                <tbody>
+                    <!-- <tr class="cart-subtotal">
+                        <th class="word-bold efruit-vi">Giá Sản Phẩm</th>
+                        <th class="word-bold efruit-en">Subtotal</th>
+                        <td>
+                            <span class="amount">
+                                <span id="bk-cart-subtotal-price">
+                                    <span class=money>{{ orderItem.final_price }}</span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr> -->
+                    <tr class="order-total">
+                        <th class="word-bold efruit-vi">Tổng Giá</th>
+                        <th class="word-bold efruit-en">Total</th>
+                        <td>
+                            <span class="amount">
+                                <span id="bk-cart-subtotal-price">
+                                    <span class=money>$78.00</span>
+                                </span>
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <button class="mybtn btn-payment efruit-vi" name="checkout">Tiến hành kiểm tra</button>
+            <button class="mybtn btn-payment efruit-en" name="checkout">Proceed to Checkout</button>
+        </div>
+    </div>
+</div>
 
 
 
@@ -223,7 +168,7 @@
 
 
 
-        <!-- comment old
+<!-- comment old
         <button class="cart-stats"><span class="txt-bold">{{totalQuantity}}</span>&nbsp;{{__('phần')}}&nbsp;-&nbsp;<span class="txt-bold">1</span>&nbsp;{{__('người')}}</button>
         <button class="btn-reset" bind-translate="Xóa">Xóa</button>
         <div class="btn-order-group" data-toggle="modal" data-target="#share-order-group-modal" bind-translate="Đặt theo nhóm">Đặt theo nhóm</div>
@@ -232,17 +177,17 @@
 
 
 
-    <!-- </div> -->
+<!-- </div> -->
 
 
 
-    <!-- <div class="now-order-card-group">
+<!-- <div class="now-order-card-group">
         <div class="search-control"><input type="text" class="form-control" auto ng-model="search" placeholder="{{__('Nhập từ khóa để chọn món nhanh')}}" /></div>
         <div class="order-card-person"> -->
 
 
 
-            <!-- comment old
+<!-- comment old
             <div class="order-card-user">
                 <div class="row align-items-center">
                     <div class="col">

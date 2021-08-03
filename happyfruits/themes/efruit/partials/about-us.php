@@ -1,7 +1,7 @@
 <?php
 $settings = get_setting_options();
 // $content_1 = $settings['about_us_content1'];
-$content_2 = $settings['about_us_content2'];
+$content_1 = $settings['about_us_content1'];
 // $content_3 = $settings['about_us_content3'];
 // $content_4 = $settings['about_us_content4'];
 // if (!mempty($content_1, $content_2, $content_3, $content_4)) :
@@ -18,8 +18,8 @@ $content_2 = $settings['about_us_content2'];
 //         $block_class = 'col-sm-' . (12 / $counter);
 //     else
 //         $block_class = 'col-sm-6';
-if (!mempty($content_2)) :
-    $f = 'content_' . $content_2;
+if (!mempty($content_1)) :
+    $f = 'content_' . $content_1;
     $block_indexes = $f;
 ?>
     <!-- <div class="flat">
@@ -57,7 +57,7 @@ if (!mempty($content_2)) :
             ?>
             <!-- <span class="efruit-vi"><b>Happy Fruits</b> - <?= $vi_content ?></span>
             <span class="efruit-en"><b>Happy Fruits</b> - <?= $en_content ?></span> -->
-            <b>Happy Fruits</b> - <?= $content_2 ?>
+            <b>Happy Fruits</b> - <?= $content_1 ?>
         </div>
     </section>
 

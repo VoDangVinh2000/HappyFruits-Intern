@@ -1,5 +1,5 @@
 <?php
-    require_once './models/common/Customers.php';
+require_once './models/common/Customers.php';
 /**
  * Class declaration
  */
@@ -65,37 +65,73 @@ class CustomerController extends BaseController
 
     function register()
     {
+        $table_name = "customers";
+        $customers_common = new Customers;
+        $error_username = NULL;
+        $error_email = NULL;
+        $bool = false;
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
-            $table_name = "customers";
-            $customers_common = new Customers; 
             //Kiểm tra username khi người dùng đăng ký có trong database chưa
             $query_user_email = $customers_common->get_list_customer_email($_POST['email']);
-            $query_username = $customers_common->get_list_customer_username($_POST['username']);
-            $error_username = NULL;
-            $error_email = NULL;
+            $query_username = $customers_common->get_list_customer_username($_POST['username_en']);
+
             if (isset($query_user_email[0]['email'])) {
                 $error_email = 'This email has been already. Please log in account';
-                setcookie("error_email", $error_email, time() + (86400 * 30), "/");
-            } 
-            else if (isset($query_username[0]['username'])) {
-                $error_username = 'This username has been already. Please log in account';
-                setcookie("error_username", $error_username, time() + (86400 * 30), "/");
+                setcookie("error_email", $error_email, time() + 600, "/");
+                $bool = true;
             }
-             else {
-                $params['username'] = $_POST['username'];
-                $params['password'] = md5($_POST['password']);
-                $params['mobile'] = $_POST['phone'];
+            if (isset($query_username[0]['username'])) {
+                $error_username = 'This username has been already. Please log in account';
+                setcookie("error_username", $error_username, time() + 600, "/");
+                $bool = true;
+                echo "Username sai";
+            }
+            if ($bool) {
+                header('location:' . frontend_url() . "dang-ky" . '');
+            } else {
+                $params['username'] = $_POST['username_en'];
+                $params['password'] = md5($_POST['password_en']);
+                $params['mobile'] = $_POST['phone_en'];
                 $params['email'] = $_POST['email'];
                 $success = Customers::_insert($table_name, $params);
                 if ($success) {
-                   
-
-                    setcookie("error_email", $error_email, time() - (86400 * 30), "/");
-                    setcookie("error_username", $error_username, time() - (86400 * 30), "/");
+                    setcookie("error_email", $error_email, 0, "/");
+                    setcookie("error_username", $error_username, 0, "/");
                     header('location:' . frontend_url() . "dang-nhap" . '');
                 }
             }
-        } else {
+        } 
+        else if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['dang-ky'])) {
+
+            //Kiểm tra username khi người dùng đăng ký có trong database chưa
+            $query_user_email = $customers_common->get_list_customer_email($_POST['email']);
+            $query_username = $customers_common->get_list_customer_username($_POST['username_en']);
+            if (isset($query_user_email[0]['email'])) {
+                $error_email = 'Email này đã được đăng ký. Vui lòng đăng nhập tài khoản';
+                setcookie("error_email", $error_email, time() + 600, "/");
+                $bool = true;
+            }
+            if (isset($query_username[0]['username'])) {
+                $error_username = 'Tên này đã được đăng ký. Vui lòng đăng nhập tài khoản';
+                setcookie("error_username", $error_username, time() + 600, "/");
+                $bool = true;
+            }
+            if ($bool) {
+                header('location:' . frontend_url() . "dang-ky" . '');
+            } else {
+                $params['username'] = $_POST['username_en'];
+                $params['password'] = md5($_POST['password_en']);
+                $params['mobile'] = $_POST['phone_en'];
+                $params['email'] = $_POST['email'];
+                $success = Customers::_insert($table_name, $params);
+                if ($success) {
+                    setcookie("error_email", $error_email, 0, "/");
+                    setcookie("error_username", $error_username, 0, "/");
+                    header('location:' . frontend_url() . "dang-nhap" . '');
+                }
+            }
+        }
+         else {
             header('location:' . frontend_url() . '');
         }
     }
