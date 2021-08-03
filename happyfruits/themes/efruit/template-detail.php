@@ -59,7 +59,7 @@ if (isset($product['sell_price'])) {
                     <input type="text" class="form-control" placeholder="1" aria-label="1" aria-describedby="button-addon1">
                     <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button> -->
                     <!-- <input class="minus is-form" type="button" value="-"> -->
-                    <input type="text" class="input-sm form-control number" only-number name="quantity" min="0" maxlength="3" ng-model="orderItem.quantity" ng-blur="validateQuantity(orderItem.key)" ng-change="onChangeQuantity(orderItem.key)" />
+                    <!-- <input type="text" class="input-sm form-control number" only-number name="quantity" min="0" maxlength="3" ng-model="orderItem.quantity" ng-blur="validateQuantity(orderItem.key)" ng-change="onChangeQuantity(orderItem.key)" /> -->
                     <!-- <input class="plus is-form" type="button" value="+"> -->
                 </div>
                 <!-- <a class="btn-shop" role="button" ng-click="saveSelectedItemToCart()"> 
