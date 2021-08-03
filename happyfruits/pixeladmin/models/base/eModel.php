@@ -362,7 +362,7 @@ class eModel
         $result = self::_delete($this->table_name, $where_params);
     }
     
-    function select($params = array())
+    public function select($params = array())
     {
         return self::_select($this->table_name, $params);
     }

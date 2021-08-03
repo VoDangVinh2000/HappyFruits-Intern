@@ -43,6 +43,10 @@ function init_page(&$controller)
     $traiCayNhap = $controller->Products->get_all_product_by_categoryID(12);
     $sanPhamKhac = $controller->Products->get_all_product_by_categoryID(7);
 
+    //get all product by code
+    $all_product = $controller->Products->get_all_product();
+    
+     
     //image null
     $imageDefault = get_child_theme_assets_url() . "img/default-product-image.png";
     //get id product
@@ -52,10 +56,12 @@ function init_page(&$controller)
     $product = $controller->Products->get_details($id);
     
     //$traiCayNhap = $controller->get_all_product_by_categoryID(6);
-    $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
+
+        $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
         "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
         "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
-        "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault"));
+        "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product"));
+        
 }
 function url_slug($str, $options = array()) {
     // Make sure string is in UTF-8 and strip invalid UTF-8 characters

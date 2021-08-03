@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * -------------------------------------------------------
@@ -9,7 +10,7 @@
  *
  */
 
-require_once(ABSOLUTE_PATH. 'models/base/BaseProducts.php');
+require_once(ABSOLUTE_PATH . 'models/base/BaseProducts.php');
 
 /**
  * Class declaration
@@ -22,7 +23,7 @@ class Products extends BaseProducts
         parent::__construct();
         $this->class_name = 'Products';
     }
-    
+
     function get_list($filters = array(), $is_hidden = 0)
     {
         $sql = 'SELECT products.*, categories.name as category_name, categories.name_without_utf8 as category_name_without_utf8, categories.english_name as category_english_name
@@ -33,7 +34,7 @@ class Products extends BaseProducts
         $filters['products.deleted'] = 0;
         return self::_do_sql($sql, $filters, array(), 'categories.sequence_number, products.sequence_number');
     }
-    
+
     function get_list_for_selling($filters = array(), $is_hidden = 0)
     {
         $sql = 'SELECT products.product_id, products.name, products.description, products.code, products.unit, products.name_without_utf8, products.modified_dtm, products.category_id, products.promotion_price, products.enabled, products.free_choice, products.is_box, products.box_discount_rate, products.can_be_added_to_box, products.not_deliver, 
@@ -46,7 +47,7 @@ class Products extends BaseProducts
         $filters['categories.enabled'] = 1;
         return self::_do_sql($sql, $filters, array(), 'categories.sequence_number, products.sequence_number');
     }
-    
+
     function get_products_for_delivery($filters = array(), $is_hidden = 0, $force_all = 0)
     {
         $sql = 'SELECT products.product_id, products.name, products.english_name, products.name_without_utf8, products.modified_dtm, products.category_id, products.enabled, products.free_choice, products.is_box, products.box_discount_rate, products.can_be_added_to_box, 
@@ -55,7 +56,7 @@ class Products extends BaseProducts
                     categories.name as category_name, categories.name_without_utf8 as category_name_without_utf8, categories.english_name as category_english_name, prices.price
                 FROM products
                 INNER JOIN categories ON categories.category_id = products.category_id
-                INNER JOIN prices ON prices.product_id = products.product_id AND prices.type_id = '.DELIVERY_TYPE_ID;
+                INNER JOIN prices ON prices.product_id = products.product_id AND prices.type_id = ' . DELIVERY_TYPE_ID;
         if (!$force_all)
             $filters['categories.allow_delivery'] = 1;
         if ($is_hidden != -1 && is_numeric($is_hidden) && !$force_all)
@@ -77,7 +78,7 @@ class Products extends BaseProducts
                 FROM products
                 INNER JOIN categories ON categories.category_id = products.category_id
                 LEFT JOIN categories pc ON pc.category_id = categories.parent_id AND categories.parent_id = 2
-                INNER JOIN prices ON prices.product_id = products.product_id AND prices.type_id = '.DELIVERY_TYPE_ID;
+                INNER JOIN prices ON prices.product_id = products.product_id AND prices.type_id = ' . DELIVERY_TYPE_ID;
         if (!$force_all)
             $filters['categories.allow_delivery'] = 1;
         if ($is_hidden != -1 && is_numeric($is_hidden) && !$force_all)
@@ -111,7 +112,7 @@ class Products extends BaseProducts
                 FROM products_in_tags
                 INNER JOIN products ON products.product_id = products_in_tags.product_id
                 INNER JOIN categories ON categories.category_id = products.category_id
-                INNER JOIN prices ON prices.product_id = products.product_id AND prices.type_id = ".DELIVERY_TYPE_ID;
+                INNER JOIN prices ON prices.product_id = products.product_id AND prices.type_id = " . DELIVERY_TYPE_ID;
         //$filters['categories.allow_delivery'] = 1;
         $filters['is_additional'] = 0;
         if ($is_hidden != -1 && is_numeric($is_hidden))
@@ -121,7 +122,7 @@ class Products extends BaseProducts
             $filters['order_by'] = 'products_in_tags.sequence_number, products.sequence_number';
         return self::_do_select_sql($sql, $filters);
     }
-    
+
     function get_full_details($id)
     {
         $filters = array(
@@ -133,7 +134,16 @@ class Products extends BaseProducts
         return $this->select($filters);
     }
 
-    /*Intern */
+    function get_all_product(){
+        $filters = array(
+            'select' => 'products.*, prices.price,prices.type_id',
+            'join' => 'INNER JOIN prices ON prices.product_id = products.product_id',
+            'prices.type_id' => 1,
+            'products.enabled' => 1,
+            'products.is_hidden' => 0,
+        );
+        return $this->select($filters);
+    }
     function get_all_product_by_categoryID($id)
     {
         $filters = array(
@@ -149,17 +159,26 @@ class Products extends BaseProducts
         return $this->select($filters);
     }
 
+     function get_all_code()
+    {
+        $sql = "SELECT code FROM products";
+        
+        $filters['order_by'] = 'code,image';
+
+        return $this->_do_select_sql($sql, $filters);
+    }
+
     function get_details($id, $filters = array())
     {
-        if(USING_SAME_PRICE){
+        if (USING_SAME_PRICE) {
             $filters = array_merge($filters, array('products.product_id' => $id));
-            if(isset($filters['deleted'])){
+            if (isset($filters['deleted'])) {
                 $filters['products.deleted'] = $filters['deleted'];
                 unset($filters['deleted']);
             }
             $filters['select'] = 'products.*, prices.price as sell_price';
             $filters['join'] = 'LEFT JOIN prices ON prices.product_id = products.product_id AND prices.type_id = 1';
-        }else{
+        } else {
             $filters = array_merge($filters, array($this->primary_key => $id));
         }
         return self::_select_one($this->table_name, $filters);
