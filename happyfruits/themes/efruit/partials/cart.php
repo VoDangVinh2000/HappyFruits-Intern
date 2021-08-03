@@ -108,8 +108,8 @@
                 </tbody>
             </table>
             <!-- <div class="col-sm-6 text-right-sm"><button ng-click="nextStep()" class="btn btn-success wizard-next-step-btn"><span bind-translate="Nhập thông tin giao hàng">Nhập thông tin giao hàng</span> <i class="fa fa-angle-right"></i></button></div> -->
-            <button ng-click="nextStep()" class="mybtn btn-payment efruit-vi" name="checkout">Nhập thông tin giao hàng <i class="fa fa-angle-right"></i></button></button>
-            <button ng-click="nextStep()" class="mybtn btn-payment efruit-en" name="checkout">Enter shipping your detail<i class="fa fa-angle-right"></i></button></button>
+            <button type="button" onclick="window.location.href='/vi/shipping'" class="mybtn btn-payment efruit-vi" name="checkout">Nhập thông tin giao hàng <i class="fa fa-angle-right"></i></button></button>
+            <button type="button" onclick="window.location.href='/vi/shipping'" class="mybtn btn-payment efruit-en" name="checkout">Enter shipping your detail<i class="fa fa-angle-right"></i></button></button>
         </div>
     </div>
 </div>

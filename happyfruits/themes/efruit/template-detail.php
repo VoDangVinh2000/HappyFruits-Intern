@@ -68,7 +68,7 @@ if (isset($product['sell_price'])) {
                     </div>
                 </a> -->
                 <?php if (!empty($product['enabled']) && empty($product['not_deliver'])) : ?>
-                    <button class="btn-shop" type="button" onclick="window.location.href='/vi/cart'" ng-click="saveSelectedItemToCart()">
+                    <button class="btn-shop" type="button" onclick="window.location.href='/vi/shipping'" ng-click="saveSelectedItemToCart()">
                         <div class="button-content-wrapper" ng-click="showProduct(<?= $product['product_id'] ?>, $event)">
                             <span class="button-text efruit-vi"> THÊM GIỎ HÀNG</span>
                             <span class="button-text efruit-en"> ADD TO CARD</span>
