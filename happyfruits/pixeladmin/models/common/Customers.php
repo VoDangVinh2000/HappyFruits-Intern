@@ -50,7 +50,20 @@ class Customers extends BaseCustomers
             $filters['deleted'] = $deleted;
         return self::_select('customer_types', $filters, 'type_id');
     }
-
+    function get_list_customer_email($email){
+        $filters = array(
+            'select' => 'customers.*',
+            'customers.email' => $email,
+        );
+        return $this->select($filters);
+     }
+     function get_list_customer_username($username){
+        $filters = array(
+            'select' => 'customers.*',
+            'customers.username' => $username,
+        );
+        return $this->select($filters);
+     }
     /* Foody customers */
     function get_id_or_create($name, $address, $customer_type_id = '', $mobile = '')
     {

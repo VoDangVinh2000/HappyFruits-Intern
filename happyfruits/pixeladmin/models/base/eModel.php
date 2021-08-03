@@ -83,7 +83,9 @@ class eModel
         $delete_sql = "DELETE FROM $table_name";
         return self::_do_sql($delete_sql, $where_params);
     }
-    
+
+  
+
     static function _select($table_name, $params = array())
     {
         if (isset($params['select']))
@@ -325,10 +327,12 @@ class eModel
         return self::_select_one($this->table_name, $filters);
     }
     
-    function get_list($params = array())
+     function get_list($params = array())
     {
         return self::_select($this->table_name, $params);
     }
+
+  
     
     function insert($data = array())
     {

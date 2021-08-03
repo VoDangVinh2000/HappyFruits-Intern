@@ -88,7 +88,11 @@
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
                                                 <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+<<<<<<< HEAD
+                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['name'] ?></a>
+=======
                                                 <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+>>>>>>> 7ab2448df42d6082a0c9606e5c6d456e3d8957ec
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">

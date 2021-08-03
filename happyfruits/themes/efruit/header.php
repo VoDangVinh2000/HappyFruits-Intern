@@ -108,7 +108,7 @@
     <?php if (empty($is_simple_view)) : ?>
         <script async src="//code.tidio.co/<?= env('TIDIO_ID', 'oad7aakcwalvnr5sricbibisxmoja5og') ?>.js"></script>
     <?php endif; ?>
-    <script data-ad-client="ca-pub-4832470232865505" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- <script data-ad-client="ca-pub-4832470232865505" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
 </head>
 
