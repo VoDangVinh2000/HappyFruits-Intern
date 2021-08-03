@@ -78,5 +78,11 @@ class CustomerController extends BaseController
             //quay về trang home
         }
     }
+    function loginCustomer(){
+        //Mật khẩu là mã hóa md5
+        //Sau khi so sánh nếu đúng thì tạo session (mã hóa session).
+        echo "ok";
+    }
+
 }
 /* End of CustomersController class */

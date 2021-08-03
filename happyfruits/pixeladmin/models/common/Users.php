@@ -219,6 +219,9 @@ class Users extends BaseUsers
                     case 'register':
                         return 1;
                     break;
+                    case 'loginCustomer':
+                        return 1;
+                    break;
                 }
                 break;
             case 'customerdebt':

@@ -606,7 +606,6 @@
 		function sz(el, p) {
 			return parseInt($.css(el,p),10)||0;
 		}
-
 	}
 
 

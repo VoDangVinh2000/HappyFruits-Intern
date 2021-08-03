@@ -19,7 +19,7 @@
                            <a class="nav-link" style="text-transform:uppercase" bind-translate="Giới thiệu" href="#">GIỚI THIỆU</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase"  bind-translate="Cửa hàng" href="#">Cửa hàng</a>
+                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Cửa hàng" href="#">Cửa hàng</a>
                        </li>
                    </ul>
                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -31,17 +31,17 @@
                        </li>
                        <li class="nav-item">
                            <!-- <a class="nav-link" href="#">VI</a> -->
-                           <li><a ng-click="switchLanguage('vi')" ng-class="{active:settings.language=='vi'}" href="" tabindex="-1" class="nav-link">vi</a></li>
+                       <li><a ng-click="switchLanguage('vi')" ng-class="{active:settings.language=='vi'}" href="" tabindex="-1" class="nav-link">vi</a></li>
                        </li>
                        <li class="nav-item">
                            <!-- <a class="nav-link" href="#">EN</a> -->
-                           <li><a ng-click="switchLanguage('en')" ng-class="{active:settings.language=='en'}" href="" tabindex="-1" class="nav-link">en</a></li>
+                       <li><a ng-click="switchLanguage('en')" ng-class="{active:settings.language=='en'}" href="" tabindex="-1" class="nav-link">en</a></li>
                        </li>
                        <li class="nav-item">
                            <a class="nav-link" href="#" title="Vận chuyển"><i class="fas fa-shipping-fast"></i></a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#"  title="Tuyển dụng"><i class="fas fa-user-tie"></i></a>
+                           <a class="nav-link" href="#" title="Tuyển dụng"><i class="fas fa-user-tie"></i></a>
                        </li>
                    </ul>
                </div>
@@ -53,12 +53,12 @@
            <div class="container">
                <ul class="navbar-nav ms-auto right-main-nav sub-cart">
                    <li class="nav-item">
-                       <a class="nav-link position-relative btn-cart-nav" href="#">
+                       <a class="nav-link position-relative btn-cart-nav" id="show-cart" href="#">
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 13.87 16">
                                <path d="M15.8,5.219a.533.533,0,0,0-.533-.485H13.132V4.44A3.333,3.333,0,0,0,9.932,1a3.333,3.333,0,0,0-3.2,3.44v.293H4.6a.533.533,0,0,0-.533.485L3,16.419A.539.539,0,0,0,3.532,17h12.8a.539.539,0,0,0,.533-.581Zm-8-.779A2.267,2.267,0,0,1,9.932,2.067,2.267,2.267,0,0,1,12.065,4.44v.293H7.8ZM4.118,15.933,5.084,5.8H6.732v.683a1.067,1.067,0,1,0,1.067,0V5.8h4.267v.683a1.067,1.067,0,1,0,1.067,0V5.8H14.78l.965,10.133Z" transform="translate(-2.997 -1)"></path>
                            </svg><br>
-                           <span class="position-absolute translate-middle badge rounded-pill bg-cart">
-                           {{totalQuantity}}
+                           <span ng-show="totalQuantity" class="position-absolute translate-middle badge rounded-pill bg-cart">
+                               {{totalQuantity}}
                                <span class="visually-hidden">unread messages</span>
                            </span>
                        </a>
@@ -117,13 +117,12 @@
                            </a>
                        </li>
                        <li class="nav-item main-cart-btn">
-                           <a class="nav-link position-relative btn-cart-nav" href="#" id="show-cart" data-target="#ui-wizard-modal" data-toggle="modal">
+                           <a class="nav-link position-relative btn-cart-nav" id="show-cart" href="#">
                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 13.87 16">
                                    <path d="M15.8,5.219a.533.533,0,0,0-.533-.485H13.132V4.44A3.333,3.333,0,0,0,9.932,1a3.333,3.333,0,0,0-3.2,3.44v.293H4.6a.533.533,0,0,0-.533.485L3,16.419A.539.539,0,0,0,3.532,17h12.8a.539.539,0,0,0,.533-.581Zm-8-.779A2.267,2.267,0,0,1,9.932,2.067,2.267,2.267,0,0,1,12.065,4.44v.293H7.8ZM4.118,15.933,5.084,5.8H6.732v.683a1.067,1.067,0,1,0,1.067,0V5.8h4.267v.683a1.067,1.067,0,1,0,1.067,0V5.8H14.78l.965,10.133Z" transform="translate(-2.997 -1)"></path>
                                </svg><br>
-                               <span class="position-absolute translate-middle badge rounded-pill bg-cart" >
-                               {{totalQuantity}}
-
+                               <span ng-show="totalQuantity" class="position-absolute translate-middle badge rounded-pill bg-cart">
+                                   {{totalQuantity}}
                                    <span class="visually-hidden">unread messages</span>
                                </span>
                            </a>
