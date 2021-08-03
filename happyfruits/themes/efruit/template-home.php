@@ -19,7 +19,7 @@
                  <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
                  <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop"  href="fruit-baskets">
+                 <a class="btn-shop"  href="/vi/fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -49,7 +49,7 @@
                  <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
                  <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="fruit-baskets">
+                 <a class="btn-shop" href="/vi/fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -65,7 +65,7 @@
                  <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
                  <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="fruit-baskets">
+                 <a class="btn-shop" href="/vi/fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>

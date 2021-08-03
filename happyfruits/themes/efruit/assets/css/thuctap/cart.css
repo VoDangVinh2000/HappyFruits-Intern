@@ -154,7 +154,7 @@ td {
   margin: 100px 300px;
   height: 365px;
   border: 1px solid rgb(255, 255, 255);
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
 }
 
 .cart-total table {
@@ -299,7 +299,7 @@ td {
 
   /* cart total  */
   .cart-total {
-    margin: 40px 35px;
+    margin: 40px 0;
     height: 360px;
   }
 

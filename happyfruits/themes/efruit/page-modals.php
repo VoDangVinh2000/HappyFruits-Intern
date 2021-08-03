@@ -8,7 +8,7 @@ $this->load_partial('product-modals');
 <style>
     form#frmOrder label.error{display: none !important;}
 </style>
-<div id="ui-wizard-modal" class="modal fade modal-order" data-backdrop="static" tabindex="-1" role="dialog" style="display: none;">
+<!-- <div id="ui-wizard-modal" class="modal fade modal-order" data-backdrop="static" tabindex="-1" role="dialog" style="display: none;">
     <div class="modal-dialog" style="margin: 2% auto 0;">
         <div class="modal-header">
             <button data-dismiss="modal" class="close">×</button>
@@ -338,7 +338,7 @@ $this->load_partial('product-modals');
             </div> <!-- / .wizard -->
         </div> <!-- / .modal-content -->
     </div> <!-- / .modal-dialog -->
-</div>
+</div> -->
 <div role="dialog" tabindex="-1" class="modal fade in" id="modal-notices" aria-hidden="false">
     <div class="modal-dialog normal-dialog">
         <div class="modal-content"  style="background: rgba(56,56,56,0.8);">

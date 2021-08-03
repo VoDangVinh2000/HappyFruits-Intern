@@ -45,6 +45,7 @@ class PageController extends BaseController
                 $view_function($this);
             $this->data['template'] = $view_function;
             $this->load_template($template_name);
+           
         }
         else
         {

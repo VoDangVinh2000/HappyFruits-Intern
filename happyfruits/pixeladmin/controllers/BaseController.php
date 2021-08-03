@@ -405,7 +405,6 @@ class BaseController
                     $this->data[$name] = $data[$name];
             }
             //$this->data = array_merge($this->data, $data);
-            // var_dump($data);   
         }
     }
 }

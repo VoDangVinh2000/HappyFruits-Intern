@@ -10,7 +10,7 @@
                             <p>Please login using account detail bellow.</p>
                         </div>
                         <!--Form action-login-->
-                        <form action="" method="post">
+                        <form action="/loginCustomer" method="post">
                             <div class="main-create-account-fillout">
                                 <input type="text" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
 
