@@ -84,7 +84,6 @@ class CustomerController extends BaseController
                 $error_username = 'This username has been already. Please log in account';
                 setcookie("error_username", $error_username, time() + 600, "/");
                 $bool = true;
-                echo "Username sai";
             }
             if ($bool) {
                 header('location:' . frontend_url() . "dang-ky" . '');
