@@ -47,7 +47,6 @@
           }
         });
       };
-
     // Check if we should operate with some method
     if (/^(check|uncheck|toggle|indeterminate|determinate|disable|enable|update|destroy)$/i.test(options)) {
 
