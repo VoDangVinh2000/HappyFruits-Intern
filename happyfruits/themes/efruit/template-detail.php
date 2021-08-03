@@ -12,7 +12,6 @@ if (isset($product['sell_price'])) {
     echo  "<script>window.location.href='" . frontend_url() . "'</script>";
 }
 ?>
-
 <div class="container mb-5">
     <div class="row">
         <div class="col-md-6">
@@ -62,14 +61,26 @@ if (isset($product['sell_price'])) {
 
                     <!-- <input class="minus is-form" type="button" value="-"> -->
                     <input aria-label="quantity form-control" class="input-qty" max="100" min="1" name="" type="number" value="1">
+                    <!-- <input  aria-label="quantity form-control" class="input-qty" only-number name="quantity" max="100" min="1" name="" type="number" value="1" ng-model="orderItem.quantity" ng-blur="validateQuantity(orderItem.key)" ng-change="onChangeQuantity(orderItem.key)"> -->
                     <!-- <input class="plus is-form" type="button" value="+"> -->
                 </div>
-                <a class="btn-shop" href="#" ng-click="saveSelectedItemToCart()">
-                    <div class="button-content-wrapper">
-                        <span class="button-text efruit-vi">  {{editingKey?__('Cập nhật'):__('THÊM GIỎ HÀNG')}} +{{customItem.price*customItem.numberOfItems*1000|efruit_money}}</span>
-                        <span class="button-text efruit-en">ADD TO CARD</span>
-                    </div>
-                </a>
+                <?php if (!empty($product['enabled']) && empty($product['not_deliver'])) : ?>
+                        <button class="btn-shop" ng-click="saveSelectedItemToCart()">
+                            <div class="button-content-wrapper" ng-click="showProduct(<?= $product['product_id'] ?>, $event)">
+                                <span class="button-text efruit-vi"> THÊM GIỎ HÀNG</span>
+                                <span class="button-text efruit-en"> ADD TO CARD</span>
+                            </div>
+                        </button>
+                <?php elseif (empty($product['enabled'])) : ?>
+                    <div><img alt="sold-out" src="<?= get_theme_assets_url() ?>img/sold_out.png" class="sold_out efruit-vi" /><img alt="sold-out" class="sold_out efruit-en" src="<?= get_theme_assets_url() ?>img/sold_out_en.png" /></div>
+                <?php endif; ?>
+
+                <!-- <a class="btn-shop" href="#">
+                        <div class="button-content-wrapper">
+                            <span class="button-text efruit-vi"> THÊM GIỎ HÀNG</span>
+                            <span class="button-text efruit-en">ADD TO CARD</span>
+                        </div>
+                    </a> -->
             </form>
             <div class="product-description mt-3">
                 <!-- <//?php echo $product['description'] ?> -->
