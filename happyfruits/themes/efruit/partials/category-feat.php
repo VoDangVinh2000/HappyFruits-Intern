@@ -55,7 +55,8 @@
                                             </a>
                                             <a class="btn-shop btn-cart" href="">
                                                 <div class="button-content-wrapper">
-                                                    <span class="button-text">THÊM GIỎ HÀNG</span>
+                                                    <span class="button-text efruit-vi">Chi tiết</span>
+                                                    <span class="button-text efruit-en">Detail</span>
                                                 </div>
                                             </a>
                                         </div>
@@ -81,7 +82,8 @@
                                             </a>
                                             <a class="btn-shop btn-cart" href="">
                                                 <div class="button-content-wrapper">
-                                                    <span class="button-text">THÊM GIỎ HÀNG</span>
+                                                    <span class="button-text efruit-vi">Chi tiết</span>
+                                                    <span class="button-text efruit-en">Detail</span>
                                                 </div>
                                             </a>
                                         </div>
@@ -112,7 +114,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6 ">
-            <div class="row" >
+            <div class="row">
                 <?php
                 $dem2 = 0;
                 if (!empty($hopTraiCay)) {
@@ -128,7 +130,8 @@
                                                 <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                             <a class="btn-shop btn-cart" href="#">
                                                 <div class="button-content-wrapper">
-                                                    <span class="button-text" bind-translate="Thêm giỏ hàng">Thêm giỏ hàng</span>
+                                                    <span class="button-text efruit-vi">Chi tiết</span>
+                                                    <span class="button-text efruit-en">Detail</span>
                                                 </div>
                                             </a>
                                         </div>
@@ -153,7 +156,8 @@
                                                 <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                             <a class="btn-shop btn-cart" href="#">
                                                 <div class="button-content-wrapper">
-                                                    <span class="button-text" bind-translate="Thêm giỏ hàng">Thêm giỏ hàng</span>
+                                                    <span class="button-text efruit-vi">Chi tiết</span>
+                                                    <span class="button-text efruit-en">Detail</span>
                                                 </div>
                                             </a>
                                         </div>
@@ -256,7 +260,8 @@
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
-                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
                                 </div>
@@ -281,7 +286,8 @@
                                         <img src="<?= $array['image'] ?>" alt=""></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
-                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
                                 </div>
@@ -335,7 +341,8 @@
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
-                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
                                 </div>
@@ -360,7 +367,8 @@
                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                     <a class="btn-shop btn-cart" href="#">
                         <div class="button-content-wrapper">
-                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                            <span class="button-text efruit-vi">Chi tiết</span>
+                            <span class="button-text efruit-en">Detail</span>
                         </div>
                     </a>
                 </div>
@@ -416,7 +424,8 @@
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
-                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
                                 </div>
@@ -443,7 +452,8 @@
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
-                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
                                 </div>
@@ -499,7 +509,8 @@
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
-                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
                                 </div>
@@ -525,7 +536,8 @@
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
-                                            <span class="button-text">THÊM GIỎ HÀNG</span>
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
                                 </div>

@@ -290,7 +290,10 @@
        </div>
 
        <!-- Cart -->
-       <div class="cart-modal">
+
+       <?php $this->load_partial('cart-backup') ?>
+
+       <!-- <div class="cart-modal">
            <div class="cart-lightbox"></div>
            <div class="offcanvas-cart">
                <div class="inner">
@@ -306,5 +309,5 @@
                    </div>
                </div>
            </div>
-       </div>
+       </div> -->
    </header>
