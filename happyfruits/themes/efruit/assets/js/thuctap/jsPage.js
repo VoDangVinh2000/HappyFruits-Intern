@@ -56,7 +56,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         window.onload = (event) => {
             // setTimeout(() => {
-            console.log("Delete cookie");
             let allcookie = document.cookie;
             let cookiearray = allcookie.split(';');
             let str = "";
@@ -96,7 +95,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
     }
     else{
-        
+
     }
    
 });
