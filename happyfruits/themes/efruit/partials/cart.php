@@ -12,6 +12,7 @@
                         <thead>
                             <tr>
                                 <th class="hidden-xs hidden-sm">#</th>
+                                <th class="hidden-xs hidden-sm" bind-translate="Ảnh">Ảnh</th>
                                 <th bind-translate="Tên món">Tên món</th>
                                 <th class="hidden-xs hidden-sm" bind-translate="Tùy chọn">Tùy chọn</th>
                                 <th style="min-width: 50px;" bind-translate="SL">SL</th>
@@ -23,6 +24,13 @@
                         <tbody>
                             <tr ng-repeat="orderItem in orderedItems">
                                 <td class="hidden-xs hidden-sm">{{ $index+1 }}</td>
+                                <?php if(!empty($all_product)){ 
+                                    $codeA = '{{$orderItem.code}}';
+                                    foreach($all_product as $array){
+                                        if($array['code'] == $codeA){ 
+                                    ?>
+                                    <td><?= '{{$orderItem.code}}' ?></td>
+                                <?php }}}?>
                                 <td class="hidden-xs hidden-sm">{{orderItem.code}} - {{ settings.language=='en'?orderItem.english_name:orderItem.name }}
                                     <div ng-show="orderItem.custom.taste != 6 || orderItem.custom.description" class="sub_product">
                                         <p>&nbsp;<span ng-show="orderItem.custom.taste != 6">{{__(tasteOptions[orderItem.custom.taste])}}.</span><span ng-show="orderItem.custom.description">&nbsp;{{orderItem.custom.description}}.</span></p>

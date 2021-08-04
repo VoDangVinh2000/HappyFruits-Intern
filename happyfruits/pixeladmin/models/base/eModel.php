@@ -199,7 +199,7 @@ class eModel
                     $where_str .= ' AND ';
                 if ($f == 'where')
                     $where_str .= "($v)";
-                elseif ($f == 'or')
+                else if ($f == 'or')
                 {
                     if (is_array($v) && !empty($v))
                     {
@@ -366,7 +366,7 @@ class eModel
         $result = self::_delete($this->table_name, $where_params);
     }
     
-    function select($params = array())
+    public function select($params = array())
     {
         return self::_select($this->table_name, $params);
     }

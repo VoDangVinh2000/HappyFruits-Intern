@@ -159,12 +159,6 @@ h6 {
     justify-content: space-between;
 }
 
-
-/* .link-to-login{
-    background: #000;
-    display: flex;
-} */
-
 .end-form-createaccount a {
     color: #333333;
     transition: all 0.3s ease 0s;

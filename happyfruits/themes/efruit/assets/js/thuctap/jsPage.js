@@ -56,7 +56,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         window.onload = (event) => {
             // setTimeout(() => {
-            console.log("Delete cookie");
             let allcookie = document.cookie;
             let cookiearray = allcookie.split(';');
             let str = "";
@@ -85,13 +84,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 window.addEventListener('DOMContentLoaded', (event) => {
     const btnShowPass = document.querySelector('#btnShowPass');
     const password = document.querySelector('#password');
-    btnShowPass.addEventListener("click", () => {
+
+    if(btnShowPass){
+        btnShowPass.addEventListener("click", () => {
         if (password.type === "password") {
             password.type = "text";
         } else {
             password.type = "password";
         }
     });
+    }
+    else{
+
+    }
+   
 });
 
 function setCookie(cname, cvalue, exMins) {
