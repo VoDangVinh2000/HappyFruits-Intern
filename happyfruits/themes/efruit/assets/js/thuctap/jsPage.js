@@ -85,13 +85,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
 window.addEventListener('DOMContentLoaded', (event) => {
     const btnShowPass = document.querySelector('#btnShowPass');
     const password = document.querySelector('#password');
-    btnShowPass.addEventListener("click", () => {
+
+    if(btnShowPass){
+        btnShowPass.addEventListener("click", () => {
         if (password.type === "password") {
             password.type = "text";
         } else {
             password.type = "password";
         }
     });
+    }
+    else{
+        
+    }
+   
 });
 
 function setCookie(cname, cvalue, exMins) {

@@ -199,7 +199,7 @@ class eModel
                     $where_str .= ' AND ';
                 if ($f == 'where')
                     $where_str .= "($v)";
-                elseif ($f == 'or')
+                else if ($f == 'or')
                 {
                     if (is_array($v) && !empty($v))
                     {
