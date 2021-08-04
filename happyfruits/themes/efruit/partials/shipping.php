@@ -81,8 +81,8 @@
                             </table>
                             <!-- <div class="col-sm-6 text-right-sm"><button ng-click="nextStep()" class="btn btn-success wizard-next-step-btn"><span bind-translate="Nhập thông tin giao hàng">Nhập thông tin giao hàng</span> <i class="fa fa-angle-right"></i></button></div> -->
                             <div class="cart-dir mt-5">
-                                <a class="col-sm-6 text-right-sm mybtn  btn-payment efruit-vi" href="/vi">Tiếp tục mua sắm</a>
-                                <a class="col-sm-6 text-right-sm mybtn btn-dark btn-outline-hover-dark efruit-en" href="/vi">Continue Shopping</a>
+                                <a style="background-color: #72a499" class="col-sm-6 text-right-sm mybtn  btn-payment efruit-vi" href="/vi">Tiếp tục mua sắm</a>
+                                <a style="background-color: #72a499" class="col-sm-6 text-right-sm mybtn btn-payment btn-outline-hover-dark efruit-en" href="/vi">Continue Shopping</a>
                             </div>
 
                         </div>
@@ -92,7 +92,7 @@
 
                 <div id="step2" ng-show="step == 2">
                     <form style="margin-bottom: 10px;" method="post" id="frmOrder" name="frmOrder">
-                        <div class="col-lg-6 col-md-6 no-padding" id="distance_calculator">
+                        <div class="col-lg-12 col-md-12 no-padding" id="distance_calculator">
                             <div class="map-container" style="position: relative;">
                                 <div id="customControl" class="hidden-xs" style="padding: 5px;background: #fff;opacity: 0.9;font-size: 12px; position: absolute; top: 0; right: 11px;z-index: 10;">
                                     <span><span bind-translate="Khoảng cách">Khoảng cách</span>: <b class="green-text">{{customer.distance}}km</b></span>
@@ -115,81 +115,88 @@
                                 </div>
                                 <p style="font-size: 90%;font-style: italic;padding-left: 10px;">* <span bind-translate="Kéo dấu đỏ để chọn lại vị trí của bạn">Kéo dấu đỏ để chọn lại vị trí của bạn</span></p>
                             </div>
-                            <?php if (env('NEED_BOOKER_DETAILS')) : ?>
-                                <div class="block-add-address">
-                                    <div class="col-sm-12 col-md-12">
-                                        <h5 class="txt-bold font16" bind-translate="Thông tin người đặt">Thông tin người đặt</h5>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="input-group">
-                                            <input placeholder="{{__('Họ và tên')}}" type="text" class="form-control" ng-model="customer.booker_fullname" name="fullname" required="required" />
-                                            <i class="fa fa-user"></i>
+                            <div class="row address" style="display: flex;justify-content: space-between;">
+                                <div class="col-md-5">
+                                    <?php if (env('NEED_BOOKER_DETAILS')) : ?>
+                                        <div class="block-add-address">
+                                            <div class="col-sm-12 col-md-10">
+                                                <h5 class="txt-bold font16" bind-translate="Thông tin người đặt">Thông tin người đặt</h5>
+                                            </div>
+                                            <div class="col-sm-12 col-md-10">
+                                                <div class="input-group">
+                                                    <input placeholder="{{__('Họ và tên')}}" type="text" class="form-control" ng-model="customer.booker_fullname" name="fullname" required="required" />
+                                                    <!-- <i class="fa fa-user"></i> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-10">
+                                                <div class="input-group">
+                                                    <input placeholder="{{__('SĐT')}}" type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+                                                    <!-- <i class="fa fa-phone fa-rotate-90"></i> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-10">
+                                                <div class="input-group">
+                                                    <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
+                                                    <!-- <i class="fa fa-envelope" style="font-size: 9px;"></i> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-10">
+                                                <textarea class="form-control mt10" rows="2" ng-model="customer.message_to_receiver" placeholder="{{__('Thông điệp gửi người nhận')}}."></textarea>
+                                            </div>
+                                            <div class="clearfix"></div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="input-group">
-                                            <input placeholder="{{__('SĐT')}}" type="text" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
-                                            <i class="fa fa-phone fa-rotate-90"></i>
+                                        <br />
+                                    <?php endif; ?>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="block-add-address">
+                                        <?php if (env('NEED_BOOKER_DETAILS')) : ?>
+                                            <div class="col-sm-12 col-md-10">
+                                                <h5 class="txt-bold font16" bind-translate="Thông tin người nhận">Thông tin người nhận</h5>
+                                            </div>
+                                        <?php endif; ?>
+                                        <div class="col-sm-12 col-md-10">
+                                            <div class="input-group">
+                                                <input placeholder="{{__('Địa chỉ')}}" type="text" class="form-control mt10" id="customer_address" ng-model="customer.address" name="address" required="required" />
+                                                <!-- <i class="fa fa-map-marker"></i> -->
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="input-group">
-                                            <input placeholder="Email" type="email" class="form-control email" ng-model="customer.email" name="email" required="required" />
-                                            <i class="fa fa-envelope" style="font-size: 9px;"></i>
+                                        <div class="col-sm-12 col-md-10 district-container hidden">
+                                            <div class="input-group mt10">
+                                                <?= html_select_district('form-control', "-- {{__('Quận')}} *", 'ng-model="customer.district" j-change id="district_selector"', 1) ?>
+                                                <!-- <i class="fa fa-location-arrow"></i> -->
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-sm-12 col-md-12">
-                                        <textarea class="form-control mt10" rows="2" ng-model="customer.message_to_receiver" placeholder="{{__('Thông điệp gửi người nhận')}}."></textarea>
-                                    </div>
-                                    <div class="clearfix"></div>
-                                </div>
-                                <br />
-                            <?php endif; ?>
-                            <div class="block-add-address">
-                                <?php if (env('NEED_BOOKER_DETAILS')) : ?>
-                                    <div class="col-sm-12 col-md-12">
-                                        <h5 class="txt-bold font16" bind-translate="Thông tin người nhận">Thông tin người nhận</h5>
-                                    </div>
-                                <?php endif; ?>
-                                <div class="col-sm-12 col-md-12">
-                                    <div class="input-group">
-                                        <input placeholder="{{__('Địa chỉ')}}" type="text" class="form-control" id="customer_address" ng-model="customer.address" name="address" required="required" />
-                                        <i class="fa fa-map-marker"></i>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-12 district-container hidden">
-                                    <div class="input-group">
-                                        <?= html_select_district('form-control', "-- {{__('Quận')}} *", 'ng-model="customer.district" j-change id="district_selector"', 1) ?>
-                                        <i class="fa fa-location-arrow"></i>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="input-group">
-                                        <input placeholder="{{__('Họ và tên')}}" type="text" class="form-control" ng-model="customer.fullname" name="fullname" required="required" />
-                                        <i class="fa fa-user"></i>
-                                    </div>
-                                </div>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="input-group">
-                                        <input placeholder="{{__('SĐT')}}" type="text" class="form-control" only-number ng-model="customer.mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
-                                        <i class="fa fa-phone fa-rotate-90"></i>
-                                    </div>
-                                </div>
-                                <?php if (!env('NEED_BOOKER_DETAILS')) : ?>
-                                    <div class="col-sm-12 col-md-6">
-                                        <div class="input-group">
-                                            <input placeholder="Email" type="email" class="form-control email" ng-model="customer.email" name="email" required="required" />
-                                            <i class="fa fa-envelope" style="font-size: 9px;"></i>
+                                        <div class="col-sm-12 col-md-10">
+                                            <div class="input-group">
+                                                <input placeholder="{{__('Họ và tên')}}" type="text" class="form-control mt10" ng-model="customer.fullname" name="fullname" required="required" />
+                                                <!-- <i class="fa fa-user"></i> -->
+                                            </div>
                                         </div>
-                                    </div>
-                                <?php endif; ?>
-                                <div class="col-sm-12 col-md-6">
-                                    <div class="custom-checkbox-with-tick" style="margin-top: 5px;">
-                                        <input type="checkbox" id="remember_info" ng-checked="customer.is_remember" ng-click="save_customer_info()" />
-                                        <label for="remember_info" bind-translate="Ghi nhớ">Ghi nhớ</label>
+                                        <div class="col-sm-12 col-md-10">
+                                            <div class="input-group">
+                                                <input placeholder="{{__('SĐT')}}" type="text" class="form-control mt10" only-number ng-model="customer.mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+                                                <!-- <i class="fa fa-phone fa-rotate-90"></i> -->
+                                            </div>
+                                        </div>
+                                        <?php if (!env('NEED_BOOKER_DETAILS')) : ?>
+                                            <div class="col-sm-12 col-md-10">
+                                                <div class="input-group">
+                                                    <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
+                                                    <i class="fa fa-envelope" style="font-size: 9px;"></i>
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+                                        <div class="col-sm-12 col-md-10">
+                                            <div class="custom-checkbox-with-tick" style="margin-top: 5px;">
+                                                <input type="checkbox" id="remember_info" ng-checked="customer.is_remember" ng-click="save_customer_info()" />
+                                                <label for="remember_info" bind-translate="Ghi nhớ">Ghi nhớ</label>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
                                     </div>
                                 </div>
-                                <div class="clearfix"></div>
+
                             </div>
                             <input type="text" style="width: 0; height: 1px; visibility: hidden;" ng-model="customer.lat" id="customer_lat" value="" />
                             <input type="text" style="width: 0; height: 1px; visibility: hidden;" ng-model="customer.lng" id="customer_lng" value="" />
@@ -197,13 +204,48 @@
                             <input type="text" style="width: 0; height: 1px; visibility: hidden;" j-change ng-model="customer.district" id="district" value="" />
                             <input type="hidden" name="branch_id" id="branch_id" value="" />
                         </div>
-                        <div class="col-lg-6 col-md-6 no-padding">
+                        <div class="col-lg-12 col-md-12 no-padding">
                             <div class="col-sm-12">
                                 <div class="form_errors" ng-hide="validateShipping()">
                                     <span ng-show="customer.distance<=<?= MAX_DISTANCE ?>">{{__('Xin lỗi. Tổng đơn hàng thấp nhất là 50.000đ')}}. {{__('Vui lòng đặt hàng thêm')}}.</span>
                                     <span ng-show="customer.distance><?= MAX_DISTANCE ?>">{{__('Xin lỗi. Cửa hàng không phục vụ ở khoảng cách lớn hơn')}} <?= MAX_DISTANCE ?>km.</span>
                                 </div>
-                                <div class="order-list hidden-xs">
+
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th class="hidden-xs hidden-sm">#</th>
+                                            <th bind-translate="Tên món">Tên món</th>
+                                            <th class="hidden-xs hidden-sm" bind-translate="Thành tiền">Thành tiền</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="order-item" ng-repeat="orderItem in orderedItems">
+                                            <td class="hidden-xs hidden-sm"><span class="order-item-number">{{orderItem.quantity}}</span></td>
+                                            <td class="hidden-xs hidden-sm">
+                                                <div class="order-item-info">
+                                                    <div class="order-item-name">
+                                                        <span class="txt-bold">{{orderItem.code}} - {{ settings.language=='en'?orderItem.english_name:orderItem.name }}&nbsp;</span>
+                                                        <span ng-show="orderItem.total_selected_sub" class="note-toping">
+                                                            [<span ng-repeat="sp in orderItem.selected_sub_products">{{sp.name}}{{$last ? '' : ', '}}</span>]
+                                                        </span>
+                                                    </div>
+                                                    <div ng-show="orderItem.custom.taste != 6 || orderItem.custom.description" class="order-item-note">
+                                                        <span ng-show="orderItem.custom.taste != 6">{{__(tasteOptions[orderItem.custom.taste])}}.</span><span ng-show="orderItem.custom.description">&nbsp;{{orderItem.custom.description}}.</span>
+                                                    </div>
+                                                    <div ng-show="orderedBoxes[orderItem.product_id]" class="sub_product">
+                                                        <span ng-repeat="(item_id, box_item) in orderedBoxes[orderItem.product_id]">{{box_item.quantity}}{{box_item.unit}} {{ settings.language=='en'?items[item_id].english_name:items[item_id].name }}{{$last ? '' : ', '}}</span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="hidden-xs hidden-sm">
+                                                <div class="order-item-price">{{ orderItem.final_price*orderItem.quantity*1000|efruit_money }}<sup>đ</sup></div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <!-- <div class="order-list hidden-xs">
                                     <div class="order-item" ng-repeat="orderItem in orderedItems">
                                         <span class="order-item-number">{{orderItem.quantity}}</span>
                                         <div class="order-item-info">
@@ -222,32 +264,32 @@
                                         </div>
                                         <div class="order-item-price">{{ orderItem.final_price*orderItem.quantity*1000|efruit_money }}<sup>đ</sup></div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="row mt10">
-                                    <div class="col-xs-6 col-sm-6"><span bind-translate="Tổng cộng">Tổng cộng</span> <span class="txt-bold font16">{{ totalQuantity }}</span> <span bind-translate="phần">phần</span></div>
-                                    <div class="col-xs-6 col-sm-6 txt-bold text-right">{{(subtotal)*1000|efruit_money}}<sup>đ</sup></div>
+                                    <div style="font-size: 1rem;" class="col-xs-6 col-sm-6"><span bind-translate="Tổng cộng">Tổng cộng</span> <span class="txt-bold font16">{{ totalQuantity }}</span> <span bind-translate="phần">phần</span></div>
+                                    <div style="font-size: 1rem;" class="col-xs-6 col-sm-6 txt-bold text-right">{{(subtotal)*1000|efruit_money}}<sup>đ</sup></div>
                                 </div>
                                 <div class="row mt10" ng-if="discount_amount">
-                                    <div class="col-xs-6 col-sm-6"><span bind-translate="Chiết khấu">Chiết khấu</span><span ng-show="discount_amount"> ({{discount*100}}%)</span></div>
-                                    <div class="col-xs-6 col-sm-6 text-right">-{{discount_amount*1000|efruit_money}}<sup>đ</sup></div>
+                                    <div style="font-size: 1rem;" class="col-xs-6 col-sm-6"><span bind-translate="Chiết khấu">Chiết khấu</span><span ng-show="discount_amount"> ({{discount*100}}%)</span></div>
+                                    <div style="font-size: 1rem;" class="col-xs-6 col-sm-6 text-right">-{{discount_amount*1000|efruit_money}}<sup>đ</sup></div>
                                 </div>
                                 <div class="row mt10" ng-if="has_VAT">
-                                    <div class="col-xs-6 col-sm-6">VAT (10%)</div>
-                                    <div class="col-xs-6 col-sm-6 text-right">{{VAT*(subtotal-discount_amount)*1000|efruit_money}}<sup>đ</sup></div>
+                                    <div style="font-size: 1rem;" class="col-xs-6 col-sm-6">VAT (10%)</div>
+                                    <div style="font-size: 1rem;" class="col-xs-6 col-sm-6 text-right">{{VAT*(subtotal-discount_amount)*1000|efruit_money}}<sup>đ</sup></div>
                                 </div>
                                 <div class="promotion_section row mt10">
-                                    <div class="col-sm-4"><span bind-translate="Mã giảm giá">Mã giảm giá</span></div>
-                                    <div class="col-sm-8 text-right">
+                                    <div style="font-size: 1rem;" class="col-sm-4"><span bind-translate="Mã giảm giá">Mã giảm giá</span></div>
+                                    <div style="font-size: 1rem;" class="col-sm-8 text-right">
                                         <input type="text" class="promotion_code_input" placeholder="{{__('Nhập mã khuyến mãi')}}" ng-model="promotion_code" />&nbsp;<a class="btn btn-success" tabindex="-1" href="" bind-translate="Áp dụng" ng-click="checkPromotionCode($event)">Áp dụng</a>
                                     </div>
                                 </div>
                                 <div class="row mt10" ng-if="validForShipping">
-                                    <div class="col-xs-8 col-sm-6"><span bind-translate="Phí giao hàng">Phí giao hàng</span>&nbsp;<span class="distance green-text"></span> <a href="<?= get_theme_assets_url() . '/img/new-shipping-fee.png?t=' . date('Ymd') ?>" class="fancybox" rel="shipping-fee"><span style="color: #fff;background: #999;padding: 2px 5px;border-radius: 10px;font-size: 12px;font-weight: bold;">?</span></a></div>
-                                    <div class="col-xs-4 col-sm-6 text-right"><span ng-hide="customer.free_ship && shipping_fee > 0">&nbsp;{{shipping_fee*1000|efruit_money}}<sup>đ</sup></span><span class="strike" ng-show="customer.free_ship && shipping_fee > 0">&nbsp;{{shipping_fee*1000|efruit_money}}<sup>đ</sup></span></div>
+                                    <div style="font-size: 1rem;" class="col-xs-8 col-sm-6"><span bind-translate="Phí giao hàng">Phí giao hàng</span>&nbsp;<span class="distance green-text"></span> <a href="<?= get_theme_assets_url() . '/img/new-shipping-fee.png?t=' . date('Ymd') ?>" class="fancybox" rel="shipping-fee"><span style="color: #fff;background: #999;padding: 2px 5px;border-radius: 10px;font-size: 12px;font-weight: bold;">?</span></a></div>
+                                    <div style="font-size: 1rem;" class="col-xs-4 col-sm-6 text-right"><span ng-hide="customer.free_ship && shipping_fee > 0">&nbsp;{{shipping_fee*1000|efruit_money}}<sup>đ</sup></span><span class="strike" ng-show="customer.free_ship && shipping_fee > 0">&nbsp;{{shipping_fee*1000|efruit_money}}<sup>đ</sup></span></div>
                                 </div>
                                 <div class="row mt10">
-                                    <div class="col-xs-6 col-sm-6 txt-bold font18"><span bind-translate="Tổng cộng">Tổng cộng</span></div>
-                                    <div class="col-xs-6 col-sm-6 text-right txt-bold font18">{{(subtotal-discount_amount+shipping_fee + VAT*(subtotal-discount_amount))*1000|efruit_money}}<sup>đ</sup></div>
+                                    <div style="font-size: 1rem;" class="col-xs-6 col-sm-6 txt-bold font18"><span bind-translate="Tổng cộng">Tổng cộng</span></div>
+                                    <div style="font-size: 1rem;" class="col-xs-6 col-sm-6 text-right txt-bold font18">{{(subtotal-discount_amount+shipping_fee + VAT*(subtotal-discount_amount))*1000|efruit_money}}<sup>đ</sup></div>
                                 </div>
                                 <div class="row mt10">
                                     <div class="col-sm-12">
@@ -317,11 +359,13 @@
                             </div>
                         </div>
                         <div class="clearfix"></div>
-                        <div class="col-xs-6 col-md-3 text-center mb10-md">
-                            <button ng-click="previousStep()" class="btn btn-info wizard-prev-step-btn full-width"><i class="fa fa-angle-left"></i> <span bind-translate="Xem đơn hàng">Xem đơn hàng</span></button>
-                        </div>
-                        <div class="col-xs-6 col-md-9 text-center">
-                            <button ng-disabled="frmOrder.$invalid || minTotalError || customer.distance <= 0 || !accept_terms" ng-click="nextStep()" class="btn btn-success wizard-next-step-btn full-width"><i class="fa fa-check"></i> <span>{{ btnBookOrEditLabel }}</span><span class="pull-right hidden-xs">{{(subtotal-discount_amount+shipping_fee + VAT*(subtotal-discount_amount))*1000|efruit_money}}<sup>đ</sup></span></button>
+                        <div class="row mt10">
+                            <div class="col-xs-3 col-md-3 text-center mb10-md">
+                                <button ng-click="previousStep()" class="btn btn-info wizard-prev-step-btn full-width"><i class="fa fa-angle-left"></i> <span bind-translate="Xem đơn hàng">Xem đơn hàng</span></button>
+                            </div>
+                            <div class="col-xs-6 col-md-9 text-center">
+                                <button ng-disabled="frmOrder.$invalid || minTotalError || customer.distance <= 0 || !accept_terms" ng-click="nextStep()" class="btn btn-success wizard-next-step-btn full-width"><i class="fa fa-check"></i> <span>{{ btnBookOrEditLabel }}</span><span class="pull-right hidden-xs">{{(subtotal-discount_amount+shipping_fee + VAT*(subtotal-discount_amount))*1000|efruit_money}}<sup>đ</sup></span></button>
+                            </div>
                         </div>
                         <div class="clearfix"></div>
                     </form>
