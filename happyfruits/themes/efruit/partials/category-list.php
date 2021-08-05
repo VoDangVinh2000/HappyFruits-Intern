@@ -18,12 +18,20 @@
                                         <?php for($i = $col_length*($idx-1); $i < min($col_length*$idx, $length); $i++): ?>
                                         <li class="menu-item menu-level-2 ">
                                             <?php if(!empty($tile['sub_items'][$i]['category_id'])):?>
-                                                <a <?=$is_current_page?'data-scroll-to=".product-cat-'.$tile['sub_items'][$i]['category_id'].'"':''?> href="<?=$tile['href']?>#to-cat-<?=$tile['sub_items'][$i]['category_id']?>">
+                                                <!-- <a </?=$is_current_page?'data-scroll-to=".product-cat-'.$tile['sub_items'][$i]['category_id'].'"':''?> href="</?=$tile['href']?>#to-cat-</?=$tile['sub_items'][$i]['category_id']?>">
+                                                    <span class="efruit-vi"></?=$tile['sub_items'][$i]['name']?></span>
+                                                    <span class="efruit-en efruitjs"></?=$tile['sub_items'][$i]['english_name']?></span>
+                                                </a> -->
+                                                <a <?=$is_current_page?'data-scroll-to=".product-cat-'.$tile['sub_items'][$i]['category_id'].'"':''?> href="/vi/fruit-baskets#to-cat-<?=$tile['sub_items'][$i]['category_id']?>">
                                                     <span class="efruit-vi"><?=$tile['sub_items'][$i]['name']?></span>
                                                     <span class="efruit-en efruitjs"><?=$tile['sub_items'][$i]['english_name']?></span>
                                                 </a>
                                             <?php elseif(!empty($tile['sub_items'][$i]['tag_id'])):?>
-                                                <a <?=$is_current_page?'data-scroll-to=".product-tag-'.$tile['sub_items'][$i]['tag_id'].'"':''?> href="<?=$tile['href']?>#to-tag-<?=$tile['sub_items'][$i]['tag_id']?>">
+                                                <!-- <a </?=$is_current_page?'data-scroll-to=".product-tag-'.$tile['sub_items'][$i]['tag_id'].'"':''?> href="</?=$tile['href']?>#to-tag-</?=$tile['sub_items'][$i]['tag_id']?>">
+                                                    <span class="efruit-vi"></?=$tile['sub_items'][$i]['tag_name']?></span>
+                                                    <span class="efruit-en efruitjs"></?=$tile['sub_items'][$i]['english_name']?></span>
+                                                </a> -->
+                                                <a <?=$is_current_page?'data-scroll-to=".product-tag-'.$tile['sub_items'][$i]['tag_id'].'"':''?> href="/vi/hamper-box-fruits#to-tag-<?=$tile['sub_items'][$i]['tag_id']?>">
                                                     <span class="efruit-vi"><?=$tile['sub_items'][$i]['tag_name']?></span>
                                                     <span class="efruit-en efruitjs"><?=$tile['sub_items'][$i]['english_name']?></span>
                                                 </a>

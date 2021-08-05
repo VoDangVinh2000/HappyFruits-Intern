@@ -10,13 +10,13 @@
                <div class="collapse navbar-collapse" id="topSubNav">
                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Trang chủ" href="#">TRANG CHỦ</a>
+                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Trang chủ" href="/vi">TRANG CHỦ</a>
                        </li>
                        <li class="nav-item">
                            <a class="nav-link" style="text-transform:uppercase" href="#">Blog</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Giới thiệu" href="#">GIỚI THIỆU</a>
+                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Giới thiệu" href="/vi/gioi-thieu">GIỚI THIỆU</a>
                        </li>
                        <li class="nav-item">
                            <a class="nav-link" style="text-transform:uppercase" bind-translate="Cửa hàng" href="#">Cửa hàng</a>
@@ -24,10 +24,10 @@
                    </ul>
                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                        <li class="nav-item">
-                           <a class="nav-link" href="#"><i class="fas fa-phone-volume"></i> 0938.70.70.15</a>
+                           <a class="nav-link" href="/vi/lien-he/"><i class="fas fa-phone-volume"></i> 0938.70.70.15</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                           <a class="nav-link" href="https://www.facebook.com/happyfruitsvietnam/"><i class="fab fa-facebook-f"></i></a>
                        </li>
                        <li class="nav-item">
                            <!-- <a class="nav-link" href="#">VI</a> -->
@@ -41,7 +41,7 @@
                            <a class="nav-link" href="#" title="Vận chuyển"><i class="fas fa-shipping-fast"></i></a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#" title="Tuyển dụng"><i class="fas fa-user-tie"></i></a>
+                           <a class="nav-link" href="/tuyen-dung" title="Tuyển dụng"><i class="fas fa-user-tie"></i></a>
                        </li>
                    </ul>
                </div>
@@ -138,8 +138,8 @@
                <div class="collapse navbar-collapse" id="main-nav">
                    <ul class="navbar-nav mx-auto">
                        <li class="nav-item dropdown has-megamenu">
-                           <a class="nav-link dropdown-toggle efruit-vi" href="#" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
-                           <a class="nav-link dropdown-toggle efruit-en" href="#" data-bs-toggle="dropdown">FRUIT BASKETS</a>
+                           <a class="nav-link dropdown-toggle efruit-vi" href="/vi/fruit-baskets" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle efruit-en" href="/vi/fruit-baskets" data-bs-toggle="dropdown">FRUIT BASKETS</a>
                            <div class="dropdown-menu megamenu" role="menu">
                                <div class="row g-3">
                                    <div class="col-lg-3 col-6">
@@ -198,8 +198,8 @@
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item dropdown has-megamenu">
-                           <a class="nav-link dropdown-toggle efruit-vi" href="#" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
-                           <a class="nav-link dropdown-toggle efruit-en" href="#" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
+                           <a class="nav-link dropdown-toggle efruit-vi" href="/vi/hamper-box-fruits" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle efruit-en" href="/vi/hamper-box-fruits" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
                            <div class="dropdown-menu megamenu" role="menu">
                                <div class="row g-3">
                                    <div class="col-lg-3 col-6">
@@ -258,16 +258,16 @@
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link efruit-vi" href="#">HOA TRÁI CÂY</a>
-                           <a class="nav-link efruit-en" href="#">FRUIT BOUQUETS</a>
+                           <a class="nav-link efruit-vi" href="/vi/fruit-bouquet">HOA TRÁI CÂY</a>
+                           <a class="nav-link efruit-en" href="/vi/fruit-bouquet">FRUIT BOUQUETS</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link efruit-vi" href="#">ĐẶC SẢN VIỆT</a>
-                           <a class="nav-link efruit-en" href="#">VIET NAM FRUIT SPECIAL</a>
+                           <a class="nav-link efruit-vi" href="/vi/trai-cay-dac-san-viet">ĐẶC SẢN VIỆT</a>
+                           <a class="nav-link efruit-en" href="/vi/trai-cay-dac-san-viet">VIET NAM FRUIT SPECIAL</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link efruit-vi" href="#">TRÁI CÂY NHẬP</a>
-                           <a class="nav-link efruit-en" href="#">FRESH FRUITS</a>
+                           <a class="nav-link efruit-vi" href="/vi/trai-cay-nhap-khau">TRÁI CÂY NHẬP</a>
+                           <a class="nav-link efruit-en" href="/vi/trai-cay-nhap-khau">FRESH FRUITS</a>
                        </li>
                    </ul>
 
