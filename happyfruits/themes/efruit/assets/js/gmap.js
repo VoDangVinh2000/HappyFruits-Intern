@@ -207,7 +207,7 @@ function initializeGmap() {
             $('#district').trigger('change');
             $('.district-container').removeClass('hidden');
             $('.district-container #district_selector').attr('required', 'required');
-            window.alert("Không tìm thấy thông tin cho địa chỉ: '" + place.name + "'. Vui lòng chọn thêm quận");
+            window.alert("Không tìm thấy thông tin cho địa chỉ bla bla ạdnajsdnaksnd: '" + place.name + "'. Vui lòng chọn thêm quận");
             return;
         }
         $('.district-container').addClass('hidden');

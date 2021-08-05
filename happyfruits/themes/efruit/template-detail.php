@@ -54,22 +54,17 @@ if (isset($product['sell_price'])) {
                 <span class="delete-price"><?php echo $oldPrice ?>₫</span>
             </div>
             <form action="#" method="POST">
-                <div class="input-group my-3">
-                    <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon1">+</button>
+                <!-- <div class="input-group my-3"> -->
+                <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon1">+</button>
                     <input type="text" class="form-control" placeholder="1" aria-label="1" aria-describedby="button-addon1">
                     <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button> -->
-                    <!-- <input class="minus is-form" type="button" value="-"> -->
-                    <!-- <input class="plus is-form" type="button" value="+"> -->
-                </div>
-                <!-- <a class="btn-shop" role="button" ng-click="saveSelectedItemToCart()"> 
-                    <div class="button-content-wrapper">
-                        <span class="button-text efruit-vi">THÊM GIỎ HÀNG</span>
-                        <span class="button-text efruit-en">ADD TO CARD</span>
-                    </div>
-                </a> -->
+                <!-- <input class="minus is-form" type="button" value="-"> -->
+                <!-- <input class="plus is-form" type="button" value="+"> -->
+                <!-- </div> -->
                 <?php if (!empty($product['enabled']) && empty($product['not_deliver'])) : ?>
-                    <button class="btn-shop" type="button" onclick="window.location.href='/vi/cart'" ng-click="saveSelectedItemToCart()">
-                        <div class="button-content-wrapper" ng-click="showProduct(<?= $product['product_id'] ?>, $event)">
+                    <button class="btn-shop" type="button" ng-click="showProduct(<?= $product['product_id'] ?>, $event)"
+                             onclick="window.location.href='/vi/cart'" ng-click="saveSelectedItemToCart()">
+                        <div class="button-content-wrapper" >
                             <span class="button-text efruit-vi"> THÊM GIỎ HÀNG</span>
                             <span class="button-text efruit-en"> ADD TO CARD</span>
                         </div>
@@ -77,7 +72,6 @@ if (isset($product['sell_price'])) {
                 <?php elseif (empty($product['enabled'])) : ?>
                     <div><img alt="sold-out" src="<?= get_theme_assets_url() ?>img/sold_out.png" class="sold_out efruit-vi" /><img alt="sold-out" class="sold_out efruit-en" src="<?= get_theme_assets_url() ?>img/sold_out_en.png" /></div>
                 <?php endif; ?>
-
                 <p class="product-price text-bold" style="font-size: 22px;" ng-show="selectedItem.promotion_price == 0 && selectedItem.price > 0"><span bind-translate="Giá">Giá</span>:&nbsp;{{selectedItem.price*1000|efruit_money}}<sup>đ</sup></p>
             </form>
             <div class="product-description mt-3">

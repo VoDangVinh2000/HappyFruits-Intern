@@ -50,7 +50,8 @@
                     <div class="m10">
                         
                         <div class="row">
-                            <div class="col-sm-6 "><button type="button" onclick="window.location.href='/vi/cart'" class="btn btn-success wizard-next-step-btn "><span >Show Cart</span> <i class="fa fa-angle-right"></i></button></div>
+                            <div class="col-sm-6 "><button type="button" onclick="window.location.href='/vi/cart'" class="btn wizard-next-step-btn ">
+                            <span class="efruit-en" >View Cart</span><span class="efruit-vi">Xem giỏ hàng</span><i class="fa fa-angle-right"></i></button></div>
                         </div>
                     </div>
                 </div>
