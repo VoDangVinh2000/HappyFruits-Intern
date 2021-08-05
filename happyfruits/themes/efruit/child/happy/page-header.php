@@ -16,10 +16,10 @@
                            <a class="nav-link" style="text-transform:uppercase" href="#">Blog</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Giới thiệu" href="/vi/gioi-thieu">GIỚI THIỆU</a>
+                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Giới thiệu" href="/gioi-thieu">GIỚI THIỆU</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Cửa hàng" href="#">Cửa hàng</a>
+                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Cửa hàng" href="/vi">Cửa hàng</a>
                        </li>
                    </ul>
                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -100,7 +100,7 @@
                    </ul>
                </div>
                <div class="navbar-brand navbar-brand-centered">
-                   <a href="#"><img src="<?= get_theme_assets_url() ?>img/main_logo_header.png" alt="Happy Fruits logo"></a>
+                   <a href="/vi"><img src="<?= get_theme_assets_url() ?>img/main_logo_header.png" alt="Happy Fruits logo"></a>
                </div>
                <div class="collapse navbar-collapse">
                    <ul class="navbar-nav ms-auto right-main-nav">
@@ -291,7 +291,7 @@
 
        <!-- Cart -->
 
-       <?php $this->load_partial('cart-backup') ?>
+       <?php $this->load_partial('cart-navigation') ?>
 
        <!-- <div class="cart-modal">
            <div class="cart-lightbox"></div>

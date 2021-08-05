@@ -53,9 +53,8 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('input[name=username]').css('border-bottom', '1px solid black');
         });
 
-
+        //Hủy cookie cho thông báo của phần đăng ký
         window.onload = (event) => {
-            // setTimeout(() => {
             let allcookie = document.cookie;
             let cookiearray = allcookie.split(';');
             let str = "";
@@ -74,7 +73,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     setCookie(arr[key], '', 0);
                 }
             }
-            // }, 30000);
         };
     });
 

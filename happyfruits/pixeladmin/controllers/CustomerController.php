@@ -92,6 +92,7 @@ class CustomerController extends BaseController
                 $params['password'] = md5($_POST['password_en']);
                 $params['mobile'] = $_POST['phone_en'];
                 $params['email'] = $_POST['email'];
+                $params['created_dtm'] = date('Y-m-d H:i:s', time());
                 $success = Customers::_insert($table_name, $params);
                 if ($success) {
                     setcookie("error_email", $error_email, 0, "/");
@@ -122,6 +123,7 @@ class CustomerController extends BaseController
                 $params['password'] = md5($_POST['password_en']);
                 $params['mobile'] = $_POST['phone_en'];
                 $params['email'] = $_POST['email'];
+                $params['created_dtm'] = date('Y-m-d H:i:s', time());
                 $success = Customers::_insert($table_name, $params);
                 if ($success) {
                     setcookie("error_email", $error_email, 0, "/");
