@@ -118,6 +118,23 @@ body {
   padding: 1rem;
 }
 
+.col-megamenu .list-unstyled li a{
+  display: block;
+  color: #777;
+  padding: 4px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.col-megamenu .list-unstyled li a:hover{
+    background-color: #f1f2f6;
+    color: #eccc68;
+}
+
+.container-mega{
+  max-width: 1279px;
+  margin: 0 auto;
+}
+
 .main-nav .navbar-nav .nav-item .nav-link {
   position: relative;
 }

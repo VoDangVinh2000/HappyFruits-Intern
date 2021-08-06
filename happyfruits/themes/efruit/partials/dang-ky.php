@@ -53,8 +53,8 @@
                         <div class="link-to-login">
                             <span class="efruit-en">Already have an account?</span>
                             <span class="efruit-vi">Bạn đã có tài khoản?</span>
-                            <a href="<?= frontend_url() ?>/dang-nhap" class="efruit-en">Sign in</a>
-                            <a href="<?= frontend_url() ?>/dang-nhap" class="efruit-vi">Đăng nhập</a>
+                            <a href="<?= frontend_url() ?>dang-nhap" class="efruit-en">Sign in</a>
+                            <a href="<?= frontend_url() ?>dang-nhap" class="efruit-vi">Đăng nhập</a>
                         </div>
                     </div>
                 </div>
