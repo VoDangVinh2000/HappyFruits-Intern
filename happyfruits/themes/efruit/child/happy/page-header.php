@@ -139,13 +139,8 @@
                <div class="collapse navbar-collapse" id="main-nav">
                    <ul class="navbar-nav mx-auto">
                        <li class="nav-item dropdown has-megamenu">
-<<<<<<< HEAD
                            <a class="nav-link dropdown-toggle efruit-vi px-5" href="#" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
                            <a class="nav-link dropdown-toggle efruit-en px-5" href="#" data-bs-toggle="dropdown">FRUIT BASKETS</a>
-=======
-                           <a class="nav-link dropdown-toggle efruit-vi" href="/vi/fruit-baskets" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
-                           <a class="nav-link dropdown-toggle efruit-en" href="/vi/fruit-baskets" data-bs-toggle="dropdown">FRUIT BASKETS</a>
->>>>>>> 6fc4026745e62a2100dfad6db96cf3cfec2780cf
                            <div class="dropdown-menu megamenu" role="menu">
                                <div class="container-mega">
                                    <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
@@ -198,13 +193,8 @@
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item dropdown has-megamenu">
-<<<<<<< HEAD
                            <a class="nav-link dropdown-toggle efruit-vi px-5" href="#" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
                            <a class="nav-link dropdown-toggle efruit-en px-5" href="#" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
-=======
-                           <a class="nav-link dropdown-toggle efruit-vi" href="/vi/hamper-box-fruits" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
-                           <a class="nav-link dropdown-toggle efruit-en" href="/vi/hamper-box-fruits" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
->>>>>>> 6fc4026745e62a2100dfad6db96cf3cfec2780cf
                            <div class="dropdown-menu megamenu" role="menu">
                                <div class="container-mega">
                                    <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
@@ -266,7 +256,6 @@
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item">
-<<<<<<< HEAD
                            <a class="nav-link efruit-vi px-5" href="#">HOA TRÁI CÂY</a>
                            <a class="nav-link efruit-en px-5" href="#">FRUIT BOUQUETS</a>
                        </li>
@@ -277,18 +266,6 @@
                        <li class="nav-item">
                            <a class="nav-link efruit-vi px-5" href="#">TRÁI CÂY NHẬP</a>
                            <a class="nav-link efruit-en px-5" href="#">FRESH FRUITS</a>
-=======
-                           <a class="nav-link efruit-vi" href="/vi/fruit-bouquet">HOA TRÁI CÂY</a>
-                           <a class="nav-link efruit-en" href="/vi/fruit-bouquet">FRUIT BOUQUETS</a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link efruit-vi" href="/vi/trai-cay-dac-san-viet">ĐẶC SẢN VIỆT</a>
-                           <a class="nav-link efruit-en" href="/vi/trai-cay-dac-san-viet">VIET NAM FRUIT SPECIAL</a>
-                       </li>
-                       <li class="nav-item">
-                           <a class="nav-link efruit-vi" href="/vi/trai-cay-nhap-khau">TRÁI CÂY NHẬP</a>
-                           <a class="nav-link efruit-en" href="/vi/trai-cay-nhap-khau">FRESH FRUITS</a>
->>>>>>> 6fc4026745e62a2100dfad6db96cf3cfec2780cf
                        </li>
                    </ul>
 
