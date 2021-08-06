@@ -29,7 +29,7 @@
                                 <i class="fas fa-eye" id="btnShowPass"></i>
                             </div>
 
-                            <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" placeholder="Phone number" required>
+                            <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" placeholder="Phone" required>
 
                             <input id="email" type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
                             <div class="error">

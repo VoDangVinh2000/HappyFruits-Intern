@@ -3,7 +3,7 @@
 } ?>
 <?php
 if (isset($product['sell_price'])) {
-    $oldPrice = $product['sell_price'] * 1000;
+    $oldPrice =  $product['sell_price'] * 1000;
     $newPrice = $oldPrice - ($product['promotion_price'] * 1000);
 } else {
     echo  "<script>window.location.href='" . frontend_url() . "'</script>";
@@ -47,11 +47,11 @@ if (isset($product['sell_price'])) {
         <div class="col-md-6 product-detail">
             <h1 class="product-title mb-3">
                 <span class="product-name efruit-vi"><?php echo $product['name'] ?></span> <span class="product-sku"></span>
-                <span class="product-name efruit-en"><?php echo $product['english_name'] ?></span> <span class="product-sku">| <?php echo $product['code'] ?></span>
+                <span class="product-name efruit-en"><?php echo $product['english_name'] ?></span> <span class="product-sku">- <?php echo $product['code'] ?></span>
             </h1>
             <div class="product-price">
-                <span class="price"><?php echo $newPrice ?>₫</span>
-                <span class="delete-price"><?php echo $oldPrice ?>₫</span>
+                <span class="price"> <span bind-translate="Giá">Giá</span> : <?php echo number_format($newPrice) . '<sup>đ</sup>' ?></span>
+                <!-- <span class="delete-price"></?php echo number_format($oldPrice) . '<sup>đ</sup>' ?></span> -->
             </div>
             <form action="#" method="POST">
                 <!-- <div class="input-group my-3"> -->
@@ -101,9 +101,65 @@ if (isset($product['sell_price'])) {
                     return;
                 }
         ?>
-                <div class="col-md-3 col-sm-3 col-6">
-                    <?php $this->load_partial('product-item-box', array('item' => $item)); ?>
-                </div>
+                <?php
+
+                if (!empty($item)) {
+                    if ($item['image'] == "") {
+                ?>
+                        <!-- </?php $this->load_partial('product-item-box', array('item' => $item)); ?> -->
+                        <div class="col-md-3 col-sm-3">
+                            <div class="product-item">
+                                <div class="product-photo">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $item['product_id']  . "/" . url_slug($item['name']) ?>" class="photo-link">
+                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $item['code'] ?>"></a>
+                                    <a class="btn-shop btn-cart" href="#">
+                                        <div class="button-content-wrapper">
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                        <a class=" efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] ?>"><?= $item['name'] ?></a>
+                                        <a class=" efruit-en" href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] ?>"><?= $item['english_name'] ?></a>
+                                    </div>
+                                    <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="product-price">
+                                            <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php } else { ?>
+                        <div class="col-md-3 col-sm-3">
+                            <div class="product-item">
+                                <div class="product-photo">
+                                    <a href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
+                                        <img src="<?= $item['image'] ?>" alt=""></a>
+                                    <a class="btn-shop btn-cart" href="#">
+                                        <div class="button-content-wrapper">
+                                            <span class="button-text efruit-vi">Chi tiết</span>
+                                            <span class="button-text efruit-en">Detail</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12 col-lg-8 col-8 product-name">
+                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
+                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
+                                    </div>
+                                    <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="product-price">
+                                            <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                <?php  }
+                } ?>
         <?php
             endforeach;
         endif;
