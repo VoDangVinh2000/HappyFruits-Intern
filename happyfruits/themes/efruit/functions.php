@@ -175,7 +175,7 @@ function view_order(&$controller)
     if($order){
         $error_msg = '';
         $order_items = $controller->Orders->get_full_order_items($order, $error_msg);
-        var_dump($order_items);
+        // var_dump($order_items);
         $controller->_merge_data(compact("page_title", "order", "order_items"));
     }else{
         $controller->_merge_data(compact("page_title", "order"));

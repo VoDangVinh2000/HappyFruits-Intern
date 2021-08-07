@@ -5,8 +5,8 @@
     <script src="<?=get_theme_assets_url()?>js/jquery.min.js"></script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="<?=get_theme_assets_url()?>js/html5shiv.min.js"></script>
-      <script src="<?=get_theme_assets_url()?>js/respond.min.js"></script>
+      <script src="<//?=get_theme_assets_url()?>js/html5shiv.min.js"></script>
+      <script src="<//?=get_theme_assets_url()?>js/respond.min.js"></script>
     <![endif]-->
     <!--[if lte IE 8]>
       <script>
@@ -21,10 +21,10 @@
       </script>
     <![endif]-->
     <!--[if lte IE 7]>
-      <script src="<?=get_theme_assets_url()?>js/json2.js"></script>
+      <script src="<//?=get_theme_assets_url()?>js/json2.js"></script>
     <![endif]-->
     <!--[if IE]>
-      <script src="<?=get_theme_assets_url()?>js/placeholders.min.js"></script>  
+      <script src="<//?=get_theme_assets_url()?>js/placeholders.min.js"></script>  
     <![endif]-->
     <script>
         document.addEventListener('touchstart', function(){}, {passive: true});
