@@ -158,7 +158,8 @@ class Products extends BaseProducts
         );
         return $this->select($filters);
     }
-
+  
+    //Hàm này chưa đúng
      function get_all_code()
     {
         $sql = "SELECT code FROM products";
