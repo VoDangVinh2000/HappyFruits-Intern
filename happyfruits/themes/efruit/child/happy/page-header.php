@@ -273,12 +273,13 @@
            </div>
        </nav>
        <!-- Modal search-->
+       <form action="/search" method="get" >
        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
            <div class="modal-dialog">
                <div class="modal-content">
                    <div class="input-group input-group-lg">
-                       <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2" style="padding: 1.5em; border-radius: 0; border: none">
-                       <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="padding: 1.5em 1.8em; border-radius: 0; background: #333; border: none;">
+                       <input name="input-search" type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2" style="padding: 1.5em; border-radius: 0; border: none">
+                       <button name="searchProduct" class="btn btn-outline-secondary" type="submit" id="button-addon2" style="padding: 1.5em 1.8em; border-radius: 0; background: #333; border: none;">
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
                                <path d="M86.065,85.194a6.808,6.808,0,1,0-.871.871L89.129,90,90,89.129Zm-1.288-.422a5.583,5.583,0,1,1,1.64-3.953A5.6,5.6,0,0,1,84.777,84.772Z" transform="translate(-74 -74)"></path>
                            </svg></button>
@@ -286,6 +287,7 @@
                </div>
            </div>
        </div>
+       </form>
 
        <!-- Cart -->
 

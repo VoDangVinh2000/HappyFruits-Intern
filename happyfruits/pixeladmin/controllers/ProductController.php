@@ -84,5 +84,13 @@ class ProductController extends BaseController
         $this->load_page('product/manage/index');
     }
 
+    function search(){
+        $table_name = "products";
+        $products = new Products;
+        if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['searchProduct'])) {
+        $query_search = $products->get_product_by_key($_GET['input-search']);
+        var_dump($query_search);
+        }
+    }
 }
 /* End of ProductController class */

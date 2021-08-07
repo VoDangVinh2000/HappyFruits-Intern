@@ -184,5 +184,12 @@ class Products extends BaseProducts
         }
         return self::_select_one($this->table_name, $filters);
     }
+
+    function get_product_by_key($keyword){
+        $order_by = 'products.name';
+        $sql = "SELECT DISTINCT products.code,products.name, prices.price FROM products INNER JOIN prices ON products.product_id = prices.product_id WHERE name like '".$keyword."' ";
+        $filters = "";
+        return self::_do_sql($sql, $filters, array(), $order_by);
+    }
 }
 /* End of generated class */
