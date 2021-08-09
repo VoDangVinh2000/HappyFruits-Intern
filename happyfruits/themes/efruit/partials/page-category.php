@@ -1,5 +1,6 @@
 <div class="container-fluid">
     <div class="row">
+        <p class="h3">Giá</p>
         <?php
         if (!empty($gia)) {
             if (!empty($get_product_with_sell_price)) {

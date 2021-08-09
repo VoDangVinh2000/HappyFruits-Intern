@@ -369,7 +369,8 @@ body {
 }
 
 .product-item .product-photo img {
-  max-width: 100%;
+  width: 300px;
+  height: 300px;
   transition: all ease 0.35s;
 }
 
@@ -380,6 +381,7 @@ body {
 .product-item .product-photo {
   display        : flex;
   align-items    : center;
+  align-content: center;
   justify-content: center;
   overflow       : hidden;
   position       : relative;
@@ -888,7 +890,7 @@ svg.infobox_icon {
   } */
 
   .section_col {
-    margin: 50px;
+    margin: 15px;
   }
 
   .section_col-item {

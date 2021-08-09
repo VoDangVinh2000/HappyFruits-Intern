@@ -185,7 +185,7 @@
                                                <div class="row">
                                                    <div class="col-megamenu col-md-12">
                                                        <ul class="list-unstyled">
-                                                           <li><a href="/vi/category/gia1-14">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia1-14-200k-500k">200k - 500k</a></li>
                                                            <li><a href="/vi/category/gia2-14">500k - 800k</a></li>
                                                            <li><a href="/vi/category/gia3-14">800k - 1000k</a></li>
                                                            <li><a href="/vi/category/gia4-14">1100k - 1500k</a></li>
