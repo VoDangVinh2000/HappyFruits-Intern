@@ -152,7 +152,6 @@ class CustomerController extends BaseController
             $password = md5($_POST['password']);
             echo $username . " " . $password;
             $customer = new Customers;
-
             $data = $customer->get_list_customer_username($username);
             //kiểm tra username có tồn tại trên csdl hay không
             if ($data) {
