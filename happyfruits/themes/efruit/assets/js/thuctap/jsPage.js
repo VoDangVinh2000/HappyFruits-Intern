@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let a_cancelFormForgot = document.getElementById('cancelFormForgot');
 
     if (a_editProfile) {
-        a_editProfile.addEventListener('click', function() {
+        a_editProfile.addEventListener('click', function () {
             if (form_edit_profile.style.display == "none") {
                 form_edit_profile.style.display = "block";
             } else {
@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     //event for input of form-login
     allInputLogin.forEach(element => {
 
-        element.addEventListener('focus', function() {
+        element.addEventListener('focus', function () {
             element.style.borderBottom = "1px solid black";
             allInputLogin.forEach(element2 => {
                 if (element.name != element2.name) {
@@ -34,7 +34,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //event click for link a of form-login "forgot your password"
 
         if (a_forgot) {
-            a_forgot.addEventListener('click', function() {
+            a_forgot.addEventListener('click', function () {
                 form_login.style.display = "none";
                 form_forgot.style.display = "block";
             });
@@ -42,14 +42,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         }
         if (a_cancelFormForgot) {
-            a_cancelFormForgot.addEventListener('click', function() {
+            a_cancelFormForgot.addEventListener('click', function () {
                 form_login.style.display = "block";
                 form_forgot.style.display = "none";
             });
         } else {
 
         }
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('input[name=username]').css('border-bottom', '1px solid black');
         });
 
@@ -83,28 +83,34 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const btnShowPass = document.querySelector('#btnShowPass');
     const password = document.querySelector('#password');
 
-    if(btnShowPass){
+    if (btnShowPass) {
         btnShowPass.addEventListener("click", () => {
-        if (password.type === "password") {
-            password.type = "text";
-        } else {
-            password.type = "password";
-        }
-    });
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+        });
     }
-    else{
+    else {
+    }
 
-    }
-   
 });
-
+function searchProduct() {
+    const inputSearch = document.querySelector('#input-search');
+    const btnSearch = document.querySelector('#button-addon2');
+    btnSearch.addEventListener('click', () => {
+        console.log(inputSearch.value);
+        // window.location.href='/vi/search/';
+    })
+}
 function setCookie(cname, cvalue, exMins) {
     var d = new Date();
     d.setTime(d.getTime() + (exMins * 60 * 1000));
     var expires = "expires=" + d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
+// Event click for search
 
 //cancel form edit profile
 function cancelProfile() {
@@ -113,7 +119,7 @@ function cancelProfile() {
 }
 
 //owl-carousel home page, trai cay dac san viet category
-$(document).ready(function() {
+$(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         autoplay: true,
         autoplayhoverpause: true,

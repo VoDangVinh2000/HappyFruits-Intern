@@ -62,8 +62,8 @@ RewriteRule ^en/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=en
 
 RewriteRule ^register/?$ /pixeladmin/index.php?controller=customer&action=register
 #RewriteRule ^loginCustomer/?$ /pixeladmin/index.php?controller=customer&action=login
-#Search url
-RewriteRule ^search/?$ /pixeladmin/index.php?controller=product&action=search
+#Search 
+#RewriteRule ^search/?$ /pixeladmin/index.php?controller=product&action=search
 
     Redirect /index.php /vi/
 

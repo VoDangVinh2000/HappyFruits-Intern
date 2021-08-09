@@ -29,7 +29,6 @@ class CustomerController extends BaseController
             $customers = null;
         }
         $products = $this->Products->get_list(array('products.is_additional' => "0"), -1);
-        var_dump($filter_array);
         $this->_merge_data(compact("js", "page_title", "customers", "filter_keyword", "filter_array", "products"));
         $this->load_page('customer/index');
     }

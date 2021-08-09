@@ -186,10 +186,11 @@ class Products extends BaseProducts
     }
 
     function get_product_by_key($keyword){
-        $order_by = 'products.name';
-        $sql = "SELECT DISTINCT products.code,products.name, prices.price FROM products INNER JOIN prices ON products.product_id = prices.product_id WHERE name like '".$keyword."' ";
+        // SELECT DISTINCT * FROM products WHERE name like "Giỏ Dâu Size 1A" OR code like '%FN%'
+        $sql = "SELECT DISTINCT * FROM products WHERE products.name like '%$keyword%' or products.code like '%$keyword%' ";
         $filters = "";
-        return self::_do_sql($sql, $filters, array(), $order_by);
+        return self::_do_sql($sql, $filters, array(),"");
     }
+    
 }
 /* End of generated class */

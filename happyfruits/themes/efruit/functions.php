@@ -55,12 +55,13 @@ function init_page(&$controller)
 
     //get product by id
     $product = $controller->Products->get_details($id);
-    
+    //get search products
+    $search = get('param2');
     //$traiCayNhap = $controller->get_all_product_by_categoryID(6);
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
     "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
     "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
-    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_gioDau"));
+    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_gioDau","search"));
         
 }
 function url_slug($str, $options = array()) {
@@ -175,12 +176,29 @@ function view_order(&$controller)
     if($order){
         $error_msg = '';
         $order_items = $controller->Orders->get_full_order_items($order, $error_msg);
-        var_dump($order_items);
+        // var_dump($order_items);
         $controller->_merge_data(compact("page_title", "order", "order_items"));
     }else{
         $controller->_merge_data(compact("page_title", "order"));
     }
 }
+
+function view_test(&$controller){
+    $controller->load_model('Orders, Products');
+    $page_title = 'Search';
+    //$order_code = get('param2');
+    $controller->_merge_data(compact("page_title"));
+}
+
+function view_search(&$controller){
+    
+    $controller->load_model('Products');
+    $page_title = 'Search';
+    $search = $controller->Products->search();
+    //$order_code = get('param2');
+    $controller->_merge_data(compact("page_title","search"));
+}
+
 
 function edit_order(&$controller)
 {

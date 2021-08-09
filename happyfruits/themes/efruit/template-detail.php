@@ -51,20 +51,13 @@ if (isset($product['sell_price'])) {
             </h1>
             <div class="product-price">
                 <span class="price"> <span bind-translate="Giá">Giá</span> : <?php echo number_format($newPrice) . '<sup>đ</sup>' ?></span>
-                <!-- <span class="delete-price"></?php echo number_format($oldPrice) . '<sup>đ</sup>' ?></span> -->
+
             </div>
             <form action="#" method="POST">
-                <!-- <div class="input-group my-3"> -->
-                <!-- <button class="btn btn-outline-secondary" type="button" id="button-addon1">+</button>
-                    <input type="text" class="form-control" placeholder="1" aria-label="1" aria-describedby="button-addon1">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon1">-</button> -->
-                <!-- <input class="minus is-form" type="button" value="-"> -->
-                <!-- <input class="plus is-form" type="button" value="+"> -->
-                <!-- </div> -->
+
                 <?php if (!empty($product['enabled']) && empty($product['not_deliver'])) : ?>
-                    <button class="btn-shop" type="button" ng-click="showProduct(<?= $product['product_id'] ?>, $event)"
-                             onclick="window.location.href='/vi/cart'" ng-click="saveSelectedItemToCart()">
-                        <div class="button-content-wrapper" >
+                    <button class="btn-shop" type="button" ng-click="showProduct(<?= $product['product_id'] ?>, $event)" onclick="window.location.href='/vi/cart'" ng-click="saveSelectedItemToCart()">
+                        <div class="button-content-wrapper">
                             <span class="button-text efruit-vi"> THÊM GIỎ HÀNG</span>
                             <span class="button-text efruit-en"> ADD TO CARD</span>
                         </div>
@@ -75,7 +68,7 @@ if (isset($product['sell_price'])) {
                 <p class="product-price text-bold" style="font-size: 22px;" ng-show="selectedItem.promotion_price == 0 && selectedItem.price > 0"><span bind-translate="Giá">Giá</span>:&nbsp;{{selectedItem.price*1000|efruit_money}}<sup>đ</sup></p>
             </form>
             <div class="product-description mt-3">
-                <!-- <//?php echo $product['description'] ?> -->
+
                 <p class=" efruit-vi"><?= $product['description'] ?></p>
                 <p class=" efruit-en"><?= $product['description_en'] ?></p>
             </div>
@@ -95,18 +88,16 @@ if (isset($product['sell_price'])) {
         ];
         $category_of_page_detail = $array_category[$product['category_id']];
         if (!empty($category_of_page_detail)) :
-            foreach ($$category_of_page_detail as $item) :
+            foreach ($$category_of_page_detail as $item) {
                 $counter++;
                 if ($counter >= 5) {
-                    return;
+                    break;
                 }
-        ?>
-                <?php
-
                 if (!empty($item)) {
+        ?>
+                    <?php
                     if ($item['image'] == "") {
-                ?>
-                        <!-- </?php $this->load_partial('product-item-box', array('item' => $item)); ?> -->
+                    ?>
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
@@ -158,17 +149,14 @@ if (isset($product['sell_price'])) {
                                 </div>
                             </div>
                         </div>
-                <?php  }
-                } ?>
-        <?php
-            endforeach;
+                    <?php } ?>
+        <?php  }
+            }
         endif;
         ?>
     </div>
 </div>
-<!-- </div> -->
-
 <?php
-echo "footer";
-//$this->load_theme_file('page-footer.php') 
+// echo "footer";
+$this->load_theme_file('page-footer.php')
 ?>

@@ -15,20 +15,26 @@
                         <div class="main-create-account-fillout">
                             <div class="error-fillout-createaccount">
                             </div>
-                            <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6" type="text" name="username_en" class="input-account " autocapitalize="words" autofocus placeholder="Username" required>
+                            <input id="username" pattern="[a-zA-Z0-9]{6,}" type="text" name="username_en" class="input-account " autocapitalize="words" autofocus placeholder="Username" required>
+                            <p class="efruit-en">Username must have minimum length is 6</p>
+                            <p class="efruit-vi">Tên đăng ký phải có ít nhất 6 kí tự</p>
                             <div class="error">
                                 <?php
                                 if (isset($_COOKIE['error_username'])) {
                                     echo $_COOKIE['error_username'] . "</br>";
+                                    echo `<p class="efruit-en"></p>
+                                <p class="efruit-vi"></p>`;
                                 }
                                 ?>
+
                             </div>
 
                             <div class="password-wrapper">
-                                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" placeholder="Password" required>
+                                <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" placeholder="Password" required>
                                 <i class="fas fa-eye" id="btnShowPass"></i>
                             </div>
-
+                            <p class="efruit-en">Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8</p>
+                            <p class="efruit-vi">Mật khẩu phải có một số, một kí tự in hoa, một kí tự thường và tối thiểu 8 kí tự</p>
                             <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" placeholder="Phone" required>
 
                             <input id="email" type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>

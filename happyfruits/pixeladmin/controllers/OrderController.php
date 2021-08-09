@@ -31,6 +31,7 @@ class OrderController extends BaseController
         }
 
         if (Users::can('view_all', 'order'))
+        
             $orders = $this->Orders->get_list(array('where' => $where_str), 'orders.delivery_date DESC');
         else
             $orders = $this->Orders->get_list(array('where' => $where_str, 'orders.branch_id' => $this->logged_user['branch_id']), 'orders.delivery_date DESC');
