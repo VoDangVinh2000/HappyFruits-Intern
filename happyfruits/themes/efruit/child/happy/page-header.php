@@ -16,7 +16,7 @@
                            <a class="nav-link" style="text-transform:uppercase" href="#">Blog</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Giới thiệu" href="/gioi-thieu">GIỚI THIỆU</a>
+                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Giới thiệu" href="/vi/gioi-thieu">GIỚI THIỆU</a>
                        </li>
                        <li class="nav-item">
                            <a class="nav-link" style="text-transform:uppercase" bind-translate="Cửa hàng" href="/vi">Cửa hàng</a>
@@ -24,10 +24,10 @@
                    </ul>
                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                        <li class="nav-item">
-                           <a class="nav-link" href="#"><i class="fas fa-phone-volume"></i> 0938.70.70.15</a>
+                           <a class="nav-link" href="/vi/lien-he/"><i class="fas fa-phone-volume"></i> 0938.70.70.15</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#"><i class="fab fa-facebook-f"></i></a>
+                           <a class="nav-link" href="https://www.facebook.com/happyfruitsvietnam/"><i class="fab fa-facebook-f"></i></a>
                        </li>
                        <li class="nav-item">
                            <!-- <a class="nav-link" href="#">VI</a> -->
@@ -38,10 +38,11 @@
                        <li><a ng-click="switchLanguage('en')" ng-class="{active:settings.language=='en'}" href="" tabindex="-1" class="nav-link">en</a></li>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#" title="Vận chuyển"><i class="fas fa-shipping-fast"></i></a>
+                           <!-- <a class="picto shipping" href="javascript:void(0);" ><span data-width="85px" bind-translate="Giao hàng">Giao hàng</span></a> -->
+                           <a class="nav-link" href="#" onclick="showOrderFlow()" title="Vận chuyển"><i class="fas fa-shipping-fast"></i></a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="#" title="Tuyển dụng"><i class="fas fa-user-tie"></i></a>
+                           <a class="nav-link" href="/tuyen-dung" title="Tuyển dụng"><i class="fas fa-user-tie"></i></a>
                        </li>
                    </ul>
                </div>
@@ -148,136 +149,133 @@
                <div class="collapse navbar-collapse" id="main-nav">
                    <ul class="navbar-nav mx-auto">
                        <li class="nav-item dropdown has-megamenu">
-                           <a class="nav-link dropdown-toggle efruit-vi" href="#" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
-                           <a class="nav-link dropdown-toggle efruit-en" href="#" data-bs-toggle="dropdown">FRUIT BASKETS</a>
+                           <a class="nav-link dropdown-toggle efruit-vi px-5" href="#" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle efruit-en px-5" href="#" data-bs-toggle="dropdown">FRUIT BASKETS</a>
                            <div class="dropdown-menu megamenu" role="menu">
-                               <div class="row g-3">
-                                   <div class="col-lg-3 col-6">
-                                       <div class="col-megamenu">
-                                           <h6 class="title">Title Menu One</h6>
-                                           <ul class="list-unstyled">
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                           </ul>
-                                       </div> <!-- col-megamenu.// -->
-                                   </div><!-- end col-3 -->
-                                   <div class="col-lg-3 col-6">
-                                       <div class="col-megamenu">
-                                           <h6 class="title">Title Menu Two</h6>
-                                           <ul class="list-unstyled">
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                           </ul>
-                                       </div> <!-- col-megamenu.// -->
-                                   </div><!-- end col-3 -->
-                                   <div class="col-lg-3 col-6">
-                                       <div class="col-megamenu">
-                                           <h6 class="title">Title Menu Three</h6>
-                                           <ul class="list-unstyled">
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                           </ul>
-                                       </div> <!-- col-megamenu.// -->
-                                   </div>
-                                   <div class="col-lg-3 col-6">
-                                       <div class="col-megamenu">
-                                           <h6 class="title">Title Menu Four</h6>
-                                           <ul class="list-unstyled">
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                           </ul>
-                                       </div> <!-- col-megamenu.// -->
-                                   </div><!-- end col-3 -->
-                               </div><!-- end row -->
+                               <div class="container-mega">
+                                   <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
+                                   <div class="row g-3">
+                                       <div class="col-lg-3 col-6">
+                                           <div class="col-megamenu">
+                                               <?php
+                                                if (!empty($megaMenu_gioDau)) {
+                                                    foreach ($megaMenu_gioDau as $array) {
+                                                        if($array['name'] == 'Giỏ dâu'){
+                                                ?>
+                                                       <!-- <h6 class="title">Title Menu One</h6> -->
+                                                       <ul class="list-unstyled">
+                                                           <li><a href="/vi/fruit-baskets#to-cat-<?= $array['category_id'] ?>"><span class="efruit-vi"><?= $array['name'] ?></span></a></li>
+                                                           <li><a href="/vi/fruit-baskets#to-cat-<?= $array['category_id'] ?>"><span class="efruit-en"><?= $array['english_name'] ?></a></span></li>
+                                                       </ul>
+                                               <?php }
+                                                }}?>
+                                           </div> <!-- col-megamenu.// -->
+                                       </div><!-- end col-3 -->
+                                       <div class="col-lg-3 col-6">
+                                           <div class="col-megamenu">
+                                               <!-- <h6 class="title">Title Menu Three</h6> -->
+                                               <ul class="list-unstyled">
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                               </ul>
+                                           </div> <!-- col-megamenu.// -->
+                                       </div>
+                                       <div class="col-lg-3 col-6">
+                                           <div class="col-megamenu">
+                                               <!-- <h6 class="title">Title Menu Four</h6> -->
+                                               <ul class="list-unstyled">
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                               </ul>
+                                           </div> <!-- col-megamenu.// -->
+                                       </div><!-- end col-3 -->
+                                   </div><!-- end row -->
+                               </div>
+
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item dropdown has-megamenu">
-                           <a class="nav-link dropdown-toggle efruit-vi" href="#" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
-                           <a class="nav-link dropdown-toggle efruit-en" href="#" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
+                           <a class="nav-link dropdown-toggle efruit-vi px-5" href="#" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
+                           <a class="nav-link dropdown-toggle efruit-en px-5" href="#" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
                            <div class="dropdown-menu megamenu" role="menu">
-                               <div class="row g-3">
-                                   <div class="col-lg-3 col-6">
-                                       <div class="col-megamenu">
-                                           <h6 class="title">Title Menu One</h6>
-                                           <ul class="list-unstyled">
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                           </ul>
-                                       </div> <!-- col-megamenu.// -->
-                                   </div><!-- end col-3 -->
-                                   <div class="col-lg-3 col-6">
-                                       <div class="col-megamenu">
-                                           <h6 class="title">Title Menu Two</h6>
-                                           <ul class="list-unstyled">
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                           </ul>
-                                       </div> <!-- col-megamenu.// -->
-                                   </div><!-- end col-3 -->
-                                   <div class="col-lg-3 col-6">
-                                       <div class="col-megamenu">
-                                           <h6 class="title">Title Menu Three</h6>
-                                           <ul class="list-unstyled">
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                           </ul>
-                                       </div> <!-- col-megamenu.// -->
-                                   </div>
-                                   <div class="col-lg-3 col-6">
-                                       <div class="col-megamenu">
-                                           <h6 class="title">Title Menu Four</h6>
-                                           <ul class="list-unstyled">
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                               <li><a bind-translate="" href="#">Custom Menu</a></li>
-                                           </ul>
-                                       </div> <!-- col-megamenu.// -->
-                                   </div><!-- end col-3 -->
-                               </div><!-- end row -->
+                               <div class="container-mega">
+                                   <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
+                                   <div class="row g-3">
+                                       <div class="col-lg-3 col-6">
+                                           <div class="col-megamenu">
+                                               <h6 class="title">Title Menu One</h6>
+                                               <ul class="list-unstyled">
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                               </ul>
+                                           </div> <!-- col-megamenu.// -->
+                                       </div><!-- end col-3 -->
+                                       <div class="col-lg-3 col-6">
+                                           <div class="col-megamenu">
+                                               <h6 class="title">Title Menu Two</h6>
+                                               <ul class="list-unstyled">
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                               </ul>
+                                           </div> <!-- col-megamenu.// -->
+                                       </div><!-- end col-3 -->
+                                       <div class="col-lg-3 col-6">
+                                           <div class="col-megamenu">
+                                               <h6 class="title">Title Menu Three</h6>
+                                               <ul class="list-unstyled">
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                               </ul>
+                                           </div> <!-- col-megamenu.// -->
+                                       </div>
+                                       <div class="col-lg-3 col-6">
+                                           <div class="col-megamenu">
+                                               <h6 class="title">Title Menu Four</h6>
+                                               <ul class="list-unstyled">
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                                   <li><a bind-translate="" href="#">Custom Menu</a></li>
+                                               </ul>
+                                           </div> <!-- col-megamenu.// -->
+                                       </div><!-- end col-3 -->
+                                   </div><!-- end row -->
+                               </div>
                            </div> <!-- dropdown-mega-menu.// -->
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link efruit-vi" href="#">HOA TRÁI CÂY</a>
-                           <a class="nav-link efruit-en" href="#">FRUIT BOUQUETS</a>
+                           <a class="nav-link efruit-vi px-5" href="#">HOA TRÁI CÂY</a>
+                           <a class="nav-link efruit-en px-5" href="#">FRUIT BOUQUETS</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link efruit-vi" href="#">ĐẶC SẢN VIỆT</a>
-                           <a class="nav-link efruit-en" href="#">VIET NAM FRUIT SPECIAL</a>
+                           <a class="nav-link efruit-vi px-5" href="#">ĐẶC SẢN VIỆT</a>
+                           <a class="nav-link efruit-en px-5" href="#">VIET NAM FRUIT SPECIAL</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link efruit-vi" href="#">TRÁI CÂY NHẬP</a>
-                           <a class="nav-link efruit-en" href="#">FRESH FRUITS</a>
+                           <a class="nav-link efruit-vi px-5" href="#">TRÁI CÂY NHẬP</a>
+                           <a class="nav-link efruit-en px-5" href="#">FRESH FRUITS</a>
                        </li>
                    </ul>
 
@@ -289,11 +287,12 @@
            <div class="modal-dialog">
                <div class="modal-content">
                    <div class="input-group input-group-lg">
-                       <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2" style="padding: 1.5em; border-radius: 0; border: none">
-                       <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="padding: 1.5em 1.8em; border-radius: 0; background: #333; border: none;">
+                       <input type="text" class="form-control" auto ng-model="search" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2" style="padding: 1.5em; border-radius: 0; border: none">
+                       <button class="btn btn-outline-secondary" type="button" onclick="window.location.href='/vi/search'" id="button-addon2" style="padding: 1.5em 1.8em; border-radius: 0; background: #333; border: none;">
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
                                <path d="M86.065,85.194a6.808,6.808,0,1,0-.871.871L89.129,90,90,89.129Zm-1.288-.422a5.583,5.583,0,1,1,1.64-3.953A5.6,5.6,0,0,1,84.777,84.772Z" transform="translate(-74 -74)"></path>
-                           </svg></button>
+                           </svg>
+                        </button>
                    </div>
                </div>
            </div>

@@ -29,7 +29,7 @@
                                 <i class="fas fa-eye" id="btnShowPass"></i>
                             </div>
 
-                            <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" placeholder="Phone number" required>
+                            <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" placeholder="Phone" required>
 
                             <input id="email" type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
                             <div class="error">
@@ -53,8 +53,8 @@
                         <div class="link-to-login">
                             <span class="efruit-en">Already have an account?</span>
                             <span class="efruit-vi">Bạn đã có tài khoản?</span>
-                            <a href="<?= frontend_url() ?>/dang-nhap" class="efruit-en">Sign in</a>
-                            <a href="<?= frontend_url() ?>/dang-nhap" class="efruit-vi">Đăng nhập</a>
+                            <a href="<?= frontend_url() ?>dang-nhap" class="efruit-en">Sign in</a>
+                            <a href="<?= frontend_url() ?>dang-nhap" class="efruit-vi">Đăng nhập</a>
                         </div>
                     </div>
                 </div>

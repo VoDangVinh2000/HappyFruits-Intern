@@ -4,6 +4,9 @@
 
 //Khi các sản phẩm không có ảnh thì sử dụng ảnh này
 
+$settings = get_setting_options();
+$content_2 = $settings['about_us_content2'];
+$content_2_en = "Being one of  the first professional fruit gift services in HCM, and is a reputable unit providing gift services for enterprises.";
 ?>
 
 <!-- product category 1-->
@@ -213,8 +216,6 @@
 <div class="container mt-5">
     <div class="row g-0 category-full">
         <?php if (!empty($tiles)) {
-            $settings = get_setting_options();
-            $content_2 = $settings['about_us_content2'];
             foreach ($tiles as $array) {
                 if ($array['cat'] == 8) {
         ?>
@@ -222,8 +223,10 @@
                         <div class="category-caption">
                             <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                             <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
-                            <p><?= $content_2 ?></p>
-                            <!-- <a class="btn-shop" href="<?= $array['href'] ?>">
+                            <span class="efruit-vi"><p><?= $content_2 ?></p></span>
+                            <span class="efruit-en"><p><?= $content_2_en ?></p></span>
+                            <!-- <p class="efruit-en"></?= $en_content ?></p> -->
+                            <!-- <a class="btn-shop" href="</?= $array['href'] ?>">
                                 <div class="button-content-wrapper">
                                     <span class="button-text">SHOP NOW</span>
                                 </div>

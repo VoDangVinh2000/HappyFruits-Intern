@@ -1,7 +1,6 @@
 <?php
 function init_page(&$controller)
 {
-    
     $controller->load_model('Products, Menus');
     $main_menu = $controller->Menus->get_details_by_code('main-menu');
     $category_menu = $controller->Menus->get_details_by_code('category-menu');
@@ -26,7 +25,6 @@ function init_page(&$controller)
                 'where' => "categories.category_id IN ($cat_ids)"
             ));
         }
-
         $tag_ids = $controller->data['obj']['tag_ids'];
         if(!empty($tag_ids)){
             $products_in_tags = $controller->Products->get_products_in_tag(array('where' => "tag_id IN ($tag_ids)"));
@@ -43,6 +41,9 @@ function init_page(&$controller)
     $traiCayNhap = $controller->Products->get_all_product_by_categoryID(12);
     $sanPhamKhac = $controller->Products->get_all_product_by_categoryID(7);
 
+    //get parent_id of categories table to see mega-menu
+    $megaMenu_gioDau = $controller->Categories->get_parentId_of_categories(14);
+
     //get all product by code
     $all_product = $controller->Products->get_all_product();
     
@@ -56,11 +57,10 @@ function init_page(&$controller)
     $product = $controller->Products->get_details($id);
     
     //$traiCayNhap = $controller->get_all_product_by_categoryID(6);
-
-        $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
-        "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
-        "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
-        "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product"));
+    $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
+    "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
+    "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
+    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_gioDau"));
         
 }
 function url_slug($str, $options = array()) {
@@ -175,7 +175,7 @@ function view_order(&$controller)
     if($order){
         $error_msg = '';
         $order_items = $controller->Orders->get_full_order_items($order, $error_msg);
-        var_dump($order_items);
+        // var_dump($order_items);
         $controller->_merge_data(compact("page_title", "order", "order_items"));
     }else{
         $controller->_merge_data(compact("page_title", "order"));

@@ -18,9 +18,7 @@ $content_1 = $settings['about_us_content1'];
 //         $block_class = 'col-sm-' . (12 / $counter);
 //     else
 //         $block_class = 'col-sm-6';
-if (!mempty($content_1)) :
-    $f = 'content_' . $content_1;
-    $block_indexes = $f;
+
 ?>
     <!-- <div class="flat">
     <div class="marketing">
@@ -52,14 +50,13 @@ if (!mempty($content_1)) :
     <section class="about-section email-wrapper">
         <div class="about-content">
             <?php
-                $vi_content = getvalue($settings, "about_us_content" . $block_indexes);
-                $en_content = get_setting('about_us_content' . $block_indexes, $vi_content, 'en');
+                $en_content = ' Fresh fruit with high quality, conscientious service. "Deliver" happiness to customers is our essential mission.';
             ?>
-            <!-- <span class="efruit-vi"><b>Happy Fruits</b> - <?= $vi_content ?></span>
-            <span class="efruit-en"><b>Happy Fruits</b> - <?= $en_content ?></span> -->
-            <b>Happy Fruits</b> - <?= $content_1 ?>
+            <span class="efruit-vi"><b>Happy Fruits</b> - <?= $content_1 ?></span>
+            <span class="efruit-en"><b>Happy Fruits</b> - <?= $en_content  ?></span>
+            <!-- <b>Happy Fruits</b> - <//?= $content_1 ?> -->
         </div>
     </section>
 
 
-<?php endif; ?>
+<!-- <//?php endif; ?> -->

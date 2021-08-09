@@ -338,7 +338,7 @@ $this->load_partial('product-modals');
             </div> <!-- / .wizard -->
         </div> <!-- / .modal-content -->
     </div> <!-- / .modal-dialog -->
-</div> -->
+</div> 
 <div role="dialog" tabindex="-1" class="modal fade in" id="modal-notices" aria-hidden="false">
     <div class="modal-dialog normal-dialog">
         <div class="modal-content"  style="background: rgba(56,56,56,0.8);">
@@ -443,11 +443,11 @@ $this->load_partial('product-modals');
         </div>
     </div>
 </div>
-<div role="dialog" tabindex="-1" class="modal fade in dark-bg" id="modal-order-flow" aria-hidden="false">
+<div role="dialog" tabindex="-1" class="modal fade in dark-bg" id="modal-order-flow" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content" style="background: rgba(56,56,56,0.8);">
             <div class="modal-header" style="background: none;">
-                <button style="margin: -10px 0px 0 0;color: #fff;" aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
+                <button style="margin: -10px 0px 0 0;color: #fff;display:none" aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
             </div>
             <div class="modal-body" style="padding-top: 0;">
                 <div class="row  row-fluid">
