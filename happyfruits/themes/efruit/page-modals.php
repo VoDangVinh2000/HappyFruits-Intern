@@ -338,7 +338,11 @@ $this->load_partial('product-modals');
             </div>  / .wizard -->
         </div> <!-- / .modal-content -->
     </div> <!-- / .modal-dialog -->
+<<<<<<< HEAD
 </div>
+=======
+</div> 
+>>>>>>> 6db262671c647aacd52816be66f381eccdaa39d8
 <div role="dialog" tabindex="-1" class="modal fade in" id="modal-notices" aria-hidden="false">
     <div class="modal-dialog normal-dialog">
         <div class="modal-content"  style="background: rgba(56,56,56,0.8);">

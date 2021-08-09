@@ -105,8 +105,17 @@
                </div>
                <div class="collapse navbar-collapse">
                    <ul class="navbar-nav ms-auto right-main-nav">
+                       <?php if(isset($_SESSION['user_account'])){ ?>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">
+                           <a class="nav-link" href="/vi/profile">
+                               <i class="fas fa-user" style="font-size: 20px;"></i>
+                           </a>
+                       </li>
+                       <?php }
+                             else {
+                       ?>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/vi/dang-nhap">
                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
                                    <g transform="translate(3.52)">
                                        <path d="M29.571,13.853a4.427,4.427,0,1,1,4.471-4.427A4.461,4.461,0,0,1,29.571,13.853Zm0-7.609a3.182,3.182,0,1,0,3.214,3.182A3.2,3.2,0,0,0,29.571,6.244Z" transform="translate(-25.1 -5)"></path>
@@ -117,6 +126,7 @@
                                </svg>
                            </a>
                        </li>
+                       <?php } ?>
                        <li class="nav-item main-cart-btn">
                            <a class="nav-link position-relative btn-cart-nav" id="show-cart" href="#">
                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 13.87 16">
@@ -276,11 +286,12 @@
            <div class="modal-dialog">
                <div class="modal-content">
                    <div class="input-group input-group-lg">
-                       <input type="text" class="form-control" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2" style="padding: 1.5em; border-radius: 0; border: none">
-                       <button class="btn btn-outline-secondary" type="button" id="button-addon2" style="padding: 1.5em 1.8em; border-radius: 0; background: #333; border: none;">
+                       <input type="text" class="form-control" auto ng-model="search" placeholder="Search..." aria-label="Recipient's username" aria-describedby="button-addon2" style="padding: 1.5em; border-radius: 0; border: none">
+                       <button class="btn btn-outline-secondary" type="button" onclick="window.location.href='/vi/search'" id="button-addon2" style="padding: 1.5em 1.8em; border-radius: 0; background: #333; border: none;">
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
                                <path d="M86.065,85.194a6.808,6.808,0,1,0-.871.871L89.129,90,90,89.129Zm-1.288-.422a5.583,5.583,0,1,1,1.64-3.953A5.6,5.6,0,0,1,84.777,84.772Z" transform="translate(-74 -74)"></path>
-                           </svg></button>
+                           </svg>
+                        </button>
                    </div>
                </div>
            </div>

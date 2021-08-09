@@ -138,7 +138,7 @@
             <h3 class="efruit-vi">Tổng tiền giỏ hàng</h3>
             <h3 class="efruit-en">Cart Totals</h3>
             <table class="table table-striped">
-                <tbody>
+                <tbody> -->
                     <!-- <tr class="cart-subtotal">
                         <th class="word-bold efruit-vi">Giá Sản Phẩm</th>
                         <th class="word-bold efruit-en">Subtotal</th>
@@ -149,8 +149,8 @@
                                 </span>
                             </span>
                         </td>
-                    </tr> -->
-                    <!-- <tr class="order-total">
+                    </tr>
+                    <tr class="order-total">
                         <th class="word-bold efruit-vi">Tổng Giá</th>
                         <th class="word-bold efruit-en">
                             <p class="txt-bold font16"><span bind-translate="Tổng cộng">Tổng cộng</span> {{ totalQuantity }} <span bind-translate="phần">phần</span>
@@ -164,12 +164,12 @@
                         </td>
                     </tr>
                 </tbody>
-            </table> -->
-            <!-- <div class="col-sm-6 text-right-sm"><button ng-click="nextStep()" class="btn btn-success wizard-next-step-btn"><span bind-translate="Nhập thông tin giao hàng">Nhập thông tin giao hàng</span> <i class="fa fa-angle-right"></i></button></div> -->
-            <!-- <button type="button" onclick="window.location.href='/vi/shipping'" class="mybtn btn-payment efruit-vi" name="checkout">Nhập thông tin giao hàng <i class="fa fa-angle-right"></i></button></button>
-            <button type="button" onclick="window.location.href='/vi/shipping'" class="mybtn btn-payment efruit-en" name="checkout">Enter shipping your detail<i class="fa fa-angle-right"></i></button></button> -->
-        <!-- </div>
-    </div>  -->
+            </table>
+            <div class="col-sm-6 text-right-sm"><button ng-click="nextStep()" class="btn btn-success wizard-next-step-btn"><span bind-translate="Nhập thông tin giao hàng">Nhập thông tin giao hàng</span> <i class="fa fa-angle-right"></i></button></div>
+            <button type="button" onclick="window.location.href='/vi/shipping'" class="mybtn btn-payment efruit-vi" name="checkout">Nhập thông tin giao hàng <i class="fa fa-angle-right"></i></button></button>
+            <button type="button" onclick="window.location.href='/vi/shipping'" class="mybtn btn-payment efruit-en" name="checkout">Enter shipping your detail<i class="fa fa-angle-right"></i></button></button>
+        </div>
+    </div> -->
 </div>
 
 <!-- <div class="efruit-cart efruitjs">

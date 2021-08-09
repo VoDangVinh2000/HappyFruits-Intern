@@ -4,8 +4,18 @@
             <!--********
                 Về district, V hãy qua function.inc.php tìm đến hàm html_select_district()
             !-->
-            <h1>
+            <!-- <div class="row">
+                <div class="col-md-6"><h1>My Account</h1></div>
+                <div class="col-md-6"><a href="">Logout</a></div>
+            </div> -->
+            <!-- <h1>
                 My Account
+                
+                <span class="logout-title"><a href="/account/logout">Logout</a></span>
+            </h1> -->
+            
+            <h1>My Account
+                <span class="logout-title"><a href="/logoutCustomer">Logout</a></span>
             </h1>
             <hr>
             <div class="row">
@@ -19,16 +29,16 @@
                     <div class="profile-details">
                         <h2 class="mb-4">Your Profile</h2>
                         <!--Show account details-->
-                        <p>Họ tên (Đăng Vĩnh)</p>
-                        <p>Email : ...</p>
-                        <p>Số điện thoại : ...</p>
-                        <p>Quận : ...</p>
-                        <p>Địa chỉ : ...</p>
-                        <p>Tòa nhà : ...</p>
-                        <p>Tên công ty : ...</p>
-                        <p>Mã số thuế : ...</p>
-                        <p>Địa chỉ công ty (nếu có) : ...</p>
-                        <p>Khoảng cách (km) : ...</p>
+                        <p>Họ tên <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['customer_name'];?></p>
+                        <p>Email : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['email'];?></p>
+                        <p>Số điện thoại : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['mobile'];?></p>
+                        <p>Quận : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['district'];?></p>
+                        <p>Địa chỉ : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['address'];?></p>
+                        <p>Tòa nhà : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['building'];?></p>
+                        <p>Tên công ty : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['company_name'];?></p>
+                        <p>Mã số thuế : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['company_tax_code'];?></p>
+                        <p>Địa chỉ công ty (nếu có) : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['company_address'];?></p>
+                        <p>Khoảng cách (km) : <?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['distance'];?></p>
                         <li>
                             <a href="#edit" style="background-color: #72a499;color:white;padding:7px;border-radius: 5px;" id="a-editProfile">Edit </a>
                         </li>
