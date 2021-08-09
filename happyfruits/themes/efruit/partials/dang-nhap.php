@@ -13,7 +13,7 @@
                         </div>
 
                         <!--Form action-login-->
-                        <form action="/loginCustomer" class="needs-validation" novalidate method="post">
+                        <form action="/loginCustomer" method="post">
                             <div class="main-create-account-fillout">
                                 <div class="error">
                                     <?php
@@ -26,7 +26,7 @@
                                     ?>
                                 </div>
                            
-                                <input id="validationCustom01" type="text" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
+                                <input type="text" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
                                 <input type="password" class="input-account" name="password" autocapitalize="words" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8" required>
 
                             </div>
