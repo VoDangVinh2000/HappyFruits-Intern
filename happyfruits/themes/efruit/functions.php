@@ -119,7 +119,7 @@ function gallery(&$controller)
 {
     $controller->load_model('ImagesInGallery');
     $images_in_gallery = $controller->ImagesInGallery->get_full_list(array('gallery_id' => GALLERY_ID));
-    $controller->_merge_data(compact("images_in_gallery", "js", "css"));
+    $controller->_merge_data(compact("images_in_gallery"));
 }
 
 function home(&$controller)

@@ -361,7 +361,9 @@ body {
 /* --------------------PRODUCCT------------- */
 .product-item {
   margin-top: 2rem;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .product-item .top-img {
@@ -410,6 +412,9 @@ body {
 .product-item .product-name {
   position      : relative;
   text-transform: capitalize;
+}
+.col-lg-4{
+  padding-right: 40px;
 }
 
 .product-item .product-name::before {

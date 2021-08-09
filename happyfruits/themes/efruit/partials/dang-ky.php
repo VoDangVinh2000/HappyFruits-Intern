@@ -13,7 +13,7 @@
                     <!--Form action register-->
                     <form action="/register" method="post">
                         <div class="main-create-account-fillout">
-                            <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" type="text" name="username_en" class="input-account efruit-vi" autocapitalize="words" autofocus placeholder="Username" required>
+                        <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" type="text" name="username_en" class="input-account efruit-vi" autocapitalize="words" autofocus placeholder="Username" required>
                             <div class="error">
                                 <?php
                                 if (isset($_COOKIE['error_username'])) {
