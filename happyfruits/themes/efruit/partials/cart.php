@@ -410,7 +410,7 @@
                     <p>
                         <span bind-translate="Cảm ơn bạn đã đặt hàng">Cảm ơn bạn đã đặt hàng</span>.
                         <br /><span bind-translate="Mã đơn hàng của bạn là:">Mã đơn hàng của bạn là: </span> <span style="font-weight: bold; font-size: 150%;">{{code}}</span>.
-                        <br /><span bind-translate="Bạn có thể xem lại đơn hàng tại">Bạn có thể xem lại đơn hàng tại</span> <a target="_blank" href="<?= frontend_url() ?>don-hang/{{code}}"><?= frontend_url() ?>don-hang/{{code}}</a>.
+                        <br /><span bind-translate="Bạn có thể xem lại đơn hàng tại">Bạn có thể xem lại đơn hàng tại</span> <a target="_blank" href="/vi/don-hang/{{code}}">/vi/don-hang/{{code}}</a>.
                         <br /><span class="efruit-vi">Cửa hàng sẽ liên hệ xác nhận sớm nhất, nếu bạn cần thêm thông tin hoặc được phục vụ nhanh nhất vui lòng liên hệ hotline: <?= getvalue($main_branch, 'phone_number', '0938.70.70.15 - 0906.70.70.15') ?></span>
                         <span class="efruit-en">We will call you to confirm the order, if you need further information please contact us via hotline number <?= getvalue($main_branch, 'phone_number', '0938.70.70.15 - 0906.70.70.15') ?></span>.
                     </p>

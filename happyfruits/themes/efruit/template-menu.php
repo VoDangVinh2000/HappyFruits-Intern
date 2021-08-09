@@ -3,7 +3,7 @@
     <div class="y-grid">
         <div class="y-results" id="y-results">
             <?php $this->load_partial('hero-image') ?>
-            <?php $this->load_partial('category-list') ?>
+            <!-- <?//php $this->load_partial('category-list') ?> -->
             <?php if($obj['page_body']):?>
                 <div class="content-container" style="background: #fff;">
                     <div class="content-body container">

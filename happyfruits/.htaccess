@@ -64,7 +64,6 @@ RewriteRule ^register/?$ /pixeladmin/index.php?controller=customer&action=regist
 
 #RewriteRule ^loginCustomer/?$ /pixeladmin/index.php?controller=customer&action=login
 
-
     Redirect /index.php /vi/
 
 <ifModule mod_gzip.c>

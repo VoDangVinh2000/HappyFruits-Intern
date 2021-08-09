@@ -14,22 +14,22 @@
             <?php if(!empty($show_buttons)):?>
             <p class="text-center">
                 <?php if (empty($order['is_locked']) && can_edit_order($order)):?>
-                    <a target="_blank" class="btn btn-sm btn-danger" href="<?=frontend_url()?>sua-don-hang/<?=getvalue($order, 'code', $order['id'])?>" bind-translate="Sửa đơn hàng">Sửa đơn hàng</a>
+                    <a target="_blank" class="btn btn-sm btn-danger" href="/vi/sua-don-hang/<?=getvalue($order, 'code', $order['id'])?>" bind-translate="Sửa đơn hàng">Sửa đơn hàng</a>
                 <?php endif;?>
                 <?php if ($order['status'] == 'Completed'):?>
-                    <a target="_blank" class="btn btn-sm btn-success" href="<?=frontend_url()?>danh-gia/<?=getvalue($order, 'code', $order['id'])?>" bind-translate="Đánh giá đơn hàng">Đánh giá đơn hàng</a>
+                    <a target="_blank" class="btn btn-sm btn-success" href="/vi/danh-gia/<?=getvalue($order, 'code', $order['id'])?>" bind-translate="Đánh giá đơn hàng">Đánh giá đơn hàng</a>
                 <?php endif;?>
             </p>
             <?php endif;?>
         </div>
     </div>
     <div class="row">
-        <div class="<?=$class?>">
+        <div class="<?=$class?>" >
             <?php if(!empty($order_items)):?>
-                <div class="order-list row">
+                <div class="order-list row"  >
                     <?php foreach($order_items as $item):?>
                         <div class="order-item">
-                            <span class="order-item-number"><?=formatQuantity($item['quantity'])?></span>
+                            <span class="order-item-number fw-bold">Số lượng : <?=formatQuantity($item['quantity'])?></span>
                             <div class="order-item-info">
                                 <div class="order-item-name">
                                     <span class="txt-bold">
@@ -60,30 +60,30 @@
                 </div>
             <?php endif;?>
             <div class="row mt10">
-                <div class="col-xs-6"><span bind-translate="Tổng cộng">Tổng cộng</span> <span class="txt-bold font16"><?=formatQuantity($order['quantity'])?></span> <span bind-translate="phần">phần</span></div>
-                <div class="col-xs-6 txt-bold text-right"><?=number_format($order['subtotal'],3,'.','.')?><sup>đ</sup></div>
+                <div class="col-md-2 col-sm-2"><span bind-translate="Tổng cộng">Tổng cộng</span> <span class="txt-bold font16"><?=formatQuantity($order['quantity'])?></span> <span bind-translate="phần">phần</span></div>
+                <div class="col-md-2 col-sm-2 fw-bold"><?=number_format($order['subtotal'],3,'.','.')?><sup>đ</sup></div>
             </div>
             <?php if($order['discount'] > 0):?>
                 <div class="row mt10">
-                    <div class="col-xs-6"><span bind-translate="Chiết khấu">Chiết khấu</span><?=!empty($order['promotion_code'])?' ('.$order['promotion_code'].')':' ('.round($order['discount']/$order['subtotal']*100).'%)'?></div>
-                    <div class="col-xs-6 text-right"><?=$order['discount']>0?('-'.number_format($order['discount'], 3, '.', '.')):'0'?><sup>đ</sup></div>
+                    <div class="col-md-2 col-sm-2"><span bind-translate="Chiết khấu">Chiết khấu</span><?=!empty($order['promotion_code'])?' ('.$order['promotion_code'].')':' ('.round($order['discount']/$order['subtotal']*100).'%)'?></div>
+                    <div class="col-md-2 col-sm-2 fw-bold"><?=$order['discount']>0?('-'.number_format($order['discount'], 3, '.', '.')):'0'?><sup>đ</sup></div>
                 </div>
             <?php endif;?>
             <?php if($order['VAT'] > 0):?>
                 <div class="row mt10">
-                    <div class="col-xs-6">VAT (<?=$order['VAT']*100?>%)</div>
-                    <div class="col-xs-6 text-right"><?=number_format($order['VAT']*($order['subtotal']-$order['discount']), 3, '.', '.')?><sup>đ</sup></div>
+                    <div class="col-md-2 col-sm-2">VAT (<?=$order['VAT']*100?>%)</div>
+                    <div class="col-md-2 col-sm-2 fw-bold"><?=number_format($order['VAT']*($order['subtotal']-$order['discount']), 3, '.', '.')?><sup>đ</sup></div>
                 </div>
             <?php endif;?>
             <?php if($order['shipping_fee']):?>
                 <div class="row mt10">
-                    <div class="col-xs-6"><span bind-translate="Phí giao hàng">Phí giao hàng</span>&nbsp;<span class="distance green-text"></span></div>
-                    <div class="col-xs-6 text-right"><?=number_format($order['shipping_fee'], 3, '.', '.')?><sup>đ</sup></span></div>
+                    <div class="col-md-2 col-sm-2"><span bind-translate="Phí giao hàng">Phí giao hàng</span>&nbsp;<span class="distance green-text"></span></div>
+                    <div class="col-md-2 col-sm-2 fw-bold"><?=number_format($order['shipping_fee'], 3, '.', '.')?><sup>đ</sup></span></div>
                 </div>
             <?php endif;?>
             <div class="row mt10 mb10">
-                <div class="col-xs-6 txt-bold font18"><span bind-translate="Tổng cộng">Tổng cộng</span></div>
-                <div class="col-xs-6 text-right txt-bold font18"><?=number_format($order['total'], 3, '.', '.')?><sup>đ</sup></div>
+                <div class="col-md-2 col-sm-2 fs-5"><span bind-translate="Tổng cộng">Tổng cộng</span></div>
+                <div class="col-md-2 col-sm-2 fw-bold fs-5"><?=number_format($order['total'], 3, '.', '.')?><sup>đ</sup></div>
             </div>
 
             <?php if($order['description']):?>

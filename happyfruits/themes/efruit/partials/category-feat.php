@@ -53,7 +53,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 <div class="col-md-6">
                                     <div class="product-item">
                                         <div class="product-photo">
-                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                            <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>">
                                             </a>
                                             <a class="btn-shop btn-cart" href="">
@@ -65,8 +65,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a class=" efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
-                                                <a class=" efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -80,7 +80,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 <div class="col-md-6">
                                     <div class="product-item">
                                         <div class="product-photo">
-                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                            <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
                                             </a>
                                             <a class="btn-shop btn-cart" href="">
@@ -92,8 +92,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                                <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                                <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -129,7 +129,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 <div class="col-md-6">
                                     <div class="product-item">
                                         <div class="product-photo">
-                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                            <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                             <a class="btn-shop btn-cart" href="#">
                                                 <div class="button-content-wrapper">
@@ -140,8 +140,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a class=" efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
-                                                <a class=" efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -155,7 +155,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 <div class="col-md-6">
                                     <div class="product-item">
                                         <div class="product-photo">
-                                            <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                            <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                             <a class="btn-shop btn-cart" href="#">
                                                 <div class="button-content-wrapper">
@@ -166,8 +166,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                                <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                                <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                                <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                             </div>
                                             <div class="col-md-12 col-lg-4 col-4">
                                                 <div class="product-price">
@@ -223,8 +223,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <div class="category-caption">
                             <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                             <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
-                            <span class="efruit-vi"><p><?= $content_2 ?></p></span>
-                            <span class="efruit-en"><p><?= $content_2_en ?></p></span>
+                            <span class="efruit-vi">
+                                <p><?= $content_2 ?></p>
+                            </span>
+                            <span class="efruit-en">
+                                <p><?= $content_2_en ?></p>
+                            </span>
                             <!-- <p class="efruit-en"></?= $en_content ?></p> -->
                             <!-- <a class="btn-shop" href="</?= $array['href'] ?>">
                                 <div class="button-content-wrapper">
@@ -239,8 +243,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="top-img">
-                            <img src="<?= $array['image']  ?>" alt="test">
+                        <div class="top-img"><img src="<?= $array['image']  ?>" alt="test">
                         </div>
                     </div>
         <?php }
@@ -259,7 +262,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -270,8 +273,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class=" efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
-                                        <a class=" efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -285,7 +288,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?= $array['image'] ?>" alt=""></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -296,8 +299,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -340,7 +343,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -350,8 +353,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </a>
                                 </div>
                                 <div class="row mt-2">
-                                    <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                    <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                    <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                    <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                 </div>
                                 <div class="col-md-12 col-lg-4 col-4">
                                     <div class="product-price">
@@ -366,7 +369,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
         <div class="ms-2 me-2">
             <div class="product-item">
                 <div class="product-photo">
-                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
+                    <a href="/vi/detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                     <a class="btn-shop btn-cart" href="#">
                         <div class="button-content-wrapper">
@@ -377,8 +380,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                 </div>
                 <div class="row mt-2">
                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                     </div>
                     <div class="col-md-12 col-lg-4 col-4">
                         <div class="product-price">
@@ -423,7 +426,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -434,8 +437,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
 
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
@@ -451,7 +454,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -462,8 +465,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -508,7 +511,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -519,8 +522,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -535,7 +538,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <div class="ms-2 me-2">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                         <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -546,8 +549,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">

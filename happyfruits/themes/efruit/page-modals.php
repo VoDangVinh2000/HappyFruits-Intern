@@ -335,10 +335,10 @@ $this->load_partial('product-modals');
                     <button class="btn btn-info" href="" ng-click="bookNewOrder()"><i class="fa fa-refresh"></i> <span bind-translate="Đặt hàng mới">Đặt hàng mới</span></button>&nbsp;
                     <button class="btn btn-success" href="" ng-click="step=1"><i class="fa fa-edit"></i> <span bind-translate="Sửa đơn hàng">Sửa đơn hàng</span></button>
                 </div>
-            </div> <!-- / .wizard -->
+            </div>  / .wizard -->
         </div> <!-- / .modal-content -->
     </div> <!-- / .modal-dialog -->
-</div> -->
+</div>
 <div role="dialog" tabindex="-1" class="modal fade in" id="modal-notices" aria-hidden="false">
     <div class="modal-dialog normal-dialog">
         <div class="modal-content"  style="background: rgba(56,56,56,0.8);">

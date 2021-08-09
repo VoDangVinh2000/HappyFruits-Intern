@@ -1,7 +1,7 @@
 <?php
 function init_page(&$controller)
 {
-    $controller->load_model('Products, Menus');
+    $controller->load_model('Products, Menus, Categories, Prices');
     $main_menu = $controller->Menus->get_details_by_code('main-menu');
     $category_menu = $controller->Menus->get_details_by_code('category-menu');
     $tiles = $category_menu['items'];
@@ -42,12 +42,11 @@ function init_page(&$controller)
     $sanPhamKhac = $controller->Products->get_all_product_by_categoryID(7);
 
     //get parent_id of categories table to see mega-menu
-    $megaMenu_gioDau = $controller->Categories->get_parentId_of_categories(14);
-
+    $megaMenu_fruits_baskets = $controller->Categories->get_parentId_of_categories(14);
+    $megaMenu_hamper_boxFruit = $controller->Categories->get_parentId_of_categories(15);
     //get all product by code
     $all_product = $controller->Products->get_all_product();
     
-     
     //image null
     $imageDefault = get_child_theme_assets_url() . "img/default-product-image.png";
     //get id product
@@ -55,14 +54,18 @@ function init_page(&$controller)
 
     //get product by id
     $product = $controller->Products->get_details($id);
-    
-    //$traiCayNhap = $controller->get_all_product_by_categoryID(6);
+
+    //show products with sell_price on mega-menu
+    $gia = get('param2');
+    $get_product_with_sell_price = $controller->Prices->get_products_with_price_with_categories($gia);
+
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
     "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
     "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
-    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_gioDau"));
-        
+    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_fruits_baskets",
+    "megaMenu_hamper_boxFruit","gia","get_product_with_sell_price"));
 }
+
 function url_slug($str, $options = array()) {
     // Make sure string is in UTF-8 and strip invalid UTF-8 characters
     $str = mb_convert_encoding((string)$str, 'UTF-8', mb_list_encodings());
@@ -175,7 +178,6 @@ function view_order(&$controller)
     if($order){
         $error_msg = '';
         $order_items = $controller->Orders->get_full_order_items($order, $error_msg);
-        var_dump($order_items);
         $controller->_merge_data(compact("page_title", "order", "order_items"));
     }else{
         $controller->_merge_data(compact("page_title", "order"));

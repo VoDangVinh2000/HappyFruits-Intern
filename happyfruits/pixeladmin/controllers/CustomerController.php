@@ -86,7 +86,7 @@ class CustomerController extends BaseController
                 $bool = true;
             }
             if ($bool) {
-                header('location:' . frontend_url() . "dang-ky" . '');
+                header('location:/vi/dang-ky');
             } else {
                 $params['username'] = $_POST['username_en'];
                 $params['password'] = md5($_POST['password_en']);
@@ -97,7 +97,7 @@ class CustomerController extends BaseController
                 if ($success) {
                     setcookie("error_email", $error_email, 0, "/");
                     setcookie("error_username", $error_username, 0, "/");
-                    header('location:' . frontend_url() . "dang-nhap" . '');
+                    header('location:/vidang-nhap');
                 }
             }
         } 
@@ -117,7 +117,7 @@ class CustomerController extends BaseController
                 $bool = true;
             }
             if ($bool) {
-                header('location:' . frontend_url() . "dang-ky" . '');
+                header('location:/vi/dang-ky');
             } else {
                 $params['username'] = $_POST['username_en'];
                 $params['password'] = md5($_POST['password_en']);
@@ -128,12 +128,12 @@ class CustomerController extends BaseController
                 if ($success) {
                     setcookie("error_email", $error_email, 0, "/");
                     setcookie("error_username", $error_username, 0, "/");
-                    header('location:' . frontend_url() . "dang-nhap" . '');
+                    header('location:/vi/dang-nhap');
                 }
             }
         }
          else {
-            header('location:' . frontend_url() . '');
+            header('location:/vi/');
         }
     }
     function loginCustomer(){
