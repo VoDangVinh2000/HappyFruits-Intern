@@ -1,20 +1,22 @@
 window.addEventListener('DOMContentLoaded', (event) => {
     //js profile page 
     let allInputLogin = document.querySelectorAll('.input-account');
-    let a_editProfile = document.querySelector('#a-editProfile');
+    let a_editProfile = document.querySelectorAll('#a-editProfile');
     let form_edit_profile = document.getElementById('form-edit-profile');
-    let a_forgot = document.querySelector('#forgotpassword');
+    let a_forgot = document.querySelectorAll('#forgotpassword');
     let form_forgot = document.querySelector('.form-forgot');
     let form_login = document.querySelector('.form-account');
-    let a_cancelFormForgot = document.getElementById('cancelFormForgot');
+    let a_cancelFormForgot = document.querySelectorAll('#cancelFormForgot');
 
     if (a_editProfile) {
-        a_editProfile.addEventListener('click', function() {
+        a_editProfile.forEach(element => {
+            element.addEventListener('click', function() {
             if (form_edit_profile.style.display == "none") {
                 form_edit_profile.style.display = "block";
             } else {
                 form_edit_profile.style.display = "none";
             }
+            });
         });
     } else {
 
@@ -34,18 +36,24 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //event click for link a of form-login "forgot your password"
 
         if (a_forgot) {
-            a_forgot.addEventListener('click', function() {
+            a_forgot.forEach(element => {
+               element.addEventListener('click', function() {
                 form_login.style.display = "none";
                 form_forgot.style.display = "block";
+                });
             });
+            
         } else {
 
         }
         if (a_cancelFormForgot) {
-            a_cancelFormForgot.addEventListener('click', function() {
+            a_cancelFormForgot.forEach(element => {
+                 element.addEventListener('click', function() {
                 form_login.style.display = "block";
                 form_forgot.style.display = "none";
+                });
             });
+           
         } else {
 
         }
@@ -53,7 +61,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
             $('input[name=username]').css('border-bottom', '1px solid black');
         });
 
-        //Hủy cookie cho thông báo của phần đăng ký
+        //Hủy cookie cho thông báo của phần đăng ký và đăng nhập
         window.onload = (event) => {
             let allcookie = document.cookie;
             let cookiearray = allcookie.split(';');
@@ -72,11 +80,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if (arr[key] == "error_email") {
                     setCookie(arr[key], '', 0);
                 }
+                if(arr[key] == "error_username_password"){
+                    setCookie(arr[key], '', 0);
+                }
+                  if(arr[key] == "error_acount_does_not_exist"){
+                    setCookie(arr[key], '', 0);
+                }
             }
         };
     });
-
-
 });
 
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -117,10 +129,11 @@ $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
         autoplay: true,
         autoplayhoverpause: true,
-        autoplaytimeout: 200,
+        autoplaytimeout: 100,
         items: 4,
         nav: true,
         loop: true,
+        lazyLoad: true,
         responsive: {
             0: {
                 items: 1,

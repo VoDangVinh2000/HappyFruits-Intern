@@ -178,10 +178,7 @@ function view_order(&$controller)
     if($order){
         $error_msg = '';
         $order_items = $controller->Orders->get_full_order_items($order, $error_msg);
-<<<<<<< HEAD
-=======
         // var_dump($order_items);
->>>>>>> 6db262671c647aacd52816be66f381eccdaa39d8
         $controller->_merge_data(compact("page_title", "order", "order_items"));
     }else{
         $controller->_merge_data(compact("page_title", "order"));

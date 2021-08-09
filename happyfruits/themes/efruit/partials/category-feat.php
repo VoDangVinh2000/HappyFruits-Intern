@@ -344,7 +344,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -370,7 +370,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
             <div class="product-item">
                 <div class="product-photo">
                     <a href="/vi/detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
-                        <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                        <img class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                     <a class="btn-shop btn-cart" href="#">
                         <div class="button-content-wrapper">
                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -427,7 +427,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -455,7 +455,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -512,7 +512,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -539,7 +539,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>

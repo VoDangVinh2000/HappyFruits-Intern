@@ -2,7 +2,7 @@
     <div class="container">
         <div class="container-my-account">
             <!--********
-                Về district, V hãy qua function.inc.php tìm đến hàm html_select_district()
+                Về district của profile ở dưới chỗ select, hãy qua function.inc.php tìm đến hàm html_select_district()
             !-->
             <!-- <div class="row">
                 <div class="col-md-6"><h1>My Account</h1></div>

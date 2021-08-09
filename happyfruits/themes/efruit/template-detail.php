@@ -91,21 +91,14 @@ if (isset($product['sell_price'])) {
                 if ($counter >= 5) {
                     break;
                 }
-<<<<<<< HEAD
         ?>
                 <?php
-=======
->>>>>>> 6db262671c647aacd52816be66f381eccdaa39d8
                 if (!empty($item)) {
         ?>
                     <?php
                     if ($item['image'] == "") {
-<<<<<<< HEAD
                 ?>
                         <!-- <//?php $this->load_partial('product-item-box', array('item' => $item)); ?> -->
-=======
-                    ?>
->>>>>>> 6db262671c647aacd52816be66f381eccdaa39d8
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
@@ -164,11 +157,4 @@ if (isset($product['sell_price'])) {
         ?>
     </div>
 </div>
-<<<<<<< HEAD
 <?php $this->load_theme_file('page-footer.php') ?>
-=======
-<?php
-// echo "footer";
-$this->load_theme_file('page-footer.php')
-?>
->>>>>>> 6db262671c647aacd52816be66f381eccdaa39d8

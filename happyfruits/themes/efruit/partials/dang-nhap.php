@@ -11,30 +11,30 @@
                             <p class="efruit-vi">Vui lòng nhập đầy đủ thông tin của bạn.</p>
                             <p class="efruit-en">Please login using account detail bellow.</p>
                         </div>
+
                         <!--Form action-login-->
-                        <form action="/loginCustomer" method="post">
+                        <form action="/loginCustomer" class="needs-validation" novalidate method="post">
                             <div class="main-create-account-fillout">
-                                <input type="text" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
-                                
-                                <label for=""></label>
-                                <input type="password" class="input-account" name="password"  autocapitalize="words" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8" required>
                                 <div class="error">
                                     <?php
-                                        if (isset($_COOKIE['error_username_password'])) {
-                                            echo $_COOKIE['error_username_password'] . "</br>";
-                                        }
-                                        if (isset($_COOKIE['error_acount_does_not_exist'])) {
-                                            echo $_COOKIE['error_acount_does_not_exist'] . "</br>";
-                                        }
+                                    if (isset($_COOKIE['error_username_password'])) {
+                                        echo $_COOKIE['error_username_password'] . "</br>";
+                                    }
+                                    if (isset($_COOKIE['error_acount_does_not_exist'])) {
+                                        echo $_COOKIE['error_acount_does_not_exist'] . "</br>";
+                                    }
                                     ?>
                                 </div>
+                           
+                                <input id="validationCustom01" type="text" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
+                                <input type="password" class="input-account" name="password" autocapitalize="words" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8" required>
+
                             </div>
                             <div class="div-action-button">
                                 <div class="input-submit-account">
                                     <input type="submit" value="Sign In" name="login">
                                     <a class="efruit-vi" href="#recover" id="forgotpassword">Quên mật khẩu?</a>
                                     <a class="efruit-en" href="#recover" id="forgotpassword">Forgot your password?</a>
-
                                 </div>
                             </div>
                         </form>
@@ -54,7 +54,7 @@
                         </div>
                         <form action="" method="post">
                             <div class="main-create-account-fillout">
-                                <input type="email" name="email" class="input-account"  autocapitalize="words" placeholder="Email" required>
+                                <input type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
                             </div>
                             <div class="div-action-button">
                                 <div class="input-submit-account">
