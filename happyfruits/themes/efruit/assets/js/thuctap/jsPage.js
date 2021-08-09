@@ -117,6 +117,9 @@ function setCookie(cname, cvalue, exMins) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
+function searchProduct() {
+    console.log('ok');
+}
 
 //cancel form edit profile
 function cancelProfile() {

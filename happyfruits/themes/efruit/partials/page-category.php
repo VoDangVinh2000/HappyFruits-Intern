@@ -1,6 +1,5 @@
 <div class="container-fluid">
     <div class="row">
-        <p class="h3">Giá</p>
         <?php
         if (!empty($gia)) {
             if (!empty($get_product_with_sell_price)) {
@@ -65,6 +64,10 @@
         <?php }
                     }
                 }
+            }
+            else{
+                //Nếu không có sản phẩm nào 
+                echo "<script>alert('Hiện chưa có sản phẩm nào cho mức giá này !');window.location.href='/vi'</script>";
             }
         } ?>
     </div>

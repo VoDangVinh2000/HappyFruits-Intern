@@ -13,7 +13,9 @@
                     <!--Form action register-->
                     <form action="/register" method="post">
                         <div class="main-create-account-fillout">
-                        <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" type="text" name="username_en" class="input-account efruit-vi" autocapitalize="words" autofocus placeholder="Username" required>
+                            <p class="efruit-en">Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8 .</p>
+                            <p class="efruit-vi">Mật khẩu có ít nhất 1 số, 1 chữ thường, 1 chữ in hoa và tối đa 8 ký tự .</p>
+                            <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" type="text" name="username_en" class="input-account" autocapitalize="words" autofocus placeholder="Username" required>
                             <div class="error">
                                 <?php
                                 if (isset($_COOKIE['error_username'])) {
@@ -23,6 +25,7 @@
                             </div>
 
                             <div class="password-wrapper">
+
                                 <input pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" placeholder="Password" required>
                                 <i class="fas fa-eye" id="btnShowPass"></i>
                             </div>
