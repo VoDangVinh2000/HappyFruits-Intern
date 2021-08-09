@@ -104,8 +104,17 @@
                </div>
                <div class="collapse navbar-collapse">
                    <ul class="navbar-nav ms-auto right-main-nav">
+                       <?php if(isset($_SESSION['user_account'])){ ?>
                        <li class="nav-item">
-                           <a class="nav-link" href="#">
+                           <a class="nav-link" href="/vi/profile">
+                               <i class="fas fa-user" style="font-size: 20px;"></i>
+                           </a>
+                       </li>
+                       <?php }
+                             else {
+                       ?>
+                        <li class="nav-item">
+                           <a class="nav-link" href="/vi/dang-nhap">
                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
                                    <g transform="translate(3.52)">
                                        <path d="M29.571,13.853a4.427,4.427,0,1,1,4.471-4.427A4.461,4.461,0,0,1,29.571,13.853Zm0-7.609a3.182,3.182,0,1,0,3.214,3.182A3.2,3.2,0,0,0,29.571,6.244Z" transform="translate(-25.1 -5)"></path>
@@ -116,6 +125,7 @@
                                </svg>
                            </a>
                        </li>
+                       <?php } ?>
                        <li class="nav-item main-cart-btn">
                            <a class="nav-link position-relative btn-cart-nav" id="show-cart" href="#">
                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 13.87 16">

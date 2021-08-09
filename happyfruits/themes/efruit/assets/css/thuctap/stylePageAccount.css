@@ -372,6 +372,16 @@ h6 {
 }
 
 
+/* button logout  */
+.logout-title{
+    float: right;
+    font-size: large;
+}
+
+.logout-title a{
+    color: #333333;
+}
+
 /*css reponsive*/
 
 
