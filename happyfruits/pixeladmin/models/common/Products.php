@@ -185,5 +185,29 @@ class Products extends BaseProducts
         }
         return self::_select_one($this->table_name, $filters);
     }
+
+    function get_relate_products($id){
+        //Lấy category_id 
+        $sql = "SELECT products.category_id FROM prices 
+        INNER JOIN products ON products.product_id = prices.product_id WHERE products.product_id = '".$id."' 
+        AND products.enabled = 1 AND products.is_hidden = 0 LIMIT 1";
+        $filters = "";
+        $result = $this->_do_select_sql($sql, $filters);
+        //Lấy ra những sản phẩm có category_id là $id
+        $query = "";
+        if(!empty($result)){
+            foreach($result as $array){
+                $query = "SELECT * FROM prices 
+                INNER JOIN products ON products.product_id = prices.product_id WHERE
+                 products.category_id = '".$array['category_id']."' 
+                AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1";
+            }
+        }
+        else{
+            return null;
+        }
+        // return self::_do_sql($sql, $filters, array(), $order_by);
+        return $this->_do_select_sql($query, $filters);
+    }
 }
 /* End of generated class */

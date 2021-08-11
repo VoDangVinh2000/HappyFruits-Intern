@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     //event for input of form-login
     allInputLogin.forEach(element => {
-
         element.addEventListener('focus', function() {
             element.style.borderBottom = "1px solid black";
             allInputLogin.forEach(element2 => {
@@ -32,9 +31,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
         });
-
         //event click for link a of form-login "forgot your password"
-
         if (a_forgot) {
             a_forgot.forEach(element => {
                element.addEventListener('click', function() {

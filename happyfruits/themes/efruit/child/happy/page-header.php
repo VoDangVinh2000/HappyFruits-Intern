@@ -105,27 +105,26 @@
                </div>
                <div class="collapse navbar-collapse">
                    <ul class="navbar-nav ms-auto right-main-nav">
-                       <?php if(isset($_SESSION['user_account'])){ ?>
-                       <li class="nav-item">
-                           <a class="nav-link" href="/vi/profile">
-                               <i class="fas fa-user" style="font-size: 20px;"></i>
-                           </a>
-                       </li>
-                       <?php }
-                             else {
-                       ?>
-                        <li class="nav-item">
-                           <a class="nav-link" href="/vi/dang-nhap">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
-                                   <g transform="translate(3.52)">
-                                       <path d="M29.571,13.853a4.427,4.427,0,1,1,4.471-4.427A4.461,4.461,0,0,1,29.571,13.853Zm0-7.609a3.182,3.182,0,1,0,3.214,3.182A3.2,3.2,0,0,0,29.571,6.244Z" transform="translate(-25.1 -5)"></path>
-                                   </g>
-                                   <g transform="translate(0 9.173)">
-                                       <path d="M21.5,63.427H20.243c0-3.076-3.017-5.582-6.734-5.582s-6.752,2.507-6.752,5.582H5.5c0-3.769,3.591-6.827,8.009-6.827S21.5,59.658,21.5,63.427Z" transform="translate(-5.5 -56.6)"></path>
-                                   </g>
-                               </svg>
-                           </a>
-                       </li>
+                       <?php if (isset($_SESSION['user_account'])) { ?>
+                           <li class="nav-item">
+                               <a class="nav-link" href="/vi/profile">
+                                   <i class="fas fa-user" style="font-size: 20px;"></i>
+                               </a>
+                           </li>
+                       <?php } else {
+                        ?>
+                           <li class="nav-item">
+                               <a class="nav-link" href="/vi/dang-nhap">
+                                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                       <g transform="translate(3.52)">
+                                           <path d="M29.571,13.853a4.427,4.427,0,1,1,4.471-4.427A4.461,4.461,0,0,1,29.571,13.853Zm0-7.609a3.182,3.182,0,1,0,3.214,3.182A3.2,3.2,0,0,0,29.571,6.244Z" transform="translate(-25.1 -5)"></path>
+                                       </g>
+                                       <g transform="translate(0 9.173)">
+                                           <path d="M21.5,63.427H20.243c0-3.076-3.017-5.582-6.734-5.582s-6.752,2.507-6.752,5.582H5.5c0-3.769,3.591-6.827,8.009-6.827S21.5,59.658,21.5,63.427Z" transform="translate(-5.5 -56.6)"></path>
+                                       </g>
+                                   </svg>
+                               </a>
+                           </li>
                        <?php } ?>
                        <li class="nav-item main-cart-btn">
                            <a class="nav-link position-relative btn-cart-nav" id="show-cart" href="#">
@@ -152,8 +151,8 @@
                            <li class="nav-item dropdown has-megamenu">
                                <?php foreach ($tiles as $tile) {
                                     if ($tile['cat'] == 14) { ?>
-                                       <a class="nav-link dropdown-toggle efruit-vi px-5" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
-                                       <a class="nav-link dropdown-toggle efruit-en px-5" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">FRUIT BASKETS</a>
+                                       <a class="nav-link dropdown-toggle efruit-vi px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
+                                       <a class="nav-link dropdown-toggle efruit-en px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">FRUIT BASKETS</a>
                                <?php }
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
@@ -168,9 +167,9 @@
                                                         foreach ($megaMenu_fruits_baskets as $array) {
                                                     ?>
                                                            <div class="col-md-6 col-megamenu">
-
                                                                <ul class="list-unstyled">
-                                                                   <li><a href="">
+                                                                   <li><a href="/vi/category/nhomhang-<?= $array['category_id'] ?>">
+                                                                           <!--Thử chuyển sang tiếng anh rồi chọn!-->
                                                                            <span class="efruit-vi"><?= $array['name'] ?></span>
                                                                            <span class="efruit-en"><?= $array['english_name'] ?></span>
                                                                        </a></li>
@@ -185,13 +184,13 @@
                                                <div class="row">
                                                    <div class="col-megamenu col-md-12">
                                                        <ul class="list-unstyled">
-                                                           <li><a href="/vi/category/gia1-14-200k-500k">200k - 500k</a></li>
-                                                           <li><a href="/vi/category/gia2-14">500k - 800k</a></li>
-                                                           <li><a href="/vi/category/gia3-14">800k - 1000k</a></li>
-                                                           <li><a href="/vi/category/gia4-14">1100k - 1500k</a></li>
-                                                           <li><a href="/vi/category/gia5-14">1600k - 2000k</a></li>
-                                                           <li><a href="/vi/category/gia6-14">2000k - 2500k</a></li>
-                                                           <li><a href="/vi/category/gia7-14">2600k - 4000k</a></li>
+                                                           <li><a href="/vi/category/gia-1-14">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia-2-14">500k - 800k</a></li>
+                                                           <li><a href="/vi/category/gia-3-14">800k - 1000k</a></li>
+                                                           <li><a href="/vi/category/gia-4-14">1100k - 1500k</a></li>
+                                                           <li><a href="/vi/category/gia-5-14">1600k - 2000k</a></li>
+                                                           <li><a href="/vi/category/gia-6-14">2000k - 2500k</a></li>
+                                                           <li><a href="/vi/category/gia-7-14">2600k - 4000k</a></li>
                                                        </ul>
                                                    </div><!-- col-megamenu.// -->
                                                </div>
@@ -209,8 +208,8 @@
                            <li class="nav-item dropdown has-megamenu">
                                <?php foreach ($tiles as $tile) {
                                     if ($tile['cat'] == 15) { ?>
-                                       <a class="nav-link dropdown-toggle efruit-vi px-5" href="" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
-                                       <a class="nav-link dropdown-toggle efruit-en px-5" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
+                                       <a class="nav-link dropdown-toggle efruit-vi px-3" href="" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
+                                       <a class="nav-link dropdown-toggle efruit-en px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
                                <?php }
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
@@ -225,7 +224,6 @@
                                                             foreach ($megaMenu_hamper_boxFruit as $array) {
                                                         ?>
                                                                <div class="col-md-6 col-megamenu">
-
                                                                    <ul class="list-unstyled">
                                                                        <li><a href="">
                                                                                <span class="efruit-vi"><?= $array['name'] ?></span>
@@ -243,13 +241,13 @@
                                                <div class="row">
                                                    <div class="col-megamenu col-md-12">
                                                        <ul class="list-unstyled">
-                                                           <li><a href="/vi/category/gia1-15">200k - 500k</a></li>
-                                                           <li><a href="/vi/category/gia2-15">500k - 800k</a></li>
-                                                           <li><a href="/vi/category/gia3-15">800k - 1000k</a></li>
-                                                           <li><a href="/vi/category/gia4-15">1100k - 1500k</a></li>
-                                                           <li><a href="/vi/category/gia5-15">1600k - 2000k</a></li>
-                                                           <li><a href="/vi/category/gia6-15">2000k - 2500k</a></li>
-                                                           <li><a href="/vi/category/gia7-15">2600k - 4000k</a></li>
+                                                           <li><a href="/vi/category/gia-1-15">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia-2-15">500k - 800k</a></li>
+                                                           <li><a href="/vi/category/gia-3-15">800k - 1000k</a></li>
+                                                           <li><a href="/vi/category/gia-4-15">1100k - 1500k</a></li>
+                                                           <li><a href="/vi/category/gia-5-15">1600k - 2000k</a></li>
+                                                           <li><a href="/vi/category/gia-6-15">2000k - 2500k</a></li>
+                                                           <li><a href="/vi/category/gia-7-15">2600k - 4000k</a></li>
                                                        </ul>
                                                    </div><!-- col-megamenu.// -->
                                                </div>
@@ -264,16 +262,20 @@
                                </div> <!-- dropdown-mega-menu.// -->
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link efruit-vi px-5" href="#">HOA TRÁI CÂY</a>
-                               <a class="nav-link efruit-en px-5" href="#">FRUIT BOUQUETS</a>
+                               <a class="nav-link efruit-vi px-3" href="#">HOA TRÁI CÂY</a>
+                               <a class="nav-link efruit-en px-3" href="#">FRUIT BOUQUETS</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link efruit-vi px-5" href="#">ĐẶC SẢN VIỆT</a>
-                               <a class="nav-link efruit-en px-5" href="#">VIET NAM FRUIT SPECIAL</a>
+                               <a class="nav-link efruit-vi px-3" href="#">ĐẶC SẢN VIỆT</a>
+                               <a class="nav-link efruit-en px-3" href="#">VIET NAM FRUIT SPECIAL</a>
                            </li>
                            <li class="nav-item">
-                               <a class="nav-link efruit-vi px-5" href="#">TRÁI CÂY NHẬP</a>
-                               <a class="nav-link efruit-en px-5" href="#">FRESH FRUITS</a>
+                               <a class="nav-link efruit-vi px-3" href="#">TRÁI CÂY NHẬP</a>
+                               <a class="nav-link efruit-en px-3" href="#">FRESH FRUITS</a>
+                           </li>
+                           <li class="nav-item">
+                               <a class="nav-link efruit-vi px-3" href="#">SẢN PHẨM KHÁC</a>
+                               <a class="nav-link efruit-en px-3" href="#">OTHER PRODUCTS</a>
                            </li>
                        </ul>
 
@@ -291,7 +293,7 @@
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
                                <path d="M86.065,85.194a6.808,6.808,0,1,0-.871.871L89.129,90,90,89.129Zm-1.288-.422a5.583,5.583,0,1,1,1.64-3.953A5.6,5.6,0,0,1,84.777,84.772Z" transform="translate(-74 -74)"></path>
                            </svg>
-                        </button>
+                       </button>
                    </div>
                </div>
            </div>

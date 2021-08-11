@@ -1,9 +1,9 @@
 <div class="container-fluid">
     <div class="row">
         <?php
-        if (!empty($gia)) {
-            if (!empty($get_product_with_sell_price)) {
-                $arrProducts = array($get_product_with_sell_price);
+        if (!empty($choose_mega_menu)) {
+            if (!empty($get_product_with_mega_menu)) {
+                $arrProducts = array($get_product_with_mega_menu);
                 foreach ($arrProducts as $value) {
                     for ($i = 0; $i < count($value); $i++) {
                         if ($value[$i]['image'] == "") {
@@ -67,8 +67,10 @@
             }
             else{
                 //Nếu không có sản phẩm nào 
-                echo "<script>alert('Hiện chưa có sản phẩm nào cho mức giá này !');window.location.href='/vi'</script>";
+                echo "<h3 class='efruit-vi text-center'>Hiện chưa có sản phẩm tương thích với giá.</h3>
+                      <h3 class='efruit-en text-center'>There are no compatible products for this price.</h3>
+                        ";
             }
-        } ?>
+        }?>
     </div>
 </div>
