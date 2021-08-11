@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container mt5">
     <div class="row">
         <?php
         if (!empty($gia)) {
