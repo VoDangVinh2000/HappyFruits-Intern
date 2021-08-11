@@ -10,10 +10,12 @@
 <!-- </div> -->
 
 <?php
+// if(!isset($_GET['key'])){
+//     $key = $_GET['key'];
+// }
+var_dump($this->searchProduct());
+//     $controller->_merge_data(compact("page_title","search"));
 
-if(!empty($search)){
-    echo "Co";
-}
 ?>
 
 <!-- <div class="now-order-card-group">

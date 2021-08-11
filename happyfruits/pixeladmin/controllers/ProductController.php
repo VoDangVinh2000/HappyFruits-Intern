@@ -83,11 +83,28 @@ class ProductController extends BaseController
         $this->_merge_data(compact("js", "page_title", "items", "item_types"));
         $this->load_page('product/manage/index');
     }
-
-    function search()
+    function searchProduct()
     {
-
-       
+        $product = new Products();
+        if (isset($_POST['submit'])) {
+            $key = $_POST['key'];
+            $search = $product->get_product_by_key($key);
+            if($search!=null) {
+               return $search;
+            } 
+            else return [];
+        } else {
+            return "Khong co key";
+        }
     }
+    // function search()
+    // {
+        
+    //     // if (isset($_GET['key'])) {
+    //     //     # code...
+    //     //  echo $_GET['key'];
+    //     // }
+
+    // }
 }
 /* End of ProductController class */

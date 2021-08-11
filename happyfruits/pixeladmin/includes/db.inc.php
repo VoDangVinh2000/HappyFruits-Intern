@@ -18,7 +18,8 @@
     define("ROOT_URL_WITHOUT_SLASH", $scheme.$domain_name);
     define("ROOT_URL", ROOT_URL_WITHOUT_SLASH."/");
     define("BASE_URL", ROOT_URL_WITHOUT_SLASH."/pixeladmin/");
-    
+    // define('BASE_URL_LOCALHOST','localhost/vi/');
+
     define('DB_UPDATE_PATH', ABSOLUTE_PATH.'updates/');
     
     define('DB_BACKUP_PATH', ABSOLUTE_PATH.'backup_db/');

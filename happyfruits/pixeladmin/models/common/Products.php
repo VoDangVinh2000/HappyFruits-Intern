@@ -134,7 +134,8 @@ class Products extends BaseProducts
         return $this->select($filters);
     }
 
-    function get_all_product(){
+    function get_all_product()
+    {
         $filters = array(
             'select' => 'products.*, prices.price,prices.type_id',
             'join' => 'INNER JOIN prices ON prices.product_id = products.product_id',
@@ -158,12 +159,12 @@ class Products extends BaseProducts
         );
         return $this->select($filters);
     }
-  
+
     //Hàm này chưa đúng
-     function get_all_code()
+    function get_all_code()
     {
         $sql = "SELECT code FROM products";
-        
+
         $filters['order_by'] = 'code,image';
 
         return $this->_do_select_sql($sql, $filters);

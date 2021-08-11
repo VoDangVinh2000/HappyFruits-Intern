@@ -1,9 +1,15 @@
-<?php $this->load_theme_file('page-header.php') ?>
+<?php $this->load_theme_file('page-header.php') 
+    //Trang này là các trang của loại như fruit-baskets, hamper-box-fruits, không phải của mega-menu
+?>
 <div class="application-body">
     <div class="y-grid">
         <div class="y-results" id="y-results">
             <?php $this->load_partial('hero-image') ?>
+<<<<<<< HEAD
             <!-- </?php $this->load_partial('category-list') ?> -->
+=======
+            <!-- <?//php $this->load_partial('category-list') ?> -->
+>>>>>>> 8052ca7e32b9e7cdefdaee7dcb6ed2cacba5f60a
             <?php if(!empty($cat_products) || !empty($products_in_tags)):?>
                 <?php if($obj['page_body']):?>
                     <div class="content-container" style="background: #fff;">

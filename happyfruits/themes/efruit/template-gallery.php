@@ -6,7 +6,7 @@
     <div class="y-grid">
         <div class="y-results" id="y-results">
             <?php $this->load_partial('hero-image') ?>
-            <?php $this->load_partial('category-list') ?>
+            <!-- <?//php $this->load_partial('category-list') ?> -->
             <div class="content-container" style="background: #fff;">
                 <div class="content-body" style="margin: 0 auto; padding: 40px 20px;">
                     <?php if ($images_in_gallery): ?>

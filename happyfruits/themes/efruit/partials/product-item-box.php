@@ -3,11 +3,11 @@ if (!empty($item)) : ?>
     <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
         <div class="container mt-5">
             <div class="row">
-                <div class="col-md-12 ">
+                <div class="col-md-12">
                     <div class="product-item">
                         <div class="product-photo">
                             <!-- <a href="#" ng-click="showProduct(<//?= $item['product_id'] ?>, $event, 1)" class="photo-link"> -->
-                            <a href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
+                            <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
                                 <img alt="<?= $item['code'] ?>" src="<?= $item['image'] ? get_image_url($item['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>"></a>
                             <?php if (!empty($item['enabled']) && empty($item['not_deliver'])) : ?>
                                 <a class="btn-shop btn-cart" href="#">
