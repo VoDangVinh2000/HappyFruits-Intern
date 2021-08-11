@@ -86,13 +86,13 @@ if (isset($product['sell_price'])) {
 
         //Lấy ra được những sản phẩm liên quan
         if(!empty($relateProducts)){
-            var_dump($relateProducts);
-        }
-        //Sửa từ chỗ này
-        $category_of_page_detail = $array_category[$product['category_id']];
+            // var_dump($relateProducts);
         
-        if (!empty($category_of_page_detail)) :
-            foreach ($$category_of_page_detail as $item) {
+        //Sửa từ chỗ này
+        // $category_of_page_detail = $array_category[$product['category_id']];
+        
+        // if (!empty($category_of_page_detail)) :
+            foreach ($relateProducts as $item) {
                 $counter++;
                 if ($counter >= 5) {
                     break;
@@ -159,7 +159,7 @@ if (isset($product['sell_price'])) {
                     <?php } ?>
         <?php  }
             }
-        endif;
+        }
         ?>
     </div>
 </div>
