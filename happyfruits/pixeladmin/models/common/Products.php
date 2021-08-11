@@ -186,12 +186,20 @@ class Products extends BaseProducts
         return self::_select_one($this->table_name, $filters);
     }
 
-    function get_product_by_key($keyword){
-        // SELECT DISTINCT * FROM products WHERE name like "Giỏ Dâu Size 1A" OR code like '%FN%'
-        $sql = "SELECT DISTINCT * FROM products WHERE products.name like '%$keyword%' or products.code like '%$keyword%' ";
-        $filters = "";
-        return self::_do_sql($sql, $filters, array(),"");
+    function get_product_by_key()
+    {
+        //SELECT DISTINCT * FROM products WHERE name like "Giỏ Dâu Size 1A" OR code like '%FN%'
+        $search = "";
+        $sql = "";
+        if (isset($_POST['key']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+            $search = $_POST['key'];
+            $sql = "SELECT * FROM products, prices 
+            WHERE (products.name like '%" . $search . "%' OR products.code like '%" . $search . "%')
+            AND products.product_id = prices.product_id 
+            AND prices.type_id = 1";
+            $filters = "";
+            return self::_do_sql($sql, $filters);
+        } 
     }
-    
 }
 /* End of generated class */

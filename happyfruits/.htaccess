@@ -53,7 +53,7 @@ RewriteRule ^vi/?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&pag
 RewriteRule ^vi/(.*)/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=$1&param2=$2&param3=$3
 RewriteRule ^vi/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=$1&param2=$2
 RewriteRule ^vi/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=$1
-
+RewriteRule ^vi/search/?$ /pixeladmin/index.php?controller=page&action=view
 
 RewriteRule ^en/?$ /pixeladmin/index.php?controller=page&action=view&lang=en&page_code=trang-chu
 RewriteRule ^en/(.*)/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=en&page_code=$1&param2=$2&param3=$3
@@ -64,6 +64,7 @@ RewriteRule ^register/?$ /pixeladmin/index.php?controller=customer&action=regist
 
 RewriteRule ^loginCustomer/?$ /pixeladmin/index.php?controller=customer&action=loginCustomer
 RewriteRule ^logoutCustomer/?$ /pixeladmin/index.php?controller=customer&action=logoutCustomer
+
 
     Redirect /index.php /vi/
 

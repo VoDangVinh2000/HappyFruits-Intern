@@ -1,7 +1,7 @@
 <?php
 function init_page(&$controller)
 {
-    $controller->load_model('Products, Menus, Categories, Prices');
+    $controller->load_model('Products, Menus, Categories, Prices,Pages');
     $main_menu = $controller->Menus->get_details_by_code('main-menu');
     $category_menu = $controller->Menus->get_details_by_code('category-menu');
     $tiles = $category_menu['items'];
@@ -59,6 +59,9 @@ function init_page(&$controller)
     $gia = get('param2');
     $get_product_with_sell_price = $controller->Prices->get_products_with_price_with_categories($gia);
 
+    // get key of search function
+    $get_product_by_search_key = $controller->Products->get_product_by_key();
+
     $controller->_merge_data(compact(
         "main_menu",
         "hide_menu_items",
@@ -86,9 +89,12 @@ function init_page(&$controller)
         "megaMenu_fruits_baskets",
         "megaMenu_hamper_boxFruit",
         "gia",
-        "get_product_with_sell_price"
+        "get_product_with_sell_price",
+        "get_product_by_search_key"
     ));
+    //  
 }
+
 
 function url_slug($str, $options = array())
 {

@@ -110,18 +110,6 @@ class PageController extends BaseController
         $this->load_page('page/page');
     }
 
-    function searchProduct()
-    {
-        $product = new Products();
-        if (isset($_POST['submit'])) {
-            $key = $_POST['key'];
-            $search = $product->get_product_by_key($key);
-            if($search!=null) {
-               return $search;
-            } else return [];
-        } else {
-            return "Khong co key";
-        }
-    }
+    
 }
 /* End of PageController class */

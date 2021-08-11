@@ -7,6 +7,7 @@ class ProductController extends BaseController
 {
     function __construct()
     {
+        $this->not_require_logged = array('view');
         parent::__construct();
         $this->load_model('Products, Categories, Files, Inventoryitemdetails, ProductComponents, ProductsInBoxes');
     }
@@ -83,28 +84,19 @@ class ProductController extends BaseController
         $this->_merge_data(compact("js", "page_title", "items", "item_types"));
         $this->load_page('product/manage/index');
     }
-    function searchProduct()
-    {
-        $product = new Products();
-        if (isset($_POST['submit'])) {
-            $key = $_POST['key'];
-            $search = $product->get_product_by_key($key);
-            if($search!=null) {
-               return $search;
-            } 
-            else return [];
-        } else {
-            return "Khong co key";
-        }
-    }
-    // function search()
+    
+    // function searchProduct()
     // {
-        
-    //     // if (isset($_GET['key'])) {
-    //     //     # code...
-    //     //  echo $_GET['key'];
-    //     // }
-
+    //     $products = new Products();
+    //     if (isset($_POST['key']) && $_SERVER['REQUEST_METHOD'] == "POST") {
+    //         $key = $_POST['key'];
+    //         $search = $products->get_product_by_key($key);
+    //         if($search!=null) {
+    //            return $search;
+    //         } else return [];
+    //     } else {
+    //         return "Khong co key";
+    //     }
     // }
 }
 /* End of ProductController class */
