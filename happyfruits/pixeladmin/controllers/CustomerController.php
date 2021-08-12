@@ -8,7 +8,7 @@ class CustomerController extends BaseController
 {
     function __construct()
     {
-        $this->not_require_logged = array('register');
+        $this->not_require_logged = array('register','loginCustomer','logoutCustomer');
         parent::__construct();
         $this->load_model('Customers, Products');
     }
@@ -136,7 +136,6 @@ class CustomerController extends BaseController
         }
     }
 
-
     function loginCustomer()
     {
         $error_username_password = null;
@@ -192,9 +191,6 @@ class CustomerController extends BaseController
         else
             header('location: vi/dang-nhap');
             // header('location:' . frontend_url() . ''); tương đương //header('location: vi/dang-nhap');
-            
-
-        
     }
 }
 /* End of CustomersController class */

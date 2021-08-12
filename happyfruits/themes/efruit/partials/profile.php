@@ -1,3 +1,10 @@
+<?php 
+    //kiểm tra nếu ko có thông tin đăng nhập thì chuyển về trang đăng nhập
+    if(isset($_SESSION['user_account'])){} 
+    else {
+        echo "<script>window.location.href='/vi/dang-nhap'</script>";
+    }
+?>
 <div class="my-account">
     <div class="container">
         <div class="container-my-account">
@@ -122,14 +129,30 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md">
+                                    <div class="cancel-profile">
+                                        <button type="button" onclick="cancelProfile()"  name="cancel-form-profile-edit">Cancel</button>
+                                    </div>
+                                </div>
+                                <div class="col-md">
+                                    <input type="submit" value="Submit">
+                                </div>
+                            </div>
+                            
                         </form>
-                        <div class="row">
+                        <!-- <div class="row">
                             <div class="col-md">
                                 <div class="cancel-profile">
                                     <button type="button" onclick="cancelProfile()"  name="cancel-form-profile-edit">Cancel</button>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-md">
+                                <div class="submit-profile">
+                                    <button type="button" name="submit-form-profile-edit">Submit</button>
+                                </div>
+                            </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
