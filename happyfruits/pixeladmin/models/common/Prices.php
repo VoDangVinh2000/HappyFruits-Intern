@@ -64,11 +64,15 @@ class Prices extends BasePrices
                     }
                 }
                 $order_by = "";
-                $sql = "SELECT * FROM `products` INNER JOIN categories ON categories.category_id = products.category_id 
-            INNER JOIN prices ON prices.product_id = products.product_id AND
-            products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id =1 ";
+                $sql = "SELECT products.*,prices.price FROM `products` INNER JOIN categories ON categories.category_id = products.category_id 
+                        INNER JOIN prices ON prices.product_id = products.product_id AND
+                            products.category_id = '" . $category_id . "' 
+                            AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id =1 ORDER BY products.image ";
                 $filters = "";
                 return self::_do_sql($sql, $filters, array(), $order_by);
+            }
+            else{
+                return null;
             }
         } else if ($str[0] == 'gia') {
             $category_id = 0;
@@ -113,6 +117,9 @@ class Prices extends BasePrices
                 AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 ";
                 $filters = "";
                 return self::_do_sql($sql, $filters, array(), $order_by);
+            }
+            else{
+                return null;
             }
         }
         else{

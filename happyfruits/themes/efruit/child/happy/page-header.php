@@ -225,7 +225,7 @@
                                                         ?>
                                                                <div class="col-md-6 col-megamenu">
                                                                    <ul class="list-unstyled">
-                                                                       <li><a href="">
+                                                                       <li><a href="/vi/category/nhomhang-<?= $array['category_id'] ?>">
                                                                                <span class="efruit-vi"><?= $array['name'] ?></span>
                                                                                <span class="efruit-en"><?= $array['english_name'] ?></span>
                                                                            </a></li>

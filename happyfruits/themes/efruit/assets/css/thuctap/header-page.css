@@ -389,8 +389,7 @@ body {
   justify-content: center;
   overflow       : hidden;
   position       : relative;
-  height: 256px;
-  background-size: cover;
+  height: 300px;
   /* width: 230px; */
 }
 
