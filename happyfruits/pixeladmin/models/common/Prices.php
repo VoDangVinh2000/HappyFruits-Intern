@@ -50,9 +50,6 @@ class Prices extends BasePrices
 
     function get_products_with_mega_menu($href)
     {
-        // $sql = "";
-        // $order_by = "";
-        // $filters = "";
         $str = explode('-', $href); //gia-1-14 (split -> -)
         if ($str[0] == 'nhomhang') {
             $category_id = 0;
@@ -86,7 +83,7 @@ class Prices extends BasePrices
                         $gia = $str_split[$i];
                     }
                     if ($i == 2) {
-                        $category_id = $str_split[$i];
+                        $category_id =$str_split[$i];
                     }
                 }
                 if ($gia == '1') {
@@ -126,5 +123,6 @@ class Prices extends BasePrices
             return null;
         }
     }
+  
 }
 /* End of generated class */

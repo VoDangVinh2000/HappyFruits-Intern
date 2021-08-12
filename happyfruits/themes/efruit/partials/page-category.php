@@ -68,8 +68,8 @@
             }
             else{
                 //Nếu không có sản phẩm nào 
-                echo "<h3 class='efruit-vi text-center'>Hiện chưa có sản phẩm tương thích với giá.</h3>
-                      <h3 class='efruit-en text-center'>There are no compatible products for this price.</h3>
+                echo "<h3 class='efruit-vi text-center'>Hiện chưa có sản phẩm tương thích.</h3>
+                      <h3 class='efruit-en text-center'>There are no compatible products.</h3>
                         ";
             }
         }?>

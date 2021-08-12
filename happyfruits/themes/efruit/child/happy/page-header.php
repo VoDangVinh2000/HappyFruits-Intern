@@ -151,8 +151,12 @@
                            <li class="nav-item dropdown has-megamenu">
                                <?php foreach ($tiles as $tile) {
                                     if ($tile['cat'] == 14) { ?>
-                                       <a class="nav-link dropdown-toggle efruit-vi px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">GIỎ TRÁI CÂY</a>
-                                       <a class="nav-link dropdown-toggle efruit-en px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">FRUIT BASKETS</a>
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                           <?= $tile['short_text'] ?>
+                                       </a>
+                                       <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                           <?= $tile['en_text'] ?>
+                                       </a>
                                <?php }
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
@@ -160,11 +164,13 @@
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <!--response-mega đc css để responsive of device!-->
+                                           <h4 class="efruit-vi text-center">GIỎ TRÁI CÂY</h4>
+                                           <h4 class="efruit-en text-center">FRUIT_BASKETS</h4>
                                            <div class="col-lg-5">
                                                <div class="row">
                                                    <?php
-                                                    if (!empty($megaMenu_fruits_baskets)) {
-                                                        foreach ($megaMenu_fruits_baskets as $array) {
+                                                    if (!empty($megaMenu_fruit_baskets)) {
+                                                        foreach ($megaMenu_fruit_baskets as $array) {
                                                     ?>
                                                            <div class="col-md-6 col-megamenu">
                                                                <ul class="list-unstyled">
@@ -176,6 +182,10 @@
                                                                </ul>
                                                            </div> <!-- col-megamenu.// -->
                                                    <?php }
+                                                    }else{
+                                                        echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
+                                                        <p class='efruit-en text-center'>There are no product groups yet.</p>
+                                                          ";
                                                     }
                                                     ?>
                                                </div>
@@ -195,9 +205,39 @@
                                                    </div><!-- col-megamenu.// -->
                                                </div>
                                            </div>
-                                           <div class="col-lg-3">
+                                           <div class="col-lg-3 mt-0">
                                                <div class="col-megamenu">
-                                                   <p>1 sản phẩm</p>
+                                                   <?php if (!empty($gioTraiCay)) {
+                                                        foreach ($gioTraiCay as $array) {
+                                                    ?>
+                                                           <div class="col-md-12 col-sm-12">
+                                                               <div class="product-item">
+                                                                   <div class="product-photo">
+                                                                       <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                                                           <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
+                                                                       </a>
+                                                                       <a class="btn-shop btn-cart" href="">
+                                                                           <div class="button-content-wrapper">
+                                                                               <span class="button-text efruit-vi">Chi tiết</span>
+                                                                               <span class="button-text efruit-en">Detail</span>
+                                                                           </div>
+                                                                       </a>
+                                                                   </div>
+                                                                   <div class="row mt-2">
+                                                                       <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                                           <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                                           <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                                       </div>
+                                                                       <div class="col-md-12 col-lg-4 col-4">
+                                                                           <div class="product-price">
+                                                                               <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                                           </div>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                           </div><?php break;
+                                                                }
+                                                            } ?>
                                                </div> <!-- col-megamenu.// -->
                                            </div>
                                        </div><!-- end row -->
@@ -208,12 +248,18 @@
                            <li class="nav-item dropdown has-megamenu">
                                <?php foreach ($tiles as $tile) {
                                     if ($tile['cat'] == 15) { ?>
-                                       <a class="nav-link dropdown-toggle efruit-vi px-3" href="" data-bs-toggle="dropdown">HỘP TRÁI CÂY</a>
-                                       <a class="nav-link dropdown-toggle efruit-en px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">HAMPER - BOX FRUIT</a>
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="" data-bs-toggle="dropdown">
+                                           <?= $tile['short_text'] ?>
+                                       </a>
+                                       <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                           <?= $tile['en_text'] ?>
+                                       </a>
                                <?php }
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
+                                       <h4 class="efruit-vi text-center">HAMPER- HỘP TRÁI CÂY</h4>
+                                       <h4 class="efruit-en text-center">HAMPER - BOX FRUIT</h4>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -232,6 +278,10 @@
                                                                    </ul>
                                                                </div> <!-- col-megamenu.// -->
                                                        <?php }
+                                                        } else{
+                                                            echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
+                                                            <p class='efruit-en text-center'>There are no product groups yet.</p>
+                                                              ";
                                                         }
                                                         ?>
                                                    </div>
@@ -252,33 +302,430 @@
                                                    </div><!-- col-megamenu.// -->
                                                </div>
                                            </div><!-- end col-3 -->
-                                           <div class="col-lg-3">
+                                           <div class="col-lg-3 mt-0">
                                                <div class="col-megamenu">
-                                                   <p>1 sản phẩm</p>
+                                                   <?php if (!empty($hopTraiCay)) {
+                                                        foreach ($hopTraiCay as $array) {
+                                                    ?>
+                                                           <div class="col-md-12 col-sm-12">
+                                                               <div class="product-item">
+                                                                   <div class="product-photo">
+                                                                       <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                                                           <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
+                                                                       </a>
+                                                                       <a class="btn-shop btn-cart" href="">
+                                                                           <div class="button-content-wrapper">
+                                                                               <span class="button-text efruit-vi">Chi tiết</span>
+                                                                               <span class="button-text efruit-en">Detail</span>
+                                                                           </div>
+                                                                       </a>
+                                                                   </div>
+                                                                   <div class="row mt-2">
+                                                                       <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                                           <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                                           <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                                       </div>
+                                                                       <div class="col-md-12 col-lg-4 col-4">
+                                                                           <div class="product-price">
+                                                                               <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                                           </div>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                           </div><?php break;
+                                                                }
+                                                            } ?>
                                                </div> <!-- col-megamenu.// -->
                                            </div><!-- end col-3 -->
                                        </div><!-- end row -->
                                    </div>
                                </div> <!-- dropdown-mega-menu.// -->
                            </li>
-                           <li class="nav-item">
-                               <a class="nav-link efruit-vi px-3" href="#">HOA TRÁI CÂY</a>
-                               <a class="nav-link efruit-en px-3" href="#">FRUIT BOUQUETS</a>
+                           <li class="nav-item dropdown has-megamenu">
+                               <?php foreach ($tiles as $tile) {
+                                    if ($tile['cat'] == 8) { ?>
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="" data-bs-toggle="dropdown">
+                                           <?= $tile['short_text'] ?>
+                                       </a>
+                                       <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                           <?= $tile['en_text'] ?>
+                                       </a>
+                               <?php }
+                                } ?>
+                               <div class="dropdown-menu megamenu" role="menu">
+                                   <div class="container-mega">
+                                       <h4 class="efruit-vi text-center">HOA TRÁI CÂY</h4>
+                                       <h4 class="efruit-en text-center">FRUIT BOUQUET</h4>
+                                       <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
+                                       <div class="row g-3 response-mega">
+                                           <div class="col-lg-5">
+                                               <div class="col-megamenu">
+                                                   <div class="row">
+                                                       <?php
+                                                        if (!empty($megaMenu_fruit_bouquet)) {
+                                                            foreach ($megaMenu_fruit_bouquet as $array) {
+                                                        ?>
+                                                               <div class="col-md-6 col-megamenu">
+                                                                   <ul class="list-unstyled">
+                                                                       <li><a href="/vi/category/nhomhang-<?= $array['category_id'] ?>">
+                                                                               <span class="efruit-vi"><?= $array['name'] ?></span>
+                                                                               <span class="efruit-en"><?= $array['english_name'] ?></span>
+                                                                           </a></li>
+                                                                   </ul>
+                                                               </div> <!-- col-megamenu.// -->
+                                                       <?php }
+                                                        } else{
+                                                            echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
+                                                            <p class='efruit-en text-center'>There are no product groups yet.</p>
+                                                              ";
+                                                        }
+                                                        ?>
+                                                   </div>
+                                               </div> <!-- col-megamenu.// -->
+                                           </div><!-- end col-3 -->
+                                           <div class="col-lg-4">
+                                               <div class="row">
+                                                   <div class="col-megamenu col-md-12">
+                                                       <ul class="list-unstyled">
+                                                           <li><a href="/vi/category/gia-1-8">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia-2-8">500k - 800k</a></li>
+                                                           <li><a href="/vi/category/gia-3-8">800k - 1000k</a></li>
+                                                           <li><a href="/vi/category/gia-4-8">1100k - 1500k</a></li>
+                                                           <li><a href="/vi/category/gia-5-8">1600k - 2000k</a></li>
+                                                           <li><a href="/vi/category/gia-6-8">2000k - 2500k</a></li>
+                                                           <li><a href="/vi/category/gia-7-8">2600k - 4000k</a></li>
+                                                       </ul>
+                                                   </div><!-- col-megamenu.// -->
+                                               </div>
+                                           </div><!-- end col-3 -->
+                                           <div class="col-lg-3 mt-0">
+                                               <div class="col-megamenu">
+                                                   <?php if (!empty($hoaTraiCay)) {
+                                                        foreach ($hoaTraiCay as $array) {
+                                                    ?>
+                                                           <div class="col-md-12 col-sm-12">
+                                                               <div class="product-item">
+                                                                   <div class="product-photo">
+                                                                       <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                                                           <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
+                                                                       </a>
+                                                                       <a class="btn-shop btn-cart" href="">
+                                                                           <div class="button-content-wrapper">
+                                                                               <span class="button-text efruit-vi">Chi tiết</span>
+                                                                               <span class="button-text efruit-en">Detail</span>
+                                                                           </div>
+                                                                       </a>
+                                                                   </div>
+                                                                   <div class="row mt-2">
+                                                                       <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                                           <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                                           <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                                       </div>
+                                                                       <div class="col-md-12 col-lg-4 col-4">
+                                                                           <div class="product-price">
+                                                                               <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                                           </div>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                           </div><?php break;
+                                                                }
+                                                            } ?>
+                                               </div> <!-- col-megamenu.// -->
+                                           </div><!-- end col-3 -->
+                                       </div><!-- end row -->
+                                   </div>
+                               </div> <!-- dropdown-mega-menu.// -->
                            </li>
-                           <li class="nav-item">
-                               <a class="nav-link efruit-vi px-3" href="#">ĐẶC SẢN VIỆT</a>
-                               <a class="nav-link efruit-en px-3" href="#">VIET NAM FRUIT SPECIAL</a>
+                           <li class="nav-item dropdown has-megamenu">
+                               <?php foreach ($tiles as $tile) {
+                                    if ($tile['cat'] == 6) { ?>
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="" data-bs-toggle="dropdown">
+                                           <?= $tile['short_text'] ?>
+                                       </a>
+                                       <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                           <?= $tile['en_text'] ?>
+                                       </a>
+                               <?php }
+                                } ?>
+                               <div class="dropdown-menu megamenu" role="menu">
+                                   <div class="container-mega">
+                                       <h4 class="efruit-vi text-center">TRÁI CÂY ĐẶC SẢN VIỆT</h4>
+                                       <h4 class="efruit-en text-center">VIET NAM FRUIT SPECIAL</h4>
+                                       <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
+                                       <div class="row g-3 response-mega">
+                                           <div class="col-lg-5">
+                                               <div class="col-megamenu">
+                                                   <div class="row">
+                                                       <?php
+                                                        if (!empty($megaMenu_Viet_Nam_Fruit_Special)) {
+                                                            foreach ($megaMenu_Viet_Nam_Fruit_Special as $array) {
+                                                        ?>
+                                                               <div class="col-md-6 col-megamenu">
+                                                                   <ul class="list-unstyled">
+                                                                       <li><a href="/vi/category/nhomhang-<?= $array['category_id'] ?>">
+                                                                               <span class="efruit-vi"><?= $array['name'] ?></span>
+                                                                               <span class="efruit-en"><?= $array['english_name'] ?></span>
+                                                                           </a></li>
+                                                                   </ul>
+                                                               </div> <!-- col-megamenu.// -->
+                                                       <?php }
+                                                        }else{
+                                                            echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
+                                                            <p class='efruit-en text-center'>There are no product groups yet.</p>
+                                                              ";
+                                                        }
+                                                        ?>
+                                                   </div>
+                                               </div> <!-- col-megamenu.// -->
+                                           </div><!-- end col-3 -->
+                                           <div class="col-lg-4">
+                                               <div class="row">
+                                                   <div class="col-megamenu col-md-12">
+                                                       <ul class="list-unstyled">
+                                                           <li><a href="/vi/category/gia-1-6">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia-2-6">500k - 800k</a></li>
+                                                           <li><a href="/vi/category/gia-3-6">800k - 1000k</a></li>
+                                                           <li><a href="/vi/category/gia-4-6">1100k - 1500k</a></li>
+                                                           <li><a href="/vi/category/gia-5-6">1600k - 2000k</a></li>
+                                                           <li><a href="/vi/category/gia-6-6">2000k - 2500k</a></li>
+                                                           <li><a href="/vi/category/gia-7-6">2600k - 4000k</a></li>
+                                                       </ul>
+                                                   </div><!-- col-megamenu.// -->
+                                               </div>
+                                           </div><!-- end col-3 -->
+                                           <div class="col-lg-3 mt-0">
+                                               <div class="col-megamenu">
+                                                   <?php if (!empty($traiCayDacSanViet)) {
+                                                        foreach ($traiCayDacSanViet as $array) {
+                                                    ?>
+                                                           <div class="col-md-12 col-sm-12">
+                                                               <div class="product-item">
+                                                                   <div class="product-photo">
+                                                                       <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                                                           <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
+                                                                       </a>
+                                                                       <a class="btn-shop btn-cart" href="">
+                                                                           <div class="button-content-wrapper">
+                                                                               <span class="button-text efruit-vi">Chi tiết</span>
+                                                                               <span class="button-text efruit-en">Detail</span>
+                                                                           </div>
+                                                                       </a>
+                                                                   </div>
+                                                                   <div class="row mt-2">
+                                                                       <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                                           <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                                           <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                                       </div>
+                                                                       <div class="col-md-12 col-lg-4 col-4">
+                                                                           <div class="product-price">
+                                                                               <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                                           </div>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                           </div><?php break;
+                                                                }
+                                                            } ?>
+                                               </div> <!-- col-megamenu.// -->
+                                           </div><!-- end col-3 -->
+                                       </div><!-- end row -->
+                                   </div>
+                               </div> <!-- dropdown-mega-menu.// -->
                            </li>
-                           <li class="nav-item">
-                               <a class="nav-link efruit-vi px-3" href="#">TRÁI CÂY NHẬP</a>
-                               <a class="nav-link efruit-en px-3" href="#">FRESH FRUITS</a>
+                           <li class="nav-item dropdown has-megamenu">
+                               <?php foreach ($tiles as $tile) {
+                                    if ($tile['cat'] == 12) { ?>
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="" data-bs-toggle="dropdown">
+                                           <?= $tile['short_text'] ?>
+                                       </a>
+                                       <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                           <?= $tile['en_text'] ?>
+                                       </a>
+                               <?php }
+                                } ?>
+                               <div class="dropdown-menu megamenu" role="menu">
+                                   <div class="container-mega">
+                                       <h4 class="efruit-vi text-center">TRÁI CÂY NHẬP</h4>
+                                       <h4 class="efruit-en text-center">FRESH FRUIT</h4>
+                                       <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
+                                       <div class="row g-3 response-mega">
+                                           <div class="col-lg-5">
+                                               <div class="col-megamenu">
+                                                   <div class="row">
+                                                       <?php
+                                                        if (!empty($megaMenu_fresh_fruit)) {
+                                                            foreach ($megaMenu_fresh_fruit as $array) {
+                                                        ?>
+                                                               <div class="col-md-6 col-megamenu">
+                                                                   <ul class="list-unstyled">
+                                                                       <li><a href="/vi/category/nhomhang-<?= $array['category_id'] ?>">
+                                                                               <span class="efruit-vi"><?= $array['name'] ?></span>
+                                                                               <span class="efruit-en"><?= $array['english_name'] ?></span>
+                                                                           </a></li>
+                                                                   </ul>
+                                                               </div> <!-- col-megamenu.// -->
+                                                       <?php }
+                                                        }else{
+                                                            echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
+                                                            <p class='efruit-en text-center'>There are no product groups yet.</p>
+                                                              ";
+                                                        }
+                                                        ?>
+                                                   </div>
+                                               </div> <!-- col-megamenu.// -->
+                                           </div><!-- end col-3 -->
+                                           <div class="col-lg-4">
+                                               <div class="row">
+                                                   <div class="col-megamenu col-md-12">
+                                                       <ul class="list-unstyled">
+                                                           <li><a href="/vi/category/gia-1-12">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia-2-12">500k - 800k</a></li>
+                                                           <li><a href="/vi/category/gia-3-12">800k - 1000k</a></li>
+                                                           <li><a href="/vi/category/gia-4-12">1100k - 1500k</a></li>
+                                                           <li><a href="/vi/category/gia-5-12">1600k - 2000k</a></li>
+                                                           <li><a href="/vi/category/gia-6-12">2000k - 2500k</a></li>
+                                                           <li><a href="/vi/category/gia-7-12">2600k - 4000k</a></li>
+                                                       </ul>
+                                                   </div><!-- col-megamenu.// -->
+                                               </div>
+                                           </div><!-- end col-3 -->
+                                           <div class="col-lg-3 mt-0">
+                                               <div class="col-megamenu">
+                                                   <?php if (!empty($traiCayNhap)) {
+                                                        foreach ($traiCayNhap as $array) {
+                                                    ?>
+                                                           <div class="col-md-12 col-sm-12">
+                                                               <div class="product-item">
+                                                                   <div class="product-photo">
+                                                                       <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                                                           <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
+                                                                       </a>
+                                                                       <a class="btn-shop btn-cart" href="">
+                                                                           <div class="button-content-wrapper">
+                                                                               <span class="button-text efruit-vi">Chi tiết</span>
+                                                                               <span class="button-text efruit-en">Detail</span>
+                                                                           </div>
+                                                                       </a>
+                                                                   </div>
+                                                                   <div class="row mt-2">
+                                                                       <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                                           <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                                           <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                                       </div>
+                                                                       <div class="col-md-12 col-lg-4 col-4">
+                                                                           <div class="product-price">
+                                                                               <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                                           </div>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                           </div><?php break;
+                                                                }
+                                                            } ?>
+                                               </div> <!-- col-megamenu.// -->
+                                           </div><!-- end col-3 -->
+                                       </div><!-- end row -->
+                                   </div>
+                               </div> <!-- dropdown-mega-menu.// -->
                            </li>
-                           <li class="nav-item">
-                               <a class="nav-link efruit-vi px-3" href="#">SẢN PHẨM KHÁC</a>
-                               <a class="nav-link efruit-en px-3" href="#">OTHER PRODUCTS</a>
+                           <li class="nav-item dropdown has-megamenu">
+                               <?php foreach ($tiles as $tile) {
+                                    if ($tile['cat'] == 7) { ?>
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="" data-bs-toggle="dropdown">
+                                           <?= $tile['short_text'] ?>
+                                       </a>
+                                       <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                           <?= $tile['en_text'] ?>
+                                       </a>
+                               <?php }
+                                } ?>
+                               <div class="dropdown-menu megamenu" role="menu">
+                                   <div class="container-mega">
+                                       <h4 class="efruit-vi text-center">SẢN PHẨM KHÁC</h4>
+                                       <h4 class="efruit-en text-center">ORTHER PRODUCTS</h4>
+                                       <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
+                                       <div class="row g-3 response-mega">
+                                           <div class="col-lg-5">
+                                               <div class="col-megamenu">
+                                                   <div class="row">
+                                                       <?php
+                                                        if (!empty($megaMenu_orther_products)) {
+                                                            foreach ($megaMenu_orther_products as $array) {
+                                                        ?>
+                                                               <div class="col-md-6 col-megamenu">
+                                                                   <ul class="list-unstyled">
+                                                                       <li><a href="/vi/category/nhomhang-<?= $array['category_id'] ?>">
+                                                                               <span class="efruit-vi"><?= $array['name'] ?></span>
+                                                                               <span class="efruit-en"><?= $array['english_name'] ?></span>
+                                                                           </a></li>
+                                                                   </ul>
+                                                               </div> <!-- col-megamenu.// -->
+                                                       <?php }
+                                                        }else{
+                                                            echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
+                                                            <p class='efruit-en text-center'>There are no product groups yet.</p>
+                                                              ";
+                                                        }
+                                                        ?>
+                                                   </div>
+                                               </div> <!-- col-megamenu.// -->
+                                           </div><!-- end col-3 -->
+                                           <div class="col-lg-4">
+                                               <div class="row">
+                                                   <div class="col-megamenu col-md-12">
+                                                       <ul class="list-unstyled">
+                                                           <li><a href="/vi/category/gia-1-7">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia-2-7">500k - 800k</a></li>
+                                                           <li><a href="/vi/category/gia-3-7">800k - 1000k</a></li>
+                                                           <li><a href="/vi/category/gia-4-7">1100k - 1500k</a></li>
+                                                           <li><a href="/vi/category/gia-5-7">1600k - 2000k</a></li>
+                                                           <li><a href="/vi/category/gia-6-7">2000k - 2500k</a></li>
+                                                           <li><a href="/vi/category/gia-7-7">2600k - 4000k</a></li>
+                                                       </ul>
+                                                   </div><!-- col-megamenu.// -->
+                                               </div>
+                                           </div><!-- end col-3 -->
+                                           <div class="col-lg-3 mt-0">
+                                               <div class="col-megamenu">
+                                                   <?php if (!empty($sanPhamKhac)) {
+                                                        foreach ($sanPhamKhac as $array) {
+                                                    ?>
+                                                           <div class="col-md-12 col-sm-12">
+                                                               <div class="product-item">
+                                                                   <div class="product-photo">
+                                                                       <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
+                                                                           <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
+                                                                       </a>
+                                                                       <a class="btn-shop btn-cart" href="">
+                                                                           <div class="button-content-wrapper">
+                                                                               <span class="button-text efruit-vi">Chi tiết</span>
+                                                                               <span class="button-text efruit-en">Detail</span>
+                                                                           </div>
+                                                                       </a>
+                                                                   </div>
+                                                                   <div class="row mt-2">
+                                                                       <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                                           <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                                           <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                                       </div>
+                                                                       <div class="col-md-12 col-lg-4 col-4">
+                                                                           <div class="product-price">
+                                                                               <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                                           </div>
+                                                                       </div>
+                                                                   </div>
+                                                               </div>
+                                                           </div><?php break;
+                                                                }
+                                                            } ?>
+                                               </div> <!-- col-megamenu.// -->
+                                           </div><!-- end col-3 -->
+                                       </div><!-- end row -->
+                                   </div>
+                               </div> <!-- dropdown-mega-menu.// -->
                            </li>
                        </ul>
-
                    </div>
                </div>
            </nav>
