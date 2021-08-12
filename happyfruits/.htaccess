@@ -48,6 +48,7 @@ RewriteRule ^frontend/?$ /pixeladmin/index.php?controller=frontend
 
 RewriteRule ^fruit-veg-everyday(/)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=fruit-veg-everyday
 
+
 RewriteRule ^vi/?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=trang-chu
 #RewriteRule ^vi/danh-gia/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=danh-gia&order=$1
 RewriteRule ^vi/(.*)/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=$1&param2=$2&param3=$3

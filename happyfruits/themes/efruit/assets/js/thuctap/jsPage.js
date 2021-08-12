@@ -25,8 +25,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     //event for input of form-login
     allInputLogin.forEach(element => {
+<<<<<<< HEAD
 
         element.addEventListener('focus', function () {
+=======
+        element.addEventListener('focus', function() {
+>>>>>>> 42c68d45bb7d9bbbf0cf74d30a2122fbe1476433
             element.style.borderBottom = "1px solid black";
             allInputLogin.forEach(element2 => {
                 if (element.name != element2.name) {
@@ -34,9 +38,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
         });
-
         //event click for link a of form-login "forgot your password"
-
         if (a_forgot) {
             a_forgot.forEach(element => {
                 element.addEventListener('click', function () {

@@ -62,7 +62,7 @@ if (isset($product['sell_price'])) {
                 <?php elseif (empty($product['enabled'])) : ?>
                     <div><img alt="sold-out" src="<?= get_theme_assets_url() ?>img/sold_out.png" class="sold_out efruit-vi" /><img alt="sold-out" class="sold_out efruit-en" src="<?= get_theme_assets_url() ?>img/sold_out_en.png" /></div>
                 <?php endif; ?>
-                <p class="product-price text-bold" style="font-size: 22px;" ng-show="selectedItem.promotion_price == 0 && selectedItem.price > 0"><span bind-translate="Giá">Giá</span>:&nbsp;{{selectedItem.price*1000|efruit_money}}<sup>đ</sup></p>
+                <!-- <p class="product-price text-bold" style="font-size: 22px;" ng-show="selectedItem.promotion_price == 0 && selectedItem.price > 0"><span bind-translate="Giá">Giá</span>:&nbsp;{{selectedItem.price*1000|efruit_money}}<sup>đ</sup></p> -->
             </form>
             <div class="product-description mt-3">
 
@@ -79,18 +79,24 @@ if (isset($product['sell_price'])) {
     <div class="row">
         <?php
         $counter = 0;
-        $array_category = [
-            6 => "traiCayDacSanViet", 14 => "gioTraiCay", 15 => "hopTraiCay",
-            8 => "hoaTraiCay", 12 => "traiCayNhap", 7 => "sanPhamKhac"
-        ];
-        $category_of_page_detail = $array_category[$product['category_id']];
+        // $array_category = [
+        //     6 => "traiCayDacSanViet", 14 => "gioTraiCay", 15 => "hopTraiCay",
+        //     8 => "hoaTraiCay", 12 => "traiCayNhap", 7 => "sanPhamKhac", 24 => "gioTraiCayChucMung"
+        // ];
+
+        //Lấy ra được những sản phẩm liên quan
+        if(!empty($relateProducts)){
+            // var_dump($relateProducts);
         
-        if (!empty($category_of_page_detail)) :
-            foreach ($$category_of_page_detail as $item) {
+        //Sửa từ chỗ này
+        // $category_of_page_detail = $array_category[$product['category_id']];
+        
+        // if (!empty($category_of_page_detail)) :
+            foreach ($relateProducts as $item) {
                 $counter++;
                 if ($counter >= 5) {
                     break;
-                }
+                }  
         ?>
                 <?php
                 if (!empty($item)) {
@@ -153,7 +159,7 @@ if (isset($product['sell_price'])) {
                     <?php } ?>
         <?php  }
             }
-        endif;
+        }
         ?>
     </div>
 </div>

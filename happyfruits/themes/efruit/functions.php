@@ -55,9 +55,13 @@ function init_page(&$controller)
     //get product by id
     $product = $controller->Products->get_details($id);
 
+    //relate products
+    $relateProducts = $controller->Products->get_relate_products($id);
+    
     //show products with sell_price on mega-menu
-    $gia = get('param2');
-    $get_product_with_sell_price = $controller->Prices->get_products_with_price_with_categories($gia);
+    $choose_mega_menu = get('param2');
+    $get_product_with_mega_menu = $controller->Prices->get_products_with_mega_menu($choose_mega_menu);
+    // $gioDau = get('param2');
 
     // get key of search function
     $get_product_by_search_key = $controller->Products->get_product_by_key();
@@ -88,11 +92,14 @@ function init_page(&$controller)
         "all_product",
         "megaMenu_fruits_baskets",
         "megaMenu_hamper_boxFruit",
-        "gia",
-        "get_product_with_sell_price",
         "get_product_by_search_key"
     ));
     //  
+    $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
+    "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
+    "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
+    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_fruits_baskets",
+    "megaMenu_hamper_boxFruit","choose_mega_menu","get_product_with_mega_menu","relateProducts"));
 }
 
 
@@ -152,6 +159,7 @@ function gallery(&$controller)
 {
     $controller->load_model('ImagesInGallery');
     $images_in_gallery = $controller->ImagesInGallery->get_full_list(array('gallery_id' => GALLERY_ID));
+    // $controller->_merge_data(compact("images_in_gallery", "js", "css"));
     $controller->_merge_data(compact("images_in_gallery"));
 }
 

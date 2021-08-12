@@ -47,51 +47,77 @@ class Prices extends BasePrices
         $filters['deleted'] = 0;
         return self::_select('price_types', $filters, 'type_id');
     }
-    //Lấy ra những sản phẩm có giá từ 200-500 hoặc 500-800 ... hoặc ...
-    //Tham số: Ví du là (gia1-14) . Sẽ lấy ra những sản phẩm có category_id là 14 và giá từ .... 
-     function get_products_with_price_with_categories($href)
+
+    function get_products_with_mega_menu($href)
     {
-        $str = explode('-',$href);//gia1-14 (split -> -)
-        $category_id = 0;
-        $strGia = "";
-        for($i = 0; $i < count($str); $i++){
-            if($i == 0){
-                $strGia = $str[$i]; //gia1
+        // $sql = "";
+        // $order_by = "";
+        // $filters = "";
+        $str = explode('-', $href); //gia-1-14 (split -> -)
+        if ($str[0] == 'nhomhang') {
+            $category_id = 0;
+            $str_split = explode("-", $href);
+            if (count($str_split) == 2) { // Kiểm tra khi cắt chuỗi thì vẫn chỉ có nhomhang và id, lenght = 2 mới được xử lý
+                for ($i = 0; $i < count($str_split); $i++) {
+                    if ($i == 1) {
+                        $category_id = $str_split[$i];
+                    }
+                }
+                $order_by = "";
+                $sql = "SELECT * FROM `products` INNER JOIN categories ON categories.category_id = products.category_id 
+            INNER JOIN prices ON prices.product_id = products.product_id AND
+            products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id =1 ";
+                $filters = "";
+                return self::_do_sql($sql, $filters, array(), $order_by);
             }
-            if($i == 1){
-                $category_id = $str[$i];//14
-                break;
+        } else if ($str[0] == 'gia') {
+            $category_id = 0;
+            $gia = "";
+            $gia1 = 0;
+            $gia2 = 0;
+            $str_split = explode("-", $href);
+            if (count($str_split) == 3) { // Kiểm tra khi cắt chuỗi thì vẫn chỉ có gia và id, lenght = 3 mới được xử lý
+                for ($i = 0; $i < count($str_split); $i++) {
+                    if ($i == 1) {
+                        $gia = $str_split[$i];
+                    }
+                    if ($i == 2) {
+                        $category_id = $str_split[$i];
+                    }
+                }
+                if ($gia == '1') {
+                    $gia1 = 200;
+                    $gia2 = 500;
+                } else if ($gia == '2') {
+                    $gia1 = 500;
+                    $gia2 = 800;
+                } else if ($gia == '3') {
+                    $gia1 = 800;
+                    $gia2 = 1000;
+                } else if ($gia == '4') {
+                    $gia1 = 1100;
+                    $gia2 = 1500;
+                } else if ($gia == '5') {
+                    $gia1 = 1600;
+                    $gia2 = 2000;
+                } else if ($gia == '6') {
+                    $gia1 = 2000;
+                    $gia2 = 2500;
+                } else if ($gia == '7') {
+                    $gia1 = 2600;
+                    $gia2 = 4000;
+                }
+                $order_by = "";
+                $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
+                AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 ";
+                $filters = "";
+                return self::_do_sql($sql, $filters, array(), $order_by);
             }
         }
-        $gia1 = 0;$gia2 = 0;
-        //href = gia-1-14 (1 là 200k-500k, 14 là category_id của bảng products)
-        if($strGia == 'gia1'){
-            $gia1 = 200;$gia2 = 500;
+        else{
+            return null;
         }
-        else if($strGia == 'gia2'){
-            $gia1 = 500;$gia2 = 800;
-        }
-        else if($strGia == 'gia3'){
-            $gia1 = 800;$gia2 = 1000;
-        }
-        else if($strGia == 'gia4'){
-            $gia1 = 1100;$gia2 = 1500;
-        }
-        else if($strGia == 'gia5'){
-            $gia1 = 1600;$gia2 = 2000;
-        }
-        else if($strGia == 'gia6'){
-            $gia1 = 2000;$gia2 = 2500;
-        }
-        else if($strGia == 'gia7'){
-            $gia1 = 2600;$gia2 = 4000;
-        }
-        $order_by = "";
-        $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
-                WHERE prices.price BETWEEN '".$gia1."' AND '".$gia2."' AND type_id = 1 
-                AND products.category_id = '".$category_id."' AND products.enabled = 1 AND products.is_hidden = 0 ";
-        $filters = "";
-        return self::_do_sql($sql, $filters, array(), $order_by);
     }
 }
 /* End of generated class */
