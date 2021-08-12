@@ -50,9 +50,6 @@ class Prices extends BasePrices
 
     function get_products_with_mega_menu($href)
     {
-        // $sql = "";
-        // $order_by = "";
-        // $filters = "";
         $str = explode('-', $href); //gia-1-14 (split -> -)
         if ($str[0] == 'nhomhang') {
             $category_id = 0;
@@ -64,11 +61,15 @@ class Prices extends BasePrices
                     }
                 }
                 $order_by = "";
-                $sql = "SELECT * FROM `products` INNER JOIN categories ON categories.category_id = products.category_id 
-            INNER JOIN prices ON prices.product_id = products.product_id AND
-            products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id =1 ";
+                $sql = "SELECT products.*,prices.price FROM `products` INNER JOIN categories ON categories.category_id = products.category_id 
+                        INNER JOIN prices ON prices.product_id = products.product_id AND
+                            products.category_id = '" . $category_id . "' 
+                            AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id =1 ORDER BY products.image ";
                 $filters = "";
                 return self::_do_sql($sql, $filters, array(), $order_by);
+            }
+            else{
+                return null;
             }
         } else if ($str[0] == 'gia') {
             $category_id = 0;
@@ -82,7 +83,7 @@ class Prices extends BasePrices
                         $gia = $str_split[$i];
                     }
                     if ($i == 2) {
-                        $category_id = $str_split[$i];
+                        $category_id =$str_split[$i];
                     }
                 }
                 if ($gia == '1') {
@@ -114,10 +115,14 @@ class Prices extends BasePrices
                 $filters = "";
                 return self::_do_sql($sql, $filters, array(), $order_by);
             }
+            else{
+                return null;
+            }
         }
         else{
             return null;
         }
     }
+  
 }
 /* End of generated class */

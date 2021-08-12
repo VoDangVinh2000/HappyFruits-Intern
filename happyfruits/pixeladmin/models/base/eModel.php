@@ -332,7 +332,11 @@ class eModel
         return self::_select($this->table_name, $params);
     }
 
-  
+    static function matchRegexUrl($url) {
+        $strURL = remove_unicode($url);
+        $strURL = preg_replace("/[^A-Z0-9a-z-]/",'',strtolower($strURL));
+        return $strURL;
+    } 
     
     function insert($data = array())
     {

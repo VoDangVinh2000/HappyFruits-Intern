@@ -42,15 +42,20 @@ function init_page(&$controller)
     $sanPhamKhac = $controller->Products->get_all_product_by_categoryID(7);
 
     //get parent_id of categories table to see mega-menu
-    $megaMenu_fruits_baskets = $controller->Categories->get_parentId_of_categories(14);
+    $megaMenu_fruit_baskets = $controller->Categories->get_parentId_of_categories(14);
     $megaMenu_hamper_boxFruit = $controller->Categories->get_parentId_of_categories(15);
+    $megaMenu_fruit_bouquet = $controller->Categories->get_parentId_of_categories(8);
+    $megaMenu_Viet_Nam_Fruit_Special  = $controller->Categories->get_parentId_of_categories(6);
+    $megaMenu_fresh_fruit  = $controller->Categories->get_parentId_of_categories(12);
+    $megaMenu_orther_products  = $controller->Categories->get_parentId_of_categories(7);
+    
     //get all product by code
     $all_product = $controller->Products->get_all_product();
 
     //image null
     $imageDefault = get_child_theme_assets_url() . "img/default-product-image.png";
     //get id product
-    $id = get('param2');
+    $id = eModel::matchRegexUrl(get('param2'));//mathRegexurl remove những ký tự không phủ định thành ""
 
     //get product by id
     $product = $controller->Products->get_details($id);
@@ -59,47 +64,19 @@ function init_page(&$controller)
     $relateProducts = $controller->Products->get_relate_products($id);
     
     //show products with sell_price on mega-menu
-    $choose_mega_menu = get('param2');
+    $choose_mega_menu = eModel::matchRegexUrl(get('param2'));
     $get_product_with_mega_menu = $controller->Prices->get_products_with_mega_menu($choose_mega_menu);
-    // $gioDau = get('param2');
 
     // get key of search function
     $get_product_by_search_key = $controller->Products->get_product_by_key();
 
-    $controller->_merge_data(compact(
-        "main_menu",
-        "hide_menu_items",
-        "main_tags",
-        "branches",
-        "main_branch",
-        "categories",
-        "lang",
-        "homepage",
-        "promotions_with_banner",
-        "tiles",
-        "page_code",
-        "cat_products",
-        "products_in_tags",
-        "traiCayDacSanViet",
-        "gioTraiCay",
-        "hopTraiCay",
-        "hoaTraiCay",
-        "traiCayNhap",
-        "sanPhamKhac",
-        "id",
-        "product",
-        "imageDefault",
-        "all_product",
-        "megaMenu_fruits_baskets",
-        "megaMenu_hamper_boxFruit",
-        "get_product_by_search_key"
-    ));
     //  
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
     "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
     "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
-    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_fruits_baskets",
-    "megaMenu_hamper_boxFruit","choose_mega_menu","get_product_with_mega_menu","relateProducts"));
+    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_fruit_baskets",
+    "megaMenu_hamper_boxFruit","choose_mega_menu","get_product_with_mega_menu","relateProducts","megaMenu_fruit_bouquet"
+    ,"megaMenu_Viet_Nam_Fruit_Special","megaMenu_fresh_fruit","megaMenu_orther_products","get_product_by_search_key"));
 }
 
 
