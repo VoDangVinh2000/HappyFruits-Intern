@@ -137,7 +137,6 @@ class CustomerController extends BaseController
         }
     }
 
-
     function loginCustomer()
     {
         $error_username_password = null;
@@ -190,9 +189,8 @@ class CustomerController extends BaseController
             header('location:/vi');
         }
         else
-        {
-            header('location: /vi/dang-nhap');
-        }  
+            header('location: vi/dang-nhap');
+            // header('location:' . frontend_url() . ''); tương đương //header('location: vi/dang-nhap');
     }
 }
 /* End of CustomersController class */
