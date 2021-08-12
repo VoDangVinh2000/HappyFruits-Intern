@@ -129,12 +129,13 @@ class Products extends BaseProducts
             'select' => 'products.*, categories.name as category_name, categories.name_without_utf8 as category_name_without_utf8, categories.english_name as category_english_name',
             'join' => 'INNER JOIN categories ON categories.category_id = products.category_id
                        INNER JOIN prices ON prices.product_id = products.product_id',
-            'products.product_id' => $id
+            'products.product_id' => $this->mathRegexUrl($id)
         );
         return $this->select($filters);
     }
 
-    function get_all_product(){
+    function get_all_product()
+    {
         $filters = array(
             'select' => 'products.*, prices.price,prices.type_id',
             'join' => 'INNER JOIN prices ON prices.product_id = products.product_id',
@@ -151,19 +152,19 @@ class Products extends BaseProducts
                         prices.price,prices.type_id',
             'join' => 'INNER JOIN categories ON categories.category_id = products.category_id
                        INNER JOIN prices ON prices.product_id = products.product_id',
-            'products.category_id' => $id,
+            'products.category_id' => $this->mathRegexUrl($id),
             'prices.type_id' => 1,
             'products.enabled' => 1,
             'products.is_hidden' => 0,
         );
         return $this->select($filters);
     }
-  
+
     //Hàm này chưa đúng
-     function get_all_code()
+    function get_all_code()
     {
         $sql = "SELECT code FROM products";
-        
+
         $filters['order_by'] = 'code,image';
 
         return $this->_do_select_sql($sql, $filters);
@@ -184,5 +185,29 @@ class Products extends BaseProducts
         }
         return self::_select_one($this->table_name, $filters);
     }
+
+    function get_relate_products($id){ //thử sản phẩm liên quan ngẫu nhiên
+        //Lấy category_id 
+        $sql = "SELECT products.category_id FROM prices 
+        INNER JOIN products ON products.product_id = prices.product_id WHERE products.product_id = '".$id."' 
+        AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT 1";
+        $filters = "";
+        $result = $this->_do_select_sql($sql, $filters);
+        //Lấy ra những sản phẩm có category_id là $id
+        $query = "";
+        if(!empty($result)){
+            foreach($result as $array){
+                $query = "SELECT * FROM prices 
+                INNER JOIN products ON products.product_id = prices.product_id WHERE
+                 products.category_id = '".$array['category_id']."' 
+                AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1";
+            }
+            return $this->_do_select_sql($query, $filters);
+        }
+        else{
+            return null;
+        }
+    }
+    
 }
 /* End of generated class */

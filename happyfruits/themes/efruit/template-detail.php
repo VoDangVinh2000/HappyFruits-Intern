@@ -1,18 +1,15 @@
 <?php if (empty($id) || empty($product)) {
-    echo  "<script>window.location.href='" . frontend_url() . "'</script>";
+    echo  "<script>window.location.href='/vi'</script>";
 } ?>
 <?php
 if (isset($product['sell_price'])) {
     $oldPrice =  $product['sell_price'] * 1000;
     $newPrice = $oldPrice - ($product['promotion_price'] * 1000);
 } else {
-    echo  "<script>window.location.href='" . frontend_url() . "'</script>";
+    echo  "<script>window.location.href='/vi'</script>";
 }
 ?>
-<?php $this->load_theme_file('page-header.php')
-?>
-
-
+<?php $this->load_theme_file('page-header.php') ?>
 <div class="container mb-5">
     <div class="row">
         <div class="col-md-6">
@@ -82,26 +79,31 @@ if (isset($product['sell_price'])) {
     <div class="row">
         <?php
         $counter = 0;
-        $array_category = [
-            6 => "traiCayDacSanViet", 14 => "gioTraiCay", 15 => "hopTraiCay",
-            8 => "hoaTraiCay", 12 => "traiCayNhap", 7 => "sanPhamKhac"
-        ];
-        $category_of_page_detail = $array_category[$product['category_id']];
-        if (!empty($category_of_page_detail)) :
-            foreach ($$category_of_page_detail as $item) {
+        // $array_category = [
+        //     6 => "traiCayDacSanViet", 14 => "gioTraiCay", 15 => "hopTraiCay",
+        //     8 => "hoaTraiCay", 12 => "traiCayNhap", 7 => "sanPhamKhac", 24 => "gioTraiCayChucMung"
+        // ];
+        //Lấy ra được những sản phẩm liên quan
+        if(!empty($relateProducts)){
+        // $category_of_page_detail = $array_category[$product['category_id']];
+        // if (!empty($category_of_page_detail)) :
+            foreach ($relateProducts as $item) {
                 $counter++;
                 if ($counter >= 5) {
                     break;
-                }
+                }  
+        ?>
+                <?php
                 if (!empty($item)) {
         ?>
                     <?php
                     if ($item['image'] == "") {
-                    ?>
+                ?>
+                        <!-- <//?php $this->load_partial('product-item-box', array('item' => $item)); ?> -->
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $item['product_id']  . "/" . url_slug($item['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $item['product_id']  . "/" . url_slug($item['name']) ?>" class="photo-link">
                                         <img src="<?php echo $imageDefault ?>" alt="<?php echo $item['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -112,8 +114,8 @@ if (isset($product['sell_price'])) {
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class=" efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] ?>"><?= $item['name'] ?></a>
-                                        <a class=" efruit-en" href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] ?>"><?= $item['english_name'] ?></a>
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] ?>"><?= $item['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] ?>"><?= $item['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -127,7 +129,7 @@ if (isset($product['sell_price'])) {
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
-                                    <a href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
+                                    <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
                                         <img src="<?= $item['image'] ?>" alt=""></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
@@ -138,8 +140,8 @@ if (isset($product['sell_price'])) {
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class="efruit-vi" href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
-                                        <a class="efruit-en" href="<?= frontend_url() ?>detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
+                                        <a class="efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
+                                        <a class="efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
                                     </div>
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
@@ -152,11 +154,8 @@ if (isset($product['sell_price'])) {
                     <?php } ?>
         <?php  }
             }
-        endif;
+        }
         ?>
     </div>
 </div>
-<?php
-// echo "footer";
-$this->load_theme_file('page-footer.php')
-?>
+<?php $this->load_theme_file('page-footer.php') ?>

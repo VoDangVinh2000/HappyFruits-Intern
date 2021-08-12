@@ -112,6 +112,6 @@ class PageController extends BaseController
         $this->_merge_data(compact("js", "page_title", "obj", "id", "templates", "all_categories", "tags"));
         $this->load_page('page/page');
     }
-
+    
 }
 /* End of PageController class */

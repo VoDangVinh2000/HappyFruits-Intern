@@ -87,7 +87,7 @@ class CustomerController extends BaseController
                 $bool = true;
             }
             if ($bool) {
-                header('location:' . frontend_url() . "dang-ky" . '');
+                header('location:/vi/dang-ky');
             } else {
                 $params['username'] = $_POST['username_en'];
                 $params['password'] = md5($_POST['password_en']);
@@ -98,7 +98,7 @@ class CustomerController extends BaseController
                 if ($success) {
                     setcookie("error_email", $error_email, 0, "/");
                     setcookie("error_username", $error_username, 0, "/");
-                    header('location:' . frontend_url() . "dang-nhap" . '');
+                    header('location:/vi/dang-nhap');
                 }
             }
         } else if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['dang-ky'])) {
@@ -117,7 +117,7 @@ class CustomerController extends BaseController
                 $bool = true;
             }
             if ($bool) {
-                header('location:' . frontend_url() . "dang-ky" . '');
+                header('location:/vi/dang-ky');
             } else {
                 $params['username'] = $_POST['username_en'];
                 $params['password'] = md5($_POST['password_en']);
@@ -128,11 +128,12 @@ class CustomerController extends BaseController
                 if ($success) {
                     setcookie("error_email", $error_email, 0, "/");
                     setcookie("error_username", $error_username, 0, "/");
-                    header('location:' . frontend_url() . "dang-nhap" . '');
+                    header('location:/vi/dang-nhap');
                 }
             }
-        } else {
-            header('location:' . frontend_url() . '');
+        }
+         else {
+            header('location:/vi');
         }
     }
 
@@ -144,13 +145,12 @@ class CustomerController extends BaseController
         //reset lại lỗi đăng nhập sau mỗi lần đăng nhập
         setcookie("error_username_password", $error_username_password, 0, "/");
         setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, 0, "/");
-        if (isset($_POST['username'])) {
+        if (isset($_POST['username']) && $_SERVER['REQUEST_METHOD'] == "POST") {
             //Kiểm tra username password khi đăng nhập
             $username = $_POST['username'];
             $password = md5($_POST['password']);
-
+            echo $username . " " . $password;
             $customer = new Customers;
-
             $data = $customer->get_list_customer_username($username);
             //kiểm tra username có tồn tại trên csdl hay không
             if ($data) {
@@ -162,18 +162,18 @@ class CustomerController extends BaseController
                     $_SESSION['user_account'] = $data;
                     $check_error_login = false;
 
-                    header('location:' . frontend_url() . '');
+                    header('location:/vi');
                 } else {
                     $error_username_password = 'Tài khoản hoặc mật khẩu không chính xác';
                     setcookie("error_username_password", $error_username_password, time() + 600, "/");
                     $check_error_login = true;
-                    header('location:' . frontend_url() . "dang-nhap" . '');
+                    header('location:/vi/dang-nhap');
                 }
             } else {
                 $error_acount_does_not_exist = 'Tài khoản này không tồn tại';
                 setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, time() + 600, "/");
                 $check_error_login = true;
-                header('location:' . frontend_url() . "dang-nhap" . '');
+                header('location:/vi/dang-nhap');
             }
             //xóa thông báo lỗi đăng nhập
             if (!$check_error_login) {
@@ -186,7 +186,7 @@ class CustomerController extends BaseController
     function logoutCustomer(){
         if(isset($_SESSION['user_account'])){
             unset($_SESSION['user_account']);
-            header('location:' . frontend_url() . '');
+            header('location:/vi');
         }
         else
             header('location: vi/dang-nhap');

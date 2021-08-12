@@ -48,6 +48,7 @@ RewriteRule ^frontend/?$ /pixeladmin/index.php?controller=frontend
 
 RewriteRule ^fruit-veg-everyday(/)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=fruit-veg-everyday
 
+
 RewriteRule ^vi/?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=trang-chu
 #RewriteRule ^vi/danh-gia/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=danh-gia&order=$1
 RewriteRule ^vi/(.*)/(.*)/(.*)?$ /pixeladmin/index.php?controller=page&action=view&lang=vi&page_code=$1&param2=$2&param3=$3
@@ -64,7 +65,6 @@ RewriteRule ^register/?$ /pixeladmin/index.php?controller=customer&action=regist
 
 RewriteRule ^loginCustomer/?$ /pixeladmin/index.php?controller=customer&action=loginCustomer
 RewriteRule ^logoutCustomer/?$ /pixeladmin/index.php?controller=customer&action=logoutCustomer
-
 
     Redirect /index.php /vi/
 
