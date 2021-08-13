@@ -25,12 +25,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     }
     //event for input of form-login
     allInputLogin.forEach(element => {
-<<<<<<< HEAD
-
-        element.addEventListener('focus', function () {
-=======
         element.addEventListener('focus', function() {
->>>>>>> 42c68d45bb7d9bbbf0cf74d30a2122fbe1476433
             element.style.borderBottom = "1px solid black";
             allInputLogin.forEach(element2 => {
                 if (element.name != element2.name) {

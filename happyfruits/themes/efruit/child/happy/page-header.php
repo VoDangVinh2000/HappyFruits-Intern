@@ -175,7 +175,7 @@
                                                            <div class="col-md-6 col-megamenu">
 
                                                                <ul class="list-unstyled">
-                                                                   <li><a href="">
+                                                                   <li><a href="/vi/category/nhomhang-<?= $array['category_id'] ?>">
                                                                            <span class="efruit-vi"><?= $array['name'] ?></span>
                                                                            <span class="efruit-en"><?= $array['english_name'] ?></span>
                                                                        </a></li>
@@ -194,13 +194,13 @@
                                                <div class="row">
                                                    <div class="col-megamenu col-md-12">
                                                        <ul class="list-unstyled">
-                                                           <li><a href="/vi/category/gia1-14-200k-500k">200k - 500k</a></li>
-                                                           <li><a href="/vi/category/gia2-14">500k - 800k</a></li>
-                                                           <li><a href="/vi/category/gia3-14">800k - 1000k</a></li>
-                                                           <li><a href="/vi/category/gia4-14">1100k - 1500k</a></li>
-                                                           <li><a href="/vi/category/gia5-14">1600k - 2000k</a></li>
-                                                           <li><a href="/vi/category/gia6-14">2000k - 2500k</a></li>
-                                                           <li><a href="/vi/category/gia7-14">2600k - 4000k</a></li>
+                                                           <li><a href="/vi/category/gia-1-14">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia-2-14">500k - 800k</a></li>
+                                                           <li><a href="/vi/category/gia-3-14">800k - 1000k</a></li>
+                                                           <li><a href="/vi/category/gia-4-14">1100k - 1500k</a></li>
+                                                           <li><a href="/vi/category/gia-5-14">1600k - 2000k</a></li>
+                                                           <li><a href="/vi/category/gia-6-14">2000k - 2500k</a></li>
+                                                           <li><a href="/vi/category/gia-7-14">2600k - 4000k</a></li>
                                                        </ul>
                                                    </div><!-- col-megamenu.// -->
                                                </div>
@@ -248,7 +248,7 @@
                            <li class="nav-item dropdown has-megamenu">
                                <?php foreach ($tiles as $tile) {
                                     if ($tile['cat'] == 15) { ?>
-                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="" data-bs-toggle="dropdown">
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
                                            <?= $tile['short_text'] ?>
                                        </a>
                                        <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
@@ -270,7 +270,6 @@
                                                             foreach ($megaMenu_hamper_boxFruit as $array) {
                                                         ?>
                                                                <div class="col-md-6 col-megamenu">
-
                                                                    <ul class="list-unstyled">
                                                                        <li><a href="/vi/category/nhomhang-<?= $array['category_id'] ?>">
                                                                                <span class="efruit-vi"><?= $array['name'] ?></span>
@@ -292,13 +291,13 @@
                                                <div class="row">
                                                    <div class="col-megamenu col-md-12">
                                                        <ul class="list-unstyled">
-                                                           <li><a href="/vi/category/gia1-15">200k - 500k</a></li>
-                                                           <li><a href="/vi/category/gia2-15">500k - 800k</a></li>
-                                                           <li><a href="/vi/category/gia3-15">800k - 1000k</a></li>
-                                                           <li><a href="/vi/category/gia4-15">1100k - 1500k</a></li>
-                                                           <li><a href="/vi/category/gia5-15">1600k - 2000k</a></li>
-                                                           <li><a href="/vi/category/gia6-15">2000k - 2500k</a></li>
-                                                           <li><a href="/vi/category/gia7-15">2600k - 4000k</a></li>
+                                                           <li><a href="/vi/category/gia-1-15">200k - 500k</a></li>
+                                                           <li><a href="/vi/category/gia-2-15">500k - 800k</a></li>
+                                                           <li><a href="/vi/category/gia-3-15">800k - 1000k</a></li>
+                                                           <li><a href="/vi/category/gia-4-15">1100k - 1500k</a></li>
+                                                           <li><a href="/vi/category/gia-5-15">1600k - 2000k</a></li>
+                                                           <li><a href="/vi/category/gia-6-15">2000k - 2500k</a></li>
+                                                           <li><a href="/vi/category/gia-7-15">2600k - 4000k</a></li>
                                                        </ul>
                                                    </div><!-- col-megamenu.// -->
                                                </div>
