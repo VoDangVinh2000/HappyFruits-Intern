@@ -151,12 +151,12 @@
                            <li class="nav-item dropdown has-megamenu">
                                <?php foreach ($tiles as $tile) {
                                     if ($tile['cat'] == 14) { ?>
-                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="   ">
                                            <?= $tile['short_text'] ?>
                                        </a>
                                        <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
                                            <?= $tile['en_text'] ?>
-                                       </a>
+                                      </a>
                                <?php }
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
@@ -737,7 +737,7 @@
                    <div class="modal-content">
                        <div class="input-group input-group-lg">
                            <input id="input-search" type="text" aria-label="Recipient's username"
-                           aria-describedby="button-addon2" auto ng-model="" name="key" 
+                           aria-describedby="button-addon2" name="key" 
                            class="form-control" placeholder="Search...">
                            <button name="search" value="submit" class="btn btn-outline-secondary" type="submit" id="button-addon2" style="padding: 1.5em 1.8em; border-radius: 0; background: #333; border: none;">
                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="white">

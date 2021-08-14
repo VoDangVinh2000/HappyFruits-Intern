@@ -337,6 +337,11 @@ class eModel
         $strURL = preg_replace("/[^A-Z0-9a-z-]/",'',strtolower($strURL));
         return $strURL;
     } 
+
+    static function matchRegex_SearchProducts($key){
+        $strURL = preg_replace("/[!@#$%^&*()-_=+\/|*?><.,{}'']/",'',strtolower($key));
+        return $strURL;
+    }
     
     function insert($data = array())
     {
