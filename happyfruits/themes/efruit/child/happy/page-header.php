@@ -27,7 +27,7 @@
                            <a class="nav-link" href="/vi/lien-he/"><i class="fas fa-phone-volume"></i> 0938.70.70.15</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="https://www.facebook.com/happyfruitsvietnam/"><i class="fab fa-facebook-f"></i></a>
+                           <a class="nav-link" href="https://www.facebook.com/happyfruitsvietnam/" target="_blank"><i class="fab fa-facebook-f"></i></a>
                        </li>
                        <li class="nav-item">
                            <!-- <a class="nav-link" href="#">VI</a> -->
@@ -42,7 +42,7 @@
                            <a class="nav-link" href="#" onclick="showOrderFlow()" title="Vận chuyển"><i class="fas fa-shipping-fast"></i></a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" href="/tuyen-dung" title="Tuyển dụng"><i class="fas fa-user-tie"></i></a>
+                           <a class="nav-link" href="/tuyen-dung" target="_blank" title="Tuyển dụng"><i class="fas fa-user-tie"></i></a>
                        </li>
                    </ul>
                </div>
@@ -151,10 +151,10 @@
                            <li class="nav-item dropdown has-megamenu">
                                <?php foreach ($tiles as $tile) {
                                     if ($tile['cat'] == 14) { ?>
-                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="   ">
+                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
                                            <?= $tile['short_text'] ?>
                                        </a>
-                                       <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
+                                       <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="/vi/fruit-baskets" data-bs-toggle="dropdown">
                                            <?= $tile['en_text'] ?>
                                       </a>
                                <?php }
@@ -182,7 +182,7 @@
                                                                </ul>
                                                            </div> <!-- col-megamenu.// -->
                                                    <?php }
-                                                    }else{
+                                                    } else {
                                                         echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
                                                         <p class='efruit-en text-center'>There are no product groups yet.</p>
                                                           ";
@@ -278,7 +278,7 @@
                                                                    </ul>
                                                                </div> <!-- col-megamenu.// -->
                                                        <?php }
-                                                        } else{
+                                                        } else {
                                                             echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
                                                             <p class='efruit-en text-center'>There are no product groups yet.</p>
                                                               ";
@@ -374,7 +374,7 @@
                                                                    </ul>
                                                                </div> <!-- col-megamenu.// -->
                                                        <?php }
-                                                        } else{
+                                                        } else {
                                                             echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
                                                             <p class='efruit-en text-center'>There are no product groups yet.</p>
                                                               ";
@@ -470,7 +470,7 @@
                                                                    </ul>
                                                                </div> <!-- col-megamenu.// -->
                                                        <?php }
-                                                        }else{
+                                                        } else {
                                                             echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
                                                             <p class='efruit-en text-center'>There are no product groups yet.</p>
                                                               ";
@@ -566,7 +566,7 @@
                                                                    </ul>
                                                                </div> <!-- col-megamenu.// -->
                                                        <?php }
-                                                        }else{
+                                                        } else {
                                                             echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
                                                             <p class='efruit-en text-center'>There are no product groups yet.</p>
                                                               ";
@@ -632,9 +632,10 @@
                            <li class="nav-item dropdown has-megamenu">
                                <?php foreach ($tiles as $tile) {
                                     if ($tile['cat'] == 7) { ?>
-                                       <a class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" href="" data-bs-toggle="dropdown">
+                                       <a href="/vi/other-products" class="nav-link dropdown-toggle efruit-vi text-uppercase px-3" data-bs-toggle="dropdown">
                                            <?= $tile['short_text'] ?>
                                        </a>
+
                                        <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>" data-bs-toggle="dropdown">
                                            <?= $tile['en_text'] ?>
                                        </a>
@@ -662,7 +663,7 @@
                                                                    </ul>
                                                                </div> <!-- col-megamenu.// -->
                                                        <?php }
-                                                        }else{
+                                                        } else {
                                                             echo "<p class='efruit-vi text-center'>Chưa có nhóm hàng nào.</p>
                                                             <p class='efruit-en text-center'>There are no product groups yet.</p>
                                                               ";
@@ -774,12 +775,10 @@
    </header>
 
    <script>
-    //    const form = document.forms[0];
-    //    const selectElement = form.querySelector('input[name="searchText"]');
-    //    const btnSearch = document.querySelector('#button-addon2');
-    //    btnSearch.addEventListener('click', () => {
-    //        let valueInput = selectElement.value;
-    //    })
-
- 
+       //    const form = document.forms[0];
+       //    const selectElement = form.querySelector('input[name="searchText"]');
+       //    const btnSearch = document.querySelector('#button-addon2');
+       //    btnSearch.addEventListener('click', () => {
+       //        let valueInput = selectElement.value;
+       //    })
    </script>
