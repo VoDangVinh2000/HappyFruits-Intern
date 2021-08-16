@@ -15,8 +15,6 @@
                         <!--Form action-login-->
                         <form action="/loginCustomer" method="post">
                             <div class="main-create-account-fillout">
-                                <p class="efruit-en">Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8 .</p>
-                                <p class="efruit-vi">Mật khẩu có ít nhất 1 số, 1 chữ thường, 1 chữ in hoa và tối đa 8 ký tự .</p>
                                 <div class="error">
                                     <?php
                                     if (isset($_COOKIE['error_username_password'])) {
@@ -29,8 +27,12 @@
                                 </div>
 
                                 <input type="text" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
+                                <p class="efruit-en">Username must have minimum length is 6, no special characters</p>
+                                <p class="efruit-vi">Tên đăng nhập có ít nhất 6 kí tự, không chứa kí tự đặc biệt.</p>
 
                                 <input type="password" class="input-account" name="password" autocapitalize="words" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8" required>
+                                <p class="efruit-en">Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8 .</p>
+                                <p class="efruit-vi">Mật khẩu có ít nhất 1 số, 1 chữ thường, 1 chữ in hoa và tối đa 8 ký tự .</p>
 
                             </div>
                             <div class="div-action-button">

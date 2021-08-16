@@ -6,8 +6,7 @@
                 $arrProducts = array($get_product_with_mega_menu);
                 foreach ($arrProducts as $value) {
                     for ($i = 0; $i < count($value); $i++) {
-                        if ($value[$i]['image'] == "") {
-                            
+                        if ($value[$i]['image'] == "") { 
         ?>
                             <div class="col-md-3 col-sm-3">
                                 <div class="product-item">

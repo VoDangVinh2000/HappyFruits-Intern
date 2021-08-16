@@ -303,7 +303,9 @@ class eModel
     }
     static function matchRegex_SearchProducts($key)
     {
-        $strURL = preg_replace("/[!@#$%^&*()-_=+\/|*?><.,{}'']/", '', strtolower($key));
+        /**$strURL = preg_replace("/[!@#$%^&*()-_=+\/|*?><.,{}'']/", '', strtolower($key)); */
+        $key = remove_unicode($key);
+        $strURL = preg_replace("/[!@#$%^&*()_=+\/|*?><.,{}'']/", '', strtolower($key));
         return $strURL;
     }
     function insert($data = array())

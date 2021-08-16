@@ -10,6 +10,8 @@
  *
  */
 
+use phpbb\help\controller\faq;
+
 require_once(ABSOLUTE_PATH . 'models/base/BaseProducts.php');
 
 /**
@@ -129,7 +131,7 @@ class Products extends BaseProducts
             'select' => 'products.*, categories.name as category_name, categories.name_without_utf8 as category_name_without_utf8, categories.english_name as category_english_name',
             'join' => 'INNER JOIN categories ON categories.category_id = products.category_id
                        INNER JOIN prices ON prices.product_id = products.product_id',
-            'products.product_id' => $this->mathRegexUrl($id)
+            'products.product_id' => eModel::matchRegexUrl($id)
         );
         return $this->select($filters);
     }
@@ -189,19 +191,23 @@ class Products extends BaseProducts
     function get_product_by_key()
     {
         //SELECT DISTINCT * FROM products WHERE name like "Giỏ Dâu Size 1A" OR code like '%FN%'
+        // header('Content-Type:text/html;charset=utf-8');
         $search = "";
         $sql = "";
         if (isset($_POST['key']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
             $search = eModel::matchRegex_SearchProducts($_POST['key']);
             $sql = "SELECT * FROM products, prices 
-            WHERE (products.name LIKE '%" . $search . "%' OR products.code LIKE '%" . $search . "%' OR products.english_name LIKE '%" . $search . "%')
+            WHERE (products.name LIKE '%" . $search . "%' OR products.code LIKE '%" . $search . "%' 
+            OR products.english_name LIKE '%" . $search . "%')
             AND products.product_id = prices.product_id 
             AND prices.type_id = 1 AND products.enabled = 1 AND products.is_hidden = 0";
+
             $filters = "";
             $result = self::_do_sql($sql, $filters);
-            var_dump($sql);
             if (!empty($result)) {
                 return self::_do_sql($sql, $filters);
+            } else {
+                return null;
             }
         } else {
             return null;
@@ -209,27 +215,53 @@ class Products extends BaseProducts
     }
     function get_relate_products($id)
     {
-        //Lấy category_id 
-        $sql = "SELECT products.category_id FROM prices 
-        INNER JOIN products ON products.product_id = prices.product_id WHERE products.product_id = '" . $id . "' 
-        AND products.enabled = 1 AND products.is_hidden = 0 LIMIT 1";
-        //thử sản phẩm liên quan ngẫu nhiên
+
         //Lấy category_id 
         $sql = "SELECT products.category_id FROM prices 
         INNER JOIN products ON products.product_id = prices.product_id WHERE products.product_id = '" . $id . "' 
         AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT 1";
+
         $filters = "";
         $result = $this->_do_select_sql($sql, $filters);
         //Lấy ra những sản phẩm có category_id là $id
         $query = "";
         if (!empty($result)) {
             foreach ($result as $array) {
-                $query = "SELECT * FROM prices 
-                INNER JOIN products ON products.product_id = prices.product_id WHERE
+
+                //sản phẩm liên quan ngẫu nhiênnnnnnn
+                $totalRows = $this->_do_select_sql("SELECT * FROM products 
+                INNER JOIN prices ON prices.product_id = products.product_id 
+                WHERE products.category_id = '" . $array['category_id'] . "' AND products.enabled = 1 AND 
+                products.is_hidden = 0 AND prices.type_id = 1 ", $filters);
+
+                $max = count($totalRows) - 1; // Nếu lỗi thì liên quan đến biến $max
+                //vì sản phẩm liên quan tối đa hiện ra 4 sản phẩm, nếu $query select tổng nhỏ hơn 4 thì random offset lại
+                $rand_number = rand(0, $max);
+
+                $query = "SELECT * FROM products 
+                INNER JOIN prices ON products.product_id = prices.product_id WHERE
                  products.category_id = '" . $array['category_id'] . "' 
-                AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1";
+                AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT $rand_number,4";
+
+                //Lấy ra ngẫu nhiên vị trí của select
+                $total = count($this->_do_select_sql($query));
+                //Nếu select ngẫu nhiên vị trí nhỏ hơn 4
+                if ($total < 4) {
+
+                    $query = "SELECT * FROM products 
+                    INNER JOIN prices ON products.product_id = prices.product_id WHERE
+                    products.category_id = '" . $array['category_id'] . "' 
+                    AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT 4";
+                    return $this->_do_select_sql($query, $filters);
+                } else { //Ngược lại
+
+                    $query = "SELECT * FROM products 
+                    INNER JOIN prices ON products.product_id = prices.product_id WHERE
+                     products.category_id = '" . $array['category_id'] . "' 
+                    AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT $rand_number,4";
+                    return $this->_do_select_sql($query, $filters);
+                }
             }
-            return $this->_do_select_sql($query, $filters);
         } else {
             return null;
         }
