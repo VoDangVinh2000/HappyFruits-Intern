@@ -200,8 +200,6 @@ class Products extends BaseProducts
             WHERE (products.name LIKE '%" . $search . "%' OR products.code LIKE '%" . $search . "%')
             AND products.product_id = prices.product_id 
             AND prices.type_id = 1 AND products.enabled = 1 AND products.is_hidden = 0";
-
-            var_dump($sql);
             $filters = "";
             $result = self::_do_sql($sql, $filters);
             if (!empty($result)) {
@@ -228,7 +226,7 @@ class Products extends BaseProducts
         if (!empty($result)) {
             foreach ($result as $array) {
 
-                //sản phẩm liên quan ngẫu nhiênnnnnnn
+                //sản phẩm liên quan ngẫu nhiên
                 $totalRows = $this->_do_select_sql("SELECT * FROM products 
                 INNER JOIN prices ON prices.product_id = products.product_id 
                 WHERE products.category_id = '" . $array['category_id'] . "' AND products.enabled = 1 AND 

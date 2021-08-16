@@ -6,7 +6,6 @@
             echo "<h3 class='efruit-en d-flex justify-content-center'>Result for search by key: {$_POST['key']} </h3>
              <h3 class='efruit-vi d-flex justify-content-center'>Kết quả tìm kiếm cho từ khóa: {$_POST['key']}</h3> ";
             $arrProducts = $get_product_by_search_key;
-            var_dump($arrProducts);
             foreach ($arrProducts as $value) {
                 if ($value['image'] == '') {
         ?>
