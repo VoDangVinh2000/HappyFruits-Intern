@@ -98,7 +98,7 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 					</div>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">
+					<a href="/vi/lien-he/" class="footer--info-link">
 						<div class="footer--info-address footer--info-address-envolope">
 							<i class="fa fa-phone"></i>
 							<span class="footer--info-address footer--info-address__des">
@@ -120,7 +120,7 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 					</div>
 				</li>
 				<li class="footer--info-item">
-					<a href="#" class="footer--info-link">
+					<a href="https://www.facebook.com/happyfruitsvietnam/" target="_blank" class="footer--info-link">
 						<div class="footer--info-address footer--info-address-envolope">
 							<i class="fab fa-facebook-f"></i>
 							<span class="footer--info-address footer--info-address__des">
