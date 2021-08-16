@@ -672,7 +672,7 @@ function html_select_optgroup($source_array, $value_field, $label_field, $opt_fi
     return $html;
 }
 
-function remove_unicode($str)
+ function remove_unicode($str)
 {
     $str = preg_replace("/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/", 'a', $str);
     $str = preg_replace("/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/", 'e', $str);

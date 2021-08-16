@@ -192,22 +192,19 @@ class Products extends BaseProducts
         $search = "";
         $sql = "";
         if (isset($_POST['key']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
-            $search = eModel::matchRegexUrl($_POST['key']);
+            $search = eModel::matchRegex_SearchProducts($_POST['key']);
             $sql = "SELECT * FROM products, prices 
-            WHERE (products.name like '%" . $search . "%' OR products.code like '%" . $search . "%')
+            WHERE (products.name LIKE '%" . $search . "%' OR products.code LIKE '%" . $search . "%' OR products.english_name LIKE '%" . $search . "%')
             AND products.product_id = prices.product_id 
             AND prices.type_id = 1 AND products.enabled = 1 AND products.is_hidden = 0";
             $filters = "";
             $result = self::_do_sql($sql, $filters);
-            if(!empty($result)){
+            var_dump($sql);
+            if (!empty($result)) {
                 return self::_do_sql($sql, $filters);
             }
-            else{
-                return null;
-            }
-        }
-        else{
-            return null;    
+        } else {
+            return null;
         }
     }
     function get_relate_products($id)
@@ -219,7 +216,7 @@ class Products extends BaseProducts
         //thử sản phẩm liên quan ngẫu nhiên
         //Lấy category_id 
         $sql = "SELECT products.category_id FROM prices 
-        INNER JOIN products ON products.product_id = prices.product_id WHERE products.product_id = '".$id."' 
+        INNER JOIN products ON products.product_id = prices.product_id WHERE products.product_id = '" . $id . "' 
         AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT 1";
         $filters = "";
         $result = $this->_do_select_sql($sql, $filters);
@@ -233,11 +230,9 @@ class Products extends BaseProducts
                 AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1";
             }
             return $this->_do_select_sql($query, $filters);
-        }
-        else{
+        } else {
             return null;
         }
     }
-    
 }
 /* End of generated class */
