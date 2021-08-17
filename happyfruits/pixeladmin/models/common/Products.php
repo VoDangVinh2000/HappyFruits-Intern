@@ -227,12 +227,7 @@ class Products extends BaseProducts
         $query = "";
         if (!empty($result)) {
             foreach ($result as $array) {
-<<<<<<< HEAD
                 //sản phẩm liên quan ngẫu nhiên
-=======
-
-                //sản phẩm liên quan ngẫu nhiênnnnnnn
->>>>>>> dc1da31a0aa448cec84c75ed79904d6b76bf0027
                 $totalRows = $this->_do_select_sql("SELECT * FROM products 
                 INNER JOIN prices ON prices.product_id = products.product_id 
                 WHERE products.category_id = '" . $array['category_id'] . "' AND products.enabled = 1 AND 

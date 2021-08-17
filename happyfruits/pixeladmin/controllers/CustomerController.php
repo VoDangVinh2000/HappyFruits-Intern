@@ -190,11 +190,7 @@ class CustomerController extends BaseController
             header('location: vi/dang-nhap');
         }
         else
-<<<<<<< HEAD
-            header('location: /vi/dang-nhap');
-=======
             header('location: /vi');
->>>>>>> dc1da31a0aa448cec84c75ed79904d6b76bf0027
             // header('location:' . frontend_url() . ''); tương đương //header('location: vi/dang-nhap');
     }
     //hàm sửa thông tin tài khoản người dùng
