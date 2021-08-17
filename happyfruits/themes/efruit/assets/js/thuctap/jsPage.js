@@ -7,8 +7,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let form_forgot = document.querySelector('.form-forgot');
     let form_login = document.querySelector('.form-account');
     let a_cancelFormForgot = document.querySelectorAll('#cancelFormForgot');
-    const btnShowPass = document.querySelector('#btnShowPass');
-    const password = document.querySelector('#password');
+
     
     if (a_editProfile) {
         a_editProfile.forEach(element => {
@@ -57,19 +56,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
         }
 
-        if (btnShowPass) {
-            btnShowPass.addEventListener("click", () => {
-                if (password.type === "password") {
-                    password.type = "text";
-                } else {
-                    password.type = "password";
-                }
-            });
-        }
-        else {
-        }
-
-
         $(document).ready(function () {
             $('input[name=username]').css('border-bottom', '1px solid black');
         });
@@ -104,6 +90,22 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const btnShowPass = document.querySelector('#btnShowPass');
+    const password = document.querySelector('#password');
+    if (btnShowPass) {
+        btnShowPass.addEventListener("click", () => {
+            if (password.type === "password") {
+                password.type = "text";
+            } else {
+                password.type = "password";
+            }
+            });
+        }
+        else {
+        }
+});
 
 
 function setCookie(cname, cvalue, exMins) {

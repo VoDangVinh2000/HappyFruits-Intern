@@ -24,7 +24,6 @@
                                 <p class="efruit-vi"></p>`;
                                 }
                                 ?>
-
                             </div>
 
                             <div class="password-wrapper">
