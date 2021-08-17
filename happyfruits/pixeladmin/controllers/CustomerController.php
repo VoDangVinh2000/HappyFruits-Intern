@@ -8,7 +8,7 @@ class CustomerController extends BaseController
 {
     function __construct()
     {
-        $this->not_require_logged = array('register','loginCustomer','logoutCustomer');
+        $this->not_require_logged = array('register','Login_Customer','Logout_Customer','Edit_Info_Account_Customer');
         parent::__construct();
         $this->load_model('Customers, Products');
     }
@@ -137,7 +137,8 @@ class CustomerController extends BaseController
         }
     }
 
-    function loginCustomer()
+    //hàm đăng nhập phía khách hàng
+    function Login_Customer()
     {
         $error_username_password = null;
         $error_acount_does_not_exist = null;
@@ -145,7 +146,7 @@ class CustomerController extends BaseController
         //reset lại lỗi đăng nhập sau mỗi lần đăng nhập
         setcookie("error_username_password", $error_username_password, 0, "/");
         setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, 0, "/");
-        if (isset($_POST['username']) && $_SERVER['REQUEST_METHOD'] == "POST") {
+        if (isset($_POST['username'])) {
             //Kiểm tra username password khi đăng nhập
             $username = $_POST['username'];
             $password = md5($_POST['password']);
@@ -183,7 +184,8 @@ class CustomerController extends BaseController
         }
     }
 
-    function logoutCustomer(){
+    //hàm đăng xuất
+    function Logout_Customer(){
         if(isset($_SESSION['user_account'])){
             unset($_SESSION['user_account']);
             header('location:/vi');
@@ -191,6 +193,85 @@ class CustomerController extends BaseController
         else
             header('location: vi/dang-nhap');
             // header('location:' . frontend_url() . ''); tương đương //header('location: vi/dang-nhap');
+    }
+    //hàm sửa thông tin tài khoản người dùng
+    function Edit_Info_Account_Customer(){
+        $customer = new Customers;
+        $server = "localhost";
+        $username = "root";
+        $password = "";
+        $dbname = "happyfruit_db";
+        $connect = mysqli_connect($server, $username, $password, $dbname);
+
+        if(!$connect){
+            echo 'kết nối thất bại '. mysqli_connect_error();
+            exit();
+        }
+
+        $error_email = NULL;
+        //reset lại lỗi sau mỗi lần sửa thông tin
+        setcookie("error_email", $error_email, 0, "/");
+
+        $customer_id = $_SESSION['user_account'][0]['customer_id'];
+        if (isset($_POST['fullname'])) {
+            $fullName = $_POST['fullname'];
+            $email = $_POST['email'];
+            $phoneNumber = $_POST['phone-number'];
+            $address = $_POST['address'];
+            $building = $_POST['building'];
+            $companyName = $_POST['company-name'];
+            $companyTaxCode = $_POST['company-tax-code'];
+            $companyAddress = $_POST['company-address'];
+            $district = $_POST['district'];
+
+            //lấy email của tài khoản hiện tại đang đăng nhập
+            $query_user_email = $customer->get_list_customer_email($email);
+            //Kiểm tra email người dùng nhập có trong database chưa, nếu tồn email đã tồn tại trên database thì báo lỗi
+            if(isset($query_user_email[0]['email']) && $query_user_email[0]['email'] != $_SESSION['user_account'][0]['email']){
+                if(isset($_POST['dang-ky'])){
+                    $error_email = 'Email này có người sử dụng. Xin hãy chọn email khác';
+                }
+                else
+                    $error_email = 'This email already exists. Please enter another email';
+
+                setcookie("error_email", $error_email, time() + 600, "/");
+                echo 'email đã tồn tại';
+            }
+            //nếu email hợp lệ thì cập nhật thông tin trên database
+            else{
+                echo 'email hợp lệ';
+                //câu lệnh sql 
+                $sql = 'UPDATE customers SET `customer_name` = ' ."N'".$fullName."'" . ', `email` = ' ."'".$email."'".
+                ', `mobile` = ' ."'".$phoneNumber."'" . ', `address` = ' ."N'".$address."'" . ', `building` = ' ."N'".$building."'" .
+                ', `company_name` = ' ."N'".$companyName."'" . ', `company_tax_code` = ' ."'".$companyTaxCode."'" .
+                ', `company_address` = ' ."N'".$companyAddress."'" . ', `district` = ' ."N'".$district."'" . ' WHERE `customer_id` = '. $customer_id ;
+                
+                if(mysqli_query($connect, $sql)){
+                    echo 'cap nhat thanh cong';
+                }
+                else 
+                    echo 'cap nhat khong thanh cong'; 
+                //cập nhật lại session thông tin tài khoản người dùng
+                $data = $customer->get_list_customer_username($_SESSION['user_account'][0]['username']);
+                $_SESSION['user_account'] = $data;
+            }
+           
+               
+            // => xong kiểm tra email đã tồn tại chưa khi cập nhật
+
+            
+
+            //xóa thông báo lỗi sửa thông tin tài khoản
+            // if (!$check_error_edit) {
+            //     setcookie("error_email", $error_email, 0, "/");
+            // }
+
+
+        }
+
+        
+
+        header('location: /vi/profile');
     }
 }
 /* End of CustomersController class */

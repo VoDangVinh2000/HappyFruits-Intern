@@ -169,6 +169,7 @@ class eModel
     
     static function _do_sql($sql = '', $where_params = array(), $set_params = array(), $order_by = '', $group_by = '')
     {
+        
         $sql = trim($sql);
         $set_str = '';
         if (!empty($set_params))

@@ -306,24 +306,40 @@ h6 {
     border: none;
 }
 
-.cancel-profile {
+.cancel-profile, .submit-button {
     width: 100%;
-    border-bottom: 1px solid #bdc3c7;
     padding: 15px 0 10px 0;
+    text-align: center;
+    font-size: 18px;
 }
 
 .cancel-profile button {
     width: fit-content;
-    text-align: left;
+    text-align: center;
     border: none;
     background-color: white;
 }
 
 .cancel-profile button:hover {
-    background-color: #ecf0f1;
-    color: black;
+    background-color: #e0fff2;
+    color: #ff3a3a;
     border-radius: 8px;
     border-bottom: none;
+}
+
+.submit-button button:hover {
+    background-color: #72a499;
+    color: #f2f7ee;
+    border-radius: 8px;
+    border-bottom: none;
+}
+
+.submit-button button {
+    width: fit-content;
+    text-align: center;
+    border: none;
+    background-color: white;
+
 }
 
 .profile-details p {
@@ -380,6 +396,16 @@ h6 {
 
 .logout-title a{
     color: #333333;
+}
+
+/* select district */
+.required {
+    width: 100%;
+    font-family: Marcellus, Arial, Helvetica, sans-serif;
+}
+
+.row-form-edit {
+    padding: 7px 0;
 }
 
 /*css reponsive*/
