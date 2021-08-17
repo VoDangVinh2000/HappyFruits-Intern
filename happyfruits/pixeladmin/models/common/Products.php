@@ -191,15 +191,17 @@ class Products extends BaseProducts
     function get_product_by_key()
     {
         //SELECT DISTINCT * FROM products WHERE name like "Giỏ Dâu Size 1A" OR code like '%FN%'
-        header('content-type:text/html;charset=utf-8');
+        // header('Content-Type:text/html;charset=utf-8');
         $search = "";
         $sql = "";
         if (isset($_POST['key']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
             $search = eModel::matchRegex_SearchProducts($_POST['key']);
             $sql = "SELECT * FROM products, prices 
-            WHERE (products.name LIKE '%" . $search . "%' OR products.code LIKE '%" . $search . "%')
+            WHERE (products.name LIKE '%" . $search . "%' OR products.code LIKE '%" . $search . "%' 
+            OR products.english_name LIKE '%" . $search . "%')
             AND products.product_id = prices.product_id 
             AND prices.type_id = 1 AND products.enabled = 1 AND products.is_hidden = 0";
+
             $filters = "";
             $result = self::_do_sql($sql, $filters);
             if (!empty($result)) {
@@ -225,7 +227,12 @@ class Products extends BaseProducts
         $query = "";
         if (!empty($result)) {
             foreach ($result as $array) {
+<<<<<<< HEAD
                 //sản phẩm liên quan ngẫu nhiên
+=======
+
+                //sản phẩm liên quan ngẫu nhiênnnnnnn
+>>>>>>> dc1da31a0aa448cec84c75ed79904d6b76bf0027
                 $totalRows = $this->_do_select_sql("SELECT * FROM products 
                 INNER JOIN prices ON prices.product_id = products.product_id 
                 WHERE products.category_id = '" . $array['category_id'] . "' AND products.enabled = 1 AND 

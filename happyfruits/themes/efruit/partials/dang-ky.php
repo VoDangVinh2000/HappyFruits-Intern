@@ -13,10 +13,9 @@
                     <!--Form action register-->
                     <form action="/register" method="post">
                         <div class="main-create-account-fillout">
-                            
                             <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" type="text" name="username_en" class="input-account" autocapitalize="words" autofocus placeholder="Username" required>
-                            <p class="efruit-en">Username must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8 .</p>
-                            <p class="efruit-vi">Tên có ít nhất 1 số, 1 chữ thường, 1 chữ in hoa và tối đa 8 ký tự .</p>
+                            <p class="efruit-en">Username must have limited 6 characters, no special characters.</p>
+                            <p class="efruit-vi">Tên đăng nhập có ít nhất 6 kí tự, , không chứa kí tự đặc biệt.</p>
                             <div class="error">
                                 <?php
                                 if (isset($_COOKIE['error_username'])) {

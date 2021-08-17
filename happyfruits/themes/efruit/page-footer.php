@@ -15,34 +15,34 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 		</div>
 		<div class="footer--group-icon">
 			<div class="footer--group-icon__wrapper">
-				<a href=""> <i class="fab fa-facebook-f"></i><span class="icon-name">facebook</span></a>
-				<a href=""><i class="fab fa-twitter"></i><span class="icon-name">twitter</span></a>
-				<a href=""><i class="fab fa-instagram"></i><span class="icon-name">instagram</span></a>
-				<a href=""><i class="fab fa-youtube"></i><span class="icon-name">youtube</span></a>
+				<a href="https://www.facebook.com/happyfruitsvietnam/" target="_blank"> <i class="fab fa-facebook-f"></i><span class="icon-name">facebook</span></a>
+				<a href="https://twitter.com/?lang=vi" target="_blank"><i class="fab fa-twitter"></i><span class="icon-name">twitter</span></a>
+				<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i><span class="icon-name">instagram</span></a>
+				<a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i><span class="icon-name">youtube</span></a>
 			</div>
 		</div>
 		<div class="footer--info">
 			<ul class="footer--info-list">
 				<li class="footer--info-item">
-					<a href="#"  bind-translate="Về chúng tôi" class="footer--info-title">Về chúng tôi</a>
+					<a href="#" bind-translate="Về chúng tôi" class="footer--info-title">Về chúng tôi</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/gioi-thieu" class="footer--info-link" bind-translate="Giới thiệu">Giới thiệu</a>
+					<a href="/vi/gioi-thieu" target="_blank" class="footer--info-link" bind-translate="Giới thiệu">Giới thiệu</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/thu-vien-hinh-anh" class="footer--info-link" bind-translate="Thư viện hình ảnh">Thư viện hình ảnh</a>
+					<a href="/vi/thu-vien-hinh-anh" target="_blank" class="footer--info-link" bind-translate="Thư viện hình ảnh">Thư viện hình ảnh</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/tuyen-dung" class="footer--info-link" target="_blank" bind-translate="Tuyển dụng">Tuyển dụng</a>
+					<a href="/tuyen-dung" target="_blank" class="footer--info-link" target="_blank" bind-translate="Tuyển dụng">Tuyển dụng</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/chinh-sach-quy-dinh-chung" class="footer--info-link" bind-translate="Chính sách, quy định chung">Chính sách, quy định chung</a>
+					<a href="/vi/chinh-sach-quy-dinh-chung" target="_blank" class="footer--info-link" bind-translate="Chính sách, quy định chung">Chính sách, quy định chung</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/chinh-sach-doi-tra" class="footer--info-link" bind-translate="Chính sách đổi trả">Chính sách đổi trả</a>
+					<a href="/vi/chinh-sach-doi-tra" target="_blank" class="footer--info-link" bind-translate="Chính sách đổi trả">Chính sách đổi trả</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/chinh-sach-bao-mat-thong-tin" class="footer--info-link" bind-translate="Chính sách bảo mật thông tin">Chính sách bảo mật thông tin</a>
+					<a href="/vi/chinh-sach-bao-mat-thong-tin" target="_blank" class="footer--info-link" bind-translate="Chính sách bảo mật thông tin">Chính sách bảo mật thông tin</a>
 				</li>
 			</ul>
 			<!-- Col 2 -->
@@ -51,22 +51,22 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 					<a href="#" bind-translate="Có thể bạn thắc mắc" class="footer--info-title">Có thể bạn thắc mắc</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/san-pham" class="footer--info-link" bind-translate="Sản phẩm">Sản phẩm</a>
+					<a href="/vi/san-pham" target="_blank" class="footer--info-link" bind-translate="Sản phẩm">Sản phẩm</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/giao-hang" class="footer--info-link" bind-translate="Phương thức giao hàng">Phương thức giao hàng</a>
+					<a href="/vi/giao-hang" target="_blank" class="footer--info-link" bind-translate="Phương thức giao hàng">Phương thức giao hàng</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/dat-hang" class="footer--info-link" bind-translate="Phương thức đặt hàng">Phương thức đặt hàng</a>
+					<a href="/vi/dat-hang" target="_blank" class="footer--info-link" bind-translate="Phương thức đặt hàng">Phương thức đặt hàng</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/cam-ket-san-pham" class="footer--info-link" bind-translate="Cam kết sản phẩm">Cam kết sản phẩm</a>
+					<a href="/vi/cam-ket-san-pham" target="_blank" class="footer--info-link" bind-translate="Cam kết sản phẩm">Cam kết sản phẩm</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/uu-dai-thanh-vien" class="footer--info-link" bind-translate="Ưu đãi thành viên">Ưu đãi thành viên</a>
+					<a href="/vi/uu-dai-thanh-vien" target="_blank" class="footer--info-link" bind-translate="Ưu đãi thành viên">Ưu đãi thành viên</a>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/cau-hoi-khac" class="footer--info-link" bind-translate="Câu hỏi khác">Câu hỏi khác</a>
+					<a href="/vi/cau-hoi-khac" target="_blank" class="footer--info-link" bind-translate="Câu hỏi khác">Câu hỏi khác</a>
 				</li>
 			</ul>
 			<!-- Col 3 -->
@@ -98,7 +98,7 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 					</div>
 				</li>
 				<li class="footer--info-item">
-					<a href="/vi/lien-he/" class="footer--info-link">
+					<a href="/vi/lien-he/" target="_blank" class="footer--info-link">
 						<div class="footer--info-address footer--info-address-envolope">
 							<i class="fa fa-phone"></i>
 							<span class="footer--info-address footer--info-address__des">

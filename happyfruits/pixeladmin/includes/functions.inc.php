@@ -503,6 +503,7 @@ if (!function_exists('word_limiter')) {
 
 function html_select_district($class = 'required', $empty_text = "Chọn", $extra = "", $is_multiple_language = false, $selected = '')
 {
+    
     if (!$is_multiple_language) {
         $id = 'id="district"';
         if (strstr($extra, ' id="'))
@@ -510,17 +511,19 @@ function html_select_district($class = 'required', $empty_text = "Chọn", $extr
         $name = 'name="district"';
         if (strstr($extra, ' name="'))
             $name = '';
-        $html = '<select class="' . $class . '" ' . $extra . ' ' . $id . ' ' . $name . ' >
+        $html = '<select class="' . $class . '" ' . $extra . ' ' . $id . ' ' . $name . 'required >
                 <option value="">' . $empty_text . '</option>
+                <option value="Thành phố Thủ Đức" ' . ($selected == 'Thành phố Thủ Đức' ? 'selected=""' : '') . ' title="Thanh pho Thu Duc">Thành phố Thủ Đức</option>
+
                 <option value="1" ' . ($selected == 1 ? 'selected=""' : '') . ' title="1">Quận 1</option>
-                <option value="2" ' . ($selected == 2 ? 'selected=""' : '') . ' title="2">Quận 2</option>
+                 
                 <option value="3" ' . ($selected == 3 ? 'selected=""' : '') . ' title="3">Quận 3</option>
                 <option value="4" ' . ($selected == 4 ? 'selected=""' : '') . ' title="4">Quận 4</option>
                 <option value="5" ' . ($selected == 5 ? 'selected=""' : '') . ' title="5">Quận 5</option>
                 <option value="6" ' . ($selected == 6 ? 'selected=""' : '') . ' title="6">Quận 6</option>
                 <option value="7" ' . ($selected == 7 ? 'selected=""' : '') . ' title="7">Quận 7</option>
                 <option value="8" ' . ($selected == 8 ? 'selected=""' : '') . ' title="8">Quận 8</option>
-                <option value="9" ' . ($selected == 9 ? 'selected=""' : '') . ' title="9">Quận 9</option>
+                
                 <option value="10" ' . ($selected == 10 ? 'selected=""' : '') . ' title="10">Quận 10</option>
                 <option value="11" ' . ($selected == 11 ? 'selected=""' : '') . ' title="11">Quận 11</option>
                 <option value="12" ' . ($selected == 12 ? 'selected=""' : '') . ' title="11">Quận 12</option>
@@ -532,10 +535,11 @@ function html_select_district($class = 'required', $empty_text = "Chọn", $extr
                 <option value="Phú Nhuận" ' . ($selected == 'Phú Nhuận' ? 'selected=""' : '') . ' title="Phu Nhuan">Quận Phú Nhuận</option>
                 <option value="Tân Bình" ' . ($selected == 'Tân Bình' ? 'selected=""' : '') . ' title="Tan Binh">Quận Tân Bình</option>
                 <option value="Tân Phú" ' . ($selected == 'Tân Phú' ? 'selected=""' : '') . ' title="Tan Phu">Quận Tân Phú</option>
-                <option value="Thủ Đức" ' . ($selected == 'Thủ Đức' ? 'selected=""' : '') . ' title="Thu Duc">Quận Thủ Đức</option>
+
                 <option value="Nhà Bè" ' . ($selected == 'Nhà Bè' ? 'selected=""' : '') . ' title="Nha Be">Huyện Nhà Bè</option>
             </select>';
-    } else {
+    } 
+    else {
         $id = 'id="district"';
         if (strstr($extra, ' id="'))
             $id = '';
@@ -544,15 +548,17 @@ function html_select_district($class = 'required', $empty_text = "Chọn", $extr
             $name = '';
         $html = '<select class="' . $class . '" ' . $extra . ' ' . $id . ' ' . $name . ' >
                 <option value="">' . $empty_text . '</option>
+                <option value="Thành phố Thủ Đức" title="Thanh pho Thu Duc">{{__(\'Thành phố Thủ Đức\')}} </option>
+
                 <option value="1" title="1">{{__(\'Quận\')}} 1</option>
-                <option value="2" title="2">{{__(\'Quận\')}} 2</option>
+                
                 <option value="3" title="3">{{__(\'Quận\')}} 3</option>
                 <option value="4" title="4">{{__(\'Quận\')}} 4</option>
                 <option value="5" title="5">{{__(\'Quận\')}} 5</option>
                 <option value="6" title="6">{{__(\'Quận\')}} 6</option>
                 <option value="7" title="7">{{__(\'Quận\')}} 7</option>
                 <option value="8" title="8">{{__(\'Quận\')}} 8</option>
-                <option value="8" title="9">{{__(\'Quận\')}} 9</option>
+
                 <option value="10" title="10">{{__(\'Quận\')}} 10</option>
                 <option value="11" title="11">{{__(\'Quận\')}} 11</option>
                 <option value="12" title="12">{{__(\'Quận\')}} 11</option>
@@ -564,11 +570,11 @@ function html_select_district($class = 'required', $empty_text = "Chọn", $extr
                 <option value="Phú Nhuận" title="Phu Nhuan">{{__(\'Quận Phú Nhuận\')}}</option>
                 <option value="Tân Bình" title="Tan Binh">{{__(\'Quận Tân Bình\')}}</option>
                 <option value="Tân Phú" title="Tan Phu">{{__(\'Quận Tân Phú\')}}</option>
-                <option value="Thủ Đức" title="Thu Duc">{{__(\'Quận Thủ Đức\')}}</option>
+
                 <option value="Nhà Bè" title="Nha Be">{{__(\'Huyện Nhà Bè\')}}</option>
             </select>';
     }
-    return $html;
+    return $html; 
 }
 
 function html_select_day($attribute, $empty_label = null, $selected = '')
@@ -672,7 +678,7 @@ function html_select_optgroup($source_array, $value_field, $label_field, $opt_fi
     return $html;
 }
 
-function remove_unicode($str)
+ function remove_unicode($str)
 {
     $str = preg_replace("/(à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ)/", 'a', $str);
     $str = preg_replace("/(è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ)/", 'e', $str);
