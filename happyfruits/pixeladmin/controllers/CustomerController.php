@@ -30,7 +30,6 @@ class CustomerController extends BaseController
             $customers = null;
         }
         $products = $this->Products->get_list(array('products.is_additional' => "0"), -1);
-        var_dump($filter_array);
         $this->_merge_data(compact("js", "page_title", "customers", "filter_keyword", "filter_array", "products"));
         $this->load_page('customer/index');
     }
@@ -188,10 +187,10 @@ class CustomerController extends BaseController
     function Logout_Customer(){
         if(isset($_SESSION['user_account'])){
             unset($_SESSION['user_account']);
-            header('location:/vi');
+            header('location: vi/dang-nhap');
         }
         else
-            header('location: vi/dang-nhap');
+            header('location: /vi');
             // header('location:' . frontend_url() . ''); tương đương //header('location: vi/dang-nhap');
     }
     //hàm sửa thông tin tài khoản người dùng

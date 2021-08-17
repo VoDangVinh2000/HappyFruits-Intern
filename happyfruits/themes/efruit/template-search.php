@@ -24,6 +24,5 @@
              </div>
          </div>
      </div>
-     <?php $this->load_partial('search') ?>
-
+     <?php $this->load_partial('search.php') ?>
      <?php $this->load_theme_file('page-footer.php') ?>

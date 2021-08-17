@@ -7,15 +7,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let form_forgot = document.querySelector('.form-forgot');
     let form_login = document.querySelector('.form-account');
     let a_cancelFormForgot = document.querySelectorAll('#cancelFormForgot');
-
+    const btnShowPass = document.querySelector('#btnShowPass');
+    const password = document.querySelector('#password');
+    
     if (a_editProfile) {
         a_editProfile.forEach(element => {
-            element.addEventListener('click', function() {
-            if (form_edit_profile.style.display == "none") {
-                form_edit_profile.style.display = "block";
-            } else {
-                form_edit_profile.style.display = "none";
-            }
+            element.addEventListener('click', function () {
+                if (form_edit_profile.style.display == "none") {
+                    form_edit_profile.style.display = "block";
+                } else {
+                    form_edit_profile.style.display = "none";
+                }
             });
         });
     } else {
@@ -34,27 +36,41 @@ window.addEventListener('DOMContentLoaded', (event) => {
         //event click for link a of form-login "forgot your password"
         if (a_forgot) {
             a_forgot.forEach(element => {
-               element.addEventListener('click', function() {
-                form_login.style.display = "none";
-                form_forgot.style.display = "block";
+                element.addEventListener('click', function () {
+                    form_login.style.display = "none";
+                    form_forgot.style.display = "block";
                 });
             });
-            
+
         } else {
 
         }
         if (a_cancelFormForgot) {
             a_cancelFormForgot.forEach(element => {
-                 element.addEventListener('click', function() {
-                form_login.style.display = "block";
-                form_forgot.style.display = "none";
+                element.addEventListener('click', function () {
+                    form_login.style.display = "block";
+                    form_forgot.style.display = "none";
                 });
             });
-           
+
         } else {
 
         }
-        $(document).ready(function() {
+
+        if (btnShowPass) {
+            btnShowPass.addEventListener("click", () => {
+                if (password.type === "password") {
+                    password.type = "text";
+                } else {
+                    password.type = "password";
+                }
+            });
+        }
+        else {
+        }
+
+
+        $(document).ready(function () {
             $('input[name=username]').css('border-bottom', '1px solid black');
         });
 
@@ -77,10 +93,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if (arr[key] == "error_email") {
                     setCookie(arr[key], '', 0);
                 }
-                if(arr[key] == "error_username_password"){
+                if (arr[key] == "error_username_password") {
                     setCookie(arr[key], '', 0);
                 }
-                  if(arr[key] == "error_acount_does_not_exist"){
+                if (arr[key] == "error_acount_does_not_exist") {
                     setCookie(arr[key], '', 0);
                 }
             }
@@ -88,24 +104,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     });
 });
 
-window.addEventListener('DOMContentLoaded', (event) => {
-    const btnShowPass = document.querySelector('#btnShowPass');
-    const password = document.querySelector('#password');
 
-    if(btnShowPass){
-        btnShowPass.addEventListener("click", () => {
-        if (password.type === "password") {
-            password.type = "text";
-        } else {
-            password.type = "password";
-        }
-    });
-    }
-    else{
-
-    }
-   
-});
 
 function setCookie(cname, cvalue, exMins) {
     var d = new Date();
@@ -114,9 +113,6 @@ function setCookie(cname, cvalue, exMins) {
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-function searchProduct() {
-    console.log('ok');
-}
 
 //cancel form edit profile
 function cancelProfile() {
@@ -125,7 +121,7 @@ function cancelProfile() {
 }
 
 //owl-carousel home page, trai cay dac san viet category
-$(document).ready(function() {
+$(document).ready(function () {
     $('.owl-carousel').owlCarousel({
         autoplay: true,
         autoplayhoverpause: true,

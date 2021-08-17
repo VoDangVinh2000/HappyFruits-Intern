@@ -70,6 +70,7 @@ RewriteRule ^quan-ly-gia/?$ /pixeladmin/index.php?controller=price
 RewriteRule ^don-hang/?$ /pixeladmin/index.php?controller=order
 RewriteRule ^don-hang/tim/(.*)?$ /pixeladmin/index.php?controller=order&action=find&keyword=$1
 
+
 RewriteRule ^thong-ke/?$ /pixeladmin/index.php?controller=statistics
 RewriteRule ^thong-ke/bieu-do/?$ /pixeladmin/index.php?controller=statistics&action=chart&%{QUERY_STRING}
 

@@ -242,7 +242,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             </a>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 product-item item-center">
                         <div class="top-img"><img src="<?= $array['image']  ?>" alt="test">
                         </div>
                     </div>

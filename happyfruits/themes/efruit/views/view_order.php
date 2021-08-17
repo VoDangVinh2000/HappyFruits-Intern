@@ -5,7 +5,9 @@
             <?php $this->load_partial('hero-image') ?>
             <div class="content-container">
                 <div class="content-body" style="background: #fff;max-width: 980px;margin: 20px auto; padding: 20px;">
-                    <?php if(!empty($order)):?>
+                    <?php if(!empty($order)):
+                        ?>
+
                     <div class="row">
                         <div class="col-md-10 col-xs-12 col-md-offset-1">
                             <h1 class="text-center">

@@ -328,6 +328,7 @@ class Users extends BaseUsers
                     case 'components':
                         return self::is_admin($user_id);
                         break;
+                  
                 }
                 break;
             case 'price':
