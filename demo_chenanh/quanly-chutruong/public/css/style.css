@@ -1,0 +1,226 @@
+*{
+    font-family: sans-serif;
+}
+.header{
+    background-color: #2A3F54;
+    color: #ECF0F1;
+}
+.header p{
+    padding-left: 20px;
+    font-size: 25px;
+    font-weight: 900;
+
+}
+/*css li a*/
+.inside-main-search-right{
+    text-align: center;
+}
+.inside-main-search-right  a{
+    text-decoration: none;
+    padding: 0 5px;
+    transition: 1s;
+}
+.inside-main-search-right  li{
+    list-style: none;
+    display: inline-block;
+}
+.inside-main-search-right li:hover a{
+    background-color: dodgerblue;
+    border-radius: 5px;
+    color: white;
+}
+.showAllProduct{
+    text-align: center;
+}
+.showAllProduct  a{
+    text-decoration: none;
+    padding: 0 5px;
+    transition: 1s;
+}
+.showAllProduct  li{
+    list-style: none;
+    display: inline-block;
+}
+.showAllProduct li:hover a{
+    background-color: dodgerblue;
+    border-radius: 5px;
+    color: white;
+}
+/*css sidebar*/
+
+.side-bar .fa-user-circle-o{
+    font-size: 100px;
+    color: white;
+}
+.side-bar{
+    background-color: #2A3F54;
+    height: 100%;
+}
+.side-bar ul{
+    width: 100%;
+    padding-left: 0;
+}
+.side-bar li{
+    list-style: none;
+    width: 100%;
+}
+.side-bar a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: #ECF0F1;
+    padding: 13px 15px 7px;
+    position: relative;
+    line-height: 40px;
+}
+.side-bar h3{
+    color: white;
+}
+.side-bar li:hover a{
+    background-color: dodgerblue;
+}
+/*css drop-down*/ 
+
+/*css main-right*/
+.main-right{
+    background-color: #dfe6e9;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.header-main-right{
+    /* padding-bottom: 40px; */
+    border-bottom: 1px solid darkgray;
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 5px;
+}
+.header-main-right button{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+.header-main-right .control-themGiayDep{
+    padding: 5px;
+
+}
+.control-controlGiayDep{
+    padding: 5px;
+}
+.header-main-right .control-suaGiayDep{
+    padding: 5px;
+}
+.header-main-right .control-xoaGiayDep{
+    padding: 5px;
+}
+.header-main-right .control-xemThanhPhanKhac{
+
+    padding: 5px;
+}
+.header-main-right .control-timKiemGiayDep{
+    display: flex;
+    padding-top: 5px;
+}
+.header-main-right .control-timKiemGiayDep .fa-search{
+    font-size: 25px;
+    background: dodgerblue;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+}
+/*css main-right-content-giaydep*/
+.main-right-content-giayDep{
+    /* justify-content: center;
+    align-items: center;
+    align-content: center; */
+    width: 100%;
+    position: relative;
+}
+.inside-content-giayDep{
+    /* overflow: hidden; */
+    width: 100%;
+    /* position: relative; */
+}
+.col-label{
+    display: flex;
+}
+.form-themTenLoai{
+    display: none;
+    width: 100%;
+}
+.form-themTrangThai{
+    display: none;
+    width: 100%;
+}
+.form-themGiayDep{
+
+    display: none;
+    width: 100%;
+}
+.showAllProduct{
+    /* position: absolute; */
+    display: block;
+    width: 100%;
+}
+.form-themGiayDep form{
+    overflow: hidden;
+    border: 1px solid white;
+    padding: 6px;
+    box-shadow: 2px 7px 7px white;
+    box-sizing: border-box;
+    background: #ffffff;
+    background-position: center;
+    border-radius: 25px;
+}
+.form-themGiayDep label{
+    display: block;
+  
+}
+/*css menu-danhsach*/
+
+.btn-hover{
+    position: relative;
+}
+.control-xemThanhPhanKhac:hover ul{
+    display: block;
+}
+ul .menu-xem-danh-sach{
+    position: absolute;
+    z-index: 100;
+    height: auto;
+    max-width: 205px;
+    border-radius: 5px;
+    width: 205px;
+    padding: 5px 0;
+}
+.control-xemThanhPhanKhac ul{
+    margin-bottom: 0;
+    padding-left: 0;
+    display: none;
+}
+/*css form-showAllTrangThai*/
+.form-showAllTrangThai{
+    display: none;
+    width: 100%;
+}
+/*css form-showAllLoai*/
+.form-showAllLoai{
+   display: none;
+    width: 100%;
+}
+/*css form-AnhNoiBat*/
+.form-AnhNoiBat{
+    display: none;
+    width: 100%;
+}
+.form-themAnhNoiBat{
+    display: none;
+    width: 100%;
+}
+/*css footer*/
+footer{
+    background-color: darkgray;
+    text-align: center;
+    line-height: 45px;
+}
