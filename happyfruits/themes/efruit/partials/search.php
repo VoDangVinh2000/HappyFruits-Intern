@@ -51,12 +51,11 @@
                             </div>
                             <div class="row mt-2">
                                 <div class="col-md-12 col-lg-8 col-8 product-name">
-                                    <a class=" efruit-vi" href="/vi/search/<?php echo $value['product_id'] ?>"><?= $value['name'] ?></a>
-                                    <a class=" efruit-en" href="/vi/search/<?php echo $value['product_id'] ?>"><?= $value['english_name'] ?></a>
+                                    <a class=" efruit-vi" href="/vi/detail/<?php echo $value['product_id'] ."/" . url_slug($value['name'])  ?>"><?= $value['name'] ?></a>
+                                    <a class=" efruit-en" href="/vi/detail/<?php echo $value['product_id'] ."/" . url_slug($value['name']) ?>"><?= $value['english_name'] ?></a>
                                 </div>
                                 <div class="col-md-12 col-lg-4 col-4">
                                     <div class="product-price">
-                                        
                                         <span class="price"><?= number_format($value['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                     </div>
                                 </div>

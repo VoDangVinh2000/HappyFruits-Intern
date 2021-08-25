@@ -85,7 +85,7 @@
                                 <div class="col">
                                     <div class="email-profile">
                                         <h4 class="h6" style="font-weight: 400;">Email</h4>
-                                        <input type="email" pattern="^[a-z0-9][a-z0-9_\.]{3,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" 
+                                        <input type="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9_\.]{3,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" 
                                         name="email" autocapitalize="words" required
                                         value="<?php if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['email'];?>">
                                         <div class="error">
