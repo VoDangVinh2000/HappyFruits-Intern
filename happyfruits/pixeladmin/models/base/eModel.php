@@ -10,9 +10,20 @@
  *
  */
 
+
+
 /**
  * Class declaration
+ * 
  */
+ 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require_once EFRUIT_ABSOLUTE_PATH .'/PHPMailer/PHPMailer.php';
+require_once EFRUIT_ABSOLUTE_PATH .'/PHPMailer/Exception.php';
+require_once EFRUIT_ABSOLUTE_PATH .'/PHPMailer/OAuth.php';
+require_once EFRUIT_ABSOLUTE_PATH .'/PHPMailer/POP3.php';
+require_once EFRUIT_ABSOLUTE_PATH .'/PHPMailer/SMTP.php';
 class eModel
 {
     var $dbh; // Instance of PDO handler    
@@ -69,6 +80,38 @@ class eModel
             return $dbh->lastInsertId();
         else
             return false;
+    }
+
+    static function send($content, $nTo, $mTo)
+    {
+        $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
+        try {
+            //Server settings
+            $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+            $mail->isSMTP();                                      // Set mail sử dụng SMTP
+            $mail->Mailer = 'smtp';
+            $mail->Host = 'smtp.gmail.com';  // Chỉ định máy chủ SMTP chính và dự phòng
+            $mail->SMTPAuth = true;                               // Kích hoạt xác thực SMTP
+            $mail->Username = 'cua2k5zubai@gmail.com';                 // SMTP username
+            $mail->Password = 'Thuongdaklak021001';                           // SMTP password
+            $mail->SMTPSecure = 'ssl';                            // Kích hoạt mã TLS, `ssl` also accepted
+            $mail->Port = 465;                                 // Cổng TCP để kết nối với
+
+            //Recipients
+            $mail->setFrom('cua2k5zubai@gmail.com', 'Happy Fruits');
+            $mail->addAddress($mTo, $nTo);     // Add a recipient
+            //Content
+            $mail->isHTML(true);                                  // Set email format to HTML
+            $mail->Subject =  "Forgot password";
+            $mail->Body    = $content;
+            $mail->AltBody = '';
+
+            $mail->send();
+            return true;
+        } catch (Exception $e) {
+            
+            echo 'Message could not be sent. Mailer Error: ', $mail->ErrorInfo;
+        }
     }
 
     static function _update($table_name, $where_params = array(), $set_params = array())

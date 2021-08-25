@@ -94,5 +94,7 @@ class Customers extends BaseCustomers
 	    $customer_id = $this->insert($data);
 	    return $customer_id?$customer_id:null;
     }
+
+    
 }
 /* End of generated class */
