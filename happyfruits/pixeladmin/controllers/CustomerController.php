@@ -265,7 +265,7 @@ class CustomerController extends BaseController
         }
 
         // Kiểm tra nếu thực hiện thao tác cập nhật quyền của người dùng
-        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submitForgot'])) {
 
             $errors = '';
             $email = '';
@@ -274,9 +274,15 @@ class CustomerController extends BaseController
             setcookie("error_email", $error_email, 0, "/");
             setcookie("send_mail_success", $send_mail_success, 0, "/");
             // kiem tra email co ton tai va dung dinh dang
-            if (isset($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            // if (isset($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            //     $email = $_POST['email'];
+            // } else {
+            //     $errors = "email";
+            // }
+            if(isset($_POST['email']) && is_email_exists($_POST['email'])){
                 $email = $_POST['email'];
-            } else {
+            }
+            else{
                 $errors = "email";
             }
             if (empty($_POST['email'])) {
@@ -294,7 +300,7 @@ class CustomerController extends BaseController
             }
             if (empty($errors) && !empty($email)) {
                 $conn = open_database();
-                $sql = "SELECT  `customer_id`, `customer_name`, `username`, `email` FROM `customers` WHERE email = '" . $email . "'";
+                $sql = "SELECT  `customer_id`, `customer_name`, `username`, `email` FROM `customers` WHERE BINARY(email) = '" . $email . "'";
                 $result = $conn->query($sql);
                 $account = mysqli_fetch_assoc($result);
 
@@ -313,15 +319,15 @@ class CustomerController extends BaseController
                 $sendMail = Customers::send($content, $account['customer_name'], $account['email']);
                 if ($sendMail) {
                     $password = md5($randPassword);
-                    $sqlUpdate = "UPDATE `customers` SET `password`= '" . $password . "' WHERE `customer_id` = " . $account['customer_id'];
+                    $sqlUpdate = "UPDATE `customers` SET `password`= '" . $password . "' WHERE `customer_id` = '" . $account['customer_id'] . "' ";
                     $conn->query($sqlUpdate);
                     $send_mail_success = 'We have sent a new password to your email. Please check it';
                     setcookie("send_mail_success", $send_mail_success, time() + 600, "/");
-                    header('Location: vi/dang-nhap');
+                    header('Location: /vi/dang-nhap');
                 } else {
                     $error_email = 'An error has occurred unable to retrieve the password';
                     setcookie("error_email", $error_email, time() + 600, "/");
-                    header('Location: vi/dang-nhap');
+                    header('Location: /vi/dang-nhap');
                     exit();
                 }
             }

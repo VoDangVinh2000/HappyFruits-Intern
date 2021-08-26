@@ -85,6 +85,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if (arr[key] == "error_acount_does_not_exist") {
                     setCookie(arr[key], '', 0);
                 }
+                if(arr[key] == "error_email"){
+                    setCookie(arr[key], '', 0);
+                }
+                if(arr[key] == "send_mail_success"){
+                    setCookie(arr[key], '', 0);
+                }
             }
         };
     });

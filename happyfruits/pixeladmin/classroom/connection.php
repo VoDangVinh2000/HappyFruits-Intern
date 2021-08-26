@@ -17,7 +17,7 @@ function open_database() {
 }
 
 function is_email_exists($email){
-	$sql = 'select username from customers where email = ?';
+	$sql = 'SELECT email from customers WHERE BINARY(email) = ?';
 	$conn = open_database();
 
 	$stm = $conn->prepare($sql);
