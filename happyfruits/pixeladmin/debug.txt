@@ -1570,3 +1570,150 @@ Body:
  
 
 
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: orders@localhost 
+Subject:Đơn hàng mới - e0109-080004 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Chào bạn,</p>
+    <p>Có khách hàng vừa đặt hàng trên hệ thống trực tuyến của HappyFruits với thông tin sau:</p>
+        <p><b style="font-size: 20px;">Thông tin giao hàng</b><br/>
+        Tên người nhận: Đăng Vĩnh<br/>
+        Địa chỉ: 53 Võ Văn Ngân, Linh Chiểu, Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam, Quận Thủ Đức (14.80km)<br />
+        Số điện thoại: 0375507120<br />
+            </p>
+            <p><b style="font-size: 20px;">Thông tin đơn hàng - e0109-080004</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Nhóm hàng</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Tên món</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">SL</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Giá</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Thành tiền</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Hoa Trái Cây</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>FC2 - Hoa trái cây cắt size 2</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Chiết khấu</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Phí giao hàng</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">40.000<sup>đ</sup></td>
+            </tr>
+                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng cộng</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">540.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+            <p><b style="font-size: 20px;">Thanh toán khi nhận hàng.</b></p>
+        <p>Bạn có thể xem lại và in đơn hàng tại <a href="http://www.localhost/in/e0109-080004">đây</a> hoặc sửa lại đơn hàng tại <a href="http://www.localhost/sua/e0109-080004">đây</a>.</p>
+    <p>Thời gian gửi: 21/08/2021 13:55:27</p>
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits Việt Nam</span><br />
+        <b>Địa chỉ:</b> 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP HCM<br />
+        <b>Số điện thoại:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: 01686228222vinh@gmail.com 
+Subject:HappyFruits - Your order - e0109-080004 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Dear Sir/Madam,</p>
+    <p>Thanks for your order, you can edit the order via this <a href="http://www.localhost/vi/sua-don-hang/e0109-080004">link</a> (or <a href="http://www.localhost/sua/e0109-080004">this link</a>).</p>
+        <p><b style="font-size: 20px;">Shipping details</b><br/>
+                Receiver: Đăng Vĩnh<br/>
+        Address: 53 Võ Văn Ngân, Linh Chiểu, Thủ Đức, Thành phố Hồ Chí Minh, Việt Nam, District Thủ Đức (14.80km)<br />
+        Phone number: 0375507120<br />
+        Email: 01686228222vinh@gmail.com    </p>
+            <p><b style="font-size: 20px;">Order details - e0109-080004</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Category</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Name</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Qty</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Price</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Total amount</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Fruit Bouquets</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>FC2 - Fruit cut flower size 2</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Subtotal</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Discount</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Shipping fee</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">40.000<sup>đ</sup></td>
+            </tr>
+                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Total</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">540.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+        <p>Thank you for ordering with us.</p>
+    <br />
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits VietNam</span><br />
+        <b>Address:</b> 388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city<br />
+        <b>Phone:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+

@@ -83,7 +83,7 @@
                             </div>
                             <div class="div-action-button">
                                 <div class="input-submit-account">
-                                    <input type="submit" value="Submit">
+                                    <input type="submit" value="Submit" name="submitForgot">
                                     <a class="efruit-vi" href="#recover" id="cancelFormForgot">Hủy</a>
                                     <a class="efruit-en" href="#recover" id="cancelFormForgot">Cancel</a>
                                 </div>

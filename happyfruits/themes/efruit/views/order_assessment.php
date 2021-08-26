@@ -3,11 +3,7 @@
     <div class="y-grid">
         <div class="y-results" id="y-results">
             <?php $this->load_partial('hero-image') ?>
-<<<<<<< HEAD
-            <!-- <?//php $this->load_partial('category-list') ?> -->
-=======
             <!-- </?php $this->load_partial('category-list') ?> -->
->>>>>>> 6db262671c647aacd52816be66f381eccdaa39d8
             <div class="content-container">
                 <div class="content-body" style="background: #fff;max-width: 980px;margin: 20px auto; padding: 20px;">
                     <?php if(!empty($order)):?>
