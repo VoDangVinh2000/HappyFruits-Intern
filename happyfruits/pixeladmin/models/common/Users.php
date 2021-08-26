@@ -228,6 +228,9 @@ class Users extends BaseUsers
                     case 'Edit_Info_Account_Customer':
                         return 1;
                     break;
+                    case 'Forgot_Pass':
+                        return 1;
+                    break;
                     
                 }
                 break;

@@ -12,12 +12,26 @@
                             <p class="efruit-en">Please login using account detail bellow.</p>
                         </div>
 
+                        <div class="error notification-error">
+                            <?php
+                            if (isset($_COOKIE['error_email'])) {
+                                echo $_COOKIE['error_email'] . "</br>";
+                            }
+
+                            ?>
+                        </div>
+                        <div class="notification-success">
+                            <?php
+                            if (isset($_COOKIE['send_mail_success'])) {
+                                echo $_COOKIE['send_mail_success'] . "</br>";
+                            }
+                            ?>
+                        </div>
+
                         <!--Form action-login-->
                         <form action="/loginCustomer" method="post">
                             <div class="main-create-account-fillout">
-                                
-
-                                <input type="text" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
+                                <input type="text" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
                                 <!-- <p class="efruit-en">Username must have minimum length is 6, no special characters</p>
                                 <p class="efruit-vi">Tên đăng nhập có ít nhất 6 kí tự, không chứa kí tự đặc biệt.</p> -->
 
@@ -43,11 +57,13 @@
                                 </div>
                             </div>
                         </form>
+
                         <div class="end-form-createaccount">
                             <a class="efruit-vi" href="/vi/dang-ky">Tạo tài khoản</a>
                             <a class="efruit-en" href="/vi/dang-ky">Create Account</a>
                         </div>
                     </div>
+
                     <br><br>
                     <!--Forgot pasword-->
                     <div class="form-forgot">
@@ -57,9 +73,10 @@
                             <p class="efruit-vi">Chúng tôi sẽ gửi cho bạn một email để đặt lại mật khẩu của bạn.</p>
                             <p class="efruit-en">We will send you an email to reset your password.</p>
                         </div>
-                        <form action="" method="post">
+                        <form action="/forgot-pass" method="post">
                             <div class="main-create-account-fillout">
-                                <input type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
+                                <input type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email">
+
                             </div>
                             <div class="div-action-button">
                                 <div class="input-submit-account">

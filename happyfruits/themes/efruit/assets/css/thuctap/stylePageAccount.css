@@ -410,6 +410,17 @@ h6 {
     padding: 7px 0;
 }
 
+/* notification forgot password  */
+.notification-success {
+    color: #58b720;
+    font-size: 18px;
+    margin: 0 30px;
+}
+.notification-error {
+    font-size: 18px;
+    margin: 0 30px;
+}
+
 /*css reponsive*/
 
 

@@ -67,6 +67,8 @@ RewriteRule ^loginCustomer/?$ /pixeladmin/index.php?controller=customer&action=L
 RewriteRule ^logoutCustomer/?$ /pixeladmin/index.php?controller=customer&action=Logout_Customer
 
 RewriteRule ^edit-info-account-customer/?$ /pixeladmin/index.php?controller=customer&action=Edit_Info_Account_Customer
+RewriteRule ^forgot-pass/?$ /pixeladmin/index.php?controller=customer&action=Forgot_Pass
+
 
 
     Redirect /index.php /vi/
