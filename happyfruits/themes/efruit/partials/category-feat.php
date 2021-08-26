@@ -22,11 +22,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
-                                <!-- <a class="btn-shop" href="<?= $array['href'] ?>">
-                                    <div class="button-content-wrapper">
-                                        <span class="button-text">SHOP NOW</span>
-                                    </div>
-                                </a> -->
                                 <a class="btn-shop" href="/vi/fruit-baskets">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>
@@ -193,11 +188,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
-                                <!-- <a class="btn-shop" href="<?= $array['href'] ?>">
-                                    <div class="button-content-wrapper">
-                                        <span class="button-text">SHOP NOW</span>
-                                    </div>
-                                </a> -->
                                 <a class="btn-shop" href="/vi/hamper-box-fruits">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>
@@ -229,12 +219,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <span class="efruit-en">
                                 <p><?= $content_2_en ?></p>
                             </span>
-                            <!-- <p class="efruit-en"></?= $en_content ?></p> -->
-                            <!-- <a class="btn-shop" href="</?= $array['href'] ?>">
-                                <div class="button-content-wrapper">
-                                    <span class="button-text">SHOP NOW</span>
-                                </div>
-                            </a> -->
                             <a class="btn-shop" href="/vi/fruit-bouquet">
                                 <div class="button-content-wrapper">
                                     <span class="button-text">SHOP NOW</span>
@@ -325,7 +309,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
         foreach ($tiles as $array) {
             if ($array['cat'] == 6) {
     ?>
-                <!-- <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3> -->
                 <h3 class="section-heading efruit-vi"><span><?= $array['text'] ?><span></h3>
                 <h3 class="section-heading efruit-en"><span><?= $array['en_text'] ?><span></h3>
     <?php }
@@ -359,7 +342,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 <div class="col-md-12 col-lg-4 col-4">
                                     <div class="product-price">
                                         <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
-                                        <!-- <span class="delete-price">2.050.000₫</span> -->
                                     </div>
                                 </div>
                             </div>
@@ -386,7 +368,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                     <div class="col-md-12 col-lg-4 col-4">
                         <div class="product-price">
                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
-                            <!-- <span class="delete-price">2.050.000₫</span> -->
                         </div>
                     </div>
                 </div>
@@ -408,7 +389,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
         foreach ($tiles as $array) {
             if ($array['cat'] == 12) {
     ?>
-                <!-- <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3> -->
                 <h3 class="section-heading efruit-vi"><span><?= $array['text'] ?><span></h3>
                 <h3 class="section-heading efruit-en"><span><?= $array['en_text'] ?><span></h3>
     <?php }
@@ -417,10 +397,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
     <div class="container-fluid">
         <div class="owl-carousel owl-theme">
             <?php
-            //$dem5 = 0;
             if (!empty($traiCayNhap)) {
                 foreach ($traiCayNhap as $array) {
-                    //$dem5++;
                     if ($array['image'] == "") {
             ?>
                         <div class="ms-2 me-2">
@@ -444,7 +422,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
-                                            <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
@@ -471,7 +448,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
-                                            <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
@@ -492,7 +468,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
         foreach ($tiles as $array) {
             if ($array['cat'] == 7) {
     ?>
-                <!-- <h3 class="section-heading "><span>Trái cây đặc sản Việt</span></h3> -->
                 <h3 class="section-heading efruit-vi"><span><?= $array['text'] ?><span></h3>
                 <h3 class="section-heading efruit-en"><span><?= $array['en_text'] ?><span></h3>
     <?php }
@@ -501,12 +476,9 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
     <div class="container-fluid">
         <div class="owl-carousel owl-theme">
             <?php
-            //$dem5 = 0;
             if (!empty($sanPhamKhac)) {
                 foreach ($sanPhamKhac as $array) {
-                    //$dem4++;
                     if ($array['image'] == null) {
-
             ?>
                         <div class="ms-2 me-2">
                             <div class="product-item">
@@ -528,7 +500,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
-                                            <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>
@@ -555,7 +526,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <div class="col-md-12 col-lg-4 col-4">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
-                                            <!-- <span class="delete-price">2.050.000₫</span> -->
                                         </div>
                                     </div>
                                 </div>

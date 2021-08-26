@@ -57,7 +57,6 @@
                             <div class="col-sm-6 text-right-sm"><button ng-click="nextStep()" class="btn wizard-next-step-btn"><span bind-translate="Nhập thông tin giao hàng">Nhập thông tin giao hàng</span> <i class="fa fa-angle-right"></i></button></div>
                         </div>
                     </div>
-
                     <div class="container">
                         <div class="cart-total">
                             <h3 class="efruit-vi">Tổng tiền giỏ hàng</h3>
@@ -79,17 +78,13 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <!-- <div class="col-sm-6 text-right-sm"><button ng-click="nextStep()" class="btn btn-success wizard-next-step-btn"><span bind-translate="Nhập thông tin giao hàng">Nhập thông tin giao hàng</span> <i class="fa fa-angle-right"></i></button></div> -->
                             <div class="cart-dir mt-5">
                                 <a style="background-color: #72a499" class="col-sm-6 text-right-sm mybtn  btn-payment efruit-vi" href="/vi">Tiếp tục mua sắm</a>
                                 <a style="background-color: #72a499" class="col-sm-6 text-right-sm mybtn btn-payment btn-outline-hover-dark efruit-en" href="/vi">Continue Shopping</a>
                             </div>
-
                         </div>
-
                     </div>
                 </div>
-
                 <div id="step2" ng-show="step == 2">
                     <form style="margin-bottom: 10px;" method="post" id="frmOrder" name="frmOrder">
                         <div class="col-lg-12 col-md-12 no-padding" id="distance_calculator">
@@ -125,19 +120,16 @@
                                             <div class="col-sm-12 col-md-10">
                                                 <div class="input-group">
                                                     <input placeholder="{{__('Họ và tên')}}" type="text" class="form-control" ng-model="customer.booker_fullname" name="fullname" required="required" />
-                                                    <!-- <i class="fa fa-user"></i> -->
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-10">
                                                 <div class="input-group">
                                                     <input placeholder="{{__('SĐT')}}" type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
-                                                    <!-- <i class="fa fa-phone fa-rotate-90"></i> -->
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-10">
                                                 <div class="input-group">
                                                     <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
-                                                    <!-- <i class="fa fa-envelope" style="font-size: 9px;"></i> -->
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-10">
@@ -162,25 +154,21 @@
                                         <div class="col-sm-12 col-md-10">
                                             <div class="input-group">
                                                 <input placeholder="{{__('Địa chỉ')}}" type="text" class="form-control mt10" id="customer_address" ng-model="customer.address" name="address" required="required" />
-                                                <!-- <i class="fa fa-map-marker"></i> -->
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-10 district-container hidden">
                                             <div class="input-group mt10">
                                                 <?= html_select_district('form-control', "-- {{__('Quận')}} *", 'ng-model="customer.district" j-change id="district_selector"', 1) ?>
-                                                <!-- <i class="fa fa-location-arrow"></i> -->
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-10">
                                             <div class="input-group">
                                                 <input placeholder="{{__('Họ và tên')}}" type="text" class="form-control mt10" ng-model="customer.fullname" name="fullname" required="required" />
-                                                <!-- <i class="fa fa-user"></i> -->
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-10">
                                             <div class="input-group">
                                                 <input placeholder="{{__('SĐT')}}" type="text" class="form-control mt10" only-number ng-model="customer.mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
-                                                <!-- <i class="fa fa-phone fa-rotate-90"></i> -->
                                             </div>
                                         </div>
                                         <?php if (!env('NEED_BOOKER_DETAILS')) : ?>
@@ -200,18 +188,17 @@
                                         <div class="clearfix"></div>
                                     </div>
                                 </div>
-
                             </div>
+
                             <input type="text" style="width: 0; height: 1px; visibility: hidden;" ng-model="customer.lat" id="customer_lat" value="" />
                             <input type="text" style="width: 0; height: 1px; visibility: hidden;" ng-model="customer.lng" id="customer_lng" value="" />
                             <input type="text" style="width: 0; height: 1px; visibility: hidden;" j-change ng-model="customer.distance" id="distance" value="" />
                             <input type="text" style="width: 0; height: 1px; visibility: hidden;" j-change ng-model="customer.district" id="district" value="" />
                             <input type="hidden" name="branch_id" id="branch_id" value="" />
+
                         </div>
                         <div class="col-lg-12 col-md-12 no-padding">
                             <div class="col-sm-12">
-
-
                                 <table class="table table-striped">
                                     <thead>
                                         <tr>
@@ -245,27 +232,6 @@
                                         </tr>
                                     </tbody>
                                 </table>
-
-                                <!-- <div class="order-list hidden-xs">
-                                    <div class="order-item" ng-repeat="orderItem in orderedItems">
-                                        <span class="order-item-number">{{orderItem.quantity}}</span>
-                                        <div class="order-item-info">
-                                            <div class="order-item-name">
-                                                <span class="txt-bold">{{orderItem.code}} - {{ settings.language=='en'?orderItem.english_name:orderItem.name }}&nbsp;</span>
-                                                <span ng-show="orderItem.total_selected_sub" class="note-toping">
-                                                    [<span ng-repeat="sp in orderItem.selected_sub_products">{{sp.name}}{{$last ? '' : ', '}}</span>]
-                                                </span>
-                                            </div>
-                                            <div ng-show="orderItem.custom.taste != 6 || orderItem.custom.description" class="order-item-note">
-                                                <span ng-show="orderItem.custom.taste != 6">{{__(tasteOptions[orderItem.custom.taste])}}.</span><span ng-show="orderItem.custom.description">&nbsp;{{orderItem.custom.description}}.</span>
-                                            </div>
-                                            <div ng-show="orderedBoxes[orderItem.product_id]" class="sub_product">
-                                                <span ng-repeat="(item_id, box_item) in orderedBoxes[orderItem.product_id]">{{box_item.quantity}}{{box_item.unit}} {{ settings.language=='en'?items[item_id].english_name:items[item_id].name }}{{$last ? '' : ', '}}</span>
-                                            </div>
-                                        </div>
-                                        <div class="order-item-price">{{ orderItem.final_price*orderItem.quantity*1000|efruit_money }}<sup>đ</sup></div>
-                                    </div>
-                                </div> -->
                                 <div class="row mt10 align-center" style="align-items: center;">
                                     <div class="col-md-3 fw-600 fs-6">
                                         <span bind-translate="Tổng cộng">Tổng cộng</span> <span class="txt-bold font16">{{ totalQuantity }}</span> <span bind-translate="phần">phần</span>
@@ -405,7 +371,6 @@
                         </script>
                     </div>
                 </div>
-
                 <div ng-hide="step < 3" class="m10">
                     <p>
                         <span bind-translate="Cảm ơn bạn đã đặt hàng">Cảm ơn bạn đã đặt hàng</span>.
@@ -417,8 +382,6 @@
                     <button class="btn btn-info" href="" ng-click="bookNewOrder()"><i class="fa fa-refresh"></i> <span bind-translate="Đặt hàng mới">Đặt hàng mới</span></button>&nbsp;
                     <button class="btn btn-success" href="" ng-click="step=1"><i class="fa fa-edit"></i> <span bind-translate="Sửa đơn hàng">Sửa đơn hàng</span></button>
                 </div>
-
-
             </div>
         </div>
     </div>

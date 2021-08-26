@@ -19,9 +19,6 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
                         $counter++;
                         $need_hide = !empty($showMore) && $counter > NUMBER_OF_ITEMS_PER_PAGE;
                 ?>
-                        <!-- <div class="product-item col-xs-6 col-sm-</?= intval(12 / $number_of_cols) ?> </?= $need_hide ? 'e-hide' : '' ?>" </?= $need_hide ? 'style="display:none;"' : '' ?>>
-                        </?php $this->load_partial('product-item-box', array('item' => $item)); ?>
-                    </div> -->
                         <div class="col-md-3 col-sm-3">
                             <?php $this->load_partial('product-item-box', array('item' => $item)); ?>
                         </div>
@@ -37,10 +34,6 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
                             $counter++;
                             $need_hide = !empty($showMore) && $counter > NUMBER_OF_ITEMS_PER_PAGE;
                         ?>
-                            <!-- <div class="product-item col-xs-6 col-sm-</?= intval(12 / $number_of_cols) ?> </?= $need_hide ? 'e-hide' : '' ?>" </?= $need_hide ? 'style="display:none;"' : '' ?>>
-                            </?php
-                            $this->load_partial('product-item-box', array('item' => $item, 'tag_id' => $tag_id));
-                            ?> -->
                             <div class="col-md-3 col-sm-3">
                                 <?php $this->load_partial('product-item-box', array('item' => $item)); ?>
                             </div>

@@ -80,8 +80,8 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- / .modal-content -->
-    </div> <!-- / .modal-dialog -->
+        </div>
+    </div> 
 </div>
 <div id="fruit-box-modal" class="modal fade product-modal" data-backdrop="static" tabindex="-1" role="dialog" style="display: none;">
     <div class="modal-dialog">
@@ -269,6 +269,6 @@
                     </div>
                 </div>
             </div>
-        </div> <!-- / .modal-content -->
-    </div> <!-- / .modal-dialog -->
+        </div> 
+    </div> 
 </div>

@@ -79,14 +79,7 @@ if (isset($product['sell_price'])) {
     <div class="row">
         <?php
         $counter = 0;
-        // $array_category = [
-        //     6 => "traiCayDacSanViet", 14 => "gioTraiCay", 15 => "hopTraiCay",
-        //     8 => "hoaTraiCay", 12 => "traiCayNhap", 7 => "sanPhamKhac", 24 => "gioTraiCayChucMung"
-        // ];
-        //Lấy ra được những sản phẩm liên quan
         if(!empty($relateProducts)){
-        // $category_of_page_detail = $array_category[$product['category_id']];
-        // if (!empty($category_of_page_detail)) :
             foreach ($relateProducts as $item) {
                 $counter++;
                 if ($counter >= 5) {
@@ -99,7 +92,6 @@ if (isset($product['sell_price'])) {
                     <?php
                     if ($item['image'] == "") {
                 ?>
-                        <!-- <//?php $this->load_partial('product-item-box', array('item' => $item)); ?> -->
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">

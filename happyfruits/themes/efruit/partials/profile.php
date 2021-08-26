@@ -159,18 +159,12 @@
                                     </div>
                                 </div>
                                 <div class="col">
-                                    <!-- <div class="company-tax-code-profile">
-                                        <h4 class="h6" style="font-weight: 400;">Khoảng cách</h4>
-                                        <input type="text" name="distance" autocapitalize="words" value="<?php //if(isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['distance'];?>">
-                                    </div> -->
                                 </div>
                             </div>
                             <div class="row row-form-edit">
                                 
                                 <div class="col-md">
-                                    <!-- <input type="submit" value="Submit"> -->
                                     <div class="submit-button">
-                            <!-- <input type="submit" value="Đăng ký" name="dang-ky" class="btnRegister efruit-vi"> -->
                                         <button name="register" class="efruit-en" type="submit">Submit</button>
                                         <button name="dang-ky" class="efruit-vi" type="submit">Gửi</button>
                                     </div>
@@ -184,18 +178,6 @@
                             </div>
                             
                         </form>
-                        <!-- <div class="row">
-                            <div class="col-md">
-                                <div class="cancel-profile">
-                                    <button type="button" onclick="cancelProfile()"  name="cancel-form-profile-edit">Cancel</button>
-                                </div>
-                            </div>
-                            <div class="col-md">
-                                <div class="submit-profile">
-                                    <button type="button" name="submit-form-profile-edit">Submit</button>
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
