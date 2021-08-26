@@ -9,7 +9,7 @@ class CustomerController extends BaseController
 {
     function __construct()
     {
-        $this->not_require_logged = array('register', 'Login_Customer', 'Logout_Customer', 'Edit_Info_Account_Customer', 'Forgot_Pass');
+        $this->not_require_logged = array('register', 'Login_Customer', 'Logout_Customer', 'Edit_Info_Account_Customer', 'Forgot_Pass', 'Change_Pass');
         parent::__construct();
         $this->load_model('Customers, Products');
     }
@@ -234,11 +234,10 @@ class CustomerController extends BaseController
                     $error_email = 'This email already exists. Please enter another email';
 
                 setcookie("error_email", $error_email, time() + 600, "/");
-                echo 'email đã tồn tại';
             }
             //nếu email hợp lệ thì cập nhật thông tin trên database
             else {
-                echo 'email hợp lệ';
+
                 //câu lệnh sql 
                 $sql = 'UPDATE customers SET `customer_name` = ' . "N'" . $fullName . "'" . ', `email` = ' . "'" . $email . "'" .
                     ', `mobile` = ' . "'" . $phoneNumber . "'" . ', `address` = ' . "N'" . $address . "'" . ', `building` = ' . "N'" . $building . "'" .
@@ -246,11 +245,10 @@ class CustomerController extends BaseController
                     ', `company_address` = ' . "N'" . $companyAddress . "'" . ', `district` = ' . "N'" . $district . "'" . ' WHERE `customer_id` = ' . $customer_id;
 
                 if (mysqli_query($connect, $sql)) {
-                    echo 'cap nhat thanh cong';
                 } else
-                    echo 'cap nhat khong thanh cong';
-                //cập nhật lại session thông tin tài khoản người dùng
-                $data = $customer->get_list_customer_username($_SESSION['user_account'][0]['username']);
+
+                    //cập nhật lại session thông tin tài khoản người dùng
+                    $data = $customer->get_list_customer_username($_SESSION['user_account'][0]['username']);
                 $_SESSION['user_account'] = $data;
             }
         }
@@ -328,6 +326,39 @@ class CustomerController extends BaseController
 
             setcookie("error_email", $error_email, 0, "/");
             setcookie("send_mail_success", $send_mail_success, 0, "/");
+        }
+    }
+
+    //đổi mật khẩu
+    function Change_Pass()
+    {
+
+        setcookie("error_username", "", 0, "/");
+        setcookie("error_password", "", 0, "/");
+
+        if (isset($_POST['username'])) {
+            $username = $_POST['username'];
+            $current_password = md5($_POST['current-password']);
+            $new_password = md5($_POST['new-password']);
+
+            $conn = open_database();
+            $sql = "SELECT  `password` FROM `customers` WHERE username = '" . $username . "'";
+            $result = $conn->query($sql);
+            $account = mysqli_fetch_assoc($result);
+
+            if (!empty($account)) {
+                if ($current_password === $account['password']) {
+                    $sqlUpdate = "UPDATE `customers` SET `password`= '" . $new_password . "' WHERE `username` = " . "'" . $username . "'";
+                    $conn->query($sqlUpdate);
+                    header('Location: vi/dang-nhap');
+                } else {
+                    setcookie("error_password", "Incorrect password ", time() + 600, "/");
+                    header('Location: vi/dang-nhap');
+                }
+            } else {
+                setcookie("error_username", "Username does not exist", time() + 600, "/");
+                header('Location: vi/dang-nhap');
+            }
         }
     }
 }

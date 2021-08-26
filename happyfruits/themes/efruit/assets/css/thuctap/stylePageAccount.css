@@ -212,6 +212,11 @@ h6 {
     margin-bottom: 70px; */
 }
 
+/* form change password  */
+.form-change-password {
+    display: none;
+}
+
 
 /*css my-account*/
 
