@@ -229,7 +229,7 @@ class CustomerController extends BaseController
             //Kiểm tra email người dùng nhập có trong database chưa, nếu tồn email đã tồn tại trên database thì báo lỗi
             if (isset($query_user_email[0]['email']) && $query_user_email[0]['email'] != $_SESSION['user_account'][0]['email']) {
                 if (isset($_POST['dang-ky'])) {
-                    $error_email = 'Email này có người sử dụng. Xin hãy chọn email khác';
+                    $error_email = 'Email này đã có người sử dụng. Xin hãy chọn email khác';
                 } else
                     $error_email = 'This email already exists. Please enter another email';
 
@@ -244,11 +244,11 @@ class CustomerController extends BaseController
                     ', `company_name` = ' . "N'" . $companyName . "'" . ', `company_tax_code` = ' . "'" . $companyTaxCode . "'" .
                     ', `company_address` = ' . "N'" . $companyAddress . "'" . ', `district` = ' . "N'" . $district . "'" . ' WHERE `customer_id` = ' . $customer_id;
 
-                if (mysqli_query($connect, $sql)) {
-                } else
+                if (mysqli_query($connect, $sql)) {}
+                else{}
 
-                    //cập nhật lại session thông tin tài khoản người dùng
-                    $data = $customer->get_list_customer_username($_SESSION['user_account'][0]['username']);
+                //cập nhật lại session thông tin tài khoản người dùng
+                $data = $customer->get_list_customer_username($_SESSION['user_account'][0]['username']);
                 $_SESSION['user_account'] = $data;
             }
         }
