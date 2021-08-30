@@ -231,6 +231,9 @@ class Users extends BaseUsers
                     case 'Forgot_Pass':
                         return 1;
                     break;
+                    case 'Change_Pass':
+                        return 1;
+                    break;
                     
                 }
                 break;

@@ -52,8 +52,11 @@
                             <div class="div-action-button">
                                 <div class="input-submit-account">
                                     <input type="submit" value="Sign In" name="login">
-                                    <a class="efruit-vi" href="#recover" id="forgotpassword">Quên mật khẩu?</a>
-                                    <a class="efruit-en" href="#recover" id="forgotpassword">Forgot your password?</a>
+                                    <a class="efruit-vi" href="#recover" id="forgotpassword">Quên mật khẩu ?</a>
+                                    <a class="efruit-en" href="#recover" id="forgotpassword">Forgot your password ?</a>
+                                    <br>
+                                    <a class="efruit-en" href="#recover" id="change-password">Change password</a>
+                                    <a class="efruit-vi" href="#recover" id="change-password">Đổi mật khẩu</a>
                                 </div>
                             </div>
                         </form>
@@ -87,6 +90,43 @@
                             </div>
                         </form>
                     </div>
+                    
+                    <!--change pasword-->
+                    <div class="form-change-password">
+                        <div class="header-create-account">
+                            <h2 class="efruit-vi">Đổi mật khẩu</h2>
+                            <h2 class="efruit-en">Change Password</h2>
+                        </div>
+                        <form action="/change-pass" method="post">
+                            <div class="main-create-account-fillout">
+
+                                <div class="error">
+                                    <?php
+                                    if (isset($_COOKIE['error_username'])) {
+                                        echo $_COOKIE['error_username'] . "</br>";
+                                    }
+                                    if (isset($_COOKIE['error_password'])) {
+                                        echo $_COOKIE['error_password'] . "</br>";
+                                    }
+                                    ?>
+                                </div>
+                                <input type="text"  class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
+                                <input type="text"  class="input-account" name="current-password" autocapitalize="words" placeholder="Current password" required>
+                                <!--  -->
+                                <input type="text" class="input-account" name="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" 
+                                title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8"
+                                autocapitalize="words" placeholder="New password"  required>                                
+
+                            </div>
+                            <div class="div-action-button">
+                                <div class="input-submit-account">
+                                    <input type="submit" value="Change password">
+                                    <a href="#recover" id="cancel-change-password">Cancel</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    
                 </div>
                 <!-- </div> -->
             </div>

@@ -7,7 +7,9 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let form_forgot = document.querySelector('.form-forgot');
     let form_login = document.querySelector('.form-account');
     let a_cancelFormForgot = document.querySelectorAll('#cancelFormForgot');
-
+    let form_change_password = document.querySelector('.form-change-password');
+    let btn_change_password = document.querySelectorAll('#change-password');
+    let btn_cancel_form_change_password = document.querySelectorAll('#cancel-change-password');
     
     if (a_editProfile) {
         a_editProfile.forEach(element => {
@@ -19,9 +21,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 }
             });
         });
-    } else {
-
-    }
+    } else {}
     //event for input of form-login
     allInputLogin.forEach(element => {
         element.addEventListener('focus', function() {
@@ -40,10 +40,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     form_forgot.style.display = "block";
                 });
             });
-
-        } else {
-
-        }
+        } else {}
         if (a_cancelFormForgot) {
             a_cancelFormForgot.forEach(element => {
                 element.addEventListener('click', function () {
@@ -51,10 +48,26 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     form_forgot.style.display = "none";
                 });
             });
+        } else {}
 
-        } else {
-
-        }
+        //display form change password
+        if (btn_change_password) {
+            btn_change_password.forEach(element => {
+                element.addEventListener('click', function () {
+                    form_login.style.display = "none";
+                    form_change_password.style.display = "block";
+                });
+            });
+        } else {}
+        //hide form change password
+        if (btn_cancel_form_change_password) {
+            btn_cancel_form_change_password.forEach(element => {
+                element.addEventListener('click', function () {
+                    form_login.style.display = "block";
+                    form_change_password.style.display = "none";
+                });
+            });
+        } else {}
 
         $(document).ready(function () {
             $('input[name=username]').css('border-bottom', '1px solid black');
