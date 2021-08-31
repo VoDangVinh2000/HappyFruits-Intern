@@ -14,19 +14,28 @@
 
                         <div class="error notification-error">
                             <?php
-                            if (isset($_COOKIE['error_email'])) {
-                                echo $_COOKIE['error_email'] . "</br>";
-                            }
-
+                                if (isset($_COOKIE['error_email'])) {
+                                    echo $_COOKIE['error_email'] . "</br>";
+                                }
+                                if (isset($_COOKIE['error_username'])) {
+                                    echo $_COOKIE['error_username'] . "</br>";
+                                }
+                                if (isset($_COOKIE['error_password'])) {
+                                    echo $_COOKIE['error_password'] . "</br>";
+                                }
                             ?>
                         </div>
                         <div class="notification-success">
                             <?php
-                            if (isset($_COOKIE['send_mail_success'])) {
-                                echo $_COOKIE['send_mail_success'] . "</br>";
-                            }
+                                if (isset($_COOKIE['send_mail_success'])) {
+                                    echo $_COOKIE['send_mail_success'] . "</br>";
+                                }
+                                if (isset($_COOKIE['change_password_success'])) {
+                                    echo $_COOKIE['change_password_success'] . "</br>";
+                                }
                             ?>
                         </div>
+                        
 
                         <!--Form action-login-->
                         <form action="/loginCustomer" method="post">
@@ -99,17 +108,8 @@
                         </div>
                         <form action="/change-pass" method="post">
                             <div class="main-create-account-fillout">
-
-                                <div class="error">
-                                    <?php
-                                    if (isset($_COOKIE['error_username'])) {
-                                        echo $_COOKIE['error_username'] . "</br>";
-                                    }
-                                    if (isset($_COOKIE['error_password'])) {
-                                        echo $_COOKIE['error_password'] . "</br>";
-                                    }
-                                    ?>
-                                </div>
+                                
+                                
                                 <input type="text"  class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
                                 <input type="text"  class="input-account" name="current-password" autocapitalize="words" placeholder="Current password" required>
                                 <!--  -->

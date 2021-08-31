@@ -141,10 +141,6 @@ class CustomerController extends BaseController
     {
         $error_username_password = null;
         $error_acount_does_not_exist = null;
-        $check_error_login = false;
-        //reset lại lỗi đăng nhập sau mỗi lần đăng nhập
-        setcookie("error_username_password", $error_username_password, 0, "/");
-        setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, 0, "/");
         if (isset($_POST['username'])) {
             //Kiểm tra username password khi đăng nhập
             $username = $_POST['username'];
@@ -160,26 +156,21 @@ class CustomerController extends BaseController
                         session_start();
                     }
                     $_SESSION['user_account'] = $data;
-                    $check_error_login = false;
 
                     header('location:/vi');
                 } else {
                     $error_username_password = 'Tài khoản hoặc mật khẩu không chính xác';
                     setcookie("error_username_password", $error_username_password, time() + 600, "/");
-                    $check_error_login = true;
+
                     header('location:/vi/dang-nhap');
                 }
             } else {
                 $error_acount_does_not_exist = 'Tài khoản này không tồn tại';
                 setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, time() + 600, "/");
-                $check_error_login = true;
+
                 header('location:/vi/dang-nhap');
             }
-            //xóa thông báo lỗi đăng nhập
-            if (!$check_error_login) {
-                setcookie("error_username_password", $error_username_password, 0, "/");
-                setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, 0, "/");
-            }
+
         }
     }
 
@@ -328,27 +319,20 @@ class CustomerController extends BaseController
                     header('Location: /vi/dang-nhap');
                     exit();
                 }
-            }
-
-            setcookie("error_email", $error_email, 0, "/");
-            setcookie("send_mail_success", $send_mail_success, 0, "/");
+            }         
         }
     }
 
     //đổi mật khẩu
     function Change_Pass()
     {
-
-        setcookie("error_username", "", 0, "/");
-        setcookie("error_password", "", 0, "/");
-
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $current_password = md5($_POST['current-password']);
             $new_password = md5($_POST['new-password']);
 
             $conn = open_database();
-            $sql = "SELECT  `password` FROM `customers` WHERE username = '" . $username . "'";
+            $sql = "SELECT  `password` FROM `customers` WHERE BINARY(username) = '" . $username . "'";
             $result = $conn->query($sql);
             $account = mysqli_fetch_assoc($result);
 
@@ -356,6 +340,7 @@ class CustomerController extends BaseController
                 if ($current_password === $account['password']) {
                     $sqlUpdate = "UPDATE `customers` SET `password`= '" . $new_password . "' WHERE `username` = " . "'" . $username . "'";
                     $conn->query($sqlUpdate);
+                    setcookie("change_password_success", "Change password successfully", time() + 600, "/");
                     header('Location: vi/dang-nhap');
                 } else {
                     setcookie("error_password", "Incorrect password ", time() + 600, "/");
@@ -363,9 +348,11 @@ class CustomerController extends BaseController
                 }
             } else {
                 setcookie("error_username", "Username does not exist", time() + 600, "/");
+
                 header('Location: vi/dang-nhap');
             }
         }
+
     }
 }
 /* End of CustomersController class */
