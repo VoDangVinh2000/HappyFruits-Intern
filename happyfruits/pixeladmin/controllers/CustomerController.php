@@ -338,23 +338,21 @@ class CustomerController extends BaseController
     //đổi mật khẩu
     function Change_Pass()
     {
-
         setcookie("error_username", "", 0, "/");
         setcookie("error_password", "", 0, "/");
-
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $current_password = md5($_POST['current-password']);
             $new_password = md5($_POST['new-password']);
 
             $conn = open_database();
-            $sql = "SELECT  `password` FROM `customers` WHERE username = '" . $username . "'";
+            $sql = "SELECT  `password` FROM `customers` WHERE BINARY(username) = '" . $username . "'";
             $result = $conn->query($sql);
             $account = mysqli_fetch_assoc($result);
 
             if (!empty($account)) {
                 if ($current_password === $account['password']) {
-                    $sqlUpdate = "UPDATE `customers` SET `password`= '" . $new_password . "' WHERE `username` = " . "'" . $username . "'";
+                    $sqlUpdate = "UPDATE `customers` SET `password`= '" . $new_password . "' WHERE BINARY(`username`) = " . "'" . $username . "'";
                     $conn->query($sqlUpdate);
                     header('Location: vi/dang-nhap');
                 } else {
