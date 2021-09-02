@@ -58,9 +58,39 @@ class Customers extends BaseCustomers
         //      'customers.email'  => $email ,
         // );
         // return $this->select($filters);
-        $sql = "SELECT customers.* FROM customers WHERE BINARY(email) = '".$email."' ";
+        
+        $sql = "SELECT customers.* FROM customers WHERE BINARY(email) = '".$email."'    ";
+        
         $filters = "";
         return self::_do_sql($sql, $filters, array(), $order_by);
+     }
+
+     function get_history_order_customer(){
+
+         if(isset($_SESSION['user_account'][0]['customer_id'])){
+             $id = $_SESSION['user_account'][0]['customer_id'];
+            $order_by = '';
+            $sql = "SELECT orders.code FROM `customers` INNER JOIN orders 
+            ON orders.customer_id = customers.customer_id 
+            WHERE orders.customer_id = '".$id."' ";
+            if(!empty($sql)){
+                $filters = "";
+               return self::_do_sql($sql, $filters, array(),$order_by);
+            }
+            else{
+                echo "<script>window.location.href='/vi'</script>";
+            }
+         }
+         else{
+            return null;
+        }
+        // $order_by = 'customers.email';
+        // $filters = array(
+        //     'select' => 'customers.*',
+        //      'customers.email'  => $email ,
+        // );
+        // return $this->select($filters);
+        
      }
 
      function get_list_customer_username($username){
@@ -69,6 +99,8 @@ class Customers extends BaseCustomers
         $filters = "";
         return self::_do_sql($sql, $filters, array(), $order_by);
      }
+
+     
 
     /* Foody customers */
     function get_id_or_create($name, $address, $customer_type_id = '', $mobile = '')

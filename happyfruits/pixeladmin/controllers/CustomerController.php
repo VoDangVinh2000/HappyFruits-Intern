@@ -70,28 +70,27 @@ class CustomerController extends BaseController
         $customers_common = new Customers;
         $error_username = NULL;
         $error_email = NULL;
-        $bool = false;
         if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['register'])) {
             //Kiểm tra username khi người dùng đăng ký có trong database chưa
+            /*Hàm đăng ký được thực hiện như sau : Cột email trong bảng customer 
+            được sử dụng cho dữ liệu khi nhấn đặt hàng, email người đặt sẽ được thêm vào.
+            Nên sẽ ảnh hưởng tới phần đăng ký, vì đăng ký không đc trùng email. 
+            Mà thanh toán offline thì username không có dữ liệu, nên dựa vào đây để check.
+            Nếu select email mà cột username không có dữ liệu thì email của tài khoản đăng ký đó đc thêm vào db.
+            */
             $query_user_email = $customers_common->get_list_customer_email($_POST['email']);
             $query_username = $customers_common->get_list_customer_username($_POST['username_en']);
-
-            if (isset($query_user_email[0]['email'])) {
-                $error_email = 'This email has been already. Please log in account';
+            if (!empty($query_user_email[0]['email']) && !empty($query_user_email[0]['username'])) {
+                $error_email = 'This email or username has been already . Please log in account';
                 setcookie("error_email", $error_email, time() + 600, "/");
-                $bool = true;
+                 echo "<script>window.location.href='/vi/dang-ky'</script>";
             }
-            if (isset($query_username[0]['username'])) {
-                $error_username = 'This username has been already. Please log in account';
-                setcookie("error_username", $error_username, time() + 600, "/");
-                $bool = true;
-            }
-            if ($bool) {
-                header('location:/vi/dang-ky');
-            } else {
-                $params['username'] = $_POST['username_en'];
+            else if (empty($query_user_email[0]['username'])) {
+                // $error_username = 'This username has been already. Please log in account';
+                // setcookie("error_username", $error_username, time() + 600, "/");
+                 $params['username'] = $_POST['username_en'];
                 $params['password'] = md5($_POST['password_en']);
-                $params['mobile'] = $_POST['phone_en'];
+                // $params['mobile'] = $_POST['phone_en'];
                 $params['email'] = $_POST['email'];
                 $params['created_dtm'] = date('Y-m-d H:i:s', time());
                 $success = Customers::_insert($table_name, $params);
@@ -103,25 +102,26 @@ class CustomerController extends BaseController
             }
         } else if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['dang-ky'])) {
 
-            //Kiểm tra username khi người dùng đăng ký có trong database chưa
+          //Kiểm tra username khi người dùng đăng ký có trong database chưa
+            /*Hàm đăng ký được thực hiện như sau : Cột email trong bảng customer 
+            được sử dụng cho dữ liệu khi nhấn đặt hàng, email người đặt sẽ được thêm vào.
+            Nên sẽ ảnh hưởng tới phần đăng ký, vì đăng ký không đc trùng email. 
+            Mà thanh toán offline thì username không có dữ liệu, nên dựa vào đây để check.
+            Nếu select email mà cột username không có dữ liệu thì email của tài khoản đăng ký đó đc thêm vào db.
+            */
             $query_user_email = $customers_common->get_list_customer_email($_POST['email']);
             $query_username = $customers_common->get_list_customer_username($_POST['username_en']);
-            if (isset($query_user_email[0]['email'])) {
-                $error_email = 'Email này đã được đăng ký. Vui lòng đăng nhập tài khoản';
+            if (!empty($query_user_email[0]['email']) && !empty($query_user_email[0]['username'])) {
+                $error_email = 'This email or username has been already . Please log in account';
                 setcookie("error_email", $error_email, time() + 600, "/");
-                $bool = true;
+                 echo "<script>window.location.href='/vi/dang-ky'</script>";
             }
-            if (isset($query_username[0]['username'])) {
-                $error_username = 'Tên này đã được đăng ký. Vui lòng đăng nhập tài khoản';
-                setcookie("error_username", $error_username, time() + 600, "/");
-                $bool = true;
-            }
-            if ($bool) {
-                header('location:/vi/dang-ky');
-            } else {
-                $params['username'] = $_POST['username_en'];
+            else if (empty($query_user_email[0]['username'])) {
+                // $error_username = 'This username has been already. Please log in account';
+                // setcookie("error_username", $error_username, time() + 600, "/");
+                 $params['username'] = $_POST['username_en'];
                 $params['password'] = md5($_POST['password_en']);
-                $params['mobile'] = $_POST['phone_en'];
+                // $params['mobile'] = $_POST['phone_en'];
                 $params['email'] = $_POST['email'];
                 $params['created_dtm'] = date('Y-m-d H:i:s', time());
                 $success = Customers::_insert($table_name, $params);
@@ -141,17 +141,13 @@ class CustomerController extends BaseController
     {
         $error_username_password = null;
         $error_acount_does_not_exist = null;
-        $check_error_login = false;
-        //reset lại lỗi đăng nhập sau mỗi lần đăng nhập
-        setcookie("error_username_password", $error_username_password, 0, "/");
-        setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, 0, "/");
         if (isset($_POST['username'])) {
             //Kiểm tra username password khi đăng nhập
-            $username = $_POST['username'];
+            $username = eModel::matchRegexLogin($_POST['username']);
             $password = md5($_POST['password']);
             $customer = new Customers;
             $data = $customer->get_list_customer_username($username);
-
+       
             //kiểm tra username có tồn tại trên csdl hay không
             if ($data) {
                 if ($password == $data[0]['password']) {
@@ -160,26 +156,21 @@ class CustomerController extends BaseController
                         session_start();
                     }
                     $_SESSION['user_account'] = $data;
-                    $check_error_login = false;
 
                     header('location:/vi');
                 } else {
                     $error_username_password = 'Tài khoản hoặc mật khẩu không chính xác';
                     setcookie("error_username_password", $error_username_password, time() + 600, "/");
-                    $check_error_login = true;
+
                     header('location:/vi/dang-nhap');
                 }
             } else {
                 $error_acount_does_not_exist = 'Tài khoản này không tồn tại';
                 setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, time() + 600, "/");
-                $check_error_login = true;
+
                 header('location:/vi/dang-nhap');
             }
-            //xóa thông báo lỗi đăng nhập
-            if (!$check_error_login) {
-                setcookie("error_username_password", $error_username_password, 0, "/");
-                setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, 0, "/");
-            }
+
         }
     }
 
@@ -328,10 +319,7 @@ class CustomerController extends BaseController
                     header('Location: /vi/dang-nhap');
                     exit();
                 }
-            }
-
-            setcookie("error_email", $error_email, 0, "/");
-            setcookie("send_mail_success", $send_mail_success, 0, "/");
+            }         
         }
     }
 
@@ -354,16 +342,22 @@ class CustomerController extends BaseController
                 if ($current_password === $account['password']) {
                     $sqlUpdate = "UPDATE `customers` SET `password`= '" . $new_password . "' WHERE BINARY(`username`) = " . "'" . $username . "'";
                     $conn->query($sqlUpdate);
-                    header('Location: vi/dang-nhap');
+                    setcookie("change_password_success", "Change password successfully", time() + 600, "/");
+                    header('Location: /vi/dang-nhap');
                 } else {
                     setcookie("error_password", "Incorrect password ", time() + 600, "/");
-                    header('Location: vi/dang-nhap');
+                    header('Location: /vi/dang-nhap');
                 }
             } else {
                 setcookie("error_username", "Username does not exist", time() + 600, "/");
-                header('Location: vi/dang-nhap');
+
+                header('Location: /vi/dang-nhap');
             }
         }
+
     }
+
+    /*show histories order */
+    
 }
 /* End of CustomersController class */

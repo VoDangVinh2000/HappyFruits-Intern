@@ -33,8 +33,14 @@
                 <div class="col-sm-4">
                     <div class="return-to-account">
                         <!--Show order history-->
-                        <p  class="efruit-vi"><a href="#return">Quay lại chi tiết tài khoản.</a></p>
-                        <p  class="efruit-en"><a href="#return">Return to Account Details.</a></p>
+                        <?php 
+                            if(!empty($history_order_code)){
+                                var_dump($history_order_code);
+                            // foreach ($history_order_code as $array) {?>
+                             <!-- <h4><?//= $array['order_code'] ?></h4> -->
+                        <?php }else{echo 'Rong';}?>
+                        <!-- <p  class="efruit-vi"><a href="#return">Quay lại chi tiết tài khoản.</a></p>
+                        <p  class="efruit-en"><a href="#return">Return to Account Details.</a></p> -->
                     </div>
                 </div>
                 <div class="col-sm-8">

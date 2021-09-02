@@ -345,6 +345,13 @@ class eModel
         $strURL = preg_replace("/[^A-Z0-9a-z-]/", '', strtolower($strURL));
         return $strURL;
     }
+
+    static function matchRegexLogin($url){
+        $strURL = remove_unicode($url);
+        $strURL = preg_replace("/[^A-Z0-9a-z-]/", '', $strURL);
+        return $strURL;
+    }
+
     static function matchRegex_SearchProducts($key)
     {
         /**$strURL = preg_replace("/[!@#$%^&*()-_=+\/|*?><.,{}'']/", '', strtolower($key)); */

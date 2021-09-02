@@ -383,6 +383,13 @@ class FrontendController extends BasePostbackController
 	        $customer = json_decode(strip_tags(json_encode($customer)), true);
             $customer_data = array();
             $customer_data['mobile'] = str_replace('+', '', $customer['mobile']);
+            if(isset($_SESSION['user_account'])){
+                $customer_data['username'] = str_replace('+', '',$_SESSION['user_account'][0]['username']);
+            }
+            else{
+                $customer_data['username'] = str_replace('+', '','');
+            }
+         
             if (strpos($customer_data['mobile'], '84') === 0)
                 $customer_data['mobile'] = substr($customer_data['mobile'], 2);
             if (strpos($customer_data['mobile'],'0') !== 0)
@@ -393,7 +400,8 @@ class FrontendController extends BasePostbackController
                 $customer_data['mobile'] = 0;
             }
             else   
-                $existed_customer = $this->Customers->select_one(array('or' => array("mobile" => $customer_data['mobile']), 'deleted' => 0));
+                $existed_customer = $this->Customers->select_one(array('or' => array("mobile" => $customer_data['mobile']
+                ,"username" => $customer_data['username'] ), 'deleted' => 0));
             if ($existed_customer)
             {
                 $customer_id = $existed_customer['customer_id'];

@@ -104,6 +104,15 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if(arr[key] == "send_mail_success"){
                     setCookie(arr[key], '', 0);
                 }
+                if(arr[key] == "change_password_success"){
+                    setCookie(arr[key], '', 0);
+                }
+                if(arr[key] == "error_username"){
+                    setCookie(arr[key], '', 0);
+                }
+                if(arr[key] == "error_password"){
+                    setCookie(arr[key], '', 0);
+                }
             }
         };
     });
