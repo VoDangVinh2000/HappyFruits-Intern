@@ -69,11 +69,12 @@ class OrderController extends BaseController
         );
         $page_title = 'Tìm đơn hàng';
         $filter_array = array();
-
+        
         if ($keyword = get('keyword'))
+            
             $filter_array = array('where' => "(shipping_info LIKE '%$keyword%')");
 
-
+        
         $orders = $this->Orders->get_list($filter_array);
         $this->_merge_data(compact("js", "page_title", "orders"));
         $this->load_page('order/find');

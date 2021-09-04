@@ -25,8 +25,8 @@ class BaseCustomers extends eModel
     var $district;    /* varchar(100) */
     var $mobile;    /* varchar(20) */
     var $email;    /* varchar(255) */
-    var $username;
-    var $password;
+    var $username;  /*varchar(100)*/ 
+    var $password;/*varchar(255)*/ 
     var $lat;    /* decimal(15,10) */
     var $lng;    /* decimal(15,10) */
     var $distance;    /* varchar(4) */
