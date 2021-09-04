@@ -363,7 +363,7 @@
                                             <option value="zalopay">{{__('Thanh toán qua Zalo Pay')}}</option>
                                             <option value="vnpay">{{__('Thanh toán qua VN Pay')}}</option>
                                             <option value="momo">{{__('Thanh toán qua Momo')}}</option>
-                                            <option value="paypal">{{__('Thanh toán qua Paypal')}}</option>
+                                            <!-- <option value="paypal">{{__('Thanh toán qua Paypal')}}</option> -->
                                         </select>
                                         <textarea class="form-control mt10" ng-model="shipping_description" placeholder="{{__('Ghi chú khi giao hàng')}}."></textarea>
                                     </div>
