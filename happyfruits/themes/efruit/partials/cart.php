@@ -124,12 +124,23 @@
                                             </div>
                                             <div class="col-sm-12 col-md-10">
                                                 <div class="input-group">
-                                                    <input placeholder="{{__('SĐT')}}" type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+                                                    <?php if (isset($_SESSION['user_account'])) { ?>
+                                                        <input placeholder="<?= $_SESSION['user_account'][0]['mobile_account'] ?>" type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile"   ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+                                                    <?php } else { ?>
+                                                        <input placeholder="SĐT"  type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+                                                    <?php } ?>
+                                                   
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-10">
                                                 <div class="input-group">
-                                                    <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
+                                                    <?php if (isset($_SESSION['user_account'])) { ?>
+                                                        <input placeholder="<?= $_SESSION['user_account'][0]['email'] ?>" type="email" class="form-control email mt10" ng-model="customer.email"  name="email" required="required" />
+                                                    <?php } else { ?>
+                                                        <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
+                                                    <?php } ?>
+                                                
+
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-10">
@@ -234,7 +245,7 @@
                                 </table>
                                 <div class="row mt10 align-center" style="align-items: center;">
                                     <div class="col-md-3 fw-600 fs-6">
-                                        <span bind-translate="Tổng cộng">Tổng cộng</span> <span class="txt-bold font16">{{ totalQuantity }}</span> <span bind-translate="phần">phần</span>
+                                        <span bind-translate="Tổng cộng">Tổng cộng</span> <span class="txt-bold font16" id="totalQuantity">{{ totalQuantity }}</span> <span bind-translate="phần">phần</span>
                                     </div>
                                     <div class="col-md-5">
                                         <p>{{(subtotal)*1000|efruit_money}}<sup>đ</sup></p>
@@ -319,6 +330,8 @@
                                             <option value="moca">{{__('Thanh toán qua Moca')}}</option>
                                             <option value="zalopay">{{__('Thanh toán qua Zalo Pay')}}</option>
                                             <option value="vnpay">{{__('Thanh toán qua VN Pay')}}</option>
+                                            <option value="momo">{{__('Thanh toán qua Momo')}}</option>
+                                            <!-- <option value="paypal">{{__('Thanh toán qua Paypal')}}</option> -->
                                         </select>
                                         <textarea class="form-control mt10" ng-model="shipping_description" placeholder="{{__('Ghi chú khi giao hàng')}}."></textarea>
                                     </div>
@@ -337,6 +350,13 @@
                                     <div class="col-sm-6 mt10 text-center" ng-show="payment_method=='vnpay'">
                                         <a href="<?= get_theme_assets_url() ?>img/vnpay.png" class="fancybox" rel="payment-method-vnpay"><img loading="lazy" width="120" alt="" src="<?= get_theme_assets_url() ?>img/vnpay.png" /></a><br />
                                         <span class="small" bind-translate="Nhấn vào ảnh để xem rõ hơn">Nhấn vào ảnh để xem rõ hơn</span>
+                                    </div>
+                                    <div class="col-sm-6 mt10 text-center" ng-show="payment_method=='momo'">
+                                        <a href="<?= get_theme_assets_url() ?>img/momo.jpg" class="fancybox" rel="payment-method-vnpay"><img loading="lazy" width="120" alt="" src="<?= get_theme_assets_url() ?>img/momo.jpg" /></a><br />
+                                        <span class="small" bind-translate="Nhấn vào ảnh để xem rõ hơn">Nhấn vào ảnh để xem rõ hơn</span>
+                                    </div>
+                                    <div class="col-sm-6 mt10 text-center" ng-show="payment_method=='paypal'">
+                                        <div id="paypal-button-container"></div>
                                     </div>
                                 </div>
                                 <div class="custom-checkbox-with-tick mt10">

@@ -1717,3 +1717,875 @@ Body:
  
 
 
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: orders@localhost 
+Subject:Đơn hàng mới - e0150-080005 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Chào bạn,</p>
+    <p>Có khách hàng vừa đặt hàng trên hệ thống trực tuyến của HappyFruits với thông tin sau:</p>
+        <p><b style="font-size: 20px;">Thông tin giao hàng</b><br/>
+        Tên người nhận: Trang<br/>
+        Địa chỉ: 16/9A Tân Hóa, phường 1, Quận 11, Thành phố Hồ Chí Minh, Việt Nam (7.11km)<br />
+        Số điện thoại: 0375507120<br />
+            </p>
+            <p><b style="font-size: 20px;">Ghi chú</b><br/>
+            không        </p>
+            <p><b style="font-size: 20px;">Thông tin đơn hàng - e0150-080005</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Nhóm hàng</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Tên món</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">SL</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Giá</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Thành tiền</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Hamper Box Trái Cây</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>B2 - Hộp quà trái cây 2</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">350.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">350.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">350.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Chiết khấu</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Phí giao hàng</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">15.000<sup>đ</sup></td>
+            </tr>
+                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng cộng</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">365.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+            <p><b style="font-size: 20px;">Thanh toán khi nhận hàng.</b></p>
+        <p>Bạn có thể xem lại và in đơn hàng tại <a href="http://www.localhost/in/e0150-080005">đây</a> hoặc sửa lại đơn hàng tại <a href="http://www.localhost/sua/e0150-080005">đây</a>.</p>
+    <p>Thời gian gửi: 30/08/2021 22:18:48</p>
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits Việt Nam</span><br />
+        <b>Địa chỉ:</b> 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP HCM<br />
+        <b>Số điện thoại:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: trangtth.44.student@fit.tdc.edu.vn 
+Subject:HappyFruits - Your order - e0150-080005 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Dear Sir/Madam,</p>
+    <p>Thanks for your order, you can edit the order via this <a href="http://www.localhost/vi/sua-don-hang/e0150-080005">link</a> (or <a href="http://www.localhost/sua/e0150-080005">this link</a>).</p>
+        <p><b style="font-size: 20px;">Shipping details</b><br/>
+                Receiver: Trang<br/>
+        Address: 16/9A Tân Hóa, phường 1, Quận 11, Thành phố Hồ Chí Minh, Việt Nam, District 11 (7.11km)<br />
+        Phone number: 0375507120<br />
+        Email: trangtth.44.student@fit.tdc.edu.vn    </p>
+            <p><b style="font-size: 20px;">Description</b><br/>
+            không        </p>
+            <p><b style="font-size: 20px;">Order details - e0150-080005</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Category</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Name</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Qty</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Price</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Total amount</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Fruit Box - Hamper</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>B2 - Fruit gift box 2</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">350.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">350.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Subtotal</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">350.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Discount</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Shipping fee</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">15.000<sup>đ</sup></td>
+            </tr>
+                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Total</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">365.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+        <p>Thank you for ordering with us.</p>
+    <br />
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits VietNam</span><br />
+        <b>Address:</b> 388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city<br />
+        <b>Phone:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: orders@localhost 
+Subject:Đơn hàng mới - e0247-080006 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Chào bạn,</p>
+    <p>Có khách hàng vừa đặt hàng trên hệ thống trực tuyến của HappyFruits với thông tin sau:</p>
+        <p><b style="font-size: 20px;">Thông tin giao hàng</b><br/>
+        Tên người nhận: nhi<br/>
+        Địa chỉ: 19/6/13 Hoàng Xuân Nhị, Phú Trung, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam, Quận Tân Phú (4.84km)<br />
+        Số điện thoại: 0375507120<br />
+            </p>
+            <p><b style="font-size: 20px;">Thông tin đơn hàng - e0247-080006</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Nhóm hàng</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Tên món</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">SL</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Giá</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Thành tiền</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Giỏ Trái Cây Quà Tặng</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>V1 - Giỏ cây vintage 1</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.600.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">1.600.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">1.600.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Chiết khấu</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng cộng</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">1.600.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+            <p><b style="font-size: 20px;">Thanh toán khi nhận hàng.</b></p>
+        <p>Bạn có thể xem lại và in đơn hàng tại <a href="http://www.localhost/in/e0247-080006">đây</a> hoặc sửa lại đơn hàng tại <a href="http://www.localhost/sua/e0247-080006">đây</a>.</p>
+    <p>Thời gian gửi: 30/08/2021 22:27:10</p>
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits Việt Nam</span><br />
+        <b>Địa chỉ:</b> 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP HCM<br />
+        <b>Số điện thoại:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: trangtth.44.student@fit.tdc.edu.vn 
+Subject:HappyFruits - Your order - e0247-080006 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Dear Sir/Madam,</p>
+    <p>Thanks for your order, you can edit the order via this <a href="http://www.localhost/vi/sua-don-hang/e0247-080006">link</a> (or <a href="http://www.localhost/sua/e0247-080006">this link</a>).</p>
+        <p><b style="font-size: 20px;">Shipping details</b><br/>
+                Receiver: nhi<br/>
+        Address: 19/6/13 Hoàng Xuân Nhị, Phú Trung, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam, District Tân Phú (4.84km)<br />
+        Phone number: 0375507120<br />
+        Email: trangtth.44.student@fit.tdc.edu.vn    </p>
+            <p><b style="font-size: 20px;">Order details - e0247-080006</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Category</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Name</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Qty</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Price</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Total amount</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Fruit Gift Baskets</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>V1 - Basket Vintage 1</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.600.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">1.600.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Subtotal</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">1.600.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Discount</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Total</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">1.600.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+        <p>Thank you for ordering with us.</p>
+    <br />
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits VietNam</span><br />
+        <b>Address:</b> 388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city<br />
+        <b>Phone:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: orders@localhost 
+Subject:Đơn hàng mới - e0136-080007 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Chào bạn,</p>
+    <p>Có khách hàng vừa đặt hàng trên hệ thống trực tuyến của HappyFruits với thông tin sau:</p>
+        <p><b style="font-size: 20px;">Thông tin giao hàng</b><br/>
+        Tên người nhận: Trang<br/>
+        Địa chỉ: 19/6/13 Hoàng Xuân Nhị, Phú Trung, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam, Quận Tân Phú (4.84km)<br />
+        Số điện thoại: 0375507120<br />
+            </p>
+            <p><b style="font-size: 20px;">Thông tin đơn hàng - e0136-080007</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Nhóm hàng</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Tên món</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">SL</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Giá</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Thành tiền</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Giỏ Trái Cây Quà Tặng</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>O2A - Giỏ oval 2A (Size M)</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Chiết khấu</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng cộng</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">700.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+            <p><b style="font-size: 20px;">Thanh toán khi nhận hàng.</b></p>
+        <p>Bạn có thể xem lại và in đơn hàng tại <a href="http://www.localhost/in/e0136-080007">đây</a> hoặc sửa lại đơn hàng tại <a href="http://www.localhost/sua/e0136-080007">đây</a>.</p>
+    <p>Thời gian gửi: 31/08/2021 20:53:37</p>
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits Việt Nam</span><br />
+        <b>Địa chỉ:</b> 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP HCM<br />
+        <b>Số điện thoại:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: trangtth.44.student@fit.tdc.edu.vn 
+Subject:HappyFruits - Your order - e0136-080007 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Dear Sir/Madam,</p>
+    <p>Thanks for your order, you can edit the order via this <a href="http://www.localhost/vi/sua-don-hang/e0136-080007">link</a> (or <a href="http://www.localhost/sua/e0136-080007">this link</a>).</p>
+        <p><b style="font-size: 20px;">Shipping details</b><br/>
+                Receiver: Trang<br/>
+        Address: 19/6/13 Hoàng Xuân Nhị, Phú Trung, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam, District Tân Phú (4.84km)<br />
+        Phone number: 0375507120<br />
+        Email: trangtth.44.student@fit.tdc.edu.vn    </p>
+            <p><b style="font-size: 20px;">Order details - e0136-080007</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Category</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Name</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Qty</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Price</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Total amount</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Fruit Gift Baskets</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>O2A - Giỏ lục bình 2A</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Subtotal</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Discount</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Total</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">700.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+        <p>Thank you for ordering with us.</p>
+    <br />
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits VietNam</span><br />
+        <b>Address:</b> 388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city<br />
+        <b>Phone:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: orders@localhost 
+Subject:Đơn hàng mới - e0279-080008 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Chào bạn,</p>
+    <p>Có khách hàng vừa đặt hàng trên hệ thống trực tuyến của HappyFruits với thông tin sau:</p>
+        <p><b style="font-size: 20px;">Thông tin giao hàng</b><br/>
+        Tên người nhận: Trang<br/>
+        Địa chỉ: 19/6 Đường Nguyễn Tư Nghiêm, Bình Trưng Tây, Quận 2, Thành phố Hồ Chí Minh, Việt Nam (13.94km)<br />
+        Số điện thoại: 0375507120<br />
+            </p>
+            <p><b style="font-size: 20px;">Thông tin đơn hàng - e0279-080008</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Nhóm hàng</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Tên món</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">SL</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Giá</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Thành tiền</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Giỏ Trái Cây Quà Tặng</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>O2A - Giỏ oval 2A (Size M)</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Chiết khấu</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Phí giao hàng</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">15.000<sup>đ</sup></td>
+            </tr>
+                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng cộng</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">715.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+            <p><b style="font-size: 20px;">Thanh toán khi nhận hàng.</b></p>
+        <p>Bạn có thể xem lại và in đơn hàng tại <a href="http://www.localhost/in/e0279-080008">đây</a> hoặc sửa lại đơn hàng tại <a href="http://www.localhost/sua/e0279-080008">đây</a>.</p>
+    <p>Thời gian gửi: 31/08/2021 20:55:49</p>
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits Việt Nam</span><br />
+        <b>Địa chỉ:</b> 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP HCM<br />
+        <b>Số điện thoại:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: trangtth.44.student@fit.tdc.edu.vn 
+Subject:HappyFruits - Your order - e0279-080008 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Dear Sir/Madam,</p>
+    <p>Thanks for your order, you can edit the order via this <a href="http://www.localhost/vi/sua-don-hang/e0279-080008">link</a> (or <a href="http://www.localhost/sua/e0279-080008">this link</a>).</p>
+        <p><b style="font-size: 20px;">Shipping details</b><br/>
+                Receiver: Trang<br/>
+        Address: 19/6 Đường Nguyễn Tư Nghiêm, Bình Trưng Tây, Quận 2, Thành phố Hồ Chí Minh, Việt Nam, District 2 (13.94km)<br />
+        Phone number: 0375507120<br />
+        Email: trangtth.44.student@fit.tdc.edu.vn    </p>
+            <p><b style="font-size: 20px;">Order details - e0279-080008</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Category</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Name</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Qty</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Price</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Total amount</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Fruit Gift Baskets</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>O2A - Giỏ lục bình 2A</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Subtotal</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Discount</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Shipping fee</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">15.000<sup>đ</sup></td>
+            </tr>
+                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Total</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">715.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+        <p>Thank you for ordering with us.</p>
+    <br />
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits VietNam</span><br />
+        <b>Address:</b> 388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city<br />
+        <b>Phone:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: orders@localhost 
+Subject:Đơn hàng mới - e0358-080009 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Chào bạn,</p>
+    <p>Có khách hàng vừa đặt hàng trên hệ thống trực tuyến của HappyFruits với thông tin sau:</p>
+        <p><b style="font-size: 20px;">Thông tin giao hàng</b><br/>
+        Tên người nhận: Trang<br/>
+        Địa chỉ: 19/6/13 Hoàng Xuân Nhị, Phú Trung, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam, Quận Tân Phú (4.84km)<br />
+        Số điện thoại: 0375507120<br />
+            </p>
+            <p><b style="font-size: 20px;">Thông tin đơn hàng - e0358-080009</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Nhóm hàng</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Tên món</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">SL</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Giá</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Thành tiền</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Giỏ Trái Cây Quà Tặng</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>O2A - Giỏ oval 2A (Size M)</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Chiết khấu</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng cộng</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">700.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+            <p><b style="font-size: 20px;">Thanh toán khi nhận hàng.</b></p>
+        <p>Bạn có thể xem lại và in đơn hàng tại <a href="http://www.localhost/in/e0358-080009">đây</a> hoặc sửa lại đơn hàng tại <a href="http://www.localhost/sua/e0358-080009">đây</a>.</p>
+    <p>Thời gian gửi: 31/08/2021 20:56:42</p>
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits Việt Nam</span><br />
+        <b>Địa chỉ:</b> 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP HCM<br />
+        <b>Số điện thoại:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: trangtth.44.student@fit.tdc.edu.vn 
+Subject:HappyFruits - Your order - e0358-080009 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Dear Sir/Madam,</p>
+    <p>Thanks for your order, you can edit the order via this <a href="http://www.localhost/vi/sua-don-hang/e0358-080009">link</a> (or <a href="http://www.localhost/sua/e0358-080009">this link</a>).</p>
+        <p><b style="font-size: 20px;">Shipping details</b><br/>
+                Receiver: Trang<br/>
+        Address: 19/6/13 Hoàng Xuân Nhị, Phú Trung, Tân Phú, Thành phố Hồ Chí Minh, Việt Nam, District Tân Phú (4.84km)<br />
+        Phone number: 0375507120<br />
+        Email: trangtth.44.student@fit.tdc.edu.vn    </p>
+            <p><b style="font-size: 20px;">Order details - e0358-080009</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Category</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Name</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Qty</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Price</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Total amount</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Fruit Gift Baskets</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>O2A - Giỏ lục bình 2A</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Subtotal</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">700.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Discount</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Total</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">700.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+        <p>Thank you for ordering with us.</p>
+    <br />
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits VietNam</span><br />
+        <b>Address:</b> 388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city<br />
+        <b>Phone:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: orders@localhost 
+Subject:Đơn hàng mới - e0196-090001 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Chào bạn,</p>
+    <p>Có khách hàng vừa đặt hàng trên hệ thống trực tuyến của HappyFruits với thông tin sau:</p>
+        <p><b style="font-size: 20px;">Thông tin giao hàng</b><br/>
+        Tên người nhận: Trang<br/>
+        Địa chỉ: Quốc lộ 50, Bình Chánh, Thành phố Hồ Chí Minh, Việt Nam, Quận Bình Chánh (15.01km)<br />
+        Số điện thoại: 0375507120<br />
+            </p>
+            <p><b style="font-size: 20px;">Thông tin đơn hàng - e0196-090001</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Nhóm hàng</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Tên món</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">SL</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Giá</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Thành tiền</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Giỏ Trái Cây Quà Tặng</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>DT - Giỏ dâu táo</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+            </tr>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Hoa Trái Cây</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>FM1 - Bó hoa trái cây Mix Berry</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.000.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">1.000.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">2.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">1.500.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Chiết khấu</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Tổng cộng</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">1.500.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+            <p><b style="font-size: 20px;">Thanh toán khi nhận hàng.</b></p>
+        <p>Bạn có thể xem lại và in đơn hàng tại <a href="http://www.localhost/in/e0196-090001">đây</a> hoặc sửa lại đơn hàng tại <a href="http://www.localhost/sua/e0196-090001">đây</a>.</p>
+    <p>Thời gian gửi: 04/09/2021 18:32:27</p>
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits Việt Nam</span><br />
+        <b>Địa chỉ:</b> 388 Huỳnh Văn Bánh, Phường 14, Quận Phú Nhuận, TP HCM<br />
+        <b>Số điện thoại:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+
+Mailer Error: Could not instantiate mail function.
+Mail details:
+To: trangtth.44.student@fit.tdc.edu.vn 
+Subject:HappyFruits - Your order - e0196-090001 
+Body:
+    <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+    <html>
+    <head><meta http-equiv="content-type" content="text/html; charset=utf-8"/></head>
+    <body>
+    <p>Dear Sir/Madam,</p>
+    <p>Thanks for your order, you can edit the order via this <a href="http://www.localhost/vi/sua-don-hang/e0196-090001">link</a> (or <a href="http://www.localhost/sua/e0196-090001">this link</a>).</p>
+        <p><b style="font-size: 20px;">Shipping details</b><br/>
+                Receiver: Trang<br/>
+        Address: Quốc lộ 50, Bình Chánh, Thành phố Hồ Chí Minh, Việt Nam, District Bình Chánh (15.01km)<br />
+        Phone number: 0375507120<br />
+        Email: trangtth.44.student@fit.tdc.edu.vn    </p>
+            <p><b style="font-size: 20px;">Order details - e0196-090001</b></p>
+    <table cellspacing="0" cellpadding="0" style="border-collapse: collapse;border-spacing: 0;">
+        <thead>
+        <tr>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Category</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Name</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Qty</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Price</th>
+            <th style="border: 1px solid #888;padding: 5px 10px;">Total amount</th>
+        </tr>
+        </thead>
+        <tbody>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Fruit Gift Baskets</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>DT - Apple & Strawbery Basket 2</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">500.000<sup>đ</sup></td>
+            </tr>
+                    <tr>
+                <td style="border: 1px solid #888;padding: 5px 10px;">Fruit Bouquets</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">
+                    <span>FM1 - Berry Bouquet</span>
+                                                        </td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.00</td>
+                <td style="border: 1px solid #888;padding: 5px 10px;">1.000.000<sup>đ</sup></td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">1.000.000<sup>đ</sup></td>
+            </tr>
+                </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="2" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Subtotal</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">2.00</td>
+            <td style="border: 1px solid #888;padding: 5px 10px;">&nbsp;</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">1.500.000<sup>đ</sup></td>
+        </tr>
+                    <tr>
+                <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Discount</td>
+                <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;">0<sup>đ</sup></td>
+            </tr>
+                                <tr>
+            <td colspan="4" style="border: 1px solid #888;padding: 5px 10px;font-weight: bold;">Total</td>
+            <td style="text-align: right;border: 1px solid #888;padding: 5px 10px;font-weight: bold;font-size:22px;">1.500.000<sup>đ</sup></td>
+        </tr>
+        </tfoot>
+    </table>
+        <p>Thank you for ordering with us.</p>
+    <br />
+    <p>
+        <span style="font-size: 20px;font-weight: bold;line-height: 30px;">Happy Fruits VietNam</span><br />
+        <b>Address:</b> 388 Huynh Van Banh, Ward 14, Phu Nhuan District, HCM city<br />
+        <b>Phone:</b> 0938.70.70.15<br />
+        <b>Email:</b> <a href="mailto:info@localhost" style="text-decoration: none;">info@localhost</a><br />
+        <b>Website:</b> <a href="www.localhost" style="text-decoration: none;">www.localhost</a>
+    </p>
+    </body>
+    </html>
+ 
+
+

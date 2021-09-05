@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * -------------------------------------------------------
@@ -9,7 +10,7 @@
  *
  */
 
-require_once(ABSOLUTE_PATH. 'models/base/BaseCustomers.php');
+require_once(ABSOLUTE_PATH . 'models/base/BaseCustomers.php');
 
 /**
  * Class declaration
@@ -22,7 +23,7 @@ class Customers extends BaseCustomers
         parent::__construct();
         $this->class_name = 'Customers';
     }
-    
+
     function get_list($filters = array(), $order_by = 'customer_name')
     {
         $sql = 'SELECT customers.*, customer_types.short_name as short_type, customer_types.long_name as long_type, COUNT(orders.id) as number_of_order
@@ -32,7 +33,7 @@ class Customers extends BaseCustomers
         $filters['customers.deleted'] = 0;
         return self::_do_sql($sql, $filters, array(), $order_by, 'customers.customer_id');
     }
-    
+
     function get_list_for_selling($filters = array(), $order_by = 'customer_name')
     {
         $sql = 'SELECT customers.customer_id, customers.customer_name, customers.address, customers.district, customers.description,
@@ -43,7 +44,7 @@ class Customers extends BaseCustomers
                 INNER JOIN orders ON orders.customer_id = customers.customer_id';
         return self::_do_sql($sql, $filters, array(), $order_by, 'customers.customer_id');
     }
-    
+
     function get_customer_types($filters = array(), $deleted = 0)
     {
         if ($deleted != -1)
@@ -51,25 +52,75 @@ class Customers extends BaseCustomers
         return self::_select('customer_types', $filters, 'type_id');
     }
 
-    function get_list_customer_email($email){
+    function get_list_customer_email($email)
+    {
         $order_by = 'customers.email';
         // $filters = array(
         //     'select' => 'customers.*',
         //      'customers.email'  => $email ,
         // );
         // return $this->select($filters);
-        $sql = "SELECT customers.* FROM customers WHERE BINARY(email) = '".$email."' ";
+        $email = eModel::matchRegexEmail($email);
+        $sql = "SELECT customers.* FROM customers WHERE BINARY(email) = '" . $email . "'    ";
+
         $filters = "";
         return self::_do_sql($sql, $filters, array(), $order_by);
-     }
+    }
 
-     function get_list_customer_username($username){
+    function get_list_customer_email_username($email, $username)
+    {
+        $filters = "";
+        $order_by = '';
+        $email = eModel::matchRegexEmail($email);
+        $username = eModel::matchRegexLogin($username);
+        $sql = "SELECT customers.* FROM customers WHERE BINARY(email) = '" . $email . "' OR BINARY(username) = '" . $username . "'   ";
+        return self::_do_sql($sql, $filters, array(), $order_by);
+    }
+
+
+    function get_customerID($username)
+    {
+        $order_by = 'customers.customer_id';
+        //$username = eModel::matchRegexLogin($username);
+        $sql = "SELECT customers.* FROM customers WHERE BINARY(username) = '" . $username . "' ";
+        $filters = "";
+        $result = self::_do_select_sql($sql, $filters, array(), $order_by);
+        $customer_id = 0;
+        foreach ($result as $key) {
+            $customer_id = $key['customer_id'];
+        }
+        return $customer_id;
+        //  return self::_do_sql($sql, $filters, array(), $order_by);
+    }
+
+    function get_history_order_customer()
+    {
+
+        if (isset($_SESSION['user_account'][0]['customer_id'])) {
+            $id = $_SESSION['user_account'][0]['customer_id'];
+            $order_by = '';
+            $sql = "SELECT orders.code FROM `customers` INNER JOIN orders 
+            ON orders.customer_id = customers.customer_id 
+            WHERE orders.customer_id = '" . $id . "' ";
+            if (!empty($sql)) {
+                $filters = "";
+                return self::_do_sql($sql, $filters, array(), $order_by);
+            } else {
+                echo "<script>window.location.href='/vi'</script>";
+            }
+        } else {
+            return null;
+        }
+    }
+
+    function get_list_customer_username($username)
+    {
         $order_by = 'customers.username';
-        $sql = "SELECT customers.* FROM customers WHERE BINARY(username) = '".$username."' ";
+        $username = eModel::matchRegexLogin($username);
+        $sql = "SELECT customers.* FROM customers WHERE BINARY(username) = '" . $username . "' ";
         $filters = "";
         return self::_do_sql($sql, $filters, array(), $order_by);
-     }
-
+    }
     /* Foody customers */
     function get_id_or_create($name, $address, $customer_type_id = '', $mobile = '')
     {
@@ -77,24 +128,22 @@ class Customers extends BaseCustomers
             'customer_name' => $name,
             'address' => $address
         );
-        if($customer_type_id)
+        if ($customer_type_id)
             $filters['type_id'] = $customer_type_id;
-	    $customer = $this->select_one($filters);
-	    if ($customer)
-	    	return $customer['customer_id'];
-	    $data = array(
-	    	'customer_name' => $name,
-		    'address' => $address,
-		    'created_dtm' => date('Y-m-d H:i:s')
-	    );
-	    if ($mobile)
+        $customer = $this->select_one($filters);
+        if ($customer)
+            return $customer['customer_id'];
+        $data = array(
+            'customer_name' => $name,
+            'address' => $address,
+            'created_dtm' => date('Y-m-d H:i:s')
+        );
+        if ($mobile)
             $data['mobile'] = $mobile;
-	    if ($customer_type_id)
-	    	$data['type_id'] = $customer_type_id;
-	    $customer_id = $this->insert($data);
-	    return $customer_id?$customer_id:null;
+        if ($customer_type_id)
+            $data['type_id'] = $customer_type_id;
+        $customer_id = $this->insert($data);
+        return $customer_id ? $customer_id : null;
     }
-
-    
 }
 /* End of generated class */

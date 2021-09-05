@@ -1,7 +1,7 @@
 <?php
 function init_page(&$controller)
 {
-    $controller->load_model('Products, Menus, Categories, Prices,Pages');
+    $controller->load_model('Products, Menus, Categories, Prices,Pages, Customers');
     $main_menu = $controller->Menus->get_details_by_code('main-menu');
     $category_menu = $controller->Menus->get_details_by_code('category-menu');
     $tiles = $category_menu['items'];
@@ -63,6 +63,8 @@ function init_page(&$controller)
     //relate products
     $relateProducts = $controller->Products->get_relate_products($id);
     
+    //get session for function get_history_order_customer
+    $history_order_code = $controller->Customers->get_history_order_customer();
     //show products with sell_price on mega-menu
     $choose_mega_menu = eModel::matchRegexUrl(get('param2'));
     $get_product_with_mega_menu = $controller->Prices->get_products_with_mega_menu($choose_mega_menu);
@@ -76,7 +78,8 @@ function init_page(&$controller)
     "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
     "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_fruit_baskets",
     "megaMenu_hamper_boxFruit","choose_mega_menu","get_product_with_mega_menu","relateProducts","megaMenu_fruit_bouquet"
-    ,"megaMenu_Viet_Nam_Fruit_Special","megaMenu_fresh_fruit","megaMenu_orther_products","get_product_by_search_key"));
+    ,"megaMenu_Viet_Nam_Fruit_Special","megaMenu_fresh_fruit","megaMenu_orther_products"
+    ,"get_product_by_search_key","history_order_code"));
 }
 
 

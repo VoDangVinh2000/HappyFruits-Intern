@@ -345,13 +345,47 @@ class eModel
         $strURL = preg_replace("/[^A-Z0-9a-z-]/", '', strtolower($strURL));
         return $strURL;
     }
+
+    static function matchRegexLogin($url){
+        $strURL = remove_unicode($url);
+        $strURL = preg_replace("/[^A-Z0-9a-z-]/", '', $strURL);
+        return $strURL;
+    }
+
+    static function matchRegexEmail($url){
+        $strURL = remove_unicode($url);
+        $strURL = preg_replace("/[^A-Z0-9a-z-_.@]/", '', $strURL);
+        return $strURL;
+    }
+
+    static function matchRegexDistrict($url){
+        $strURL = preg_replace("/[!@#$%^&*()_=+\/|*?><.,{}'']/", '', $url);
+        return $strURL;
+    }
+
+    static function matchRegexAddress($url){
+        $strURL = preg_replace('/[""]/', '', $url);
+        return $strURL;
+    }
+
     static function matchRegex_SearchProducts($key)
     {
         /**$strURL = preg_replace("/[!@#$%^&*()-_=+\/|*?><.,{}'']/", '', strtolower($key)); */
-        $key = remove_unicode($key);
-        $strURL = preg_replace("/[!@#$%^&*()_=+\/|*?><.,{}'']/", '', strtolower($key));
+        //$key = remove_unicode($key);
+        $strURL = preg_replace("/[!@#$%^&*()_=+\/|*?><.,{}'']/", '', $key);
         return $strURL;
     }
+    //
+    static function matchRegex_FullName($key){
+        $strURL = preg_replace("/[!@#$%^&*()_=+\/|*?><.,{}'']+/", '', $key);
+        return $strURL;
+    }
+
+    // static function matchRegex_Address($key){
+    //     $strURL = preg_replace("/[]+/", '', $key);
+    //     return $strURL;
+    // }
+
     function insert($data = array())
     {
         $result =  self::_insert($this->table_name, $data);
@@ -410,5 +444,8 @@ class eModel
     {
         return true;
     }
+
+ 
+
 }
 /* End of eModel class */
