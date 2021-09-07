@@ -15,9 +15,9 @@
                             <li><span class="efruit-vi">Tạo tài khoản</span></li>
                         </ul>
                     </div>
-                    <div class="section-img">
-                        <img src="<?= get_theme_assets_url() ?>img/banner-account/6165.jpg" alt="">
-                    </div>
+                    <!-- <div class="section-img">
+                        <img src="<?//= get_theme_assets_url() ?>img/banner-account/6165.jpg" alt="">
+                    </div> -->
                 </div>
             </div>
         </div>

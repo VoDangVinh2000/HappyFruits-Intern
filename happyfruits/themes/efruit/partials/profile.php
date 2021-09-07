@@ -21,18 +21,24 @@ if (isset($_SESSION['user_account'])) {
                 <div class="col-sm-4">
                     <div class="return-to-account">
                         <!--Show order history-->
+                        
                         <h3>Lịch sử đặt hàng</h3>
-                        <ul class="nav order-history">
-                            <?php
-
-                            if (!empty($history_order_code)) {
-                                foreach ($history_order_code as $array) { ?>
-                                    <li class="nav-link"><a class="nav-item" href="/vi/don-hang/<?= $array['code'] ?>"><?= $array['code'] ?></a></li>
-                            <?php }
-                            } else {
-                                echo 'Rong';
-                            } ?>
-                        </ul>
+                        <table class="table table-responsive">
+                            <thead>
+                                <tr>
+                                    <th class="scope">Ngày đặt</th>
+                                    <th class="scope">Hóa đơn</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php if(!empty($history_order_code)){
+                                    foreach ($history_order_code as $array) { 
+                                    ?>
+                                <td><?= $array['ngayTao'] ?></td>
+                                <td> <a href="/vi/don-hang/<?= $array['code'] ?>"><?= $array['code'] ?></a></td>
+                                <?php }}?>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
                 <div class="col-sm-8">

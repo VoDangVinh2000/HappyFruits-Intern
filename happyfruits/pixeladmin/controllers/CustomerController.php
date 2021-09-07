@@ -23,6 +23,7 @@ class CustomerController extends BaseController
         $page_title = 'Quản lý khách hàng';
         $filter_array = "";
         $filter_keyword = get('s');
+        
         if ($filter_keyword) {
             $search_str = "(customer_name LIKE '%$filter_keyword%' OR address LIKE '%$filter_keyword%' OR mobile LIKE '%$filter_keyword%')";
             $filter_array = array('where' => "($search_str)");

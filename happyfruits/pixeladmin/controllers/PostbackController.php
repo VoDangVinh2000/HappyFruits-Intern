@@ -844,7 +844,7 @@ class PostbackController extends BasePostbackController
                     $days==9999?'-':"$days ngày",
                     '<input data-id="'.$item['customer_id'].'" type="text" value="'.$item['mobile'].'" class="mobile" />',
                     '<input data-id="'.$item['customer_id'].'" type="text" value="'.$item['distance'].'" class="distance" />',
-                    '<a target="_blank" href="'.BASE_URL. $URIs['orders'].'/tim/'.$item['mobile'].'">'.$item['number_of_order'].'</a>',
+                    '<a target="_blank" href="'.BASE_URL. $URIs['orders'].'/tim/'.$item['customer_id'].'">'.$item['number_of_order'].'</a>',
                     $item['total_paid']?number_format($item['total_paid'],0,',','.').'.000':'0',
                     '<div class="custom-checkbox-with-tick small">
                         <input data-id="'.$item['customer_id'].'" id="free_ship_'.$item['customer_id'].'" type="checkbox" value="1" class="free_ship" '.(getvalue($item, 'free_ship')?'checked="checked"':'').' autocomplete="off"/>

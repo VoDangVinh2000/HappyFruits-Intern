@@ -1,4 +1,5 @@
 <?php
+
 /**
  *
  * -------------------------------------------------------
@@ -9,7 +10,7 @@
  *
  */
 
-require_once(ABSOLUTE_PATH. 'models/base/BaseOrders.php');
+require_once(ABSOLUTE_PATH . 'models/base/BaseOrders.php');
 
 /**
  * Class declaration
@@ -22,22 +23,22 @@ class Orders extends BaseOrders
         parent::__construct();
         $this->class_name = 'Orders';
     }
-    
+
     function _get_cached($key)
     {
-        return isset(self::$cached[$key])?self::$cached[$key]:null;
+        return isset(self::$cached[$key]) ? self::$cached[$key] : null;
     }
-    
+
     function _set_cached($key, $val)
     {
         self::$cached[$key] = $val;
     }
-    
+
     function _get_key($filters = array(), $types = array())
     {
-        return empty($filters)?null:md5(implode('', $filters).implode($types));
+        return empty($filters) ? null : md5(implode('', $filters) . implode($types));
     }
-    
+
     function get_list($filters = array(), $order_by = '')
     {
         $sql = 'SELECT orders.*, 
@@ -56,7 +57,7 @@ class Orders extends BaseOrders
             unset($filters['orders.deleted']);
         return self::_do_sql($sql, $filters, array(), $order_by);
     }
-    
+
     function get_order_types($filters = array(), $deleted = 0)
     {
         if ($deleted != -1)
@@ -64,7 +65,7 @@ class Orders extends BaseOrders
         $filters['order_by'] = 'sequence_number';
         return self::_select('order_types', $filters);
     }
-    
+
     function get_order_items($filters = array())
     {
         $sql = 'SELECT order_items.*, 
@@ -97,24 +98,21 @@ class Orders extends BaseOrders
             return false;
         }
         $return_items = array();
-        foreach($order_items as $item)
-        {
+        foreach ($order_items as $item) {
             $item['final_price'] = $item['price'];
             $order_sub_items = $this->get_order_items(array('order_id' => $order['id'], 'order_items.belongs_to' => $item['id']));
-            if ($order_sub_items)
-            {
-                foreach($order_sub_items as $sub_item){
+            if ($order_sub_items) {
+                foreach ($order_sub_items as $sub_item) {
                     $item['sub_items'][$sub_item['id']] = $sub_item;
                     $item['final_price'] += $sub_item['price'];
                 }
-            }
-            else
+            } else
                 $item['sub_items'] = array();
-            $item['total_sub_items'] = $order_sub_items?count($order_sub_items):0;
-            if(!empty($item['is_box'])){
+            $item['total_sub_items'] = $order_sub_items ? count($order_sub_items) : 0;
+            if (!empty($item['is_box'])) {
                 $order_box_items = $this->get_order_box_items(array('order_item_id' => $item['id']));
-                $item['box_items'] = empty($order_box_items)?0:$order_box_items;
-            }else{
+                $item['box_items'] = empty($order_box_items) ? 0 : $order_box_items;
+            } else {
                 $item['box_items'] = 0;
             }
             $return_items[$item['id']] = $item;
@@ -133,7 +131,7 @@ class Orders extends BaseOrders
         $filters['order_box_items.deleted'] = 0;
         return self::_do_sql($sql, $filters, array(), 'order_box_items.id');
     }
-    
+
     function get_customers($filters = array(), $order_by = '')
     {
         $sql = 'SELECT customers.*, orders.id as order_id, orders.quantity, orders.total, orders.shipping_info, orders.branch_id, customer_types.long_name as customer_type, orders.delivery_date
@@ -141,10 +139,10 @@ class Orders extends BaseOrders
                 INNER JOIN customers ON customers.customer_id = orders.customer_id AND customers.deleted = 0
                 INNER JOIN customer_types ON customer_types.type_id = customers.type_id';
         $filters['orders.deleted'] = 0;
-	    if (empty($filters['orders.type_id']))
-	        $filters['orders.type_id'] = 3;
-	    elseif($filters['orders.type_id'] == -1)
-		    unset($filters['orders.type_id']);
+        if (empty($filters['orders.type_id']))
+            $filters['orders.type_id'] = 3;
+        elseif ($filters['orders.type_id'] == -1)
+            unset($filters['orders.type_id']);
         return self::_do_sql($sql, $filters, array(), $order_by);
     }
 
@@ -166,7 +164,7 @@ class Orders extends BaseOrders
     {
         return self::_update('order_assessments', $where_params, $set_params);
     }
-    
+
     function get_statistics_data($filters = array(), $types = array())
     {
         $key = $this->_get_key($filters, $types);
@@ -177,8 +175,7 @@ class Orders extends BaseOrders
         $get_all = empty($types);
         if (!$get_all && !is_array($types))
             $types = array($types);
-        if ($get_all || in_array('sold_quantities', $types))
-        {
+        if ($get_all || in_array('sold_quantities', $types)) {
             $sql = 'SELECT order_items.quantity, order_items.product_id, products.name as product_name, categories.name as category_name, categories.category_id, order_types.id as order_type_id, CONCAT(categories.sequence_number, products.sequence_number) as sequence
                     FROM order_items
                     INNER JOIN orders ON orders.id = order_items.order_id AND orders.deleted = 0
@@ -186,14 +183,12 @@ class Orders extends BaseOrders
                     INNER JOIN products ON products.product_id = order_items.product_id AND (ISNULL(products.belongs_to) OR products.belongs_to = \'\')
                     INNER JOIN categories ON categories.category_id = products.category_id';
             $rs = self::_do_sql($sql, $filters, array(), 'categories.sequence_number, products.sequence_number');
-            if ($rs)
-            {
+            if ($rs) {
                 $quantities = array();
-                foreach($rs as $item)
-                {
+                foreach ($rs as $item) {
                     $quantity = $item['quantity'];
                     $product_name = $item['product_name'];
-                    $category_name = sprintf('%02d', $item['category_id']).' - '.$item['category_name'];
+                    $category_name = sprintf('%02d', $item['category_id']) . ' - ' . $item['category_name'];
                     $order_type_id = $item['order_type_id'];
                     $key = "$category_name|$product_name";
                     if (empty($quantities[$key]))
@@ -203,15 +198,12 @@ class Orders extends BaseOrders
                     $quantities[$key][$order_type_id] += $quantity;
                 }
                 $return_arr['sold_quantities'] = $quantities;
-            }
-            else
+            } else
                 $return_arr['sold_quantities'] = null;
         }
-        
-        if ($get_all || in_array('orders_totals', $types))
-        {            
-            if (!empty($filters['products.category_id']) && is_numeric($filters['products.category_id']))
-            {
+
+        if ($get_all || in_array('orders_totals', $types)) {
+            if (!empty($filters['products.category_id']) && is_numeric($filters['products.category_id'])) {
                 /*
                 $filters['where'] .= 'AND orders.id IN 
                                         (
@@ -228,31 +220,25 @@ class Orders extends BaseOrders
                         INNER JOIN order_types ON order_types.id = orders.type_id AND order_types.show_in_statistics = 1
                         INNER JOIN products ON products.product_id = order_items.product_id AND (ISNULL(products.belongs_to) OR products.belongs_to = \'\')
                         INNER JOIN categories ON categories.category_id = products.category_id';
-            }  
-            else
-            {
+            } else {
                 $sql = 'SELECT order_types.id, SUM(orders.total) as total, COUNT(orders.id) as number_of_orders
                         FROM order_types
                         INNER JOIN orders ON orders.type_id = order_types.id AND orders.deleted = 0';
-            }       
-            
-            
+            }
+
+
             $rs = self::_do_sql($sql, $filters, array(), 'order_types.sequence_number', 'order_types.id');
-            
-            if ($rs)
-            {
+
+            if ($rs) {
                 $totals = array();
                 $number_of_orders = array();
-                foreach($rs as $item)
-                {
+                foreach ($rs as $item) {
                     $totals[$item['id']] = $item['total'];
                     $number_of_orders[$item['id']] = $item['number_of_orders'];
                 }
                 $return_arr['orders_totals'] = $totals;
                 $return_arr['number_of_orders'] = $number_of_orders;
-            }
-            else
-            {
+            } else {
                 $return_arr['orders_totals'] = null;
                 $return_arr['number_of_orders'] = null;
             }
@@ -261,54 +247,84 @@ class Orders extends BaseOrders
         return $return_arr;
     }
 
-    function get_order($id_code){
-        if(empty($id_code))
+    function get_order($id_code)
+    {
+        if (empty($id_code))
             return '';
-	    $order = $this->select_one(array('code' => $id_code));
-	    if (empty($order))
-		    $order = $this->get_details($id_code);
-	    return $order;
+        $order = $this->select_one(array('code' => $id_code));
+        if (empty($order))
+            $order = $this->get_details($id_code);
+        return $order;
     }
 
-    function get_foody_order($id_code){
+    function get_foody_order($id_code)
+    {
         return $this->select_one(array('code' => $id_code, 'type_id' => ORDER_TYPE_FOODY_ID));
     }
 
-    static function get_last_modified_order_items($order_id){
-	    $row = self::_select_one('order_items', array(
-	    	'select' => 'MAX(modified_dtm) as last_modified_dtm',
-		    'order_id' => $order_id
-	    ));
-	    return $row?$row['last_modified_dtm']:null;
+    static function get_last_modified_order_items($order_id)
+    {
+        $row = self::_select_one('order_items', array(
+            'select' => 'MAX(modified_dtm) as last_modified_dtm',
+            'order_id' => $order_id
+        ));
+        return $row ? $row['last_modified_dtm'] : null;
     }
 
-    static function get_total_quatity_of_foody($filters = array()){
-	    $filters['type_id'] = ORDER_TYPE_FOODY_ID;
-	    $rs = self::_do_sql("SELECT SUM(orders.quantity) as sum_of_quantity FROM orders", $filters);
-	    if ($rs)
-	    {
-	    	return $rs[0]['sum_of_quantity'];
-	    }
-	    return 0;
+    static function get_total_quatity_of_foody($filters = array())
+    {
+        $filters['type_id'] = ORDER_TYPE_FOODY_ID;
+        $rs = self::_do_sql("SELECT SUM(orders.quantity) as sum_of_quantity FROM orders", $filters);
+        if ($rs) {
+            return $rs[0]['sum_of_quantity'];
+        }
+        return 0;
     }
 
-    function after_update($old, $new){
-        if($old['status'] != $new['status'] ){
-            if($new['status'] == 'Completed'){
+    function after_update($old, $new)
+    {
+        if ($old['status'] != $new['status']) {
+            if ($new['status'] == 'Completed') {
                 $customer = self::_select_one('customers', array('customer_id' => $new['customer_id']));
-                if($customer){
+                if ($customer) {
                     $total_paid = $customer['total_paid'] + $new['total'];
                     self::_update('customers', array('customer_id' => $new['customer_id']), array('total_paid' => $total_paid));
                 }
-            }elseif($old['status'] == 'Completed'){
+            } elseif ($old['status'] == 'Completed') {
                 $customer = self::_select_one('customers', array('customer_id' => $new['customer_id']));
-                if($customer){
+                if ($customer) {
                     $total_paid = $customer['total_paid'] - $new['total'];
-                    self::_update('customers', array('customer_id' => $new['customer_id']), array('total_paid' => $total_paid>0?$total_paid:0));
+                    self::_update('customers', array('customer_id' => $new['customer_id']), array('total_paid' => $total_paid > 0 ? $total_paid : 0));
                 }
             }
         }
         return true;
+    }
+
+    //Intern
+    //Hàm thực hiện truy vấn ra các list_order của customer_id đó 
+    function get_listorder_customerID($customer_id)
+    {
+        $customer_id = eModel::matchRegexUrl($customer_id);
+        $order_by = '';
+        $sql = 'SELECT orders.*, 
+        customers.customer_name, customers.district as customer_district, customers.mobile as customer_mobile, customers.address as customer_address,
+        order_types.type_name, order_types.id as order_type_id, order_types.need_customer_details,
+        users.fullname as shipper_name, users.type_id as shipper_type_id,
+        order_assessments.score, order_assessments.feedback 
+        FROM orders
+        INNER JOIN order_types ON order_types.id = orders.type_id
+        LEFT JOIN customers ON customers.customer_id = orders.customer_id
+        LEFT JOIN users ON users.user_id = orders.shipper_id
+        LEFT JOIN order_assessments ON order_assessments.order_id = orders.id WHERE customers.customer_id = '.$customer_id.' AND
+        orders.deleted = 0 ';
+        
+        // if (empty($filters['orders.deleted']))
+        //     $filters['orders.deleted'] = 0;
+        // else if ($filters['orders.deleted'] == -1)
+        //     unset($filters['orders.deleted']);
+        // var_dump($sql);
+        return self::_do_sql($sql, array(), $order_by);
     }
 }
 /* End of generated class */

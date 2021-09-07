@@ -36,6 +36,7 @@ RewriteRule ^khach-hang/tim/(.*)?$ /pixeladmin/index.php?controller=customer&s=$
 RewriteRule ^khach-hang/(.*)?$ /pixeladmin/index.php?controller=customer&action=edit&id=$1
 RewriteRule ^khach-hang/?$ /pixeladmin/index.php?controller=customer
 
+
 RewriteRule ^cong-no-khach-hang/them/?$ /pixeladmin/index.php?controller=customerdebt&action=add
 RewriteRule ^cong-no-khach-hang/da-thanh-toan(.*)$ /pixeladmin/index.php?controller=customerdebt&action=done
 RewriteRule ^cong-no-khach-hang/(.*)?$ /pixeladmin/index.php?controller=customerdebt&action=edit&id=$1

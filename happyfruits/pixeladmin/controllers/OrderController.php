@@ -7,7 +7,7 @@ class OrderController extends BaseController
     function __construct()
     {
         parent::__construct();
-        $this->load_model('Users, Orders, Branches');
+        $this->load_model('Users, Orders, Branches,Customers');
     }
     
     function index()
@@ -72,12 +72,13 @@ class OrderController extends BaseController
         
         if ($keyword = get('keyword'))
             
-            $filter_array = array('where' => "(shipping_info LIKE '%$keyword%')");
-
-        
-        $orders = $this->Orders->get_list($filter_array);
-        $this->_merge_data(compact("js", "page_title", "orders"));
-        $this->load_page('order/find');
+            //$filter_array = array('where' => "(shipping_info LIKE '%$keyword%')");
+      
+            // $orders = $this->Orders->get_list($filter_array);
+        $orders = $this->Orders->get_listorder_customerID($keyword);
+      
+         $this->_merge_data(compact("js", "page_title", "orders"));
+         $this->load_page('order/find');
     }
 }
 /* End of OrderController class */

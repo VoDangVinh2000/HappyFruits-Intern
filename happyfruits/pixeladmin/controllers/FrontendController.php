@@ -483,9 +483,11 @@ class FrontendController extends BasePostbackController
                             else
                                 $this->_error('Đơn hàng bị lỗi, quý khách vui lòng đặt hàng lại.');
                         }
-                        $this->Customers->update($customer_id, array('last_order_dtm' => $now,'customer_name' 
-                        => $customer_data['customer_name'], 'address' => $customer_data['address'], 'district' => $customer_data['district'],
-                        'mobile' => $customer_data['mobile']));
+                        $this->Customers->update($customer_id, array(
+                            'last_order_dtm' => $now, 'customer_name'
+                            => $customer_data['customer_name'], 'address' => $customer_data['address'], 'district' => $customer_data['district'],
+                            'mobile' => $customer_data['mobile']
+                        ));
                     }
 
                     $tasteOptions = get_taste_options();
@@ -679,7 +681,7 @@ class FrontendController extends BasePostbackController
                     //$code = 'e' . rand(1,9) . dechex(intval($order_id)). rand(0,9);
                     if ($shipping_description)
                         $customer['description'] = $shipping_description;
-                        // $customer['mobile'] = '0' . $customer_data['mobile'];
+                    // $customer['mobile'] = '0' . $customer_data['mobile'];
                     $update_data = array(
                         'subtotal' => $subtotal,
                         'shipping_fee' => $shipping_fee,
@@ -794,6 +796,8 @@ class FrontendController extends BasePostbackController
                 exit();
             }
 
+
+
             //Thanh toán không account bắt đầu từ đây
             if (strpos($customer_data['mobile'], '84') === 0)
                 $customer_data['mobile'] = substr($customer_data['mobile'], 2);
@@ -803,12 +807,44 @@ class FrontendController extends BasePostbackController
                 $existed_customer = 0;
                 $customer_data['mobile'] = 0;
             } else
-                $existed_customer = $this->Customers->select_one(array('or' => array("mobile" => $customer_data['mobile']), 'deleted' => 0));
-            if ($existed_customer) {
-                $customer_id = $existed_customer['customer_id'];
-                $free_ship = !empty($existed_customer['free_ship']) ? 1 : 0;
-                if (!empty($customer['email']))
-                    $this->Customers->update($customer_id, array('email' => $customer['email']));
+                $existed_customers = $this->Customers->select_not_limit(array('or' => array("mobile" => $customer_data['mobile']), 'deleted' => 0));
+            //Khi vào đây, ta sẽ kiểm tra biến $existed_customers  sau khi select với sdt có rỗng hay không, nếu rỗng thì
+            //tạo mới customers. Ng lại vào kiểm tra như sau (trường hợp vào đây là không có đăng nhập nên chèn cột mobile
+            // không có username):
+            /** Tìm đến số điện thoại cột mobile có username rỗng thì lấy  customer_id đó chèn vào bảng order*/
+            if (!empty($existed_customers)) {
+                foreach ($existed_customers as $existed_customer) {
+                    if (empty($existed_customer['username'])) {//Trường hợp username rỗng
+                        /*
+                    Khi order không đăng nhập, thì cần tìm đến số điện thoại người nhân và row đó trên db username rỗng.
+                    Sau đó lấy customer_id của row đó chèn vào bảng order
+                */
+                        $customer_id = $existed_customer['customer_id'];
+                        $free_ship = !empty($existed_customer['free_ship']) ? 1 : 0;
+                        if (!empty($customer['email'])){
+                            $this->Customers->update($customer_id, array('email' => $customer['email']));
+                        }       
+                        break;
+                    }
+                       //Trường hợp foreach ở trên nếu cả mobile và username đều có dữ liệu thì thêm mới
+                    else if(!empty($existed_customers['username']) &&  !empty($existed_customers['mobile'])){
+                        $address = capitalize(str_replace(', Việt Nam', '', strip_tags($customer['address'])));
+                        // Creates new customer
+                        if ($customer['fullname'])
+                            $customer_data['customer_name'] = capitalize(strip_tags($customer['fullname']));
+                        else
+                            $customer_data['customer_name'] = customer_name_from_address($address);
+                        $customer_data['address'] = $address;
+                        $customer_data['district'] = $customer['district'];
+                        $customer_data['email'] = $customer['email'];
+                        $customer_data['type_id'] = 1; // eFruit type
+        
+                        $customer_data['modified_by'] = Users::get_userdata('user_id', null);
+                        $customer_data['created_dtm'] = date('Y-m-d H:i:s');
+                        $customer_id = $this->Customers->insert($customer_data);
+                        break;
+                    }
+                }
             } else {
                 $address = capitalize(str_replace(', Việt Nam', '', strip_tags($customer['address'])));
                 // Creates new customer
@@ -822,30 +858,30 @@ class FrontendController extends BasePostbackController
                 $customer_data['type_id'] = 1; // eFruit type
 
                 $customer_data['modified_by'] = Users::get_userdata('user_id', null);
-                $customer_data['created_dtm'] = date('Y-m-d H:i:s');;
-                /*
-                if (empty($customer_data['lat']) || empty($customer_data['lng']))
+                $customer_data['created_dtm'] = date('Y-m-d H:i:s');
+                    /*
+            if (empty($customer_data['lat']) || empty($customer_data['lng']))
+            {
+                $geo = get_geo($customer_data['address']. ' Quận '. $customer_data['district']);
+                
+                if(!$geo)
                 {
-                    $geo = get_geo($customer_data['address']. ' Quận '. $customer_data['district']);
-                    
-                    if(!$geo)
+                    $geo = get_geo($customer_data['address']. ' Hồ Chí Minh');
+                    if ($geo)
                     {
-                        $geo = get_geo($customer_data['address']. ' Hồ Chí Minh');
-                        if ($geo)
-                        {
-                            $county = $geo->getCounty();
-                            $county = str_replace('Quận','', $county);
-                            $county = str_replace('District','', $county);
-                            $customer_data['district'] = trim($county);
-                        }
-                    }
-                    if($geo)
-                    {
-                        $customer_data['lat'] = $geo->getLatitude();
-                        $customer_data['lng'] = $geo->getLongitude();
+                        $county = $geo->getCounty();
+                        $county = str_replace('Quận','', $county);
+                        $county = str_replace('District','', $county);
+                        $customer_data['district'] = trim($county);
                     }
                 }
-                */
+                if($geo)
+                {
+                    $customer_data['lat'] = $geo->getLatitude();
+                    $customer_data['lng'] = $geo->getLongitude();
+                }
+            }
+            */
                 $customer_id = $this->Customers->insert($customer_data);
             }
             $distance = empty($customer['distance']) ? 0 : $customer['distance'];

@@ -55,14 +55,8 @@ class Customers extends BaseCustomers
     function get_list_customer_email($email)
     {
         $order_by = 'customers.email';
-        // $filters = array(
-        //     'select' => 'customers.*',
-        //      'customers.email'  => $email ,
-        // );
-        // return $this->select($filters);
         $email = eModel::matchRegexEmail($email);
         $sql = "SELECT customers.* FROM customers WHERE BINARY(email) = '" . $email . "'    ";
-
         $filters = "";
         return self::_do_sql($sql, $filters, array(), $order_by);
     }
@@ -86,12 +80,40 @@ class Customers extends BaseCustomers
         $filters = "";
         $result = self::_do_select_sql($sql, $filters, array(), $order_by);
         $customer_id = 0;
-        foreach ($result as $key) {
-            $customer_id = $key['customer_id'];
+        if(!empty($result)){
+            foreach ($result as $key) {
+                $customer_id = $key['customer_id'];
+            }
+            return $customer_id;
         }
-        return $customer_id;
+        else{
+            return $customer_id;
+        }
         //  return self::_do_sql($sql, $filters, array(), $order_by);
     }
+
+    //Hàm thực hiện việc tìm kiếm xem cột mobile đó select ra username và lấy customer_id   
+    function get_listOrder_mobile_username($mobile){
+        $order_by = 'customers.customer_id';
+        $sql = "SELECT customers.* FROM customers WHERE mobile = '" . $mobile . "' ";
+        $filters = "";
+        $result = self::_do_select_sql($sql, $filters, array(), $order_by);
+        $customer_id = 0;
+        if(!empty($result)){
+            foreach ($result as $key) {
+                if(!empty($key['username'])){
+                    $customer_id = $key['customer_id'];
+                    return $customer_id;
+                }
+            }
+            return $customer_id;
+        }
+        else{
+            return $customer_id;
+        }
+        //  return self::_do_sql($sql, $filters, array(), $order_by);
+    }
+
 
     function get_history_order_customer()
     {
@@ -99,9 +121,9 @@ class Customers extends BaseCustomers
         if (isset($_SESSION['user_account'][0]['customer_id'])) {
             $id = $_SESSION['user_account'][0]['customer_id'];
             $order_by = '';
-            $sql = "SELECT orders.code FROM `customers` INNER JOIN orders 
+            $sql = "SELECT orders.created_dtm as ngayTao, orders.code as code FROM `customers` INNER JOIN orders 
             ON orders.customer_id = customers.customer_id 
-            WHERE orders.customer_id = '" . $id . "' ";
+            WHERE orders.customer_id = '" . $id . "' AND orders.status = 'Completed' ORDER BY orders.created_dtm DESC ";
             if (!empty($sql)) {
                 $filters = "";
                 return self::_do_sql($sql, $filters, array(), $order_by);

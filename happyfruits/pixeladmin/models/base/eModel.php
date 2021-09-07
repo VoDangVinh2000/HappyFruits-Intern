@@ -172,6 +172,20 @@ class eModel
     }
 
 
+    //Hàm này khác select_one là không limit
+    static function _select_not_limit($table_name, $params = array()){
+        // $params['limit'] = 1;
+        $items = self::_select($table_name, $params);
+        if ($items)
+            return $items;
+        return '';
+    }
+
+    function select_not_limit($params = array()){
+        return self::_select_not_limit($this->table_name, $params);
+    }
+
+
 
     static function _do_select_sql($sql, $filters = array())
     {
