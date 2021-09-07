@@ -89,7 +89,6 @@ if (isset($_SESSION['user_account'])) {
                             <div class="row row-form-edit">
 
                                 <div class="col-md">
-                                    <!-- <input type="submit" value="Submit"> -->
                                     <div class="submit-button">
                                         <button name="register" class="efruit-en" type="submit">Submit</button>
                                         <button name="dang-ky" class="efruit-vi" type="submit">Gửi</button>

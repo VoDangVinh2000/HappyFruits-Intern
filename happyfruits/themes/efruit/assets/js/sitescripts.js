@@ -3,7 +3,7 @@ const cartClose = document.querySelector('.offcanvas-close');
 const btnCart = document.querySelectorAll('.btn-cart-nav');
 const cartModal = document.querySelector('.cart-modal');
 let cartOpen = 0;
-// Open
+Open
 btnCart.forEach(e => {
     e.addEventListener ('click', function () {
         cartModal.style.display = "block";
@@ -13,7 +13,7 @@ btnCart.forEach(e => {
     })
 })
 
-// Close
+Close
 cartLightBox.addEventListener ('click', function () {
     cartLightBox.classList.add('animate-fade-out');
     cartLightBox.classList.remove('animate-fade-in');
@@ -26,3 +26,8 @@ cartClose.addEventListener ('click', function () {
 })
 
 new SimpleLightbox({elements: '.product-gallery a'});
+
+// const cartclose = document.querySelector(".close");
+// cartclose.addEventListener('click', function(){
+//     cartclose.style.display = "none";
+// })
