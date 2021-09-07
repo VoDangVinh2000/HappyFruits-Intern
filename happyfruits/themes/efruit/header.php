@@ -68,7 +68,8 @@
     <?php endforeach; ?>
 
       <!--Thực tập !-->
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />   
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />  
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/cart.css" rel="stylesheet" /> 
     <link href="<?= get_theme_assets_url() ?>css/thuctap/simpleLightbox.min.css" rel="stylesheet" /> 
     <link href="<?= get_theme_assets_url() ?>css/thuctap/stylePageAccount.css" rel="stylesheet" />
         <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.carousel.min.css"> 

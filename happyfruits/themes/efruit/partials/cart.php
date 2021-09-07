@@ -1,4 +1,4 @@
-<div class="content">
+<!-- <div class="content">
     <div class="container tablet-screen pt-5" ng-show="total">
         <div class="product-area" ng-show="total">
             <div class="cart-table">
@@ -331,7 +331,6 @@
                                             <option value="zalopay">{{__('Thanh toán qua Zalo Pay')}}</option>
                                             <option value="vnpay">{{__('Thanh toán qua VN Pay')}}</option>
                                             <option value="momo">{{__('Thanh toán qua Momo')}}</option>
-                                            <!-- <option value="paypal">{{__('Thanh toán qua Paypal')}}</option> -->
                                         </select>
                                         <textarea class="form-control mt10" ng-model="shipping_description" placeholder="{{__('Ghi chú khi giao hàng')}}."></textarea>
                                     </div>
@@ -405,4 +404,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
