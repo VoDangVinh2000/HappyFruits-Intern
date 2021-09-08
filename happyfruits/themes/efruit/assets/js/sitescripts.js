@@ -3,7 +3,6 @@ const cartClose = document.querySelector('.offcanvas-close');
 const btnCart = document.querySelectorAll('.btn-cart-nav');
 const cartModal = document.querySelector('.cart-modal');
 let cartOpen = 0;
-Open
 btnCart.forEach(e => {
     e.addEventListener ('click', function () {
         cartModal.style.display = "block";

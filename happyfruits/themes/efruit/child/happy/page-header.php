@@ -13,13 +13,13 @@
                            <a class="nav-link" style="text-transform:uppercase" bind-translate="Trang chủ" href="/vi">TRANG CHỦ</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" href="#">Blog</a>
+                           <!-- <a class="nav-link" style="text-transform:uppercase" href="#">Blog</a> -->
                        </li>
                        <li class="nav-item">
                            <a class="nav-link" style="text-transform:uppercase" bind-translate="Giới thiệu" href="/vi/gioi-thieu">GIỚI THIỆU</a>
                        </li>
                        <li class="nav-item">
-                           <a class="nav-link" style="text-transform:uppercase" bind-translate="Cửa hàng" href="/vi">Cửa hàng</a>
+                           <!-- <a class="nav-link" style="text-transform:uppercase" bind-translate="Cửa hàng" href="/vi">Cửa hàng</a> -->
                        </li>
                    </ul>
                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
@@ -126,9 +126,9 @@
                                </a>
                            </li>
                        <?php } ?>
-                       <li class="nav-item main-cart-btn">
+                       <div class="nav-item main-cart-btn">
                            <a class="nav-link position-relative btn-cart-nav" data-toggle="modal" data-target="#exampleModal" id="show-cart" href="#">
-                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 13.87 16">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 13.87 16">
                                    <path d="M15.8,5.219a.533.533,0,0,0-.533-.485H13.132V4.44A3.333,3.333,0,0,0,9.932,1a3.333,3.333,0,0,0-3.2,3.44v.293H4.6a.533.533,0,0,0-.533.485L3,16.419A.539.539,0,0,0,3.532,17h12.8a.539.539,0,0,0,.533-.581Zm-8-.779A2.267,2.267,0,0,1,9.932,2.067,2.267,2.267,0,0,1,12.065,4.44v.293H7.8ZM4.118,15.933,5.084,5.8H6.732v.683a1.067,1.067,0,1,0,1.067,0V5.8h4.267v.683a1.067,1.067,0,1,0,1.067,0V5.8H14.78l.965,10.133Z" transform="translate(-2.997 -1)"></path>
                                </svg><br>
                                <span ng-show="totalQuantity" class="position-absolute translate-middle badge rounded-pill bg-cart">
@@ -136,7 +136,7 @@
                                    <span class="visually-hidden">unread messages</span>
                                </span>
                            </a>
-                       </li>
+                       </div>
                    </ul>
                </div>
            </div> <!-- container-fluid.// -->
@@ -221,6 +221,7 @@
                                                                                <span class="button-text efruit-vi">Chi tiết</span>
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
+                                                                           <div class="self" style="color:">MyTien</div>
                                                                        </a>
                                                                       
                                                                    </div>

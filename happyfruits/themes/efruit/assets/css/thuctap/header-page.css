@@ -1,13 +1,11 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;400;700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@200;400;700&display=swap');
 
-/* @import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Viaoda+Libre&display=swap'); */
 
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap');
 /* #5c5f63 */
 
+/* @font-face {} */
 header {
-  font-family: 'Lora', serif;
-  font-size: 16px;
   font-weight: 400;
 }
 
@@ -44,7 +42,7 @@ header {
 }
 
 body {
-  font-family: 'Lora', serif;
+  font-family: 'Lora', serif !important;
   font-size: 14px;
 }
 
@@ -207,7 +205,7 @@ body {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: 1000;
   display: none;
 }
 
@@ -349,7 +347,6 @@ body {
 
 .carousel-caption h2 {
   font-size: 3.7em;
-  font-family: 'Fira Sans Condensed', sans-serif;
   margin: .5em 0;
 }
 
@@ -374,6 +371,7 @@ body {
 /* --------------------PRODUCCT------------- */
 
 .product-item {
+  font-family: 'Lora',serif;
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
@@ -483,7 +481,7 @@ body {
 }
 
 .section-heading {
-  font-family: 'Viaoda Libre', cursive;
+  font-family: inherit;
   text-align: center;
   position: relative;
 }
@@ -528,7 +526,7 @@ body {
 }
 
 .btn-yum .yum, .btn-yum .count {
-  background: url(../img/add-to-cart.png) no-repeat scroll center center / 90% auto;
+  background: url("../../img/add-to-cart.png") no-repeat scroll center center / 90% auto;
   border-radius: 4em;
   bottom: 0;
   color: #aaa;
@@ -544,8 +542,16 @@ body {
   transition: transform 1s ease 0s;
   width: 2em;
   z-index: 10;
-  opacity: 0.5;
+  opacity: 1;
 }
+.shopping-cart {
+  display: inline-block;
+  background: url(../../img/cart.png) no-repeat 0 0;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px 0 0;
+}
+
 
 /* hover button add to cart  */
 
@@ -571,7 +577,6 @@ body {
 
 .category-caption h3 {
   position: relative;
-  font-family: 'Fira Sans Condensed', sans-serif;
   color: #fff;
   font-size: 2.5em;
 }
@@ -691,7 +696,6 @@ body {
 .about-content {
   font-size: 2em;
   text-align: center;
-  font-family: 'Viaoda Libre', cursive;
   padding: 0 10%;
 }
 
@@ -880,7 +884,6 @@ svg.infobox_icon {
 /* Product detail */
 
 .product-name {
-  font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: bold;
   color: #72a499;
 }
@@ -912,6 +915,14 @@ svg.infobox_icon {
   font-size: 60px;
 }
 
+.main-cart-btn {
+  display: block;
+  position: fixed;
+  right: 55px;
+}
+
+
+
 /* ============ desktop view ============ */
 
 @media all and (min-width: 992px) {
@@ -939,6 +950,12 @@ svg.infobox_icon {
   }
   .main-cart-btn {
     display: block;
+    position: fixed;
+    right: 55px;
+  }
+  .btn-cart-nav{
+    width: 30px;
+    height: 30px;
   }
   .navbar-brand-centered {
     left: 50%;
@@ -983,5 +1000,13 @@ svg.infobox_icon {
 @media (min-width:250px) and (max-width:766px) {
   .response-mega {
     display: block;
+  }
+}
+
+@media all and (min-width: 992px ) and (max-width: 1200px) {
+  .main-cart-btn {
+    display: block;
+    position: fixed;
+    right: 150px;
   }
 }
