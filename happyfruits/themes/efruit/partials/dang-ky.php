@@ -34,7 +34,7 @@
                             <p class="efruit-en">Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8</p>
                             <p class="efruit-vi">Mật khẩu phải có một số, một kí tự chữ cái, một kí tự thường và tối thiểu 8 kí tự</p>
                             <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" placeholder="Phone" required>
-
+                                <!--aaa!-->
                             <input id="email" type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
                             <div class="error">
                                 <?php
