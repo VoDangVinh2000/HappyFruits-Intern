@@ -21,7 +21,7 @@ if (isset($_SESSION['user_account'])) {
                 <div class="col-sm-4">
                     <div class="return-to-account">
                         <!--Show order history-->
-                        
+
                         <h3>Lịch sử đặt hàng</h3>
                         <table class="table table-responsive">
                             <thead>
@@ -31,12 +31,15 @@ if (isset($_SESSION['user_account'])) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php if(!empty($history_order_code)){
-                                    foreach ($history_order_code as $array) { 
+                                 <tr>
+                                    <?php if (!empty($history_order_code)) {
+                                        foreach ($history_order_code as $array) {
                                     ?>
-                                <td><?= $array['ngayTao'] ?></td>
-                                <td> <a href="/vi/don-hang/<?= $array['code'] ?>"><?= $array['code'] ?></a></td>
-                                <?php }}?>
+                                        <td><?= $array['ngayTao'] ?></td>
+                                        <td> <a href="/vi/don-hang/<?= $array['code'] ?>"><?= $array['code'] ?></a></td>
+                                    <?php }
+                                    } ?>
+                                  </tr>
                             </tbody>
                         </table>
                     </div>
@@ -85,7 +88,7 @@ if (isset($_SESSION['user_account'])) {
                                     </div>
                                 </div>
                             </div>
-            
+
                             <div class="row row-form-edit">
 
                                 <div class="col-md">

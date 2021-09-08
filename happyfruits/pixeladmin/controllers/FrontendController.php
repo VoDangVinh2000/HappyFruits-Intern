@@ -694,7 +694,7 @@ class FrontendController extends BasePostbackController
                         'promotion_code' => $promotion_code ? $promotion_code : null,
                         'branch_id' => post('branch_id', 1),
                         'payment_method' => $payment_method,
-                        'is_prepaid' => in_array($payment_method, array('bank', 'moca', 'zalopay', 'vnpay')) ? 1 : 0,
+                        'is_prepaid' => in_array($payment_method, array('bank', 'moca', 'zalopay', 'vnpay','momo')) ? 1 : 0,
                         'VAT' => $vat
                     );
                     if (branch_2_is_off())
@@ -763,6 +763,9 @@ class FrontendController extends BasePostbackController
                                 case 'vnpay':
                                     $des .= ' qua VN Pay';
                                     break;
+                                    case 'momo':
+                                        $des .= ' qua Momo';
+                                        break;
                             }
                         }
                         $payment_voucher_data = array(
@@ -1153,7 +1156,7 @@ class FrontendController extends BasePostbackController
                 'promotion_code' => $promotion_code ? $promotion_code : null,
                 'branch_id' => post('branch_id', 1),
                 'payment_method' => $payment_method,
-                'is_prepaid' => in_array($payment_method, array('bank', 'moca', 'zalopay', 'vnpay')) ? 1 : 0,
+                'is_prepaid' => in_array($payment_method, array('bank', 'moca', 'zalopay', 'vnpay','momo')) ? 1 : 0,
                 'VAT' => $vat
             );
             if (branch_2_is_off())
@@ -1221,6 +1224,9 @@ class FrontendController extends BasePostbackController
                             break;
                         case 'vnpay':
                             $des .= ' qua VN Pay';
+                            break;
+                        case 'momo':
+                            $des .= ' qua Momo';
                             break;
                     }
                 }

@@ -244,6 +244,7 @@ var lang_table = {
         'Chuyển khoản': 'Bank transfer',
         'Chuyển khoản ngân hàng': 'Bank transfer',
         'Thanh toán qua Moca': 'Pay with Moca',
+        'Thanh toán qua Momo': 'Pay with Momo',
         'Thanh toán qua Zalo Pay': 'Pay with Zalo Pay',
         'Thanh toán qua VN Pay': 'Pay with VN Pay',
         'Chưa đánh giá': 'Not rated',

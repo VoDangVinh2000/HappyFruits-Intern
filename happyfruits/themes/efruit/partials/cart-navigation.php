@@ -159,20 +159,29 @@
                                         </div>
                                         <div class="col-sm-12 col-md-6">
                                             <div class="input-group">
-                                                <input placeholder="{{__('Họ và tên')}}"  style="font-size: 15px;" type="text" class="form-control" ng-model="customer.booker_fullname" name="fullname" required="required" />
-                                                
+                                                <input placeholder="{{__('Họ và tên')}}" style="font-size: 15px;" type="text" class="form-control" ng-model="customer.booker_fullname" name="fullname" required="required" />
+
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-6">
                                             <div class="input-group">
-                                                <input placeholder="{{__('SĐT')}}" type="text"  style="font-size: 15px;" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
-                                                
+                                                <?php if (isset($_SESSION['user_account'])) { ?>
+                                                    <input placeholder="<?= $_SESSION['user_account'][0]['mobile_account'] ?>" type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+                                                <?php } else { ?>
+                                                    <input placeholder="SĐT" type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+                                                <?php } ?>
+                                                <!-- <input placeholder="{{__('SĐT')}}" type="text"  style="font-size: 15px;" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" /> -->
+
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-6">
                                             <div class="input-group">
-                                                <input placeholder="Email" type="email"  style="font-size: 15px;" class="form-control email" ng-model="customer.email" name="email" required="required" />
-                                                
+                                                <!-- <input placeholder="Email" type="email" style="font-size: 15px;" class="form-control email" ng-model="customer.email" name="email" required="required" /> -->
+                                                <?php if (isset($_SESSION['user_account'])) { ?>
+                                                    <input placeholder="<?= $_SESSION['user_account'][0]['email'] ?>" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
+                                                <?php } else { ?>
+                                                    <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
+                                                <?php } ?>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-12">
@@ -190,33 +199,33 @@
                                     <?php endif; ?>
                                     <div class="col-sm-12 col-md-12">
                                         <div class="input-group">
-                                            <input placeholder="{{__('Địa chỉ')}}"  style="font-size: 15px;" type="text" class="form-control" id="customer_address" ng-model="customer.address" name="address" required="required" />
-                                            
+                                            <input placeholder="{{__('Địa chỉ')}}" style="font-size: 15px;" type="text" class="form-control" id="customer_address" ng-model="customer.address" name="address" required="required" />
+
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-12 district-container hidden">
                                         <div class="input-group">
                                             <?= html_select_district('form-control', "-- {{__('Quận')}} *", 'ng-model="customer.district" j-change id="district_selector"', 1) ?>
-                                            
+
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <div class="input-group">
-                                            <input placeholder="{{__('Họ và tên')}}" type="text"  style="font-size: 15px;" class="form-control" ng-model="customer.fullname" name="fullname" required="required" />
-                                            
+                                            <input placeholder="{{__('Họ và tên')}}" type="text" style="font-size: 15px;" class="form-control" ng-model="customer.fullname" name="fullname" required="required" />
+
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6">
                                         <div class="input-group">
-                                            <input placeholder="{{__('SĐT')}}" type="text"  style="font-size: 15px;" class="form-control" only-number ng-model="customer.mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
-                                            
+                                            <input placeholder="{{__('SĐT')}}" type="text" style="font-size: 15px;" class="form-control" only-number ng-model="customer.mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+
                                         </div>
                                     </div>
                                     <?php if (!env('NEED_BOOKER_DETAILS')) : ?>
                                         <div class="col-sm-12 col-md-6">
                                             <div class="input-group">
-                                                <input placeholder="Email" type="email"  style="font-size: 15px;" class="form-control email" ng-model="customer.email" name="email" required="required" />
-                                                
+                                                <input placeholder="Email" type="email" style="font-size: 15px;" class="form-control email" ng-model="customer.email" name="email" required="required" />
+
                                             </div>
                                         </div>
                                     <?php endif; ?>
@@ -300,19 +309,19 @@
                                         <div class="col-sm-12 col-md-12">
                                             <div class="input-group">
                                                 <input placeholder="{{__('Tên công ty')}}" style="font-size: 15px;" type="text" class="form-control" id="company_name" ng-model="customer.company_name" name="address" required="required" />
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-12">
                                             <div class="input-group">
                                                 <input placeholder="{{__('Mã số thuế')}}" style="font-size: 15px;" type="text" class="form-control" id="company_tax_code" ng-model="customer.company_tax_code" name="company_tax_code" maxlength="15" minlength="10" required="required" />
-                                                
+
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-12">
                                             <div class="input-group">
                                                 <input placeholder="{{__('Địa chỉ công ty')}}" style="font-size: 15px;" type="text" class="form-control" id="company_address" ng-model="customer.company_address" name="company_address" required="required" />
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -324,6 +333,7 @@
                                                 <option value="moca">{{__('Thanh toán qua Moca')}}</option>
                                                 <option value="zalopay">{{__('Thanh toán qua Zalo Pay')}}</option>
                                                 <option value="vnpay">{{__('Thanh toán qua VN Pay')}}</option>
+                                                <option value="momo">{{__('Thanh toán qua Momo')}}</option>
                                             </select>
                                             <textarea class="form-control mt10" ng-model="shipping_description" placeholder="{{__('Ghi chú khi giao hàng')}}."></textarea>
                                         </div>
@@ -341,6 +351,10 @@
                                         </div>
                                         <div class="col-sm-6 mt10 text-center" ng-show="payment_method=='vnpay'">
                                             <a href="<?= get_theme_assets_url() ?>img/vnpay.png" class="fancybox" rel="payment-method-vnpay"><img loading="lazy" width="120" alt="" src="<?= get_theme_assets_url() ?>img/vnpay.png" /></a><br />
+                                            <span class="small" bind-translate="Nhấn vào ảnh để xem rõ hơn">Nhấn vào ảnh để xem rõ hơn</span>
+                                        </div>
+                                        <div class="col-sm-6 mt10 text-center" ng-show="payment_method=='momo'">
+                                            <a href="<?= get_theme_assets_url() ?>img/momo.jpg" class="fancybox" rel="payment-method-momo"><img loading="lazy" width="120" alt="" src="<?= get_theme_assets_url() ?>img/momo.jpg" /></a><br />
                                             <span class="small" bind-translate="Nhấn vào ảnh để xem rõ hơn">Nhấn vào ảnh để xem rõ hơn</span>
                                         </div>
                                     </div>

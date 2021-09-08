@@ -786,7 +786,7 @@
                     'VAT' => $VAT,
                     'branch_id' => post('branch_id', LHP_BRANCH_ID),
                     'payment_method' => $payment_method,
-                    'is_prepaid' => in_array($payment_method, array('bank', 'moca', 'zalopay', 'vnpay'))?1:0
+                    'is_prepaid' => in_array($payment_method, array('bank', 'moca', 'zalopay', 'vnpay','momo'))?1:0
                 );
 	            if (branch_2_is_off())
 		            $update_data['branch_id'] = LHP_BRANCH_ID;

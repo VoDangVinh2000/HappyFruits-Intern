@@ -3,7 +3,8 @@ const cartClose = document.querySelector('.offcanvas-close');
 const btnCart = document.querySelectorAll('.btn-cart-nav');
 const cartModal = document.querySelector('.cart-modal');
 let cartOpen = 0;
-Open
+//Open
+if(btnCart){
 btnCart.forEach(e => {
     e.addEventListener ('click', function () {
         cartModal.style.display = "block";
@@ -12,18 +13,26 @@ btnCart.forEach(e => {
         cartOpen = 1;
     })
 })
+}
 
-Close
+
+//Close
+if(cartLightBox){
 cartLightBox.addEventListener ('click', function () {
     cartLightBox.classList.add('animate-fade-out');
     cartLightBox.classList.remove('animate-fade-in');
     cartModal.style.display = "none";
 })
+}
+
+if(cartClose){
 cartClose.addEventListener ('click', function () {
     cartLightBox.classList.add('animate-fade-out');
     cartLightBox.classList.remove('animate-fade-in');
     cartModal.style.display = "none";
 })
+
+}
 
 new SimpleLightbox({elements: '.product-gallery a'});
 

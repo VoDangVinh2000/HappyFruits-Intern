@@ -124,20 +124,20 @@
                                             </div>
                                             <div class="col-sm-12 col-md-10">
                                                 <div class="input-group">
-                                                    <?php if (isset($_SESSION['user_account'])) { ?>
-                                                        <input placeholder="<?= $_SESSION['user_account'][0]['mobile_account'] ?>" type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile"   ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
-                                                    <?php } else { ?>
+                                                    <?//php if (isset($_SESSION['user_account'])) { ?>
+                                                        <input placeholder="<?//= $_SESSION['user_account'][0]['mobile_account'] ?>" type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile"   ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
+                                                    <?//php } else { ?>
                                                         <input placeholder="SĐT"  type="text" class="form-control mt10" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" />
-                                                    <?php } ?> 
+                                                    <?//php } ?> 
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-md-10">
                                                 <div class="input-group">
-                                                    <?php if (isset($_SESSION['user_account'])) { ?>
-                                                        <input placeholder="<?= $_SESSION['user_account'][0]['email'] ?>" type="email" class="form-control email mt10" ng-model="customer.email"  name="email" required="required" />
-                                                    <?php } else { ?>
+                                                    <?//php if (isset($_SESSION['user_account'])) { ?>
+                                                        <input placeholder="<?//= $_SESSION['user_account'][0]['email'] ?>" type="email" class="form-control email mt10" ng-model="customer.email"  name="email" required="required" />
+                                                    <?//php } else { ?>
                                                         <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
-                                                    <?php } ?>
+                                                    <?//php } ?>
                                                 
 
                                                 </div>

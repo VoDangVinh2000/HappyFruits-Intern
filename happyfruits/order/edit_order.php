@@ -141,6 +141,7 @@
                             <option value="moca">{{__('Thanh toán qua Moca')}}</option>
                             <option value="zalopay">{{__('Thanh toán qua Zalo Pay')}}</option>
                             <option value="vnpay">{{__('Thanh toán qua VN Pay')}}</option>
+                            <option value="momo">{{__('Thanh toán qua Momo')}}</option>
                         </select>
                     </div>
                     <div class="input-group" ng-show="VAT > 0">

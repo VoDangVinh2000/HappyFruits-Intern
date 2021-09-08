@@ -1197,13 +1197,14 @@ function get_payment_methods_options()
         'zalopay' => 'Thanh toán qua Zalo Pay',
         'vnpay' => 'Thanh toán qua VN Pay',
         'pay_later' => 'Thanh toán sau',
-        'other' => 'Hình thức thanh toán khác'
+        'other' => 'Hình thức thanh toán khác',
+        'momo' => "Thanh toán qua Momo",
     );
 }
 
 function is_prepaid_order($payment_method)
 {
-    return !empty($payment_method) && in_array($payment_method, array('bank', 'moca', 'zalopay', 'vnpay', 'shipnow'));
+    return !empty($payment_method) && in_array($payment_method, array('bank', 'moca', 'zalopay', 'vnpay', 'shipnow','momo'));
 }
 
 function branch_2_is_off()
@@ -1685,7 +1686,8 @@ function get_package_options()
             'bank' => 'Chuyển khoản ngân hàng',
             'moca' => 'Thanh toán qua Moca',
             'zalopay' => 'Thanh toán qua Zalo Pay',
-            'vnpay' => 'Thanh toán qua VN Pay'
+            'vnpay' => 'Thanh toán qua VN Pay',
+            'momo' => 'Thanh toán qua MoMo',
         ),
         'bottle_return' => array(
             'yes' => 'Trả lại chai/hũ, không phát sinh chi phí',
