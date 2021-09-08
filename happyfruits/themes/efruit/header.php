@@ -18,8 +18,11 @@
 
     <link rel="shortcut icon" href="<?= get_child_theme_assets_url() ?>img/favicon.ico" />
     <link rel="image_src" href="<?= get_child_theme_assets_url() ?>img/main_logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-   
+    
     <?php
     $preload_issue_links = array(
         get_theme_assets_url() . 'fonts/UVNBaiSau_R.ttf',
@@ -56,25 +59,29 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!--end!-->
-    <!-- <link href="<?//= get_theme_assets_url() . ASSET_UPDATED_DATE ?>/main.min.css" rel="stylesheet" /> -->
+    <!-- <link href="<? //= get_theme_assets_url() . ASSET_UPDATED_DATE 
+                        ?>/main.min.css" rel="stylesheet" /> -->
     <link href="<?= get_theme_assets_url() ?>css/styles-all.css?v=<?= VERSION ?>" rel="stylesheet" />
     <?php if (env('CHILD_THEME')) : ?>
-        <!-- <link href="<?//= get_child_theme_assets_url() ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" /> -->
+        <!-- <link href="<? //= get_child_theme_assets_url() 
+                            ?>css/main.css?v=<?= VERSION ?>" rel="stylesheet" /> -->
         <link href="<?= get_theme_assets_url() ?>css/thuctap/header-page.css" rel="stylesheet" />
-    <?php endif; ?> 
+    <?php endif; ?>
     <!-- Custom styles for this template -->
     <?php if (!empty($css)) foreach ($css as $c) : ?>
         <link href="<?= (is_array($c) ? $c['href'] : $c) . '?v=' . VERSION ?>" rel="stylesheet" <?= isset($c['media']) && is_array($c) ? ('media="' . $c['media'] . '"') : '' ?> />
     <?php endforeach; ?>
 
-      <!--Thực tập !-->
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />  
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/cart.css" rel="stylesheet" /> 
-    <link href="<?= get_theme_assets_url() ?>css/thuctap/simpleLightbox.min.css" rel="stylesheet" /> 
+    <!--Thực tập !-->
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/footer.css" rel="stylesheet" />
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/cart.css" rel="stylesheet" />
+    <link href="<?= get_theme_assets_url() ?>css/thuctap/simpleLightbox.min.css" rel="stylesheet" />
     <link href="<?= get_theme_assets_url() ?>css/thuctap/stylePageAccount.css" rel="stylesheet" />
-        <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.carousel.min.css"> 
-    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.theme.default.css"> 
-    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/cart.css"> 
+    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.theme.default.css">
+    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/cart.css">
+    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/stylePageAccount.css">
+    
     <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>

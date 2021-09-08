@@ -13,6 +13,7 @@ if (!empty($item)) : ?>
                         </div>
                     </a>
                 <?php endif; ?>
+
             </div>
             <div class="row mt-2">
                 <div class="col-8 product-name">

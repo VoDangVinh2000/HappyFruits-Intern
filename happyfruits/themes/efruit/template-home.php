@@ -1,6 +1,7 @@
- <?php $this->load_theme_file('page-header.php') 
- ?>
- <?//php// var_dump($test_result); ?>
+ <?php $this->load_theme_file('page-header.php')
+    ?>
+ <? //php// var_dump($test_result); 
+    ?>
  <!-- slider -->
  <div id="carouselHappyFruits" class="carousel slide" data-bs-ride="carousel">
      <div class="carousel-indicators">
@@ -19,7 +20,7 @@
                  <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
                  <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
                  <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop"  href="/vi/fruit-baskets">
+                 <a class="btn-shop" href="/vi/fruit-baskets">
                      <div class="button-content-wrapper">
                          <span class="button-text">SHOP NOW</span>
                      </div>
@@ -100,8 +101,8 @@
                      </div>
                      <div class="content_wrapper">
                          <div class="infobox-title">
-                            <h3 class="efruit-vi">Giảm giá</h3>
-                            <h3 class="efruit-en">Discounts</h3>
+                             <h3 class="efruit-vi">Giảm giá</h3>
+                             <h3 class="efruit-en">Discounts</h3>
                          </div>
                          <div class="infobox-content">Best sale (Free deals) deals everyweek</div>
                      </div>
@@ -126,8 +127,8 @@
                      </div>
                      <div class="content_wrapper">
                          <div class="infobox-title">
-                            <h3 class="efruit-vi">Hỗ Trợ 24/7</h3>
-                            <h3 class="efruit-en">Support 24/7</h3>
+                             <h3 class="efruit-vi">Hỗ Trợ 24/7</h3>
+                             <h3 class="efruit-en">Support 24/7</h3>
                          </div>
                          <div class="infobox-content efruit-vi">Hỗ Trợ Tận Tâm</div>
                          <div class="infobox-content efruit-en">Dedicated Support</div>
@@ -231,5 +232,6 @@
              <?php $this->load_partial('disscount') ?>
          </div>
      </div>
+     
  </div>
  <?php $this->load_theme_file('page-footer.php') ?>

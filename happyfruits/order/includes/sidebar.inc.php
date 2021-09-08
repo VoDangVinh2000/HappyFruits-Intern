@@ -48,7 +48,7 @@
                     <?php
                         $action = 'ng-click="addItem('.$category['product_id'].')" ng-right-click="removeItem('.$category['product_id'].',1)"';
                         if($category['is_box']){
-                            $action = 'ng-click="showProduct('.$category['product_id'].')"';
+                            $action = 'ng-click="('.$category['product_id'].')"';
                         }
                     ?>
                     <li <?=$action?> ng-class="{active:quantityOfItem[<?=$category['product_id']?>]}" data-placement="top" title="{{<?=$category['price']?> + '.000đ'}}">
