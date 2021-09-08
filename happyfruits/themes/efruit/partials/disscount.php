@@ -2,14 +2,15 @@
     <div class="email-wrapper">
         <div class="container container-disscount">
             <div class="row">
-                <div class="col-md-5 col-sm-12 col-12">
+                <div class="col-md-12 col-sm-12 col-12">
                     <div class="text-holder">
-                        <h3>Get Discount 20% Off</h3>
-                        <span>Subscribe to our newsletters now and stay up-to-date with new collections, the latest
-                            lookbooks.</span>
+                        <h3 class="efruit-en" style="text-align: center;">Get Discount 5% Off</h3>
+                        <h3 class="efruit-vi">Được Giảm Giá 5%</h3>
+                        <!-- <span>Subscribe to our newsletters now and stay up-to-date with new collections, the latest
+                            lookbooks.</span> -->
                     </div>
                 </div>
-                <div class="col-md-6 col-sm-12 col-12">
+                <!-- <div class="col-md-6 col-sm-12 col-12">
                     <div class="subscribe-name-email">
                         <input type="text" name="subscribe-name" class="subscribe-name" placeholder="Your First Name">
                         <input type="text" name="subscribe-email" class="subscribe-email" placeholder="Your Email">
@@ -20,7 +21,7 @@
                             </svg>
                         </a>
                     </div>
-                </div>
+                </div -->
             </div>
         </div>
     </div>
