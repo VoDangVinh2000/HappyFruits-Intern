@@ -54,7 +54,7 @@
            <div class="container">
                <ul class="navbar-nav ms-auto right-main-nav sub-cart">
                    <li class="nav-item">
-                       <a class="nav-link position-relative btn-cart-nav" data-toggle="modal" data-target="#exampleModal"  id="show-cart" href="#">
+                       <a class="nav-link position-relative btn-cart-nav" data-toggle="modal" data-target="#exampleModal" id="show-cart" href="#">
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 13.87 16">
                                <path d="M15.8,5.219a.533.533,0,0,0-.533-.485H13.132V4.44A3.333,3.333,0,0,0,9.932,1a3.333,3.333,0,0,0-3.2,3.44v.293H4.6a.533.533,0,0,0-.533.485L3,16.419A.539.539,0,0,0,3.532,17h12.8a.539.539,0,0,0,.533-.581Zm-8-.779A2.267,2.267,0,0,1,9.932,2.067,2.267,2.267,0,0,1,12.065,4.44v.293H7.8ZM4.118,15.933,5.084,5.8H6.732v.683a1.067,1.067,0,1,0,1.067,0V5.8h4.267v.683a1.067,1.067,0,1,0,1.067,0V5.8H14.78l.965,10.133Z" transform="translate(-2.997 -1)"></path>
                            </svg><br>
@@ -156,7 +156,7 @@
                                        </a>
                                        <a class="nav-link dropdown-toggle efruit-en text-uppercase px-3" href="/vi/fruit-baskets" data-bs-toggle="dropdown">
                                            <?= $tile['en_text'] ?>
-                                      </a>
+                                       </a>
                                <?php }
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
@@ -222,6 +222,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
+                                                                      
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -319,6 +320,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
+                                                                     
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -737,9 +739,7 @@
                <div class="modal-dialog">
                    <div class="modal-content">
                        <div class="input-group input-group-lg">
-                           <input id="input-search" type="text" aria-label="Recipient's username"
-                           aria-describedby="button-addon2" name="key" 
-                           class="form-control" placeholder="Search...">
+                           <input id="input-search" type="text" aria-label="Recipient's username" aria-describedby="button-addon2" name="key" class="form-control" placeholder="Search...">
                            <button name="search" value="submit" class="btn btn-outline-secondary" type="submit" id="button-addon2" style="padding: 1.5em 1.8em; border-radius: 0; background: #333; border: none;">
                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="white">
                                    <path d="M86.065,85.194a6.808,6.808,0,1,0-.871.871L89.129,90,90,89.129Zm-1.288-.422a5.583,5.583,0,1,1,1.64-3.953A5.6,5.6,0,0,1,84.777,84.772Z" transform="translate(-74 -74)"></path>
