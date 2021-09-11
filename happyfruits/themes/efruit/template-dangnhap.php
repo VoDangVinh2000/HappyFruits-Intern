@@ -5,7 +5,7 @@
             <div class="inside-bread-section">
                 <div class="container-section">
                     <div class="title">
-                        <h1>Account</h1>
+                        <!-- <h1>Account</h1> -->
                         <ul>
                             <li><a href="#">Home</a></li>
                             <li><span>Account</span></li>

@@ -115,10 +115,34 @@ h6 {
     border-right: none !important;
     background: none;
     border-bottom: 1px solid darkgray;
-    width: 100%;
+    width: 95%;
     padding: 10px 0 10px 0 !important;
     box-sizing: border-box;
+    position: relative;
+    left: 10px;
 }
+
+/* start title input login  */
+.username-input span {
+    position: relative;
+    top: 15px;
+}
+
+/* end title input login  */
+
+/* start title input register  */
+.username-input {
+    display: flex;
+    width: 100%;
+}
+.title-input-register {
+    width: 22%;
+}
+.input-register {
+    width: 78%;
+}
+/* end title input register  */
+
 .suggest-message{
     padding-top: 10px;
 }

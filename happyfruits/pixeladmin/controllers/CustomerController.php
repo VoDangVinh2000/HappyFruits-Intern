@@ -221,7 +221,37 @@ class CustomerController extends BaseController
     {
         $error_username_password = null;
         $error_acount_does_not_exist = null;
-        if (isset($_POST['username'])) {
+        if (isset($_POST['username']) && isset($_POST['login'])) {
+            //Kiểm tra username password khi đăng nhập
+            $username = eModel::matchRegexLogin($_POST['username']);
+            $password = md5($_POST['password']);
+            $customer = new Customers;
+            $data = $customer->get_list_customer_username($username);
+
+            //kiểm tra username có tồn tại trên csdl hay không
+            if ($data) {
+                if ($password == $data[0]['password']) {
+                    //tạo session lưu phiên đăng nhập 
+                    if (!isset($_SESSION)) {
+                        session_start();
+                    }
+                    $_SESSION['user_account'] = $data;
+
+                    header('location:/vi');
+                } else {
+                    $error_username_password = 'Incorrect account or password';
+                    setcookie("error_username_password", $error_username_password, time() + 600, "/");
+
+                    header('location:/vi/dang-nhap');
+                }
+            } else {
+                $error_acount_does_not_exist = 'This account does not exist';
+                setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, time() + 600, "/");
+
+                header('location:/vi/dang-nhap');
+            }
+        }
+        elseif (isset($_POST['username']) && isset($_POST['dang-nhap'])) {
             //Kiểm tra username password khi đăng nhập
             $username = eModel::matchRegexLogin($_POST['username']);
             $password = md5($_POST['password']);
@@ -405,6 +435,72 @@ class CustomerController extends BaseController
                 }
             }
         }
+        elseif ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['gui-quen-pass'])) {
+
+            $errors = '';
+            $email = '';
+            $error_email = null;
+            $send_mail_success = null;
+            setcookie("error_email", $error_email, 0, "/");
+            setcookie("send_mail_success", $send_mail_success, 0, "/");
+            // kiem tra email co ton tai va dung dinh dang
+            // if (isset($_POST['email']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+            //     $email = $_POST['email'];
+            // } else {
+            //     $errors = "email";
+            // }
+            if (isset($_POST['email']) && is_email_exists($_POST['email'])) {
+                $email = $_POST['email'];
+            } else {
+                $errors = "email";
+            }
+            if (empty($_POST['email'])) {
+                $error_email = 'Xin hãy nhập email';
+                setcookie("error_email", $error_email, time() + 600, "/");
+                header('Location: vi/dang-nhap');
+                exit();
+            }
+
+            if (!empty($errors)) {
+                $error_email = 'Email không tồn tại';
+                setcookie("error_email", $error_email, time() + 600, "/");
+                header('Location: vi/dang-nhap');
+                exit();
+            }
+            if (empty($errors) && !empty($email)) {
+                $conn = open_database();
+                $sql = "SELECT  `customer_id`, `customer_name`, `username`, `email` FROM `customers` WHERE BINARY(email) = '" . $email . "'";
+                $result = $conn->query($sql);
+                $account = mysqli_fetch_assoc($result);
+
+                if (empty($account)) {
+                    $error_email = 'Email không tồn tại';
+                    setcookie("error_email", $error_email, time() + 600, "/");
+                    header('Location: vi/dang-nhap');
+                    exit();
+                }
+
+                $randPassword = rand_string(8);
+                $content = "<h3> Dear " . $account['username'] . '</h3>';
+                $content .= "<p>Gần đây, chúng tôi đã nhận được yêu cầu cấp lại mật khẩu của bạn.</p>";
+                $content .= "<p>Chúng tôi đã cập nhật và gửi cho bạn một mật khẩu mới</p>";
+                $content .= "<p>Mật khẩu mới của bạn là : <b>$randPassword</b></p> ";
+                $sendMail = Customers::send($content, $account['customer_name'], $account['email']);
+                if ($sendMail) {
+                    $password = md5($randPassword);
+                    $sqlUpdate = "UPDATE `customers` SET `password`= '" . $password . "' WHERE `customer_id` = '" . $account['customer_id'] . "' ";
+                    $conn->query($sqlUpdate);
+                    $send_mail_success = 'Chúng tôi đã gửi một mật khẩu mới đến email của bạn. Xin vui lòng kiểm tra  nó';
+                    setcookie("send_mail_success", $send_mail_success, time() + 600, "/");
+                    header('Location: /vi/dang-nhap');
+                } else {
+                    $error_email = 'Đã xảy ra lỗi không thể lấy lại mật khẩu';
+                    setcookie("error_email", $error_email, time() + 600, "/");
+                    header('Location: /vi/dang-nhap');
+                    exit();
+                }
+            }
+        }
     }
 
     //đổi mật khẩu
@@ -412,7 +508,7 @@ class CustomerController extends BaseController
     {
         setcookie("error_username", "", 0, "/");
         setcookie("error_password", "", 0, "/");
-        if (isset($_POST['username'])) {
+        if (isset($_POST['username']) && isset($_POST['change-password'])) {
             $username = $_POST['username'];
             $current_password = md5($_POST['current-password']);
             $new_password = md5($_POST['new-password']);
@@ -434,6 +530,32 @@ class CustomerController extends BaseController
                 }
             } else {
                 setcookie("error_username", "Username does not exist", time() + 600, "/");
+
+                header('Location: /vi/dang-nhap');
+            }
+        }
+        elseif (isset($_POST['username']) && isset($_POST['doi-mat-khau'])) {
+            $username = $_POST['username'];
+            $current_password = md5($_POST['current-password']);
+            $new_password = md5($_POST['new-password']);
+
+            $conn = open_database();
+            $sql = "SELECT  `password` FROM `customers` WHERE BINARY(username) = '" . $username . "'";
+            $result = $conn->query($sql);
+            $account = mysqli_fetch_assoc($result);
+
+            if (!empty($account)) {
+                if ($current_password === $account['password']) {
+                    $sqlUpdate = "UPDATE `customers` SET `password`= '" . $new_password . "' WHERE BINARY(`username`) = " . "'" . $username . "'";
+                    $conn->query($sqlUpdate);
+                    setcookie("change_password_success", "Đổi mật khẩu thành công", time() + 600, "/");
+                    header('Location: /vi/dang-nhap');
+                } else {
+                    setcookie("error_password", "Mật khẩu không chính xác", time() + 600, "/");
+                    header('Location: /vi/dang-nhap');
+                }
+            } else {
+                setcookie("error_username", "Tên đăng nhập không tồn tại", time() + 600, "/");
 
                 header('Location: /vi/dang-nhap');
             }

@@ -13,7 +13,15 @@
                     <!--Form action register-->
                     <form action="/register" method="post">
                         <div class="main-create-account-fillout">
-                            <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" type="text" name="username_en" class="input-account" autocapitalize="words" autofocus placeholder="Username" required>
+                            <div class="username-input">
+                                <div class="title-input-register">
+                                    <span class="efruit-vi">Tên đăng nhập</span>
+                                    <span class="efruit-en">Username</span>
+                                </div>
+                                <div class="input-register">
+                                    <input id="username" pattern="[a-zA-Z0-9]{6,}" title="Username must have minimum length is 6, no special characters" type="text" name="username_en" class="input-account" autocapitalize="words" autofocus required>
+                                </div>
+                            </div>
                             <p class="efruit-en suggest-message">Username must have limited 6 characters, no special characters.</p>
                             <p class="efruit-vi suggest-message">Tên đăng nhập có ít nhất 6 kí tự, không chứa kí tự đặc biệt.</p>
                             <div class="error">
@@ -27,15 +35,38 @@
                             </div>
 
                             <div class="password-wrapper">
-
-                                <input pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{8,}" title="Password must have limited one number, one alphabetic characters and minimum length is 5" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" placeholder="Password" required>
-                                <i class="fas fa-eye" id="btnShowPass"></i>
+                                <div class="username-input">
+                                    <div class="title-input-register">
+                                        <span class="efruit-vi">Mật khẩu</span>
+                                        <span class="efruit-en">Password</span>
+                                    </div>
+                                    <div class="input-register">
+                                        <input pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{8,}" title="Password must have limited one number, one alphabetic characters and minimum length is 5" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" required>
+                                        <i class="fas fa-eye" id="btnShowPass"></i>
+                                    </div>
+                                </div>
                             </div>
                             <p class="efruit-en">Password must have limited one number, one alphabetic characters and minimum length is 5</p>
                             <p class="efruit-vi">Mật khẩu phải có một số, một kí tự chữ cái và tối thiểu 5 kí tự</p>
-                            <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" placeholder="Phone" required>
-                                <!--aaa!-->
-                            <input id="email" type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email" required>
+
+                            <div class="username-input">
+                                <div class="title-input-register">
+                                    <span class="efruit-vi">Số điện thoại</span>
+                                    <span class="efruit-en">Phone</span>
+                                </div>
+                                <div class="input-register">
+                                <input id="phone" type="number" name="phone_en" class="input-account" autocapitalize="words" required>
+                                </div>
+                            </div>
+                            <!--aaa!-->
+                            <div class="username-input">
+                                <div class="title-input-register">
+                                    <span>Email</span>
+                                </div>
+                                <div class="input-register">
+                                    <input id="email" type="email" name="email" class="input-account" autocapitalize="words" required>
+                                </div>
+                            </div>
                             <div class="error">
                                 <?php
                                 if (isset($_COOKIE['error_email'])) {
