@@ -113,8 +113,8 @@
                                 <input type="text"  class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
                                 <input type="text"  class="input-account" name="current-password" autocapitalize="words" placeholder="Current password" required>
                                 <!--  -->
-                                <input type="text" class="input-account" name="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" 
-                                title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8"
+                                <input type="text" class="input-account" name="new-password"  pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{5,}"
+                                title="Password must have limited one number, one alphabetic characters and minimum length is 5"
                                 autocapitalize="words" placeholder="New password"  required>                                
 
                             </div>

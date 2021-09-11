@@ -28,7 +28,7 @@
 
                             <div class="password-wrapper">
 
-                                <input pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{8,}" title="Password must have limited one number, one alphabetic characters and minimum length is 5" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" placeholder="Password" required>
+                                <input pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{5,}" title="Password must have limited one number, one alphabetic characters and minimum length is 5" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" placeholder="Password" required>
                                 <i class="fas fa-eye" id="btnShowPass"></i>
                             </div>
                             <p class="efruit-en">Password must have limited one number, one alphabetic characters and minimum length is 5</p>

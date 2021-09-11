@@ -220,7 +220,10 @@ h6 {
 
 
 /*css my-account*/
-
+.order-history{
+    height: 100px;
+    overflow: auto;
+}
 .form-edit-profile {
     padding-top: 20px;
 }

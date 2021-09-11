@@ -172,8 +172,12 @@
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <!--response-mega đc css để responsive of device!-->
-                                           <h4 class="efruit-vi text-center">GIỎ TRÁI CÂY</h4>
-                                           <h4 class="efruit-en text-center">FRUIT_BASKETS</h4>
+                                           <?php foreach ($tiles as $tile) {
+                                                if ($tile['cat'] == 14) { ?>
+                                                   <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                                   <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                           <?php }
+                                            } ?>
                                            <div class="col-lg-5">
                                                <div class="row">
                                                    <?php
@@ -229,9 +233,9 @@
                                                                                <span class="button-text efruit-vi">Chi tiết</span>
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
-                                                                           <div class="self" style="color:">MyTien</div>
+                                                                           <!-- <div class="self" style="color:">MyTien</div> -->
                                                                        </a>
-                                                                      
+
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -268,8 +272,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">HAMPER- HỘP TRÁI CÂY</h4>
-                                       <h4 class="efruit-en text-center">HAMPER - BOX FRUIT</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 15) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -329,7 +337,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
-                                                                     
+
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -365,8 +373,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">HOA TRÁI CÂY</h4>
-                                       <h4 class="efruit-en text-center">FRUIT BOUQUET</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 8) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -461,8 +473,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">TRÁI CÂY ĐẶC SẢN VIỆT</h4>
-                                       <h4 class="efruit-en text-center">VIET NAM FRUIT SPECIAL</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 6) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -542,8 +558,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">TRÁI CÂY NHẬP</h4>
-                                       <h4 class="efruit-en text-center">FRESH FRUIT</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 12) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -624,8 +644,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">SẢN PHẨM KHÁC</h4>
-                                       <h4 class="efruit-en text-center">ORTHER PRODUCTS</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 7) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
