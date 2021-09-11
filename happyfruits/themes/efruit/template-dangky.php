@@ -21,6 +21,7 @@
                 </div>
             </div>
         </div>
+        
         <?php $this->load_partial('dang-ky.php')  ?>
 
     <?php $this->load_theme_file('page-footer.php') 

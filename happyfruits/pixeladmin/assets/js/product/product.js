@@ -151,7 +151,7 @@ $(document).ready(function(){
 
     bindAutoComplete();
     
-    /* Manage many images for a product - disable it temporary
+    
     if ($('#product_id').val())
     {
         //Jquery File Uploader
@@ -238,10 +238,9 @@ $(document).ready(function(){
             });
         }).prop('disabled', !$.support.fileInput)
             .parent().addClass($.support.fileInput ? undefined : 'disabled');
-            
         bindDeleteImageBtn('.product_images .thumbnail_container .delete_btn');
     }
-    */
+    
 });
 
 function bindDeleteImageBtn(selector)

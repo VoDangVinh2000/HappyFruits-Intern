@@ -30,7 +30,7 @@ class ProductController extends BaseController
 
     function edit()
     {
-        $this->plugins = 'icheck, validator, imageselector, jquery-ui, minicolors';
+        $this->plugins = 'icheck, validator, imageselector, jquery-ui, minicolors,jqueryfileupload';
         $js = array(
             ASSET_URL . 'js/product/product.js'
         );
