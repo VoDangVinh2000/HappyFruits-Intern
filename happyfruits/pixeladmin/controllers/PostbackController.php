@@ -1954,7 +1954,7 @@ class PostbackController extends BasePostbackController
         {
             $this->_beginTransaction();
             $fields = array('name', 'code', 'description', 'description_en', 'unit', 'category_id',
-                'enabled', 'free_choice', 'sequence_number', 'is_hidden', 'english_name', 'image',
+                'enabled', 'free_choice', 'sequence_number', 'is_hidden', 'english_name', 'image','image_sub1','image_sub2',
                 'is_additional', 'is_box', 'box_discount_rate', 'can_be_added_to_box', 'base_price', 'promotion_price', 'type', 'not_deliver', 'show_components_on_frontend',
                 'ribbon_left', 'ribbon_left_color', 'ribbon_right', 'ribbon_right_color');
             $required_fields = array('name', 'english_name');

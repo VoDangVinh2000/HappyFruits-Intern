@@ -130,6 +130,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6">
                                 <?php if (Users::can_access('product', 'manage_images')) : ?>
+                                <?php  /*
                                     <div class="form-group">
                                         <label>Hình ảnh</label>
                                         <div class="product_images">
@@ -155,8 +156,8 @@
                                             <div id="files" class="files"></div>
                                         </div>
                                     </div>
-                                    <?php endif; ?>
-                                    <!-- <div class="form-group">
+                                   */?>
+                                    <div class="form-group">
                                         <label for="image" class="control-label">Hình ảnh</label>
                                         <div class="input-group">
                                             <input type="text" class="form-control" id="image" name="image" placeholder="Đường dẫn ảnh" value="<?= urldecode(getvalue($obj, 'image')) ?>" />
@@ -167,8 +168,34 @@
                                         <div class="clear"></div><br />
                                         <label>&nbsp;</label>
                                         <div id="preview_image"></div>
-                                    </div> -->
-                                
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image_sub1" class="control-label">Hình ảnh phụ 1</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="image_sub1" name="image_sub1" placeholder="Đường dẫn ảnh" value="<?= urldecode(getvalue($obj, 'image_sub1')) ?>" />
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-warning" id="select_image_sub1" type="button"><i class="fa fa-search"></i> Chọn</button>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div><br />
+                                        <label>&nbsp;</label>
+                                        <div id="preview_image_sub1"></div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image_sub2" class="control-label">Hình ảnh phụ 2</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" id="image_sub2" name="image_sub2" placeholder="Đường dẫn ảnh" value="<?= urldecode(getvalue($obj, 'image_sub2')) ?>" />
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-warning" id="select_image_sub2" type="button"><i class="fa fa-search"></i> Chọn</button>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div><br />
+                                        <label>&nbsp;</label>
+                                        <div id="preview_image_sub2"></div>
+                                    </div>
+                                    <?php endif; ?>
                                 <div class="form-group hidden" id="type-container">
                                     <label for="type" class="control-label">Loại</label>
                                     <select name="type" id="type" class="form-control">
