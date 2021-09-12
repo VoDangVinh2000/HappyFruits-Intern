@@ -65,20 +65,19 @@
                                 </div>
                                 <div class="error">
                                     <?php
-                                    if (isset($_COOKIE['error_username_password'])) {
-                                        echo $_COOKIE['error_username_password'] . "</br>";
-                                    }
-                                    if (isset($_COOKIE['error_acount_does_not_exist'])) {
-                                        echo $_COOKIE['error_acount_does_not_exist'] . "</br>";
-                                    }
+                                        if (isset($_COOKIE['error_username_password'])) {
+                                            echo $_COOKIE['error_username_password'] . "</br>";
+                                        }
+                                        if (isset($_COOKIE['error_acount_does_not_exist'])) {
+                                            echo $_COOKIE['error_acount_does_not_exist'] . "</br>";
+                                        }
                                     ?>
                                 </div>
                             </div>
                             <div class="div-action-button">
                                 <div class="input-submit-account">
                                     <input class="efruit-en" type="submit" value="Log In" name="login" >
-                                    <input class="efruit-vi" type="submit" value="Đăng nhập" name="dang-nhap" >
-                                    <!-- <input class="efruit-vi" type="submit" value="Đăng nhập" name="dang-nhap"> -->
+                                    <input class="efruit-vi" type="submit" value="Đăng nhập" name="dang-nhap">
                                     <a class="efruit-vi" href="#recover" id="forgotpassword">Quên mật khẩu ?</a>
                                     <a class="efruit-en" href="#recover" id="forgotpassword">Forgot your password ?</a>
                                     <br>
