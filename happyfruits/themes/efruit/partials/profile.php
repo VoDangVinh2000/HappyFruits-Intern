@@ -83,8 +83,15 @@ if (isset($_SESSION['user_account'])) {
                         <p class="efruit-vi">Họ tên: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['customer_name_account']; ?></p>
                         <p class="efruit-vi">Email: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['email_account']; ?></p>
                         <p class="efruit-vi">Số điện thoại: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['mobile_account']; ?></p>
-                        <p class="efruit-en">Email: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['email']; ?></p>
+                        <p class="efruit-en">Email: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['email_account']; ?></p>
                         <p class="efruit-en">Phone number: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['mobile_account']; ?></p>
+                        <p class="efruit-en">Address: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['address_account']; ?></p>
+                        <p class="efruit-vi">Địa chỉ: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['address_account']; ?></p>
+                        <p class="efruit-en">District: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['district_account']; ?></p>
+                        <p class="efruit-vi">Quận(Huyện): <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['district_account']; ?></p>
+                        <p class="efruit-en">Building: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['building_account']; ?></p>
+                        <p class="efruit-vi">Tòa nhà: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['building_account']; ?></p>
+                        
                         <li>
                             <a class="efruit-en" href="#edit" style="background-color: #72a499;color:white;padding:7px;border-radius: 5px;" id="a-editProfile">Edit </a>
                             <a class="efruit-vi" href="#edit" style="background-color: #72a499;color:white;padding:7px;border-radius: 5px;" id="a-editProfile">Chỉnh sửa </a>
@@ -106,11 +113,11 @@ if (isset($_SESSION['user_account'])) {
                                 <div class="col">
                                     <div class="email-profile">
                                         <h4 class="h6" style="font-weight: 400;">Email</h4>
-                                        <input type="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9_\.]{3,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" name="email" autocapitalize="words" required value="<?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['email_account']; ?>">
+                                        <input type="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9_\.]{3,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" name="email" autocapitalize="words" required value="">
                                         <div class="error">
                                             <?php
-                                            if (isset($_COOKIE['error_email'])) {
-                                                echo $_COOKIE['error_email'] . "</br>";
+                                            if (isset($_COOKIE['error_email_edit'])) {
+                                                echo $_COOKIE['error_email_edit'] . "</br>";
                                             }
                                             ?>
                                         </div>
@@ -141,7 +148,8 @@ if (isset($_SESSION['user_account'])) {
                                     <div class="district-profile">
                                         <h4 class="h6 efruit-vi" style="font-weight: 400;">Quận</h4>
                                         <h4 class="h6 efruit-en" style="font-weight: 400;">District</h4>
-                                        <?= html_select_district('form-control', "-- {{__('Chọn')}}", 'ng-model="customer.district" required="required"', 1) ?>
+                                        <?php echo(html_select_district($class = 'required', $empty_text = "Chọn", $extra = "", 
+                                            $is_multiple_language = false, $selected = $_SESSION['user_account'][0]['district_account'])) ?>
                                     </div>
                                 </div>
                                 <div class="col">
@@ -158,7 +166,7 @@ if (isset($_SESSION['user_account'])) {
                                 <div class="col-md">
                                     <div class="submit-button">
                                         <button name="edit-profile-btn" class="efruit-en" type="submit">Submit</button>
-                                        <button name="sua-thongtin-btn" class="efruit-vi" type="submit">Gửi</button>
+                                        <button name="sua-thong-tin-btn" class="efruit-vi" type="submit">Gửi</button>
                                     </div>
                                 </div>
                                 <div class="col-md">

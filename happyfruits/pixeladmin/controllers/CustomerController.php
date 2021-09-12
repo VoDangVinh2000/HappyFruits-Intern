@@ -150,14 +150,14 @@ class CustomerController extends BaseController
     //hàm đăng nhập phía khách hàng
     function Login_Customer()
     {
+        $customer = new Customers;
         $error_username_password = null;
         $error_acount_does_not_exist = null;
         if (isset($_POST['username'])) {
             //Kiểm tra username password khi đăng nhập
             $username = eModel::matchRegexLogin($_POST['username']);
             $password = md5($_POST['password']);
-            $data = $this->Customers->get_list_customer_username($username);
-
+            $data = $customer->get_list_customer_username($username);
             //kiểm tra username có tồn tại trên csdl hay không
             if ($data) {
                 if ($password == $data[0]['password']) {
@@ -167,18 +167,29 @@ class CustomerController extends BaseController
                     }
                     $_SESSION['user_account'] = $data;
                     header('location:/vi');
-                    exit();
-                } else {
-                    $error_username_password = 'Tài khoản hoặc mật khẩu không chính xác';
+                   // exit();
+                } 
+                else {
+                    if (isset($_POST['dang-nhap'])) {
+                        $error_username_password = 'Tài khoản hoặc mật khẩu không chính xác';
+                    } 
+                    else {
+                        $error_username_password = 'Incorrect account or password';
+                    }
                     setcookie("error_username_password", $error_username_password, time() + 600, "/");
                     header('location:/vi/dang-nhap');
-                    exit();
+                    //exit();
                 }
             } else {
-                $error_acount_does_not_exist = 'Tài khoản này không tồn tại';
+                if (isset($_POST['dang-nhap'])) {
+                    $error_acount_does_not_exist = 'Tài khoản này không tồn tại';
+                } 
+                else {
+                    $error_acount_does_not_exist = 'Account does not exist';
+                }                
                 setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, time() + 600, "/");
                 header('location:/vi/dang-nhap');
-                exit();
+                //exit();
             }
         }
     }
@@ -196,13 +207,13 @@ class CustomerController extends BaseController
     //hàm sửa thông tin tài khoản người dùng
     function Edit_Info_Account_Customer()
     {
-        $error_email = NULL;
+        $customer = new Customers;
+        $error_email_edit = NULL;
         //reset lại lỗi sau mỗi lần sửa thông tin
-        setcookie("error_email", $error_email, 0, "/");
+      //  setcookie("error_email_edit", $error_email_edit, 0, "/");
 
         $customer_id = $_SESSION['user_account'][0]['customer_id'];
-        if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['sua-thongtin-btn']) || isset($_POST['edit-profile-btn'])) {
-
+        if (isset($_POST['email'])) {
             //Sử dụng chung hàm matchRegex này do cùng chức năng là chống sql injection
             $fullName = $_POST['fullname'];
             $email = eModel::matchRegexEmail($_POST['email']);
@@ -215,21 +226,40 @@ class CustomerController extends BaseController
             // $companyAddress = eModel::matchRegex_SearchProducts($_POST['company-address']);
           
             //lấy email của tài khoản hiện tại đang đăng nhập
-             $query_user_email_account = $this->Customers->get_list_customer_email_account($email);
-            // //Kiểm tra email người dùng nhập có trong database chưa, nếu tồn email đã tồn tại trên database thì báo lỗi
-            if (isset($query_user_email_account[0]['email_account'])) {
-                $data = $this->Customers->get_list_customer_username($_SESSION['user_account'][0]['username']);
-                $_SESSION['user_account'] = $data;
-                if (isset($_POST['sua-thongtin-btn'])) {
-
-                    $error_email = 'Email này đã có người sử dụng. Xin hãy chọn email khác';
-                } else {
-                    $error_email = 'This email already exists. Please enter another email';
+            $query_user_email = $customer->get_list_customer_email_account($email);
+            //Kiểm tra email người dùng nhập có trong database chưa, nếu tồn email đã tồn tại trên database thì báo lỗi
+            if(isset($query_user_email[0]['email']) && $query_user_email[0]['email'] != $_SESSION['user_account'][0]['email']){
+                if(isset($_POST['sua-thong-tin-btn'])){
+                    $error_email_edit = 'Email này có người sử dụng. Xin hãy chọn email khác';
                 }
-                setcookie("error_email", $error_email, time() + 600, "/");
+                else{
+                    $error_email_edit = 'This email already exists. Please enter another email';
+                }
+                setcookie("error_email_edit", $error_email_edit, time() + 600, "/");
                 header('location:/vi/profile');
-                exit();
+                
             }
+            //nếu email hợp lệ thì cập nhật thông tin trên database
+            // else
+            //     echo 'email hợp lệ';
+
+
+
+            //  $query_user_email_account = $this->Customers->get_list_customer_email_account($email);
+            // // //Kiểm tra email người dùng nhập có trong database chưa, nếu tồn email đã tồn tại trên database thì báo lỗi
+            // if (isset($query_user_email_account[0]['email_account'])) {
+            //     $data = $this->Customers->get_list_customer_username($_SESSION['user_account'][0]['username']);
+            //     $_SESSION['user_account'] = $data;
+            //     if (isset($_POST['sua-thong-tin-btn'])) {
+
+            //         $error_email = 'Email này đã có người sử dụng. Xin hãy chọn email khác';
+            //     } else {
+            //         $error_email = 'This email already exists. Please enter another email';
+            //     }
+            //     setcookie("error_email", $error_email, time() + 600, "/");
+            //     header('location:/vi/profile');
+            //     exit();
+            // }
             else{
                 $update =   $this->Customers->update($customer_id, array(
                     'customer_name_account' => $fullName, 'email_account' => $email, 'mobile_account' => $phoneNumber,
@@ -237,18 +267,20 @@ class CustomerController extends BaseController
                 ));
                 if($update){
                     $data = $this->Customers->get_list_customer_username($_SESSION['user_account'][0]['username']);
-                     $_SESSION['user_account'] = $data;
+                    $_SESSION['user_account'] = $data;
                     header('location:/vi/profile');
-                    exit();
+                   
+                   // exit();
                 }
                 else{
                     header('location:/vi/profile');
-                    exit();
+                  //  exit();
                 }
             }
-        } else {
+        }
+         else {
             header('location: /vi/profile');
-            exit();
+            //exit();
         }
     }
 
