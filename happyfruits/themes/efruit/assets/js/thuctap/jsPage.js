@@ -85,6 +85,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     arr.push(str[j]);
                 }
             }
+
             for (let key = 0; key < arr.length; key++) {
                 if (arr[key] == "error_username") {
                     setCookie(arr[key], '', 0);
@@ -98,7 +99,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if (arr[key] == "error_acount_does_not_exist") {
                     setCookie(arr[key], '', 0);
                 }
-                if(arr[key] == "error_email"){
+                if (arr[key] == "error_email_edit"){
                     setCookie(arr[key], '', 0);
                 }
                 if(arr[key] == "send_mail_success"){
@@ -107,9 +108,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if(arr[key] == "change_password_success"){
                     setCookie(arr[key], '', 0);
                 }
-                if(arr[key] == "error_username"){
-                    setCookie(arr[key], '', 0);
-                }
+
                 if(arr[key] == "error_password"){
                     setCookie(arr[key], '', 0);
                 }

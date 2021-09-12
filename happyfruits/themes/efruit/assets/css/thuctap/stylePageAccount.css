@@ -57,7 +57,7 @@ h6 {
 }
 
 .bread-section {
-    padding: 75px 150px;
+    padding: 15px 150px 0 150px;
     background-color: #f6f6f6;
     background-image: none;
 }
@@ -115,31 +115,18 @@ h6 {
     border-right: none !important;
     background: none;
     border-bottom: 1px solid darkgray;
-    width: 95%;
+    width: 100%;
     padding: 10px 0 10px 0 !important;
     box-sizing: border-box;
-    position: relative;
-    left: 10px;
 }
 
-/* start title input login  */
-.username-input span {
-    position: relative;
-    top: 15px;
-}
-
-/* end title input login  */
 
 /* start title input register  */
 .username-input {
-    display: flex;
-    width: 100%;
-}
-.title-input-register {
-    width: 22%;
+    width: 100%; 
 }
 .input-register {
-    width: 78%;
+    display: flex;
 }
 /* end title input register  */
 
@@ -210,6 +197,10 @@ h6 {
     font-size: 17px;
 }
 
+/* css show password input  */
+#btnShowPass {
+    align-self: center;
+}
 
 /*css placeholder input*/
 
@@ -240,6 +231,7 @@ h6 {
 /* form change password  */
 .form-change-password {
     display: none;
+    background: rgb(243, 243, 243);
 }
 
 
