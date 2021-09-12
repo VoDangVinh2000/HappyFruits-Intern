@@ -68,6 +68,10 @@ function useImage(imgSrc, imgID) {
     var type = getUrlParam('type');
     if (type == 'select'){
         window.opener.handleSelectedImage(imgSrc, imgID);
+    }else if(type == 'select_sub1'){
+        window.opener.handleSelectedImage_sub1(imgSrc, imgID);
+    }else if(type == 'select_sub2'){
+        window.opener.handleSelectedImage_sub2(imgSrc, imgID);
     }else{
         var funcNum = getUrlParam( 'CKEditorFuncNum' );
         var imgSrc = imgSrc;

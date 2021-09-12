@@ -57,7 +57,7 @@ h6 {
 }
 
 .bread-section {
-    padding: 75px 150px;
+    padding: 15px 150px 0 150px;
     background-color: #f6f6f6;
     background-image: none;
 }
@@ -119,6 +119,17 @@ h6 {
     padding: 10px 0 10px 0 !important;
     box-sizing: border-box;
 }
+
+
+/* start title input register  */
+.username-input {
+    width: 100%; 
+}
+.input-register {
+    display: flex;
+}
+/* end title input register  */
+
 .suggest-message{
     padding-top: 10px;
 }
@@ -186,6 +197,10 @@ h6 {
     font-size: 17px;
 }
 
+/* css show password input  */
+#btnShowPass {
+    align-self: center;
+}
 
 /*css placeholder input*/
 
@@ -216,11 +231,15 @@ h6 {
 /* form change password  */
 .form-change-password {
     display: none;
+    background: rgb(243, 243, 243);
 }
 
 
 /*css my-account*/
-
+.order-history{
+    height: 100px;
+    overflow: auto;
+}
 .form-edit-profile {
     padding-top: 20px;
 }

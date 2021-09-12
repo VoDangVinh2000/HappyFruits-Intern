@@ -135,9 +135,9 @@ endif;
     <div id="editbarView" onclick="#" class="editbarDiv"><img src="<?=$url?>img/cd-icon-images.png" class="editbarIcon editbarIconLeft"/><p class="editbarText">Xem</p></div>
     <a href="#" id="editbarDownload"><div class="editbarDiv"><img src="<?=$url?>img/cd-icon-download.png" class="editbarIcon editbarIconLeft"/><p class="editbarText">Download</p></div></a>
     <div id="editbarDelete" onclick="#" class="editbarDiv"><img src="<?=$url?>img/cd-icon-qtrash.png" class="editbarIcon editbarIconLeft"/><p class="editbarText">Xóa</p></div>
-    <?php if ($is_from_CKEditor || $is_selecting_image):?>
+    <!-- chỗ này có if nè  if ($is_from_CKEditor || $is_selecting_image): -->
     <div id="editbarUse" onclick="#" class="editbarDiv"><img src="<?=$url?>img/cd-icon-use.png" class="editbarIcon editbarIconLeft"/><p class="editbarText">Sử dụng</p></div>
-    <?php endif;?>
+    
     <img onclick="hideEditBar();" src="<?=$url?>img/cd-icon-close-black.png" class="editbarIcon editbarIconRight"/>
 </div>
     

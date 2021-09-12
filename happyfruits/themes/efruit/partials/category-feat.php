@@ -22,6 +22,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
+                                <h3><span><?= $array['description'] ?></h3>
                                 <a class="btn-shop" href="/vi/fruit-baskets">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>

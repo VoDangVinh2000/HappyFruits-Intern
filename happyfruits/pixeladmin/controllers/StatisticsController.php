@@ -24,7 +24,6 @@ class StatisticsController extends BaseController
         //Only get the sub-categories
         $all_categories = $this->Categories->select(array('where' => 'parent_id <> 0'));
         $branches = $this->Branches->get_list();
-        
         $this->_merge_data(compact("js", "page_title", "orders", "statistics_data", "sum_of_foody_quantities", "all_categories", "order_types", "branches"));
         $this->load_page('statistics/index');
     }

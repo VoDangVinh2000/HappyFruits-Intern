@@ -68,13 +68,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 });
             });
         } else {}
-
+    });
         $(document).ready(function () {
             $('input[name=username]').css('border-bottom', '1px solid black');
         });
-
         //Hủy cookie cho thông báo của phần đăng ký và đăng nhập
         window.onload = (event) => {
+           
             let allcookie = document.cookie;
             let cookiearray = allcookie.split(';');
             let str = "";
@@ -85,6 +85,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     arr.push(str[j]);
                 }
             }
+           console.log(allcookie);
             for (let key = 0; key < arr.length; key++) {
                 if (arr[key] == "error_username") {
                     setCookie(arr[key], '', 0);
@@ -98,7 +99,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if (arr[key] == "error_acount_does_not_exist") {
                     setCookie(arr[key], '', 0);
                 }
-                if(arr[key] == "error_email"){
+                if (arr[key] == "error_email_edit"){
                     setCookie(arr[key], '', 0);
                 }
                 if(arr[key] == "send_mail_success"){
@@ -107,15 +108,12 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 if(arr[key] == "change_password_success"){
                     setCookie(arr[key], '', 0);
                 }
-                if(arr[key] == "error_username"){
-                    setCookie(arr[key], '', 0);
-                }
+
                 if(arr[key] == "error_password"){
                     setCookie(arr[key], '', 0);
                 }
             }
         };
-    });
 });
 
 

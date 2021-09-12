@@ -302,10 +302,10 @@ class Orders extends BaseOrders
     }
 
     //Intern
-    //Hàm thực hiện truy vấn ra các list_order của customer_id đó 
-    function get_listorder_customerID($customer_id)
+    //Hàm thực hiện truy vấn ra các list_order của customer_id 
+    function get_listorder_customerID($key)
     {
-        $customer_id = eModel::matchRegexUrl($customer_id);
+        $key = eModel::matchRegexUrl($key);
         $order_by = '';
         $sql = 'SELECT orders.*, 
         customers.customer_name, customers.district as customer_district, customers.mobile as customer_mobile, customers.address as customer_address,
@@ -316,9 +316,44 @@ class Orders extends BaseOrders
         INNER JOIN order_types ON order_types.id = orders.type_id
         LEFT JOIN customers ON customers.customer_id = orders.customer_id
         LEFT JOIN users ON users.user_id = orders.shipper_id
-        LEFT JOIN order_assessments ON order_assessments.order_id = orders.id WHERE customers.customer_id = '.$customer_id.' AND
-        orders.deleted = 0 ';
-        
+        LEFT JOIN order_assessments ON order_assessments.order_id = orders.id
+        WHERE customers.customer_id = '.$key.' AND  orders.deleted = 0 ';
+        $result = self::_do_sql($sql, array(), $order_by);
+        if(!empty($result)){
+            return self::_do_sql($sql, array(), $order_by);
+        }
+        else{
+            return null;
+        }
+        // if (empty($filters['orders.deleted']))
+        //     $filters['orders.deleted'] = 0;
+        // else if ($filters['orders.deleted'] == -1)
+        //     unset($filters['orders.deleted']);
+        // var_dump($sql);
+      
+    }
+
+    function get_listorder_mobile($key){
+        $key = eModel::matchRegexUrl($key);
+        $order_by = '';
+        $sql = "SELECT orders.*,
+         customers.customer_name, customers.district as customer_district, 
+         customers.mobile as customer_mobile, customers.address as customer_address, 
+         order_types.type_name, order_types.id as order_type_id, order_types.need_customer_details, 
+         users.fullname as shipper_name, users.type_id as shipper_type_id, order_assessments.score, order_assessments.feedback 
+         FROM orders INNER JOIN order_types ON order_types.id = orders.type_id 
+         LEFT JOIN customers ON customers.customer_id = orders.customer_id 
+         LEFT JOIN users ON users.user_id = orders.shipper_id 
+         LEFT JOIN order_assessments ON order_assessments.order_id = orders.id 
+         WHERE shipping_info LIKE '%".$key."%' AND orders.deleted = 0 ";
+          $result = self::_do_sql($sql, array(), $order_by);
+          if(!empty($result)){
+            return self::_do_sql($sql, array(), $order_by);
+        }
+        else{
+            return null;
+        }
+        //var_dump(self::_do_sql($sql, array(), $order_by));
         // if (empty($filters['orders.deleted']))
         //     $filters['orders.deleted'] = 0;
         // else if ($filters['orders.deleted'] == -1)

@@ -21,10 +21,15 @@ class BaseCustomers extends eModel
      */
     var $customer_id;  /* Primary key */
     var $customer_name;    /* varchar(255) */
+    var $customer_name_account; /* varchar(255) */
     var $address;    /* varchar(255) */
+    var $address_account; /* varchar(255) */
     var $district;    /* varchar(100) */
+    var $district_account; /* varchar(100) */
     var $mobile;    /* varchar(20) */
+    var $mobile_account;  /* varchar(20) */
     var $email;    /* varchar(255) */
+    var $email_account; /* varchar(255) */
     var $username;  /*varchar(100)*/ 
     var $password;/*varchar(255)*/ 
     var $lat;    /* decimal(15,10) */
@@ -63,10 +68,18 @@ class BaseCustomers extends eModel
     {
         return $this->customer_name;
     }
+    
+    function get_customer_name_account(){
+        return $this->customer_name_account;
+    }
 
     function get_address()
     {
         return $this->address;
+    }
+
+    function get_address_account(){
+        return $this->address_account;
     }
 
     function get_district()
@@ -74,14 +87,29 @@ class BaseCustomers extends eModel
         return $this->district;
     }
 
+    function get_district_account()
+    {
+        return $this->district_account;
+    }
+
     function get_mobile()
     {
         return $this->mobile;
     }
 
+    function get_mobile_account()
+    {
+        return $this->mobile_account;
+    }
+
     function get_email()
     {
         return $this->email;
+    }
+
+    function get_email_account()
+    {
+        return $this->email_account;
     }
 
     function get_lat()
@@ -148,9 +176,17 @@ class BaseCustomers extends eModel
         $this->customer_name =  $val;
     }
 
+    function set_customer_name_account($val){
+        $this->customer_name_account = $val;
+    }
+
     function set_address($val)
     {
         $this->address =  $val;
+    }
+
+    function set_address_account($val){
+        $this->address_account = $val;
     }
 
     function set_district($val)
@@ -158,14 +194,28 @@ class BaseCustomers extends eModel
         $this->district =  $val;
     }
 
+    function set_district_account($val)
+    {
+        $this->district_account =  $val;
+    }
+
     function set_mobile($val)
     {
         $this->mobile =  $val;
     }
 
+    function set_mobile_account($val){
+        $this->mobile_account = $val;
+    }
+
     function set_email($val)
     {
         $this->email =  $val;
+    }
+
+    function set_email_account($val)
+    {
+        $this->email_account =  $val;
     }
 
     function set_lat($val)

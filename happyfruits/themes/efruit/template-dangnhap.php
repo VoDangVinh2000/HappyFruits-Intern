@@ -5,10 +5,12 @@
             <div class="inside-bread-section">
                 <div class="container-section">
                     <div class="title">
-                        <h1>Account</h1>
+                        <!-- <h1>Account</h1> -->
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><span>Account</span></li>
+                            <li class="efruit-en"><a href="#">Home</a></li>
+                            <li class="efruit-en"><span>Account</span></li>
+                            <li class="efruit-vi"><a href="#">Trang chủ</a></li>
+                            <li class="efruit-vi"><span>Tài khoản</span></li>
                         </ul>
                     </div>
                     <!-- <div class="section-img">

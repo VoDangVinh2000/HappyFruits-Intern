@@ -32,10 +32,10 @@ if (isset($product['sell_price'])) {
                             <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
                         </div>
                         <div class="col-3">
-                            <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
+                            <a href="<?php echo $product['image_sub1'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image_sub1'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
                         </div>
                         <div class="col-3">
-                            <a href="<?php echo $product['image'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
+                            <a href="<?php echo $product['image_sub2'] ?>" title="<?php echo $product['name'] ?>"><img src="<?php echo $product['image_sub2'] ?>" alt="<?php echo $product['name'] ?>" class="img-fluid"></a>
                         </div>
                     <?php } ?>
                 </div>
