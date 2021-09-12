@@ -41,7 +41,7 @@
                                         <span class="efruit-en">Password</span>
                                     </div>
                                     <div class="input-register">
-                                        <input pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{8,}" title="Password must have limited one number, one alphabetic characters and minimum length is 5" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" required>
+                                        <input pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{4,}" title="Password must have limited one number, one alphabetic characters and minimum length is 5" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" required>
                                         <i class="fas fa-eye" id="btnShowPass"></i>
                                     </div>
                                 </div>

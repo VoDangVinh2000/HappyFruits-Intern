@@ -103,7 +103,7 @@ if (isset($_SESSION['user_account'])) {
                         <form action="/edit-info-account-customer" method="post">
                             <div class="row row-form-edit">
                                 <div class="col">
-                                    <div class="email-profile">
+                                    <div class="fullname-profile">
                                         <h4 class="h6 efruit-en" style="font-weight: 400;">Fullname</h4>
                                         <h4 class="h6 efruit-vi" style="font-weight: 400;">Họ tên</h4>
                                         <input type="text" name="fullname" autocapitalize="words" value="<?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['customer_name_account'];
@@ -113,7 +113,8 @@ if (isset($_SESSION['user_account'])) {
                                 <div class="col">
                                     <div class="email-profile">
                                         <h4 class="h6" style="font-weight: 400;">Email</h4>
-                                        <input type="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9_\.]{3,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" name="email" autocapitalize="words" required value="">
+                                        <input type="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9_\.]{3,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" name="email" autocapitalize="words"
+                                         required>
                                         <div class="error">
                                             <?php
                                             if (isset($_COOKIE['error_email_edit'])) {

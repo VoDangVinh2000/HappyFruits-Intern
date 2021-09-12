@@ -1,5 +1,5 @@
 <?php
-if (!empty($item)) : ?>
+if (!empty($item)) :?>
     <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
         <div class="product-item">
             <div class="product-photo">
