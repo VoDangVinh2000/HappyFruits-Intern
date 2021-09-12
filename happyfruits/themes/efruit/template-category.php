@@ -46,7 +46,7 @@
             <?php endif; ?>
             <div class="clearfix"></div>
             <?php $this->load_partial('about-us') ?>
-            <?php $this->load_partial('disscount') ?>
+            <!-- <?//php $this->load_partial('disscount') ?> -->
         </div>
     </div>
 </div>
