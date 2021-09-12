@@ -23,12 +23,11 @@ class CustomerController extends BaseController
         $page_title = 'Quản lý khách hàng';
         $filter_array = "";
         $filter_keyword = get('s');
-       
+
         if ($filter_keyword) {
             $search_str = "(customer_name LIKE '%$filter_keyword%' OR address LIKE '%$filter_keyword%' OR mobile LIKE '%$filter_keyword%')";
             $filter_array = array('where' => "($search_str)");
             $customers = $this->Customers->get_list($filter_array);
-    
         } else {
             $customers = null;
         }
@@ -167,29 +166,23 @@ class CustomerController extends BaseController
                     }
                     $_SESSION['user_account'] = $data;
                     header('location:/vi');
-                   // exit();
-                } 
-                else {
+                } else {
                     if (isset($_POST['dang-nhap'])) {
                         $error_username_password = 'Tài khoản hoặc mật khẩu không chính xác';
-                    } 
-                    else {
+                    } else {
                         $error_username_password = 'Incorrect account or password';
                     }
                     setcookie("error_username_password", $error_username_password, time() + 600, "/");
                     header('location:/vi/dang-nhap');
-                    //exit();
                 }
             } else {
                 if (isset($_POST['dang-nhap'])) {
                     $error_acount_does_not_exist = 'Tài khoản này không tồn tại';
-                } 
-                else {
+                } else {
                     $error_acount_does_not_exist = 'Account does not exist';
-                }                
+                }
                 setcookie("error_acount_does_not_exist", $error_acount_does_not_exist, time() + 600, "/");
                 header('location:/vi/dang-nhap');
-                //exit();
             }
         }
     }
@@ -209,8 +202,6 @@ class CustomerController extends BaseController
     {
         $customer = new Customers;
         $error_email_edit = NULL;
-        //reset lại lỗi sau mỗi lần sửa thông tin
-      //  setcookie("error_email_edit", $error_email_edit, 0, "/");
 
         $customer_id = $_SESSION['user_account'][0]['customer_id'];
         if (isset($_POST['email'])) {
@@ -224,63 +215,33 @@ class CustomerController extends BaseController
             // $companyName = eModel::matchRegex_SearchProducts($_POST['company-name']);
             // $companyTaxCode = eModel::matchRegex_SearchProducts($_POST['company-tax-code']);
             // $companyAddress = eModel::matchRegex_SearchProducts($_POST['company-address']);
-          
+
             //lấy email của tài khoản hiện tại đang đăng nhập
             $query_user_email = $customer->get_list_customer_email_account($email);
             //Kiểm tra email người dùng nhập có trong database chưa, nếu tồn email đã tồn tại trên database thì báo lỗi
-            if(isset($query_user_email[0]['email']) && $query_user_email[0]['email'] != $_SESSION['user_account'][0]['email']){
-                if(isset($_POST['sua-thong-tin-btn'])){
+            if (isset($query_user_email[0]['email_account']) && $query_user_email[0]['email_account'] != $_SESSION['user_account'][0]['email_account']) {
+                if (isset($_POST['sua-thong-tin-btn'])) {
                     $error_email_edit = 'Email này có người sử dụng. Xin hãy chọn email khác';
-                }
-                else{
+                } else {
                     $error_email_edit = 'This email already exists. Please enter another email';
                 }
                 setcookie("error_email_edit", $error_email_edit, time() + 600, "/");
                 header('location:/vi/profile');
-                
-            }
-            //nếu email hợp lệ thì cập nhật thông tin trên database
-            // else
-            //     echo 'email hợp lệ';
-
-
-
-            //  $query_user_email_account = $this->Customers->get_list_customer_email_account($email);
-            // // //Kiểm tra email người dùng nhập có trong database chưa, nếu tồn email đã tồn tại trên database thì báo lỗi
-            // if (isset($query_user_email_account[0]['email_account'])) {
-            //     $data = $this->Customers->get_list_customer_username($_SESSION['user_account'][0]['username']);
-            //     $_SESSION['user_account'] = $data;
-            //     if (isset($_POST['sua-thong-tin-btn'])) {
-
-            //         $error_email = 'Email này đã có người sử dụng. Xin hãy chọn email khác';
-            //     } else {
-            //         $error_email = 'This email already exists. Please enter another email';
-            //     }
-            //     setcookie("error_email", $error_email, time() + 600, "/");
-            //     header('location:/vi/profile');
-            //     exit();
-            // }
-            else{
+            } else {
                 $update =   $this->Customers->update($customer_id, array(
                     'customer_name_account' => $fullName, 'email_account' => $email, 'mobile_account' => $phoneNumber,
                     'address_account' => $address, 'building_account' => $building, 'district_account' => $district
                 ));
-                if($update){
+                if ($update) {
                     $data = $this->Customers->get_list_customer_username($_SESSION['user_account'][0]['username']);
                     $_SESSION['user_account'] = $data;
                     header('location:/vi/profile');
-                   
-                   // exit();
-                }
-                else{
+                } else {
                     header('location:/vi/profile');
-                  //  exit();
                 }
             }
-        }
-         else {
+        } else {
             header('location: /vi/profile');
-            //exit();
         }
     }
 
@@ -290,16 +251,12 @@ class CustomerController extends BaseController
         if (!isset($_SESSION)) {
             session_start();
         }
-
         // Kiểm tra nếu thực hiện thao tác cập nhật quyền của người dùng
-        if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submitForgot'])) {
-
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $errors = '';
             $email = '';
             $error_email = null;
             $send_mail_success = null;
-            setcookie("error_email", $error_email, 0, "/");
-            setcookie("send_mail_success", $send_mail_success, 0, "/");
 
             if (isset($_POST['email']) && is_email_exists($_POST['email'])) {
                 $email = $_POST['email'];
@@ -307,14 +264,24 @@ class CustomerController extends BaseController
                 $errors = "email";
             }
             if (empty($_POST['email'])) {
-                $error_email = 'Please enter your email';
+                if (isset($_POST['submitForgot'])) {
+                    $error_email = 'Please enter your email';
+                } else {
+                    $error_email = 'Hãy nhập email';
+                }
+
                 setcookie("error_email", $error_email, time() + 600, "/");
                 header('Location: vi/dang-nhap');
                 exit();
             }
 
             if (!empty($errors)) {
-                $error_email = 'Email address does not exist';
+                if (isset($_POST['submitForgot'])) {
+                    $error_email = 'Email address does not exist';
+                } else {
+                    $error_email = 'Địa chỉ email không tồn tại';
+                }
+
                 setcookie("error_email", $error_email, time() + 600, "/");
                 header('Location: vi/dang-nhap');
                 exit();
@@ -323,30 +290,52 @@ class CustomerController extends BaseController
 
                 $account = $this->Customers->get_list_customer_email_account($email);
                 if (empty($account)) {
-                    $error_email = 'Email address does not exist';
+                    if (isset($_POST['submitForgot'])) {
+                        $error_email = 'Email address does not exist';
+                    } else {
+                        $error_email = 'Địa chỉ email không tồn tại';
+                    }
+
                     setcookie("error_email", $error_email, time() + 600, "/");
                     header('Location: vi/dang-nhap');
                     exit();
                 }
                 $randPassword = rand_string(8);
-                $content = "<h3> Dear " . $account[0]['username'] . '</h3>';
-                $content .= "<p>We have received a request to re-issue your password recently.</p>";
-                $content .= "<p>We have updated and sent you a new password</p>";
-                $content .= "<p>Your new password is : <b>$randPassword</b></p> ";
+                if (isset($_POST['submitForgot'])) {
+                    $content = "<h3> Dear " . $account[0]['username'] . '</h3>';
+                    $content .= "<p>We have received a request to re-issue your password recently.</p>";
+                    $content .= "<p>We have updated and sent you a new password</p>";
+                    $content .= "<p>Your new password is : <b>$randPassword</b></p> ";
+                } else {
+                    $content = "<h3> Thân mến " . $account[0]['username'] . '</h3>';
+                    $content .= "<p>Gần đây, chúng tôi đã nhận được yêu cầu cấp lại mật khẩu của bạn.</p>";
+                    $content .= "<p>Chúng tôi đã cập nhật và gửi cho bạn một mật khẩu mới</p>";
+                    $content .= "<p>Mật khẩu mới của bạn là: <b>$randPassword</b></p> ";
+                }
+
                 $sendMail = Customers::send($content, $account[0]['username'], $account[0]['email_account']);
                 if ($sendMail) {
                     $password = md5($randPassword);
                     $update =   $this->Customers->update($account[0]['customer_id'], array(
                         'password' => $password
                     ));
-                    if($update){
-                        $send_mail_success = 'We have sent a new password to your email. Please check it';
+                    if ($update) {
+                        if (isset($_POST['submitForgot'])) {
+                            $send_mail_success = 'We have sent a new password to your email. Please check it';
+                        } else {
+                            $send_mail_success = 'Chúng tôi đã gửi một mật khẩu mới đến email của bạn. Xin vui lòng kiểm tra nó';
+                        }
+
                         setcookie("send_mail_success", $send_mail_success, time() + 600, "/");
                         header('Location: /vi/dang-nhap');
                     }
-                   
                 } else {
-                    $error_email = 'An error has occurred unable to retrieve the password';
+                    if (isset($_POST['submitForgot'])) {
+                        $error_email = 'An error has occurred unable to retrieve the password';
+                    } else {
+                        $error_email = 'Đã xảy ra lỗi không thể lấy lại mật khẩu';
+                    }
+
                     setcookie("error_email", $error_email, time() + 600, "/");
                     header('Location: /vi/dang-nhap');
                     exit();
@@ -358,8 +347,6 @@ class CustomerController extends BaseController
     //đổi mật khẩu
     function Change_Pass()
     {
-        setcookie("error_username", "", 0, "/");
-        setcookie("error_password", "", 0, "/");
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $current_password = md5($_POST['current-password']);
@@ -372,18 +359,33 @@ class CustomerController extends BaseController
                     $update =   $this->Customers->update($customer_id, array(
                         'password' => $new_password
                     ));
-                    if($update){
-                        setcookie("change_password_success", "Change password successfully", time() + 600, "/");
+                    if ($update) {
+                        if (isset($_POST['change-password'])) {
+                            setcookie("change_password_success", "Change password successfully", time() + 600, "/");
+                        } else {
+                            setcookie("change_password_success", "Đổi mật khẩu thành công", time() + 600, "/");
+                        }
+
                         header('Location: /vi/dang-nhap');
                         exit();
                     }
                 } else {
-                    setcookie("error_password", "Incorrect password ", time() + 600, "/");
+                    if (isset($_POST['change-password'])) {
+                        setcookie("error_password", "Incorrect password ", time() + 600, "/");
+                    } else {
+                        setcookie("error_password", "Mật khẩu không chính xác", time() + 600, "/");
+                    }
+
                     header('Location: /vi/dang-nhap');
                     exit();
                 }
             } else {
-                setcookie("error_username", "Username does not exist", time() + 600, "/");
+                if (isset($_POST['change-password'])) {
+                    setcookie("error_password", "Username does not exist", time() + 600, "/");
+                } else {
+                    setcookie("error_password", "Tên đăng nhập không tồn tại", time() + 600, "/");
+                }
+
                 header('Location: /vi/dang-nhap');
                 exit();
             }

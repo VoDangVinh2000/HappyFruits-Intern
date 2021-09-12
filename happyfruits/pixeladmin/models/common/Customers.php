@@ -65,7 +65,7 @@ class Customers extends BaseCustomers
     {
         $order_by = 'customers.username';
         $username = eModel::matchRegexLogin($username);
-        var_dump($username);
+        
         $sql = "SELECT customers.* FROM customers WHERE BINARY(username) = '" . $username . "' ";
         $filters = "";
         return self::_do_sql($sql, $filters, array(), $order_by);
