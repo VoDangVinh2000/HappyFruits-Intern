@@ -229,7 +229,7 @@
          <div class="y-results" id="y-results">
              <?php $this->load_partial('category-feat') ?>
              <?php $this->load_partial('about-us') ?>
-             <?php $this->load_partial('disscount') ?>
+             <!-- <?//php $this->load_partial('disscount') ?> -->
          </div>
      </div>
      

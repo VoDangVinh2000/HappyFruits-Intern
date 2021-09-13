@@ -42,7 +42,7 @@
                                     <?php if (isset($booking_info->fullname)):?>
                                         <a target="_blank" href="<?=BASE_URL. $URIs['customers']?>/tim/<?=$item['customer_mobile']?>"><?=$booking_info->fullname?></a> <?=get_booking_address($booking_info)?>
 	                                    <?php if(!empty($booking_info->mobile)):?>
-		                                    - <a target="_blank" href="<?=BASE_URL. $URIs['orders']?>/tim/<?=$booking_info->mobile?>"><?=$booking_info->mobile?></a>
+		                                    - <a target="_blank" href="<?=BASE_URL. $URIs['orders']?>/tim/sdt-<?=$booking_info->mobile?>"><?=$booking_info->mobile?></a>
 	                                    <?php endif;?>
                                         <?php if (Users::can('view_email', 'order') && !empty($booking_info->email)) {echo '<br/>Email: '.$booking_info->email;} ?>
                                         <?php if (!empty($booking_info->builiding)):?>

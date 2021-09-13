@@ -77,20 +77,20 @@
                                <i class="fas fa-user" style="font-size: 20px;"></i>
                            </a>
                        <?php } else { ?>
-                   <li class="nav-item">
-                       <a class="nav-link" href="/vi/dang-nhap">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
-                               <g transform="translate(3.52)">
-                                   <path d="M29.571,13.853a4.427,4.427,0,1,1,4.471-4.427A4.461,4.461,0,0,1,29.571,13.853Zm0-7.609a3.182,3.182,0,1,0,3.214,3.182A3.2,3.2,0,0,0,29.571,6.244Z" transform="translate(-25.1 -5)"></path>
-                               </g>
-                               <g transform="translate(0 9.173)">
-                                   <path d="M21.5,63.427H20.243c0-3.076-3.017-5.582-6.734-5.582s-6.752,2.507-6.752,5.582H5.5c0-3.769,3.591-6.827,8.009-6.827S21.5,59.658,21.5,63.427Z" transform="translate(-5.5 -56.6)"></path>
-                               </g>
-                           </svg>
-                       </a>
-                   </li>
-               <?php } ?>
-               </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/vi/dang-nhap">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
+                                    <g transform="translate(3.52)">
+                                        <path d="M29.571,13.853a4.427,4.427,0,1,1,4.471-4.427A4.461,4.461,0,0,1,29.571,13.853Zm0-7.609a3.182,3.182,0,1,0,3.214,3.182A3.2,3.2,0,0,0,29.571,6.244Z" transform="translate(-25.1 -5)"></path>
+                                    </g>
+                                    <g transform="translate(0 9.173)">
+                                        <path d="M21.5,63.427H20.243c0-3.076-3.017-5.582-6.734-5.582s-6.752,2.507-6.752,5.582H5.5c0-3.769,3.591-6.827,8.009-6.827S21.5,59.658,21.5,63.427Z" transform="translate(-5.5 -56.6)"></path>
+                                    </g>
+                                </svg>
+                            </a>
+                        </li>
+                        <?php } ?>
+                    </li>
                <li class="nav-item">
                    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                        <span class="navbar-toggler-icon"></span>
@@ -172,8 +172,12 @@
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <!--response-mega đc css để responsive of device!-->
-                                           <h4 class="efruit-vi text-center">GIỎ TRÁI CÂY</h4>
-                                           <h4 class="efruit-en text-center">FRUIT_BASKETS</h4>
+                                           <?php foreach ($tiles as $tile) {
+                                                if ($tile['cat'] == 14) { ?>
+                                                   <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                                   <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                           <?php }
+                                            } ?>
                                            <div class="col-lg-5">
                                                <div class="row">
                                                    <?php
@@ -229,8 +233,12 @@
                                                                                <span class="button-text efruit-vi">Chi tiết</span>
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
+<<<<<<< HEAD
+=======
+                                                                           <!-- <div class="self" style="color:">MyTien</div> -->
+>>>>>>> 16366d5a10a0c84023d8a9fd31404799209193ac
                                                                        </a>
-                                                                      
+
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -267,8 +275,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">HAMPER- HỘP TRÁI CÂY</h4>
-                                       <h4 class="efruit-en text-center">HAMPER - BOX FRUIT</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 15) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -328,7 +340,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
-                                                                     
+
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -364,8 +376,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">HOA TRÁI CÂY</h4>
-                                       <h4 class="efruit-en text-center">FRUIT BOUQUET</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 8) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -460,8 +476,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">TRÁI CÂY ĐẶC SẢN VIỆT</h4>
-                                       <h4 class="efruit-en text-center">VIET NAM FRUIT SPECIAL</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 6) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -541,8 +561,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">TRÁI CÂY NHẬP</h4>
-                                       <h4 class="efruit-en text-center">FRESH FRUIT</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 12) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">
@@ -623,8 +647,12 @@
                                 } ?>
                                <div class="dropdown-menu megamenu" role="menu">
                                    <div class="container-mega">
-                                       <h4 class="efruit-vi text-center">SẢN PHẨM KHÁC</h4>
-                                       <h4 class="efruit-en text-center">ORTHER PRODUCTS</h4>
+                                       <?php foreach ($tiles as $tile) {
+                                            if ($tile['cat'] == 7) { ?>
+                                               <h4 class="efruit-vi text-center"><?= $tile['short_text'] ?></h4>
+                                               <h4 class="efruit-en text-center"><?= $tile['en_text'] ?></h4>
+                                       <?php }
+                                        } ?>
                                        <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
                                        <div class="row g-3 response-mega">
                                            <div class="col-lg-5">

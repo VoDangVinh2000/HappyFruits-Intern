@@ -52,11 +52,21 @@ class Customers extends BaseCustomers
         return self::_select('customer_types', $filters, 'type_id');
     }
 
-    function get_list_customer_email($email)
+    function get_list_customer_email_account($email)
     {
         $order_by = 'customers.email';
         $email = eModel::matchRegexEmail($email);
-        $sql = "SELECT customers.* FROM customers WHERE BINARY(email) = '" . $email . "'    ";
+        $sql = "SELECT customers.* FROM customers WHERE BINARY(email_account) = '" . $email . "'    ";
+        $filters = "";
+        return self::_do_sql($sql, $filters, array(), $order_by);
+    }
+
+    function get_list_customer_username($username)
+    {
+        $order_by = 'customers.username';
+        $username = eModel::matchRegexLogin($username);
+        
+        $sql = "SELECT customers.* FROM customers WHERE BINARY(username) = '" . $username . "' ";
         $filters = "";
         return self::_do_sql($sql, $filters, array(), $order_by);
     }
@@ -75,7 +85,7 @@ class Customers extends BaseCustomers
     function get_customerID($username)
     {
         $order_by = 'customers.customer_id';
-        //$username = eModel::matchRegexLogin($username);
+        $username = eModel::matchRegexLogin($username);
         $sql = "SELECT customers.* FROM customers WHERE BINARY(username) = '" . $username . "' ";
         $filters = "";
         $result = self::_do_select_sql($sql, $filters, array(), $order_by);
@@ -115,9 +125,8 @@ class Customers extends BaseCustomers
     }
 
 
-    function get_history_order_customer()
+    function get_history_order_customer_completed()
     {
-
         if (isset($_SESSION['user_account'][0]['customer_id'])) {
             $id = $_SESSION['user_account'][0]['customer_id'];
             $order_by = '';
@@ -135,14 +144,25 @@ class Customers extends BaseCustomers
         }
     }
 
-    function get_list_customer_username($username)
-    {
-        $order_by = 'customers.username';
-        $username = eModel::matchRegexLogin($username);
-        $sql = "SELECT customers.* FROM customers WHERE BINARY(username) = '" . $username . "' ";
-        $filters = "";
-        return self::_do_sql($sql, $filters, array(), $order_by);
+    function get_history_order_customer_unfinished(){
+        if (isset($_SESSION['user_account'][0]['customer_id'])) {
+            $id = $_SESSION['user_account'][0]['customer_id'];
+            $order_by = '';
+            $sql = "SELECT orders.created_dtm as ngayTao, orders.code as code FROM `customers` INNER JOIN orders 
+            ON orders.customer_id = customers.customer_id 
+            WHERE orders.customer_id = '" . $id . "' AND orders.status != 'Completed' ORDER BY orders.created_dtm ASC ";
+            if (!empty($sql)) {
+                $filters = "";
+                return self::_do_sql($sql, $filters, array(), $order_by);
+            } else {
+                echo "<script>window.location.href='/vi'</script>";
+            }
+        } else {
+            return null;
+        }
     }
+
+
     /* Foody customers */
     function get_id_or_create($name, $address, $customer_type_id = '', $mobile = '')
     {

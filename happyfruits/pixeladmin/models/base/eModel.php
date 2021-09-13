@@ -368,17 +368,7 @@ class eModel
 
     static function matchRegexEmail($url){
         $strURL = remove_unicode($url);
-        $strURL = preg_replace("/[^A-Z0-9a-z-_.@]/", '', $strURL);
-        return $strURL;
-    }
-
-    static function matchRegexDistrict($url){
-        $strURL = preg_replace("/[!@#$%^&*()_=+\/|*?><.,{}'']/", '', $url);
-        return $strURL;
-    }
-
-    static function matchRegexAddress($url){
-        $strURL = preg_replace('/[""]/', '', $url);
+        $strURL = preg_replace("/[^A-Z0-9a-z-_@.]/", '', $strURL);
         return $strURL;
     }
 
@@ -389,12 +379,6 @@ class eModel
         $strURL = preg_replace("/[!@#$%^&*()_=+\/|*?><.,{}'']/", '', $key);
         return $strURL;
     }
-    //
-    static function matchRegex_FullName($key){
-        $strURL = preg_replace("/[!@#$%^&*()_=+\/|*?><.,{}'']+/", '', $key);
-        return $strURL;
-    }
-
     // static function matchRegex_Address($key){
     //     $strURL = preg_replace("/[]+/", '', $key);
     //     return $strURL;
@@ -420,7 +404,7 @@ class eModel
             $new = $this->select_one($where_params);
             $this->after_update($old, $new);
         }
-        return $result;
+       return $result;
     }
 
     function delete($where_params = array())

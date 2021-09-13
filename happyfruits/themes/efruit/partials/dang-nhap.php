@@ -40,27 +40,44 @@
                         <!--Form action-login-->
                         <form action="/loginCustomer" method="post">
                             <div class="main-create-account-fillout">
-                                <input type="text" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
+                                <div class="username-input">
+                                    <div class="title-input-register">
+                                        <span class="efruit-vi">Tên đăng nhập</span>
+                                        <span class="efruit-en">Username</span>
+                                    </div>
+                                    <div class="input-register">
+                                        <input type="text" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" required>
+                                    </div>
+                                </div>
                                 <!-- <p class="efruit-en">Username must have minimum length is 6, no special characters</p>
                                 <p class="efruit-vi">Tên đăng nhập có ít nhất 6 kí tự, không chứa kí tự đặc biệt.</p> -->
-
-                                <input type="password" class="input-account" name="password" autocapitalize="words" placeholder="Password"  required>
-                                <!-- <p class="efruit-en">Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8 .</p>
+                                <div class="username-input">
+                                    
+                                    <div class="title-input-register">
+                                        <span class="efruit-vi">Mật khẩu</span>
+                                        <span class="efruit-en">Password</span>
+                                    </div>
+                                    <div class="input-register">
+                                        <input type="password" class="input-account" id="input-password" name="password" autocapitalize="words" required>
+                                    </div>
+                                    <!-- <p class="efruit-en">Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8 .</p>
                                 <p class="efruit-vi">Mật khẩu có ít nhất 1 số, 1 chữ thường, 1 chữ in hoa và tối đa 8 ký tự .</p> -->
+                                </div>
                                 <div class="error">
                                     <?php
-                                    if (isset($_COOKIE['error_username_password'])) {
-                                        echo $_COOKIE['error_username_password'] . "</br>";
-                                    }
-                                    if (isset($_COOKIE['error_acount_does_not_exist'])) {
-                                        echo $_COOKIE['error_acount_does_not_exist'] . "</br>";
-                                    }
+                                        if (isset($_COOKIE['error_username_password'])) {
+                                            echo $_COOKIE['error_username_password'] . "</br>";
+                                        }
+                                        if (isset($_COOKIE['error_acount_does_not_exist'])) {
+                                            echo $_COOKIE['error_acount_does_not_exist'] . "</br>";
+                                        }
                                     ?>
                                 </div>
                             </div>
                             <div class="div-action-button">
                                 <div class="input-submit-account">
-                                    <input type="submit" value="Sign In" name="login">
+                                    <input class="efruit-en" type="submit" value="Log In" name="login" >
+                                    <input class="efruit-vi" type="submit" value="Đăng nhập" name="dang-nhap">
                                     <a class="efruit-vi" href="#recover" id="forgotpassword">Quên mật khẩu ?</a>
                                     <a class="efruit-en" href="#recover" id="forgotpassword">Forgot your password ?</a>
                                     <br>
@@ -87,12 +104,19 @@
                         </div>
                         <form action="/forgot-pass" method="post">
                             <div class="main-create-account-fillout">
-                                <input type="email" name="email" class="input-account" autocapitalize="words" placeholder="Email">
-
+                                <div class="username-input">
+                                    <div class="title-input-register">
+                                        <span>Email</span>
+                                    </div>
+                                    <div class="input-register">
+                                        <input type="email" name="email" class="input-account" autocapitalize="words">
+                                    </div>
+                                </div>
                             </div>
                             <div class="div-action-button">
                                 <div class="input-submit-account">
-                                    <input type="submit" value="Submit" name="submitForgot">
+                                    <input class="efruit-en" type="submit" value="Submit" name="submitForgot">
+                                    <input class="efruit-vi" type="submit" value="Gửi" name="gui-quen-pass">
                                     <a class="efruit-vi" href="#recover" id="cancelFormForgot">Hủy</a>
                                     <a class="efruit-en" href="#recover" id="cancelFormForgot">Cancel</a>
                                 </div>
@@ -109,18 +133,45 @@
                         <form action="/change-pass" method="post">
                             <div class="main-create-account-fillout">
                                 
+                            <div class="username-input">
+                                <div class="title-input-register">
+                                    <span class="efruit-vi">Tên đăng nhập</span>
+                                    <span class="efruit-en">Username</span>
+                                </div>
+                                <div class="input-register">
+                                    <input type="text"  class="input-account" name="username" autocapitalize="words" required>
+                                </div>
+                            </div>
+
+                            <div class="username-input">
+                                <div class="title-input-register">
+                                    <span class="efruit-vi">Mật khẩu hiện tại</span>
+                                    <span class="efruit-en">Current password</span>
+                                </div>
+                                <div class="input-register">
+                                    <input type="text"  class="input-account" name="current-password" autocapitalize="words" required>
+                                </div>
+                            </div>
                                 
-                                <input type="text"  class="input-account" name="username" autocapitalize="words" placeholder="Username" required>
-                                <input type="text"  class="input-account" name="current-password" autocapitalize="words" placeholder="Current password" required>
                                 <!--  -->
-                                <input type="text" class="input-account" name="new-password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{8,}" 
-                                title="Password must have limited one number, one uppercase letter, one lowercase letter and minimum length is 8"
-                                autocapitalize="words" placeholder="New password"  required>                                
+                            <div class="username-input">
+                                <div class="title-input-register">
+                                    <span class="efruit-vi">Mật khẩu mới</span>
+                                    <span class="efruit-en">New password</span>
+                                </div>
+                                <div class="input-register">
+                                    <input type="text" class="input-account" name="new-password" pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{4,}" 
+                                    title="Password must have limited one number, one alphabetic characters and minimum length is 5"
+                                    autocapitalize="words" required>    
+                                </div>
+                            </div>
+                                                            
 
                             </div>
                             <div class="div-action-button">
                                 <div class="input-submit-account">
-                                    <input type="submit" value="Change password">
+                                    <input class="efruit-en" type="submit" value="Change password" name="change-password" >
+                                    <input class="efruit-vi" type="submit" value="Đổi mật khẩu" name="doi-mat-khau">
                                     <a href="#recover" id="cancel-change-password">Cancel</a>
                                 </div>
                             </div>
