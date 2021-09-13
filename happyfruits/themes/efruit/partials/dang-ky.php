@@ -35,11 +35,6 @@
                             </div>
 
                             <div class="password-wrapper">
-<<<<<<< HEAD
-
-                                <input pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{5,}" title="Password must have limited one number, one alphabetic characters and minimum length is 5" autocomplete="on" id="password" type="password" name="password_en" class="input-account" autocapitalize="words" placeholder="Password" required>
-                                <i class="fas fa-eye" id="btnShowPass"></i>
-=======
                                 <div class="username-input">
                                     <div class="title-input-register">
                                         <span class="efruit-vi">Mật khẩu</span>
@@ -50,7 +45,6 @@
                                         <i class="fas fa-eye" id="btnShowPass"></i>
                                     </div>
                                 </div>
->>>>>>> 16366d5a10a0c84023d8a9fd31404799209193ac
                             </div>
                             <p class="efruit-en">Password must have limited one number, one alphabetic characters and minimum length is 5</p>
                             <p class="efruit-vi">Mật khẩu phải có một số, một kí tự chữ cái và tối thiểu 5 kí tự</p>
