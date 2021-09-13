@@ -484,6 +484,12 @@ h2 {
   display: block;
   width: calc(100% - 20px);
 }
+
+.efruit-cart.fixed {
+  position: fixed;
+  top: 30px;
+}
+
 .custom-checkbox-with-tick.inline-block {
   display: inline-block;
 }

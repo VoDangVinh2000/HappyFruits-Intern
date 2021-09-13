@@ -3,7 +3,6 @@
 <?php
 //Biến tiles này được nhận tại trang function.php, được truyền qua dòng code $con
 //ntroller->_merge_data("tiles")
-
 //Khi các sản phẩm không có ảnh thì sử dụng ảnh này
 
 $settings = get_setting_options();
