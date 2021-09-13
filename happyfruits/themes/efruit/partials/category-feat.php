@@ -1,3 +1,5 @@
+
+
 <?php
 //Biến tiles này được nhận tại trang function.php, được truyền qua dòng code $con
 //ntroller->_merge_data("tiles")
@@ -19,6 +21,14 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                     <div class="col-md-6 product-item">
                         <div class="top-img">
                             <img src="<?= $array['image'] ?>" alt="test">
+                            <div class="category-desc">
+                                <span class="efruit-vi">
+                                    <p><?= $array['description'] ?></p>
+                                </span>
+                                <span class="efruit-en">
+                                    <p><?= $array['description'] ?></p>
+                                </span>
+                            </div>
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
@@ -60,14 +70,16 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                         </div>
-                                        <div class="row mt-2">
-                                            <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
-                                                <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
-                                            </div>
-                                            <div class="col-md-12 col-lg-4 col-4">
-                                                <div class="product-price">
-                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                        <div style="background-color: orange;">
+                                            <div class="row mt-3" style="width: 248px;padding: 0;">
+                                                <div class="col-md-12 col-lg-8 col-8 product-name">
+                                                    <a class=" efruit-vi" style="color:orangered" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                    <a class=" efruit-en" style="color:orangered" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                </div>
+                                                <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
+                                                    <div class="product-price">
+                                                        <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -92,12 +104,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
 
                                         </div>
-                                        <div class="row mt-2">
+                                        <div class="row mt-3" style="width: 248px;padding: 0;">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
                                                 <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                                 <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                             </div>
-                                            <div class="col-md-12 col-lg-4 col-4">
+                                            <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                                 <div class="product-price">
                                                     <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                                 </div>
@@ -143,12 +155,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 <span class="yum"></span>
                                             </div>
                                         </div>
-                                        <div class="row mt-2">
+                                        <div class="row mt-3" style="width: 248px;padding: 0;">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
                                                 <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
                                                 <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                             </div>
-                                            <div class="col-md-12 col-lg-4 col-4">
+                                            <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                                 <div class="product-price">
                                                     <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                                 </div>
@@ -172,12 +184,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 <span class="yum"></span>
                                             </div>
                                         </div>
-                                        <div class="row mt-2">
+                                        <div class="row mt-3" style="width: 248px;padding: 0;">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
                                                 <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                                 <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                             </div>
-                                            <div class="col-md-12 col-lg-4 col-4">
+                                            <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                                 <div class="product-price">
                                                     <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                                 </div>
@@ -198,6 +210,14 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                     <div class="col-md-6 product-item">
                         <div class="top-img">
                             <img src="<?= $array['image'] ?>" alt="test">
+                            <div class="category-desc">
+                                <span class="efruit-vi">
+                                    <p><?= $array['description'] ?></p>
+                                </span>
+                                <span class="efruit-en">
+                                    <p><?= $array['description'] ?></p>
+                                </span>
+                            </div>
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
@@ -206,6 +226,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="button-text">SHOP NOW</span>
                                     </div>
                                 </a>
+
                             </div>
                         </div>
                     </div>
@@ -227,10 +248,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                             <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
                             <span class="efruit-vi">
-                                <p><?= $content_2 ?></p>
+                                <p><?= $array['description'] ?></p>
                             </span>
                             <span class="efruit-en">
-                                <p><?= $content_2_en ?></p>
+                                <p><?= $array['description'] ?></p>
                             </span>
                             <a class="btn-shop" href="/vi/fruit-bouquet">
                                 <div class="button-content-wrapper">
@@ -271,12 +292,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+                                <div class="row mt-3" style="width: 248px;padding: 0;">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
                                         <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
                                         <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
+                                    <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                         </div>
@@ -300,12 +321,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+                                <div class="row mt-3" style="width: 248px;padding: 0;">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
+                                    <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                         </div>
@@ -357,11 +378,11 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+                                <div class="row mt-3" style="width: 248px;padding: 0;">
                                     <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                     <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                 </div>
-                                <div class="col-md-12 col-lg-4 col-4">
+                                <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                     <div class="product-price">
                                         <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                                     </div>
@@ -385,12 +406,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <span class="yum"></span>
                     </div>
                 </div>
-                <div class="row mt-2">
+                <div class="row mt-3" style="width: 248px;padding: 0;">
                     <div class="col-md-12 col-lg-8 col-8 product-name">
                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                     </div>
-                    <div class="col-md-12 col-lg-4 col-4">
+                    <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                         <div class="product-price">
                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                         </div>
@@ -441,13 +462,13 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+                                <div class="row mt-3" style="width: 248px;padding: 0;">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
 
                                     </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
+                                    <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                                         </div>
@@ -471,12 +492,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+                                <div class="row mt-3" style="width: 248px;padding: 0;">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
+                                    <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                                         </div>
@@ -526,12 +547,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+                                <div class="row mt-3" style="width: 248px;padding: 0;">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
+                                    <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                                         </div>
@@ -555,12 +576,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="row mt-2">
+                                <div class="row mt-3" style="width: 248px;padding: 0;">
                                     <div class="col-md-12 col-lg-8 col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
+                                    <div class="col-md-12 col-lg-4 col-4" style="padding-right: 0;">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>'; ?></span>
                                         </div>

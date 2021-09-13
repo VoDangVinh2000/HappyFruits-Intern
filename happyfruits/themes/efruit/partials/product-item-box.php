@@ -5,6 +5,7 @@ if (!empty($item)) :?>
             <div class="product-photo">
                 <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
                     <img alt="<?= $item['code'] ?>" src="<?= $item['image'] ? get_image_url($item['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>"></a>
+                    
                 <?php if (!empty($item['enabled']) && empty($item['not_deliver'])) : ?>
                     <a class="btn-shop btn-cart" href="#">
                         <div ng-click="showProduct(<?= $item['product_id'] ?>, $event)" class="button-content-wrapper">
@@ -13,6 +14,7 @@ if (!empty($item)) :?>
                         </div>
                     </a>
                 <?php endif; ?>
+                <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
 
             </div>
             <div class="row mt-2">
