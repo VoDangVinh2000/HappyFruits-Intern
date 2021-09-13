@@ -479,7 +479,8 @@ body {
   color: #000;
   background: #fff;
   position: relative;
-  padding-right: 20px;
+  /* padding-right: 20px; */
+  padding-right: 10px;
 }
 
 .product-item .product-name {

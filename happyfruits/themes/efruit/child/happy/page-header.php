@@ -233,12 +233,8 @@
                                                                                <span class="button-text efruit-vi">Chi tiết</span>
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
-<<<<<<< HEAD
-=======
-                                                                           <!-- <div class="self" style="color:">MyTien</div> -->
->>>>>>> 16366d5a10a0c84023d8a9fd31404799209193ac
                                                                        </a>
-
+                                                                       <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -340,7 +336,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
-
+                                                                       <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -441,6 +437,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
+                                                                       <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -526,6 +523,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
+                                                                       <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -611,6 +609,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
+                                                                       <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -697,6 +696,7 @@
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
                                                                        </a>
+                                                                       <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
