@@ -6,7 +6,7 @@
                 $arrProducts = array($get_product_with_mega_menu);
                 foreach ($arrProducts as $value) {
                     for ($i = 0; $i < count($value); $i++) {
-                        if ($value[$i]['image'] == "") { 
+                        if ($value[$i]['image'] == "") {
         ?>
                             <div class="col-md-3 col-sm-3">
                                 <div class="product-item">
@@ -21,14 +21,14 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12 col-lg-8 col-8 product-name">
-                                            <a class=" efruit-vi" href="/vi/detail/<?php echo $value[$i]['product_id'] ?>"><?= $value[$i]['name'] ?></a>
-                                            <a class=" efruit-en" href="/vi/detail/<?php echo $value[$i]['product_id'] ?>"><?= $value[$i]['english_name'] ?></a>
+                                    <div class="product-info">
+                                        <div class="col-8 product-name">
+                                            <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
+                                            <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
                                         </div>
-                                        <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="col-4" style="padding-right: 0;">
                                             <div class="product-price">
-                                                <span class="price"><?= number_format($value[$i]['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                             </div>
                                         </div>
                                     </div>
@@ -48,12 +48,12 @@
                                             </div>
                                         </a>
                                     </div>
-                                    <div class="row mt-2">
-                                        <div class="col-md-12 col-lg-8 col-8 product-name">
+                                    <div class="product-info">
+                                        <div class="col-8 product-name">
                                             <a class=" efruit-vi" href="/vi/detail/<?php echo $value[$i]['product_id'] ?>"><?= $value[$i]['name'] ?></a>
                                             <a class=" efruit-en" href="/vi/detail/<?php echo $value[$i]['product_id'] ?>"><?= $value[$i]['english_name'] ?></a>
                                         </div>
-                                        <div class="col-md-12 col-lg-4 col-4">
+                                        <div class="col-4" style="padding-right: 0;">
                                             <div class="product-price">
                                                 <span class="price"><?= number_format($value[$i]['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                             </div>
@@ -64,13 +64,12 @@
         <?php }
                     }
                 }
-            }
-            else{
+            } else {
                 //Nếu không có sản phẩm nào 
                 echo "<h3 class='efruit-vi text-center'>Hiện chưa có sản phẩm tương thích.</h3>
                       <h3 class='efruit-en text-center'>There are no compatible products.</h3>
                         ";
             }
-        }?>
+        } ?>
     </div>
 </div>

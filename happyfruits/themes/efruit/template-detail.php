@@ -79,19 +79,19 @@ if (isset($product['sell_price'])) {
     <div class="row">
         <?php
         $counter = 0;
-        if(!empty($relateProducts)){
+        if (!empty($relateProducts)) {
             foreach ($relateProducts as $item) {
                 $counter++;
                 if ($counter >= 5) {
                     break;
-                }  
+                }
         ?>
                 <?php
                 if (!empty($item)) {
-        ?>
+                ?>
                     <?php
                     if ($item['image'] == "") {
-                ?>
+                    ?>
                         <div class="col-md-3 col-sm-3">
                             <div class="product-item">
                                 <div class="product-photo">
@@ -130,16 +130,18 @@ if (isset($product['sell_price'])) {
                                         </div>
                                     </a>
                                 </div>
-                                <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
-                                    </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
-                                        <div class="product-price">
-                                            <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                <div class="product-info">
+                                    <!-- <div class="row mt-2"> -->
+                                        <div class="col-8 product-name">
+                                            <a class="efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
+                                            <a class="efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
                                         </div>
-                                    </div>
+                                        <div class="col-4">
+                                            <div class="product-price">
+                                                <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            </div>
+                                        </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
