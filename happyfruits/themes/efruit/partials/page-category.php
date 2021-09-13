@@ -28,7 +28,7 @@
                                         </div>
                                         <div class="col-4" style="padding-right: 0;">
                                             <div class="product-price">
-                                                <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                <span class="price"><?= number_format($value[$i]['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                             </div>
                                         </div>
                                     </div>
