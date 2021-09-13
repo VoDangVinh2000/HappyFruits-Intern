@@ -233,14 +233,17 @@
                                                                                <span class="button-text efruit-vi">Chi tiết</span>
                                                                                <span class="button-text efruit-en">Detail</span>
                                                                            </div>
+<<<<<<< HEAD
+=======
                                                                            <!-- <div class="self" style="color:">MyTien</div> -->
+>>>>>>> 16366d5a10a0c84023d8a9fd31404799209193ac
                                                                        </a>
 
                                                                    </div>
                                                                    <div class="row mt-2">
                                                                        <div class="col-md-12 col-lg-8 col-8 product-name">
-                                                                           <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
-                                                                           <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
+                                                                           <a class=" efruit-vi text-left" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['name'] ?></a>
+                                                                           <a class=" efruit-en text-left" href="/vi/detail/<?php echo $array['product_id'] ?>"><?= $array['english_name'] ?></a>
                                                                        </div>
                                                                        <div class="col-md-12 col-lg-4 col-4">
                                                                            <div class="product-price">

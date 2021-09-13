@@ -18,11 +18,11 @@
 
     <link rel="shortcut icon" href="<?= get_child_theme_assets_url() ?>img/favicon.ico" />
     <link rel="image_src" href="<?= get_child_theme_assets_url() ?>img/main_logo.png" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 
-    
     <?php
     $preload_issue_links = array(
         get_theme_assets_url() . 'fonts/UVNBaiSau_R.ttf',
@@ -81,7 +81,7 @@
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.theme.default.css">
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/cart.css">
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/stylePageAccount.css">
-    
+
     <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>

@@ -32,6 +32,18 @@ function get_server_ip()
 
     return $ip;
 }
+/**
+ * Gets the description of category
+ */
+function get_desc_category($category_id)
+{
+    $sql = 'SELECT g_order_items.*, products.unit, products.name as product_name, products.english_name as product_english_name, products.unit, categories.name as category_name, categories.english_name as category_english_name
+            FROM g_order_items
+            INNER JOIN products ON products.product_id = g_order_items.product_id
+            INNER JOIN categories ON categories.category_id = products.category_id';
+    $filters['g_order_items.deleted'] = 0;
+    return eModel::_do_sql($sql, $filters, array(), 'g_order_items.id');
+}
 
 function post($key, $default = "")
 {
