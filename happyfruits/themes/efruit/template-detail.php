@@ -104,16 +104,18 @@ if (isset($product['sell_price'])) {
                                         </div>
                                     </a>
                                 </div>
-                                <div class="row mt-2">
-                                    <div class="col-md-12 col-lg-8 col-8 product-name">
-                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] ?>"><?= $item['name'] ?></a>
-                                        <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] ?>"><?= $item['english_name'] ?></a>
+                                <div class="product-info mt-2">
+                                    <!-- <div class="row mt-2"> -->
+                                    <div class="col-8 product-name">
+                                        <a class="efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
+                                        <a class="efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
                                     </div>
-                                    <div class="col-md-12 col-lg-4 col-4">
+                                    <div class="col-4">
                                         <div class="product-price">
                                             <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -130,17 +132,17 @@ if (isset($product['sell_price'])) {
                                         </div>
                                     </a>
                                 </div>
-                                <div class="product-info">
+                                <div class="product-info mt-2">
                                     <!-- <div class="row mt-2"> -->
-                                        <div class="col-8 product-name">
-                                            <a class="efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
-                                            <a class="efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
+                                    <div class="col-8 product-name">
+                                        <a class="efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
+                                        <a class="efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="product-price">
+                                            <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
                                         </div>
-                                        <div class="col-4">
-                                            <div class="product-price">
-                                                <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
-                                            </div>
-                                        </div>
+                                    </div>
                                     <!-- </div> -->
                                 </div>
                             </div>

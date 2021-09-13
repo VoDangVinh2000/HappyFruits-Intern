@@ -67,7 +67,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                         </div>
-                                        <div class="product-info">
+                                        <div class="product-info mt-2">
                                             <div class="col-8 product-name">
                                                 <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                                 <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -99,7 +99,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
 
                                         </div>
-                                        <div class="product-info">
+                                        <div class="product-info mt-2">
                                             <div class="col-8 product-name">
                                                 <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                                 <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -150,7 +150,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 <span class="yum"></span>
                                             </div>
                                         </div>
-                                        <div class="product-info">
+                                        <div class="product-info mt-2">
                                             <div class="col-8 product-name">
                                                 <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                                 <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -179,7 +179,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 <span class="yum"></span>
                                             </div>
                                         </div>
-                                        <div class="product-info">
+                                        <div class="product-info mt-2">
                                             <div class="col-8 product-name">
                                                 <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                                 <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -287,7 +287,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info">
+                                <div class="product-info mt-2">
                                     <div class="col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -316,7 +316,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info">
+                                <div class="product-info mt-2">
                                     <div class="col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -373,7 +373,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info">
+                                <div class="product-info mt-2">
                                     <div class="col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -403,7 +403,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <span class="yum"></span>
                     </div>
                 </div>
-                <div class="product-info">
+                <div class="product-info mt-2">
                     <div class="col-8 product-name">
                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -459,7 +459,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info">
+                                <div class="product-info mt-2">
                                     <div class="col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
@@ -488,7 +488,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info">
+                                <div class="product-info mt-2">
                                     <div class="col-8 product-name">
                                         <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
                                         <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
