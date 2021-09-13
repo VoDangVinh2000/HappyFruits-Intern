@@ -103,6 +103,7 @@ if (isset($product['sell_price'])) {
                                             <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
+                                    <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                 </div>
                                 <div class="product-info mt-2">
                                     <!-- <div class="row mt-2"> -->
@@ -131,6 +132,7 @@ if (isset($product['sell_price'])) {
                                             <span class="button-text efruit-en">Detail</span>
                                         </div>
                                     </a>
+                                    <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                 </div>
                                 <div class="product-info mt-2">
                                     <!-- <div class="row mt-2"> -->
