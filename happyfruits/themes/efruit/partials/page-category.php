@@ -20,6 +20,7 @@
                                                 <span class="button-text efruit-en">Detail</span>
                                             </div>
                                         </a>
+                                        <div ng-click="showProduct(<?php echo $value[$i]['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                     </div>
                                     <div class="product-info mt-2">
                                         <div class="col-8 product-name">
@@ -47,6 +48,7 @@
                                                 <span class="button-text efruit-en">Detail</span>
                                             </div>
                                         </a>
+                                        <div ng-click="showProduct(<?php echo $value[$i]['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                     </div>
                                     <div class="product-info mt-2">
                                         <div class="col-8 product-name">
