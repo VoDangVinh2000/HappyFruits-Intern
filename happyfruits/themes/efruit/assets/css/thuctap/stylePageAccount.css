@@ -5,7 +5,6 @@
 /* 
 NEW CHANGE
 */
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,600&display=swap');
 
 /*css inside-bread-section*/
 
@@ -25,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lora", Arial, Helvetica, sans-serif;
+    font-family: inherit;
 }
 
 .title ul li {
