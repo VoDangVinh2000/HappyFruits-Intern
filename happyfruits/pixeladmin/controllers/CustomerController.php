@@ -170,7 +170,7 @@ class CustomerController extends BaseController
                     if (isset($_POST['dang-nhap'])) {
                         $error_username_password = 'Tài khoản hoặc mật khẩu không chính xác';
                     } else {
-                        $error_username_password = 'Incorrect account or password';
+                        $error_username_password = 'Incorrect username or password';
                     }
                     setcookie("error_username_password", $error_username_password, time() + 600, "/");
                     header('location:/vi/dang-nhap');

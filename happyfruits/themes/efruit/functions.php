@@ -32,7 +32,6 @@ function init_page(&$controller)
                 $products_in_tags = Hash::combine($products_in_tags, '{n}.product_id', '{n}', '{n}.tag_id');
         }
     }
-
     //get_full_details for home page
     $traiCayDacSanViet = $controller->Products->get_all_product_by_categoryID(6);
     $gioTraiCay = $controller->Products->get_all_product_by_categoryID(14);
@@ -49,8 +48,7 @@ function init_page(&$controller)
     $megaMenu_fresh_fruit  = $controller->Categories->get_parentId_of_categories(12);
     $megaMenu_orther_products  = $controller->Categories->get_parentId_of_categories(7);
     
-    //get all product by code
-    $all_product = $controller->Products->get_all_product();
+   
 
     //image null
     $imageDefault = get_child_theme_assets_url() . "img/default-product-image.png";
@@ -67,6 +65,8 @@ function init_page(&$controller)
     $history_order_code_completed = $controller->Customers->get_history_order_customer_completed();
     //
     $history_order_code_unfinished = $controller->Customers->get_history_order_customer_unfinished();
+    //
+    $history_order_code_failed = $controller->Customers->get_history_order_customer_failed();
     //show products with sell_price on mega-menu
     $choose_mega_menu = eModel::matchRegexUrl(get('param2'));
     $get_product_with_mega_menu = $controller->Prices->get_products_with_mega_menu($choose_mega_menu);
@@ -78,10 +78,11 @@ function init_page(&$controller)
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
     "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
     "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
-    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","all_product","megaMenu_fruit_baskets",
+    "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","megaMenu_fruit_baskets",
     "megaMenu_hamper_boxFruit","choose_mega_menu","get_product_with_mega_menu","relateProducts","megaMenu_fruit_bouquet"
     ,"megaMenu_Viet_Nam_Fruit_Special","megaMenu_fresh_fruit","megaMenu_orther_products"
-    ,"get_product_by_search_key","history_order_code_completed","history_order_code_unfinished"));
+    ,"get_product_by_search_key","history_order_code_completed","history_order_code_unfinished",
+    "history_order_code_failed"));
 }
 
 

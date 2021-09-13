@@ -150,7 +150,26 @@ class Customers extends BaseCustomers
             $order_by = '';
             $sql = "SELECT orders.created_dtm as ngayTao, orders.code as code FROM `customers` INNER JOIN orders 
             ON orders.customer_id = customers.customer_id 
-            WHERE orders.customer_id = '" . $id . "' AND orders.status != 'Completed' ORDER BY orders.created_dtm ASC ";
+            WHERE orders.customer_id = '" . $id . "' AND orders.status != 'Completed' AND 
+            orders.status != 'Failed' ORDER BY orders.created_dtm ASC ";
+            if (!empty($sql)) {
+                $filters = "";
+                return self::_do_sql($sql, $filters, array(), $order_by);
+            } else {
+                echo "<script>window.location.href='/vi'</script>";
+            }
+        } else {
+            return null;
+        }
+    }
+
+    function get_history_order_customer_failed(){
+        if (isset($_SESSION['user_account'][0]['customer_id'])) {
+            $id = $_SESSION['user_account'][0]['customer_id'];
+            $order_by = '';
+            $sql = "SELECT orders.created_dtm as ngayTao, orders.code as code FROM `customers` INNER JOIN orders 
+            ON orders.customer_id = customers.customer_id 
+            WHERE orders.customer_id = '" . $id . "' AND orders.status = 'Failed' ORDER BY orders.created_dtm ASC ";
             if (!empty($sql)) {
                 $filters = "";
                 return self::_do_sql($sql, $filters, array(), $order_by);

@@ -155,9 +155,13 @@ class Products extends BaseProducts
             'join' => 'INNER JOIN categories ON categories.category_id = products.category_id
                        INNER JOIN prices ON prices.product_id = products.product_id',
             'products.category_id' => eModel::matchRegexUrl($id),
+            'categories.allow_delivery' => 1,
             'prices.type_id' => 1,
             'products.enabled' => 1,
             'products.is_hidden' => 0,
+            'products.is_additional' => 0,
+            'products.not_deliver' => 0,
+            'categories.deleted' => 0
         );
         return $this->select($filters);
     }
@@ -196,12 +200,14 @@ class Products extends BaseProducts
         $sql = "";
         if (isset($_POST['key']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
             $search = eModel::matchRegex_SearchProducts($_POST['key']);
-            $sql = "SELECT * FROM products, prices 
+            $sql = "SELECT products.*,prices.price FROM products, prices , categories
             WHERE (products.name LIKE '%" . $search . "%' OR products.code LIKE '%" . $search . "%' 
             OR products.english_name LIKE '%" . $search . "%')
             AND products.product_id = prices.product_id 
-            AND prices.type_id = 1 AND products.enabled = 1 AND products.is_hidden = 0";
-
+            AND categories.category_id = products.category_id
+            AND prices.type_id = 1 AND products.enabled = 1 AND products.is_hidden = 0 AND categories.allow_delivery = 1
+            AND categories.deleted = 0 AND products.is_additional = 0 AND products.not_deliver = 0 AND categories.enabled = 1
+            ORDER BY products.image";
             $filters = "";
             $result = self::_do_sql($sql, $filters);
             if (!empty($result)) {
@@ -228,36 +234,51 @@ class Products extends BaseProducts
         if (!empty($result)) {
             foreach ($result as $array) {
                 //sản phẩm liên quan ngẫu nhiên
-                $totalRows = $this->_do_select_sql("SELECT * FROM products 
+                $totalRows = $this->_do_select_sql("SELECT * FROM products
                 INNER JOIN prices ON prices.product_id = products.product_id 
+                INNER JOIN categories ON categories.category_id = products.category_id
                 WHERE products.category_id = '" . $array['category_id'] . "' AND products.enabled = 1 AND 
-                products.is_hidden = 0 AND prices.type_id = 1 ", $filters);
+                products.is_hidden = 0 AND prices.type_id = 1 AND products.not_deliver = 0
+                AND products.is_additional = 0
+                AND categories.allow_delivery = 1 AND categories.enabled = 1 AND categories.deleted = 0 ", $filters);
 
                 $max = count($totalRows) - 1; // Nếu lỗi thì liên quan đến biến $max
                 //vì sản phẩm liên quan tối đa hiện ra 4 sản phẩm, nếu $query select tổng nhỏ hơn 4 thì random offset lại
                 $rand_number = rand(0, $max);
 
                 $query = "SELECT * FROM products 
-                INNER JOIN prices ON products.product_id = prices.product_id WHERE
-                 products.category_id = '" . $array['category_id'] . "' 
-                AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT $rand_number,4";
+                INNER JOIN prices ON products.product_id = prices.product_id 
+                INNER JOIN categories ON categories.category_id = products.category_id
+                WHERE products.category_id = '" . $array['category_id'] . "' 
+                AND products.enabled = 1 AND products.is_hidden = 0 
+                AND products.not_deliver = 0  AND products.is_additional = 0
+                     AND categories.allow_delivery = 1 AND categories.enabled = 1 AND categories.deleted = 0
+                AND prices.type_id = 1 LIMIT $rand_number,4";
 
                 //Lấy ra ngẫu nhiên vị trí của select
                 $total = count($this->_do_select_sql($query));
                 //Nếu select ngẫu nhiên vị trí nhỏ hơn 4
                 if ($total < 4) {
 
-                    $query = "SELECT * FROM products 
-                    INNER JOIN prices ON products.product_id = prices.product_id WHERE
-                    products.category_id = '" . $array['category_id'] . "' 
-                    AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT 4";
+                    $query = "SELECT products.*,prices.price FROM products 
+                    INNER JOIN prices ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id
+                     WHERE products.category_id = '" . $array['category_id'] . "' 
+                    AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0  AND products.is_additional = 0
+                     AND categories.allow_delivery = 1 AND categories.enabled = 1 AND categories.deleted = 0
+                    AND prices.type_id = 1 LIMIT 4";
                     return $this->_do_select_sql($query, $filters);
                 } else { //Ngược lại
 
-                    $query = "SELECT * FROM products 
-                    INNER JOIN prices ON products.product_id = prices.product_id WHERE
-                     products.category_id = '" . $array['category_id'] . "' 
-                    AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id = 1 LIMIT $rand_number,4";
+                    $query = "SELECT products.*,prices.price FROM products 
+                    INNER JOIN prices ON products.product_id = prices.product_id 
+                    INNER JOIN categories ON categories.category_id = products.category_id
+                    WHERE  products.category_id = '" . $array['category_id'] . "' 
+                    AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0  AND products.is_additional = 0
+                     AND categories.allow_delivery = 1 AND categories.enabled = 1 AND categories.deleted = 0
+                    AND prices.type_id = 1 LIMIT $rand_number,4";
                     return $this->_do_select_sql($query, $filters);
                 }
             }

@@ -32,7 +32,7 @@
                             <span class="order-item-number fw-bold">Số lượng : <?=formatQuantity($item['quantity'])?></span>
                             <div class="order-item-info">
                                 <div class="order-item-name">
-                                    <span class="txt-bold">
+                                    <span class="txt-bold" >
                                         <span class="efruit-vi text-center"><?=$item['code'].' - '.$item['product_name']?></span>
                                         <span class="efruit-en efruitjs"><?=$item['code'].' - '.$item['product_english_name']?></span>
                                         &nbsp;

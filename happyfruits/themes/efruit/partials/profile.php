@@ -21,6 +21,33 @@ if (isset($_SESSION['user_account'])) {
                 <div class="col-sm-4">
                     <div class="return-to-account">
                         <!--Show order history-->
+                        <h3 class="efruit-vi">Đơn hàng đã hoàn thành</h3>
+                        <h3 class="efruit-en">Completed Order</h3>
+                        <div class="order-history">
+                            <table class="table table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th class="scope efruit-vi">Ngày đặt</th>
+                                        <th class="scope efruit-en">Order date</th>
+                                        <th class="scope efruit-vi">Hóa đơn</th>
+                                        <th class="scope efruit-en">Order code</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php if (!empty($history_order_code_completed)) {
+                                        foreach ($history_order_code_completed as $array) {
+                                    ?>
+                                            <tr>
+                                                <td><?= $array['ngayTao'] ?></td>
+                                                <td> <a href="/vi/don-hang/<?= $array['code'] ?>"><?= $array['code'] ?></a></td>
+                                            </tr>
+                                    <?php }
+                                    } ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <hr>
+                        
                         <h3 class="efruit-vi">Đơn hàng chưa hoàn thành</h3>
                         <h3 class="efruit-en">Order unfinished</h3>
                         <div class="order-history">
@@ -46,22 +73,23 @@ if (isset($_SESSION['user_account'])) {
                                 </tbody>
                             </table>
                         </div>
+                        <hr>
 
-                        <h3 class="efruit-vi">Lịch sử đặt hàng</h3>
-                        <h3 class="efruit-en">Order history</h3>
+                        <h3 class="efruit-vi">Đơn hàng bị hủy</h3>
+                        <h3 class="efruit-en">Canceled order</h3>
                         <div class="order-history">
                             <table class="table table-responsive">
                                 <thead>
                                     <tr>
                                         <th class="scope efruit-vi">Ngày đặt</th>
                                         <th class="scope efruit-en">Order date</th>
-                                        <th class="scope efruit-vi">Hóa đơn</th>
+                                        <th class="scope  efruit-vi">Hóa đơn</th>
                                         <th class="scope efruit-en">Order code</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php if (!empty($history_order_code_completed)) {
-                                        foreach ($history_order_code_completed as $array) {
+                                    <?php if (!empty($history_order_code_failed)) {
+                                        foreach ($history_order_code_failed as $array) {
                                     ?>
                                             <tr>
                                                 <td><?= $array['ngayTao'] ?></td>
@@ -91,7 +119,7 @@ if (isset($_SESSION['user_account'])) {
                         <p class="efruit-vi">Quận(Huyện): <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['district_account']; ?></p>
                         <p class="efruit-en">Building: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['building_account']; ?></p>
                         <p class="efruit-vi">Tòa nhà: <?php if (isset($_SESSION['user_account'])) echo $_SESSION['user_account'][0]['building_account']; ?></p>
-                        
+
                         <li>
                             <a class="efruit-en" href="#edit" style="background-color: #72a499;color:white;padding:7px;border-radius: 5px;" id="a-editProfile">Edit </a>
                             <a class="efruit-vi" href="#edit" style="background-color: #72a499;color:white;padding:7px;border-radius: 5px;" id="a-editProfile">Chỉnh sửa </a>
@@ -113,8 +141,7 @@ if (isset($_SESSION['user_account'])) {
                                 <div class="col">
                                     <div class="email-profile">
                                         <h4 class="h6" style="font-weight: 400;">Email</h4>
-                                        <input type="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9_\.]{3,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" name="email" autocapitalize="words"
-                                         required>
+                                        <input type="email" pattern="^[a-zA-Z0-9][a-zA-Z0-9_\.]{3,32}@[a-z0-9]{2,}(\.[a-z0-9]{2,4}){1,2}$" name="email" autocapitalize="words" required>
                                         <div class="error">
                                             <?php
                                             if (isset($_COOKIE['error_email_edit'])) {
@@ -149,8 +176,13 @@ if (isset($_SESSION['user_account'])) {
                                     <div class="district-profile">
                                         <h4 class="h6 efruit-vi" style="font-weight: 400;">Quận</h4>
                                         <h4 class="h6 efruit-en" style="font-weight: 400;">District</h4>
-                                        <?php echo(html_select_district($class = 'required', $empty_text = "Chọn", $extra = "", 
-                                            $is_multiple_language = false, $selected = $_SESSION['user_account'][0]['district_account'])) ?>
+                                        <?php echo (html_select_district(
+                                            $class = 'required',
+                                            $empty_text = "Chọn",
+                                            $extra = "",
+                                            $is_multiple_language = false,
+                                            $selected = $_SESSION['user_account'][0]['district_account']
+                                        )) ?>
                                     </div>
                                 </div>
                                 <div class="col">

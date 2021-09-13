@@ -64,11 +64,12 @@ class Prices extends BasePrices
                 $sql = "SELECT products.*,prices.price FROM `products` INNER JOIN categories ON categories.category_id = products.category_id 
                         INNER JOIN prices ON prices.product_id = products.product_id AND
                             products.category_id = '" . $category_id . "' 
-                            AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id =1 ORDER BY products.image ";
+                            AND products.enabled = 1 AND products.is_hidden = 0 AND prices.type_id =1 
+                            AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                            AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1 "; //ORDER BY products.image 
                 $filters = "";
                 return self::_do_sql($sql, $filters, array(), $order_by);
-            }
-            else{
+            } else {
                 return null;
             }
         } else if ($str[0] == 'gia') {
@@ -83,7 +84,7 @@ class Prices extends BasePrices
                         $gia = $str_split[$i];
                     }
                     if ($i == 2) {
-                        $category_id =$str_split[$i];
+                        $category_id = $str_split[$i];
                     }
                 }
                 if ($gia == '1') {
@@ -110,19 +111,19 @@ class Prices extends BasePrices
                 }
                 $order_by = "";
                 $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                INNER JOIN categories ON categories.category_id = products.category_id 
                 WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
-                AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 ";
+                AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
                 $filters = "";
                 return self::_do_sql($sql, $filters, array(), $order_by);
-            }
-            else{
+            } else {
                 return null;
             }
-        }
-        else{
+        } else {
             return null;
         }
     }
-  
 }
 /* End of generated class */

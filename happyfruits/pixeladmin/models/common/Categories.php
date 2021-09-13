@@ -66,7 +66,8 @@ class Categories extends BaseCategories
             'categories.parent_id' => $parentId,
             // 'categories.category_id' => $categoryId,
             'categories.enabled' => 1,
-            'categories.allow_delivery' => 1
+            'categories.allow_delivery' => 1,
+            'categories.deleted' => 0
         );
 
         return $this->select($filters);

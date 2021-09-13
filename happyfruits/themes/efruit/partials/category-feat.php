@@ -22,7 +22,6 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
-                                <h3><span><?= $array['description'] ?></h3>
                                 <a class="btn-shop" href="/vi/fruit-baskets">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>
@@ -52,6 +51,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
                                                 <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>">
                                             </a>
+
                                             <a class="btn-shop btn-cart" href="">
                                                 <div class="button-content-wrapper">
                                                     <span class="button-text efruit-vi">Chi tiết</span>
@@ -87,8 +87,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 </div>
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
-                                    </div>
+                                                <span class="yum"></span>
+                                            </div>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
 
                                         </div>
@@ -140,8 +140,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 </div>
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
-                                    </div>
+                                                <span class="yum"></span>
+                                            </div>
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -169,8 +169,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 </div>
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
-                                    </div>
+                                                <span class="yum"></span>
+                                            </div>
                                         </div>
                                         <div class="row mt-2">
                                             <div class="col-md-12 col-lg-8 col-8 product-name">
@@ -382,8 +382,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         </div>
                     </a>
                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
-                                    </div>
+                        <span class="yum"></span>
+                    </div>
                 </div>
                 <div class="row mt-2">
                     <div class="col-md-12 col-lg-8 col-8 product-name">

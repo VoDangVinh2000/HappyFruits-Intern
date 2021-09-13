@@ -347,7 +347,7 @@ class Orders extends BaseOrders
          LEFT JOIN order_assessments ON order_assessments.order_id = orders.id 
          WHERE shipping_info LIKE '%".$key."%' AND orders.deleted = 0 ";
           $result = self::_do_sql($sql, array(), $order_by);
-          if(!empty($result)){
+        if(!empty($result)){
             return self::_do_sql($sql, array(), $order_by);
         }
         else{
@@ -359,7 +359,6 @@ class Orders extends BaseOrders
         // else if ($filters['orders.deleted'] == -1)
         //     unset($filters['orders.deleted']);
         // var_dump($sql);
-        return self::_do_sql($sql, array(), $order_by);
     }
 }
 /* End of generated class */
