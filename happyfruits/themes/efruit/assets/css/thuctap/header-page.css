@@ -391,6 +391,7 @@ body {
 .product-item .top-img {
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .product-item .product-photo img {
