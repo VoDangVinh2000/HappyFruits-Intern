@@ -52,7 +52,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
     </div>
     </div>
     <div class="col-sm-3 nopadding hidden-xs">
-        <div class="efruit-cart" id="abId0.3789253860579187">
+        <div class="efruit-cart efruitjs">
             <div class="cart-header">
                 <h2 class="inline-block" bind-translate="Giỏ hàng">Giỏ hàng</h2>
             </div>
@@ -91,7 +91,8 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
             </div>
             <br />
             <div class="row-cart txt-center input-note"><span bind-translate="Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.">Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.</span></div>
-            <button class="btn btn-order btn-success" ng-click="showPopupStep2()" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
+            <!-- ng-click="showPopupStep2()" !-->
+            <button class="btn btn-order btn-success" id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
         </div>
     </div>
     </div>

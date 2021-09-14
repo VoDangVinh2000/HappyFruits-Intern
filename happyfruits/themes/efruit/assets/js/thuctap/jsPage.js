@@ -10,7 +10,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
     let form_change_password = document.querySelector('.form-change-password');
     let btn_change_password = document.querySelectorAll('#change-password');
     let btn_cancel_form_change_password = document.querySelectorAll('#cancel-change-password');
+    let btnShowpopup = document.querySelector('#showPopup');
+    let cartModal = document.querySelector('.cart-modal');
     
+    if(btnShowpopup){
+        btnShowpopup.addEventListener('click',function(){
+            cartModal.style.display = "block";
+        })
+    }
     if (a_editProfile) {
         a_editProfile.forEach(element => {
             element.addEventListener('click', function () {
@@ -85,7 +92,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     arr.push(str[j]);
                 }
             }
-           console.log(allcookie);
             for (let key = 0; key < arr.length; key++) {
                 if (arr[key] == "error_username") {
                     setCookie(arr[key], '', 0);

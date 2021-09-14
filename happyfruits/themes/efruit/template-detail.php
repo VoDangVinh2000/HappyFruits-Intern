@@ -65,7 +65,6 @@ if (isset($product['sell_price'])) {
                 <!-- <p class="product-price text-bold" style="font-size: 22px;" ng-show="selectedItem.promotion_price == 0 && selectedItem.price > 0"><span bind-translate="Giá">Giá</span>:&nbsp;{{selectedItem.price*1000|efruit_money}}<sup>đ</sup></p> -->
             </form>
             <div class="product-description mt-3">
-
                 <p class=" efruit-vi"><?= $product['description'] ?></p>
                 <p class=" efruit-en"><?= $product['description_en'] ?></p>
             </div>
