@@ -978,10 +978,11 @@ svg.infobox_icon {
 
 /* ============ desktop view ============ */
 
+
 @media all and (min-width: 992px) {
   .navbar .has-megamenu {
     position: static !important;
-    font-size: 17px;
+    font-size: 14px;
     color: #232323;
     font-weight: 600;
   }
@@ -1040,6 +1041,12 @@ svg.infobox_icon {
   }
   .section_col-item {
     grid-column: 1/7;
+  }
+  .cart-navi{
+    display: none;
+  }
+  .product-item .product-photo{
+    height: 200px;
   }
 }
 

@@ -91,7 +91,7 @@ if (isset($product['sell_price'])) {
                     <?php
                     if ($item['image'] == "") {
                     ?>
-                        <div class="col-md-3 col-sm-3">
+                        <div class="col-md-3 col-sm-6 col-6">
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $item['product_id']  . "/" . url_slug($item['name']) ?>" class="photo-link">
@@ -120,7 +120,7 @@ if (isset($product['sell_price'])) {
                             </div>
                         </div>
                     <?php } else { ?>
-                        <div class="col-md-3 col-sm-3">
+                        <div class="col-md-3 col-sm-6 col-6">
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">

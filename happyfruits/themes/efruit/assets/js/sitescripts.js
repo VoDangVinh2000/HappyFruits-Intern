@@ -1,5 +1,5 @@
-const cartLightBox = document.querySelector('.cart-lightbox');
-const cartClose = document.querySelector('.offcanvas-close');
+const cartLightBoxs = document.querySelector('.cart-lightbox');
+const cartClose = document.querySelector('.close');
 const btnCart = document.querySelectorAll('.btn-cart-nav');
 const cartModal = document.querySelector('.cart-modal');
 let cartOpen = 0;
@@ -8,8 +8,8 @@ if(btnCart){
 btnCart.forEach(e => {
     e.addEventListener ('click', function () {
         cartModal.style.display = "block";
-        cartLightBox.classList.remove('animate-fade-out');
-        cartLightBox.classList.add('animate-fade-in');
+        cartLightBoxs.classList.remove('animate-fade-out');
+        cartLightBoxs.classList.add('animate-fade-in');
         cartOpen = 1;
     })
 })
@@ -17,18 +17,18 @@ btnCart.forEach(e => {
 
 
 //Close
-if(cartLightBox){
-cartLightBox.addEventListener ('click', function () {
-    cartLightBox.classList.add('animate-fade-out');
-    cartLightBox.classList.remove('animate-fade-in');
+if(cartLightBoxs){
+cartLightBoxs.addEventListener ('click', function () {
+    cartLightBoxs.classList.add('animate-fade-out');
+    cartLightBoxs.classList.remove('animate-fade-in');
     cartModal.style.display = "none";
 })
 }
 
 if(cartClose){
 cartClose.addEventListener ('click', function () {
-    cartLightBox.classList.add('animate-fade-out');
-    cartLightBox.classList.remove('animate-fade-in');
+    cartLightBoxs.classList.add('animate-fade-out');
+    cartLightBoxs.classList.remove('animate-fade-in');
     cartModal.style.display = "none";
 })
 

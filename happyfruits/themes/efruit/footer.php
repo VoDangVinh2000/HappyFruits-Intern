@@ -125,6 +125,6 @@
         crossorigin="anonymous"></script>
     <script src="<?=get_theme_assets_url()?>js/sitescripts.js"></script>
     <script src="<?=get_theme_assets_url()?>js/simpleLightbox.min.js"></script>
-
+    <script src="<?= get_theme_assets_url() ?>js/sitescripts.js"></script>
 </body>
 </html>
