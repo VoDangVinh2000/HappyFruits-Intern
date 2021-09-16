@@ -170,7 +170,7 @@ $(document).ready(function () {
                 dots: false
             },
             480: {
-                items: 1,
+                items: 2,
                 dots: false
             },
             782: {

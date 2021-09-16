@@ -9,7 +9,7 @@
             foreach ($arrProducts as $value) {
                 if ($value['image'] == '') {
         ?>
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-md-3 col-sm-6 col-6">
                         <div class="product-item">
                             <div class="product-photo">
                                 <a href="/vi/detail/<?php echo $value['product_id'] . "/" . url_slug($value['name']) ?>" class="photo-link">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 <?php } else { ?>
-                    <div class="col-md-3 col-sm-3">
+                    <div class="col-md-3 col-sm-6 col-6">
                         <div class="product-item">
                             <div class="product-photo">
                                 <a href="/vi/detail/<?php echo $value['product_id'] . "/" . url_slug($value['name']) ?>" class="photo-link">
