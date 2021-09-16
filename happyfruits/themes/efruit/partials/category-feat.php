@@ -67,16 +67,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                         </div>
-                                        <div class="product-info mt-2">
-                                            <div class="col-8 product-name">
-                                                <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                                <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <div class="product-info" style="margin-top: 12px;">
+                                            <!-- <div class="row mt-2"> -->
+                                            <div class="col-7 product-name">
+                                                <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                             </div>
-                                            <div class="col-4" style="padding-right: 0;">
+                                            <div class="col-5">
                                                 <div class="product-price">
-                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                    <?php if (empty($array['is_box'])) : ?>
+                                                        <?php if ($array['price'] > 0) : ?>
+                                                            <?php if ($array['promotion_price'] == 0) : ?>
+                                                                <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                            <?php else : ?>
+                                                                <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                            <?php endif; ?>
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -99,16 +109,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
 
                                         </div>
-                                        <div class="product-info mt-2">
-                                            <div class="col-8 product-name">
-                                                <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                                <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <div class="product-info" style="margin-top: 12px;">
+                                            <!-- <div class="row mt-2"> -->
+                                            <div class="col-7 product-name">
+                                                <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                             </div>
-                                            <div class="col-4" style="padding-right: 0;">
+                                            <div class="col-5">
                                                 <div class="product-price">
-                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                    <?php if (empty($array['is_box'])) : ?>
+                                                        <?php if ($array['price'] > 0) : ?>
+                                                            <?php if ($array['promotion_price'] == 0) : ?>
+                                                                <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                            <?php else : ?>
+                                                                <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                            <?php endif; ?>
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -150,16 +170,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 <span class="yum"></span>
                                             </div>
                                         </div>
-                                        <div class="product-info mt-2">
-                                            <div class="col-8 product-name">
-                                                <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                                <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <div class="product-info" style="margin-top: 12px;">
+                                            <!-- <div class="row mt-2"> -->
+                                            <div class="col-7 product-name">
+                                                <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                             </div>
-                                            <div class="col-4" style="padding-right: 0;">
+                                            <div class="col-5">
                                                 <div class="product-price">
-                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                    <?php if (empty($array['is_box'])) : ?>
+                                                        <?php if ($array['price'] > 0) : ?>
+                                                            <?php if ($array['promotion_price'] == 0) : ?>
+                                                                <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                            <?php else : ?>
+                                                                <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                            <?php endif; ?>
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -179,16 +209,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 <span class="yum"></span>
                                             </div>
                                         </div>
-                                        <div class="product-info mt-2">
-                                            <div class="col-8 product-name">
-                                                <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                                <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                        <div class="product-info" style="margin-top: 12px;">
+                                            <!-- <div class="row mt-2"> -->
+                                            <div class="col-7 product-name">
+                                                <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                                <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                             </div>
-                                            <div class="col-4" style="padding-right: 0;">
+                                            <div class="col-5">
                                                 <div class="product-price">
-                                                    <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                                    <?php if (empty($array['is_box'])) : ?>
+                                                        <?php if ($array['price'] > 0) : ?>
+                                                            <?php if ($array['promotion_price'] == 0) : ?>
+                                                                <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                            <?php else : ?>
+                                                                <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                            <?php endif; ?>
+                                                        <?php endif; ?>
+                                                    <?php endif; ?>
                                                 </div>
                                             </div>
+                                            <!-- </div> -->
                                         </div>
                                     </div>
                                 </div>
@@ -287,16 +327,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info mt-2">
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                <div class="product-info" style="margin-top: 12px;">
+                                    <!-- <div class="row mt-2"> -->
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4" style="padding-right: 0;">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($array['is_box'])) : ?>
+                                                <?php if ($array['price'] > 0) : ?>
+                                                    <?php if ($array['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -316,16 +366,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info mt-2">
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                <div class="product-info" style="margin-top: 12px;">
+                                    <!-- <div class="row mt-2"> -->
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4" style="padding-right: 0;">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($array['is_box'])) : ?>
+                                                <?php if ($array['price'] > 0) : ?>
+                                                    <?php if ($array['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -373,16 +433,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info mt-2">
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                <div class="product-info" style="margin-top: 12px;">
+                                    <!-- <div class="row mt-2"> -->
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4" style="padding-right: 0;">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($array['is_box'])) : ?>
+                                                <?php if ($array['price'] > 0) : ?>
+                                                    <?php if ($array['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -403,16 +473,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         <span class="yum"></span>
                     </div>
                 </div>
-                <div class="product-info mt-2">
-                    <div class="col-8 product-name">
-                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                <div class="product-info" style="margin-top: 12px;">
+                    <!-- <div class="row mt-2"> -->
+                    <div class="col-7 product-name">
+                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                     </div>
-                    <div class="col-4" style="padding-right: 0;">
+                    <div class="col-5">
                         <div class="product-price">
-                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                            <?php if (empty($array['is_box'])) : ?>
+                                <?php if ($array['price'] > 0) : ?>
+                                    <?php if ($array['promotion_price'] == 0) : ?>
+                                        <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                    <?php else : ?>
+                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                    <?php endif; ?>
+                                <?php endif; ?>
+                            <?php endif; ?>
                         </div>
                     </div>
+                    <!-- </div> -->
                 </div>
             </div>
         </div>
@@ -459,16 +539,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info mt-2">
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                <div class="product-info" style="margin-top: 12px;">
+                                    <!-- <div class="row mt-2"> -->
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4" style="padding-right: 0;">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($array['is_box'])) : ?>
+                                                <?php if ($array['price'] > 0) : ?>
+                                                    <?php if ($array['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -488,16 +578,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info mt-2">
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                <div class="product-info" style="margin-top: 12px;">
+                                    <!-- <div class="row mt-2"> -->
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4" style="padding-right: 0;">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($array['is_box'])) : ?>
+                                                <?php if ($array['price'] > 0) : ?>
+                                                    <?php if ($array['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -543,16 +643,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info mt-2">
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                <div class="product-info" style="margin-top: 12px;">
+                                    <!-- <div class="row mt-2"> -->
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4" style="padding-right: 0;">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($array['is_box'])) : ?>
+                                                <?php if ($array['price'] > 0) : ?>
+                                                    <?php if ($array['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
@@ -572,16 +682,26 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <span class="yum"></span>
                                     </div>
                                 </div>
-                                <div class="product-info mt-2">
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?> "><?= $array['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['english_name']) ?> "><?= $array['english_name'] ?></a>
+                                <div class="product-info" style="margin-top: 12px;">
+                                    <!-- <div class="row mt-2"> -->
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4" style="padding-right: 0;">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($array['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($array['is_box'])) : ?>
+                                                <?php if ($array['price'] > 0) : ?>
+                                                    <?php if ($array['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
+                                    <!-- </div> -->
                                 </div>
                             </div>
                         </div>
