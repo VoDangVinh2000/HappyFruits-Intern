@@ -978,12 +978,8 @@ svg.infobox_icon {
 
 /* ============ desktop view ============ */
 
-<<<<<<< HEAD
-@media all and (min-width: 992px) and (max-width:1023px){
-=======
 
 @media all and (min-width: 992px) {
->>>>>>> dd02c8178f411f7a3b6771c543aa9536dd1320d2
   .navbar .has-megamenu {
     position: static !important;
     font-size: 14px;
@@ -1051,12 +1047,9 @@ svg.infobox_icon {
   .section_col-item {
     grid-column: 1/7;
   }
-<<<<<<< HEAD
-=======
   .cart-navi{
     display: none;
   }
->>>>>>> dd02c8178f411f7a3b6771c543aa9536dd1320d2
   .product-item .product-photo{
     height: 200px;
   }
@@ -1075,6 +1068,18 @@ svg.infobox_icon {
 @media (min-width:250px) and (max-width:766px) {
   .response-mega {
     display: block;
+  }
+  .product-item .product-name{
+    padding-right: 25px;
+    font-size: 13px;
+  }
+  .product-item .product-name a{
+    padding-left: 13px;
+    padding-right: 0;
+  }
+  .product-item .product-name::before{
+    right: 5px;
+    left: 0%;
   }
 }
 

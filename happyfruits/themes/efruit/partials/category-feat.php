@@ -125,7 +125,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
 <!-- product category 2-->
 <div class="container">
     <div class="row">
-        <div class="col-md-6 col-sm-6 col-6">
+        <div class="col-md-6">
             <div class="row">
                 <?php
                 $dem2 = 0;
@@ -135,7 +135,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         if ($dem2 <= 4) {
                             if ($array['image'] == "") {
                 ?>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-6 col-6">
                                     <div class="product-item">
                                         <div class="product-photo">
                                             <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
@@ -164,7 +164,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                 </div>
                             <?php } else { ?>
-                                <div class="col-md-6">
+                                <div class="col-md-6 col-sm-6 col-6">
                                     <div class="product-item">
                                         <div class="product-photo">
                                             <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
