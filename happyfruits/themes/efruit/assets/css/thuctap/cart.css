@@ -605,3 +605,6 @@ form label:not(.custom) {
   height: 1px;
   background-color: #ebebeb;
 }
+.modal-backdrop.fade{
+  z-index: 100;
+}

@@ -85,6 +85,7 @@
     <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>
+   
     <!--end!-->
 
     <script>

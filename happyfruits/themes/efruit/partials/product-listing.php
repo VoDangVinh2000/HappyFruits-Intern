@@ -5,7 +5,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
     }
 ?>
     <div class="row">
-        <div class="col-sm-9 no-padding">
+        <div class="col-sm-9  no-padding">
             <div class="product-listing <?= empty($class) ? '' : $class ?>">
                 <?php if (!empty($heading)) : ?>
                     <h1 class="title center" style="margin: 30px;" bind-translate="<?= $heading ?>"><?= $heading ?></h1>
@@ -21,7 +21,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
                                 $counter++;
                                 $need_hide = !empty($showMore) && $counter > NUMBER_OF_ITEMS_PER_PAGE;
                         ?>
-                                <div class="col-md-3 col-sm-3">
+                                <div class="col-md-3 col-sm-4 col-6">
                                     <?php $this->load_partial('product-item-box', array('item' => $item)); ?>
                                 </div>
                                 <?php
@@ -36,7 +36,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
                                     $counter++;
                                     $need_hide = !empty($showMore) && $counter > NUMBER_OF_ITEMS_PER_PAGE;
                                 ?>
-                                    <div class="col-md-3 col-sm-3">
+                                    <div class="col-md-3 col-sm-4 col-6">
                                         <?php $this->load_partial('product-item-box', array('item' => $item)); ?>
                                     </div>
                     </div>
@@ -51,7 +51,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
         </div>
     </div>
     </div>
-    <div class="col-sm-3 nopadding hidden-xs">
+    <div class="col-sm-3  cart-navi nopadding hidden-xs">
         <div class="efruit-cart efruitjs">
             <div class="cart-header">
                 <h2 class="inline-block" bind-translate="Giỏ hàng">Giỏ hàng</h2>
