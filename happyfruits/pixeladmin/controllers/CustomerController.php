@@ -129,7 +129,7 @@ class CustomerController extends BaseController
                 header('location:/vi/dang-ky');
                 exit();
             } else {
-                $params['username'] = $_POST['username'];
+                $params['username'] = $_POST['username_en'];
                 $params['password'] = md5($_POST['password_en']);
                 $params['mobile_account'] = $_POST['phone_en'];
                 $params['email_account'] = eModel::matchRegexEmail($_POST['email']);
