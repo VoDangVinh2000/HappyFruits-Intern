@@ -4,7 +4,7 @@
 <?php
 if (isset($product['sell_price'])) {
     $oldPrice =  $product['sell_price'] * 1000;
-    $newPrice = $oldPrice - ($product['promotion_price'] * 1000);
+    //$newPrice =  $product['promotion_price'] * 1000;
 } else {
     echo  "<script>window.location.href='/vi'</script>";
 }
@@ -47,8 +47,19 @@ if (isset($product['sell_price'])) {
                 <span class="product-name efruit-en"><?php echo $product['english_name'] ?></span> <span class="product-sku">- <?php echo $product['code'] ?></span>
             </h1>
             <div class="product-price">
-                <span class="price"> <span bind-translate="Giá">Giá</span> : <?php echo number_format($newPrice) . '<sup>đ</sup>' ?></span>
-
+                <span class="price"> <span bind-translate="Giá">Giá</span> :</span>
+                <?php if (empty($product['is_box'])) : ?>
+                    <?php if ($product['sell_price'] > 0) : ?>
+                        <?php if ($product['promotion_price'] == 0) : ?>
+                            <a href="javascript:void(0);" class="price"><?= number_format($product['sell_price'] * 1000) ?><sup>đ</sup></a>
+                        <?php else : ?>
+                            <a href="javascript:void(0);">
+                                <span class="delete-price"><?= number_format($product['sell_price'] * 1000) ?><sup>đ</sup></span>
+                                <span class="price"><?= number_format($product['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                            </a>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                <?php endif; ?>
             </div>
             <form action="#" method="POST">
 
@@ -104,15 +115,26 @@ if (isset($product['sell_price'])) {
                                     </a>
                                     <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                 </div>
-                                <div class="product-info mt-2">
+                                <div class="product-info" style="margin-top: 12px;">
                                     <!-- <div class="row mt-2"> -->
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($item['is_box'])) : ?>
+                                                <?php if ($item['price'] > 0) : ?>
+                                                    <?php if ($item['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span>
+                                                            <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <!-- </div> -->
@@ -133,15 +155,26 @@ if (isset($product['sell_price'])) {
                                     </a>
                                     <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                 </div>
-                                <div class="product-info mt-2">
+                                <div class="product-info" style="margin-top: 12px;">
                                     <!-- <div class="row mt-2"> -->
-                                    <div class="col-8 product-name">
-                                        <a class="efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?> "><?= $item['name'] ?></a>
-                                        <a class="efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['english_name']) ?> "><?= $item['english_name'] ?></a>
+                                    <div class="col-7 product-name">
+                                        <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['name'] ?></a>
+                                        <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['english_name'] ?></a>
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-5">
                                         <div class="product-price">
-                                            <span class="price"><?= number_format($item['price'] * 1000) . '<sup>đ</sup>' ?></span>
+                                            <?php if (empty($item['is_box'])) : ?>
+                                                <?php if ($item['price'] > 0) : ?>
+                                                    <?php if ($item['promotion_price'] == 0) : ?>
+                                                        <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
+                                                    <?php else : ?>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span>
+                                                            <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                     <!-- </div> -->

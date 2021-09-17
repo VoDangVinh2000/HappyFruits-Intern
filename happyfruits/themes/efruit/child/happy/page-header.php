@@ -50,8 +50,9 @@
        </nav>
 
        <!-- Nav 2 -->
-       <nav class="navbar navbar-expand-lg navbar-light logo-nav">
-           <div class="container">
+       <nav class="navbar navbar-expand-lg navbar-light logo-nav scroll-nav-mobile">
+           <!--scroll-nav-mobile de position khi luot xuong, jsPage.js!-->
+           <div class="container ">
                <ul class="navbar-nav ms-auto right-main-nav sub-cart">
                    <li class="nav-item">
                        <a class="nav-link position-relative btn-cart-nav" data-toggle="modal" data-target="#exampleModal" id="show-cart" href="#">
@@ -160,32 +161,51 @@
                                <li class="nav-item dropdown has-megamenu">
                                    <a class="nav-link efruit-vi text-uppercase px-3" href="<?= $tile['href'] ?>"><?= $tile['short_text'] ?></a>
                                    <a class="nav-link  efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>"><?= $tile['en_text'] ?></a>
-                                   <?php if (!empty($tile['sub_items'])) {
-                                       $length = count($tile['sub_items']);
-                                       ?>
-                                       <div class="dropdown-menu megamenu" role="menu">
-                                           <div class="container-mega">
-                                               <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
-                                               <div class="row g-3 response-mega">
-                                                   <div class="col-lg-5">
-                                                       <div class="row">
-                                                         <?php for($i = 0 ;$i < $length; $i++){ ?>
-                                                           <div class="col-md-6 col-megamenu">
-                                                               <ul class="list-unstyled">
-                                                                   <li><a href="/vi/category/nhomhang-<?= $tile['sub_items'][$i]['category_id'] ?>">
-                                                                           <span class="efruit-vi"><?= $tile['sub_items'][$i]['name'] ?></span>
-                                                                           <span class="efruit-en"><?= $tile['sub_items'][$i]['english_name'] ?></span>
-                                                                       </a></li>
-                                                               </ul>
-                                                           </div> <!-- col-megamenu.// -->
-                                                        <?php }?>
-                                                       </div>
-                                                   </div><!-- end col-3 -->
-                                               </div>
-                                           </div>
 
-                                       </div> <!-- dropdown-mega-menu.// -->
-                                   <?php } ?>
+                                   <div class="dropdown-menu megamenu" role="menu">
+                                       <div class="container-mega">
+                                           <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
+                                           <div class="row g-3 response-mega">
+                                               <div class="col-lg-5">
+                                                   <div class="row">
+                                                       <?php if (!empty($tile['sub_items'])) {
+                                                            $length = count($tile['sub_items']);
+                                                        ?>
+                                                           <?php for ($i = 0; $i < $length; $i++) { ?>
+                                                               <div class="col-md-6 col-megamenu">
+                                                                   <ul class="list-unstyled">
+                                                                       <li><a href="/vi/category/nhomhang-<?= $tile['sub_items'][$i]['category_id'] ?>">
+                                                                               <span class="efruit-vi"><?= $tile['sub_items'][$i]['name'] ?></span>
+                                                                               <span class="efruit-en"><?= $tile['sub_items'][$i]['english_name'] ?></span>
+                                                                           </a></li>
+                                                                   </ul>
+                                                               </div> <!-- col-megamenu.// -->
+                                                       <?php }
+                                                        } ?>
+                                                   </div>
+                                               </div><!-- end col-3 -->
+                                               <div class="col-lg-3">
+                                                   <div class="row">
+                                                       <?php if ($tile['cat'] == 14 || $tile['cat'] == 15 || $tile['cat'] == 8) { ?>
+                                                           <div class="col-megamenu col-md-12">
+                                                               <ul class="list-unstyled">
+                                                                   <li><a href="/vi/category/gia-1-<?= $tile['cat'] ?>">200k - 500k</a></li>
+                                                                   <li><a href="/vi/category/gia-2-<?= $tile['cat'] ?>">500k - 800k</a></li>
+                                                                   <li><a href="/vi/category/gia-3-<?= $tile['cat'] ?>">800k - 1000k</a></li>
+                                                                   <li><a href="/vi/category/gia-4-<?= $tile['cat'] ?>">1100k - 1500k</a></li>
+                                                                   <li><a href="/vi/category/gia-5-<?= $tile['cat'] ?>">1600k - 2000k</a></li>
+                                                                   <li><a href="/vi/category/gia-6-<?= $tile['cat'] ?>">2000k - 2500k</a></li>
+                                                                   <li><a href="/vi/category/gia-7-<?= $tile['cat'] ?>">2600k - 4000k</a></li>
+                                                               </ul>
+                                                           </div><!-- col-megamenu.// -->
+                                                       <?php } ?>
+                                                   </div>
+                                               </div><!-- end col-3 -->
+                                           </div>
+                                       </div>
+                                   </div> <!-- dropdown-mega-menu.// -->
+                                   <?php #} 
+                                    ?>
                                </li>
                            <?php } ?>
                        </ul>

@@ -30,7 +30,7 @@ if (!empty($item)) : ?>
                                     <?php if ($item['promotion_price'] == 0) : ?>
                                         <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
                                     <?php else : ?>
-                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                        <a href="javascript:void(0);" ><span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
                                     <?php endif; ?>
                                 <?php endif; ?>
                             <?php endif; ?>

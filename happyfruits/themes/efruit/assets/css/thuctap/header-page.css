@@ -520,11 +520,14 @@ body {
   text-align: right;
 }
 
+
 .product-detail .product-price {
   text-align: left;
   font-size: 2em;
 }
-
+.product-price .price{
+  text-decoration: none;
+}
 .product-price .delete-price {
   font-weight: 300;
   color: #a0a0a0;
@@ -1005,11 +1008,6 @@ svg.infobox_icon {
   .sub-cart {
     display: none;
   }
-  .main-cart-btn {
-    display: block;
-    position: fixed;
-    right: 55px;
-  }
   .btn-cart-nav {
     width: 30px;
     height: 30px;
@@ -1026,6 +1024,7 @@ svg.infobox_icon {
     font-size: 18px;
     font-weight: 600;
   }
+
 }
 /* ============ mobile view ============ */
 
@@ -1055,12 +1054,15 @@ svg.infobox_icon {
   }
 }
 
+
 /* medium and up screens */
 
 @media (min-width: 768px) {
   .product-photo img {
     /* height: auto;*/
   }
+ 
+
 }
 
 /*css response-mega mega-menu*/
@@ -1089,4 +1091,5 @@ svg.infobox_icon {
     position: fixed;
     right: 150px;
   }
+  
 }

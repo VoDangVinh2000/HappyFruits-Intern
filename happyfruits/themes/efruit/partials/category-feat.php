@@ -80,7 +80,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                             <?php if ($array['promotion_price'] == 0) : ?>
                                                                 <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                             <?php else : ?>
-                                                                <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                                <a href="javascript:void(0);" >
+                                                                    <span class="delete-price"> <?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
+                                                                    <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                                </a>
                                                             <?php endif; ?>
                                                         <?php endif; ?>
                                                     <?php endif; ?>
@@ -122,7 +125,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                             <?php if ($array['promotion_price'] == 0) : ?>
                                                                 <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                             <?php else : ?>
-                                                                <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                                <a href="javascript:void(0);" >
+                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                                    <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                                </a>
                                                             <?php endif; ?>
                                                         <?php endif; ?>
                                                     <?php endif; ?>
@@ -183,7 +189,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                             <?php if ($array['promotion_price'] == 0) : ?>
                                                                 <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                             <?php else : ?>
-                                                                <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                                <a href="javascript:void(0);">
+                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                                    <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                                </a>
                                                             <?php endif; ?>
                                                         <?php endif; ?>
                                                     <?php endif; ?>
@@ -222,7 +231,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                             <?php if ($array['promotion_price'] == 0) : ?>
                                                                 <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                             <?php else : ?>
-                                                                <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                                <a href="javascript:void(0);">
+                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                                    <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                                </a>
                                                             <?php endif; ?>
                                                         <?php endif; ?>
                                                     <?php endif; ?>
@@ -340,7 +352,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                     <?php if ($array['promotion_price'] == 0) : ?>
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
-                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endif; ?>
@@ -379,7 +394,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                     <?php if ($array['promotion_price'] == 0) : ?>
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
-                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endif; ?>
@@ -446,7 +464,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                     <?php if ($array['promotion_price'] == 0) : ?>
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
-                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endif; ?>
@@ -486,7 +507,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <?php if ($array['promotion_price'] == 0) : ?>
                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                     <?php else : ?>
-                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                        <a href="javascript:void(0);">
+                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                            <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                        </a>
                                     <?php endif; ?>
                                 <?php endif; ?>
                             <?php endif; ?>
@@ -552,7 +576,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                     <?php if ($array['promotion_price'] == 0) : ?>
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
-                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
+                                                            <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endif; ?>
@@ -591,7 +618,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                     <?php if ($array['promotion_price'] == 0) : ?>
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
-                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endif; ?>
@@ -656,7 +686,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                     <?php if ($array['promotion_price'] == 0) : ?>
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
-                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endif; ?>
@@ -695,7 +728,10 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                     <?php if ($array['promotion_price'] == 0) : ?>
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
-                                                        <a href="javascript:void(0);" class="delete-price"><span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
+                                                        <a href="javascript:void(0);">
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                        </a>
                                                     <?php endif; ?>
                                                 <?php endif; ?>
                                             <?php endif; ?>
