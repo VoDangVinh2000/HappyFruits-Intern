@@ -19,11 +19,11 @@ if (!empty($item)) : ?>
             </div>
             <div class="product-info" style="margin-top: 12px;">
                 <!-- <div class="row mt-2"> -->
-                    <div class="col-8 product-name">
+                    <div class="col-7 product-name">
                         <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] ?>"><?= $item['name'] ?></a>
                         <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] ?>"><?= $item['english_name'] ?></a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-5">
                         <div class="product-price">
                             <?php if (empty($item['is_box'])) : ?>
                                 <?php if ($item['price'] > 0) : ?>

@@ -482,7 +482,7 @@ body {
   position: relative;
   /* padding-right: 20px; */
   padding-right: 10px;
-  padding-left: 5px;
+  /* padding-left: 5px; */
 }
 
 .product-item .product-name {
@@ -978,10 +978,11 @@ svg.infobox_icon {
 
 /* ============ desktop view ============ */
 
+
 @media all and (min-width: 992px) {
   .navbar .has-megamenu {
     position: static !important;
-    font-size: 17px;
+    font-size: 14px;
     color: #232323;
     font-weight: 600;
   }
@@ -1020,7 +1021,12 @@ svg.infobox_icon {
     transform: translateX(-50%);
   }
 }
-
+@media (min-width: 1024px) {
+  .navbar .has-megamenu {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
 /* ============ mobile view ============ */
 
 @media(max-width: 991px) {
@@ -1041,6 +1047,12 @@ svg.infobox_icon {
   .section_col-item {
     grid-column: 1/7;
   }
+  .cart-navi{
+    display: none;
+  }
+  .product-item .product-photo{
+    height: 200px;
+  }
 }
 
 /* medium and up screens */
@@ -1056,6 +1068,18 @@ svg.infobox_icon {
 @media (min-width:250px) and (max-width:766px) {
   .response-mega {
     display: block;
+  }
+  .product-item .product-name{
+    padding-right: 25px;
+    font-size: 13px;
+  }
+  .product-item .product-name a{
+    /* padding-left: 13px; */
+    padding-right: 0;
+  }
+  .product-item .product-name::before{
+    right: 5px;
+    left: 0%;
   }
 }
 
