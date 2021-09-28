@@ -44,7 +44,9 @@ if (isset($product['sell_price'])) {
         <div class="col-md-6 product-detail">
             <h1 class="product-title mb-3">
                 <span class="product-name efruit-vi"><?php echo $product['name'] ?></span> <span class="product-sku"></span>
-                <span class="product-name efruit-en"><?php echo $product['english_name'] ?></span> <span class="product-sku">- <?php echo $product['code'] ?></span>
+                <span class="product-name efruit-en"><?php echo $product['english_name'] ?></span> 
+                <p class="product-sku efruit-vi">Mã - <?php echo $product['code'] ?></p>
+                <p class="product-sku efruit-en">Code - <?php echo $product['code'] ?></p>
             </h1>
             <div class="product-price">
                 <span class="price"> <span bind-translate="Giá">Giá</span> :</span>
@@ -75,7 +77,7 @@ if (isset($product['sell_price'])) {
                 <?php endif; ?>
                 <!-- <p class="product-price text-bold" style="font-size: 22px;" ng-show="selectedItem.promotion_price == 0 && selectedItem.price > 0"><span bind-translate="Giá">Giá</span>:&nbsp;{{selectedItem.price*1000|efruit_money}}<sup>đ</sup></p> -->
             </form>
-            <div class="product-description mt-3">
+            <div class="product-description mt-3 fs-5">
                 <p class=" efruit-vi"><?= $product['description'] ?></p>
                 <p class=" efruit-en"><?= $product['description_en'] ?></p>
             </div>

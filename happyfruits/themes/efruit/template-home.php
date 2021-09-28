@@ -17,14 +17,21 @@
                  <img src="<?= get_theme_assets_url() ?>img/slide1.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
-                 <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
-                 <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="/vi/fruit-baskets">
-                     <div class="button-content-wrapper">
-                         <span class="button-text">SHOP NOW</span>
-                     </div>
-                 </a>
+                 <?php if (!empty($tiles)) {
+                        foreach ($tiles as $array) {
+                            if ($array['cat'] == 14) {
+                    ?>
+                             <a class="sub-caption efruit-vi" href="<?= $array['href'] ?>"><?= $array['short_text'] ?></a>
+                             <a class="sub-caption efruit-en" href="<?= $array['href'] ?>"><?= $array['en_text'] ?></a>
+                             <h2>Gói trọn yêu thương</h2>
+                             <a class="btn-shop" href="<?= $array['href'] ?>">
+                                 <div class="button-content-wrapper">
+                                     <span class="button-text">SHOP NOW</span>
+                                 </div>
+                             </a>
+                 <?php }
+                        }
+                    } ?>
              </div>
          </div>
          <div class="carousel-item">
@@ -32,14 +39,21 @@
                  <img src="<?= get_theme_assets_url() ?>img/slide2.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
-                 <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
-                 <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="fruit-baskets">
-                     <div class="button-content-wrapper">
-                         <span class="button-text">SHOP NOW</span>
-                     </div>
-                 </a>
+                 <?php if (!empty($tiles)) {
+                        foreach ($tiles as $array) {
+                            if ($array['cat'] == 14) {
+                    ?>
+                             <a class="sub-caption efruit-vi" href="<?= $array['href'] ?>"><?= $array['short_text'] ?></a>
+                             <a class="sub-caption efruit-en" href="<?= $array['href'] ?>"><?= $array['en_text'] ?></a>
+                             <h2>Gói trọn yêu thương</h2>
+                             <a class="btn-shop" href="<?= $array['href'] ?>">
+                                 <div class="button-content-wrapper">
+                                     <span class="button-text">SHOP NOW</span>
+                                 </div>
+                             </a>
+                 <?php }
+                        }
+                    } ?>
              </div>
          </div>
          <div class="carousel-item">
@@ -47,14 +61,21 @@
                  <img src="<?= get_theme_assets_url() ?>img/slide3.jpg" class="d-block w-100" alt="...">
              </div>
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
-                 <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
-                 <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="/vi/fruit-baskets">
-                     <div class="button-content-wrapper">
-                         <span class="button-text">SHOP NOW</span>
-                     </div>
-                 </a>
+             <?php if (!empty($tiles)) {
+                        foreach ($tiles as $array) {
+                            if ($array['cat'] == 14) {
+                    ?>
+                             <a class="sub-caption efruit-vi" href="<?= $array['href'] ?>"><?= $array['short_text'] ?></a>
+                             <a class="sub-caption efruit-en" href="<?= $array['href'] ?>"><?= $array['en_text'] ?></a>
+                             <h2>Gói trọn yêu thương</h2>
+                             <a class="btn-shop" href="<?= $array['href'] ?>">
+                                 <div class="button-content-wrapper">
+                                     <span class="button-text">SHOP NOW</span>
+                                 </div>
+                             </a>
+                 <?php }
+                        }
+                    } ?>
              </div>
          </div>
          <div class="carousel-item">
@@ -63,14 +84,21 @@
              </div>
 
              <div class="carousel-caption d-none d-md-block">
-                 <a class="sub-caption efruit-vi" href="">GIỎ TRÁI CÂY</a>
-                 <a class="sub-caption efruit-en" href="">FRUIT BASKETS</a>
-                 <h2>Gói trọn yêu thương</h2>
-                 <a class="btn-shop" href="/vi/fruit-baskets">
-                     <div class="button-content-wrapper">
-                         <span class="button-text">SHOP NOW</span>
-                     </div>
-                 </a>
+             <?php if (!empty($tiles)) {
+                        foreach ($tiles as $array) {
+                            if ($array['cat'] == 14) {
+                    ?>
+                             <a class="sub-caption efruit-vi" href="<?= $array['href'] ?>"><?= $array['short_text'] ?></a>
+                             <a class="sub-caption efruit-en" href="<?= $array['href'] ?>"><?= $array['en_text'] ?></a>
+                             <h2>Gói trọn yêu thương</h2>
+                             <a class="btn-shop" href="<?= $array['href'] ?>">
+                                 <div class="button-content-wrapper">
+                                     <span class="button-text">SHOP NOW</span>
+                                 </div>
+                             </a>
+                 <?php }
+                        }
+                    } ?>
              </div>
          </div>
      </div>
@@ -89,7 +117,7 @@
          <!-- 1 -->
          <div class="section_col-item">
              <div class="infobox">
-                 <a href="#" class="infobox_link"></a>
+                 <a href="/vi/khuyen-mai" class="infobox_link"></a>
                  <div class="infobox_wrapper">
                      <div class="icon_wrapper">
                          <svg viewBox="0 0 314 314" class="infobox_icon">
@@ -229,9 +257,10 @@
          <div class="y-results" id="y-results">
              <?php $this->load_partial('category-feat') ?>
              <?php $this->load_partial('about-us') ?>
-             <!-- <?//php $this->load_partial('disscount') ?> -->
+             <!-- <? //php $this->load_partial('disscount') 
+                    ?> -->
          </div>
      </div>
-     
+
  </div>
  <?php $this->load_theme_file('page-footer.php') ?>

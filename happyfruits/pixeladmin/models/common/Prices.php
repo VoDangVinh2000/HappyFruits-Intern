@@ -87,36 +87,90 @@ class Prices extends BasePrices
                         $category_id = $str_split[$i];
                     }
                 }
+                $sql = "";
+                $order_by = "";
+                $filters = "";
                 if ($gia == '1') {
-                    $gia1 = 200;
-                    $gia2 = 500;
+                    $gia1 = 0;
+                    $gia2 = 499;
+                    $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id 
+                    WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
+                    AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                    AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
                 } else if ($gia == '2') {
                     $gia1 = 500;
-                    $gia2 = 800;
+                    $gia2 = 799;
+                    $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id 
+                    WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
+                    AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                    AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
+                
                 } else if ($gia == '3') {
                     $gia1 = 800;
-                    $gia2 = 1000;
+                    $gia2 = 999;
+                    $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id 
+                    WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
+                    AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                    AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
+                
                 } else if ($gia == '4') {
-                    $gia1 = 1100;
-                    $gia2 = 1500;
+                    $gia1 = 1000;
+                    $gia2 = 1499;
+                    $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id 
+                    WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
+                    AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                    AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
+                
                 } else if ($gia == '5') {
-                    $gia1 = 1600;
-                    $gia2 = 2000;
+                    $gia1 = 1500;
+                    $gia2 = 1999;
+                    $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id 
+                    WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
+                    AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                    AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
+                
                 } else if ($gia == '6') {
                     $gia1 = 2000;
-                    $gia2 = 2500;
+                    $gia2 = 2499;
+                    $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id 
+                    WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
+                    AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                    AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
+                
                 } else if ($gia == '7') {
-                    $gia1 = 2600;
-                    $gia2 = 4000;
+                    $gia1 = 2500;
+                    $gia2 = 3499;
+                    $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id 
+                    WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
+                    AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                    AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
+                
                 }
-                $order_by = "";
-                $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
-                INNER JOIN categories ON categories.category_id = products.category_id 
-                WHERE prices.price BETWEEN '" . $gia1 . "' AND '" . $gia2 . "' AND prices.type_id = 1 
-                AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
-                AND products.not_deliver = 0 AND categories.allow_delivery = 1 
-                AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
-                $filters = "";
+                else if ($gia == '8') {
+                    $gia1 = 3500;
+                    $gia2 = 0;
+                    $sql = "SELECT products.*, prices.price FROM prices INNER JOIN products ON products.product_id = prices.product_id
+                    INNER JOIN categories ON categories.category_id = products.category_id 
+                    WHERE prices.price >= 3500 AND prices.type_id = 1 
+                    AND products.category_id = '" . $category_id . "' AND products.enabled = 1 AND products.is_hidden = 0 
+                    AND products.not_deliver = 0 AND categories.allow_delivery = 1 
+                    AND products.is_additional = 0 AND categories.deleted = 0 AND categories.enabled = 1";
+                } 
+                
                 return self::_do_sql($sql, $filters, array(), $order_by);
             } else {
                 return null;

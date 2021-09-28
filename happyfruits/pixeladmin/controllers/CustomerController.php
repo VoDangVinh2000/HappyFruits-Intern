@@ -115,12 +115,12 @@ class CustomerController extends BaseController
             // $query_username = $customers_common->get_list_customer_username($_POST['username_en']);
 
             if (!empty($query_user_username_account)) {
-                $error_username = 'This username has been already . Please log in account';
+                $error_username = 'Đã có username, vui lòng chọn username khác.';
                 setcookie("error_username", $error_username, time() + 600, "/");
                 $bool = true;
             }
             if (!empty($query_user_email_account)) {
-                $error_email = 'This email has been already . Please log in account';
+                $error_email = 'Đã có email, vui lòng chọn email khác.';
                 setcookie("error_email", $error_email, time() + 600, "/");
                 $bool = true;
             }

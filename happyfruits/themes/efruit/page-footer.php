@@ -15,10 +15,14 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 		</div>
 		<div class="footer--group-icon">
 			<div class="footer--group-icon__wrapper">
-				<a href="https://www.facebook.com/happyfruitsvietnam/" target="_blank"> <i class="fab fa-facebook-f"></i><span class="icon-name">facebook</span></a>
-				<a href="https://twitter.com/?lang=vi" target="_blank"><i class="fab fa-twitter"></i><span class="icon-name">twitter</span></a>
-				<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i><span class="icon-name">instagram</span></a>
-				<a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i><span class="icon-name">youtube</span></a>
+				<?php if (!empty($settings['facebook_link'])) { ?>
+					<a href="<?= $settings['facebook_link'] ?>" target="_blank"> <i class="fab fa-facebook-f"></i><span class="icon-name">facebook</span></a>
+				<?php } ?>
+				<!-- <a href="https://twitter.com/?lang=vi" target="_blank"><i class="fab fa-twitter"></i><span class="icon-name">twitter</span></a>
+				<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i><span class="icon-name">instagram</span></a> -->
+				<?php if (!empty($settings['youtube_link'])) { ?>
+					<a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i><span class="icon-name">youtube</span></a>
+				<?php } ?>
 			</div>
 		</div>
 		<div class="footer--info">
@@ -113,21 +117,22 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 						<div class="footer--info-address footer--info-address-envolope">
 							<i class="fas fa-envelope"></i>
 							<a id="info-email">Info email</a>&nbsp;&nbsp;<i class="fa fa-envelope-o"></i> <a id="cskh-email">CSKH</a>
-							<!-- <a href="#" class="contact--link">info@localhost</a> -->
 							<i class="far fa-envelope"></i>
-							<a href="#" class="contact--link">cskh@localhost</a>
 						</div>
 					</div>
 				</li>
 				<li class="footer--info-item">
-					<a href="https://www.facebook.com/happyfruitsvietnam/" target="_blank" class="footer--info-link">
-						<div class="footer--info-address footer--info-address-envolope">
-							<i class="fab fa-facebook-f"></i>
-							<span class="footer--info-address footer--info-address__des">
-								https://www.facebook.com/happyfruitsvietnam/
-							</span>
-						</div>
-					</a>
+					<?php if (!empty($settings['facebook_link'])) { ?>
+						<a href="<?= $settings['facebook_link'] ?>" target="_blank" class="footer--info-link">
+							<div class="footer--info-address footer--info-address-envolope">
+								<i class="fab fa-facebook-f"></i>
+								<span class="footer--info-address footer--info-address__des">
+									<?= $settings['facebook_link'] ?>
+
+								</span>
+							</div>
+						</a>
+					<?php } ?>
 				</li>
 			</ul>
 		</div>

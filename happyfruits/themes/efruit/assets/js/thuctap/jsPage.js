@@ -175,6 +175,7 @@ function getPageScroll(){
         nav_menu.style.top = "0";
         nav_menu.style.background = "#fff";
         nav_menu.style.border = "1px solid darkgray";
+        nav_menu.style.transition = "0.3s all";
         //css logo-nav
         logo_nav.style.padding = "1em 0";
         logo_nav.style.overflow = "hidden";
@@ -213,7 +214,7 @@ function getPageScroll(){
         nav_menu.style.position = "static";
         nav_menu.style.width = "100%";
         nav_menu.style.height = "auto";
-        nav_menu.style.zIndex = "1000";
+        nav_menu.style.zIndex = "1";
         nav_menu.style.top = "0";
         nav_menu.style.background = "none";
         nav_menu.style.border = "none";

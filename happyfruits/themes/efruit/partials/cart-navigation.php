@@ -376,7 +376,7 @@
                                 <button ng-click="previousStep()" class="btn btn-info wizard-prev-step-btn full-width"><i class="fa fa-angle-left"></i> <span bind-translate="Xem đơn hàng">Xem đơn hàng</span></button>
                             </div>
                             <div class="col-xs-6 col-md-9 text-center" style="padding: 0 11px;">
-                                <button ng-disabled="frmOrder.$invalid || minTotalError || customer.distance <= 0 || !accept_terms" ng-click="nextStep()" class="btn btn-success wizard-next-step-btn full-width" disabled="disabled"><i class="fa fa-check"></i> <span class="ng-binding">Đặt hàng</span><span class="pull-right hidden-xs ng-binding">1.200.000<sup>đ</sup></span></button>
+                                <button ng-disabled="frmOrder.$invalid || minTotalError || customer.distance <= 0 || !accept_terms" ng-click="nextStep()" class="btn btn-success wizard-next-step-btn full-width" disabled="disabled"><i class="fa fa-check"></i> <span class="ng-binding">Đặt hàng</span><span class="pull-right hidden-xs ng-binding">{{(total-shipping_fee)*1000|efruit_money}}<sup>đ</sup></span></button>
                             </div>
                             <div class="clearfix"></div>
                         </form>

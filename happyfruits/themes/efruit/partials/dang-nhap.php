@@ -42,8 +42,8 @@
                             <div class="main-create-account-fillout">
                                 <div class="username-input">
                                     <div class="title-input-register">
-                                        <span class="efruit-vi">Tên đăng nhập</span>
-                                        <span class="efruit-en">Username</span>
+                                        <span class="efruit-vi bold fs-6">Tên đăng nhập</span>
+                                        <span class="efruit-en bold fs-6">Username</span>
                                     </div>
                                     <div class="input-register">
                                         <input type="text" title="Username must have minimum length is 6, no special characters" class="input-account" name="username" autocapitalize="words" required>
@@ -54,8 +54,8 @@
                                 <div class="username-input">
                                     
                                     <div class="title-input-register">
-                                        <span class="efruit-vi">Mật khẩu</span>
-                                        <span class="efruit-en">Password</span>
+                                        <span class="efruit-vi bold fs-6">Mật khẩu</span>
+                                        <span class="efruit-en bold fs-6">Password</span>
                                     </div>
                                     <div class="input-register">
                                         <input type="password" class="input-account" id="input-password" name="password" autocapitalize="words" required>
@@ -78,18 +78,18 @@
                                 <div class="input-submit-account">
                                     <input class="efruit-en" type="submit" value="Log In" name="login" >
                                     <input class="efruit-vi" type="submit" value="Đăng nhập" name="dang-nhap">
-                                    <a class="efruit-vi" href="#recover" id="forgotpassword">Quên mật khẩu ?</a>
-                                    <a class="efruit-en" href="#recover" id="forgotpassword">Forgot your password ?</a>
+                                    <a class="efruit-vi bold fs-6" href="#recover" id="forgotpassword">Quên mật khẩu ?</a>
+                                    <a class="efruit-en bold fs-6" href="#recover" id="forgotpassword">Forgot your password ?</a>
                                     <br>
-                                    <a class="efruit-en" href="#recover" id="change-password">Change password</a>
-                                    <a class="efruit-vi" href="#recover" id="change-password">Đổi mật khẩu</a>
+                                    <a class="efruit-en bold fs-6" href="#recover" id="change-password">Change password</a>
+                                    <a class="efruit-vi bold fs-6" href="#recover" id="change-password">Đổi mật khẩu</a>
                                 </div>
                             </div>
                         </form>
 
                         <div class="end-form-createaccount">
-                            <a class="efruit-vi" href="/vi/dang-ky">Tạo tài khoản</a>
-                            <a class="efruit-en" href="/vi/dang-ky">Create Account</a>
+                            <a class="efruit-vi bold fs-6" href="/vi/dang-ky">Tạo tài khoản</a>
+                            <a class="efruit-en bold fs-6" href="/vi/dang-ky">Create Account</a>
                         </div>
                     </div>
 
@@ -97,8 +97,8 @@
                     <!--Forgot pasword-->
                     <div class="form-forgot">
                         <div class="header-create-account">
-                            <h2 class="efruit-vi">Đặt lại mật khẩu của bạn</h2>
-                            <h2 class="efruit-en">Reset Your Password</h2>
+                            <h2 class="efruit-vi bold fs-6">Đặt lại mật khẩu của bạn</h2>
+                            <h2 class="efruit-en bold fs-6">Reset Your Password</h2>
                             <p class="efruit-vi">Chúng tôi sẽ gửi cho bạn một email để đặt lại mật khẩu của bạn.</p>
                             <p class="efruit-en">We will send you an email to reset your password.</p>
                         </div>
@@ -106,7 +106,7 @@
                             <div class="main-create-account-fillout">
                                 <div class="username-input">
                                     <div class="title-input-register">
-                                        <span>Email</span>
+                                        <span class="bold fs-6">Email</span>
                                     </div>
                                     <div class="input-register">
                                         <input type="email" name="email" class="input-account" autocapitalize="words">
@@ -117,8 +117,8 @@
                                 <div class="input-submit-account">
                                     <input class="efruit-en" type="submit" value="Submit" name="submitForgot">
                                     <input class="efruit-vi" type="submit" value="Gửi" name="gui-quen-pass">
-                                    <a class="efruit-vi" href="#recover" id="cancelFormForgot">Hủy</a>
-                                    <a class="efruit-en" href="#recover" id="cancelFormForgot">Cancel</a>
+                                    <a class="efruit-vi bold fs-6" href="#recover" id="cancelFormForgot">Hủy</a>
+                                    <a class="efruit-en bold fs-6" href="#recover" id="cancelFormForgot">Cancel</a>
                                 </div>
                             </div>
                         </form>
@@ -127,16 +127,16 @@
                     <!--change pasword-->
                     <div class="form-change-password">
                         <div class="header-create-account">
-                            <h2 class="efruit-vi">Đổi mật khẩu</h2>
-                            <h2 class="efruit-en">Change Password</h2>
+                            <h2 class="efruit-vi bold fs-6">Đổi mật khẩu</h2>
+                            <h2 class="efruit-en bold fs-6">Change Password</h2>
                         </div>
                         <form action="/change-pass" method="post">
                             <div class="main-create-account-fillout">
                                 
                             <div class="username-input">
                                 <div class="title-input-register">
-                                    <span class="efruit-vi">Tên đăng nhập</span>
-                                    <span class="efruit-en">Username</span>
+                                    <span class="efruit-vi bold fs-6">Tên đăng nhập</span>
+                                    <span class="efruit-en bold fs-6">Username</span>
                                 </div>
                                 <div class="input-register">
                                     <input type="text"  class="input-account" name="username" autocapitalize="words" required>
@@ -145,8 +145,8 @@
 
                             <div class="username-input">
                                 <div class="title-input-register">
-                                    <span class="efruit-vi">Mật khẩu hiện tại</span>
-                                    <span class="efruit-en">Current password</span>
+                                    <span class="efruit-vi bold fs-6">Mật khẩu hiện tại</span>
+                                    <span class="efruit-en bold fs-6">Current password</span>
                                 </div>
                                 <div class="input-register">
                                     <input type="text"  class="input-account" name="current-password" autocapitalize="words" required>
@@ -156,8 +156,8 @@
                                 <!--  -->
                             <div class="username-input">
                                 <div class="title-input-register">
-                                    <span class="efruit-vi">Mật khẩu mới</span>
-                                    <span class="efruit-en">New password</span>
+                                    <span class="efruit-vi bold fs-6">Mật khẩu mới</span>
+                                    <span class="efruit-en bold fs-6">New password</span>
                                 </div>
                                 <div class="input-register">
                                     <input type="text" class="input-account" name="new-password" pattern="(?=.*\d)(?=.*[A-Za-z])(?!.*\s).{4,}" 
