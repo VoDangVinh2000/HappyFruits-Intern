@@ -76,19 +76,19 @@
                             <table class="table table-striped" ng-show="subtotal">
                                 <thead>
                                     <tr>
-                                        <th class="hidden-xs hidden-sm">#</th>
+                                        <th >#</th>
                                         <th bind-translate="Tên món">Tên món</th>
-                                        <th class="hidden-xs hidden-sm" bind-translate="Tùy chọn">Tùy chọn</th>
+                                        <th class="d-none d-sm-block" bind-translate="Tùy chọn">Tùy chọn</th>
                                         <th style="min-width: 50px;" bind-translate="SL">SL</th>
                                         <th bind-translate="Giá">Giá</th>
-                                        <th class="hidden-xs hidden-sm" bind-translate="Thành tiền">Thành tiền</th>
+                                        <th class="d-none d-sm-block" bind-translate="Thành tiền">Thành tiền</th>
                                         <th style="width:50px;"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr ng-repeat="orderItem in orderedItems">
-                                        <td class="hidden-xs hidden-sm">{{ $index+1 }}</td>
-                                        <td class="hidden-xs hidden-sm">{{orderItem.code}} - {{ settings.language=='en'?orderItem.english_name:orderItem.name }}
+                                        <td>{{ $index+1 }}</td>
+                                        <td >{{orderItem.code}} - {{ settings.language=='en'?orderItem.english_name:orderItem.name }}
                                             <div ng-show="orderItem.custom.taste != 6 || orderItem.custom.description" class="sub_product">
                                                 <p>&nbsp;<span ng-show="orderItem.custom.taste != 6">{{__(tasteOptions[orderItem.custom.taste])}}.</span><span ng-show="orderItem.custom.description">&nbsp;{{orderItem.custom.description}}.</span></p>
                                             </div>
@@ -96,22 +96,22 @@
                                                 <span ng-repeat="(item_id, box_item) in orderedBoxes[orderItem.product_id]">{{box_item.quantity}}{{box_item.unit}} {{ settings.language=='en'?items[item_id].english_name:items[item_id].name }}{{$last ? '' : ', '}}</span>
                                             </div>
                                         </td>
-                                        <!-- <td class="hidden-md hidden-lg">
-                                            <div ng-bind-html="settings.language=='en'?orderItem.english_name:orderItem.name|efruit_break_line"></div>
-                                            <div>
-                                                <select ng-class="{hidden:orderItem.sub_products.length == 0}" class="multiple normal-choices" multiple="multiple">
-                                                    <option ng-repeat="sub_product in orderItem.sub_products" id="{{orderItem.key + '_' + sub_product.product_id}}" ng-selected="sub_product.selected">{{(settings.language=='en'?sub_product.english_name:sub_product.name) + (sub_product.price>0?' - ' + sub_product.price + 'k':'')}}</option>
-                                                </select>
-                                            </div>
-                                        </td> -->
-                                        <td class="hidden-xs hidden-sm">
+                                            <!-- <td class="hidden-md hidden-lg">
+                                                <div ng-bind-html="settings.language=='en'?orderItem.english_name:orderItem.name|efruit_break_line"></div>
+                                                <div>
+                                                    <select ng-class="{hidden:orderItem.sub_products.length == 0}" class="multiple normal-choices" multiple="multiple">
+                                                        <option ng-repeat="sub_product in orderItem.sub_products" id="{{orderItem.key + '_' + sub_product.product_id}}" ng-selected="sub_product.selected">{{(settings.language=='en'?sub_product.english_name:sub_product.name) + (sub_product.price>0?' - ' + sub_product.price + 'k':'')}}</option>
+                                                    </select>
+                                                </div>
+                                            </td> -->
+                                        <td class="d-none d-sm-block">
                                             <select ng-class="{hidden:orderItem.sub_products.length == 0}" class="multiple normal-choices" multiple="multiple">
                                                 <option ng-repeat="sub_product in orderItem.sub_products" id="{{orderItem.key + '_' + sub_product.product_id}}" ng-selected="sub_product.selected">{{(settings.language=='en'?sub_product.english_name:sub_product.name) + (sub_product.price>0?' - ' + sub_product.price + 'k':'')}}</option>
                                             </select>
                                         </td>
                                         <td><input type="text" class="input-sm form-control number" only-number name="quantity" min="0" maxlength="3" ng-model="orderItem.quantity" ng-blur="validateQuantity(orderItem.key)" ng-change="onChangeQuantity(orderItem.key)" /></td>
                                         <td>{{ orderItem.final_price }}<span class="hidden-xs">.000<sup>đ</sup></span><span ng-show="orderItem.promotion_price > 0" bind-translate="KM">KM</span></td>
-                                        <td class="hidden-xs hidden-sm">{{ orderItem.final_price*orderItem.quantity*1000|efruit_money }}<sup>đ</sup></td>
+                                        <td class="d-none d-sm-block">{{ orderItem.final_price*orderItem.quantity*1000|efruit_money }}<sup>đ</sup></td>
                                         <td><a class="btn btn-sm btn-danger" href="" ng-click="removeItem(orderItem.key)"><i class="fas fa-trash"></i></a></td>
                                     </tr>
                                 </tbody>
@@ -180,7 +180,7 @@
                                             <div class="input-group">
                                                 <!-- <input placeholder="Email" type="email" style="font-size: 15px;" class="form-control email" ng-model="customer.email" name="email" required="required" /> -->
                                                 <?php if (isset($_SESSION['user_account'])) { ?>
-                                                    <input placeholder="<?= $_SESSION['user_account'][0]['email'] ?>" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
+                                                    <input placeholder="<?= $_SESSION['user_account'][0]['email_account'] ?>" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
                                                 <?php } else { ?>
                                                     <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
                                                 <?php } ?>

@@ -21,7 +21,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
                                 $counter++;
                                 $need_hide = !empty($showMore) && $counter > NUMBER_OF_ITEMS_PER_PAGE;
                         ?>
-                                <div class="col-md-4 col-sm-4 col-6">
+                                <div class="product-item col-md-4 col-sm-4 col-6">
                                     <?php $this->load_partial('product-item-box', array('item' => $item)); ?>
                                 </div>
                                 <?php
@@ -36,7 +36,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
                                     $counter++;
                                     $need_hide = !empty($showMore) && $counter > NUMBER_OF_ITEMS_PER_PAGE;
                                 ?>
-                                    <div class="col-md-4 col-sm-4 col-6">
+                                    <div class="product-item col-md-4 col-sm-4 col-6">
                                         <?php $this->load_partial('product-item-box', array('item' => $item)); ?>
                                     </div>
                     </div>
@@ -51,7 +51,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
         </div>
     </div>
     </div>
-    <div class="col-sm-3  cart-navi padding-sm hidden-xs">
+    <div class="col-sm-3  cart-navi hidden-xs">
         <div class="efruit-cart efruitjs">
             <div class="cart-header">
                 <h2 class="inline-block" bind-translate="Giỏ hàng">Giỏ hàng</h2>

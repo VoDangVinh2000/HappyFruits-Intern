@@ -177,7 +177,7 @@
                                    <div class="dropdown-menu megamenu" role="menu">
                                        <div class="container-mega">
                                            <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
-                                           <div class="row g-3 response-mega">
+                                           <div class="row g-3 response-mega text-center">
                                                <div class="col-lg-5">
                                                    <div class="row">
                                                        <!-- $tile['sub_items] là các nhóm menu-con !-->

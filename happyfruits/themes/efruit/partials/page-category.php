@@ -10,85 +10,65 @@
                             for ($i = 0; $i < count($value); $i++) {
                                 if ($value[$i]['image'] == "") {
                 ?>
-                                    <div class="col-md-4 col-sm-6 col-6">
-                                        <div class="product-item">
-                                            <div class="product-photo">
-                                                <a href="/vi/detail/<?php echo $value[$i]['product_id'] . "/" . url_slug($value[$i]['name']) ?>" class="photo-link">
-                                                    <img src="<?php echo $imageDefault ?>" alt="<?php echo $value[$i]['code'] ?>">
-                                                </a>
-                                                <a class="btn-shop btn-cart" href="">
-                                                    <div class="button-content-wrapper">
-                                                        <span class="button-text efruit-vi">Chi tiết</span>
-                                                        <span class="button-text efruit-en">Detail</span>
-                                                    </div>
-                                                </a>
-                                                <div ng-click="showProduct(<?php echo $value[$i]['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
-                                            </div>
-                                            <div class="product-info" style="margin-top: 12px;">
-                                                <!-- <div class="row mt-2"> -->
-                                                <div class="col-7 product-name">
-                                                    <a class=" efruit-vi" href="/vi/detail/<?php echo $value[$i]['product_id'] . "/" . url_slug($value[$i]['name'])  ?>"><?= $value[$i]['name'] ?></a>
-                                                    <a class=" efruit-en" href="/vi/detail/<?php echo $value[$i]['product_id'] . "/" . url_slug($value[$i]['name'])  ?>"><?= $value[$i]['english_name'] ?></a>
-                                                </div>
-                                                <div class="col-5">
-                                                    <div class="product-price">
-                                                        <?php if (empty($value[$i]['is_box'])) : ?>
-                                                            <?php if ($value[$i]['price'] > 0) : ?>
-                                                                <?php if ($value[$i]['promotion_price'] == 0) : ?>
-                                                                    <a href="javascript:void(0);" class="price"><?= number_format($value[$i]['price'] * 1000) ?><sup>đ</sup></a>
-                                                                <?php else : ?>
-                                                                    <a href="javascript:void(0);">
-                                                                        <span class="delete-price"><?= number_format($value[$i]['price'] * 1000) ?><sup>đ</sup></span>
-                                                                        <span class="price"><?= number_format($value[$i]['promotion_price'] * 1000) ?><sup>đ</sup></span>
-                                                                    </a>
-                                                                <?php endif; ?>
-                                                            <?php endif; ?>
+                                    <div class="product-item col-md-4 col-6">
+                                        <div style="margin-bottom: 15px;" class="product-cat-<?= $value[$i]['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
+                                            <a href="/vi/detail/<?= $value[$i]['product_id'] ?>" ng-click="showProduct(<?= $value[$i]['product_id'] ?>, $event, 1)" class="y-image">
+                                                <img width="320" height="320" alt="<?= $value[$i]['code'] ?>" src="<?= $value[$i]['image'] ? get_image_url($value[$i]['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
+                                                <img width="320" height="320" alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" />
+                                            </a>
+                                            <div class="y-info">
+                                                <h3 class="y-title"><a style="text-overflow: inherit;white-space: unset;"><?= $value[$i]['code'] ?> - <span class="product_name efruit-vi"><?= $value[$i]['name'] ?></span><span class="product_name efruit-en"><?= $value[$i]['english_name'] ?></span></a></h3>
+                                                <?php if (empty($value[$i]['is_box'])) : ?>
+                                                    <?php if ($value[$i]['price'] > 0) : ?>
+                                                        <?php if ($value[$i]['promotion_price'] == 0) : ?>
+                                                            <a class="y-source"><?= number_format($value[$i]['price'] * 1000) ?><sup>đ</sup></a>
+                                                        <?php else : ?>
+                                                            <a class="y-source"><span class="old-price"><?= number_format($value[$i]['price'] * 1000) ?><sup>đ</sup></span> <span class="new-price"><?= number_format($value[$i]['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
                                                         <?php endif; ?>
-                                                    </div>
-                                                </div>
-                                                <!-- </div> -->
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                                <?php if ($value[$i]['description']) : ?>
+                                                    <p class="y-ingredients efruit-vi"><?= $value[$i]['description'] ?></p>
+                                                    <p class="y-ingredients efruit-en"><?= $value[$i]['description_en'] ?></p>
+                                                <?php endif; ?>
                                             </div>
+                                            <?php if (!empty($value[$i]['enabled']) && empty($value[$i]['not_deliver'])) : ?>
+                                                <div ng-click="showProduct(<?= $value[$i]['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
+                                            <?php elseif (empty($value[$i]['enabled'])) : ?>
+                                                <div><img alt="sold-out" src="<?= get_theme_assets_url() ?>img/sold_out.png" class="sold_out efruit-vi" /><img alt="sold-out" class="sold_out efruit-en" src="<?= get_theme_assets_url() ?>img/sold_out_en.png" /></div>
+                                            <?php endif; ?>
+                                            <?php $this->load_partial('product-ribbon', array('item' => $value[$i])); ?>
                                         </div>
                                     </div>
                                 <?php } else { ?>
-                                    <div class="col-md-4 col-sm-6 col-6">
-                                        <div class="product-item">
-                                            <div class="product-photo">
-                                                <a href="/vi/detail/<?php echo $value[$i]['product_id'] . "/" . url_slug($value[$i]['name']) ?>" class="photo-link">
-                                                    <img src="<?php echo $value[$i]['image'] ?>" alt="<?php echo $value[$i]['code'] ?>">
-                                                </a>
-                                                <a class="btn-shop btn-cart" href="">
-                                                    <div class="button-content-wrapper">
-                                                        <span class="button-text efruit-vi">Chi tiết</span>
-                                                        <span class="button-text efruit-en">Detail</span>
-                                                    </div>
-                                                </a>
-                                                <div ng-click="showProduct(<?php echo $value[$i]['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
-                                            </div>
-                                            <div class="product-info" style="margin-top: 12px;">
-                                                <!-- <div class="row mt-2"> -->
-                                                <div class="col-7 product-name">
-                                                    <a class=" efruit-vi" href="/vi/detail/<?php echo $value[$i]['product_id'] . "/" . url_slug($value[$i]['name'])  ?>"><?= $value[$i]['name'] ?></a>
-                                                    <a class=" efruit-en" href="/vi/detail/<?php echo $value[$i]['product_id'] . "/" . url_slug($value[$i]['name'])  ?>"><?= $value[$i]['english_name'] ?></a>
-                                                </div>
-                                                <div class="col-5">
-                                                    <div class="product-price">
-                                                        <?php if (empty($value[$i]['is_box'])) : ?>
-                                                            <?php if ($value[$i]['price'] > 0) : ?>
-                                                                <?php if ($value[$i]['promotion_price'] == 0) : ?>
-                                                                    <a href="javascript:void(0);" class="price"><?= number_format($value[$i]['price'] * 1000) ?><sup>đ</sup></a>
-                                                                <?php else : ?>
-                                                                    <a href="javascript:void(0);">
-                                                                        <span class="delete-price"><?= number_format($value[$i]['price'] * 1000) ?><sup>đ</sup></span>
-                                                                        <span class="price"><?= number_format($value[$i]['promotion_price'] * 1000) ?><sup>đ</sup></span>
-                                                                    </a>
-                                                                <?php endif; ?>
-                                                            <?php endif; ?>
+                                    <div class=" product-item col-md-4 col-6">
+                                        <div style="margin-bottom: 15px;" class="product-cat-<?= $value[$i]['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
+                                            <a href="/vi/detail/<?= $value[$i]['product_id'] ?>" ng-click="showProduct(<?= $value[$i]['product_id'] ?>, $event, 1)" class="y-image">
+                                                <img width="320" height="320" alt="<?= $value[$i]['code'] ?>" src="<?= $value[$i]['image'] ? get_image_url($value[$i]['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
+                                                <img width="320" height="320" alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" />
+                                            </a>
+                                            <div class="y-info">
+                                                <h3 class="y-title"><a style="text-overflow: inherit;white-space: unset;"><?= $value[$i]['code'] ?> - <span class="product_name efruit-vi"><?= $value[$i]['name'] ?></span><span class="product_name efruit-en"><?= $value[$i]['english_name'] ?></span></a></h3>
+                                                <?php if (empty($value[$i]['is_box'])) : ?>
+                                                    <?php if ($value[$i]['price'] > 0) : ?>
+                                                        <?php if ($value[$i]['promotion_price'] == 0) : ?>
+                                                            <a class="y-source"><?= number_format($value[$i]['price'] * 1000) ?><sup>đ</sup></a>
+                                                        <?php else : ?>
+                                                            <a class="y-source"><span class="old-price"><?= number_format($value[$i]['price'] * 1000) ?><sup>đ</sup></span> <span class="new-price"><?= number_format($value[$i]['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
                                                         <?php endif; ?>
-                                                    </div>
-                                                </div>
-                                                <!-- </div> -->
+                                                    <?php endif; ?>
+                                                <?php endif; ?>
+                                                <?php if ($value[$i]['description']) : ?>
+                                                    <p class="y-ingredients efruit-vi"><?= $value[$i]['description'] ?></p>
+                                                    <p class="y-ingredients efruit-en"><?= $value[$i]['description_en'] ?></p>
+                                                <?php endif; ?>
                                             </div>
+                                            <?php if (!empty($value[$i]['enabled']) && empty($value[$i]['not_deliver'])) : ?>
+                                                <div ng-click="showProduct(<?= $value[$i]['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
+                                            <?php elseif (empty($value[$i]['enabled'])) : ?>
+                                                <div><img alt="sold-out" src="<?= get_theme_assets_url() ?>img/sold_out.png" class="sold_out efruit-vi" /><img alt="sold-out" class="sold_out efruit-en" src="<?= get_theme_assets_url() ?>img/sold_out_en.png" /></div>
+                                            <?php endif; ?>
+                                            <?php $this->load_partial('product-ribbon', array('item' => $value[$i])); ?>
                                         </div>
                                     </div>
                 <?php }
@@ -103,7 +83,7 @@
                 } ?>
             </div>
         </div>
-        <div class="col-sm-3  cart-navi padding-sm hidden-xs">
+        <div class="col-sm-3  cart-navi hidden-xs">
             <div class="efruit-cart efruitjs">
                 <div class="cart-header">
                     <h2 class="inline-block" bind-translate="Giỏ hàng">Giỏ hàng</h2>

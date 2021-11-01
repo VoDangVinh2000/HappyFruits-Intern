@@ -225,6 +225,7 @@ function getPageScroll(){
         main_nav.style.position = "relative";
         main_nav.style.width = "100%";
         main_nav.style.top = "0";
+        main_nav.style.zIndex = 1000;
         main_nav.style.borderTop = "initial";
     }
     

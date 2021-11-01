@@ -44,7 +44,7 @@ if (isset($product['sell_price'])) {
         <div class="col-md-6 product-detail">
             <h1 class="product-title mb-3">
                 <span class="product-name efruit-vi"><?php echo $product['name'] ?></span> <span class="product-sku"></span>
-                <span class="product-name efruit-en"><?php echo $product['english_name'] ?></span> 
+                <span class="product-name efruit-en"><?php echo $product['english_name'] ?></span>
                 <p class="product-sku efruit-vi">Mã - <?php echo $product['code'] ?></p>
                 <p class="product-sku efruit-en">Code - <?php echo $product['code'] ?></p>
             </h1>
@@ -141,6 +141,12 @@ if (isset($product['sell_price'])) {
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($array['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($array['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php } else { ?>
@@ -181,6 +187,12 @@ if (isset($product['sell_price'])) {
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($item['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $item['ribbon_left_color'] ? 'style="background: ' . $item['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $item['ribbon_left_color'] . ';"' : '' ?>><?= $item['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($item['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $item['ribbon_right_color'] ? 'style="background: ' . $item['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $item['ribbon_right_color'] . ';"' : '' ?>><?= $item['ribbon_right'] ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php } ?>

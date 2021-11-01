@@ -56,7 +56,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <div class="product-item">
                                         <div class="product-photo">
                                             <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                                <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>">
+                                                <img width="320" height="320" src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>">
                                             </a>
 
                                             <a class="btn-shop btn-cart" href="">
@@ -65,7 +65,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                     <span class="button-text efruit-en">Detail</span>
                                                 </div>
                                             </a>
-                                            <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
+                                            <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span style="opacity: 1;" class="yum"></span></div>
                                         </div>
                                         <div class="product-info" style="margin-top: 12px;">
                                             <!-- <div class="row mt-2"> -->
@@ -80,7 +80,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                             <?php if ($array['promotion_price'] == 0) : ?>
                                                                 <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                             <?php else : ?>
-                                                                <a href="javascript:void(0);" >
+                                                                <a href="javascript:void(0);">
                                                                     <span class="delete-price"> <?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                                     <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                                 </a>
@@ -91,6 +91,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             </div>
                                             <!-- </div> -->
                                         </div>
+                                        <?php if (!empty($array['ribbon_left'])) : ?>
+                                            <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($array['ribbon_right'])) : ?>
+                                            <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             <?php } else { ?>
@@ -98,7 +104,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <div class="product-item">
                                         <div class="product-photo">
                                             <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                                <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
+                                                <img width="320" height="320" src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>">
                                             </a>
                                             <a class="btn-shop btn-cart" href="">
                                                 <div class="button-content-wrapper">
@@ -107,9 +113,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 </div>
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                                <span class="yum"></span>
+                                                <span style="opacity: 1;" class="yum"></span>
                                             </div>
-                                            <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
 
                                         </div>
                                         <div class="product-info" style="margin-top: 12px;">
@@ -125,8 +130,8 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                             <?php if ($array['promotion_price'] == 0) : ?>
                                                                 <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                             <?php else : ?>
-                                                                <a href="javascript:void(0);" >
-                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                                <a href="javascript:void(0);">
+                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                                     <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                                 </a>
                                                             <?php endif; ?>
@@ -136,6 +141,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             </div>
                                             <!-- </div> -->
                                         </div>
+                                        <?php if (!empty($array['ribbon_left'])) : ?>
+                                            <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($array['ribbon_right'])) : ?>
+                                            <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                 <?php }
@@ -165,7 +176,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <div class="product-item">
                                         <div class="product-photo">
                                             <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                                <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                                <img width="320" height="320"  src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                             <a class="btn-shop btn-cart" href="#">
                                                 <div class="button-content-wrapper">
                                                     <span class="button-text efruit-vi">Chi tiết</span>
@@ -173,7 +184,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 </div>
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                                <span class="yum"></span>
+                                                <span style="opacity: 1;" class="yum"></span>
                                             </div>
                                         </div>
                                         <div class="product-info" style="margin-top: 12px;">
@@ -190,7 +201,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                                 <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                             <?php else : ?>
                                                                 <a href="javascript:void(0);">
-                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                                     <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                                 </a>
                                                             <?php endif; ?>
@@ -200,6 +211,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             </div>
                                             <!-- </div> -->
                                         </div>
+                                        <?php if (!empty($array['ribbon_left'])) : ?>
+                                            <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($array['ribbon_right'])) : ?>
+                                            <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                             <?php } else { ?>
@@ -207,7 +224,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     <div class="product-item">
                                         <div class="product-photo">
                                             <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                                <img src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                                <img width="320" height="320" src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                             <a class="btn-shop btn-cart" href="#">
                                                 <div class="button-content-wrapper">
                                                     <span class="button-text efruit-vi">Chi tiết</span>
@@ -215,7 +232,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                 </div>
                                             </a>
                                             <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                                <span class="yum"></span>
+                                                <span style="opacity: 1;" class="yum"></span>
                                             </div>
                                         </div>
                                         <div class="product-info" style="margin-top: 12px;">
@@ -232,7 +249,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                                 <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                             <?php else : ?>
                                                                 <a href="javascript:void(0);">
-                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                                    <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                                     <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                                 </a>
                                                             <?php endif; ?>
@@ -242,6 +259,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                             </div>
                                             <!-- </div> -->
                                         </div>
+                                        <?php if (!empty($array['ribbon_left'])) : ?>
+                                            <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                        <?php endif; ?>
+                                        <?php if (!empty($array['ribbon_right'])) : ?>
+                                            <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                 <?php }
@@ -256,7 +279,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
         ?>
                     <div class="col-md-6 product-item">
                         <div class="top-img">
-                            <img src="<?= $array['image'] ?>" alt="test">
+                            <img width="320" height="320" src="<?= $array['image'] ?>" alt="test">
                             <div class="category-desc">
                                 <span class="efruit-vi">
                                     <p><?= $array['description'] ?></p>
@@ -268,7 +291,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="category-caption">
                                 <h3 class="efruit-vi"><span><?= $array['text'] ?></span></h3>
                                 <h3 class="efruit-en"><span><?= $array['en_text'] ?></span></h3>
-                                <a class="btn-shop" href="/vi/hamper-box-fruits">
+                                <a class="btn-shop" href="<?= $array['href'] ?>">
                                     <div class="button-content-wrapper">
                                         <span class="button-text">SHOP NOW</span>
                                     </div>
@@ -300,7 +323,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <span class="efruit-en">
                                 <p><?= $array['description'] ?></p>
                             </span>
-                            <a class="btn-shop" href="/vi/fruit-bouquet">
+                            <a class="btn-shop" href="<?= $array['href'] ?>">
                                 <div class="button-content-wrapper">
                                     <span class="button-text">SHOP NOW</span>
                                 </div>
@@ -328,7 +351,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img  width="320" height="320" src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -336,7 +359,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                     </a>
                                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
+                                        <span style="opacity: 1;" class="yum"></span>
                                     </div>
                                 </div>
                                 <div class="product-info" style="margin-top: 12px;">
@@ -353,7 +376,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
                                                         <a href="javascript:void(0);">
-                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                             <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                         </a>
                                                     <?php endif; ?>
@@ -363,6 +386,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($array['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($array['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php } else { ?>
@@ -370,7 +399,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img src="<?= $array['image'] ?>" alt=""></a>
+                                        <img  width="320" height="320" src="<?= $array['image'] ?>" alt=""></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -378,7 +407,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                     </a>
                                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
+                                        <span style="opacity: 1;" class="yum"></span>
                                     </div>
                                 </div>
                                 <div class="product-info" style="margin-top: 12px;">
@@ -395,7 +424,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
                                                         <a href="javascript:void(0);">
-                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                             <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                         </a>
                                                     <?php endif; ?>
@@ -405,6 +434,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($array['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($array['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
         <?php }
@@ -440,7 +475,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img width="320" height="320" class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -448,7 +483,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                     </a>
                                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
+                                        <span style="opacity: 1;" class="yum"></span>
                                     </div>
                                 </div>
                                 <div class="product-info" style="margin-top: 12px;">
@@ -465,7 +500,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
                                                         <a href="javascript:void(0);">
-                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                             <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                         </a>
                                                     <?php endif; ?>
@@ -475,6 +510,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($array['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($array['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
         </div>
@@ -483,7 +524,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
             <div class="product-item">
                 <div class="product-photo">
                     <a href="/vi/detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
-                        <img class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                        <img  width="320" height="320" class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                     <a class="btn-shop btn-cart" href="#">
                         <div class="button-content-wrapper">
                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -491,7 +532,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                         </div>
                     </a>
                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                        <span class="yum"></span>
+                        <span style="opacity: 1;" class="yum"></span>
                     </div>
                 </div>
                 <div class="product-info" style="margin-top: 12px;">
@@ -508,7 +549,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                     <?php else : ?>
                                         <a href="javascript:void(0);">
-                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                             <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                         </a>
                                     <?php endif; ?>
@@ -518,6 +559,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                     </div>
                     <!-- </div> -->
                 </div>
+                <?php if (!empty($array['ribbon_left'])) : ?>
+                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                <?php endif; ?>
+                <?php if (!empty($array['ribbon_right'])) : ?>
+                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                <?php endif; ?>
             </div>
         </div>
 <?php }
@@ -552,7 +599,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img  width="320" height="320" class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -560,7 +607,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                     </a>
                                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
+                                        <span style="opacity: 1;" class="yum"></span>
                                     </div>
                                 </div>
                                 <div class="product-info" style="margin-top: 12px;">
@@ -587,6 +634,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($array['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($array['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php } else { ?>
@@ -594,7 +647,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id']  . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img  width="320" height="320" class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -602,7 +655,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                     </a>
                                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
+                                        <span style="opacity: 1;" class="yum"></span>
                                     </div>
                                 </div>
                                 <div class="product-info" style="margin-top: 12px;">
@@ -619,7 +672,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
                                                         <a href="javascript:void(0);">
-                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                             <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                         </a>
                                                     <?php endif; ?>
@@ -629,6 +682,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($array['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($array['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
             <?php }
@@ -662,7 +721,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img  width="320" height="320" class="owl-lazy" data-src="<?php echo $imageDefault ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -670,16 +729,16 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                     </a>
                                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
+                                        <span style="opacity: 1;" class="yum"></span>
                                     </div>
                                 </div>
                                 <div class="product-info" style="margin-top: 12px;">
                                     <!-- <div class="row mt-2"> -->
-                                    <div class="col-7 product-name">
+                                    <div class="col-9 product-name">
                                         <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
                                         <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-3">
                                         <div class="product-price">
                                             <?php if (empty($array['is_box'])) : ?>
                                                 <?php if ($array['price'] > 0) : ?>
@@ -687,7 +746,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
                                                         <a href="javascript:void(0);">
-                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                             <span class="price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                         </a>
                                                     <?php endif; ?>
@@ -697,6 +756,12 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($array['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($array['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                <?php endif; ?>
                             </div>
                         </div>
                     <?php } else { ?>
@@ -704,7 +769,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             <div class="product-item">
                                 <div class="product-photo">
                                     <a href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name']) ?>" class="photo-link">
-                                        <img class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
+                                        <img  width="320" height="320" class="owl-lazy" data-src="<?php echo $array['image'] ?>" alt="<?php echo $array['code'] ?>"></a>
                                     <a class="btn-shop btn-cart" href="#">
                                         <div class="button-content-wrapper">
                                             <span class="button-text efruit-vi">Chi tiết</span>
@@ -712,16 +777,16 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                         </div>
                                     </a>
                                     <div ng-click="showProduct(<?php echo $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart">
-                                        <span class="yum"></span>
+                                        <span style="opacity: 1;" class="yum"></span>
                                     </div>
                                 </div>
                                 <div class="product-info" style="margin-top: 12px;">
                                     <!-- <div class="row mt-2"> -->
-                                    <div class="col-7 product-name">
+                                    <div class="col-9 product-name">
                                         <a class=" efruit-vi" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['name'] ?></a>
                                         <a class=" efruit-en" href="/vi/detail/<?php echo $array['product_id'] . "/" . url_slug($array['name'])  ?>"><?= $array['english_name'] ?></a>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-3">
                                         <div class="product-price">
                                             <?php if (empty($array['is_box'])) : ?>
                                                 <?php if ($array['price'] > 0) : ?>
@@ -729,7 +794,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                                         <a href="javascript:void(0);" class="price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
                                                     <?php else : ?>
                                                         <a href="javascript:void(0);">
-                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> 
+                                                            <span class="delete-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span>
                                                             <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
                                                         </a>
                                                     <?php endif; ?>
@@ -739,6 +804,13 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                     <!-- </div> -->
                                 </div>
+                                <?php if (!empty($array['ribbon_left'])) : ?>
+                                    <div class="half-circle-ribbon ribbon-left" <?= $array['ribbon_left_color'] ? 'style="background: ' . $array['ribbon_left_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_left_color'] . ';"' : '' ?>><?= $array['ribbon_left'] ?></div>
+                                <?php endif; ?>
+                                <?php if (!empty($array['ribbon_right'])) : ?>
+                                    <div class="half-circle-ribbon" <?= $array['ribbon_right_color'] ? 'style="background: ' . $array['ribbon_right_color'] . ';box-shadow: 0 0 0 3px ' . $array['ribbon_right_color'] . ';"' : '' ?>><?= $array['ribbon_right'] ?></div>
+                                <?php endif; ?>
+
                             </div>
                         </div>
             <?php
