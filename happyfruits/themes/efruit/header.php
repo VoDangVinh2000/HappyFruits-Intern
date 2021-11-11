@@ -82,9 +82,7 @@
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/cart.css">
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/stylePageAccount.css">
 
-    <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
-    <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
-    <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>
+    
    
     <!--end!-->
 
