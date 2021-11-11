@@ -82,7 +82,8 @@
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/cart.css">
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/stylePageAccount.css">
 
-    <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
+    <!-- <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script> -->
+    <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage11102021.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>
    
@@ -121,7 +122,8 @@
 
 </head>
 
-<body onscroll="getPageScroll()" class="frontend views-<?= $template ?> <?= !empty($page_code) ? 'uri-' . $page_code : '' ?>" on-ready>
+<!-- onscroll="getPageScroll()"  -->
+<body class="frontend views-<?= $template ?> <?= !empty($page_code) ? 'uri-' . $page_code : '' ?>" on-ready>
     <div id="loading" ng-class="{hidden:1}">
         <div>
             <img alt="logo" height="76" src="<?= get_child_theme_assets_url() ?>img/small-logo.png" />
