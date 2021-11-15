@@ -18,6 +18,6 @@
 
 - [x] 3: Top menu: ẩn menu phụ khi trống
 - [ ] 6: Cần hiệu ứng khi thêm sản phẩm vào giỏ hàng (xem trang cũ)
-- [ ] 8: Footer:
+- [x] 8: Footer:
   - Bỏ icon facebook
   - Giảm độ lớn font chữ cho các dòng ở cuối trang
