@@ -10,20 +10,8 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 	<div class="container">
 		<div class="footer--wrapper">
 			<a href="/vi" class="footer-img--link">
-				<img src="http://www.localhost/themes/efruit/child/happy/assets/img/main_logo.png" alt="" class="footer-img">
+				<img src="<?=get_child_theme_assets_url()?>img/main_logo.png" alt="" class="footer-img">
 			</a>
-		</div>
-		<div class="footer--group-icon">
-			<div class="footer--group-icon__wrapper">
-				<?php if (!empty($settings['facebook_link'])) { ?>
-					<a href="<?= $settings['facebook_link'] ?>" target="_blank"> <i class="fab fa-facebook-f"></i><span class="icon-name">facebook</span></a>
-				<?php } ?>
-				<!-- <a href="https://twitter.com/?lang=vi" target="_blank"><i class="fab fa-twitter"></i><span class="icon-name">twitter</span></a>
-				<a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i><span class="icon-name">instagram</span></a> -->
-				<?php if (!empty($settings['youtube_link'])) { ?>
-					<a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube"></i><span class="icon-name">youtube</span></a>
-				<?php } ?>
-			</div>
 		</div>
 		<div class="footer--info">
 			<ul class="footer--info-list">
@@ -85,7 +73,7 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 							<span bind-translate="Cửa hàng">Cửa hàng</span>: <span class="efruit-vi footer--info-address footer--info-address__title">
 								<?= getvalue($main_branch, 'short_address') ?>
 							</span><span class="efruit-en efruitjs"><?= getvalue($main_branch, 'en_address')
-																	?></span>
+																											?></span>
 						</div>
 					</div>
 				</li>
@@ -116,8 +104,9 @@ $copy_right_year = $start_year != $current_year ? $start_year . '-' . $current_y
 					<div href="#" class="footer--info-link">
 						<div class="footer--info-address footer--info-address-envolope">
 							<i class="fas fa-envelope"></i>
-							<a id="info-email">Info email</a>&nbsp;&nbsp;<i class="fa fa-envelope-o"></i> <a id="cskh-email">CSKH</a>
-							<i class="far fa-envelope"></i>
+							<a id="info-email">Info email</a>
+							&nbsp;&nbsp;<i class="fa fa-envelope-o"></i>
+							<a id="cskh-email">CSKH</a>
 						</div>
 					</div>
 				</li>
