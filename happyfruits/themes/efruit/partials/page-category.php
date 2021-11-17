@@ -1,7 +1,7 @@
 <div class="container-fluid mt5">
     <div class="row">
         <div class="col-sm-9 ">
-            <div class="row">
+            <div class="row gy-2">
                 <?php
                 if (!empty($choose_mega_menu)) {
                     if (!empty($get_product_with_mega_menu)) {
@@ -83,7 +83,7 @@
                 } ?>
             </div>
         </div>
-        <div class="col-sm-3  cart-navi hidden-xs">
+        <div class="col-sm-3  nopadding cart-navi hidden-xs">
             <div class="efruit-cart efruitjs">
                 <div class="cart-header">
                     <h2 class="inline-block" bind-translate="Giỏ hàng">Giỏ hàng</h2>

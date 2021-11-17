@@ -233,12 +233,12 @@ function getPageScroll(){
 //owl-carousel home page, trai cay dac san viet category
 $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
-        autoplay: true,
+        // autoplay: true,
         autoplayhoverpause: true,
         autoplaytimeout: 100,
         items: 4,
         nav: true,
-        loop: true,
+        // loop: true,
         lazyLoad: true,
         responsive: {
             0: {

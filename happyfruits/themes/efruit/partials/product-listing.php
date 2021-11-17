@@ -11,7 +11,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
                     <h1 class="title center" style="margin: 30px;" bind-translate="<?= $heading ?>"><?= $heading ?></h1>
                 <?php endif; ?>
                 <div class="container" style="width: 100%;">
-                    <div class="row">
+                    <div class="row gy-2">
                         <?php
                         $counter = 0;
                         $viewed_products = array();
@@ -51,7 +51,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
         </div>
     </div>
     </div>
-    <div class="col-sm-3  cart-navi hidden-xs">
+    <div class="col-sm-3  nopadding cart-navi hidden-xs">
         <div class="efruit-cart efruitjs">
             <div class="cart-header">
                 <h2 class="inline-block" bind-translate="Giỏ hàng">Giỏ hàng</h2>
@@ -92,7 +92,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
             <br />
             <div class="row-cart txt-center input-note"><span bind-translate="Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.">Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.</span></div>
             <!-- ng-click="showPopupStep2()" !-->
-            <button class="btn btn-order btn-success" id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
+            <button class="btn btn-order btn-success" ng-click="showPopupStep2()"  id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
         </div>
     </div>
     </div>
