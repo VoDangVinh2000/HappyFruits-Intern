@@ -168,207 +168,222 @@
                <div class="container-fluid">
                    <div class="collapse navbar-collapse" id="main-nav">
                        <ul class="navbar-nav mx-auto">
-                           <?php foreach ($tiles as $tile) { ?>
+                           <?php
+                            foreach ($tiles as $tile) {
+                            ?>
                                <!-- $tiles được tạo từ trang functions.php, nó lấy dữ liệu từ bảng menus (menu-category) !-->
                                <li class="nav-item dropdown has-megamenu">
                                    <a class="nav-link efruit-vi text-uppercase px-3" href="<?= $tile['href'] ?>"><?= $tile['short_text'] ?></a>
                                    <a class="nav-link  efruit-en text-uppercase px-3" href="<?= $tile['href'] ?>"><?= $tile['en_text'] ?></a>
 
-                                   <div class="dropdown-menu megamenu" role="menu">
-                                       <div class="container-mega">
-                                           <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
-                                           <div class="row g-3 response-mega text-center">
-                                               <div class="col-lg-5">
-                                                   <div class="row">
+                                   <?php
+                                    if (!empty($tile['sub_items']) || $tile['cat'] == 14 || $tile['cat'] == 15 || $tile['cat'] == 8) { ?>
+                                       <div class="dropdown-menu megamenu" role="menu">
+                                           <div class="container-mega">
+                                               <!--div container-mega được css này chỉnh độ rộng bao trọn megamenu !-->
+                                               <div class="row g-3 response-mega text-center">
+
+                                                   <div class="col-lg-5">
                                                        <!-- $tile['sub_items] là các nhóm menu-con !-->
                                                        <?php if (!empty($tile['sub_items'])) {
                                                             $length = count($tile['sub_items']);
                                                         ?>
-                                                           <?php for ($i = 0; $i < $length; $i++) { ?>
-                                                               <div class="col-md-6 col-megamenu">
-                                                                   <ul class="list-unstyled">
-                                                                       <li><a href="/vi/category/nhomhang-<?= $tile['sub_items'][$i]['category_id'] ?>">
-                                                                               <span class="efruit-vi"><?= $tile['sub_items'][$i]['name'] ?></span>
-                                                                               <span class="efruit-en"><?= $tile['sub_items'][$i]['english_name'] ?></span>
-                                                                           </a></li>
-                                                                   </ul>
-                                                               </div> <!-- col-megamenu.// -->
-                                                       <?php }
-                                                        } ?>
-                                                   </div>
-                                               </div><!-- end col-3 -->
-                                               <div class="col-lg-3">
-                                                   <div class="row">
-                                                       <?php if ($tile['cat'] == 14 || $tile['cat'] == 15 || $tile['cat'] == 8) { ?>
-                                                           <div class="col-megamenu col-md-12">
-                                                               <ul class="list-unstyled">
-                                                                   <li><a href="/vi/category/gia-1-<?= $tile['cat'] ?>">Nhỏ hơn 500k</a></li>
-                                                                   <li><a href="/vi/category/gia-2-<?= $tile['cat'] ?>">500k - 799k</a></li>
-                                                                   <li><a href="/vi/category/gia-3-<?= $tile['cat'] ?>">800k - 999k</a></li>
-                                                                   <li><a href="/vi/category/gia-4-<?= $tile['cat'] ?>">1000k - 1499k</a></li>
-                                                                   <li><a href="/vi/category/gia-5-<?= $tile['cat'] ?>">1500k - 1999k</a></li>
-                                                                   <li><a href="/vi/category/gia-6-<?= $tile['cat'] ?>">2000k - 2499k</a></li>
-                                                                   <li><a href="/vi/category/gia-7-<?= $tile['cat'] ?>">2500k - 3499k</a></li>
-                                                                   <li><a href="/vi/category/gia-8-<?= $tile['cat'] ?>">3500k trở lên</a></li>
-                                                               </ul>
-                                                           </div><!-- col-megamenu.// -->
+                                                           <div class="row">
+                                                               <?php for ($i = 0; $i < $length; $i++) { ?>
+                                                                   <div class="col-md-6 col-megamenu">
+                                                                       <ul class="list-unstyled">
+                                                                           <li><a href="/vi/category/nhomhang-<?= $tile['sub_items'][$i]['category_id'] ?>">
+                                                                                   <span class="efruit-vi"><?= $tile['sub_items'][$i]['name'] ?></span>
+                                                                                   <span class="efruit-en"><?= $tile['sub_items'][$i]['english_name'] ?></span>
+                                                                               </a></li>
+                                                                       </ul>
+                                                                   </div> <!-- col-megamenu.// -->
+                                                               <?php } ?>
+                                                           </div>
                                                        <?php } ?>
-                                                   </div>
-                                               </div><!-- end col-3 -->
-                                               <div class="col-lg-3">
-                                                   <div class="row">
-                                                       <?php if ($tile['cat'] == 14) {
-                                                            if (!empty($gioTraiCay)) {
-                                                                $dem = 1;
-                                                                foreach ($gioTraiCay as $item) {
-                                                                    if ($dem == 1) {
-                                                                        $dem++;
-                                                        ?>
-                                                                       <div class="product-item">
-                                                                           <div class="product-photo">
-                                                                               <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
-                                                                                   <img src="<?= $item['image'] ?>" alt=""></a>
-                                                                               <a class="btn-shop btn-cart" href="#">
-                                                                                   <div class="button-content-wrapper">
-                                                                                       <span class="button-text efruit-vi">Chi tiết</span>
-                                                                                       <span class="button-text efruit-en">Detail</span>
-                                                                                   </div>
-                                                                               </a>
-                                                                               <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
-                                                                           </div>
-                                                                           <div class="product-info" style="margin-top: 12px;">
-                                                                               <!-- <div class="row mt-2"> -->
-                                                                               <div class="col-7 product-name">
-                                                                                   <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['name'] ?></a>
-                                                                                   <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['english_name'] ?></a>
+                                                   </div><!-- end col-3 -->
+
+                                                   <div class="col-lg-3">
+                                                       <?php if ($tile['cat'] == 14 || $tile['cat'] == 15 || $tile['cat'] == 8) { ?>
+                                                           <div class="row">
+                                                               <div class="col-megamenu col-md-12">
+                                                                   <ul class="list-unstyled">
+                                                                       <li><a href="/vi/category/gia-1-<?= $tile['cat'] ?>">Nhỏ hơn 500k</a></li>
+                                                                       <li><a href="/vi/category/gia-2-<?= $tile['cat'] ?>">500k - 799k</a></li>
+                                                                       <li><a href="/vi/category/gia-3-<?= $tile['cat'] ?>">800k - 999k</a></li>
+                                                                       <li><a href="/vi/category/gia-4-<?= $tile['cat'] ?>">1000k - 1499k</a></li>
+                                                                       <li><a href="/vi/category/gia-5-<?= $tile['cat'] ?>">1500k - 1999k</a></li>
+                                                                       <li><a href="/vi/category/gia-6-<?= $tile['cat'] ?>">2000k - 2499k</a></li>
+                                                                       <li><a href="/vi/category/gia-7-<?= $tile['cat'] ?>">2500k - 3499k</a></li>
+                                                                       <li><a href="/vi/category/gia-8-<?= $tile['cat'] ?>">3500k trở lên</a></li>
+                                                                   </ul>
+                                                               </div><!-- col-megamenu.// -->
+                                                           </div>
+                                                       <?php } ?>
+                                                   </div><!-- end col-3 -->
+
+                                                   <div class="col-lg-3">
+                                                       <div class="row">
+
+                                                           <?php
+                                                            if ($tile['cat'] == 14) {
+                                                                if (!empty($gioTraiCay)) {
+                                                                    $dem = 1;
+                                                                    foreach ($gioTraiCay as $item) {
+                                                                        if ($dem == 1) {
+                                                                            $dem++; ?>
+                                                                           <div class="product-item">
+                                                                               <div class="product-photo">
+                                                                                   <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
+                                                                                       <img src="<?= $item['image'] ?>" alt=""></a>
+                                                                                   <a class="btn-shop btn-cart" href="#">
+                                                                                       <div class="button-content-wrapper">
+                                                                                           <span class="button-text efruit-vi">Chi tiết</span>
+                                                                                           <span class="button-text efruit-en">Detail</span>
+                                                                                       </div>
+                                                                                   </a>
+                                                                                   <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                                </div>
-                                                                               <div class="col-5">
-                                                                                   <div class="product-price">
-                                                                                       <?php if (empty($item['is_box'])) : ?>
-                                                                                           <?php if ($item['price'] > 0) : ?>
-                                                                                               <?php if ($item['promotion_price'] == 0) : ?>
-                                                                                                   <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
-                                                                                               <?php else : ?>
-                                                                                                   <a href="javascript:void(0);">
-                                                                                                       <span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span>
-                                                                                                       <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
-                                                                                                   </a>
+                                                                               <div class="product-info" style="margin-top: 12px;">
+                                                                                   <!-- <div class="row mt-2"> -->
+                                                                                   <div class="col-7 product-name">
+                                                                                       <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['name'] ?></a>
+                                                                                       <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['english_name'] ?></a>
+                                                                                   </div>
+                                                                                   <div class="col-5">
+                                                                                       <div class="product-price">
+                                                                                           <?php if (empty($item['is_box'])) : ?>
+                                                                                               <?php if ($item['price'] > 0) : ?>
+                                                                                                   <?php if ($item['promotion_price'] == 0) : ?>
+                                                                                                       <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
+                                                                                                   <?php else : ?>
+                                                                                                       <a href="javascript:void(0);">
+                                                                                                           <span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span>
+                                                                                                           <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                                                                       </a>
+                                                                                                   <?php endif; ?>
                                                                                                <?php endif; ?>
                                                                                            <?php endif; ?>
-                                                                                       <?php endif; ?>
+                                                                                       </div>
                                                                                    </div>
+                                                                                   <!-- </div> -->
                                                                                </div>
-                                                                               <!-- </div> -->
                                                                            </div>
-                                                                       </div>
-                                                       <?php }
+                                                           <?php
+                                                                        }
+                                                                    }
                                                                 }
-                                                            }
-                                                        } ?>
-                                                       <?php if ($tile['cat'] == 15) {
-                                                            if (!empty($hopTraiCay)) {
-                                                                $dem = 1;
-                                                                foreach ($hopTraiCay as $item) {
-                                                                    if ($dem == 1) {
-                                                                        $dem++;
-                                                        ?>
-                                                                       <div class="product-item">
-                                                                           <div class="product-photo">
-                                                                               <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
-                                                                                   <img src="<?= $item['image'] ?>" alt=""></a>
-                                                                               <a class="btn-shop btn-cart" href="#">
-                                                                                   <div class="button-content-wrapper">
-                                                                                       <span class="button-text efruit-vi">Chi tiết</span>
-                                                                                       <span class="button-text efruit-en">Detail</span>
-                                                                                   </div>
-                                                                               </a>
-                                                                               <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
-                                                                           </div>
-                                                                           <div class="product-info" style="margin-top: 12px;">
-                                                                               <!-- <div class="row mt-2"> -->
-                                                                               <div class="col-7 product-name">
-                                                                                   <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['name'] ?></a>
-                                                                                   <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['english_name'] ?></a>
+                                                            } ?>
+
+
+                                                           <?php if ($tile['cat'] == 15) {
+                                                                if (!empty($hopTraiCay)) {
+                                                                    $dem = 1;
+                                                                    foreach ($hopTraiCay as $item) {
+                                                                        if ($dem == 1) {
+                                                                            $dem++;
+                                                            ?>
+                                                                           <div class="product-item">
+                                                                               <div class="product-photo">
+                                                                                   <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
+                                                                                       <img src="<?= $item['image'] ?>" alt=""></a>
+                                                                                   <a class="btn-shop btn-cart" href="#">
+                                                                                       <div class="button-content-wrapper">
+                                                                                           <span class="button-text efruit-vi">Chi tiết</span>
+                                                                                           <span class="button-text efruit-en">Detail</span>
+                                                                                       </div>
+                                                                                   </a>
+                                                                                   <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                                </div>
-                                                                               <div class="col-5">
-                                                                                   <div class="product-price">
-                                                                                       <?php if (empty($item['is_box'])) : ?>
-                                                                                           <?php if ($item['price'] > 0) : ?>
-                                                                                               <?php if ($item['promotion_price'] == 0) : ?>
-                                                                                                   <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
-                                                                                               <?php else : ?>
-                                                                                                   <a href="javascript:void(0);">
-                                                                                                       <span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span>
-                                                                                                       <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
-                                                                                                   </a>
+                                                                               <div class="product-info" style="margin-top: 12px;">
+                                                                                   <!-- <div class="row mt-2"> -->
+                                                                                   <div class="col-7 product-name">
+                                                                                       <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['name'] ?></a>
+                                                                                       <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['english_name'] ?></a>
+                                                                                   </div>
+                                                                                   <div class="col-5">
+                                                                                       <div class="product-price">
+                                                                                           <?php if (empty($item['is_box'])) : ?>
+                                                                                               <?php if ($item['price'] > 0) : ?>
+                                                                                                   <?php if ($item['promotion_price'] == 0) : ?>
+                                                                                                       <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
+                                                                                                   <?php else : ?>
+                                                                                                       <a href="javascript:void(0);">
+                                                                                                           <span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span>
+                                                                                                           <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                                                                       </a>
+                                                                                                   <?php endif; ?>
                                                                                                <?php endif; ?>
                                                                                            <?php endif; ?>
-                                                                                       <?php endif; ?>
+                                                                                       </div>
                                                                                    </div>
+                                                                                   <!-- </div> -->
                                                                                </div>
-                                                                               <!-- </div> -->
                                                                            </div>
-                                                                       </div>
-                                                       <?php }
+                                                           <?php }
+                                                                    }
                                                                 }
-                                                            }
-                                                        } ?>
-                                                       <?php if ($tile['cat'] == 8) {
-                                                            if (!empty($hoaTraiCay)) {
-                                                                $dem = 1;
-                                                                foreach ($hoaTraiCay as $item) {
-                                                                    if ($dem == 1) {
-                                                                        $dem++;
-                                                        ?>
-                                                                       <div class="product-item">
-                                                                           <div class="product-photo">
-                                                                               <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
-                                                                                   <img src="<?= $item['image'] ?>" alt=""></a>
-                                                                               <a class="btn-shop btn-cart" href="#">
-                                                                                   <div class="button-content-wrapper">
-                                                                                       <span class="button-text efruit-vi">Chi tiết</span>
-                                                                                       <span class="button-text efruit-en">Detail</span>
-                                                                                   </div>
-                                                                               </a>
-                                                                               <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
-                                                                           </div>
-                                                                           <div class="product-info" style="margin-top: 12px;">
-                                                                               <!-- <div class="row mt-2"> -->
-                                                                               <div class="col-7 product-name">
-                                                                                   <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['name'] ?></a>
-                                                                                   <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['english_name'] ?></a>
+                                                            } ?>
+
+
+                                                           <?php if ($tile['cat'] == 8) {
+                                                                if (!empty($hoaTraiCay)) {
+                                                                    $dem = 1;
+                                                                    foreach ($hoaTraiCay as $item) {
+                                                                        if ($dem == 1) {
+                                                                            $dem++;
+                                                            ?>
+                                                                           <div class="product-item">
+                                                                               <div class="product-photo">
+                                                                                   <a href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name']) ?>" class="photo-link">
+                                                                                       <img src="<?= $item['image'] ?>" alt=""></a>
+                                                                                   <a class="btn-shop btn-cart" href="#">
+                                                                                       <div class="button-content-wrapper">
+                                                                                           <span class="button-text efruit-vi">Chi tiết</span>
+                                                                                           <span class="button-text efruit-en">Detail</span>
+                                                                                       </div>
+                                                                                   </a>
+                                                                                   <div ng-click="showProduct(<?php echo $item['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
                                                                                </div>
-                                                                               <div class="col-5">
-                                                                                   <div class="product-price">
-                                                                                       <?php if (empty($item['is_box'])) : ?>
-                                                                                           <?php if ($item['price'] > 0) : ?>
-                                                                                               <?php if ($item['promotion_price'] == 0) : ?>
-                                                                                                   <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
-                                                                                               <?php else : ?>
-                                                                                                   <a href="javascript:void(0);">
-                                                                                                       <span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span>
-                                                                                                       <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
-                                                                                                   </a>
+                                                                               <div class="product-info" style="margin-top: 12px;">
+                                                                                   <!-- <div class="row mt-2"> -->
+                                                                                   <div class="col-7 product-name">
+                                                                                       <a class=" efruit-vi" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['name'] ?></a>
+                                                                                       <a class=" efruit-en" href="/vi/detail/<?php echo $item['product_id'] . "/" . url_slug($item['name'])  ?>"><?= $item['english_name'] ?></a>
+                                                                                   </div>
+                                                                                   <div class="col-5">
+                                                                                       <div class="product-price">
+                                                                                           <?php if (empty($item['is_box'])) : ?>
+                                                                                               <?php if ($item['price'] > 0) : ?>
+                                                                                                   <?php if ($item['promotion_price'] == 0) : ?>
+                                                                                                       <a href="javascript:void(0);" class="price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></a>
+                                                                                                   <?php else : ?>
+                                                                                                       <a href="javascript:void(0);">
+                                                                                                           <span class="delete-price"><?= number_format($item['price'] * 1000) ?><sup>đ</sup></span>
+                                                                                                           <span class="price"><?= number_format($item['promotion_price'] * 1000) ?><sup>đ</sup></span>
+                                                                                                       </a>
+                                                                                                   <?php endif; ?>
                                                                                                <?php endif; ?>
                                                                                            <?php endif; ?>
-                                                                                       <?php endif; ?>
+                                                                                       </div>
                                                                                    </div>
+                                                                                   <!-- </div> -->
                                                                                </div>
-                                                                               <!-- </div> -->
                                                                            </div>
-                                                                       </div>
-                                                       <?php }
+                                                           <?php }
+                                                                    }
                                                                 }
-                                                            }
-                                                        } ?>
-                                                       
-                                                   </div>
+                                                            } ?>
+
+                                                       </div>
+                                                   </div><!-- end col-3 -->
+
+
                                                </div>
                                            </div>
-                                       </div>
-                                   </div> <!-- dropdown-mega-menu.// -->
-                                   <?php #} 
-                                    ?>
+                                       </div> <!-- dropdown-mega-menu.// -->
+
+                                   <?php } ?>
                                </li>
                            <?php } ?>
                        </ul>
