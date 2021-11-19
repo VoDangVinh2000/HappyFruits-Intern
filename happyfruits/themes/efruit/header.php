@@ -120,7 +120,7 @@
 </head>
 
 <!-- onscroll="getPageScroll()"  -->
-<body class="frontend views-<?= $template ?> <?= !empty($page_code) ? 'uri-' . $page_code : '' ?>" on-ready>
+<body onscroll="getPageScroll()" class="frontend views-<?= $template ?> <?= !empty($page_code) ? 'uri-' . $page_code : '' ?>" on-ready>
     <div id="loading" ng-class="{hidden:1}">
         <div>
             <img alt="logo" height="76" src="<?= get_child_theme_assets_url() ?>img/small-logo.png" />

@@ -130,7 +130,7 @@
     <script src="<?= get_theme_assets_url() ?>js/simpleLightbox.min.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/sitescripts15112021.js"></script>
 
-    <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage11102021.js"></script>
+    <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/owl.carousel.min.js"></script>
 

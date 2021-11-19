@@ -1,7 +1,7 @@
 <div class="container-fluid mt-5">
-    <div class="row">
+    <div class="row ">
         <div class="col-sm-9">
-            <div class="row">
+            <div class="row gy-2">
                 <?php
                 $arrProducts = [];
                 if (!empty($get_product_by_search_key)) {
@@ -11,7 +11,7 @@
                     foreach ($arrProducts as $value) {
                         if ($value['image'] == '') {
                 ?>
-                            <div class="product-item col-md-4 col-6 mt-0">
+                            <div class="col-md-4 col-6">
                                 <div style="margin-bottom: 15px;" class="product-cat-<?= $value['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
                                     <a href="/vi/detail/<?= $value['product_id'] ?>" ng-click="showProduct(<?= $value['product_id'] ?>, $event, 1)" class="y-image">
                                         <img width="320" height="320" alt="<?= $value['code'] ?>" src="<?= $value['image'] ? get_image_url($value['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
@@ -47,7 +47,7 @@
                                 </div>
                             </div>
                         <?php } else { ?>
-                            <div class="product-item col-md-4 col-6 mt-0">
+                            <div class="col-md-4 col-6">
                                 <div style="margin-bottom: 15px;" class="product-cat-<?= $value['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
                                     <a href="/vi/detail/<?= $value['product_id'] ?>" ng-click="showProduct(<?= $value['product_id'] ?>, $event, 1)" class="y-image">
                                         <img width="320" height="320" alt="<?= $value['code'] ?>" src="<?= $value['image'] ? get_image_url($value['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
@@ -133,7 +133,7 @@
                 <br />
                 <div class="row-cart txt-center input-note"><span bind-translate="Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.">Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.</span></div>
                 <!-- ng-click="showPopupStep2()" !-->
-                <button class="btn btn-order btn-success" id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
+                <button class="btn btn-order btn-success" ng-click="showPopupStep2()" id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
             </div>
         </div>
     </div>

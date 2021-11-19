@@ -10,7 +10,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
 
 <!-- product category 1-->
 <div class="container">
-    <div class="product-main-home-page mt-2">
+    <div class="product-main-home-page my-3">
         <div class="category-home-page">
             <?php if (!empty($tiles)) {
                 foreach ($tiles as $array) {
@@ -140,7 +140,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
 
 <!-- product category 2-->
 <div class="container">
-    <div class="product-main-home-page mt-2">
+    <div class="product-main-home-page my-3">
         <div class="product-itemm">
             <div class="row gy-2">
                 <?php
@@ -257,7 +257,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
 </div>
 
 <!-- product category 3-->
-<div class="container mt-2">
+<div class="container my-3">
     <div class="row g-0 category-full">
         <?php if (!empty($tiles)) {
             foreach ($tiles as $array) {
@@ -305,7 +305,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                 if ($dem3 <= 4) {
                     if ($array['image'] == "") {
         ?>
-                        <div class=" product-item col-md-3 col-6">
+                        <div class="col-md-3 col-6">
                             <div style="margin-bottom: 15px;" class="product-cat-<?= $array['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
 
                                 <a href="/vi/detail/<?= $array['product_id'] ?>" ng-click="showProduct(<?= $array['product_id'] ?>, $event, 1)" class="y-image">
@@ -337,7 +337,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                             </div>
                         </div>
                     <?php } else { ?>
-                        <div class=" product-item col-md-3 col-6">
+                        <div class="col-md-3 col-6">
                             <div style="margin-bottom: 15px;" class="product-cat-<?= $array['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
 
                                 <a href="/vi/detail/<?= $array['product_id'] ?>" ng-click="showProduct(<?= $array['product_id'] ?>, $event, 1)" class="y-image">
@@ -398,7 +398,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                     if ($array['image'] == "") {
             ?>
                         <div class="ms-2 me-2">
-                            <div class=" product-item col-md-6 col-6">
+                            <div class="col-md-6 col-6">
                                 <div style="margin-bottom: 15px; " class="product-cat-<?= $array['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
 
                                     <a href="/vi/detail/<?= $array['product_id'] ?>" ng-click="showProduct(<?= $array['product_id'] ?>, $event, 1)" class="y-image">
@@ -433,7 +433,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
         </div>
     <?php } else { ?>
         <div class="ms-2 me-2">
-            <div class=" product-item">
+            <!-- <div class=" product-item"> -->
                 <div style="margin-bottom: 15px; " class="product-cat-<?= $array['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
 
                     <a href="/vi/detail/<?= $array['product_id'] ?>" ng-click="showProduct(<?= $array['product_id'] ?>, $event, 1)" class="y-image">
@@ -463,7 +463,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                     <?php endif; ?>
                     <?php $this->load_partial('product-ribbon', array('item' => $array)); ?>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
 <?php }
                 }

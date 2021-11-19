@@ -14,7 +14,7 @@ if (isset($product['sell_price'])) {
     <div class="row">
         <div class="col-md-6">
             <div class="product-gallery">
-                <div class="row g-2">
+                <div class="row gy-2">
                     <?php
                     if ($product['image'] == "") {
                     ?>
@@ -104,7 +104,7 @@ if (isset($product['sell_price'])) {
                     <?php
                     if ($item['image'] == "") {
                     ?>
-                        <div class=" product-item col-md-4 col-6">
+                        <div class="col-md-3 col-6">
                             <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
                                 <a href="/vi/detail/<?= $item['product_id'] ?>" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="y-image">
                                     <img width="320" height="320" alt="<?= $item['code'] ?>" src="<?= $item['image'] ? get_image_url($item['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
@@ -135,7 +135,7 @@ if (isset($product['sell_price'])) {
                             </div>
                         </div>
                     <?php } else { ?>
-                        <div class=" product-item col-md-3 col-6">
+                        <div class="col-md-3 col-6">
                             <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
                                 <a href="/vi/detail/<?= $item['product_id'] ?>" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="y-image">
                                     <img width="320" height="320" alt="<?= $item['code'] ?>" src="<?= $item['image'] ? get_image_url($item['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />

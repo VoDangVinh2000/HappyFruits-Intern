@@ -10,7 +10,7 @@
                             for ($i = 0; $i < count($value); $i++) {
                                 if ($value[$i]['image'] == "") {
                 ?>
-                                    <div class="product-item col-md-4 col-6">
+                                    <div class="col-md-4 col-6">
                                         <div style="margin-bottom: 15px;" class="product-cat-<?= $value[$i]['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
                                             <a href="/vi/detail/<?= $value[$i]['product_id'] ?>" ng-click="showProduct(<?= $value[$i]['product_id'] ?>, $event, 1)" class="y-image">
                                                 <img width="320" height="320" alt="<?= $value[$i]['code'] ?>" src="<?= $value[$i]['image'] ? get_image_url($value[$i]['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
@@ -41,7 +41,7 @@
                                         </div>
                                     </div>
                                 <?php } else { ?>
-                                    <div class=" product-item col-md-4 col-6">
+                                    <div class="col-md-4 col-6">
                                         <div style="margin-bottom: 15px;" class="product-cat-<?= $value[$i]['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
                                             <a href="/vi/detail/<?= $value[$i]['product_id'] ?>" ng-click="showProduct(<?= $value[$i]['product_id'] ?>, $event, 1)" class="y-image">
                                                 <img width="320" height="320" alt="<?= $value[$i]['code'] ?>" src="<?= $value[$i]['image'] ? get_image_url($value[$i]['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
@@ -124,7 +124,7 @@
                 <br />
                 <div class="row-cart txt-center input-note"><span bind-translate="Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.">Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.</span></div>
                 <!-- ng-click="showPopupStep2()" !-->
-                <button class="btn btn-order btn-success" id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
+                <button class="btn btn-order btn-success" ng-click="showPopupStep2()" id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
             </div>
         </div>
     </div>
