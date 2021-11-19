@@ -11,7 +11,7 @@
 
 ## chức năng cần xử lý:
 - [x] 1: Xác nhận đơn hàng: table xác nhận đơn hàng không đồng nhất.
-- [ ] 2: Bước 2 xác nhận đơn hàng
+- [x] 2: Bước 2 xác nhận đơn hàng
   - Cần highlight các trường bắt buộc trên form đặt hàng
   - Cần điền trước Họ tên, SĐT, email (nếu có) khi khách hàng đã đăng nhập.
   - Lỗi hiển thị khi nhấn vào hình ảnh của phương thức thanh toán
