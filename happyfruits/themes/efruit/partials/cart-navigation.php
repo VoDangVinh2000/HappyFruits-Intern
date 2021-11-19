@@ -182,6 +182,8 @@
                                                         <input placeholder="<?= $_SESSION['user_account'][0]['mobile_account'] ?>" type="text" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" style="margin-left: 10px;" />
                                                     <?php } else { ?>
                                                         <input placeholder="SĐT" type="text" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" style="margin-left: 10px;" />
+                                                        <!-- <input placeholder="SĐT" type="text" class="form-control ng-dirty ng-valid ng-valid-required error" only-number="" ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required"> -->
+
                                                     <?php } ?>
                                                     <!-- <input placeholder="{{__('SĐT')}}" type="text"  style="font-size: 15px;" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" /> -->
 

@@ -81,6 +81,7 @@
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/owl.theme.default.css">
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/cart.css">
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/stylePageAccount.css">
+    <link rel="stylesheet" href="<?= get_theme_assets_url() ?>css/thuctap/step2.css">
 
     
    
@@ -117,6 +118,7 @@
     <?php endif; ?>
     <!-- <script data-ad-client="ca-pub-4832470232865505" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
+    <script src="<?= get_theme_assets_url() ?>js/thuctap/getpagescroll.js"></script>
 </head>
 
 <!-- onscroll="getPageScroll()"  -->

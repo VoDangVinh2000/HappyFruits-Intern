@@ -1,0 +1,17 @@
+.block-add-address .input-group input.form-control {
+  border: unset;
+  outline: unset;
+}
+
+.block-add-address .input-group input.form-control.ng-invalid {
+  border-bottom: 1px solid #cf2127 !important;
+}
+
+.block-add-address .input-group input.form-control.ng-valid {
+  border-bottom: 1px solid #51bd36 !important;
+}
+
+
+.block-add-address .input-group input.form-control.error {
+  border-bottom: 1px solid #cf2127 !important;
+}
