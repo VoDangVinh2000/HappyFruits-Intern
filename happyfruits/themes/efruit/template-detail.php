@@ -13,7 +13,7 @@ if (isset($product['sell_price'])) {
 <div class="container mb-5">
     <div class="row">
         <div class="col-md-6">
-            <div class="product-gallery">
+            <div class="product-gallery y-grid-card animate has-image compact full-width">
                 <div class="row gy-2">
                     <?php
                     if ($product['image'] == "") {
@@ -67,6 +67,7 @@ if (isset($product['sell_price'])) {
 
                 <?php if (!empty($product['enabled']) && empty($product['not_deliver'])) : ?>
                     <button class="btn-shop" type="button" ng-click="showProduct(<?= $product['product_id'] ?>, $event)" ng-click="saveSelectedItemToCart()">
+    
                         <div class="button-content-wrapper">
                             <span class="button-text efruit-vi"> THÊM GIỎ HÀNG</span>
                             <span class="button-text efruit-en"> ADD TO CARD</span>
