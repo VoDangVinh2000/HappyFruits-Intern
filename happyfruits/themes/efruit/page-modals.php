@@ -215,13 +215,13 @@ $this->load_partial('product-modals');
         </div>
     </div>
 </div>
-<div id="efruit_phone_div" class="efruit-phone efruit-green efruit-active">
+<!-- <div id="efruit_phone_div" class="efruit-phone efruit-green efruit-active">
     <a href="tel:0938707015 " target="_top" class="" title="Gọi">
         <div class="efruit-ph-circle"></div>
         <div class="efruit-ph-circle-fill"></div>
         <div class="efruit-ph-img-circle"></div>
     </a>
-</div>
+</div> -->
 <div class="modal fade modal-share-order-group" data-backdrop="static" id="share-order-group-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog normal-dialog" role="document">
         <div class="modal-content"><span class="close" data-dismiss="modal">x</span>
