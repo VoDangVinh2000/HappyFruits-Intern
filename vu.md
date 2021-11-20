@@ -17,7 +17,7 @@
   - Lỗi hiển thị khi nhấn vào hình ảnh của phương thức thanh toán
 
 - [x] 3: Top menu: ẩn menu phụ khi trống
-- [ ] 6: Cần hiệu ứng khi thêm sản phẩm vào giỏ hàng (xem trang cũ)
+- [x] 6: Cần hiệu ứng khi thêm sản phẩm vào giỏ hàng (xem trang cũ)
 - [x] 8: Footer:
   - Bỏ icon facebook
   - Giảm độ lớn font chữ cho các dòng ở cuối trang
