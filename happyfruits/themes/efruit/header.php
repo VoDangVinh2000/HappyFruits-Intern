@@ -18,7 +18,7 @@
 
     <link rel="shortcut icon" href="<?= get_child_theme_assets_url() ?>img/favicon.ico" />
     <link rel="image_src" href="<?= get_child_theme_assets_url() ?>img/main_logo.png" />
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
@@ -83,8 +83,8 @@
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>/css/thuctap/stylePageAccount.css">
     <link rel="stylesheet" href="<?= get_theme_assets_url() ?>css/thuctap/step2.css">
 
-    
-   
+
+
     <!--end!-->
 
     <script>
@@ -119,9 +119,21 @@
     <!-- <script data-ad-client="ca-pub-4832470232865505" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> -->
 
     <script src="<?= get_theme_assets_url() ?>js/thuctap/getpagescroll.js"></script>
+    <style>
+        .fancybox-overlay .fancybox-overlay-fixed {
+            width: auto !important;
+            height: 60vh !important;
+            z-index: 1000 !important;
+        }
+
+        .fancybox-wrap .fancybox-desktop .fancybox-type-image .fancybox-opened {
+            z-index: 1000 !important;
+        }
+    </style>
 </head>
 
 <!-- onscroll="getPageScroll()"  -->
+
 <body onscroll="getPageScroll()" class="frontend views-<?= $template ?> <?= !empty($page_code) ? 'uri-' . $page_code : '' ?>" on-ready>
     <div id="loading" ng-class="{hidden:1}">
         <div>
