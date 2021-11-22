@@ -51,12 +51,12 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
         </div>
     </div>
     </div>
-    <div class="col-sm-3  nopadding cart-navi hidden-xs">
-        <div class="efruit-cart efruitjs">
+    <div class="col-sm-3  nopadding cart-navi hidden-xs ">
+        <div class="efruit-cart efruitjs border border-darkgray">
             <div class="cart-header">
                 <h2 class="inline-block" bind-translate="Giỏ hàng">Giỏ hàng</h2>
             </div>
-            <div class="now-order-card-group">
+            <div class="now-order-card-group ">
                 <div class="search-control"><input type="text" class="form-control" auto ng-model="search" placeholder="{{__('Nhập từ khóa để chọn món nhanh')}}" /></div>
                 <div class="order-card-person">
                     <div class="order-card-groups">

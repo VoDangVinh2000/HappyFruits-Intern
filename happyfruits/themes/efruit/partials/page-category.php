@@ -84,7 +84,7 @@
             </div>
         </div>
         <div class="col-sm-3  nopadding cart-navi hidden-xs">
-            <div class="efruit-cart efruitjs">
+            <div class="efruit-cart efruitjs border border-darkgray">
                 <div class="cart-header">
                     <h2 class="inline-block" bind-translate="Giỏ hàng">Giỏ hàng</h2>
                 </div>

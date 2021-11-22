@@ -247,13 +247,15 @@ $(document).ready(function(){
             var $efruit_cart = $('.efruit-cart');
             var cart_height = $efruit_cart.height();
             var cart_width = $efruit_cart.width();
+            
             var inline_style = $efruit_cart.attr('style');
 
             if(sd > menu_container_top + 48 - 30 && sd < menu_container_top + menu_container_height - cart_height){
                 $('.nav-cart').hide();
                 $efruit_cart.addClass('fixed');
                 if(typeof inline_style == 'undefined' || inline_style.indexOf('width') == -1)
-                    $efruit_cart.css('width', cart_width + 'px');
+                   
+                    $efruit_cart.css('width', 359 + 'px');
             }else{
                 $('.nav-cart').show();
                 $efruit_cart.removeClass('fixed');
