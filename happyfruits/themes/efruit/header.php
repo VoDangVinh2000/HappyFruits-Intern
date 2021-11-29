@@ -123,11 +123,11 @@
         .fancybox-overlay .fancybox-overlay-fixed {
             width: auto !important;
             height: 60vh !important;
-            z-index: 1000 !important;
+            z-index: 1001 !important;
         }
 
         .fancybox-wrap .fancybox-desktop .fancybox-type-image .fancybox-opened {
-            z-index: 1000 !important;
+            z-index: 1001 !important;
         }
     </style>
 </head>

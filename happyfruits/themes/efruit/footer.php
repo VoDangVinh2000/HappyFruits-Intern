@@ -128,7 +128,7 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=<?= env('GMAP_API_KEY', 'AIzaSyB4tmVxcWyfYgq2rGQZSwe7XP4PbXJ58s4') ?>&libraries=places&sensor=false&language=vi"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="<?= get_theme_assets_url() ?>js/simpleLightbox.min.js"></script>
-    <script src="<?= get_theme_assets_url() ?>js/sitescripts15112021.js"></script>
+    <script src="<?= get_theme_assets_url() ?>js/sitescripts29112021.js"></script>
 
     <script src="<?= get_theme_assets_url() ?>js/thuctap/jsPage.js"></script>
     <script src="<?= get_theme_assets_url() ?>js/thuctap/simpleLightbox.min.js"></script>
