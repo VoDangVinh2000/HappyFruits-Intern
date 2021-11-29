@@ -92,7 +92,7 @@ if (!empty($cat_products) || !empty($products_in_tags)) :
             <br />
             <div class="row-cart txt-center input-note"><span bind-translate="Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.">Quý khách có nhu cầu xuất hóa đơn đỏ, cửa hàng sẽ thêm 10% VAT.</span></div>
             <!-- ng-click="showPopupStep2()" !-->
-            <button class="btn btn-order btn-success" ng-click="showPopupStep2()"  id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
+            <button class="btn btn-order btn-success" ng-click="showPopupStep2()" id="showPopup" data-target="#ui-wizard-modal" data-toggle="modal"><i class="fa fa-check-circle"></i> {{ btnBookOrEditLabel }}</button>
         </div>
     </div>
     </div>

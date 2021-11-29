@@ -183,7 +183,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                     </div>
                                 </div>
                             <?php } else { ?>
-                                <div class=" product-item col-md-6 col-6">
+                                <div class="col-md-6 col-6">
                                     <div style="margin-bottom: 15px;" class="product-cat-<?= $array['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
 
                                         <a href="/vi/detail/<?= $array['product_id'] ?>" ng-click="showProduct(<?= $array['product_id'] ?>, $event, 1)" class="y-image">
@@ -296,7 +296,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
     </div>
 
 
-    <div class="row mt-2">
+    <div class="row mt-2 gy-2">
         <?php
         $dem3 = 0;
         if (!empty($hoaTraiCay)) {
