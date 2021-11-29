@@ -66,7 +66,7 @@
            <div class="container ">
                <ul class="navbar-nav ms-auto right-main-nav sub-cart">
                    <li class="nav-item">
-                       <a  class="nav-link position-relative btn-cart-nav efruit-cart" data-toggle="modal" data-target="#exampleModal" id="show-cart" href="#">
+                       <a class="nav-link position-relative btn-cart-nav efruit-cart" data-toggle="modal" data-target="#exampleModal" id="show-cart" href="#">
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 13.87 16">
                                <path d="M15.8,5.219a.533.533,0,0,0-.533-.485H13.132V4.44A3.333,3.333,0,0,0,9.932,1a3.333,3.333,0,0,0-3.2,3.44v.293H4.6a.533.533,0,0,0-.533.485L3,16.419A.539.539,0,0,0,3.532,17h12.8a.539.539,0,0,0,.533-.581Zm-8-.779A2.267,2.267,0,0,1,9.932,2.067,2.267,2.267,0,0,1,12.065,4.44v.293H7.8ZM4.118,15.933,5.084,5.8H6.732v.683a1.067,1.067,0,1,0,1.067,0V5.8h4.267v.683a1.067,1.067,0,1,0,1.067,0V5.8H14.78l.965,10.133Z" transform="translate(-2.997 -1)"></path>
                            </svg><br>
@@ -135,6 +135,7 @@
                         ?>
                            <li class="nav-item">
                                <a class="nav-link" href="/vi/dang-nhap">
+                               <div class="efruit-cart" style="overflow: hidden;"></div>
                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 16 16">
                                        <g transform="translate(3.52)">
                                            <path d="M29.571,13.853a4.427,4.427,0,1,1,4.471-4.427A4.461,4.461,0,0,1,29.571,13.853Zm0-7.609a3.182,3.182,0,1,0,3.214,3.182A3.2,3.2,0,0,0,29.571,6.244Z" transform="translate(-25.1 -5)"></path>
@@ -146,13 +147,14 @@
                                </a>
                            </li>
                        <?php } ?>
-                       <div class="nav-item main-cart-btn efruit-cart">
-                           <a class="nav-link position-relative btn-cart-nav d-none"  data-toggle="modal" data-target="#exampleModal" id="show-cart" href="#">
+                       <div class="nav-item main-cart-btn">
+                           <div class="efruit-cart" style="overflow: hidden;"></div>
+                           <a class="nav-link position-relative btn-cart-nav" data-toggle="modal" data-target="#exampleModal" id="show-cart" href="#">
                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 13.87 16">
                                    <path d="M15.8,5.219a.533.533,0,0,0-.533-.485H13.132V4.44A3.333,3.333,0,0,0,9.932,1a3.333,3.333,0,0,0-3.2,3.44v.293H4.6a.533.533,0,0,0-.533.485L3,16.419A.539.539,0,0,0,3.532,17h12.8a.539.539,0,0,0,.533-.581Zm-8-.779A2.267,2.267,0,0,1,9.932,2.067,2.267,2.267,0,0,1,12.065,4.44v.293H7.8ZM4.118,15.933,5.084,5.8H6.732v.683a1.067,1.067,0,1,0,1.067,0V5.8h4.267v.683a1.067,1.067,0,1,0,1.067,0V5.8H14.78l.965,10.133Z" transform="translate(-2.997 -1)"></path>
                                </svg><br>
-                               <span ng-show="totalQuantity" class="position-absolute translate-middle badge rounded-pill bg-cart efruitjs">   
-                                    {{totalQuantity}}
+                               <span ng-show="totalQuantity" class="position-absolute translate-middle badge rounded-pill bg-cart efruitjs">
+                                   {{totalQuantity}}
                                    <span class="visually-hidden">unread messages</span>
                                </span>
                            </a>
@@ -384,33 +386,5 @@
        </form>
 
        <!-- Cart -->
-
        <?php $this->load_partial('cart-navigation') ?>
-
-       <!-- <div class="cart-modal">
-           <div class="cart-lightbox"></div>
-           <div class="offcanvas-cart">
-               <div class="inner">
-                   <div class="head">
-                       <span class="title" bind-translate="Giỏ hàng">Giỏ hàng</span>
-                       <button class="offcanvas-close">×</button>
-                   </div>
-                   <div class="customScroll">
-                       <div class="cart-empty-title">
-                           <h4 class="efruit-en">Your cart is currently empty.</h4>
-                           <h4 class="efruit-vi">Bạn chưa chọn món.</h4>
-                       </div>
-                   </div>
-               </div>
-           </div>
-       </div> -->
    </header>
-
-   <script>
-       //    const form = document.forms[0];
-       //    const selectElement = form.querySelector('input[name="searchText"]');
-       //    const btnSearch = document.querySelector('#button-addon2');
-       //    btnSearch.addEventListener('click', () => {
-       //        let valueInput = selectElement.value;
-       //    })
-   </script>
