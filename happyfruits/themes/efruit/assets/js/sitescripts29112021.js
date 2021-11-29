@@ -14,10 +14,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
                 cartLightBoxs.classList.remove('animate-fade-out');
                 cartLightBoxs.classList.add('animate-fade-in');
                 cartOpen = 1;
-                document.querySelector('body').classList.add('modal-open');
-                console.log(document.querySelector('.fancybox-wrap .fancybox-desktop .fancybox-type-image .fancybox-opened'))
-
-                console.log("Show model")
             })
         })
     }
@@ -29,8 +25,6 @@ window.addEventListener('DOMContentLoaded', (event) => {
             cartLightBoxs.classList.add('animate-fade-out');
             cartLightBoxs.classList.remove('animate-fade-in');
             cartModal.style.display = "none";
-            document.querySelector('body').classList.remove('modal-open');
-            console.log("Close model")
         })
     }
 
