@@ -172,29 +172,27 @@
                                         <div class="col-add-address" style="display: flex;">
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="input-group">
-                                                    <input placeholder="{{__('Họ và tên')}}" style="font-size: 15px;" type="text" class="form-control" ng-model="customer.booker_fullname" name="fullname" required="required" />
-
+                                                    <?php if (isset($_SESSION['user_account'])) { ?>
+                                                        <input placeholder="{{__('Họ và tên')}}" style="font-size: 15px;" type="text" class="form-control ng-valid ng-valid-required valid"  name="fullname" required="required" value="<?= $_SESSION['user_account'][0]['username'] ?>" />
+                                                    <?php } else { ?>
+                                                        <input placeholder="{{__('Họ và tên')}}" style="font-size: 15px;" type="text" class="form-control" ng-model="customer.booker_fullname" name="fullname" required="required" />
+                                                    <?php } ?>
                                                 </div>
                                             </div>
                                             <div class="col-sm-6 col-md-6">
                                                 <div class="input-group">
                                                     <?php if (isset($_SESSION['user_account'])) { ?>
-                                                        <input placeholder="<?= $_SESSION['user_account'][0]['mobile_account'] ?>" type="text" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" style="margin-left: 10px;" />
+                                                        <input placeholder="<?= $_SESSION['user_account'][0]['mobile_account'] ?>" value="<?= $_SESSION['user_account'][0]['mobile_account'] ?>" type="text" class="form-control ng-valid ng-valid-required valid" only-number ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" style="margin-left: 10px;" />
                                                     <?php } else { ?>
                                                         <input placeholder="SĐT" type="text" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" style="margin-left: 10px;" />
-                                                        <!-- <input placeholder="SĐT" type="text" class="form-control ng-dirty ng-valid ng-valid-required error" only-number="" ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required"> -->
-
                                                     <?php } ?>
-                                                    <!-- <input placeholder="{{__('SĐT')}}" type="text"  style="font-size: 15px;" class="form-control" only-number ng-model="customer.booker_mobile" ng-change="checkShippingFee()" name="mobile" maxlength="12" minlength="10" required="required" /> -->
-
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-12 col-md-6">
                                             <div class="input-group">
-                                                <!-- <input placeholder="Email" type="email" style="font-size: 15px;" class="form-control email" ng-model="customer.email" name="email" required="required" /> -->
                                                 <?php if (isset($_SESSION['user_account'])) { ?>
-                                                    <input placeholder="<?= $_SESSION['user_account'][0]['email_account'] ?>" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
+                                                    <input placeholder="<?= $_SESSION['user_account'][0]['email_account'] ?>" value="<?= $_SESSION['user_account'][0]['email_account'] ?>" type="email" class="form-control email mt10 ng-valid ng-valid-required valid" name="email" required="required" />
                                                 <?php } else { ?>
                                                     <input placeholder="Email" type="email" class="form-control email mt10" ng-model="customer.email" name="email" required="required" />
                                                 <?php } ?>
