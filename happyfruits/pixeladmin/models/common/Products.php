@@ -154,6 +154,7 @@ class Products extends BaseProducts
                         prices.price,prices.type_id',
             'join' => 'INNER JOIN categories ON categories.category_id = products.category_id
                        INNER JOIN prices ON prices.product_id = products.product_id',
+            
             'products.category_id' => eModel::matchRegexUrl($id),
             'categories.allow_delivery' => 1,
             'prices.type_id' => 1,
@@ -163,6 +164,7 @@ class Products extends BaseProducts
             'products.not_deliver' => 0,
             'categories.deleted' => 0
         );
+        $filters['order_by'] = 'products.product_id DESC';
         return $this->select($filters);
     }
 

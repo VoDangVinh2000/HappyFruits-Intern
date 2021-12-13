@@ -255,7 +255,7 @@ $(document).ready(function(){
                 $efruit_cart.addClass('fixed');
                 if(typeof inline_style == 'undefined' || inline_style.indexOf('width') == -1)
                    
-                    $efruit_cart.css('width', cart_width + 'px');
+                    $efruit_cart.css('width', 359 + 'px');
             }else{
                 $('.nav-cart').show();
                 $efruit_cart.removeClass('fixed');
