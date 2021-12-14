@@ -26,6 +26,7 @@
                             <li><a href="<?=BASE_URL?>quan-ly/khach-hang">Quản lý khách hàng</a></li>
                             <li><a href="<?=BASE_URL?>quan-ly/nhan-su">Quản lý nhân sự</a></li>
                             <li><a href="<?=BASE_URL?>quan-ly/giao-dien">Quản lý giao diện</a></li>
+							<li><a href="<?=BASE_URL?>quan-ly/block-homepage">Quản lý block home page</a></li>
                     <?php else:
                             if (Users::can_access('frontend-mangement')):
                                 $is_frontend = get_session_val('is_frontend');

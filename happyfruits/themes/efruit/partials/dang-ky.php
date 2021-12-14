@@ -10,7 +10,7 @@
                         <p h2 class="efruit-vi bold fs-6">Đăng ký các thông tin bên dưới</p>
                     </div>
 
-                    <!--Form action register-->
+                    <!--Form action register ***-->
                     <form action="/register" method="post">
                         <div class="main-create-account-fillout">
                             <div class="username-input">
