@@ -1,51 +1,50 @@
     <div id="main-navbar" class="navbar navbar-inverse" role="navigation">
-		<!-- Main menu toggle -->
-		<button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">Ẩn</span></button>
-		
-		<div class="navbar-inner">
-			<!-- Main navbar header -->
-			<div class="navbar-header">
+    	<!-- Main menu toggle -->
+    	<button type="button" id="main-menu-toggle"><i class="navbar-icon fa fa-bars icon"></i><span class="hide-menu-text">Ẩn</span></button>
 
-				<!-- Logo -->
-				<a href="<?=BASE_URL?>" class="navbar-brand">
-					<div style="background: none;"><img alt="Admin" src="<?=get_admin_theme_assets_url()?>images/main-navbar-logo.png" height="40"/></div>
-				</a>
+    	<div class="navbar-inner">
+    		<!-- Main navbar header -->
+    		<div class="navbar-header">
 
-				<!-- Main navbar toggle -->
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
+    			<!-- Logo -->
+    			<a href="<?= BASE_URL ?>" class="navbar-brand">
+    				<div style="background: none;"><img alt="Admin" src="<?= get_admin_theme_assets_url() ?>images/main-navbar-logo.png" height="40" /></div>
+    			</a>
 
-			</div> <!-- / .navbar-header -->
+    			<!-- Main navbar toggle -->
+    			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar-collapse"><i class="navbar-icon fa fa-bars"></i></button>
 
-			<div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
-				<div>
-					<ul class="nav navbar-nav">
-                        <?php if(Users::is_super_admin()):?>
-                            <li><a href="<?=BASE_URL?>quan-ly/chung">Quản lý chung</a></li>
-                            <li><a href="<?=BASE_URL?>quan-ly/hang-ban">Quản lý hàng bán</a></li>
-                            <li><a href="<?=BASE_URL?>quan-ly/kho">Quản lý kho</a></li>
-                            <li><a href="<?=BASE_URL?>quan-ly/khach-hang">Quản lý khách hàng</a></li>
-                            <li><a href="<?=BASE_URL?>quan-ly/nhan-su">Quản lý nhân sự</a></li>
-                            <li><a href="<?=BASE_URL?>quan-ly/giao-dien">Quản lý giao diện</a></li>
-							<li><a href="<?=BASE_URL?>block-homepage">Quản lý block home page</a></li>
-                    <?php else:
-                            if (Users::can_access('frontend-mangement')):
-                                $is_frontend = get_session_val('is_frontend');
-                                if ($is_frontend):
-                    ?>
-						<li><a href="<?=BASE_URL?>quan-ly">Quản lý</a></li>
-                        <li><a>Giao diện</a></li>
-                            <?php else:?>
-                        <li><a>Quản lý</a></li>
-                        <li><a href="<?=BASE_URL?>giao-dien">Giao diện</a>
-                            <?php
-                                endif;
-                            endif;
-                        endif;
-                    ?>
-                    <?php if(Users::can('add_note', 'order')):?>
-	                    <li><a target="_blank" href="<?=ROOT_URL?>quan-ly-don-hang">Đơn hàng đang xử lý</a>
-					<?php endif; ?>
-                        <?php /*
+    		</div> <!-- / .navbar-header -->
+
+    		<div id="main-navbar-collapse" class="collapse navbar-collapse main-navbar-collapse">
+    			<div>
+    				<ul class="nav navbar-nav">
+    					<?php if (Users::is_super_admin()) : ?>
+    						<li><a href="<?= BASE_URL ?>quan-ly/chung">Quản lý chung</a></li>
+    						<li><a href="<?= BASE_URL ?>quan-ly/hang-ban">Quản lý hàng bán</a></li>
+    						<li><a href="<?= BASE_URL ?>quan-ly/kho">Quản lý kho</a></li>
+    						<li><a href="<?= BASE_URL ?>quan-ly/khach-hang">Quản lý khách hàng</a></li>
+    						<li><a href="<?= BASE_URL ?>quan-ly/nhan-su">Quản lý nhân sự</a></li>
+    						<li><a href="<?= BASE_URL ?>quan-ly/giao-dien">Quản lý giao diện</a></li>
+    						<?php else :
+								if (Users::can_access('frontend-mangement')) :
+									$is_frontend = get_session_val('is_frontend');
+									if ($is_frontend) :
+								?>
+    								<li><a href="<?= BASE_URL ?>quan-ly">Quản lý</a></li>
+    								<li><a>Giao diện</a></li>
+    							<?php else : ?>
+    								<li><a>Quản lý</a></li>
+    								<li><a href="<?= BASE_URL ?>giao-dien">Giao diện</a>
+    						<?php
+									endif;
+								endif;
+							endif;
+								?>
+    						<?php if (Users::can('add_note', 'order')) : ?>
+    								<li><a target="_blank" href="<?= ROOT_URL ?>quan-ly-don-hang">Đơn hàng đang xử lý</a>
+    								<?php endif; ?>
+    								<?php /*
                             global $user;
 		                    <?php if(empty($user) || $user->data['user_id'] == ANONYMOUS):?>
 	                    <li><a target="_blank" href="<?=BASE_URL?>phpBB/dang-nhap">Đăng nhập Forum</a>
@@ -53,7 +52,7 @@
 	                    <li><a target="_blank" href="<?=ROOT_URL?>forum">Vào Forum</a>
 		                    <?php endif;?>
                         */ ?>
-                        <?php /*
+    								<?php /*
 						<li class="dropdown">
 							<a data-toggle="dropdown" class="dropdown-toggle" href="#">Dropdown</a>
 							<ul class="dropdown-menu">
@@ -64,11 +63,11 @@
 							</ul>
 						</li>
                         */ ?>
-					</ul>
-                    
-					<div class="right clearfix">
-						<ul class="nav navbar-nav pull-right right-navbar-nav">
-                        <!-- $NAVBAR_ICON_BUTTONS =======================================================================
+    				</ul>
+
+    				<div class="right clearfix">
+    					<ul class="nav navbar-nav pull-right right-navbar-nav">
+    						<!-- $NAVBAR_ICON_BUTTONS =======================================================================
 
 							Navbar Icon Buttons
 							NOTE: .nav-icon-btn triggers a dropdown menu on desktop screens only. On small screens .nav-icon-btn acts like a hyperlink.
@@ -78,7 +77,7 @@
 							* 'nav-icon-btn-warning'
 							* 'nav-icon-btn-danger' 
                         -->
-                            <?php /*
+    						<?php /*
 							<li class="nav-icon-btn nav-icon-btn-danger dropdown">
 								<a href="#notifications" class="dropdown-toggle" data-toggle="dropdown">
 									<span class="label">5</span>
@@ -244,26 +243,26 @@
 							</li>
                             <!-- $END_NAVBAR_ICON_BUTTONS -->
                             */ ?>
-							<li class="dropdown">
-								<a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
-									<img src="<?=BASE_URL?>assets/images/profile.jpg" alt="" />
-									<span><?=$logged_user['username']?></span>
-								</a>
-								<ul class="dropdown-menu">
-                                    <?php if (Users::can_access('user', 'profile')):?>
-									<li><a href="<?=BASE_URL. $URIs['profile']?>"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Tài khoản</a></li>
-									<li class="divider"></li>
-                                    <?php endif;?>
-                                    <?php if (Users::can('add', 'IP')):?>
-                                    <li><a href="<?=BASE_URL. 'them-ip'?>" target="_blank"><i class="dropdown-icon fa fa-plus"></i>&nbsp;&nbsp;Thêm IP</a></li>
-									<li class="divider"></li>
-            						<?php endif;?>
-									<li><a href="<?=BASE_URL?>dang-xuat"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Đăng xuất</a></li>
-								</ul>
-							</li>
-						</ul> <!-- / .navbar-nav -->
-					</div> <!-- / .right -->
-				</div>
-			</div> <!-- / #main-navbar-collapse -->
-		</div> <!-- / .navbar-inner -->
-	</div> <!-- / #main-navbar -->
+    						<li class="dropdown">
+    							<a href="#" class="dropdown-toggle user-menu" data-toggle="dropdown">
+    								<img src="<?= BASE_URL ?>assets/images/profile.jpg" alt="" />
+    								<span><?= $logged_user['username'] ?></span>
+    							</a>
+    							<ul class="dropdown-menu">
+    								<?php if (Users::can_access('user', 'profile')) : ?>
+    									<li><a href="<?= BASE_URL . $URIs['profile'] ?>"><i class="dropdown-icon fa fa-cog"></i>&nbsp;&nbsp;Tài khoản</a></li>
+    									<li class="divider"></li>
+    								<?php endif; ?>
+    								<?php if (Users::can('add', 'IP')) : ?>
+    									<li><a href="<?= BASE_URL . 'them-ip' ?>" target="_blank"><i class="dropdown-icon fa fa-plus"></i>&nbsp;&nbsp;Thêm IP</a></li>
+    									<li class="divider"></li>
+    								<?php endif; ?>
+    								<li><a href="<?= BASE_URL ?>dang-xuat"><i class="dropdown-icon fa fa-power-off"></i>&nbsp;&nbsp;Đăng xuất</a></li>
+    							</ul>
+    						</li>
+    					</ul> <!-- / .navbar-nav -->
+    				</div> <!-- / .right -->
+    			</div>
+    		</div> <!-- / #main-navbar-collapse -->
+    	</div> <!-- / .navbar-inner -->
+    </div> <!-- / #main-navbar -->
