@@ -1,5 +1,5 @@
 <?php
-echo json_encode($categories);
+// echo json_encode($categories);
 ?>
 <div id="content-wrapper">
     <div id="page-wrapper">

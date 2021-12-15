@@ -15,6 +15,11 @@
     <link href="<?=ASSET_URL?>css/themes.css" rel="stylesheet" />
     <link href="<?=ASSET_URL?>css/custom-checkbox.css" rel="stylesheet" />
     <link href="<?=ASSET_URL?>plugins/select2/select2.min.css" rel="stylesheet" />
+
+    <!-- Thêm css cho các mẫu: LAV -->
+    <link href="<?=ASSET_URL?>css/header-page-copy.css" rel="stylesheet" />
+
+    
     <!--[if lt IE 9]>
 		<script src="<?=ASSET_URL?>js/ie.min.js"></script>
 	<![endif]-->
