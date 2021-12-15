@@ -31,8 +31,8 @@ window.addEventListener('DOMContentLoaded', function () {
   // hiển thị mẫu lên cho người dùng hiểu.
 
   // lay id "mau" -- để hiển thị html mẫu đã tạo.
-
-
+  const mau =  document.querySelector('#mau');
+  mau.innerHTML = mau3();
   // html mẫu 1.
   function mau1(){
 	let mau1 = `
@@ -69,5 +69,11 @@ window.addEventListener('DOMContentLoaded', function () {
 	return mau2;
   }
   
+
+  function mau3(data = null) {
+    return `
+    
+    `;
+  }
 
 });
