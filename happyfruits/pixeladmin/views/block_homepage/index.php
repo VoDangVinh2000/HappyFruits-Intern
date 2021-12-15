@@ -1,14 +1,14 @@
 <div id="content-wrapper">
     <div id="page-wrapper">
         <div class="row">
-            <div class="col-md-3">
-                <h3>Chọn mẫu hiển thị</h2>
+            <div class="col-md-2">
+                <h4>Chọn mẫu hiển thị</h2>
                     <select class="form-control" name="type_theme" id="chooseAvailableThemes">
                         <option selected value="1">1</option>
                         <option value="2">2</option>
                     </select>
                     <div>
-                        <h3>Chọn loại hiển thị</h3>
+                        <h4>Chọn loại hiển thị</h4>
                         <div class="col">
                             <select name="category_id" class="form-control">
                                 <?php foreach ($menus['items'] as $item) { ?>
@@ -18,8 +18,8 @@
                         </div>
                     </div>
             </div>
-            <div class="col-md-6">
-                <h3>Chọn sản phẩm hiển thị (tối thiểu 4 sản phẩm)</h3>
+            <div class="col-md-8">
+                <h4>Chọn sản phẩm hiển thị (tối thiểu 4 sản phẩm)</h4>
                 <div id="page-wrapper">
                     <div class="row">
                         <div class="col-lg-12">
@@ -42,9 +42,9 @@
                 </div>
                 <!-- page-wrapper !-->
             </div>
-            <!-- <div class="col-md-3">
-                <h3>Các sản phẩm được chọn</h3>
-            </div> -->
+            <div class="col-md-2">
+                <h4>Các sản phẩm được chọn</h4>
+            </div>
             <!-- col-md-9 !-->
         </div>
     </div>

@@ -144,6 +144,7 @@ class Products extends BaseProducts
             'prices.type_id' => 1,
             'products.enabled' => 1,
             'products.is_hidden' => 0,
+            'products.deleted' => 0
         );
         return $this->select($filters);
     }
@@ -154,7 +155,7 @@ class Products extends BaseProducts
                         prices.price,prices.type_id',
             'join' => 'INNER JOIN categories ON categories.category_id = products.category_id
                        INNER JOIN prices ON prices.product_id = products.product_id',
-            
+
             'products.category_id' => eModel::matchRegexUrl($id),
             'categories.allow_delivery' => 1,
             'prices.type_id' => 1,
@@ -162,7 +163,8 @@ class Products extends BaseProducts
             'products.is_hidden' => 0,
             'products.is_additional' => 0,
             'products.not_deliver' => 0,
-            'categories.deleted' => 0
+            'categories.deleted' => 0,
+            'products.deleted' => 0
         );
         $filters['order_by'] = 'products.product_id DESC';
         return $this->select($filters);
@@ -209,6 +211,7 @@ class Products extends BaseProducts
             AND categories.category_id = products.category_id
             AND prices.type_id = 1 AND products.enabled = 1 AND products.is_hidden = 0 AND categories.allow_delivery = 1
             AND categories.deleted = 0 AND products.is_additional = 0 AND products.not_deliver = 0 AND categories.enabled = 1
+            AND products.deleted = 0
             ORDER BY products.image";
             $filters = "";
             $result = self::_do_sql($sql, $filters);
@@ -241,7 +244,7 @@ class Products extends BaseProducts
                 INNER JOIN categories ON categories.category_id = products.category_id
                 WHERE products.category_id = '" . $array['category_id'] . "' AND products.enabled = 1 AND 
                 products.is_hidden = 0 AND prices.type_id = 1 AND products.not_deliver = 0
-                AND products.is_additional = 0
+                AND products.is_additional = 0 AND products.deleted = 0
                 AND categories.allow_delivery = 1 AND categories.enabled = 1 AND categories.deleted = 0 ", $filters);
 
                 $max = count($totalRows) - 1; // Nếu lỗi thì liên quan đến biến $max
@@ -253,7 +256,7 @@ class Products extends BaseProducts
                 INNER JOIN categories ON categories.category_id = products.category_id
                 WHERE products.category_id = '" . $array['category_id'] . "' 
                 AND products.enabled = 1 AND products.is_hidden = 0 
-                AND products.not_deliver = 0  AND products.is_additional = 0
+                AND products.not_deliver = 0  AND products.is_additional = 0 AND products.deleted = 0
                      AND categories.allow_delivery = 1 AND categories.enabled = 1 AND categories.deleted = 0
                 AND prices.type_id = 1 LIMIT $rand_number,4";
 
@@ -267,7 +270,7 @@ class Products extends BaseProducts
                     INNER JOIN categories ON categories.category_id = products.category_id
                      WHERE products.category_id = '" . $array['category_id'] . "' 
                     AND products.enabled = 1 AND products.is_hidden = 0 
-                    AND products.not_deliver = 0  AND products.is_additional = 0
+                    AND products.not_deliver = 0  AND products.is_additional = 0 AND products.deleted = 0
                      AND categories.allow_delivery = 1 AND categories.enabled = 1 AND categories.deleted = 0
                     AND prices.type_id = 1 LIMIT 4";
                     return $this->_do_select_sql($query, $filters);
@@ -278,7 +281,7 @@ class Products extends BaseProducts
                     INNER JOIN categories ON categories.category_id = products.category_id
                     WHERE  products.category_id = '" . $array['category_id'] . "' 
                     AND products.enabled = 1 AND products.is_hidden = 0 
-                    AND products.not_deliver = 0  AND products.is_additional = 0
+                    AND products.not_deliver = 0  AND products.is_additional = 0 AND products.deleted = 0
                      AND categories.allow_delivery = 1 AND categories.enabled = 1 AND categories.deleted = 0
                     AND prices.type_id = 1 LIMIT $rand_number,4";
                     return $this->_do_select_sql($query, $filters);

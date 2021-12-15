@@ -38,7 +38,7 @@ function bindEvents()
     if (!dataTableObj){
         dataTableObj = $('#dataTables-block-productlist').dataTable({
           "aoColumnDefs": [
-              { 'bSortable': false, 'aTargets': [ 6, 7, 8 ] }
+              { 'bSortable': false, 'aTargets': [] }
            ],
            "columns": [
                 { "orderDataType": "dom-text-numeric" },
@@ -46,10 +46,7 @@ function bindEvents()
                 { "orderDataType": "dom-text", type: 'string' },
                 { "orderDataType": "dom-text", type: 'string' },
                 { "orderDataType": "dom-text", type: 'string' },
-                { "orderDataType": "dom-text-numeric" },
-                null,
-                null,
-                null              
+                { "orderDataType": "dom-checkbox" },          
            ],
            aaSorting: [],
            "oLanguage": oLanguage

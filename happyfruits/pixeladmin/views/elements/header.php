@@ -7,7 +7,6 @@
     <title><?=!empty($page_title)?"$page_title - ":''?>Hệ thống quản lý cửa hàng - <?=get_setting('short_site_name')?></title>
     
     <link rel="shortcut icon" href="<?=get_admin_theme_assets_url()?>images/favicon.ico"/>
-	
     <!-- Core CSS - Include with every page -->
     <link href="<?=ASSET_URL?>css/bootstrap.min.css" rel="stylesheet" />
     <link href="<?=ASSET_URL?>css/font-awesome.min.css" rel="stylesheet" />
@@ -15,6 +14,7 @@
     <link href="<?=ASSET_URL?>css/themes.css" rel="stylesheet" />
     <link href="<?=ASSET_URL?>css/custom-checkbox.css" rel="stylesheet" />
     <link href="<?=ASSET_URL?>plugins/select2/select2.min.css" rel="stylesheet" />
+   
     <!--[if lt IE 9]>
 		<script src="<?=ASSET_URL?>js/ie.min.js"></script>
 	<![endif]-->
