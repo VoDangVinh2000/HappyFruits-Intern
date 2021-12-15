@@ -1880,6 +1880,26 @@ class PostbackController extends BasePostbackController
         $this->_ok();
     }
     
+    /**Search products for the block home page */
+    function admin_search_product_blockhomepage()
+    {
+        $filter_category = post('filter_category');
+        $filter_type = post('filter_type');
+        $filter_arr = array();
+        if ($filter_category)
+            $filter_arr['products.category_id'] = $filter_category;
+        if ($filter_type)
+        {
+            if ($filter_type == 1) // Main products
+                $filter_arr['products.is_additional'] = "0";
+            elseif($filter_type == 2) // Additional products
+                $filter_arr['products.is_additional'] = "1";
+        }
+        $this->data['products'] = $this->Products->get_list($filter_arr, -1);
+        $this->return['html'] = $this->load_view('block_homepage/tabledata_search/list_product', 1);
+        $this->_ok();
+    }
+
     function admin_update_product()
     {
         $action_type = post('action_type');
