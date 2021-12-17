@@ -15,13 +15,13 @@
                 <tr id="<?= $item['product_id'] ?>">
                     <td style="max-width: 40px;"><input type="text" style="text-align: center;" value="<?= formatQuantity($item['sequence_number']) ?>" class="sequence_number" /></td>
                     <td class="fullwidth text-center"><input type="text" value="<?= $item['code'] ?>" class="code" /></td>
-                    <td class="fullwidth"><input type="text" value="<?= $item['name'] ?>" class="name" /><span class="hidden"><?= $item['name_without_utf8'] ?></span></td>
+                    <td class="fullwidth name"><input type="text" value="<?= $item['name'] ?>" class="name" /><span class="hidden"><?= $item['name_without_utf8'] ?></span></td>
                     <td class="fullwidth"><input type="text" value="<?= $item['english_name'] ?>" class="english_name" /></td>
                     <td class="fullwidth">
-                        <img width="30" height="30" alt="<?= $item['code'] ?>" src="<?= get_image_url($item['image'], 'square-small') ?>" class="recipe-image" />
+                        <img style="display: block;margin: 0 auto;" width="30" height="30" alt="<?= $item['code'] ?>" src="<?= get_image_url($item['image'], 'square-small') ?>" class="recipe-image" />
                     </td>
                     <td class="fullwidth">
-                        <input class="form-control" type="checkbox">
+                        <input class="form-control" type="checkbox" name="products_show[]" class="products_show">
                     </td>
                 </tr>
             <?php endforeach; ?>

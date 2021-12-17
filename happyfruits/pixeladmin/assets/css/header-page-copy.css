@@ -1318,6 +1318,19 @@ svg.infobox_icon {
   right: 55px;
 }
 
+/*css block home page*/
+.products-selected .name p{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* white-space: nowrap; */
+}
+
+.products-selected{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+/*end css block home page*/
 /* ============ desktop view ============ */
 
 

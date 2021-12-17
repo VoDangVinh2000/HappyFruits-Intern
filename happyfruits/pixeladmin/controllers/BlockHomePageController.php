@@ -17,8 +17,8 @@ class BlockHomePageController extends BaseController
         $id = $obj = null;
         $js = array(
             ASSET_URL. 'js/block_homepage/mau1.js',
+            ASSET_URL . 'js/block_homepage/index.js',
             ASSET_URL. 'js/block_homepage/main.js',
-            ASSET_URL . 'js/block_homepage/index.js'
         );
         $products = $this->Products->get_list(array('products.is_additional' => "0"), -1);
         $all_categories = $this->Categories->get_all_sub_categories();

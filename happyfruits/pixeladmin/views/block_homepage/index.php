@@ -18,23 +18,13 @@
                         </div>
                     </div>
             </div>
-            <div class="col-md-8">
-                <h4>Chọn sản phẩm hiển thị (tối thiểu 4 sản phẩm)</h4>
+            <div class="col-md-6">
+                <h4>Chọn sản phẩm hiển thị (tối đa 4 sản phẩm)</h4>
                 <div id="page-wrapper">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="table-responsive" id="list_container">
                                 <?php $controlerObj->load_view("block_homepage/tabledata_search/list_product"); ?>
-                            </div>
-                            <div class="for_datatable_filter">
-                                <ul>
-                                    <li>Nhóm hàng:
-                                        <?php echo html_select($all_categories, 'category_id', 'name', 'id="filter_category" class="form-control"', 'Tất cả'); ?>
-                                    </li>
-                                </ul>
-
-                                <div class="clear"></div>
-                                <input type="hidden" id="filterString" value="" />
                             </div>
                         </div>
                         <!-- col-lg-12 !-->
@@ -42,9 +32,12 @@
                 </div>
                 <!-- page-wrapper !-->
             </div>
-            <div class="col-md-2">
+            <div class="col-md-4">
                 <h4>Các sản phẩm được chọn</h4>
+                <div class="products-selected">
+                </div>
             </div>
+            <input type="submit" value="Luu">
             <!-- col-md-9 !-->
         </div>
     </div>

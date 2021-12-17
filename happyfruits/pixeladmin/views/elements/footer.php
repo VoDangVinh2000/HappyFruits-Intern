@@ -33,6 +33,9 @@
     </script>
 
     <!-- Pixel Admin's javascripts -->
+
+
+
     <script src="<?=ASSET_URL?>plugins/blockUI/jquery.blockUI.min.js"></script>
     <script src="<?=ASSET_URL?>plugins/alert/alert.js"></script>
     <script src="<?=ASSET_URL?>plugins/bootbox/bootbox.min.js"></script>

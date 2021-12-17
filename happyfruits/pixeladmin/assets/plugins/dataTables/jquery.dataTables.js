@@ -2818,7 +2818,6 @@
 		var features = settings.aanFeatures;
         var filterString = $('.for_datatable_filter #filterString').val();
 		var input = '<input type="search" id="filter_keyword" class="'+classes.sFilterInput+'"/>';
-		console.log(input);
 		var str = language.sSearch;
 		str = str.match(/_INPUT_/) ?
 			str.replace('_INPUT_', input) :
