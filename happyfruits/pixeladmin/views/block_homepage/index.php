@@ -4,8 +4,10 @@
             <div class="col-md-2">
                 <h4>Chọn mẫu hiển thị</h2>
                     <select class="form-control" name="type_theme" id="chooseAvailableThemes">
-                        <option selected value="1">1</option>
-                        <option value="2">2</option>
+                        <option selected value="1">Mẫu 1</option>
+                        <option value="2">Mẫu 2</option>
+                        <option value="3">Mẫu 3</option>
+                        <option value="4">Mẫu 4</option>
                     </select>
                     <div>
                         <h4>Chọn loại hiển thị</h4>
@@ -43,7 +45,7 @@
     </div>
 
 
-    <div id="mau"></div>
+
 
     <form id="data-cate_pro" action="">
         <!-- categories tu database. chỉ hiện dữ liệu để lựa chọn khi, ta chọn mẫu phù hợp. -->
@@ -51,6 +53,26 @@
         <!-- products tu database. -->
         <div id="products"></div>
     </form>
+
+
+    <div id="mau">
+        <div id="mau3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6" style="height: 300px; border: 1px solid #999; text-align: center;" class="mau3-category">
+                        Content Of Category
+                    </div>
+
+                    <!-- right -->
+                    <div class="col-md-6" style="height: 300px; border: 1px solid #999; text-align: center;">
+                        Category Image
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>
 <!-- /#page-wrapper -->
