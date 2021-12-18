@@ -216,23 +216,23 @@ window.addEventListener('DOMContentLoaded', function () {
 		<div id="mau1">
 			<div class="container">
 					<div class="row">
-							<div class="col-md-6" style="height: 300px; border: 1px solid #999; text-align: center;" class="mau1-category">
+							<div class="col-md-6" style="height: 300px; border: 1px solid #000; text-align: center; background-color: #999;" class="mau1-category">
 									Category
 							</div>
 
 							<!-- right -->
 							<div class="col-md-6">
 									<div class="row">
-											<div class="col-md-6" style="height: 150px;border: 1px solid #999; text-align: center;" class="mau1-product1">
+											<div class="col-md-6" style="height: 150px;border: 1px solid #000; text-align: center; background-color: #999;" class="mau1-product1">
 													product 1
 											</div>
-											<div class="col-md-6" style="height: 150px;border: 1px solid #999; text-align: center;" class="mau1-product2">
+											<div class="col-md-6" style="height: 150px;border: 1px solid #000; text-align: center; background-color: #999;" class="mau1-product2">
 													product 2
 											</div>
-											<div class="col-md-6" style="height: 150px;border: 1px solid #999; text-align: center;" class="mau1-product3">
+											<div class="col-md-6" style="height: 150px;border: 1px solid #000; text-align: center; background-color: #999;" class="mau1-product3">
 													product 3
 											</div>
-											<div class="col-md-6" style="height: 150px;border: 1px solid #999; text-align: center;" class="mau1-product4">
+											<div class="col-md-6" style="height: 150px;border: 1px solid #000; text-align: center; background-color: #999;" class="mau1-product4">
 													product 4
 											</div>
 									</div>
@@ -254,22 +254,22 @@ window.addEventListener('DOMContentLoaded', function () {
 
 							<div class="col-md-6">
 									<div class="row">
-											<div class="col-md-6" style="height: 150px;border: 1px solid #999; text-align: center;" class="mau2-product1">
+											<div class="col-md-6" style="height: 150px;border: 1px solid #000; text-align: center; background-color: #999;" class="mau2-product1">
 													product 1
 											</div>
-											<div class="col-md-6" style="height: 150px;border: 1px solid #999; text-align: center;" class="mau2-product2">
+											<div class="col-md-6" style="height: 150px;border: 1px solid #000; text-align: center; background-color: #999;" class="mau2-product2">
 													product 2
 											</div>
-											<div class="col-md-6" style="height: 150px;border: 1px solid #999; text-align: center;" class="mau2-product3">
+											<div class="col-md-6" style="height: 150px;border: 1px solid #000; text-align: center; background-color: #999;" class="mau2-product3">
 													product 3
 											</div>
-											<div class="col-md-6" style="height: 150px;border: 1px solid #999; text-align: center;" class="mau2-product4">
+											<div class="col-md-6" style="height: 150px;border: 1px solid #000; text-align: center; background-color: #999;" class="mau2-product4">
 													product 4
 											</div>
 									</div>
 							</div>
 							<!-- right -->
-							<div class="col-md-6" style="height: 300px; border: 1px solid #999; text-align: center;" class="mau2-category">
+							<div class="col-md-6" style="height: 300px; border: 1px solid #000; text-align: center; background-color: #999;" class="mau2-category">
 									Category
 							</div>
 					</div>
@@ -285,12 +285,12 @@ window.addEventListener('DOMContentLoaded', function () {
 		<div id="mau3">
 			<div class="container">
 					<div class="row">
-							<div class="col-md-6" style="height: 300px; border: 1px solid #999; text-align: center;" class="mau3-category">
+							<div class="col-md-6" style="height: 300px; border: 1px solid #000; text-align: center; background-color: #999;" class="mau3-category">
 									Content Of Category
 							</div>
 
 							<!-- right -->
-							<div class="col-md-6" style="height: 300px; border: 1px solid #999; text-align: center;">
+							<div class="col-md-6" style="height: 300px; border: 1px solid #000; text-align: center; background-color: #999;">
 									Category Image
 							</div>
 
@@ -301,7 +301,26 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 
 	function mau4(data = null) {
-		return `mau 4`;
+		return `
+		<div id="mau4">
+			<div class="container">
+					<div class="row">
+							<div class="col-md-3" style="height: 220px; border: 1px solid #000; text-align: center; background-color: #999;" class="mau4-product1">
+									Product 1
+							</div>
+							<div class="col-md-3" style="height: 220px; border: 1px solid #000; text-align: center; background-color: #999;" class="mau4-product2">
+									Product 2
+							</div>
+							<div class="col-md-3" style="height: 220px; border: 1px solid #000; text-align: center; background-color: #999;" class="mau4-product3">
+									Product 3
+							</div>
+							<div class="col-md-3" style="height: 220px; border: 1px solid #000; text-align: center; background-color: #999;" class="mau4-product4">
+									Product 4
+							</div>
+					</div>
+			</div>
+		</div>
+`;
 	}
 
 	function ChonMau(optionValue, mauElement, data = null) {

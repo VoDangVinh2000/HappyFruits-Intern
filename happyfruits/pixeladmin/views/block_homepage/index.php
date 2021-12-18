@@ -55,22 +55,8 @@
     </form>
 
 
-    <div id="mau">
-        <div id="mau3">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6" style="height: 300px; border: 1px solid #999; text-align: center;" class="mau3-category">
-                        Content Of Category
-                    </div>
-
-                    <!-- right -->
-                    <div class="col-md-6" style="height: 300px; border: 1px solid #999; text-align: center;">
-                        Category Image
-                    </div>
-
-                </div>
-            </div>
-        </div>
+    <div id="">
+       
     </div>
 
 
