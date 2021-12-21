@@ -38,9 +38,11 @@ function bindEvents()
     if (!dataTableObj){
         dataTableObj = $('#dataTables-block-productlist').dataTable({
           "aoColumnDefs": [
-              { 'bSortable': false, 'aTargets': [] }
+              { 'bSortable': false},
+            //   {aTargets : [0], className : "hide_column_id_block_page"}
            ],
            "columns": [
+                // { "orderDataType": "dom-text-numeric" },
                 { "orderDataType": "dom-text-numeric" },
                 { "orderDataType": "dom-text", type: 'string' },
                 { "orderDataType": "dom-text", type: 'string' },

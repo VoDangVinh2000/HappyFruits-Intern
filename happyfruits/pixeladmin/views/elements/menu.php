@@ -39,7 +39,7 @@
         </div>
         <ul class="navigation">
             <li class="tag active">
-                <a target="blank" href="<?= BASE_URL ?>block-homepage"><i class="menu-icon fa fa-tags"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Quản lý block home page</span></a>
+                <a target="blank" href="<?= BASE_URL ?>list-block"><i class="menu-icon fa fa-tags"></i><span class="mm-text mmc-dropdown-delay animated fadeIn">Quản lý block home page</span></a>
             </li>
 
             <?php

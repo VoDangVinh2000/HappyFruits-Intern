@@ -19,7 +19,6 @@ $(document).ready(function(){
             }
         },"json");
     });
-
     addMoneyStringAlong('#paid_amount', 'float: left; margin-left: 10px; margin-top: 7px;');
 });
 

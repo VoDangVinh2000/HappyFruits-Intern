@@ -2,14 +2,22 @@ let arrayProductsSelected = [];
 let arrayChecked = [];
 function appendProducts() {
 	let htmlSelected = document.querySelector('.products-selected');
-	htmlSelected.innerHTML = "";
-	arrayProductsSelected.map((item, index) => {
-		htmlSelected.insertAdjacentHTML('beforeend', '<div class="sttProducts">'
+	// htmlSelected.innerHTML = "";
+    console.log(htmlSelected.dataset.count);
+		
+	arrayProductsSelected.map((item, index, oldArray) => {
+
+		if(oldArray.length - 1 < index ){
+			htmlSelected.insertAdjacentHTML('beforeend', '<div><input type="hidden" value='
+			+item.id+' name="product_id[]" /></div></div><div class="sttProducts">'
 			+ (index + 1) + '</div><div class="code"><p>' + item.code
 			+ '</p></div><div class="name"><p>' + item.name
 			+ '</p></div> <div class="trash"><button onclick="trashProduct(' + item.id + ')" type="button">Xóa</button></div>');
+		}
+		
 	});
 }
+
 //Xóa sản phẩm không muốn hiển thị
 function trashProduct(id) {
 	arrayProductsSelected = unique();

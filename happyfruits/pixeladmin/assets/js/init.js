@@ -215,6 +215,7 @@ function callbackSaveAction(formID, data)
     $("#"+formID+" #submit").attr('disabled', false);
     $("#"+formID+" #submit span").text('Lưu');
     if (data.status == 'OK'){
+        console.log('vo ok');
         $("html, body").animate({ scrollTop: 0 }, 300);
         if (window.location.href.indexOf('/them') != -1){
             if(typeof data.redirect_url != 'undefined' && data.redirect_url)

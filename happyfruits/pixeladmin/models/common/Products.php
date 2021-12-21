@@ -37,6 +37,14 @@ class Products extends BaseProducts
         return self::_do_sql($sql, $filters, array(), 'categories.sequence_number, products.sequence_number');
     }
 
+    function getProductsById($id){
+        $filters = array(
+            'select' => 'products.*',
+            'products.product_id' => $id
+        );
+        return $this->select($filters);
+    }
+
     function get_list_for_selling($filters = array(), $is_hidden = 0)
     {
         $sql = 'SELECT products.product_id, products.name, products.description, products.code, products.unit, products.name_without_utf8, products.modified_dtm, products.category_id, products.promotion_price, products.enabled, products.free_choice, products.is_box, products.box_discount_rate, products.can_be_added_to_box, products.not_deliver, 

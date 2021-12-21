@@ -85,7 +85,6 @@ function init_page(&$controller)
     "history_order_code_failed"));
 }
 
-
 function url_slug($str, $options = array())
 {
     // Make sure string is in UTF-8 and strip invalid UTF-8 characters

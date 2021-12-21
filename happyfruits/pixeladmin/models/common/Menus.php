@@ -46,5 +46,15 @@ class Menus extends BaseMenus
         }
         return $menu;
     }
+
+    function getAllCatNumberOfItems(){
+        $menus = $this->get_details_by_code('category-menu');
+        $arrayCat = [];
+        foreach($menus['items'] as $item){
+            array_push($arrayCat,(int)$item['cat']);
+        }
+        return $arrayCat;
+        
+    }
 }
 /* End of generated class */

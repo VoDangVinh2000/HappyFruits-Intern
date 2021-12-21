@@ -1327,7 +1327,7 @@ svg.infobox_icon {
 
 .products-selected{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 /*end css block home page*/
@@ -2391,4 +2391,11 @@ svg.infobox_icon {
     bottom: 0px;
     left: 0px;
   }
+}
+
+
+
+/*Ẩn column product_id tại table của trang block home page*/
+.hide_column_id_block_page{
+  display: none;
 }

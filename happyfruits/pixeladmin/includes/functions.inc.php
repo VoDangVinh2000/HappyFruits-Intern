@@ -45,6 +45,16 @@ function get_desc_category($category_id)
     return eModel::_do_sql($sql, $filters, array(), 'g_order_items.id');
 }
 
+//chuyển chuỗi products_id của block_homepage table thành mảng
+function testABC($array){
+    $arrayProductsID = [];
+    foreach($array as $item){
+        $products =explode(',',str_replace(array('"','[',']'),'',$item['products_id']));
+        array_push($arrayProductsID,$products);
+    }
+    return $arrayProductsID;
+}
+
 function post($key, $default = "")
 {
     if (!array_key_exists($key, $_POST)) {

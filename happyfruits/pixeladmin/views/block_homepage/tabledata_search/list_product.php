@@ -1,6 +1,7 @@
 <table class="table table-striped table-bordered table-hover dt-responsive" id="dataTables-block-productlist">
     <thead>
         <tr>
+            <!-- <th></th> -->
             <th style="width:15px" class="not_filter">Thứ tự</th>
             <th style="width:15px">Mã</th>
             <th style="width:100px">Tên</th>
@@ -13,6 +14,7 @@
         <?php if ($products) : ?>
             <?php foreach ($products as $item) : ?>
                 <tr id="<?= $item['product_id'] ?>">
+                    <!-- <td><input type="hidden" name="product_id[]" value="<?= $item['product_id'] ?>"></td> -->
                     <td style="max-width: 40px;"><input type="text" style="text-align: center;" value="<?= formatQuantity($item['sequence_number']) ?>" class="sequence_number" /></td>
                     <td class="fullwidth text-center"><input type="text" value="<?= $item['code'] ?>" class="code" /></td>
                     <td class="fullwidth name"><input type="text" value="<?= $item['name'] ?>" class="name" /><span class="hidden"><?= $item['name_without_utf8'] ?></span></td>

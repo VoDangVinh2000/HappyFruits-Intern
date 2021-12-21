@@ -177,10 +177,10 @@ RewriteRule ^phpBB/dang-nhap(.*)?$ /pixeladmin/index.php?controller=postback&act
 RewriteRule ^cron/midnight?$ /pixeladmin/index.php?controller=cron&action=midnight_jobs
 
 #Rewrite for block home page url
-RewriteRule ^block-homepage/?$ /pixeladmin/index.php?controller=blockhomepage&action=index
+RewriteRule ^block-homepage/(.*)?$ /pixeladmin/index.php?controller=blockhomepage&action=edit&id=$1
+RewriteRule ^list-block/?$ /pixeladmin/index.php?controller=blockhomepage&action=indexMain
 
 ErrorDocument 404 /pixeladmin/index.php?controller=error
-
 
 <ifModule mod_gzip.c>
     mod_gzip_on Yes
