@@ -1,0 +1,224 @@
+RewriteEngine on
+
+#RewriteCond %{HTTP_HOST} !^www\.
+#RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/pixeladmin/$1 [R=301,L]
+
+RewriteRule ^xu-ly/?$ /pixeladmin/index.php?controller=postback
+
+
+
+RewriteRule ^tai-anh/?$ /pixeladmin/index.php?controller=postback&action=admin_upload_image
+RewriteRule ^xoa-anh/?$ /pixeladmin/index.php?controller=postback&action=admin_delete_image
+RewriteRule ^quan-ly-anh/?$ /pixeladmin/index.php?controller=postback&action=admin_view_images&%{QUERY_STRING}
+RewriteRule ^toi-uu-anh/?$ /pixeladmin/index.php?controller=postback&action=optimize_all_images&%{QUERY_STRING}
+
+RewriteRule ^xu-ly/?$ /pixeladmin/index.php?controller=postback
+RewriteRule ^dang-nhap/?$ /pixeladmin/index.php?action=login
+RewriteRule ^dang-xuat/?$ /pixeladmin/index.php?controller=postback&action=logout
+RewriteRule ^tai-khoan/?$ /pixeladmin/index.php?controller=user&action=profile
+RewriteRule ^bieu-do/?$ /pixeladmin/index.php?action=chart&%{QUERY_STRING}
+RewriteRule ^bieu-do/(.*)?$ /pixeladmin/index.php?action=chart&chart_ids=$1&%{QUERY_STRING}
+RewriteRule ^tao-anh-moi/?$ /pixeladmin/index.php?controller=postback&action=generate_new_images&%{QUERY_STRING}
+RewriteRule ^them-ip/?$ /pixeladmin/index.php?controller=postback&action=add_ip
+RewriteRule ^quan-ly/?$ /pixeladmin/index.php?controller=postback&action=manage_backend
+RewriteRule ^giao-dien/?$ /pixeladmin/index.php?controller=postback&action=manage_frontend
+
+RewriteRule ^quan-ly/(.*)?$ /pixeladmin/index.php?controller=postback&action=switch_menu&menu_type=$1
+
+RewriteRule ^trang-chu/?$ /pixeladmin/index.php
+
+RewriteRule ^nguoi-dung/them/?$ /pixeladmin/index.php?controller=user&action=add
+RewriteRule ^nguoi-dung/(.*)?$ /pixeladmin/index.php?controller=user&action=edit&id=$1
+RewriteRule ^nguoi-dung/?$ /pixeladmin/index.php?controller=user
+
+RewriteRule ^khach-hang/them/?$ /pixeladmin/index.php?controller=customer&action=add
+RewriteRule ^khach-hang/tim/(.*)?$ /pixeladmin/index.php?controller=customer&s=$1
+RewriteRule ^khach-hang/(.*)?$ /pixeladmin/index.php?controller=customer&action=edit&id=$1
+RewriteRule ^khach-hang/?$ /pixeladmin/index.php?controller=customer
+
+
+RewriteRule ^cong-no-khach-hang/them/?$ /pixeladmin/index.php?controller=customerdebt&action=add
+RewriteRule ^cong-no-khach-hang/da-thanh-toan(.*)$ /pixeladmin/index.php?controller=customerdebt&action=done
+RewriteRule ^cong-no-khach-hang/(.*)?$ /pixeladmin/index.php?controller=customerdebt&action=edit&id=$1
+RewriteRule ^cong-no-khach-hang/?$ /pixeladmin/index.php?controller=customerdebt
+
+RewriteRule ^danh-gia/them/?$ /pixeladmin/index.php?controller=assessment&action=add
+RewriteRule ^danh-gia/them-tre/?$ /pixeladmin/index.php?controller=assessment&action=add&is_late=1
+RewriteRule ^danh-gia/them-cham-cong/?$ /pixeladmin/index.php?controller=assessment&action=add_working_time
+RewriteRule ^danh-gia/(.*)?$ /pixeladmin/index.php?controller=assessment&action=edit&id=$1
+RewriteRule ^danh-gia/?$ /pixeladmin/index.php?controller=assessment
+
+RewriteRule ^giao-hang/phi/?$ /pixeladmin/index.php?controller=shipping&action=fees
+RewriteRule ^giao-hang/phi-theo-phuong/?$ /pixeladmin/index.php?controller=shipping&action=fees_with_wards
+RewriteRule ^giao-hang/thong-ke/?$ /pixeladmin/index.php?controller=shipping&action=statistics
+RewriteRule ^giao-hang/them/?$ /pixeladmin/index.php?controller=shipping&action=add
+RewriteRule ^giao-hang/tim/(.*)?$ /pixeladmin/index.php?controller=shipping&s=$1
+RewriteRule ^giao-hang/?$ /pixeladmin/index.php?controller=shipping
+
+RewriteRule ^nhom-hang/them/?$ /pixeladmin/index.php?controller=category&action=add
+RewriteRule ^nhom-hang/(.*)?$ /pixeladmin/index.php?controller=category&action=edit&id=$1
+RewriteRule ^nhom-hang/?$ /pixeladmin/index.php?controller=category
+
+RewriteRule ^hang-hoa/quan-ly-nhanh/?$ /pixeladmin/index.php?controller=product&action=manage
+RewriteRule ^hang-hoa/them/?$ /pixeladmin/index.php?controller=product&action=add
+RewriteRule ^hang-hoa/(.*)?$ /pixeladmin/index.php?controller=product&action=edit&id=$1
+
+RewriteRule ^hang-hoa/?$ /pixeladmin/index.php?controller=product
+
+
+RewriteRule ^quan-ly-gia/?$ /pixeladmin/index.php?controller=price
+
+RewriteRule ^don-hang/?$ /pixeladmin/index.php?controller=order
+RewriteRule ^don-hang/tim/(.*)?$ /pixeladmin/index.php?controller=order&action=find&keyword=$1
+
+
+RewriteRule ^thong-ke/?$ /pixeladmin/index.php?controller=statistics
+RewriteRule ^thong-ke/bieu-do/?$ /pixeladmin/index.php?controller=statistics&action=chart&%{QUERY_STRING}
+
+RewriteRule ^quan-ly-kho/phieu-nhap/?$ /pixeladmin/index.php?controller=inventory&action=import_list
+RewriteRule ^quan-ly-kho/phieu-nhap/them/?$ /pixeladmin/index.php?controller=inventory&action=add_import_record
+RewriteRule ^quan-ly-kho/phieu-nhap/(.*)?$ /pixeladmin/index.php?controller=inventory&action=edit_import_record&id=$1
+
+RewriteRule ^quan-ly-kho/phieu-xuat/?$ /pixeladmin/index.php?controller=inventory&action=export_list
+RewriteRule ^quan-ly-kho/phieu-xuat/them/?$ /pixeladmin/index.php?controller=inventory&action=add_export_record
+RewriteRule ^quan-ly-kho/phieu-xuat/(.*)?$ /pixeladmin/index.php?controller=inventory&action=edit_export_record&id=$1
+
+RewriteRule ^quan-ly-kho/hang-hoa/?$ /pixeladmin/index.php?controller=inventory&action=item_list
+RewriteRule ^quan-ly-kho/hang-hoa/them/?$ /pixeladmin/index.php?controller=inventory&action=add_inventory_item
+RewriteRule ^quan-ly-kho/hang-hoa/(.*)?$ /pixeladmin/index.php?controller=inventory&action=edit_inventory_item&id=$1
+RewriteRule ^quan-ly-kho/phieu-kiem-ke/?$ /pixeladmin/index.php?controller=inventory&action=check_list
+RewriteRule ^quan-ly-kho/phieu-kiem-ke/them/?$ /pixeladmin/index.php?controller=inventory&action=add_check_record
+RewriteRule ^quan-ly-kho/phieu-kiem-ke/(.*)?$ /pixeladmin/index.php?controller=inventory&action=edit_check_record&id=$1
+
+RewriteRule ^quan-ly-kho/?$ /pixeladmin/index.php?controller=inventory
+
+RewriteRule ^quan-ly-trai-cay/phieu-nhap/?$ /pixeladmin/index.php?controller=inventoryfruits&action=import_list
+RewriteRule ^quan-ly-trai-cay/phieu-nhap/them/?$ /pixeladmin/index.php?controller=inventoryfruits&action=add_import_record
+RewriteRule ^quan-ly-trai-cay/phieu-nhap/(.*)?$ /pixeladmin/index.php?controller=inventoryfruits&action=edit_import_record&id=$1
+
+RewriteRule ^quan-ly-trai-cay/phieu-kiem-ke/?$ /pixeladmin/index.php?controller=inventoryfruits&action=check_list
+RewriteRule ^quan-ly-trai-cay/phieu-kiem-ke/them/?$ /pixeladmin/index.php?controller=inventoryfruits&action=add_check_record
+RewriteRule ^quan-ly-trai-cay/phieu-kiem-ke/(.*)?$ /pixeladmin/index.php?controller=inventoryfruits&action=edit_check_record&id=$1
+
+RewriteRule ^quan-ly-trai-cay/gui-canh-bao/?$ /pixeladmin/index.php?controller=inventoryfruits&action=send_warning_email
+
+RewriteRule ^quan-ly-trai-cay/hang-hoa/?$ /pixeladmin/index.php?controller=inventoryfruits&action=item_list
+RewriteRule ^quan-ly-trai-cay/hang-hoa/them/?$ /pixeladmin/index.php?controller=inventoryfruits&action=add_inventory_item
+RewriteRule ^quan-ly-trai-cay/hang-hoa/(.*)?$ /pixeladmin/index.php?controller=inventoryfruits&action=edit_inventory_item&id=$1
+
+RewriteRule ^quan-ly-trai-cay/?$ /pixeladmin/index.php?controller=inventoryfruits
+
+RewriteRule ^phieu-thu-chi/them/?$ /pixeladmin/index.php?controller=voucher&action=add
+RewriteRule ^phieu-thu-chi/(.*)?$ /pixeladmin/index.php?controller=voucher&action=edit&id=$1
+RewriteRule ^phieu-thu-chi/?$ /pixeladmin/index.php?controller=voucher
+
+RewriteRule ^chi-phi/them/?$ /pixeladmin/index.php?controller=cost&action=add
+RewriteRule ^chi-phi/loai/them?$ /pixeladmin/index.php?controller=cost&action=add_type
+RewriteRule ^chi-phi/loai/(.*)?$ /pixeladmin/index.php?controller=cost&action=edit_type&id=$1
+RewriteRule ^chi-phi/loai/?$ /pixeladmin/index.php?controller=cost&action=types_list
+RewriteRule ^chi-phi/thong-ke(.*)?$ /pixeladmin/index.php?controller=cost&action=view_report
+RewriteRule ^chi-phi/bieu-do/(.*)?$ /pixeladmin/index.php?controller=cost&action=chart&chart_ids=$1&%{QUERY_STRING}
+RewriteRule ^chi-phi/(.*)?$ /pixeladmin/index.php?controller=cost&action=edit&id=$1
+RewriteRule ^chi-phi/?$ /pixeladmin/index.php?controller=cost
+
+RewriteRule ^cong-no/them/?$ /pixeladmin/index.php?controller=debt&action=add
+RewriteRule ^cong-no/da-thanh-toan(.*)$ /pixeladmin/index.php?controller=debt&action=done
+RewriteRule ^cong-no/loai/them?$ /pixeladmin/index.php?controller=debt&action=add_type
+RewriteRule ^cong-no/loai/(.*)?$ /pixeladmin/index.php?controller=debt&action=edit_type&id=$1
+RewriteRule ^cong-no/loai/?$ /pixeladmin/index.php?controller=debt&action=types_list
+RewriteRule ^cong-no/(.*)?$ /pixeladmin/index.php?controller=debt&action=edit&id=$1
+RewriteRule ^cong-no/?$ /pixeladmin/index.php?controller=debt
+
+RewriteRule ^tam-ung/them/?$ /pixeladmin/index.php?controller=salaryadvance&action=add
+RewriteRule ^tam-ung/(.*)?$ /pixeladmin/index.php?controller=salaryadvance&action=edit&id=$1
+RewriteRule ^tam-ung/?$ /pixeladmin/index.php?controller=salaryadvance
+
+RewriteRule ^quan-ly-tai-lieu/them/?$ /pixeladmin/index.php?controller=document&action=add
+RewriteRule ^quan-ly-tai-lieu/(.*)?$ /pixeladmin/index.php?controller=document&action=edit&id=$1
+RewriteRule ^quan-ly-tai-lieu/?$ /pixeladmin/index.php?controller=document
+
+RewriteRule ^quan-ly-trang/them/?$ /pixeladmin/index.php?controller=page&action=add
+RewriteRule ^quan-ly-trang/(.*)?$ /pixeladmin/index.php?controller=page&action=edit&id=$1
+RewriteRule ^quan-ly-trang/?$ /pixeladmin/index.php?controller=page
+
+RewriteRule ^quan-ly-thong-bao/them/?$ /pixeladmin/index.php?controller=announcement&action=add
+RewriteRule ^quan-ly-thong-bao/(.*)?$ /pixeladmin/index.php?controller=announcement&action=edit&id=$1
+RewriteRule ^quan-ly-thong-bao/?$ /pixeladmin/index.php?controller=announcement
+
+RewriteRule ^quan-ly-nhom/?$ /pixeladmin/index.php?controller=tag
+RewriteRule ^menu/?$ /pixeladmin/index.php?controller=menu
+RewriteRule ^thu-vien-anh/?$ /pixeladmin/index.php?controller=gallery
+
+RewriteRule ^tinh-kpi/?$ /pixeladmin/index.php?controller=assessment&action=calculate_kpi
+
+RewriteRule ^cau-hinh/?$ /pixeladmin/index.php?controller=setting
+
+RewriteRule ^ma-khuyen-mai/them/?$ /pixeladmin/index.php?controller=promotioncode&action=add
+RewriteRule ^ma-khuyen-mai/(.*)?$ /pixeladmin/index.php?controller=promotioncode&action=edit&id=$1
+RewriteRule ^ma-khuyen-mai/?$ /pixeladmin/index.php?controller=promotioncode
+
+RewriteRule ^chi-nhanh/them/?$ /pixeladmin/index.php?controller=branch&action=add
+RewriteRule ^chi-nhanh/(.*)?$ /pixeladmin/index.php?controller=branch&action=edit&id=$1
+RewriteRule ^chi-nhanh/?$ /pixeladmin/index.php?controller=branch
+
+RewriteRule ^nha-cung-cap/them/?$ /pixeladmin/index.php?controller=provider&action=add
+RewriteRule ^nha-cung-cap/(.*)?$ /pixeladmin/index.php?controller=provider&action=edit&id=$1
+RewriteRule ^nha-cung-cap/?$ /pixeladmin/index.php?controller=provider
+
+RewriteRule ^cap-nhat-khach-hang(.*)?$ /pixeladmin/index.php?controller=cron&action=update_customers
+
+RewriteRule ^foody/cap-nhat-don-hang(.*)?$ /pixeladmin/index.php?controller=foody&action=get_orders
+RewriteRule ^foody/dang-nhap(.*)?$ /pixeladmin/index.php?controller=foody&action=login
+RewriteRule ^foody/nen-du-lieu(.*)?$ /pixeladmin/index.php?controller=foody&action=compress_data
+
+RewriteRule ^phpBB/cap-nhat-nguoi-dung(.*)?$ /pixeladmin/index.php?controller=cron&action=sync_phpBB_users
+RewriteRule ^phpBB/dang-nhap(.*)?$ /pixeladmin/index.php?controller=postback&action=login_forum
+
+RewriteRule ^cron/midnight?$ /pixeladmin/index.php?controller=cron&action=midnight_jobs
+
+#Rewrite for block home page url
+RewriteRule ^block-homepage/(.*)?$ /pixeladmin/index.php?controller=blockhomepage&action=edit&id=$1
+RewriteRule ^list-block/?$ /pixeladmin/index.php?controller=blockhomepage&action=indexMain
+
+ErrorDocument 404 /pixeladmin/index.php?controller=error
+
+<ifModule mod_gzip.c>
+    mod_gzip_on Yes
+    mod_gzip_dechunk Yes
+    mod_gzip_item_include file .(html?|txt|css|js|php|pl)$
+    mod_gzip_item_include handler ^cgi-script$
+    mod_gzip_item_include mime ^text/.*
+    mod_gzip_item_include mime ^application/x-javascript.*
+    mod_gzip_item_exclude mime ^image/.*
+    mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+</ifModule>
+
+<IfModule mod_headers.c>
+    # 1 YEAR - doesn't change often
+    <FilesMatch "\.(flv|ico|pdf|avi|mov|ppt|doc|mp3|wmv|wav)$">
+        Header set Cache-Control "max-age=31536000, public"
+    </FilesMatch>
+    
+    # 1 WEEK - possible to be changed, unlikely
+    <FilesMatch "\.(JPG|jpg|jpeg|png|gif|swf)$">
+        Header set Cache-Control "max-age=604800, public"
+    </FilesMatch>
+    
+    # 1 DAY  - core content, changes quickly
+    <FilesMatch "\.(js|css)$">
+        Header set Cache-Control "max-age=86400"
+    </FilesMatch>
+    
+    <FilesMatch "\.(js|css|xml|gz)$">
+        Header append Vary: Accept-Encoding
+    </FilesMatch>
+    
+    <FilesMatch "\.(ttf|otf|woff|eot|svg)$">
+        Header set Cache-Control "max-age=604800, public"
+        Header set Access-Control-Allow-Origin "*"
+    </FilesMatch>
+    
+    Header set Connection keep-alive
+</IfModule>
+
+AddDefaultCharset utf-8
