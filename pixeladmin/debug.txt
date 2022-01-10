@@ -2887,3 +2887,33 @@ Body:
  
 
 
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1
+UPDATE block_homepage SET category_id = :category_id, products_id = :products_id WHERE id = :id
+SQLSTATE[HY000]: General error: 1366 Incorrect integer value: '' for column 'category_id' at row 1

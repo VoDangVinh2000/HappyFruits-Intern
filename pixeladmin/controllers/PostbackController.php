@@ -5962,14 +5962,19 @@ class PostbackController extends BasePostbackController
         $category_id = post('category_id');
         $product_id = post('product_id');
 
-        if(empty($product_id)){
-            $this->_error('Có ít nhất 1 sản phẩm được chọn.');
-        }
-        foreach($product_id as $item){
-            if(!is_numeric($item)){
-                $this->_error('Product id không hợp lệ.');
+        if ($type_theme !== '3' || $type_theme !== '4') {
+            if (empty($product_id)) {
+                $this->_error('Có ít nhất 1 sản phẩm được chọn.');
             }
-        } 
+
+            foreach ($product_id as $item) {
+                if (!is_numeric($item)) {
+                    $this->_error('Product id không hợp lệ.');
+                }
+            }
+        } else {
+            $product_id = [""];
+        }
         if (!is_numeric($type_theme) && !is_numeric($category_id)) {
             $this->_error('Mẫu id và loại id không hợp lệ.');
         }
@@ -5983,9 +5988,9 @@ class PostbackController extends BasePostbackController
         $arrayProducts = [];
         //Nếu dataOld là null
         if (empty($dataOld)) {
-            foreach($product_id as $item){
-                array_push($arrayProducts,$item);
-            } 
+            foreach ($product_id as $item) {
+                array_push($arrayProducts, $item);
+            }
             $success = $this->Blockhomepage->insert(array(
                 'type_block' => $type_theme,
                 'category_id' => $category_id,
@@ -5994,15 +5999,19 @@ class PostbackController extends BasePostbackController
         }
 
         //Ngược lại 
-        else{
-            foreach($product_id as $item){
-                array_push($arrayProducts,$item);
+        else {
+
+            foreach ($product_id as $item) {
+                array_push($arrayProducts, $item);
+            }
+            if (strlen($category_id) === 0) {
+                $category_id = null;
             }
             $arrayData = array(
                 'category_id' => $category_id,
                 'products_id' =>  json_encode($arrayProducts),
             );
-            $this->Blockhomepage->update($dataOld[0]['id'],$arrayData);
+            $this->Blockhomepage->update($dataOld[0]['id'], $arrayData);
         }
         $this->_ok();
     }
