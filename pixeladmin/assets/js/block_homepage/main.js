@@ -43,7 +43,6 @@ window.addEventListener("DOMContentLoaded", function () {
   const productsofblockshomepage = localStorage.getItem(
     "productsofblockshomepage"
   );
-  console.log(productsofblockshomepage);
   if (productsofblockshomepage !== "undefined") {
     const arrayJsonProducts = JSON.parse(productsofblockshomepage) || [];
     arrayProductsSelected = arrayJsonProducts.map((product) => {

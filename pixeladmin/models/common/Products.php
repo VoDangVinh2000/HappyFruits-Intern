@@ -39,7 +39,8 @@ class Products extends BaseProducts
 
     function getProductsById($id){
         $filters = array(
-            'select' => 'products.*',
+            'select' => 'products.*, prices.price,prices.type_id',
+            'join' => 'INNER JOIN prices ON prices.product_id = products.product_id',
             'products.product_id' => $id
         );
         return $this->select($filters);

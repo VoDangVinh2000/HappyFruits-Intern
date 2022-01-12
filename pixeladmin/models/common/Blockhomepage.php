@@ -55,12 +55,13 @@ class Blockhomepage extends BaseBlockhomepage
         $result = [];
         $productModel = new Products;
         $menusModel = new Menus;
-        $listInfoOfProduct = [];
 
         $allBlocks = $this->list_block();
         $menus = $menusModel->get_details_by_code("category-menu");
 
         foreach ($allBlocks as $block) {
+            $listInfoOfProduct = [];
+
             // lấy toàn bộ id product và tạo mảng id.
             $arrayProductsID = null;
             if ($block['products_id'] !== null) {
