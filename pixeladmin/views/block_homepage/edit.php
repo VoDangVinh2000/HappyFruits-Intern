@@ -42,11 +42,6 @@
                                     <h4 class="text-bold">Sản phẩm được chọn:</h4>
                                     <?php
                                     // $products = explode(',', str_replace(array('"', '[', ']'), '', $itemBlock['products_id']));
-                                    // var_dump($products);
-                                    // var_dump($blockID[1][0][0]);
-                                    // var_dump($blockID[1][1][0]);
-                                    // var_dump($blockID[1][2][0]);
-                                    // var_dump($blockID[1]);
                                     $productsofblockshomepageendcode = json_encode($blockID[1]);
                                     echo "<script>localStorage.setItem('productsofblockshomepage',  JSON.stringify($productsofblockshomepageendcode));</script>";
                                     ?>

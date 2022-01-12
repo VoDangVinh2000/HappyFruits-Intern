@@ -6,6 +6,7 @@
 $settings = get_setting_options();
 $content_2 = $settings['about_us_content2'];
 $content_2_en = "Being one of  the first professional fruit gift services in HCM, and is a reputable unit providing gift services for enterprises.";
+var_dump($all_block_home_page);
 ?>
 
 <!-- product category 1-->
@@ -97,7 +98,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
                                 <div class="col-md-6 col-6">
                                     <div style="margin-bottom: 15px;" class="product-cat-<?= $array['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
                                         <a href="/vi/detail/<?= $array['product_id'] ?>" ng-click="showProduct(<?= $array['product_id'] ?>, $event, 1)" class="y-image">
-                                            <img  alt="<?= $array['code'] ?>" src="<?= get_image_url($array['image'], 'square-small') ?>" class="recipe-image" />
+                                            <img alt="<?= $array['code'] ?>" src="<?= get_image_url($array['image'], 'square-small') ?>" class="recipe-image" />
                                             <img width="320" height="320" alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" />
                                         </a>
                                         <div class="y-info">
@@ -255,7 +256,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
         } ?>
     </div>
 </div>
-
+`
 <!-- product category 3-->
 <div class="container my-3">
     <div class="row g-0 category-full">
@@ -434,35 +435,35 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
     <?php } else { ?>
         <div class="ms-2 me-2">
             <!-- <div class=" product-item"> -->
-                <div style="margin-bottom: 15px; " class="product-cat-<?= $array['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
+            <div style="margin-bottom: 15px; " class="product-cat-<?= $array['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
 
-                    <a href="/vi/detail/<?= $array['product_id'] ?>" ng-click="showProduct(<?= $array['product_id'] ?>, $event, 1)" class="y-image">
-                        <img width="320" height="320" alt="<?= $array['code'] ?>" src="<?= $array['image'] ? get_image_url($array['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
-                        <img width="320" height="320" alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" />
-                    </a>
-                    <div class="y-info">
-                        <h3 class="y-title"><a style="text-overflow: inherit;white-space: unset;"><?= $array['code'] ?> - <span class="product_name efruit-vi"><?= $array['name'] ?></span><span class="product_name efruit-en"><?= $array['english_name'] ?></span></a></h3>
-                        <?php if (empty($array['is_box'])) : ?>
-                            <?php if ($array['price'] > 0) : ?>
-                                <?php if ($array['promotion_price'] == 0) : ?>
-                                    <a class="y-source"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
-                                <?php else : ?>
-                                    <a class="y-source"><span class="old-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="new-price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
-                                <?php endif; ?>
+                <a href="/vi/detail/<?= $array['product_id'] ?>" ng-click="showProduct(<?= $array['product_id'] ?>, $event, 1)" class="y-image">
+                    <img width="320" height="320" alt="<?= $array['code'] ?>" src="<?= $array['image'] ? get_image_url($array['image'], 'square-small') : get_child_theme_assets_url() . 'img/default-product-image.png' ?>" class="recipe-image" />
+                    <img width="320" height="320" alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" />
+                </a>
+                <div class="y-info">
+                    <h3 class="y-title"><a style="text-overflow: inherit;white-space: unset;"><?= $array['code'] ?> - <span class="product_name efruit-vi"><?= $array['name'] ?></span><span class="product_name efruit-en"><?= $array['english_name'] ?></span></a></h3>
+                    <?php if (empty($array['is_box'])) : ?>
+                        <?php if ($array['price'] > 0) : ?>
+                            <?php if ($array['promotion_price'] == 0) : ?>
+                                <a class="y-source"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></a>
+                            <?php else : ?>
+                                <a class="y-source"><span class="old-price"><?= number_format($array['price'] * 1000) ?><sup>đ</sup></span> <span class="new-price"><?= number_format($array['promotion_price'] * 1000) ?><sup>đ</sup></span></a>
                             <?php endif; ?>
                         <?php endif; ?>
-                        <?php if ($array['description']) : ?>
-                            <p class="y-ingredients efruit-vi"><?= $array['description'] ?></p>
-                            <p class="y-ingredients efruit-en"><?= $array['description_en'] ?></p>
-                        <?php endif; ?>
-                    </div>
-                    <?php if (!empty($array['enabled']) && empty($array['not_deliver'])) : ?>
-                        <div ng-click="showProduct(<?= $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
-                    <?php elseif (empty($array['enabled'])) : ?>
-                        <div><img alt="sold-out" src="<?= get_theme_assets_url() ?>img/sold_out.png" class="sold_out efruit-vi" /><img alt="sold-out" class="sold_out efruit-en" src="<?= get_theme_assets_url() ?>img/sold_out_en.png" /></div>
                     <?php endif; ?>
-                    <?php $this->load_partial('product-ribbon', array('item' => $array)); ?>
+                    <?php if ($array['description']) : ?>
+                        <p class="y-ingredients efruit-vi"><?= $array['description'] ?></p>
+                        <p class="y-ingredients efruit-en"><?= $array['description_en'] ?></p>
+                    <?php endif; ?>
                 </div>
+                <?php if (!empty($array['enabled']) && empty($array['not_deliver'])) : ?>
+                    <div ng-click="showProduct(<?= $array['product_id'] ?>, $event)" class="btn-yum btn-wrapper add-to-cart"><span class="yum"></span></div>
+                <?php elseif (empty($array['enabled'])) : ?>
+                    <div><img alt="sold-out" src="<?= get_theme_assets_url() ?>img/sold_out.png" class="sold_out efruit-vi" /><img alt="sold-out" class="sold_out efruit-en" src="<?= get_theme_assets_url() ?>img/sold_out_en.png" /></div>
+                <?php endif; ?>
+                <?php $this->load_partial('product-ribbon', array('item' => $array)); ?>
+            </div>
             <!-- </div> -->
         </div>
 <?php }

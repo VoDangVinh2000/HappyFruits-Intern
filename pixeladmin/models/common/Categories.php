@@ -72,5 +72,20 @@ class Categories extends BaseCategories
 
         return $this->select($filters);
     }   
+
+    function get_category_by_id($parentId){
+        //Hàm này để lấy ra danh sách các loại giỏ của 1 loại cha tại bảng category_id
+        $filters = array(
+            'select' => 'categories.*',
+            'categories.parent_id' => $parentId,
+            // 'categories.category_id' => $categoryId,
+            'categories.enabled' => 1,
+            'categories.allow_delivery' => 1,
+            'categories.deleted' => 0
+        );
+
+        return $this->select($filters);
+    }   
+
 }
 /* End of generated class */

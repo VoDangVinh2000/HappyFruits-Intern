@@ -4,20 +4,22 @@ let arrayChecked = [];
 // productsofblockshomepage
 function appendProducts() {
   let htmlSelected = document.querySelector(".products-selected");
-  htmlSelected.innerHTML = "";
-  arrayProductsSelected.map((item, index, oldArray) => {
-    htmlSelected.insertAdjacentHTML(
-      "beforeend",
+  if (htmlSelected) {
+    htmlSelected.innerHTML = "";
+    arrayProductsSelected.map((item, index, oldArray) => {
+      htmlSelected.insertAdjacentHTML(
+        "beforeend",
+        `
+      <li data-productid="${item?.id}">
+      <input type="hidden" value="${item?.id}" name="product_id[]">
+      <span class="code">${item?.code}</span>
+      <span class="name">${item?.name}</span>
+      <button  data-productid="${item?.id}" type="button" onclick="trashProduct(${item?.id})">Xóa</button>
+      </li>
       `
-		<li data-productid="${item?.id}">
-		<input type="hidden" value="${item?.id}" name="product_id[]">
-		<span class="code">${item?.code}</span>
-		<span class="name">${item?.name}</span>
-		<button  data-productid="${item?.id}" type="button" onclick="trashProduct(${item?.id})">Xóa</button>
-		</li>
-	  `
-    );
-  });
+      );
+    });
+  }
 }
 
 //Xóa sản phẩm không muốn hiển thị

@@ -30,7 +30,7 @@ class Blockhomepage extends BaseBlockhomepage
         return self::_do_sql($sql);
     }
 
-    function getBlockByID($id)
+    function get_block_by_id($id)
     {
         $prod = new Products;
         $filters = array(
@@ -41,9 +41,60 @@ class Blockhomepage extends BaseBlockhomepage
         $listProducts = [];
         $arrayProductsID = testABC($this->select($filters));
         foreach ($arrayProductsID[0] as $item) {
-           array_push($listProducts, $prod->getProductsById($item));
+            array_push($listProducts, $prod->getProductsById($item));
         }
-        return [$block,$listProducts];
+        // var_dump($arrayProductsID);
+        // var_dump($block, $listProducts);
+        // die();
+        return [$block, $listProducts];
+    }
+
+    function get_all_block_home_page()
+    {
+        // lấy toàn bộ 
+        $result = [];
+        $productModel = new Products;
+        $menusModel = new Menus;
+        $listInfoOfProduct = [];
+
+        $allBlocks = $this->list_block();
+        $menus = $menusModel->get_details_by_code("category-menu");
+
+        foreach ($allBlocks as $block) {
+            // lấy toàn bộ id product và tạo mảng id.
+            $arrayProductsID = null;
+            if ($block['products_id'] !== null) {
+                $arrayProductsID = explode(',', str_replace(array('"', '[', ']'), '', $block['products_id']));
+            }
+
+            // lấy thông tin product
+            if ($arrayProductsID !== null) {
+                foreach ($arrayProductsID as $id) {
+                    array_push($listInfoOfProduct, $productModel->getProductsById($id));
+                }
+                // thêm danh sách thông tin products vào một block.
+                $block['products'] = $listInfoOfProduct;
+            } else {
+                $block['products'] = null;
+            }
+
+            // lấy thông tin category. category_id
+            $category = null;
+            foreach ($menus['items'] as $item) {
+                // Kiểm tra chuổi, nếu id bằng nhau thì lấy và dừng kiểm tra.
+                if ($item['cat'] === $block['category_id']."") {
+                    $category = $item;
+                    break;
+                }
+            }
+            // gán giá trị.
+            $block['category'] = $category;
+
+            // tạo dữ liệu một block cho kết quả mong muốn.
+            array_push($result, $block);
+        }
+
+        return $result;
     }
 }
 /* End of generated class */

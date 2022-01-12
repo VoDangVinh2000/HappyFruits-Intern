@@ -1,9 +1,10 @@
 <?php
 function init_page(&$controller)
 {
-    $controller->load_model('Products, Menus, Categories, Prices,Pages, Customers');
+    $controller->load_model('Products, Menus, Categories, Prices,Pages, Customers, Blockhomepage');
     $main_menu = $controller->Menus->get_details_by_code('main-menu');
     $category_menu = $controller->Menus->get_details_by_code('category-menu');
+    $all_block_home_page = $controller->Blockhomepage->get_all_block_home_page();
     $tiles = $category_menu['items'];
     $page_code = get('page_code');
     $hide_menu_items = 0;
@@ -77,7 +78,7 @@ function init_page(&$controller)
     //  
     $controller->_merge_data(compact("main_menu", "hide_menu_items", "main_tags",
     "branches", "main_branch", "categories", "lang", "homepage", "promotions_with_banner",
-    "tiles", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
+    "tiles", "all_block_home_page", "page_code", "cat_products", "products_in_tags","traiCayDacSanViet","gioTraiCay","hopTraiCay",
     "hoaTraiCay","traiCayNhap","sanPhamKhac","id","product","imageDefault","megaMenu_fruit_baskets",
     "megaMenu_hamper_boxFruit","choose_mega_menu","get_product_with_mega_menu","relateProducts","megaMenu_fruit_bouquet"
     ,"megaMenu_Viet_Nam_Fruit_Special","megaMenu_fresh_fruit","megaMenu_orther_products"

@@ -38,7 +38,7 @@ class BlockhomepageController extends BaseController
         $menus = $this->Menus->get_details_by_code("category-menu");
 
         $id = get('id');
-        $blockID = $this->Blockhomepage->getBlockByID($id);
+        $blockID = $this->Blockhomepage->get_block_by_id($id);
 
         $catOfItems = $this->Menus->getAllCatNumberOfItems();
         $this->_merge_data(compact(
