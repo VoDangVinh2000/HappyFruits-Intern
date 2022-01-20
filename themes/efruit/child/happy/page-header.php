@@ -234,10 +234,10 @@
                                                                     foreach ($gioTraiCay as $item) {
                                                                         if ($dem == 1) {
                                                                             $dem++; ?>
-                                                                           <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
+                                                                           <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width hide--ribbon" on-ready>
                                                                                <a href="/vi/detail/<?= $item['product_id'] ?>" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="y-image">
                                                                                    <img alt="<?= $item['code'] ?>" src="<?= get_image_url($item['image'], 'square-small') ?>" class="recipe-image" />
-                                                                                   <img alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" />
+                                                                                   <!-- <img alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" /> -->
                                                                                </a>
                                                                                <div class="y-info">
                                                                                    <h3 class="y-title"><a style="text-overflow: inherit;white-space: unset;"><?= $item['code'] ?> - <span class="product_name efruit-vi"><?= $item['name'] ?></span><span class="product_name efruit-en"><?= $item['english_name'] ?></span></a></h3>
@@ -277,10 +277,10 @@
                                                                         if ($dem == 1) {
                                                                             $dem++;
                                                             ?>
-                                                                           <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
+                                                                           <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width hide--ribbon" on-ready>
                                                                                <a href="/vi/detail/<?= $item['product_id'] ?>" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="y-image">
                                                                                    <img alt="<?= $item['code'] ?>" src="<?= get_image_url($item['image'], 'square-small') ?>" class="recipe-image" />
-                                                                                   <img width="320" height="320" alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" />
+                                                                                   <!-- <img width="320" height="320" alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" /> -->
                                                                                </a>
                                                                                <div class="y-info">
                                                                                    <h3 class="y-title"><a style="text-overflow: inherit;white-space: unset;"><?= $item['code'] ?> - <span class="product_name efruit-vi"><?= $item['name'] ?></span><span class="product_name efruit-en"><?= $item['english_name'] ?></span></a></h3>
@@ -318,10 +318,10 @@
                                                                         if ($dem == 1) {
                                                                             $dem++;
                                                             ?>
-                                                                           <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width" on-ready>
+                                                                           <div style="margin-bottom: 15px;" class="product-cat-<?= $item['category_id'] ?> <?= empty($tag_id) ? '' : 'product-tag-' . $tag_id ?> y-grid-card animate has-image compact full-width hide--ribbon" on-ready>
                                                                                <a href="/vi/detail/<?= $item['product_id'] ?>" ng-click="showProduct(<?= $item['product_id'] ?>, $event, 1)" class="y-image">
                                                                                    <img alt="<?= $item['code'] ?>" src="<?= get_image_url($item['image'], 'square-small') ?>" class="recipe-image" />
-                                                                                   <img alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" />
+                                                                                   <!-- <img alt="gradient-background" src="<?= get_theme_assets_url() ?>img/card-gradient.png" class="gradient" /> -->
                                                                                </a>
                                                                                <div class="y-info">
                                                                                    <h3 class="y-title"><a style="text-overflow: inherit;white-space: unset;"><?= $item['code'] ?> - <span class="product_name efruit-vi"><?= $item['name'] ?></span><span class="product_name efruit-en"><?= $item['english_name'] ?></span></a></h3>

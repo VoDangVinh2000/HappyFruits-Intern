@@ -122,6 +122,13 @@ window.addEventListener('DOMContentLoaded', (event) => {
         };
 
     // getPageScroll();
+
+    // Hide ribbon
+
+    const hideRibbon = document.querySelectorAll('.hide--ribbon>.half-circle-ribbon');
+
+    console.log(hideRibbon);
+    hideRibbon.forEach(element => element.style.display = 'none');
 });
 
 
