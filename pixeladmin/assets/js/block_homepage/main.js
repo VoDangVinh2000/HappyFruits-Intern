@@ -1,3 +1,21 @@
+// remove product from list when button clicked.
+function removeProduct(id) {
+  let parentListProduct = document.querySelector(".products-selected");
+  let listProduct = document.querySelectorAll(".products-selected>li");
+  listProduct.forEach((product) => {
+    if (parseInt(product.dataset.productid) === id) {
+      parentListProduct.removeChild(product);
+    }
+  });
+
+  let listCheckBox = document.getElementsByName("products_show[]");
+  listCheckBox.forEach((ckBox) => {
+    if (parseInt(ckBox.dataset.productid) === id) {
+      ckBox.checked = false;
+    }
+  });
+}
+
 window.addEventListener("DOMContentLoaded", function () {
   // lấy danh sách sản phẩm được từ database lưu tại local.
   const productsFromLocalStorage = localStorage.getItem(
@@ -31,11 +49,11 @@ window.addEventListener("DOMContentLoaded", function () {
       elementToShowProductsSelected.insertAdjacentHTML(
         "beforeend",
         `
-      <li data-productid="${item?.id}">
+      <li data-productid="${item?.id}" style="padding: 5px; margin: 4px 2px;">
       <input type="hidden" value="${item?.id}" name="product_id[]">
       <span class="code">${item?.code}</span>
       <span class="name">${item?.name}</span>
-      <button  data-productid="${item?.id}" type="button" onclick="trashProduct(${item?.id})">Xóa</button>
+      <button  data-productid="${item?.id}" type="button" onclick="removeProduct(${item?.id})" class="btn btn-danger btn-sm" style="display: inline;float: right;">Xóa</button>
       </li>
       `
       );
@@ -47,13 +65,19 @@ window.addEventListener("DOMContentLoaded", function () {
     // trường hợp khi form load lại, thì check xem, có tồn tại trong danh sách lựa chọn thì checked = true.
     table.on("draw.dt", function () {
       let listCheckBox = document.getElementsByName("products_show[]");
+      let listProduct = document.querySelectorAll(".products-selected>li");
+
       listCheckBox.forEach((ckBox) => {
         if (
-          arrayProductsSelected.find(
-            (item) => item.id === parseInt(ckBox.dataset.productid)
+          [...listProduct].find(
+            (item) =>
+              parseInt(item.dataset.productid) ===
+              parseInt(ckBox.dataset.productid)
           ) !== undefined
         ) {
           ckBox.checked = true;
+        } else {
+          ckBox.checked = false;
         }
       });
     });
@@ -100,16 +124,16 @@ window.addEventListener("DOMContentLoaded", function () {
         //  và sau đó thêm 5, vậy thì số 5 vẫn được thêm
         if (listProduct.length < 4) {
           const html = `
-          <li data-productid="${id}">
+          <li data-productid="${id}" style="padding: 5px; margin: 4px 2px;">
             <input type="hidden" value="${id}" name="product_id[]">
             <span class="code">${code}</span>
             <span class="name">${name}</span>
-            <button data-productid="${id}" type="button" onclick="trashProduct(${id})">Xóa</button>
+            <button data-productid="${id}" type="button" onclick="removeProduct(${id})" class="btn btn-danger btn-sm" style="display: inline;float: right;">Xóa</button>
           </li>
           `;
           parentListProduct.insertAdjacentHTML("beforeend", html);
         } else {
-          target.checked = false
+          target.checked = false;
         }
       }
     }

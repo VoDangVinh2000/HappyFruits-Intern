@@ -10,7 +10,7 @@ $content_2_en = "Being one of  the first professional fruit gift services in HCM
 $block_1 = $all_block_home_page[0];
 $block_2 = $all_block_home_page[1];
 $block_3 = $all_block_home_page[2];
-$block_4 = $all_block_home_page[3];
+// $block_4 = $all_block_home_page[3];
 
 ?>
 
@@ -217,7 +217,7 @@ $block_4 = $all_block_home_page[3];
     <div class="row mt-2 gy-2">
         <?php
         // $hoaTraiCay
-        foreach ($block_2['products'] as $arrayIndex) :
+        foreach ($block_3['products'] as $arrayIndex) :
             $array_block_4 = $arrayIndex[0];
         ?>
             <div class="col-md-3 col-6">
