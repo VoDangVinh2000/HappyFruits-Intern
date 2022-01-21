@@ -13,12 +13,15 @@ class BlockhomepageController extends BaseController
 
     function index()
     {
+        $js = array(
+            ASSET_URL . 'js/block_homepage/indexpage.js',
+        );
         $page_title = 'List available themes';
         $all_block = $this->Blockhomepage->list_block();
         if ($all_block == "") {
             $all_block = [];
         }
-        $this->_merge_data(compact("page_title", "all_block"));
+        $this->_merge_data(compact("page_title", "all_block", "js"));
         $this->load_page('block_homepage/index');
     }
 
@@ -55,6 +58,5 @@ class BlockhomepageController extends BaseController
         ));
         $this->load_page('block_homepage/edit');
     }
-
 }
 /* End of MenuController class */
