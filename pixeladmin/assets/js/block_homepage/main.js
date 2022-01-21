@@ -1,13 +1,34 @@
-let arrayProductsSelected = [];
-let arrayChecked = [];
+window.addEventListener("DOMContentLoaded", function () {
+  // lấy danh sách sản phẩm được từ database lưu tại local.
+  const productsFromLocalStorage = localStorage.getItem(
+    "productsofblockshomepage"
+  );
 
-// productsofblockshomepage
-function appendProducts() {
-  let htmlSelected = document.querySelector(".products-selected");
-  if (htmlSelected) {
-    htmlSelected.innerHTML = "";
-    arrayProductsSelected.map((item, index, oldArray) => {
-      htmlSelected.insertAdjacentHTML(
+  // nếu có giá trị sẽ thực hiện load danh sách sản phẩm đã được chọn lên.
+  if (productsFromLocalStorage !== "undefined") {
+    // nơi hiện sản phẩm đã được chọn.
+    let elementToShowProductsSelected =
+      document.querySelector(".products-selected");
+
+    // Chuyển đổi từ chuổi thành json.
+    const arrayJsonProducts = JSON.parse(productsFromLocalStorage) || [];
+
+    // tạo mẫu dữ liệu sẽ hiển thị lên giao diện.
+    const arrayProductsSelected = arrayJsonProducts.map((product) => {
+      return {
+        id: product[0]?.product_id,
+        code: product[0]?.code,
+        name: product[0]?.name,
+        checked: true,
+      };
+    });
+
+    // reset hiển thị.
+    elementToShowProductsSelected.innerHTML = "";
+
+    // duyệt và hiển thị danh sách products.
+    arrayProductsSelected.forEach((item) => {
+      elementToShowProductsSelected.insertAdjacentHTML(
         "beforeend",
         `
       <li data-productid="${item?.id}">
@@ -19,152 +40,87 @@ function appendProducts() {
       `
       );
     });
-  }
-}
 
-//Xóa sản phẩm không muốn hiển thị
-function trashProduct(id) {
-  arrayProductsSelected = unique();
-  arrayProductsSelected = arrayProductsSelected.filter((item) => item.id != id);
-  appendProducts();
-}
+    // Xử lý check box.
+    const table = $("#dataTables-block-productlist");
 
-//Lọc những sản phẩm bị trùng
-function unique() {
-  var newArr = [];
-  newArr = arrayProductsSelected.filter(function (item) {
-    return newArr.includes(item?.id) ? "" : newArr.push(item?.id);
-  });
-  return newArr;
-}
-
-window.addEventListener("DOMContentLoaded", function () {
-  // {id: 198, code: 'D1A', name: 'Giỏ dâu size 1A', checked: true}
-  const productsofblockshomepage = localStorage.getItem(
-    "productsofblockshomepage"
-  );
-  if (productsofblockshomepage !== "undefined") {
-    const arrayJsonProducts = JSON.parse(productsofblockshomepage) || [];
-    arrayProductsSelected = arrayJsonProducts.map((product) => {
-      return {
-        id: product[0]?.product_id,
-        code: product[0]?.code,
-        name: product[0]?.name,
-        checked: true,
-      };
+    // trường hợp khi form load lại, thì check xem, có tồn tại trong danh sách lựa chọn thì checked = true.
+    table.on("draw.dt", function () {
+      let listCheckBox = document.getElementsByName("products_show[]");
+      listCheckBox.forEach((ckBox) => {
+        if (
+          arrayProductsSelected.find(
+            (item) => item.id === parseInt(ckBox.dataset.productid)
+          ) !== undefined
+        ) {
+          ckBox.checked = true;
+        }
+      });
     });
-    appendProducts();
+
+    let listCheckBox = document.getElementsByName("products_show[]");
+
+    listCheckBox.forEach((ckBox) => {
+      if (
+        arrayProductsSelected.find(
+          (item) => item.id === parseInt(ckBox.dataset.productid)
+        ) !== undefined
+      ) {
+        ckBox.checked = true;
+      }
+    });
   }
 
-  function checkBox_products() {
-    let table = $("#dataTables-block-productlist");
-    checkedInput_notDrawTable(table);
-    if (!table.on("draw.dt")) {
-      checkedInput_notDrawTable(table);
-    } else {
-      //when datatable painted
-      table.on("draw.dt", function () {
-        let inputCkbox = document.getElementsByName("products_show[]");
-        inputCkbox.forEach((e, index) => {
-          e.addEventListener("change", function () {
-            if (e.checked == false) {
-              return false;
-            }
-            let tr_parent = table.closest("tr");
-            //prevObject
-            let prevObject = tr_parent.prevObject;
-            //rows
-            let rows = prevObject[0].rows;
-            //get tag tr when checkbox at row of index
-            let tr_child = rows[index + 1];
+  // xử lý click vào checkbox.
+  const tbodyProducts = document.querySelector("#tbody-products");
+  tbodyProducts.addEventListener("click", ({ target }) => {
+    if (
+      target.dataset?.productid !== undefined &&
+      target.type !== undefined &&
+      target.type === "checkbox"
+    ) {
+      const parent = target.parentElement.parentElement;
+      const name = parent.childNodes[5].childNodes[0].value;
+      const code = parent.childNodes[3].childNodes[0].value;
+      const id = parseInt(target.dataset?.productid);
+      const checked = target.checked;
 
-            let tr_id = tr_child.getAttribute("id");
-            let td_code_value =
-              tr_child.lastChild.parentNode.cells[1].lastChild.getAttribute(
-                "value"
-              );
-            let td_name_value =
-              tr_child.lastChild.parentNode.cells[2].firstChild.getAttribute(
-                "value"
-              );
-            if (conditionLength() == true) {
-              return;
-            }
-            arrayProductsSelected = [
-              ...arrayProductsSelected,
-              {
-                id: parseInt(tr_id),
-                code: td_code_value,
-                name: td_name_value,
-                checked: e.checked,
-              },
-            ];
-
-            arrayProductsSelected = unique();
-            appendProducts();
-          });
+      // nếu checked là false thì remove khỏi danh sách dựa theo id.
+      let parentListProduct = document.querySelector(".products-selected");
+      let listProduct = document.querySelectorAll(".products-selected>li");
+      if (checked === false) {
+        listProduct.forEach((product) => {
+          if (parseInt(product.dataset.productid) === id) {
+            parentListProduct.removeChild(product);
+          }
         });
-      });
-    }
-  }
-  checkBox_products();
-  //Hàm được thực thi khi table redered
-  function checkedInput_notDrawTable(table) {
-    let inputCkbox = document.getElementsByName("products_show[]");
-    inputCkbox.forEach((e, index) => {
-      e.addEventListener("change", function () {
-        if (e.checked == false) {
-          return false;
+      } else if (checked === true) {
+        // nếu checked là true thì kiểm tra số lượng <= 4 , rồi thêm vào.
+        // nếu để là <= 4, sẽ chạy lỗi, vì khi click thêm, thì chương trình đếm được 4,
+        //  và sau đó thêm 5, vậy thì số 5 vẫn được thêm
+        if (listProduct.length < 4) {
+          const html = `
+          <li data-productid="${id}">
+            <input type="hidden" value="${id}" name="product_id[]">
+            <span class="code">${code}</span>
+            <span class="name">${name}</span>
+            <button data-productid="${id}" type="button" onclick="trashProduct(${id})">Xóa</button>
+          </li>
+          `;
+          parentListProduct.insertAdjacentHTML("beforeend", html);
+        } else {
+          target.checked = false
         }
-        let tr_parent = table.closest("tr");
-        //prevObject
-        let prevObject = tr_parent.prevObject;
-        //rows
-        let rows = prevObject[0].rows;
-        //get tag tr when checkbox at row of index
-        let tr_child = rows[index + 1];
-
-        let tr_id = tr_child.getAttribute("id");
-        let td_code_value =
-          tr_child.lastChild.parentNode.cells[1].lastChild.getAttribute(
-            "value"
-          );
-        let td_name_value =
-          tr_child.lastChild.parentNode.cells[2].firstChild.getAttribute(
-            "value"
-          );
-        if (conditionLength() == true) {
-          return;
-        }
-        arrayProductsSelected = [
-          ...arrayProductsSelected,
-          {
-            id: parseInt(tr_id),
-            code: td_code_value,
-            name: td_name_value,
-            checked: e.checked,
-          },
-        ];
-
-        arrayProductsSelected = unique();
-        appendProducts();
-      });
-    });
-  }
-
-  //Tối đa 4 sản phẩm (tùy theo nghiệp vụ)
-  function conditionLength() {
-    if (arrayProductsSelected.length == 4) {
-      return true;
+      }
     }
-  }
+  });
 
   /**
    * Thực hiện chọn mẫu hiển thị ra giao diện.
    */
 
   // html mẫu 1.
-  function mau1(data = null) {
+  function mau1() {
     let mau1 = `
 		<div id="mau1">
 			<div class="container">
@@ -199,7 +155,7 @@ window.addEventListener("DOMContentLoaded", function () {
   }
 
   // html mẫu 2
-  function mau2(data = null) {
+  function mau2() {
     let mau2 = `
 		<div id="mau2">
 			<div class="container">
@@ -232,7 +188,7 @@ window.addEventListener("DOMContentLoaded", function () {
     return mau2;
   }
 
-  function mau3(data = null) {
+  function mau3() {
     return `
 		<div id="mau3">
 			<div class="container">
@@ -247,16 +203,7 @@ window.addEventListener("DOMContentLoaded", function () {
 							</div>
 
 					</div>
-			</div>
-		</div>
-    `;
-  }
-
-  function mau4(data = null) {
-    return `
-		<div id="mau4">
-			<div class="container">
-					<div class="row">
+          <div class="row">
 							<div class="col-md-3" style="height: 220px; border: 1px solid #000; text-align: center; background-color: #999;" class="mau4-product1">
 									Product 1
 							</div>
@@ -272,7 +219,11 @@ window.addEventListener("DOMContentLoaded", function () {
 					</div>
 			</div>
 		</div>
-`;
+    `;
+  }
+
+  function mau4() {
+    return `<div id="mau4"></div>`;
   }
 
   function ChonMau(optionValue, mauElement, data = null) {
