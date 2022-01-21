@@ -1,3 +1,4 @@
+// di chuyển phần tử mảng.
 function array_move(arr = [], old_index, new_index) {
   if (old_index < 0 || new_index > arr.length - 1) {
     return arr;
@@ -19,17 +20,64 @@ function array_move(arr = [], old_index, new_index) {
   return arr; // for testing purposes
 }
 
+// so sánh. danh sách id.
+function compareListTypeBlockHomePage(listA, listB) {
+  const array1 = [...listA].map((item) => item.dataset.itemid);
+  const array2 = [...listB].map((item) => item.dataset.itemid);
+  return (
+    array1.length === array2.length &&
+    array1.every(function (value, index) {
+      return value === array2[index];
+    })
+  );
+}
+
 window.addEventListener("DOMContentLoaded", function () {
   const wrapListTypeBlock = document.querySelector("ol.list-type_block");
 
-  console.log(document.querySelectorAll("ol.list-type_block>li"));
+  // dùng để lấy dữ liệu các (li) khi lần đầu load trang web.
+  const LIST_TYPE_BLOCK = document.querySelectorAll("ol.list-type_block>li");
 
+  // Form để cập nhập position cho block homepage.
+  const updatePositionBlockHomePage = document.querySelector(
+    "#updatePositionBlockHomePage"
+  );
+  // mặc định không hiện, chỉ khi dữ liệu bị thay đổi.
+  updatePositionBlockHomePage.style.display = "none";
+
+  // Lưu dữ liệu lên form
+  const listIdUpdatePosition = document.querySelector("#listIdUpdatePosition");
+
+  // Tạo giá trị mặc định cho form.
+  const listItemIDDefault = [...LIST_TYPE_BLOCK].map(
+    (item) => item.dataset.itemid
+  );
+  listIdUpdatePosition.value = listItemIDDefault.join(",");
+
+  // sắp xếp và cập nhập dữ liệu cho việc: submit update form,
   const onUpOrDown = (from, to) => {
+    // mỗi lần click nút mũi tên thì lấy lại giá trị trước khi cập nhập.
     let listTypeBlock = document.querySelectorAll("ol.list-type_block>li");
+
+    // clear nội dung trong element OL
     wrapListTypeBlock.innerHTML = "";
+
+    // thực hiện sắp xếp từ danh sách (li) đã được lấy
     const array = [...listTypeBlock];
     array_move(array, from, to);
 
+    // lấy dữ liệu id liên tụ để cập nhập giá trị hidden của form.
+    const listItemID = array.map((item) => item.dataset.itemid);
+    listIdUpdatePosition.value = listItemID.join(",");
+
+    // Hiện form nếu phát hiện dữ liệu thay đổi, người dùng có quyền ấn cập nhập.
+    if (compareListTypeBlockHomePage(LIST_TYPE_BLOCK, array) === false) {
+      updatePositionBlockHomePage.style.display = "block";
+    } else {
+      updatePositionBlockHomePage.style.display = "none";
+    }
+
+    // Thực hiện hiển thị lại dữ liệud đã được sắp xếp.
     array.forEach((item, index) => {
       item.firstElementChild.innerText = `Thứ tự hiển thị: ${index + 1}`;
       item
@@ -44,6 +92,7 @@ window.addEventListener("DOMContentLoaded", function () {
     });
   };
 
+  // Khi click vào button lên xuống sẽ thực hiện hàm onUpOrDown.
   wrapListTypeBlock.addEventListener("click", (e) => {
     if (e.target.classList.value.includes("move-up")) {
       onUpOrDown(
@@ -59,6 +108,7 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+// nếu ấn nút thêm mới sẽ thêm một block mới v à reload lại trang.
 $(document).ready(function () {
   $("#addNewBlockHomePage").submit(function () {
     var params = $("#addNewBlockHomePage").serialize() + "&ajax=1";
@@ -75,6 +125,30 @@ $(document).ready(function () {
           }, 1200);
         }
         callbackSaveAction("addNewBlockHomePage", data);
+      },
+      "json"
+    );
+    return false;
+  });
+});
+
+// nếu ấn nút thêm mới sẽ thêm một block mới v à reload lại trang.
+$(document).ready(function () {
+  $("#updatePositionBlockHomePage").submit(function () {
+    var params = $("#updatePositionBlockHomePage").serialize() + "&ajax=1";
+    $("#updatePositionBlockHomePage #submit").attr("disabled", true);
+    $("#updatePositionBlockHomePage #submit span").text("Đang lưu...");
+    blockElement("#main-wrapper");
+    $.post(
+      postback_url,
+      params,
+      function (data) {
+        if (data.status === "OK") {
+          setTimeout(function () {
+            window.location.reload();
+          }, 1200);
+        }
+        callbackSaveAction("updatePositionBlockHomePage", data);
       },
       "json"
     );

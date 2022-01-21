@@ -1,6 +1,7 @@
 <div id="content-wrapper">
     <div id="page-wrapper">
         <div class="row">
+
             <div class="col-sm-8">
                 <ol class="list-group list-group-numbered list-type_block" style="list-style-type: space-counter;">
                     <?php foreach ($all_block  as $key => $item) { ?>
@@ -17,6 +18,13 @@
                         </li>
                     <?php } ?>
                 </ol>
+
+                <form id="updatePositionBlockHomePage" role="form" method="post" action="<?= BASE_URL ?>xu-ly">
+                    <p>Danh sách đã có sự thay đổi vui lòng ấn <b>Cập nhập</b> để lưu lại giá trị thay đổi!</p>
+                    <input type="hidden" name="action" value="admin_update_position_blockhomepage" />
+                    <input id='listIdUpdatePosition' type="hidden" name="listIdUpdatePosition" value="" />
+                    <input type="submit" id="submit" value="Cập nhập" class="btn btn-submit btn-primary">
+                </form>
             </div>
             <form id="addNewBlockHomePage" role="form" method="post" action="<?= BASE_URL ?>xu-ly" class="col-sm-4">
                 <input type="hidden" name="action" value="admin_add_new_blockhomepage" />

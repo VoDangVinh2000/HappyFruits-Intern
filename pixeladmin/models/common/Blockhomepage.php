@@ -26,7 +26,7 @@ class Blockhomepage extends BaseBlockhomepage
 
     function list_block()
     {
-        $sql = 'SELECT * FROM block_homepage';
+        $sql = 'SELECT * FROM block_homepage ORDER BY position_show';
         return self::_do_sql($sql);
     }
 

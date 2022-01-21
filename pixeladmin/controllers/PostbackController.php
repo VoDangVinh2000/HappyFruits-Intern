@@ -6047,5 +6047,26 @@ class PostbackController extends BasePostbackController
             $this->_error("Failed add block home page!");
         }
     }
+
+    function admin_update_position_blockhomepage()
+    {
+        $action = post('action');
+        $listIdUpdatePosition = post('listIdUpdatePosition');
+        $arrayListIdUpdatePosition = explode(',', $listIdUpdatePosition);
+
+        if ($action === 'admin_update_position_blockhomepage') {
+            try {
+                foreach ($arrayListIdUpdatePosition as $key => $value) {
+                    $arrayData = array(
+                        'position_show' => $key + 1,
+                    );
+                    $this->Blockhomepage->update($value, $arrayData);
+                }
+                $this->_ok('Update successfully!');
+            } catch (Exception $e) {
+                $this->_error($e->getMessage());
+            }
+        }
+    }
 }
 /* End of PostbackController class */
