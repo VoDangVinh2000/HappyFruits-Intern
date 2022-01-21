@@ -22,6 +22,8 @@ function array_move(arr = [], old_index, new_index) {
 window.addEventListener("DOMContentLoaded", function () {
   const wrapListTypeBlock = document.querySelector("ol.list-type_block");
 
+  console.log(document.querySelectorAll("ol.list-type_block>li"));
+
   const onUpOrDown = (from, to) => {
     let listTypeBlock = document.querySelectorAll("ol.list-type_block>li");
     wrapListTypeBlock.innerHTML = "";
@@ -54,5 +56,28 @@ window.addEventListener("DOMContentLoaded", function () {
         Number(e.target.dataset.posid)
       );
     }
+  });
+});
+
+$(document).ready(function () {
+  $("#addNewBlockHomePage").submit(function () {
+    var params = $("#addNewBlockHomePage").serialize() + "&ajax=1";
+    $("#addNewBlockHomePage #submit").attr("disabled", true);
+    $("#addNewBlockHomePage #submit span").text("Đang lưu...");
+    blockElement("#main-wrapper");
+    $.post(
+      postback_url,
+      params,
+      function (data) {
+        if (data.status === "OK") {
+          setTimeout(function () {
+            window.location.reload();
+          }, 1200);
+        }
+        callbackSaveAction("addNewBlockHomePage", data);
+      },
+      "json"
+    );
+    return false;
   });
 });

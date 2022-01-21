@@ -18,7 +18,9 @@
                     <?php } ?>
                 </ol>
             </div>
-            <form id="frmBlockHomePage" role="form" method="post" action="<?= BASE_URL ?>xu-ly">
+            <form id="addNewBlockHomePage" role="form" method="post" action="<?= BASE_URL ?>xu-ly" class="col-sm-4">
+                <input type="hidden" name="action" value="admin_add_new_blockhomepage" />
+                <input type="submit" id="submit" value="Thêm mới" class="btn btn-submit btn-primary">
             </form>
         </div>
     </div>

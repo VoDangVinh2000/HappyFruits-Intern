@@ -6029,72 +6029,23 @@ class PostbackController extends BasePostbackController
 
     function admin_add_new_blockhomepage()
     {
-        $type_theme = post('type_block');
-        $category_id = post('category_id');
-        $product_id = post('product_id');
-
-
-        if ($type_theme !== '3') {
-            if (empty($product_id)) {
-                $this->_error('Có ít nhất 1 sản phẩm được chọn.');
-            }
-
-            foreach ($product_id as $item) {
-                if (!is_numeric($item)) {
-                    $this->_error('Product id không hợp lệ.');
-                }
-            }
-        } else {
-            $product_id = null;
-        }
-        if (!is_numeric($type_theme) && !is_numeric($category_id)) {
-            $this->_error('Mẫu id và loại id không hợp lệ.');
-        }
-        //Truy vấn xem dữ liệu có hay chưa, nếu chưa thì thêm mới, ngược lại thì update
-        $table_name = "block_homepage";
-        $where_params = array(
-            'type_block' => $type_theme,
-            // 'category_id' => $category_id
-        );
-        $dataOld = eModel::_select($table_name, $where_params);
-        $arrayProducts = [];
-        //Nếu dataOld là null
-        if (empty($dataOld)) {
-            $products_id = null;
-            if ($product_id !== null) {
-                foreach ($product_id as $item) {
-                    array_push($arrayProducts, $item);
-                }
-                $products_id = json_encode($arrayProducts);
-            }
+        $action = post('action');
+        if ($action === 'admin_add_new_blockhomepage') {
+            $table_name = "block_homepage";
+            $params = ['order_by' => 'id DESC', 'limit' => 1];
+            // ORDER BY ID DESC LIMIT 1
+            $lastRow = eModel::_select($table_name, $params);
             $success = $this->Blockhomepage->insert(array(
-                'type_block' => $type_theme,
-                'category_id' => $category_id,
-                'products_id' =>  $products_id,
+                'type_block' => 1,
+                'category_id' => null,
+                'products_id' => null,
+                'position_show' => intval($lastRow[0]['id']) + 1
             ));
-        }
-
-        //Ngược lại 
-        else {
-
-            $products_id = null;
-            if ($product_id !== null) {
-                foreach ($product_id as $item) {
-                    array_push($arrayProducts, $item);
-                }
-                $products_id = json_encode($arrayProducts);
+            if ($success) {
+                $this->_ok("Add a block home page successfully!");
             }
-
-            if (strlen($category_id) === 0) {
-                $category_id = null;
-            }
-            $arrayData = array(
-                'category_id' => $category_id,
-                'products_id' =>  $products_id,
-            );
-            $this->Blockhomepage->update($dataOld[0]['id'], $arrayData);
+            $this->_error("Failed add block home page!");
         }
-        $this->_ok();
     }
 }
 /* End of PostbackController class */
