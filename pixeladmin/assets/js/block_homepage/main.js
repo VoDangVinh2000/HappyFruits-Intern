@@ -34,9 +34,9 @@ window.addEventListener("DOMContentLoaded", function () {
     // tạo mẫu dữ liệu sẽ hiển thị lên giao diện.
     const arrayProductsSelected = arrayJsonProducts.map((product) => {
       return {
-        id: product[0]?.product_id,
-        code: product[0]?.code,
-        name: product[0]?.name,
+        id: product[0]?.product_id || null,
+        code: product[0]?.code || "",
+        name: product[0]?.name || "",
         checked: true,
       };
     });
@@ -46,17 +46,19 @@ window.addEventListener("DOMContentLoaded", function () {
 
     // duyệt và hiển thị danh sách products.
     arrayProductsSelected.forEach((item) => {
-      elementToShowProductsSelected.insertAdjacentHTML(
-        "beforeend",
+      if (item.id != null) {
+        elementToShowProductsSelected.insertAdjacentHTML(
+          "beforeend",
+          `
+        <li data-productid="${item?.id}" style="padding: 5px; margin: 4px 2px;">
+        <input type="hidden" value="${item?.id}" name="product_id[]">
+        <span class="code">${item?.code}</span>
+        <span class="name">${item?.name}</span>
+        <button  data-productid="${item?.id}" type="button" onclick="removeProduct(${item?.id})" class="btn btn-danger btn-sm" style="display: inline;float: right;">Xóa</button>
+        </li>
         `
-      <li data-productid="${item?.id}" style="padding: 5px; margin: 4px 2px;">
-      <input type="hidden" value="${item?.id}" name="product_id[]">
-      <span class="code">${item?.code}</span>
-      <span class="name">${item?.name}</span>
-      <button  data-productid="${item?.id}" type="button" onclick="removeProduct(${item?.id})" class="btn btn-danger btn-sm" style="display: inline;float: right;">Xóa</button>
-      </li>
-      `
-      );
+        );
+      }
     });
 
     // Xử lý check box.
